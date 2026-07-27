@@ -45,6 +45,8 @@ Full documentation, with live code examples, is at the links below.
   A careful, generative magic system — fundamentals compose into effects.
 - https://foresight-rpg.com/magic-applications/ — Magic — Applications by Fundamental
   Delay the whole or a part of the magical effect of which this application is part by up to 30s (**fixed, bestowed**).
+- https://foresight-rpg.com/melee-combat/ — Melee Combat
+  1. **Did it land?** — your weapon skill against their **parry** or **dodge**; compare QRs.
 - https://foresight-rpg.com/open-ended-resolution/ — Open-Ended Resolution
   When two characters contest directly — a parry against an attack, stealth against a searcher, a tug-of-war, a chess m...
 - https://foresight-rpg.com/pursuit/ — Pursuit

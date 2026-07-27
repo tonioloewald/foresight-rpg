@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Melee Combat — ForeSight RPG</title>
+  <meta name="description" content="One-pager. Melee is nothing new — it&#39;s opposed resolution applied to hitting someone at arm&#39;s length: your attack against their defence, QRs compared, exactly…" />
+  <link rel="canonical" href="https://foresight-rpg.com/melee-combat/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Melee Combat — ForeSight RPG" />
+  <meta property="og:description" content="One-pager. Melee is nothing new — it&#39;s opposed resolution applied to hitting someone at arm&#39;s length: your attack against their defence, QRs compared, exactly…" />
+  <meta property="og:url" content="https://foresight-rpg.com/melee-combat/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Melee Combat","description":"One-pager. Melee is nothing new — it's opposed resolution applied to hitting someone at arm's length: your attack against their defence, QRs compared, exactly…","url":"https://foresight-rpg.com/melee-combat/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Melee Combat</h1>
+<!--{ "parent": "conflict", "order": 3 }-->
+
+<p><em>One-pager. Melee is nothing new — it&#39;s <a href="/the-one-rule/">opposed resolution</a> applied to hitting someone at arm&#39;s length: your attack against their defence, <strong>QRs compared</strong>, exactly like stealth-vs-search or a tennis point. It just asks four questions in order, and hands the last one to <a href="/damage/">Damage</a>.</em></p>
+<h2>The four questions</h2>
+<ol>
+<li><strong>Did it land?</strong> — your weapon skill against their <strong>parry</strong> or <strong>dodge</strong>; compare QRs.</li>
+<li><strong>Was it wholly or partially mitigated?</strong> — the blocking table below turns the two QRs into the attack&#39;s <em>effective</em> QR.</li>
+<li><strong>Where did it strike?</strong> — hit location — <strong>unless it was an aimed strike, in which case this came first</strong> (you called the target and paid for it up front).</li>
+<li><strong>How hard?</strong> — the effective QR and the weapon&#39;s DC, through armor → <a href="/damage/">Damage</a>. Armor and damage are that page&#39;s business, not this one&#39;s.</li>
+</ol>
+<h2>Attack vs defence — compare QRs</h2>
+<p>Both sides roll their own task and the <strong>better QR prevails</strong> — the general opposed-resolution move. The attacker rolls their melee skill; the defender <strong>parries</strong> or <strong>dodges</strong>, each a <em>reaction</em> (so it stacks the cumulative −2 of <a href="/intense-action/">Intense Action</a> — the parry you saw coming is cheaper than the one you didn&#39;t). Equal QRs cancel: the blow <em>just</em> turned aside, the tension holds, you both go again — which is what makes a melee a taut back-and-forth rather than one roll.</p>
+<h2>Partial blocking — how much got through</h2>
+<p>A defence doesn&#39;t just win or lose; it can <strong>eat part</strong> of a blow. A defence <strong>equal to or better than</strong> the attack negates it; otherwise the attack&#39;s QR drops <strong>(5 − the defending QR)</strong> notches down the 1-2-3-4 scale. The failure end isn&#39;t arithmetic: a <strong>QR7</strong> defence is <em>no defence</em> (the attack lands at its full rolled QR), and a <strong>QR10</strong> defence <strong>makes it worse</strong> by a notch (you fumbled into it). Read off the attack&#39;s <strong>effective QR</strong> — what actually reaches the target:</p>
+<table>
+<thead>
+<tr>
+<th>Attack ↓ \ Defence →</th>
+<th align="center">QR1</th>
+<th align="center">QR2</th>
+<th align="center">QR3</th>
+<th align="center">QR4</th>
+<th align="center">QR7 (fail)</th>
+<th align="center">QR10 (botch)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>QR1</strong></td>
+<td align="center">blocked</td>
+<td align="center">QR4</td>
+<td align="center">QR3</td>
+<td align="center">QR2</td>
+<td align="center">QR1</td>
+<td align="center">QR1</td>
+</tr>
+<tr>
+<td><strong>QR2</strong></td>
+<td align="center">blocked</td>
+<td align="center">blocked</td>
+<td align="center">QR4</td>
+<td align="center">QR3</td>
+<td align="center">QR2</td>
+<td align="center">QR1</td>
+</tr>
+<tr>
+<td><strong>QR3</strong></td>
+<td align="center">blocked</td>
+<td align="center">blocked</td>
+<td align="center">blocked</td>
+<td align="center">QR4</td>
+<td align="center">QR3</td>
+<td align="center">QR2</td>
+</tr>
+<tr>
+<td><strong>QR4</strong></td>
+<td align="center">blocked</td>
+<td align="center">blocked</td>
+<td align="center">blocked</td>
+<td align="center">blocked</td>
+<td align="center">QR4</td>
+<td align="center">QR3</td>
+</tr>
+</tbody></table>
+<p><em>(The better the defence, the more of the attack it eats; an equal defence blocks it clean — the just-barely parry. A botched defence leaves you worse off than no defence at all.)</em></p>
+<h2>Parry, and the counter</h2>
+<p>A <strong>parry</strong> meets steel with steel (or shield, or forearm). A <em>critical</em> parry (a QR well over the attack&#39;s) lets you <strong>counter</strong> on the same beat; an <em>overwhelming</em> one leaves the attacker off-balance — a chance to <strong>disarm</strong> or <strong>trade places</strong>. A parry can also shade the hit rather than stop it: a strong-but-not-clean one may <strong>shift the location roll</strong> a step or <strong>shave a point of DC</strong> instead of eating a whole QR.</p>
+<h2>Dodge — movie reality, or actual reality</h2>
+<p>A <strong>dodge</strong> gives ground to deny the opening — and this is where forty years show. When these rules were first written, the reconstruction of historical Western martial arts was in its infancy (the SCA and its kin); it&#39;s a far more serious discipline now, and one thing it has taught us plainly is that <strong>dodging a blow is a losing strategy</strong> — you do not lean out of the way of a sword.</p>
+<p>So decide which reality your table is playing in, and read <em>dodge</em> accordingly:</p>
+<ul>
+<li><strong>Movie reality</strong> — it&#39;s the hero&#39;s preternatural reflexes, the world in slow motion, the matrix-lean. Dodge freely; it&#39;s a genre convention and a perfectly good one.</li>
+<li><strong>Actual reality</strong> — a &quot;dodge&quot; is really <strong>pre-emptive movement</strong>: you anticipate the attack and shift <em>before</em> it commits, so it can&#39;t land well — denying the opportunity, not out-reacting the blade. That makes it a matter of <em>positioning and timing</em> (a held/pre-empting action — see <a href="/initiative/">Initiative</a>), not a reflex save after the fact. Under this reading, favour the parry, treat a dodge as something set up early, and penalize the desperate leap-aside for what it is.</li>
+</ul>
+<p>Either is legitimate — ForeSight colours no setting. Just tell the table which one, and modify the dodge to match.</p>
+<p><em>Designer&#39;s Note: melee earns a page not because it needs new rules — it doesn&#39;t, it&#39;s the One Rule&#39;s opposed move plus the reaction economy — but because the questions have an order (land, mitigate, locate, wound) and because the dodge deserves an honest footnote. The blocking table is the only genuinely new thing here, and it&#39;s just &quot;(5 − QR)&quot; made into a lookup so you don&#39;t do arithmetic mid-swing.</em></p>
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link current" href="/melee-combat/" aria-current="page">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-applications/">Magic — Applications by Fundamental</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

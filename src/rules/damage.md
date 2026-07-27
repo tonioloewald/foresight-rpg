@@ -1,5 +1,5 @@
 # Damage
-<!--{ "parent": "conflict", "order": 4 }-->
+<!--{ "parent": "conflict", "order": 5 }-->
 
 *One-pager. A hit is resolved by the One Rule like anything else; the hit's **Quality Rating**, the weapon's **Damage Class**, and the target's **armor** decide how badly it hurts. Injury is tracked as **wound levels**, 0 (healthy) to 6 (dead) — each level is a −(level) penalty to everything you do.*
 

@@ -1,5 +1,5 @@
 # Pursuit
-<!--{ "parent": "conflict", "order": 3 }-->
+<!--{ "parent": "conflict", "order": 4 }-->
 
 *One-pager. Pursuit is just **combat at a longer tempo** — same awareness, [Initiative](/initiative/), act-or-wait, reaction and pre-emption, and the same [Intense Action](/intense-action/) split of attention — with a different menu of actions. Know those two pages and you already know this one.*
 

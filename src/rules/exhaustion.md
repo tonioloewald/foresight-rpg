@@ -1,5 +1,5 @@
 # Exhaustion
-<!--{ "parent": "conflict", "order": 5 }-->
+<!--{ "parent": "conflict", "order": 6 }-->
 
 *One-pager. Fatigue, magic, and divine favour are all the **same thing**: not a point pool you spend down, but a track of **exhaustion levels** — wound-shaped, but shorter, and cleared by **rest, not rolls**. You never tally points; you roll to do the tiring thing, and a level piles on when you reach too hard.*
 
