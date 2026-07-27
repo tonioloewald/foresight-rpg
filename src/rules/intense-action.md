@@ -23,6 +23,16 @@ Each task takes −1 for every *other* task, and −1 more for each task ranked 
 
 **A secondary action cannot pre-empt.** You can't win the race to act (see Initiative) with something you're only half-attending to — pre-emption belongs to your primary.
 
+## How many beats do you get?
+
+The ladder above is how *well* each thing goes; this is how *many*. A statement of intent unfolds as beats — draw · aim · fire, or lunge · wind-up · blow (see [Fire](/fire-combat/) and [Melee](/melee-combat/) combat) — and **your Score in the ability sets how many fit in a round**:
+
+> **Beats in a round: your Score ÷ 5 as your *primary* ability, ÷ 10 as a *secondary* or tertiary one — round up.**
+
+Skill *is* speed and facility: the gunfighter cycles and fires faster, the swordsman lands more strikes. This is "how much" set by the body and by skill — not an action-point budget with a price list. And being secondary costs you twice over: half the beats *and* the ladder's penalty on each.
+
+*Firearms 25 (a 20+1 shooter), all-in: 25 ÷ 5 = **5** — Aim · Shoot · Aim · Shoot · Shoot. Melee 18 on the attack: 18 ÷ 5 → **4** — stab · stab · wind-up · stab; with defence as his secondary, 18 ÷ 10 → **2** — block · block.*
+
 ## What counts as a task
 
 **A task is a thing you want *rolled*.** That is the whole test, and it polices itself. A step, a shouted word, drawing a weapon, aiming — these aren't tasks; they happen, with honest consequences (pop up to fire and you're still half-exposed when the round ends). There are no "free actions": a thing is either of no consequence, or it isn't free. But it only costs you *attention* if you cared enough to roll for it. So *advance–attack–retreat* is one task — the attack — and takes no penalty. Decline to make your movement a task and you simply move: noisily, visibly, at the GM's discretion.
