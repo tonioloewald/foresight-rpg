@@ -14,6 +14,10 @@
 
 Both sides roll their own task and the **better QR prevails** — the general opposed-resolution move. The attacker rolls their melee skill; the defender **parries** or **dodges**, each a *reaction* (so it stacks the cumulative −2 of [Intense Action](/intense-action/) — the parry you saw coming is cheaper than the one you didn't). Equal QRs cancel: the blow *just* turned aside, the tension holds, you both go again — which is what makes a melee a taut back-and-forth rather than one roll.
 
+### Attack and defence are two intents
+
+"Kill him with this sword" is a *statement of intent*, not one action — it plays out as discrete beats: a **lunge** to close, a **wind-up** for an especially heavy blow, the **blow** itself. **"Don't get hit" is a second intent**, and a fighter is almost always pursuing both at once — pressing the attack while keeping a guard up — one **primary**, one **secondary**; or (the berserker, the duellist waiting for the opening) all-in on just one. That is exactly the [Intense Action](/intense-action/) split: your focus is sharp and everything else is worse. So the all-out attacker hits harder and guards poorly, while the careful fighter trades a step off the attack (−1) to keep a real defence (−2) — and melee's ebb and flow *is* that choice, remade each exchange.
+
 ## Partial blocking — how much got through
 
 A defence doesn't just win or lose; it can **eat part** of a blow. A defence **equal to or better than** the attack negates it; otherwise the attack's QR drops **(5 − the defending QR)** notches down the 1-2-3-4 scale. The failure end isn't arithmetic: a **QR7** defence is *no defence* (the attack lands at its full rolled QR), and a **QR10** defence **makes it worse** by a notch (you fumbled into it). Read off the attack's **effective QR** — what actually reaches the target:

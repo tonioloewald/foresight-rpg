@@ -38,8 +38,16 @@ This is the general shape of it: the table rewards what a player **narrates**. D
 
 Most shooting in a close fight isn't aimed at anyone. It's **area fire**: blind or suppressive rounds thrown at a doorway, a window, a stretch of street to **keep heads down and stop people breaking cover**. It doesn't target a person — it makes an **area dangerous to be in**. Anyone caught in the beaten zone, crossing it, or breaking from cover through it risks a hit (resolve as a chance per exposed target — roughly one in QR of the rounds finds someone in the zone). Its worth is **tactical, not a body count**: pin the enemy, deny the ground, cover a teammate's rush — the spread-don't-concentrate logic from [Intense Action](/intense-action/). Full-auto and covering fire are the same idea with more lead.
 
+## A shot is several actions
+
+"I'm just going to shoot him" is a *statement of intent*, not a single action — it plays out as discrete beats: **draw, take a bead, fire, clear a jam, drop the magazine, reload**. If shooting is all you're doing they simply happen in sequence, turn by turn, and the cost is in the slow ones. A **reload** is the usual culprit: a heavy or complex weapon's is measured in whole **turns**; a small, simple weapon's in a hit to your **Initiative** for the turn (which already bundles reaction speed and situational awareness). Doing anything *else* while you shoot — moving, covering a second door — is the [Intense Action](/intense-action/) split: primary focus, worse at the rest.
+
+## Defence: cover, position, and pre-emption
+
+There is **no roll to dodge a shot once fired** — a bullet grants none of melee's cinematic grace. The defence against fire is *not being shot at*: cover, concealment, distance, and movement — run, and **zig-zag**, because a moving, unpredictable target is a hard one. The other half is **anticipation**, which is pure [Initiative](/initiative/): someone lying in wait decides to take their shot, and if you *notice* — the muzzle swinging toward you — you can **pre-empt** and dive for cover before they fire. And **aiming is itself an action you can react to**: a shooter who takes a careful bead has *shown* you the threat, so a target who catches it gets to answer. The aimed shot is the deadlier one — and also the one its victim is likeliest to see coming.
+
 ## Then: location and damage
 
-A hit rolls **hit location** and applies **damage** through armor — all on [Damage](/damage/). And as in [Melee](/melee-combat/), there is **no roll to dodge a shot once fired**: the defence against fire is *not being shot at* — cover, concealment, distance, movement, and getting your own shot in first ([Initiative](/initiative/)). A bullet grants none of melee's cinematic grace; you take cover, or you don't.
+A hit rolls **hit location** and applies **damage** through armor — both on [Damage](/damage/).
 
 *Designer's Note: ranged combat is where Score × EF is at its plainest — one roll, modifiers you can see and argue about — so this page mostly exists to name the four things other games quietly drop (you must know where it is, you must aim, firing wrecks your aim, the target resists) and to kill two reflexes: the automatic "+2 because unaware" (no — the bonus is the aim that being unobserved *lets* you take), and the belief that a wall is cover (it usually isn't).*
