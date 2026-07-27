@@ -42,4 +42,14 @@ So decide which reality your table is playing in, and read *dodge* accordingly:
 
 Either is legitimate — ForeSight colours no setting. Just tell the table which one, and modify the dodge to match.
 
-*Designer's Note: melee earns a page not because it needs new rules — it doesn't, it's the One Rule's opposed move plus the reaction economy — but because the questions have an order (land, mitigate, locate, wound) and because the dodge deserves an honest footnote. The blocking table is the only genuinely new thing here, and it's just "(5 − QR)" made into a lookup so you don't do arithmetic mid-swing.*
+## Grappling, pinning, and fighting dirty
+
+When a fight collapses into a clinch it stops being about *landing* blows and becomes about **control** — of the other person's limbs, of a weapon, of position. Seizing, pinning, twisting, gouging, choking.
+
+There's a light spine if you want one: track **control** as a few steps — **partially restrained → restrained → completely restrained** — and when the struggle is over an *object* (a knife, a gun, a fountain pen), simply *who holds it*. Each contested moment is an opposed roll — Strength, or whatever skill fits — and the winner shifts control a step; someone completely restrained is at the other's mercy: choked out, disarmed, pinned, or worse.
+
+But mostly: **don't reach for a rule.** Grappling is the purest case of ForeSight's founding bet — that the people at the table understand *this* particular tangle far better than any designer ever could. Run it on [Initiative](/initiative/) (who acts, who's waiting for an opening) and [opposed resolution](/the-one-rule/) (each contested thing), and improvise the rest.
+
+> *The gedanken cases: the brawl atop the tank in* Indiana Jones and the Last Crusade *— arms tangled, a fountain pen squirting ink into someone's eyes, everyone scrabbling for a grip on everything at once. Or Gersen and the Hetman at the close of Vance's* The Killing Machine *— his hands crippled, Gersen traps the Hetman's arms with his legs and head-butts the broken nose to drown him in his own blood. No table produces those moments; "roll Initiative, then make the opposed roll that fits" does.*
+
+*Designer's Note: melee earns a page not because it needs new rules — it doesn't, it's the One Rule's opposed move plus the reaction economy — but because the questions have an order (land, mitigate, locate, wound) and because the dodge and the clinch each deserve an honest footnote. The blocking table is the only genuinely new thing here, and it's just "(5 − QR)" made into a lookup so you don't do arithmetic mid-swing.*
