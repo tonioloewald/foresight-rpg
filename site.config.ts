@@ -6,7 +6,7 @@ export default defineSiteConfig({
   // pages BEFORE doc extraction, so the book (which ships no JS) has real HTML.
   // <foresight-table> then enhances it in the browser. See entity-views.ts.
   prebuild: renderEntityViews,
-  name: 'ForeSight 2026',
+  name: 'ForeSight RPG',
   description: 'A streamlined modern edition of the ForeSight tabletop RPG.',
   baseUrl: 'https://foresight-rpg.com',
   basePath: process.env.BASE_PATH ?? '/', // custom domain (foresight-rpg.com) serves from root
@@ -15,9 +15,9 @@ export default defineSiteConfig({
   sectionsDir: 'src/docs',
   staticDirs: ['static'],
   bundleEntry: 'bundle.ts',
-  // emit foresight-2026.epub into docs/ on every build. `cover` is the committed,
+  // emit foresight-rpg.epub into docs/ on every build. `cover` is the committed,
   // web-optimized export (1414×2000, ~585KB) of the Affinity master in legacy/
-  // (gitignored). Title defaults to `name` ("ForeSight 2026").
+  // (gitignored). Title defaults to `name` ("ForeSight RPG").
   epub: { author: 'Tonio Loewald', cover: 'static/cover.jpg' },
   // The book is a curated subset/sequence of the site — the site still shows everything.
   book: {

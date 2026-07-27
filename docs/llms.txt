@@ -1,4 +1,4 @@
-# ForeSight 2026
+# ForeSight RPG
 
 A streamlined modern edition of the ForeSight tabletop RPG.
 
@@ -31,7 +31,7 @@ Full documentation, with live code examples, is at the links below.
   1. **Awareness → Initiative.** Surprised → Startled → Alert → Ready → Lying-in-wait; modify for big factors (can't se...
 - https://foresight-rpg.com/playtest-pack/ — ForeSight — Playtest Pack
   A **score = formula + level** (see Scores). Formulas use the seven attributes **ST, EN, CO, IN, PC, WP, AP**. Each sk...
-- https://foresight-rpg.com/ — ForeSight 2026
+- https://foresight-rpg.com/ — ForeSight RPG
   A modern edition of the ForeSight RPG: one resolution rule (Score × Ease Factor), lethal fast combat, and a careful generative magic system.
 - https://foresight-rpg.com/initiative/ — Initiative
   Tense situations run in **rounds** — brief bursts separated by waiting for someone to make a move. A round is as long...

@@ -1,4 +1,4 @@
-# ForeSight 2026 — Review & To-Fix
+# ForeSight RPG — Review & To-Fix
 
 Running list of things to revisit. Grouped by area; check off as resolved.
 

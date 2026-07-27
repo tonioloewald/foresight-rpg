@@ -21,7 +21,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**ForeSight 2026.** Context for any AI agent (Claude Code, Cowork, etc.) continuing this project. Read this first, then `Design Document.md` (the design bible) and `REVIEW.md` (the running to-fix list).
+**ForeSight RPG.** Context for any AI agent (Claude Code, Cowork, etc.) continuing this project. Read this first, then `Design Document.md` (the design bible) and `REVIEW.md` (the running to-fix list).
 
 **Talking to other repos:** file a GitHub issue on the target repo — never edit it from here — and mirror it in `UPSTREAM.md` with the issue URL. See `cross-project.md`.
 
@@ -43,7 +43,7 @@ Legacy source PDFs/HTML live in `legacy/` and `Abortive Previous Attempt/` (giti
 ## How to work on it
 
 - **Author content** in `src/` and `static/` (NOT in `docs/`, which is generated — every file under it is build output).
-- **Build:** `bun run build` (= `bun build.ts`) → generates `docs/` (the static site Pages serves) **and** `docs/foresight-2026.epub`. Bun-only (the doc-system uses `Bun.build`/`Bun.write`/`$`). The ePub step needs `happy-dom` (a devDep) and the `zip` CLI (present on macOS).
+- **Build:** `bun run build` (= `bun build.ts`) → generates `docs/` (the static site Pages serves) **and** `docs/foresight-rpg.epub`. Bun-only (the doc-system uses `Bun.build`/`Bun.write`/`$`). The ePub step needs `happy-dom` (a devDep) and the `zip` CLI (present on macOS).
 - **Dev:** `bun run tls` once (needs `mkcert`), then `bun run dev` → live-rebuild HTTPS server at `https://localhost:1986/` (watches `README.md`, `src/`, `static/`). Since the domain cutover, both dev and production serve at **root** (`basePath: '/'`), so `dev`'s `BASE_PATH=` is now vestigial.
 - **Deploy:** `bun run build` then commit `docs/` and push. GitHub Pages serves from `/docs` at the custom domain **foresight-rpg.com** (apex A/AAAA to GitHub + `www` CNAME → `tonioloewald.github.io`; `static/CNAME` carries the domain through the build's `rm -rf docs`). Repo: `github.com/tonioloewald/foresight-rpg`.
 - First time / after pulling: `rm -rf docs && bun install`.
