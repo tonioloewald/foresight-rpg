@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Exhaustion — ForeSight RPG</title>
+  <meta name="description" content="One-pager. Fatigue, magic, and divine favour are all the same thing: not a point pool you spend down, but a track of exhaustion levels — wound-shaped, but…" />
+  <link rel="canonical" href="https://foresight-rpg.com/exhaustion/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Exhaustion — ForeSight RPG" />
+  <meta property="og:description" content="One-pager. Fatigue, magic, and divine favour are all the same thing: not a point pool you spend down, but a track of exhaustion levels — wound-shaped, but…" />
+  <meta property="og:url" content="https://foresight-rpg.com/exhaustion/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Exhaustion","description":"One-pager. Fatigue, magic, and divine favour are all the same thing: not a point pool you spend down, but a track of exhaustion levels — wound-shaped, but…","url":"https://foresight-rpg.com/exhaustion/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Exhaustion</h1>
+<!--{ "parent": "conflict", "order": 5 }-->
+
+<p><em>One-pager. Fatigue, magic, and divine favour are all the <strong>same thing</strong>: not a point pool you spend down, but a track of <strong>exhaustion levels</strong> — wound-shaped, but shorter, and cleared by <strong>rest, not rolls</strong>. You never tally points; you roll to do the tiring thing, and a level piles on when you reach too hard.</em></p>
+<h2>The 0–5 track</h2>
+<p>Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a wound is — but <strong>domain-weighted</strong>, not universal:</p>
+<table>
+<thead>
+<tr>
+<th>Lvl</th>
+<th>State</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Fresh</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Winded</td>
+<td>−1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Tired</td>
+<td>−2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Spent</td>
+<td>−3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Incapacitated</td>
+<td>−4; you can barely act</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Collapsed</td>
+<td>unconscious — and, pushed past it (exposure, over-exertion), you can die of it</td>
+</tr>
+</tbody></table>
+<p><strong>How a level penalizes you.</strong> Each track hits activity that draws on <em>its own</em> pool at <strong>full</strong> value and everything else at <strong>half</strong>; tracks <strong>stack</strong> with each other and on top of any wound penalty. <strong>Fatigue is the exception — it drags on <em>everything</em> at full</strong>, because a body that&#39;s spent is spent whatever it&#39;s doing. Add the contributions, then round (half away from zero).</p>
+<blockquote>
+<p><em>A wizard is at −3 fatigue (a forced march) and −3 mana (a duel). Swinging a sword: −3 (fatigue, full) + half of −3 mana = <strong>−5</strong>. Casting: −3 mana + half of −3 fatigue = <strong>−5</strong>. Sweet-talking the innkeeper (neither): half of each = <strong>−3</strong>.</em></p>
+</blockquote>
+<h2>Getting exhausted</h2>
+<p>Do something genuinely taxing — a sustained sprint, a long mêlée, a forced march, harsh exposure — and make an <strong>EN or WP check</strong> (player&#39;s choice, as with wounds), the <em>magnitude</em> of the effort a modifier rather than a pile of extra rolls:</p>
+<ul>
+<li><strong>Solid success</strong> — you&#39;re fine.</li>
+<li><strong>Marginal success / ordinary failure</strong> — one level of exhaustion.</li>
+<li><strong>Bad failure</strong> — worse, or the effort simply fails.</li>
+</ul>
+<p>Some efforts cost a level <strong>automatically</strong>, no roll — a thing you cannot do without burning yourself.</p>
+<h2>Recovery — rest, not rolls</h2>
+<p>You clear <strong>one level at a time</strong>, deepest first, and the deeper it is the more rest it takes:</p>
+<table>
+<thead>
+<tr>
+<th>Clearing a level at depth…</th>
+<th>…takes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>a few minutes&#39; breather + refreshment</td>
+</tr>
+<tr>
+<td>2</td>
+<td>real rest (an hour or more) → back to 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>a good night&#39;s sleep → back to 2</td>
+</tr>
+<tr>
+<td>4–5</td>
+<td>collapse, deep sleep, or outside help</td>
+</tr>
+</tbody></table>
+<p>So a <strong>Spent (3)</strong> character sleeps it off to <strong>Tired (2)</strong>, rests down to <strong>Winded (1)</strong>, and a breather clears the last — deep exhaustion is a slow climb out, not a nap. And past level 3, keep checking EN/WP or exhaustion starts <strong>converting into real wounds</strong> — you can drop from over-exertion, or die of exposure.</p>
+<h2>Magic, and the other powers</h2>
+<p>By default <strong>magic is just fatigue</strong>: gathering power is taxing, and casting in a <strong>mana-poor</strong> place is simply more exhausting, a <strong>mana-rich</strong> one less — a modifier, not a second resource to track. A setting that wants magic to feel <em>separate</em> can give it its <strong>own track</strong> (Mana), and likewise <strong>Spirit</strong> for mystic disciplines; each track wears down independently (your Mana can be wrung dry while your Spirit is fresh) and stacks per the rule above.</p>
+<p>However it&#39;s tracked, the shape is <strong>gather then weave</strong>: a <strong>gather roll</strong> whose ease factor reflects how much you&#39;re asking for (a candle-flame is trivial; a firestorm brutal). Read its QR — a solid success and the power comes free and clear; a marginal one and it comes but costs a level; a <strong>QR10 fizzles <em>and</em> costs a level</strong>. And a caster may <strong>volunteer a level for a one-off +4</strong> — reaching past your limit on purpose, reliable but the bill compounds.</p>
+<h2>Divine favour is different — it&#39;s earned, not rested</h2>
+<p><strong>Divine favour</strong> is spent like the others (temporarily, in the moment), but it isn&#39;t refilled by sleep. It&#39;s gated by <strong>Piety</strong> — which behaves like a <em>skill</em>, except it is driven by <strong>deeds, not experience</strong>: acts of devotion, sacrifice, and living by the god&#39;s tenets raise it; betraying them lowers it. A priest doesn&#39;t rest to recover standing with their god; they <em>earn it back</em>. (Full treatment under Religion.)</p>
+<p><em>Designer&#39;s Note: the stamina/mana/piety point-pools are all gone, and good riddance — a check you can&#39;t fudge beats a pool everyone quietly forgets to subtract from. Folding fatigue, magic, and faith into one exhaustion mechanic means one thing to learn, and the &quot;spend a level for +4&quot; lever gives a desperate character a real, costly choice instead of a hard wall. Letting the toughness roll be EN <em>or</em> WP means the stoic and the stubborn both endure, by different roads.</em></p>
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link current" href="/exhaustion/" aria-current="page">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-applications/">Magic — Applications by Fundamental</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

@@ -30,15 +30,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
   <title>Damage — ForeSight RPG</title>
-  <meta name="description" content="One-pager. A hit is resolved by the One Rule like anything else; the Quality Rating of the hit, the weapon&#39;s Damage Class, and the target&#39;s armor decide how…" />
+  <meta name="description" content="One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s Quality Rating, the weapon&#39;s Damage Class, and the target&#39;s armor decide how badly…" />
   <link rel="canonical" href="https://foresight-rpg.com/damage/" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Damage — ForeSight RPG" />
-  <meta property="og:description" content="One-pager. A hit is resolved by the One Rule like anything else; the Quality Rating of the hit, the weapon&#39;s Damage Class, and the target&#39;s armor decide how…" />
+  <meta property="og:description" content="One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s Quality Rating, the weapon&#39;s Damage Class, and the target&#39;s armor decide how badly…" />
   <meta property="og:url" content="https://foresight-rpg.com/damage/" />
   <meta name="twitter:card" content="summary" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Damage","description":"One-pager. A hit is resolved by the One Rule like anything else; the Quality Rating of the hit, the weapon's Damage Class, and the target's armor decide how…","url":"https://foresight-rpg.com/damage/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Damage","description":"One-pager. A hit is resolved by the One Rule like anything else; the hit's Quality Rating, the weapon's Damage Class, and the target's armor decide how badly…","url":"https://foresight-rpg.com/damage/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
   <link rel="icon" href="/favicon.svg" />
 </head>
 <body>
@@ -47,9 +47,9 @@
 <h1>Damage</h1>
 <!--{ "parent": "conflict", "order": 4 }-->
 
-<p><em>One-pager. A hit is resolved by the One Rule like anything else; the <strong>Quality Rating</strong> of the hit, the weapon&#39;s <strong>Damage Class</strong>, and the target&#39;s <strong>armor</strong> decide how much damage is done. Damage feeds <strong>Wounds &amp; Recovery</strong>.</em></p>
-<h2>Damage Class (DC)</h2>
-<p>Every attack has a <strong>Damage Class</strong> — how hard it hits before quality, armor, or luck. The scale is numerical and calibrated, not flavor:</p>
+<p><em>One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s <strong>Quality Rating</strong>, the weapon&#39;s <strong>Damage Class</strong>, and the target&#39;s <strong>armor</strong> decide how badly it hurts. Injury is tracked as <strong>wound levels</strong>, 0 (healthy) to 6 (dead) — each level is a −(level) penalty to everything you do.</em></p>
+<h2>Damage Class</h2>
+<p>Every attack has a <strong>Damage Class (DC)</strong> — how hard it hits before quality, armor, or luck. The scale is numerical and calibrated, not flavour:</p>
 <table>
 <thead>
 <tr>
@@ -59,41 +59,140 @@
 </thead>
 <tbody><tr>
 <td>4</td>
-<td>An inhumanly strong person&#39;s bare hands</td>
+<td>an inhumanly strong person&#39;s bare hands</td>
 </tr>
 <tr>
 <td>8</td>
-<td>A 9mm parabellum pistol (the most common pistol on Earth)</td>
+<td>a 9mm pistol (the commonest pistol on Earth)</td>
 </tr>
 <tr>
 <td>11</td>
-<td>A 7.62mm rifle (the most common rifle class on Earth)</td>
+<td>a 7.62mm rifle (the commonest rifle class on Earth)</td>
 </tr>
 </tbody></table>
-<p><em>Note: earlier editions gave firearms a separate +1 at close range; that&#39;s now baked into the base DC, so the anchors above already assume typical use. (They still need a calibration pass against the full weapon list.)</em></p>
 <h2>How much damage a hit does</h2>
 <blockquote>
-<p><strong>Damage = QR-yield of (DC ÷ 2).</strong> QR1 is deliberately bumped so even a marginal hit hurts.</p>
+<p><strong>Damage (in wound levels) = Yield × DC × ½, rounded down.</strong>
+And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (below), even when it rounds to no wound.</p>
 </blockquote>
-<p>Read the hit&#39;s Quality Rating, take the DC, halve it, and apply the QR yield (see <strong>QR Yield Factors</strong>). The yield curve is front-loaded on purpose: a barely-successful shot (QR1) is already dangerous, because real weapons are lethal and ForeSight doesn&#39;t pretend otherwise. Higher QRs climb from there.</p>
+<p>Read the hit&#39;s <strong>Yield</strong> off its QR (QR1 100%, QR2 80%, QR3 50%, QR4 25% — see The One Rule), multiply by half the DC, and round down for the <strong>wound levels</strong> dealt. The quarter-level stun floor is why even a graze rattles you: real weapons are dangerous and ForeSight doesn&#39;t pretend otherwise.</p>
+<p>*A 9mm (DC 8): a solid QR3 hit does 0.5 × 8 × ½ = <strong>2</strong> (medium); a brilliant QR1 does <strong>4</strong> (incapacitated); a scraping QR4 does 0.25 × 8 × ½ = 1.0 → <strong>1</strong> (light) plus a stun check. A 7.62 rifle (DC 11) center-mass at QR1 does 5.5 → <strong>5 (dying)</strong>. A bare fist (DC 4) at QR4 does 0.5 raw → no wound, but a stun check.*</p>
+<h2>Wounds — the 0–6 track</h2>
+<p>Injury is a single number, and it is <strong>−(level) to everything you do</strong> — pain and blood loss don&#39;t care what you&#39;re attempting:</p>
+<table>
+<thead>
+<tr>
+<th>Lvl</th>
+<th>State</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>Healthy</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Light</td>
+<td>−1 to all activity</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Medium</td>
+<td>−2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Heavy</td>
+<td>−3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Incapacitated</td>
+<td>−4; you can barely act — roll EN or WP each turn to do anything at all</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dying</td>
+<td>down and bleeding out; <strong>without intervention you deteriorate toward 6</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Dead</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>New damage <strong>adds to your current level</strong> (a medium 2 plus a heavy 3 is a dying 5). Toughness rolls throughout are made on <strong>Endurance <em>or</em> Willpower, player&#39;s choice</strong> — some people are physically hard to put down, some just refuse to quit. Pain resistance is <strong>not a skill</strong>; you roll the raw attribute.</p>
+<h2>Stun &amp; Shaken</h2>
+<p>Damage doesn&#39;t only wound — it rattles. Any hit that clears the <strong>¼-level stun floor</strong> (or any <strong>stun-class &quot;S&quot; weapon</strong>, which skips straight to it) forces a <strong>pain-resistance roll — EN or WP</strong>:</p>
+<ul>
+<li><strong>Shrug it off</strong> (good roll) — carry on.</li>
+<li><strong>Shaken</strong> (ordinary) — −2 to everything and one action only; roll EN/WP at end of turn to clear it.</li>
+<li><strong>Stunned</strong> (poor roll, or an S-weapon) — no action but to <strong>recover</strong> (another EN/WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious.</li>
+</ul>
+<p>Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.</p>
 <h2>Hit location</h2>
-<p>By default, roll <strong>D10</strong> for where a hit lands. Or <strong>call your shot</strong>: aim for the head, a hand, or whatever&#39;s exposed, and take an <strong>up-front EF penalty</strong> for the smaller target. The same penalty mechanism covers shooting a target behind cover, or aiming for the one body part sticking out — you pay in ease factor for precision.</p>
-<h2>Damage type</h2>
-<p>What the damage <em>is</em> determines how armor and bodies respond:</p>
+<p>By default roll <strong>D10</strong> for where a hit lands. Or <strong>call your shot</strong> — the head, a weapon hand, the sliver of someone showing past cover — for an <strong>up-front EF penalty</strong> for the smaller target. The same penalty covers shooting through cover: you pay in ease factor for precision, and a success <em>is</em> the called hit (don&#39;t charge it twice).</p>
+<h2>Damage type &amp; armor</h2>
+<p>What the damage <em>is</em> decides how armor and bodies answer it:</p>
 <ul>
-<li><strong>M — Melee:</strong> slow-moving, low energy, high momentum (blades, clubs, fists).</li>
-<li><strong>I — Impact:</strong> fast-moving, high energy, low momentum (bullets, shrapnel).</li>
-<li><strong>B — Beam:</strong> energy, no momentum (lasers and the like). Respectable, never a joke — but deliberately not the room-clearing death-rays of pulp SF. We were physics majors.</li>
+<li><strong>M — Melee:</strong> slow, low-energy, high-momentum (blades, clubs, fists).</li>
+<li><strong>I — Impact:</strong> fast, high-energy, low-momentum (bullets, shrapnel).</li>
+<li><strong>B — Beam:</strong> energy, no momentum (lasers). Respectable, never a pulp death-ray — we were physics majors.</li>
 </ul>
-<h2>Armor, penetration, and absorption</h2>
-<p>Armor adds <strong>Protection</strong> (a DC of defense) against the types it&#39;s rated for. Two annotations decide the arms race at the margins:</p>
+<p><strong>Armor</strong> carries a <strong>Protection</strong> rating (a DC of defence) against the types it&#39;s built for; subtract it from the incoming DC before the damage formula. A DC reduced <strong>below zero is harmless</strong>. Two annotations settle the arms race at the margin:</p>
 <ul>
-<li><strong>P — Piercing</strong> (on a weapon): ignores that many DC of the target&#39;s armor Protection.</li>
-<li><strong>A — Absorbing</strong> (on armor): ignores one point of <em>damage</em> that gets through.</li>
+<li><strong>P — Piercing</strong> (on a weapon): ignores that many points of the target&#39;s Protection.</li>
+<li><strong>A — Absorbing</strong> (on armor): stops one point of <em>damage</em> that still gets through.</li>
 </ul>
-<p><em>Designer&#39;s Note: in a straight fight, armor has the edge. ForeSight carries a small but deliberate bias toward not killing player characters too easily — enough that wearing armor is clearly worth it and a single unlucky roll rarely ends a character outright, without making anyone bulletproof.</em></p>
+<p><em>Designer&#39;s Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.</em></p>
 <h2>Scale</h2>
-<p>Very large or tough targets (a vehicle, a dragon, a stone wall) have a <strong>Damage Scale</strong> — divide damage done by the scale before applying it. A normal person is Scale 1. This is how the same DC means &quot;lethal&quot; to a man and &quot;scratch&quot; to a tank, with no separate rules. (See Equipment and NPCs; vehicle damage in Pursuit routes here.)</p>
+<p>A very large or tough target — a vehicle, a dragon, a stone wall — has a <strong>Damage Scale</strong>; divide the damage done by the scale before applying it. A person is Scale 1. That is the whole of how one DC is &quot;lethal&quot; to a man and &quot;a scratch&quot; to a tank, with no separate rules. (Vehicle damage in <a href="/pursuit/">Pursuit</a> routes here.)</p>
+<h2>Recovery — and relapse</h2>
+<p>Healing is slow. At the interval for your level, make a <strong>convalescence roll</strong> (EN or WP):</p>
+<table>
+<thead>
+<tr>
+<th>Lvl</th>
+<th>Roll every</th>
+<th>On the roll</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1 Light</td>
+<td>day</td>
+<td>success drops a level; <strong>QR10 raises one (relapse)</strong></td>
+</tr>
+<tr>
+<td>2 Medium</td>
+<td>5 days</td>
+<td>&quot;</td>
+</tr>
+<tr>
+<td>3 Heavy</td>
+<td>20 days</td>
+<td>&quot;</td>
+</tr>
+<tr>
+<td>4 Incapacitated</td>
+<td>day</td>
+<td>&quot;</td>
+</tr>
+<tr>
+<td>5 Dying</td>
+<td>minutes</td>
+<td><strong>deterioration</strong> — a poor roll drops you <em>toward death</em>, not away</td>
+</tr>
+</tbody></table>
+<p>Convalescence carries a penalty equal to the <strong>worst level you&#39;ve sunk to</strong> since you were last healthy — a relapse leaves you fragile — until you fully recover or get <strong>medical care</strong>. Care (closing wounds, transfusion, surgery) lowers that worst-level penalty or buys levels back directly; it is what hauls a <strong>dying</strong> character off the 5→6 slide before the dice do.</p>
+<h2>Poison, disease, and the environment</h2>
+<p>The same machine handles the slow killers — resolve each as a task and read its <strong>Yield/QR</strong> for how much it does, or roll a <strong>random QR</strong> (D10: 1→QR1, 2→QR2, 3–5→QR3, 6–10→QR4) when nothing is opposed:</p>
+<ul>
+<li><strong>Poison &amp; venom</strong> carry a <strong>DC</strong> and a type; the victim resists with an <strong>EN roll</strong>, and what gets through applies as wounds (or, for sedatives and toxins that sap rather than injure, as <a href="/exhaustion/">exhaustion</a>) on the poison&#39;s own clock — seconds for a nerve agent, hours for a septic wound.</li>
+<li><strong>Disease &amp; infection</strong> are the tax on untreated wounds and foul conditions: at intervals the GM sets, an <strong>EN roll</strong> either fights it off or lets it add a level / stall convalescence. Antibiotics and clean care are a fat positive modifier; a battlefield wound left dirty is a negative one.</li>
+<li><strong>Environmental damage</strong> — falls, fire, cold, blast, drowning — is just a DC and a QR like any hit (a two-storey fall, a burning room), while slow exposure (heat, cold, thin air, thirst) meters as <a href="/exhaustion/">exhaustion</a> rather than wounds until it turns lethal.</li>
+</ul>
 
   </article>
   <nav class="doc-nav" aria-label="Documentation">
@@ -117,8 +216,7 @@
       <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
       <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
       <li><a class="doc-link current" href="/damage/" aria-current="page">Damage</a></li>
-      <li><a class="doc-link" href="/wounds-and-recovery/">Wounds &amp; Recovery</a></li>
-      <li><a class="doc-link" href="/power-pools/">Power Pools</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
     </ul>
     </details></li>
     <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>

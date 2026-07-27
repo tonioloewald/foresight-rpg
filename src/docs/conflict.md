@@ -8,6 +8,5 @@ Combat, pursuit, damage, and the things that wear a character down.
 - [Intense Action](/intense-action/)
 - [Pursuit](/pursuit/)
 - [Damage](/damage/)
-- [Wounds & Recovery](/wounds-and-recovery/)
-- [Power Pools](/power-pools/)
+- [Exhaustion](/exhaustion/)
 <!-- /toc -->
