@@ -29,6 +29,8 @@ Adding a modifier moves right along the ladder, subtracting moves left. **Sum ev
 
 *Fractions round to nearest (½ or more rounds up): Score 13 at EF ¼ → 3.25 → roll ≤ 3.*
 
+*Designer's Note — a lever you can feel. One EF step is a **big** lever, and a **fixed-size** one: because SC = Score × EF, a step moves your success chance by your whole Score in points **wherever you sit on the range** — 30%→45% and 60%→75% cost the same single step. Almost no other dice engine can say that. A 2D6 or 3D6 **bell curve** gives a lever that's huge near the middle and near-useless at the tails, so a +1 barely dents a long shot or a near-certainty. A flat **D20** is the reverse — a modest lever in the middle that turns brutal at the 1/20 edges, and the change in *odds* is nastier still. A raw flat **D100** is the cautionary tale: a flat +10 runs 10→20 (doubling your chances) in one place and 45→55 in another — the "same" modifier doing wildly different work, a giant lever with poverty traps at the bottom. (Savage Worlds' exploding dice are more erratic yet.) Score × EF is deliberately none of these: the same-sized step wherever you pull it.*
+
 ### Competence at a glance
 
 What a Score buys you on an ordinary task (a typical BEF ≈ 5, no modifiers):
@@ -39,7 +41,7 @@ What a Score buys you on an ordinary task (a typical BEF ≈ 5, no modifiers):
 | 10 | capable | 50% |
 | 15 | seasoned professional | 75% |
 | 20 | expert | 100% |
-| 20+3 (26+) | master — fails only on a 99–00 | over 100% |
+| 20+3 (26+) | master — only a natural 100 fails | over 100% |
 
 ### Challenge at a glance
 
@@ -71,7 +73,7 @@ One roll tells you *whether* and *how well*. Read the **Quality Rating (QR)** of
 | > SC | **QR7** | failure |
 | > SC and a multiple of 10 | **QR10** | fumble — it went *wrong* |
 
-Two hard limits: a roll of **00 is never better than QR7** (even a near-certainty can fail), and **99 is never better than QR4** (you can always succeed, never brilliantly, on a 99). *(The character sheet's Resolution Table precomputes the four thresholds so you never divide at the table.)*
+Two hard limits: a roll of **100 is never better than QR7** (even a near-certainty can fail), and **99 is never better than QR4** (you can always succeed, but never brilliantly, on a 99). *(The character sheet's Resolution Table precomputes the four thresholds so you never divide at the table.)*
 
 ### Read one column: fast, good, or much
 
