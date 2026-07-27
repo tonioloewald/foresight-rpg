@@ -34,5 +34,5 @@ export default defineSiteConfig({
   watchPaths: ['./static'],   // also rebuild when data/*.json change
   // NOTE: `icon` is required in practice — a navbar link without one renders
   // class="" and tosijs-ui's element builder throws on the empty class token.
-  navbarLinks: [{ label: 'GitHub', icon: 'github', href: 'https://github.com/tonioloewald/foresight-2026' }],
+  navbarLinks: [{ label: 'GitHub', icon: 'github', href: 'https://github.com/tonioloewald/foresight-rpg' }],
 } as any)
