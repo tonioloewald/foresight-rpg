@@ -33,11 +33,12 @@ links untouched. Proposed fix: a book base URL (`epub.baseUrl`, defaulting to `b
 absolutizing recognized-but-out-of-book paths to `bookBaseUrl + pathForSlug(slug)`. Issue #17 has
 the full implementation sketch (exact lines, the test to update).
 
-> **When #17 lands and we consume it:** set `epub: { …, baseUrl: 'https://foresight-rpg.com' }` in
-> `site.config.ts` (leaving the site's own `baseUrl`/`basePath` on github.io untouched, so the live
-> site's canonicals stay correct). The 2 links then point at `foresight-rpg.com/character-builder/`
-> and go live when the DNS does. Verify: unzip the ePub, `grep -oh 'href="[^"]*character-builder[^"]*"' OEBPS/*.xhtml`
-> should show the absolute URL, not `/character-builder/`.
+> **Simplified by the 2026-07-27 domain cutover:** the site's own `baseUrl` is now
+> `https://foresight-rpg.com`, so when #17 lands the out-of-book links absolutize to it
+> automatically — **no `epub.baseUrl` override needed** (the override plan assumed the site was
+> still on github.io while the book targeted the domain; that's moot now). Just consume the fix and
+> verify: unzip the ePub, `grep -oh 'href="[^"]*character-builder[^"]*"' OEBPS/*.xhtml` should show
+> `https://foresight-rpg.com/character-builder/`, not a bare `/character-builder/`.
 
 ## ⚠️ OPEN — tosijs-ui: no runtime basePath for bundleEntry code
 
