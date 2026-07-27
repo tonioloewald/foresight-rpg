@@ -27,6 +27,7 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **Background-factor slot budget** (default 4) and which factors are free vs. 1 slot.
 - [ ] **Point economy magnitudes** — attribute 10/20 curve, skill `cost×(L+2)`, fields 4/yr. The whole economy shrank (fewer attrs, fewer/cheaper skills, no E/G familiarity buys, minor buys → quirks); budgets/grants likely need to come down.
 - [ ] **Skill Cost 1-vs-2 split** is provisional.
+- [ ] **Ranged skill calibration (2026-07-xx).** Fixed **Firearms BEF 3 → 5** (a pistol is dangerous after 30 min; should be ≥ Archery). Made **Archery a ½-skill (limit 1.5)** with formula `(CO+PC)/4` — but the formula is unsettled: author floated `(CO+PC)/4` / `CO/2` / `(CO+ST)/4` and leans toward **ST mattering** (bows are strength-hungry). Decide the final Archery formula. And **Slings** should also be a limit-1.5 skill — decide whether it's its own skill or stays folded under Archery (currently Archery's "covers" says "bows and slings").
 - [ ] **Tag assignments** (`standard/ancient/modern/sf/fantasy`) on skills, BFs, fields, magic fundamentals are best-guess.
 - [ ] **Field hierarchy years** (First Aid 1 … Surgery 4) and the prerequisite model (implies-ancestors vs. pay-the-chain) — provisional.
 - [ ] **Magic fundamentals** Basic/Advanced years (currently flat 1/3) — provisional, "will do for now".

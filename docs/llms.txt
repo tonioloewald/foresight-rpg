@@ -27,6 +27,8 @@ Full documentation, with live code examples, is at the links below.
   Gear, value, and how advanced a setting is.
 - https://foresight-rpg.com/exhaustion/ — Exhaustion
   Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a wound is — but **domain-weighted**, no...
+- https://foresight-rpg.com/fire-combat/ — Fire Combat
+  A shot is a **Firearms** (or Archery, Heavy Weapons) roll — Score × EF, roll under — and that's the whole of it; ther...
 - https://foresight-rpg.com/character-sheet-paper/ — ForeSight — Character Sheet
   ____________________________________________________________________
 - https://foresight-rpg.com/gm-cheat-sheet/ — ForeSight — GM Cheat Sheet

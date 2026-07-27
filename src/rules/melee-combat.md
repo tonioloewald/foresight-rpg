@@ -1,5 +1,5 @@
 # Melee Combat
-<!--{ "parent": "conflict", "order": 3 }-->
+<!--{ "parent": "conflict", "order": 4 }-->
 
 *One-pager. Melee is nothing new — it's [opposed resolution](/the-one-rule/) applied to hitting someone at arm's length: your attack against their defence, **QRs compared**, exactly like stealth-vs-search or a tennis point. It just asks four questions in order, and hands the last one to [Damage](/damage/).*
 

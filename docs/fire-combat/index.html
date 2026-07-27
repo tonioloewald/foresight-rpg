@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Fire Combat — ForeSight RPG</title>
+  <meta name="description" content="One-pager. Ranged combat is the simplest application of the One Rule — one task against situational modifiers, not an opposed contest; you don&#39;t parry a…" />
+  <link rel="canonical" href="https://foresight-rpg.com/fire-combat/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Fire Combat — ForeSight RPG" />
+  <meta property="og:description" content="One-pager. Ranged combat is the simplest application of the One Rule — one task against situational modifiers, not an opposed contest; you don&#39;t parry a…" />
+  <meta property="og:url" content="https://foresight-rpg.com/fire-combat/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Fire Combat","description":"One-pager. Ranged combat is the simplest application of the One Rule — one task against situational modifiers, not an opposed contest; you don't parry a…","url":"https://foresight-rpg.com/fire-combat/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Fire Combat</h1>
+<!--{ "parent": "conflict", "order": 3 }-->
+
+<p><em>One-pager. Ranged combat is the <strong>simplest</strong> application of the One Rule — one task against situational modifiers, not an opposed contest; you don&#39;t parry a bullet. But it rests on four facts almost every game skips: to shoot a thing you must <strong>know (or think you know) where it is</strong>; you must <strong>aim</strong>; <strong>firing disturbs your aim</strong> (recoil); and <strong>the target doesn&#39;t want to be hit</strong>.</em></p>
+<h2>One shot, one roll</h2>
+<p>A shot is a <strong>Firearms</strong> (or Archery, Heavy Weapons) roll — Score × EF, roll under — and that&#39;s the whole of it; there is no defence roll, because the target can&#39;t block the bullet. Everything interesting lives in the <strong>Ease Factor</strong>, and the skill&#39;s <strong>BEF already bakes in the usual case</strong>: a trained, calm shooter putting a round into a <strong>static target at short range</strong> — pistol-practice conditions. The world adds and subtracts from there.</p>
+<p><em>(Which is why a firearm&#39;s BEF is <strong>high</strong> — a pistol is forgiving, thirty minutes&#39; training makes you genuinely dangerous — while a bow&#39;s is not: Archery is a hard, strength-hungry ½-skill you spend years getting good at. The gun is easy to be adequate with; the bow is not.)</em></p>
+<h2>What moves the ease factor</h2>
+<p>Each of these is the One Rule&#39;s &quot;challenge at a glance&quot; made concrete for shooting. Reach for the ones that bite; ignore the rest:</p>
+<ul>
+<li><strong>How good an idea do you have of where it is?</strong> — cover, lighting, smoke and weather, your own eyesight. You shoot at where you <em>think</em> the target is.</li>
+<li><strong>Blocked, or merely hidden?</strong> — the distinction nearly every game botches: <strong>concealment hides; cover <em>stops bullets</em> — and most interior walls, and plenty of exterior ones, stop nothing.</strong> Only hidden? You can still fire, at a penalty for not seeing them. Behind real cover? Its Protection eats the shot (see <a href="/damage/">Damage</a>).</li>
+<li><strong>Moving or still?</strong> — a mover is harder.</li>
+<li><strong>How far?</strong> — range (and weapons <strong>shed Damage Class</strong> with distance — see Damage).</li>
+<li><strong>How large a target is presented?</strong> — a full silhouette, a head, a hand past a doorframe. Calling a sliver is the same up-front penalty as any called shot.</li>
+<li><strong>How well balanced is the shooter?</strong> — set and braced, or off-balance / firing on the move (an <a href="/intense-action/">Intense Action</a> split).</li>
+<li><strong>How carefully aimed?</strong> — taking a bead is spending attention: a secondary action, or your whole focus (concentrate — the sniper).</li>
+<li><strong>How well is the weapon handled?</strong> — its performance modifier, your familiarity, its fit to the job.</li>
+<li><strong>Did you see the last shot land?</strong> — spot your fall of shot and you correct: a bonus to the follow-up.</li>
+<li><strong>Did the last shot buck you off target?</strong> — recoil: repeat or rapid fire past the first shot takes a penalty until you re-acquire.</li>
+</ul>
+<h2>Short-circuit it</h2>
+<p>You never run that list in full. Assume a <strong>trained, competent, calm shooter</strong> — the BEF already covers it — and add a modifier only where the situation genuinely departs from &quot;the range.&quot; Ranged combat stays a one-roll affair; that&#39;s the point.</p>
+<h2>Modifiers follow what you <em>describe</em>, not labels</h2>
+<p>Distrust the shorthand other games hand out — &quot;target unaware, +2.&quot; Unawareness is not a bonus in itself; it is <em>time and freedom to aim carefully</em>, and the bonus comes from <strong>the careful aim you then take</strong>. Quick-draw hip-fire at an oblivious target dummy? The dummy&#39;s obliviousness buys you nothing. Price what the character actually <strong>does</strong>.</p>
+<p>This is the general shape of it: the table rewards what a player <strong>narrates</strong>. Describe taking cover, steadying on the doorframe, waiting for the mark to turn — and earn the modifiers those actions deserve. Describe something reckless and eat the penalty — though a reckless choice that&#39;s <em>good story</em> is often worth the in-game cost. Punished by the dice, rewarded at the table.</p>
+<h2>Area fire — making a space dangerous</h2>
+<p>Most shooting in a close fight isn&#39;t aimed at anyone. It&#39;s <strong>area fire</strong>: blind or suppressive rounds thrown at a doorway, a window, a stretch of street to <strong>keep heads down and stop people breaking cover</strong>. It doesn&#39;t target a person — it makes an <strong>area dangerous to be in</strong>. Anyone caught in the beaten zone, crossing it, or breaking from cover through it risks a hit (resolve as a chance per exposed target — roughly one in QR of the rounds finds someone in the zone). Its worth is <strong>tactical, not a body count</strong>: pin the enemy, deny the ground, cover a teammate&#39;s rush — the spread-don&#39;t-concentrate logic from <a href="/intense-action/">Intense Action</a>. Full-auto and covering fire are the same idea with more lead.</p>
+<h2>Then: location and damage</h2>
+<p>A hit rolls <strong>hit location</strong> and applies <strong>damage</strong> through armor — all on <a href="/damage/">Damage</a>. And as in <a href="/melee-combat/">Melee</a>, there is <strong>no roll to dodge a shot once fired</strong>: the defence against fire is <em>not being shot at</em> — cover, concealment, distance, movement, and getting your own shot in first (<a href="/initiative/">Initiative</a>). A bullet grants none of melee&#39;s cinematic grace; you take cover, or you don&#39;t.</p>
+<p><em>Designer&#39;s Note: ranged combat is where Score × EF is at its plainest — one roll, modifiers you can see and argue about — so this page mostly exists to name the four things other games quietly drop (you must know where it is, you must aim, firing wrecks your aim, the target resists) and to kill two reflexes: the automatic &quot;+2 because unaware&quot; (no — the bonus is the aim that being unobserved <em>lets</em> you take), and the belief that a wall is cover (it usually isn&#39;t).</em></p>
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link current" href="/fire-combat/" aria-current="page">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-applications/">Magic — Applications by Fundamental</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>
