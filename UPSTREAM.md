@@ -72,3 +72,16 @@ section instead of between `1` and `2`. Suggested a numeric multi-key comparator
 > **Local cleanup owed:** `character-builder.md` still has a stale `order: 3.5` and mis-sorts to
 > the end of `core`. Fix to an integer when `core` is reorganized (see REVIEW — it's blocked on the
 > `quality-ratings`/`open-ended-resolution` removal, which renumbers core anyway).
+
+## ⚠️ OPEN — tosijs-ui: served site is mount-point-locked (basePath baked into URLs)
+
+**Issue:** https://github.com/tonioloewald/tosijs-ui/issues/25 (related to #16 — same root cause)
+**Raised:** 2026-07-27, against tosijs-ui 1.7.0-beta.5 (hit during the foresight-rpg.com cutover).
+
+The build bakes `basePath` into every functional URL, so a build is locked to one mount point.
+Setting the custom domain (serves at root) while `docs/` was built for `/foresight-2026` made every
+asset 404 at the root — a blank, unstyled shell, with no warning, until we rebuilt at `basePath: '/'`.
+Suggested: emit functional URLs **relative** (or resolve base at runtime), keep SEO metadata absolute.
+
+**Workaround:** rebuild with the matching basePath at cutover; `static/CNAME` persists the domain
+through `rm -rf docs`. Now moot for us (we're on the domain at root), but a future move would repeat it.
