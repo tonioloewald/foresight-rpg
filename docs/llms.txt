@@ -2,7 +2,7 @@
 
 A streamlined modern edition of the ForeSight tabletop RPG.
 
-- Docs: https://tonioloewald.github.io/foresight-2026
+- Docs: https://foresight-rpg.com
 - npm: https://www.npmjs.com/package/foresight-2026
 
 ## Documentation
@@ -11,57 +11,57 @@ Full documentation, with live code examples, is at the links below.
 
 ## Pages
 
-- https://tonioloewald.github.io/foresight-2026/character-builder/ — Character Builder
+- https://foresight-rpg.com/character-builder/ — Character Builder
   The interactive, rule-enforcing character builder — the same rules as [Creating Characters](/creating-characters/), l...
-- https://tonioloewald.github.io/foresight-2026/conflict/ — Conflict
+- https://foresight-rpg.com/conflict/ — Conflict
   Combat, pursuit, damage, and the things that wear a character down.
-- https://tonioloewald.github.io/foresight-2026/core/ — Core Rules
+- https://foresight-rpg.com/core/ — Core Rules
   The heart of the system: how to resolve anything, and how to make a character.
-- https://tonioloewald.github.io/foresight-2026/creating-characters/ — Creating Characters
+- https://foresight-rpg.com/creating-characters/ — Creating Characters
   A character is not solely described by things for which there are rules. These rules deal with *abilities* — what a c...
-- https://tonioloewald.github.io/foresight-2026/damage/ — Damage
+- https://foresight-rpg.com/damage/ — Damage
   Every attack has a **Damage Class** — how hard it hits before quality, armor, or luck. The scale is numerical and cal...
-- https://tonioloewald.github.io/foresight-2026/equipment/ — Equipment
+- https://foresight-rpg.com/equipment/ — Equipment
   A **basic object** is the noun: *sword*, *pistol*, *sedan*, *backpack*. A **modification** is an adjective with a def...
-- https://tonioloewald.github.io/foresight-2026/world/ — Equipment & World
+- https://foresight-rpg.com/world/ — Equipment & World
   Gear, value, and how advanced a setting is.
-- https://tonioloewald.github.io/foresight-2026/character-sheet-paper/ — ForeSight — Character Sheet
+- https://foresight-rpg.com/character-sheet-paper/ — ForeSight — Character Sheet
   ____________________________________________________________________
-- https://tonioloewald.github.io/foresight-2026/gm-cheat-sheet/ — ForeSight — GM Cheat Sheet
+- https://foresight-rpg.com/gm-cheat-sheet/ — ForeSight — GM Cheat Sheet
   1. **Awareness → Initiative.** Surprised → Startled → Alert → Ready → Lying-in-wait; modify for big factors (can't se...
-- https://tonioloewald.github.io/foresight-2026/playtest-pack/ — ForeSight — Playtest Pack
+- https://foresight-rpg.com/playtest-pack/ — ForeSight — Playtest Pack
   A **score = formula + level** (see Scores). Formulas use the seven attributes **ST, EN, CO, IN, PC, WP, AP**. Each sk...
-- https://tonioloewald.github.io/foresight-2026/ — ForeSight 2026
+- https://foresight-rpg.com/ — ForeSight 2026
   A modern edition of the ForeSight RPG: one resolution rule (Score × Ease Factor), lethal fast combat, and a careful generative magic system.
-- https://tonioloewald.github.io/foresight-2026/initiative/ — Initiative
+- https://foresight-rpg.com/initiative/ — Initiative
   Tense situations run in **rounds** — brief bursts separated by waiting for someone to make a move. A round is as long...
-- https://tonioloewald.github.io/foresight-2026/intense-action/ — Intense Action
+- https://foresight-rpg.com/intense-action/ — Intense Action
   There is no action budget to track. In a round you have one **primary** focus, room for one deliberate **secondary** ...
-- https://tonioloewald.github.io/foresight-2026/introduction/ — Introduction
+- https://foresight-rpg.com/introduction/ — Introduction
   ForeSight is a general-purpose role-playing game. It first appeared in 1986 as a science-fiction game system, grew a ...
-- https://tonioloewald.github.io/foresight-2026/magic/ — Magic
+- https://foresight-rpg.com/magic/ — Magic
   A careful, generative magic system — fundamentals compose into effects.
-- https://tonioloewald.github.io/foresight-2026/magic-applications/ — Magic — Applications by Fundamental
+- https://foresight-rpg.com/magic-applications/ — Magic — Applications by Fundamental
   Delay the whole or a part of the magical effect of which this application is part by up to 30s (**fixed, bestowed**).
-- https://tonioloewald.github.io/foresight-2026/open-ended-resolution/ — Open-Ended Resolution
+- https://foresight-rpg.com/open-ended-resolution/ — Open-Ended Resolution
   When two characters contest directly — a parry against an attack, stealth against a searcher, a tug-of-war, a chess m...
-- https://tonioloewald.github.io/foresight-2026/power-pools/ — Power Pools
+- https://foresight-rpg.com/power-pools/ — Power Pools
   Every power source has a **gather skill** — *Mana* for magic, *Piety* for divine power, *Spirit* for mystic disciplin...
-- https://tonioloewald.github.io/foresight-2026/pursuit/ — Pursuit
+- https://foresight-rpg.com/pursuit/ — Pursuit
   A pursuit is any contest of movement: a car chase, a dogfight, a horseback flight, a submarine running silent, a foot...
-- https://tonioloewald.github.io/foresight-2026/quality-ratings/ — Quality Ratings & Yield
+- https://foresight-rpg.com/quality-ratings/ — Quality Ratings & Yield
   A success is graded **QR1** (superb) → **QR2** → **QR3** → **QR4** (it worked, barely). Failures continue the same sc...
-- https://tonioloewald.github.io/foresight-2026/reference/ — Reference
+- https://foresight-rpg.com/reference/ — Reference
   Cheat sheets, the printable sheet, and the playtest pack.
-- https://tonioloewald.github.io/foresight-2026/scores/ — Scores
+- https://foresight-rpg.com/scores/ — Scores
   An **attribute's** score is simply its value (Strength 11 is a score of 11).
-- https://tonioloewald.github.io/foresight-2026/skills/ — Skills
+- https://foresight-rpg.com/skills/ — Skills
   The full skill list — the single source of truth shared with the character builder. Each skill's row links to its car...
-- https://tonioloewald.github.io/foresight-2026/technology-levels/ — Technology Levels
+- https://foresight-rpg.com/technology-levels/ — Technology Levels
   Technology isn't a single ladder. Read the table by **column**: each column is a thread that has its own level. For h...
-- https://tonioloewald.github.io/foresight-2026/the-one-rule/ — The One Rule
+- https://foresight-rpg.com/the-one-rule/ — The One Rule
   Every ability — an **attribute** (innate, like Strength or Perception) or a **skill** (trained, like Firearms or Stea...
-- https://tonioloewald.github.io/foresight-2026/the-svu/ — The SVU
+- https://foresight-rpg.com/the-svu/ — The SVU
   Prices in ForeSight are given in **svu** (Standard Value Units), pronounced "svoo" — a coin borrowed from Jack Vance'...
-- https://tonioloewald.github.io/foresight-2026/wounds-and-recovery/ — Wounds & Recovery
+- https://foresight-rpg.com/wounds-and-recovery/ — Wounds & Recovery
   Injury is a single number, **0 (healthy)** to **8 (dead)**. The level is a **−(level)** modifier to *everything* you do.

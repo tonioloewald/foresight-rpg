@@ -8,8 +8,8 @@ export default defineSiteConfig({
   prebuild: renderEntityViews,
   name: 'ForeSight 2026',
   description: 'A streamlined modern edition of the ForeSight tabletop RPG.',
-  baseUrl: 'https://tonioloewald.github.io/foresight-2026',
-  basePath: process.env.BASE_PATH ?? '/foresight-2026', // set BASE_PATH= for local-root preview
+  baseUrl: 'https://foresight-rpg.com',
+  basePath: process.env.BASE_PATH ?? '/', // custom domain (foresight-rpg.com) serves from root
   outputDir: 'docs',
   docPaths: ['src', 'README.md'],
   sectionsDir: 'src/docs',
