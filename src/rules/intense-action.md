@@ -33,6 +33,8 @@ Skill *is* speed and facility: the gunfighter cycles and fires faster, the sword
 
 *Firearms 25 (a 20+1 shooter), all-in: 25 ÷ 5 = **5** — Aim · Shoot · Aim · Shoot · Shoot. Melee 18 on the attack: 18 ÷ 5 → **4** — stab · stab · wind-up · stab; with defence as his secondary, 18 ÷ 10 → **2** — block · block.*
 
+**An attribute used as the ability counts double.** Movement is Coordination, a shove is Strength — and a raw attribute tops out about where a trained skill is just getting started, so it would otherwise buy almost no beats: **double it for this**. In a firefight you're usually *moving and shooting* — Firearms primary (the shots), Coordination secondary (the footwork). Coordination 8 doubles to 16 → 16 ÷ 10 → **2** movement beats: *pop up · [shoot] · hide*. The lumbering CO-5 bruiser doubles to 10 → just **1**: he can pop up or drop back down, not both as an afterthought, so he's caught in the open — unless he makes *moving* his primary (10 ÷ 5 → 2) and takes the shot as a ragged secondary.
+
 ## What counts as a task
 
 **A task is a thing you want *rolled*.** That is the whole test, and it polices itself. A step, a shouted word, drawing a weapon, aiming — these aren't tasks; they happen, with honest consequences (pop up to fire and you're still half-exposed when the round ends). There are no "free actions": a thing is either of no consequence, or it isn't free. But it only costs you *attention* if you cared enough to roll for it. So *advance–attack–retreat* is one task — the attack — and takes no penalty. Decline to make your movement a task and you simply move: noisily, visibly, at the GM's discretion.
