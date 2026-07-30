@@ -60,6 +60,43 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
   },
 }
 
+// ── Matrix (cross-tab) specs ────────────────────────────────────────────────
+// A reference matrix — rows × columns of cells, with a spanning header over each
+// axis. Markdown tables can't express the grouped "Defence →" / "Attack ↓"
+// headers, so the build emits a real <table> with colspan/rowspan. Static only
+// (a lookup table needs no interactivity), so — unlike EntitySpec — there's no
+// browser side; entity-views.ts renders it and that HTML is what ships.
+
+export interface MatrixSpec {
+  /** spanning label down the left, over the rows (e.g. "Attack ↓") */
+  rowAxis: string
+  /** spanning label across the top, over the columns (e.g. "Defence →") */
+  colAxis: string
+  /** column headers */
+  cols: string[]
+  /** one per row: its header cell + its data cells (same length as `cols`) */
+  rows: { head: string; cells: string[] }[]
+  /** cell values that should render muted/de-emphasised (e.g. "blocked") */
+  muted?: string[]
+}
+
+export const MATRIX_SPECS: Record<string, MatrixSpec> = {
+  // The melee attack × defence outcome grid (see melee-combat.md). Cells are the
+  // attack's *effective* QR after the defence eats into it.
+  'melee-blocking': {
+    rowAxis: 'Attack ↓',
+    colAxis: 'Defence →',
+    cols: ['QR1', 'QR2', 'QR3', 'QR4', 'QR7 fail', 'QR10 botch'],
+    rows: [
+      { head: 'QR1', cells: ['blocked', 'QR4', 'QR3', 'QR2', 'QR1', 'QR1'] },
+      { head: 'QR2', cells: ['blocked', 'blocked', 'QR4', 'QR3', 'QR2', 'QR1'] },
+      { head: 'QR3', cells: ['blocked', 'blocked', 'blocked', 'QR4', 'QR3', 'QR2'] },
+      { head: 'QR4', cells: ['blocked', 'blocked', 'blocked', 'blocked', 'QR4', 'QR3'] },
+    ],
+    muted: ['blocked'],
+  },
+}
+
 /** Render any JSON scalar/array cell as plain text. */
 export function fmt(value: unknown): string {
   if (value === null || value === undefined || value === '') return '—'

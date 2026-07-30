@@ -18,7 +18,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { ENTITY_SPECS, fmt, slug, type EntitySpec } from './src/entity-specs'
+import { ENTITY_SPECS, MATRIX_SPECS, fmt, slug, type EntitySpec, type MatrixSpec } from './src/entity-specs'
 
 const RULES_DIR = 'src/rules'
 const DATA_DIR = 'static/data'
@@ -50,6 +50,46 @@ const STYLE = `<style>
 .ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
 .ev-empty{opacity:.7;font-style:italic}
 </style>`
+
+// Matrix styling — a cross-tab with a spanning header over each axis. The
+// row-axis label reads vertically (writing-mode), which every EPUB3 reader
+// supports and which degrades to horizontal in an ancient one.
+const MATRIX_STYLE = `<style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style>`
+
+/**
+ * A cross-tab table with a spanning header over each axis — the thing markdown
+ * can't do. One line, no blank line inside (same marked constraint as below).
+ */
+function renderMatrix(spec: MatrixSpec): string {
+  const colHead = spec.cols.map((c) => `<th class="mx-colhead">${esc(c)}</th>`).join('')
+  const body = spec.rows
+    .map((r, i) => {
+      const axis =
+        i === 0 ? `<th class="mx-rowaxis" rowspan="${spec.rows.length}">${esc(spec.rowAxis)}</th>` : ''
+      const cells = r.cells
+        .map((c) => `<td${spec.muted?.includes(c) ? ' class="mx-blocked"' : ''}>${esc(c)}</td>`)
+        .join('')
+      return `<tr>${axis}<th class="mx-rowhead">${esc(r.head)}</th>${cells}</tr>`
+    })
+    .join('')
+  return (
+    `<div class="matrix">` +
+    MATRIX_STYLE +
+    `<table class="mx-table"><thead>` +
+    `<tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="${spec.cols.length}">${esc(spec.colAxis)}</th></tr>` +
+    `<tr>${colHead}</tr>` +
+    `</thead><tbody>${body}</tbody></table>` +
+    `</div>`
+  )
+}
 
 /**
  * The static substrate: a limited-column table whose every row links down to
@@ -97,42 +137,59 @@ function renderStatic(spec: EntitySpec, rows: any[]): string {
   )
 }
 
-/** Rewrite every `<!-- entity-view: X.json -->` block in the rules pages. */
+/** Rewrite every build-time table block (`entity-view` and `matrix`) in the rules pages. */
 export function renderEntityViews(): void {
   const files = readdirSync(RULES_DIR).filter((f) => f.endsWith('.md'))
-  let blocks = 0
+  let ev = 0
+  let mx = 0
 
   for (const file of files) {
     const path = join(RULES_DIR, file)
-    const src = readFileSync(path, 'utf8')
-    if (!src.includes('<!-- entity-view:')) continue
+    const orig = readFileSync(path, 'utf8')
+    let out = orig
 
-    const out = src.replace(
-      /(<!-- entity-view: *([\w.-]+) *-->)[\s\S]*?(<!-- \/entity-view -->)/g,
-      (_all, open, dataFile, close) => {
-        const spec = ENTITY_SPECS[dataFile]
-        if (!spec) throw new Error(`entity-view: no spec for "${dataFile}" (${path}). Add one to src/entity-specs.ts.`)
-        const rows = JSON.parse(readFileSync(join(DATA_DIR, dataFile), 'utf8'))
-        if (!Array.isArray(rows)) throw new Error(`entity-view: ${dataFile} is not an array of entities`)
-        blocks++
-        const columns = esc(JSON.stringify(spec.columns))
-        // <style> sits OUTSIDE the element: <foresight-table> replaces its own
-        // children when it enhances, which would take the stylesheet with it.
-        const element =
-          `<foresight-table src="${esc(spec.file)}" columns="${columns}">` +
-          renderStatic(spec, rows) +
-          `</foresight-table>`
-        // The wrapping <div> is load-bearing. marked only treats KNOWN block-level
-        // tags as raw HTML; a line starting with a custom element is "inline", so
-        // it gets wrapped in a <p> — and since a <div> may not live inside a <p>,
-        // the parser then hoists the whole static substrate OUT of the element,
-        // leaving it empty. Opening with <div> keeps the block raw. (The block must
-        // also contain NO blank line, which would end it and drop back to markdown.)
-        return `${open}\n<div class="entity-view">\n${STYLE}\n${element}\n</div>\n${close}`
-      }
-    )
+    // <!-- entity-view: X.json --> — a data collection as a table + detail cards.
+    if (out.includes('<!-- entity-view:')) {
+      out = out.replace(
+        /(<!-- entity-view: *([\w.-]+) *-->)[\s\S]*?(<!-- \/entity-view -->)/g,
+        (_all, open, dataFile, close) => {
+          const spec = ENTITY_SPECS[dataFile]
+          if (!spec) throw new Error(`entity-view: no spec for "${dataFile}" (${path}). Add one to src/entity-specs.ts.`)
+          const rows = JSON.parse(readFileSync(join(DATA_DIR, dataFile), 'utf8'))
+          if (!Array.isArray(rows)) throw new Error(`entity-view: ${dataFile} is not an array of entities`)
+          ev++
+          const columns = esc(JSON.stringify(spec.columns))
+          // <style> sits OUTSIDE the element: <foresight-table> replaces its own
+          // children when it enhances, which would take the stylesheet with it.
+          const element =
+            `<foresight-table src="${esc(spec.file)}" columns="${columns}">` +
+            renderStatic(spec, rows) +
+            `</foresight-table>`
+          // The wrapping <div> is load-bearing. marked only treats KNOWN block-level
+          // tags as raw HTML; a line starting with a custom element is "inline", so
+          // it gets wrapped in a <p> — and since a <div> may not live inside a <p>,
+          // the parser then hoists the whole static substrate OUT of the element,
+          // leaving it empty. Opening with <div> keeps the block raw. (The block must
+          // also contain NO blank line, which would end it and drop back to markdown.)
+          return `${open}\n<div class="entity-view">\n${STYLE}\n${element}\n</div>\n${close}`
+        }
+      )
+    }
 
-    if (out !== src) writeFileSync(path, out)
+    // <!-- matrix: name --> — a cross-tab with spanning axis headers.
+    if (out.includes('<!-- matrix:')) {
+      out = out.replace(
+        /(<!-- matrix: *([\w-]+) *-->)[\s\S]*?(<!-- \/matrix -->)/g,
+        (_all, open, name, close) => {
+          const spec = MATRIX_SPECS[name]
+          if (!spec) throw new Error(`matrix: no spec for "${name}" (${path}). Add one to src/entity-specs.ts.`)
+          mx++
+          return `${open}\n${renderMatrix(spec)}\n${close}`
+        }
+      )
+    }
+
+    if (out !== orig) writeFileSync(path, out)
   }
-  console.log(`entity-views: rendered ${blocks} block(s)`)
+  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix block(s)`)
 }

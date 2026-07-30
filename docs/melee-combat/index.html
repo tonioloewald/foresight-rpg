@@ -61,55 +61,18 @@
 <p>&quot;Kill him with this sword&quot; is a <em>statement of intent</em>, not one action — it plays out as discrete beats: a <strong>lunge</strong> to close, a <strong>wind-up</strong> for an especially heavy blow, the <strong>blow</strong> itself. <strong>&quot;Don&#39;t get hit&quot; is a second intent</strong>, and a fighter is almost always pursuing both at once — pressing the attack while keeping a guard up — one <strong>primary</strong>, one <strong>secondary</strong>; or (the berserker, the duellist waiting for the opening) all-in on just one. That is exactly the <a href="/intense-action/">Intense Action</a> split: your focus is sharp and everything else is worse. So the all-out attacker hits harder and guards poorly, while the careful fighter trades a step off the attack (−1) to keep a real defence (−2) — and melee&#39;s ebb and flow <em>is</em> that choice, remade each exchange.</p>
 <h2>Partial blocking — how much got through</h2>
 <p>A defence doesn&#39;t just win or lose; it can <strong>eat part</strong> of a blow. A defence <strong>equal to or better than</strong> the attack negates it; otherwise the attack&#39;s QR drops <strong>(5 − the defending QR)</strong> notches down the 1-2-3-4 scale. The failure end isn&#39;t arithmetic: a <strong>QR7</strong> defence is <em>no defence</em> (the attack lands at its full rolled QR), and a <strong>QR10</strong> defence <strong>makes it worse</strong> by a notch (you fumbled into it). Read off the attack&#39;s <strong>effective QR</strong> — what actually reaches the target:</p>
-<table>
-<thead>
-<tr>
-<th>Attack ↓ \ Defence →</th>
-<th align="center">QR1</th>
-<th align="center">QR2</th>
-<th align="center">QR3</th>
-<th align="center">QR4</th>
-<th align="center">QR7 (fail)</th>
-<th align="center">QR10 (botch)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>QR1</strong></td>
-<td align="center">blocked</td>
-<td align="center">QR4</td>
-<td align="center">QR3</td>
-<td align="center">QR2</td>
-<td align="center">QR1</td>
-<td align="center">QR1</td>
-</tr>
-<tr>
-<td><strong>QR2</strong></td>
-<td align="center">blocked</td>
-<td align="center">blocked</td>
-<td align="center">QR4</td>
-<td align="center">QR3</td>
-<td align="center">QR2</td>
-<td align="center">QR1</td>
-</tr>
-<tr>
-<td><strong>QR3</strong></td>
-<td align="center">blocked</td>
-<td align="center">blocked</td>
-<td align="center">blocked</td>
-<td align="center">QR4</td>
-<td align="center">QR3</td>
-<td align="center">QR2</td>
-</tr>
-<tr>
-<td><strong>QR4</strong></td>
-<td align="center">blocked</td>
-<td align="center">blocked</td>
-<td align="center">blocked</td>
-<td align="center">blocked</td>
-<td align="center">QR4</td>
-<td align="center">QR3</td>
-</tr>
-</tbody></table>
+<!-- matrix: melee-blocking -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="6">Defence →</th></tr><tr><th class="mx-colhead">QR1</th><th class="mx-colhead">QR2</th><th class="mx-colhead">QR3</th><th class="mx-colhead">QR4</th><th class="mx-colhead">QR7 fail</th><th class="mx-colhead">QR10 botch</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="4">Attack ↓</th><th class="mx-rowhead">QR1</th><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td><td>QR1</td><td>QR1</td></tr><tr><th class="mx-rowhead">QR2</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td><td>QR1</td></tr><tr><th class="mx-rowhead">QR3</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td></tr><tr><th class="mx-rowhead">QR4</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td></tr></tbody></table></div>
+<!-- /matrix -->
+
 <p><em>(The better the defence, the more of the attack it eats; an equal defence blocks it clean — the just-barely parry. A botched defence leaves you worse off than no defence at all.)</em></p>
 <h2>Parry, and the counter</h2>
 <p>A <strong>parry</strong> meets steel with steel (or shield, or forearm). A <em>critical</em> parry (a QR well over the attack&#39;s) lets you <strong>counter</strong> on the same beat; an <em>overwhelming</em> one leaves the attacker off-balance — a chance to <strong>disarm</strong> or <strong>trade places</strong>. A parry can also shade the hit rather than stop it: a strong-but-not-clean one may <strong>shift the location roll</strong> a step or <strong>shave a point of DC</strong> instead of eating a whole QR.</p>

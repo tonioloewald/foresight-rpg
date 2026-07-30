@@ -22,12 +22,17 @@ Both sides roll their own task and the **better QR prevails** — the general op
 
 A defence doesn't just win or lose; it can **eat part** of a blow. A defence **equal to or better than** the attack negates it; otherwise the attack's QR drops **(5 − the defending QR)** notches down the 1-2-3-4 scale. The failure end isn't arithmetic: a **QR7** defence is *no defence* (the attack lands at its full rolled QR), and a **QR10** defence **makes it worse** by a notch (you fumbled into it). Read off the attack's **effective QR** — what actually reaches the target:
 
-| Attack ↓ \ Defence → | QR1 | QR2 | QR3 | QR4 | QR7 (fail) | QR10 (botch) |
-|---|:--:|:--:|:--:|:--:|:--:|:--:|
-| **QR1** | blocked | QR4 | QR3 | QR2 | QR1 | QR1 |
-| **QR2** | blocked | blocked | QR4 | QR3 | QR2 | QR1 |
-| **QR3** | blocked | blocked | blocked | QR4 | QR3 | QR2 |
-| **QR4** | blocked | blocked | blocked | blocked | QR4 | QR3 |
+<!-- matrix: melee-blocking -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="6">Defence →</th></tr><tr><th class="mx-colhead">QR1</th><th class="mx-colhead">QR2</th><th class="mx-colhead">QR3</th><th class="mx-colhead">QR4</th><th class="mx-colhead">QR7 fail</th><th class="mx-colhead">QR10 botch</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="4">Attack ↓</th><th class="mx-rowhead">QR1</th><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td><td>QR1</td><td>QR1</td></tr><tr><th class="mx-rowhead">QR2</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td><td>QR1</td></tr><tr><th class="mx-rowhead">QR3</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td></tr><tr><th class="mx-rowhead">QR4</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td></tr></tbody></table></div>
+<!-- /matrix -->
 
 *(The better the defence, the more of the attack it eats; an equal defence blocks it clean — the just-barely parry. A botched defence leaves you worse off than no defence at all.)*
 
