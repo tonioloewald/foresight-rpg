@@ -64,7 +64,7 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 
 ## Editorial / component follow-ups (2026-07-30)
 - [ ] **Bullets → tables pass** — convert definitional `- **Term:** desc` lists (damage M/I/B, armor P/A, QR readings, stun states…) to 2-column tables where it reads better; leave prose-y bullets alone.
-- [ ] **Grouped/spanning-header table** — the melee attack×defence grid wants "Defence →" / "Attack ↓" spanning headers markdown can't do. Plan: a raw-HTML `colspan` table for that grid now; file a tosijs-ui issue for reusable grouped headers rather than a bespoke component (worth it only once several tables need it).
+- [x] **Grouped/spanning-header table** — **done**: rolled our own build-time `<!-- matrix: name -->` component (`MatrixSpec` in `entity-specs.ts`, `renderMatrix` in `entity-views.ts`), same approach as `<foresight-table>` but static (no JS). Emits a real `<table>` with `colspan`/`rowspan` axis headers. Applied to the melee attack×defence grid; reusable for any cross-tab (magic intensity grids, etc.). No tosijs-ui issue needed — we build our own tables.
 - [ ] **tosijs-ui 1.8.0 is out** (we're pinned to `1.7.0-beta.5`). Do a *deliberate* upgrade and check whether it resolves the open UPSTREAM issues (#16 basePath, #17 out-of-book links, #24 order sort, #25 mount-agnostic URLs) + move the pin to `^1.8.0`. (Also: `node_modules` went missing on 2026-07-30 and bun auto-installed a stray 1.8.0 that couldn't find `marked`; `bun install` restored the pin — flag if it recurs.)
 
 ## Rules one-pagers still to draft
