@@ -56,7 +56,18 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **`character-builder.md` has a stale `order: 3.5`** and mis-sorts to the end of `core` (the doc-system sorts order lexically — fractions break it; see tosijs-ui#24). Give it an integer slot when `core` is reorganized (blocked on the quality-ratings/open-ended removal above, which renumbers core anyway).
 - [x] **Wound track → 0–6** (6 = dead, 4 = incapacitated, 5 = dying) — done in `damage.md`; CLAUDE.md's "0→8" line corrected.
 
+## Magic restructure (2026-07-30 — decided: a page per fundamental)
+- [x] **Magic overview** — done (`src/docs/magic.md`, the section landing page): the GM's setting dials (common/powerful/prominent → the magic axis), gather-then-weave (Mana + Incantation; complexity vs energy; ritual/snap-cast), effects composed from fundamentals, and the five balance keystones. Grounded in HindSight/2004 + the design-doc lenses.
+- [ ] **A page per fundamental** (23: Fire, Form, Essence, …) — each = its Basic/Advanced description (range/duration/props from `magic-fundamentals.json` + `magic-applications.json`) + an **entity-view of its own applications** (by intensity). Ground the descriptions in `legacy/foresight2004/magic/fundamentals/*.html` (43 files).
+- [ ] **Entity-view for applications** — extend `entity-views.ts`/`entity-specs.ts` to slice `magic-applications.json` by fundamental (each fundamental's apps are a flat list, so no nested-grouping component needed). Then retire the 1307-line `magic-applications.md` mega-page.
+- [ ] **Fundamentals index** — the Magic landing page's `<!-- toc -->` will list the 23 once they exist; optionally an entity-view of the fundamentals themselves (`magic-fundamentals.json`).
+
+## Editorial / component follow-ups (2026-07-30)
+- [ ] **Bullets → tables pass** — convert definitional `- **Term:** desc` lists (damage M/I/B, armor P/A, QR readings, stun states…) to 2-column tables where it reads better; leave prose-y bullets alone.
+- [ ] **Grouped/spanning-header table** — the melee attack×defence grid wants "Defence →" / "Attack ↓" spanning headers markdown can't do. Plan: a raw-HTML `colspan` table for that grid now; file a tosijs-ui issue for reusable grouped headers rather than a bespoke component (worth it only once several tables need it).
+- [ ] **tosijs-ui 1.8.0 is out** (we're pinned to `1.7.0-beta.5`). Do a *deliberate* upgrade and check whether it resolves the open UPSTREAM issues (#16 basePath, #17 out-of-book links, #24 order sort, #25 mount-agnostic URLs) + move the pin to `^1.8.0`. (Also: `node_modules` went missing on 2026-07-30 and bun auto-installed a stray 1.8.0 that couldn't find `marked`; `bun install` restored the pin — flag if it recurs.)
+
 ## Rules one-pagers still to draft
-- [ ] NPCs (nouns + modifiers) · Interpersonal · Travel & wilderness · **Magic** · Religion · Mystic Disciplines (Ch'i)
+- [ ] NPCs (nouns + modifiers) · Interpersonal · Travel & wilderness · Religion · Mystic Disciplines (Ch'i)
 - [ ] Equipment category lists (weapons/armor/vehicles/tools) with DC-calibrated stats
 - [ ] Advancement / point-buy ("Tweaking") chapter; the experience-as-reassignment and fallow-points concepts

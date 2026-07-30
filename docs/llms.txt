@@ -44,7 +44,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/introduction/ — Introduction
   ForeSight is a general-purpose role-playing game. It first appeared in 1986 as a science-fiction game system, grew a ...
 - https://foresight-rpg.com/magic/ — Magic
-  A careful, generative magic system — fundamentals compose into effects.
+  Magic shapes a setting more than any other system, so ForeSight's transparency principle bites hardest here: magic's ...
 - https://foresight-rpg.com/magic-applications/ — Magic — Applications by Fundamental
   Delay the whole or a part of the magical effect of which this application is part by up to 30s (**fixed, bestowed**).
 - https://foresight-rpg.com/melee-combat/ — Melee Combat
