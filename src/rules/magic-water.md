@@ -1,0 +1,47 @@
+# Water
+<!--{ "parent": "magic", "order": 22 }-->
+
+*command water, liquids, and ice*
+
+A **Fundamental** — a Field of Magical Knowledge whose applications reach **30m** and last **5min**; the usual props are **a mouthful of water (consumed)**. Learn it **Basic** (1 yr) for the easy end, **Advanced** (3 yr) for the deep.
+
+Its **9 applications**, by intensity:
+
+<!-- magic-apps: Water -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-create-water">Create Water</a></td><td align="center">0</td><td align="center">§24B1</td></tr><tr><td><a href="#app-extinguish">Extinguish</a></td><td align="center">0</td><td align="center">§24B2</td></tr><tr><td><a href="#app-dagger-of-ice">Dagger of Ice</a></td><td align="center">1</td><td align="center">§24B3</td></tr><tr><td><a href="#app-protection-against-water">Protection against Water</a></td><td align="center">1</td><td align="center">§24B4</td></tr><tr><td><a href="#app-create-great-water">Create Great Water</a></td><td align="center">1</td><td align="center">§24B5</td></tr><tr><td><a href="#app-create-ice">Create Ice</a></td><td align="center">2</td><td align="center">§24A6</td></tr><tr><td><a href="#app-cone-of-bloating">Cone of Bloating</a></td><td align="center">2</td><td align="center">§24A7</td></tr><tr><td><a href="#app-alter-seas">Alter Seas</a></td><td align="center">2</td><td align="center">§24A8</td></tr><tr><td><a href="#app-summon-water-elemental">Summon Water Elemental</a></td><td align="center">3</td><td align="center">§24A9</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-create-water"><h3>Create Water</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§24B1</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create/remove one hundred litres of water (approximately 25 gallons), in some container, or on the ground (ie. not in mid-air).</p></section><section class="ev-card" id="app-extinguish"><h3>Extinguish</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§24B2</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Extinguish one hex (rough equivalent of a campfire) of fire, creating vapour filling 10m×10m×10m.</p></section><section class="ev-card" id="app-dagger-of-ice"><h3>Dagger of Ice</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§24B3</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create a dagger of ice which inflicts <strong>DC5</strong> on anyone holding or struck with it.</p></section><section class="ev-card" id="app-protection-against-water"><h3>Protection against Water</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§24B4</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">The invoker may protect him/herself, or one target, against the damaging effects of cold and moisture, to the effect of reducing all such attacks causing damage through these qualities by 4 DCs, and by 2 DCs if they are among the effects involved (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-create-great-water"><h3>Create Great Water</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§24B5</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create/remove 10,000 litres of water in a container or on the ground.</p></section><section class="ev-card" id="app-create-ice"><h3>Create Ice</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§24A6</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create/remove 10,000 litres of ice in a container or on the ground.</p></section><section class="ev-card" id="app-cone-of-bloating"><h3>Cone of Bloating</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§24A7</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">The invoker may create a cone of bloating with its base anywhere within range. The cone is 12m wide at its base and draws to a point at its invoker. Those wholly or mostly within it suffer <strong>DC3</strong> from becoming bloated with water (<strong>immediate</strong>).</p></section><section class="ev-card" id="app-alter-seas"><h3>Alter Seas</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§24A8</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Alter conditions in a 1km radius by shifting the conditions by (at most) one row on each of the two columns below.
+
+| Wind<em> | Seas |
+|---|---|
+| Calm | Glassy |
+| Slight Breeze | Calm |
+| Gusty Breeze | Low Swell |
+| Moderate Wind | Moderate Swell |
+| Strong Wind | Large Swell |
+| Storm Wind | Stormy Seas |
+| Gale | Rending Seas |
+| Hurricane | Tidal Waves |
+| Tornado | |
+
+Note: </em> Wind direction may be altered by up to 45° (eg. from SE to E) instead of altering its intensity. Also note that while the duration of this effect is only five minutes, the return to normality will be gradual (as though the artificially brought conditions had come about naturally).</p></section><section class="ev-card" id="app-summon-water-elemental"><h3>Summon Water Elemental</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§24A9</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Summon an elemental of water (<strong>controlled</strong>). The elemental appears in 2×(QR-1) pulses. See [5.2].</p></section></div></div>
+</div>
+<!-- /magic-apps -->

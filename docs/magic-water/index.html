@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Water — ForeSight RPG</title>
+  <meta name="description" content="Command water, liquids, and ice" />
+  <link rel="canonical" href="https://foresight-rpg.com/magic-water/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Water — ForeSight RPG" />
+  <meta property="og:description" content="Command water, liquids, and ice" />
+  <meta property="og:url" content="https://foresight-rpg.com/magic-water/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Water","description":"Command water, liquids, and ice","url":"https://foresight-rpg.com/magic-water/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Water</h1>
+<!--{ "parent": "magic", "order": 22 }-->
+
+<p><em>command water, liquids, and ice</em></p>
+<p>A <strong>Fundamental</strong> — a Field of Magical Knowledge whose applications reach <strong>30m</strong> and last <strong>5min</strong>; the usual props are <strong>a mouthful of water (consumed)</strong>. Learn it <strong>Basic</strong> (1 yr) for the easy end, <strong>Advanced</strong> (3 yr) for the deep.</p>
+<p>Its <strong>9 applications</strong>, by intensity:</p>
+<!-- magic-apps: Water -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-create-water">Create Water</a></td><td align="center">0</td><td align="center">§24B1</td></tr><tr><td><a href="#app-extinguish">Extinguish</a></td><td align="center">0</td><td align="center">§24B2</td></tr><tr><td><a href="#app-dagger-of-ice">Dagger of Ice</a></td><td align="center">1</td><td align="center">§24B3</td></tr><tr><td><a href="#app-protection-against-water">Protection against Water</a></td><td align="center">1</td><td align="center">§24B4</td></tr><tr><td><a href="#app-create-great-water">Create Great Water</a></td><td align="center">1</td><td align="center">§24B5</td></tr><tr><td><a href="#app-create-ice">Create Ice</a></td><td align="center">2</td><td align="center">§24A6</td></tr><tr><td><a href="#app-cone-of-bloating">Cone of Bloating</a></td><td align="center">2</td><td align="center">§24A7</td></tr><tr><td><a href="#app-alter-seas">Alter Seas</a></td><td align="center">2</td><td align="center">§24A8</td></tr><tr><td><a href="#app-summon-water-elemental">Summon Water Elemental</a></td><td align="center">3</td><td align="center">§24A9</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-create-water"><h3>Create Water</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§24B1</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create/remove one hundred litres of water (approximately 25 gallons), in some container, or on the ground (ie. not in mid-air).</p></section><section class="ev-card" id="app-extinguish"><h3>Extinguish</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§24B2</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Extinguish one hex (rough equivalent of a campfire) of fire, creating vapour filling 10m×10m×10m.</p></section><section class="ev-card" id="app-dagger-of-ice"><h3>Dagger of Ice</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§24B3</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create a dagger of ice which inflicts <strong>DC5</strong> on anyone holding or struck with it.</p></section><section class="ev-card" id="app-protection-against-water"><h3>Protection against Water</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§24B4</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">The invoker may protect him/herself, or one target, against the damaging effects of cold and moisture, to the effect of reducing all such attacks causing damage through these qualities by 4 DCs, and by 2 DCs if they are among the effects involved (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-create-great-water"><h3>Create Great Water</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§24B5</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create/remove 10,000 litres of water in a container or on the ground.</p></section><section class="ev-card" id="app-create-ice"><h3>Create Ice</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§24A6</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Create/remove 10,000 litres of ice in a container or on the ground.</p></section><section class="ev-card" id="app-cone-of-bloating"><h3>Cone of Bloating</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§24A7</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">The invoker may create a cone of bloating with its base anywhere within range. The cone is 12m wide at its base and draws to a point at its invoker. Those wholly or mostly within it suffer <strong>DC3</strong> from becoming bloated with water (<strong>immediate</strong>).</p></section><section class="ev-card" id="app-alter-seas"><h3>Alter Seas</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§24A8</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Alter conditions in a 1km radius by shifting the conditions by (at most) one row on each of the two columns below.
+
+<table>
+<thead>
+<tr>
+<th>Wind<em></th>
+<th>Seas</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Calm</td>
+<td>Glassy</td>
+</tr>
+<tr>
+<td>Slight Breeze</td>
+<td>Calm</td>
+</tr>
+<tr>
+<td>Gusty Breeze</td>
+<td>Low Swell</td>
+</tr>
+<tr>
+<td>Moderate Wind</td>
+<td>Moderate Swell</td>
+</tr>
+<tr>
+<td>Strong Wind</td>
+<td>Large Swell</td>
+</tr>
+<tr>
+<td>Storm Wind</td>
+<td>Stormy Seas</td>
+</tr>
+<tr>
+<td>Gale</td>
+<td>Rending Seas</td>
+</tr>
+<tr>
+<td>Hurricane</td>
+<td>Tidal Waves</td>
+</tr>
+<tr>
+<td>Tornado</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Note: </em> Wind direction may be altered by up to 45° (eg. from SE to E) instead of altering its intensity. Also note that while the duration of this effect is only five minutes, the return to normality will be gradual (as though the artificially brought conditions had come about naturally).</p></section><section class="ev-card" id="app-summon-water-elemental"><h3>Summon Water Elemental</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§24A9</dd><dt>Source</dt><dd>water</dd></dl><p class="ev-body">Summon an elemental of water (<strong>controlled</strong>). The elemental appears in 2×(QR-1) pulses. See [5.2].</p></section></div></div></p>
+</div>
+<!-- /magic-apps -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link current" href="/magic-water/" aria-current="page">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Sound — ForeSight RPG</title>
+  <meta name="description" content="Created and illusory sound (formerly Sounds)" />
+  <link rel="canonical" href="https://foresight-rpg.com/magic-sound/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Sound — ForeSight RPG" />
+  <meta property="og:description" content="Created and illusory sound (formerly Sounds)" />
+  <meta property="og:url" content="https://foresight-rpg.com/magic-sound/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Sound","description":"Created and illusory sound (formerly Sounds)","url":"https://foresight-rpg.com/magic-sound/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Sound</h1>
+<!--{ "parent": "magic", "order": 18 }-->
+
+<p><em>created and illusory sound</em> <em>(formerly Sounds)</em></p>
+<p>A <strong>Fundamental</strong> — a Field of Magical Knowledge whose applications reach <strong>50m</strong> and last <strong>10min</strong>; the usual props are <strong>a musical instrument</strong>. Learn it <strong>Basic</strong> (1 yr) for the easy end, <strong>Advanced</strong> (3 yr) for the deep.</p>
+<p>Its <strong>16 applications</strong>, by intensity:</p>
+<!-- magic-apps: Sound -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-tinkling-bells">Tinkling Bells</a></td><td align="center">0</td><td align="center">§19B1</td></tr><tr><td><a href="#app-distant-singing">Distant Singing</a></td><td align="center">0</td><td align="center">§19B2</td></tr><tr><td><a href="#app-whisper">Whisper</a></td><td align="center">0</td><td align="center">§19B3</td></tr><tr><td><a href="#app-buzzing">Buzzing</a></td><td align="center">0</td><td align="center">§19B4</td></tr><tr><td><a href="#app-lesser-silence">Lesser Silence</a></td><td align="center">0</td><td align="center">§19B5</td></tr><tr><td><a href="#app-silence">Silence</a></td><td align="center">1</td><td align="center">§19B10</td></tr><tr><td><a href="#app-bestowed-lesser-sound">Bestowed Lesser Sound</a></td><td align="center">1</td><td align="center">§19B11</td></tr><tr><td><a href="#app-voice">Voice</a></td><td align="center">1</td><td align="center">§19B6</td></tr><tr><td><a href="#app-animal-noises">Animal Noises</a></td><td align="center">1</td><td align="center">§19B7</td></tr><tr><td><a href="#app-footsteps">Footsteps</a></td><td align="center">1</td><td align="center">§19B8</td></tr><tr><td><a href="#app-sounds-of-burning">Sounds of Burning</a></td><td align="center">1</td><td align="center">§19B9</td></tr><tr><td><a href="#app-thunderclap">Thunderclap</a></td><td align="center">2</td><td align="center">§19A12</td></tr><tr><td><a href="#app-greater-silence">Greater Silence</a></td><td align="center">2</td><td align="center">§19A13</td></tr><tr><td><a href="#app-bestowed-sound">Bestowed Sound</a></td><td align="center">2</td><td align="center">§19A14</td></tr><tr><td><a href="#app-bestowed-greater-sound">Bestowed Greater Sound</a></td><td align="center">3</td><td align="center">§19A15</td></tr><tr><td><a href="#app-multiple-sources">Multiple Sources</a></td><td align="center">4</td><td align="center">§19A16</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-tinkling-bells"><h3>Tinkling Bells</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§19B1</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Tinkling of bells (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-distant-singing"><h3>Distant Singing</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§19B2</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Distant singing, unintelligible (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-whisper"><h3>Whisper</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§19B3</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">A whisper, automatically heard only by its target; others must make a Scan roll (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-buzzing"><h3>Buzzing</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§19B4</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Buzzing (like that of a bee or fly) emanating from one point within range (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-lesser-silence"><h3>Lesser Silence</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§19B5</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Silence any sound no louder than quiet speech (<strong>fixed</strong>).</p></section><section class="ev-card" id="app-silence"><h3>Silence</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§19B10</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Silence any sound no louder than raised voices (<strong>fixed</strong>).</p></section><section class="ev-card" id="app-bestowed-lesser-sound"><h3>Bestowed Lesser Sound</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§19B11</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Any Intensity 0 application, <strong>bestowed</strong>.</p></section><section class="ev-card" id="app-voice"><h3>Voice</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§19B6</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Audible voice (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-animal-noises"><h3>Animal Noises</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§19B7</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Animal noises — roars, barks, clip-clops, neighs, etc. (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-footsteps"><h3>Footsteps</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§19B8</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Sound of an unarmoured person — clothes rustling, footfalls, breathing, etc. (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-sounds-of-burning"><h3>Sounds of Burning</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§19B9</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Sounds of burning — hissing, crackling, etc. (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-thunderclap"><h3>Thunderclap</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§19A12</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Sound of a huge impact or explosion, or other sound of similar volume (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-greater-silence"><h3>Greater Silence</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§19A13</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Silence any bearable sound (<strong>controlled</strong>).</p></section><section class="ev-card" id="app-bestowed-sound"><h3>Bestowed Sound</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§19A14</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Any Intensity 1 application, <strong>bestowed</strong>.</p></section><section class="ev-card" id="app-bestowed-greater-sound"><h3>Bestowed Greater Sound</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§19A15</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">Any Intensity 2 application, <strong>bestowed</strong>.</p></section><section class="ev-card" id="app-multiple-sources"><h3>Multiple Sources</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§19A16</dd><dt>Source</dt><dd>sounds</dd></dl><p class="ev-body">All applications of Sound may issue from multiple sources within range (instead of just one) by increasing their intensity. This is a sort of universal version.</p></section></div></div>
+</div>
+<!-- /magic-apps -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link current" href="/magic-sound/" aria-current="page">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

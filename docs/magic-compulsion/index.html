@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Compulsion — ForeSight RPG</title>
+  <meta name="description" content="Command and bend the will of others" />
+  <link rel="canonical" href="https://foresight-rpg.com/magic-compulsion/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Compulsion — ForeSight RPG" />
+  <meta property="og:description" content="Command and bend the will of others" />
+  <meta property="og:url" content="https://foresight-rpg.com/magic-compulsion/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Compulsion","description":"Command and bend the will of others","url":"https://foresight-rpg.com/magic-compulsion/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Compulsion</h1>
+<!--{ "parent": "magic", "order": 6 }-->
+
+<p><em>command and bend the will of others</em></p>
+<p>A <strong>Fundamental</strong> — a Field of Magical Knowledge whose applications reach <strong>10m</strong> and last <strong>10min</strong>; the usual props are <strong>a whip, a seal, or a baton</strong>. Learn it <strong>Basic</strong> (1 yr) for the easy end, <strong>Advanced</strong> (3 yr) for the deep.</p>
+<p>Its <strong>11 applications</strong>, by intensity:</p>
+<!-- magic-apps: Compulsion -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-charm">Charm</a></td><td align="center">1</td><td align="center">§6B1</td></tr><tr><td><a href="#app-glamour">Glamour</a></td><td align="center">1</td><td align="center">§6B2</td></tr><tr><td><a href="#app-entreat">Entreat</a></td><td align="center">1</td><td align="center">§6B3</td></tr><tr><td><a href="#app-sleep">Sleep</a></td><td align="center">2</td><td align="center">§6A4</td></tr><tr><td><a href="#app-proscription">Proscription</a></td><td align="center">2</td><td align="center">§6A5</td></tr><tr><td><a href="#app-motor-control">Motor Control</a></td><td align="center">3</td><td align="center">§6A6</td></tr><tr><td><a href="#app-greater-proscription">Greater Proscription</a></td><td align="center">3</td><td align="center">§6A7</td></tr><tr><td><a href="#app-oath">Oath</a></td><td align="center">4</td><td align="center">§6A10</td></tr><tr><td><a href="#app-silvertongue">Silvertongue</a></td><td align="center">4</td><td align="center">§6A8</td></tr><tr><td><a href="#app-geas">Geas</a></td><td align="center">4</td><td align="center">§6A9</td></tr><tr><td><a href="#app-bind-will">Bind Will</a></td><td align="center">5</td><td align="center">§6A11</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-charm"><h3>Charm</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§6B1</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Cause a character's demeanour to improve or worsen one row (eg. from neutral to friendly, or vice versa) at the invoker's option (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-glamour"><h3>Glamour</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§6B2</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Cause a character to be willing to do a favour (as per the interaction rules) for one person of the invoker's choice (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-entreat"><h3>Entreat</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§6B3</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Render a target unable to (voluntarily) perform hostile acts against the invoker, and/or any subjects he/she designates (<strong>bestowed</strong>).</p></section><section class="ev-card" id="app-sleep"><h3>Sleep</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§6A4</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Cause a target (who/which must normally sleep at some time) to fall asleep, for an hour or until awoken (<strong>immediate, fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-proscription"><h3>Proscription</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§6A5</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Render a target unable to (voluntarily) perform a specific act — eg. use a particular weapon, enter a particular room, say a particular word, attack a particular person (<strong>bestowed</strong>, duration 1h).</p></section><section class="ev-card" id="app-motor-control"><h3>Motor Control</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§6A6</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Allow the invoker to control a character's motor functions (ie. his/her movement, but not his/her thoughts; <strong>controlled</strong>).
+
+<p>Note that release of control causes the target to become rigid in the position last assumed until the application&#39;s duration elapses (how sad).</p></section><section class="ev-card" id="app-greater-proscription"><h3>Greater Proscription</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§6A7</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Render a target unable to (voluntarily) perform a set of related activities — eg. travel north, eat vegetables, leave the plane, wield a sword (<strong>bestowed</strong>, duration 1 day).</p></section><section class="ev-card" id="app-oath"><h3>Oath</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§6A10</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Enforce a contract to which all the targets (who must be within range; this may include the invoker) have agreed.</p>
+<p>If anyone involved in the contract is out of range or resists, no-one is affected. Otherwise, if any one of those involved knowingly acts against the letter of the contract, then he/she is affected as per Geas (§6A9), above.</p></section><section class="ev-card" id="app-silvertongue"><h3>Silvertongue</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§6A8</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Force one character to believe everything the invoker tells him/her, no matter how outrageous, and act upon those beliefs. If told contradictory things, the affected character will either go insane (think like HAL), or catatonic, until the effect wears off — and the character may make rational judgements on what he/she was told, probably unjustly biased by circumstances (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-geas"><h3>Geas</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§6A9</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Geas the recipient to perform a task according to a 25- (or fewer) word instruction to which he/she has verbally agreed.</p>
+<p>Once laid, the geas will cause the recipient pain if he/she knowingly acts against the letter of it: the recipient must make a PR roll once per hour for the first day (cumulative) of such action, once per five minutes for the second day, and once per pulse thereafter. Failure stuns the recipient normally; a QR10 increases his/her damage level by one.</p>
+<p>(Duration infinite, <strong>controlled</strong> or <strong>fixed</strong>, <strong>bestowed</strong>.) !!!</p></section><section class="ev-card" id="app-bind-will"><h3>Bind Will</h3><dl class="ev-fields"><dt>Intensity</dt><dd>5</dd><dt>Code</dt><dd>§6A11</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Bind the will of a target to that of the invoker, so that he/she does the invoker&#39;s bidding (but is otherwise free to do as he/she pleases).</p>
+<p>If faced with a highly traumatic situation, forced to do something abhorrent, or alien to its nature, the target may make a resistance roll:</p>
+<ul>
+<li><strong>QR1</strong> — the binding is broken.</li>
+<li><strong>QR2</strong> — he/she may ignore the instructions which led to the roll (and receives a +1 modifier to subsequent rolls).</li>
+<li><strong>QR3</strong> — he/she hesitates (for one pulse) before continuing.</li>
+<li>otherwise the roll has no effect.</li>
+</ul>
+<p>(Duration infinite, <strong>fixed, bestowed</strong>.) !!!</p></section></div></div></p>
+</div>
+<!-- /magic-apps -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link current" href="/magic-compulsion/" aria-current="page">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

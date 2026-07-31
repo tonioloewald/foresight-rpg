@@ -1,0 +1,50 @@
+# Compulsion
+<!--{ "parent": "magic", "order": 6 }-->
+
+*command and bend the will of others*
+
+A **Fundamental** — a Field of Magical Knowledge whose applications reach **10m** and last **10min**; the usual props are **a whip, a seal, or a baton**. Learn it **Basic** (1 yr) for the easy end, **Advanced** (3 yr) for the deep.
+
+Its **11 applications**, by intensity:
+
+<!-- magic-apps: Compulsion -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-charm">Charm</a></td><td align="center">1</td><td align="center">§6B1</td></tr><tr><td><a href="#app-glamour">Glamour</a></td><td align="center">1</td><td align="center">§6B2</td></tr><tr><td><a href="#app-entreat">Entreat</a></td><td align="center">1</td><td align="center">§6B3</td></tr><tr><td><a href="#app-sleep">Sleep</a></td><td align="center">2</td><td align="center">§6A4</td></tr><tr><td><a href="#app-proscription">Proscription</a></td><td align="center">2</td><td align="center">§6A5</td></tr><tr><td><a href="#app-motor-control">Motor Control</a></td><td align="center">3</td><td align="center">§6A6</td></tr><tr><td><a href="#app-greater-proscription">Greater Proscription</a></td><td align="center">3</td><td align="center">§6A7</td></tr><tr><td><a href="#app-oath">Oath</a></td><td align="center">4</td><td align="center">§6A10</td></tr><tr><td><a href="#app-silvertongue">Silvertongue</a></td><td align="center">4</td><td align="center">§6A8</td></tr><tr><td><a href="#app-geas">Geas</a></td><td align="center">4</td><td align="center">§6A9</td></tr><tr><td><a href="#app-bind-will">Bind Will</a></td><td align="center">5</td><td align="center">§6A11</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-charm"><h3>Charm</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§6B1</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Cause a character's demeanour to improve or worsen one row (eg. from neutral to friendly, or vice versa) at the invoker's option (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-glamour"><h3>Glamour</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§6B2</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Cause a character to be willing to do a favour (as per the interaction rules) for one person of the invoker's choice (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-entreat"><h3>Entreat</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§6B3</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Render a target unable to (voluntarily) perform hostile acts against the invoker, and/or any subjects he/she designates (<strong>bestowed</strong>).</p></section><section class="ev-card" id="app-sleep"><h3>Sleep</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§6A4</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Cause a target (who/which must normally sleep at some time) to fall asleep, for an hour or until awoken (<strong>immediate, fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-proscription"><h3>Proscription</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§6A5</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Render a target unable to (voluntarily) perform a specific act — eg. use a particular weapon, enter a particular room, say a particular word, attack a particular person (<strong>bestowed</strong>, duration 1h).</p></section><section class="ev-card" id="app-motor-control"><h3>Motor Control</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§6A6</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Allow the invoker to control a character's motor functions (ie. his/her movement, but not his/her thoughts; <strong>controlled</strong>).
+
+Note that release of control causes the target to become rigid in the position last assumed until the application's duration elapses (how sad).</p></section><section class="ev-card" id="app-greater-proscription"><h3>Greater Proscription</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§6A7</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Render a target unable to (voluntarily) perform a set of related activities — eg. travel north, eat vegetables, leave the plane, wield a sword (<strong>bestowed</strong>, duration 1 day).</p></section><section class="ev-card" id="app-oath"><h3>Oath</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§6A10</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Enforce a contract to which all the targets (who must be within range; this may include the invoker) have agreed.
+
+If anyone involved in the contract is out of range or resists, no-one is affected. Otherwise, if any one of those involved knowingly acts against the letter of the contract, then he/she is affected as per Geas (§6A9), above.</p></section><section class="ev-card" id="app-silvertongue"><h3>Silvertongue</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§6A8</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Force one character to believe everything the invoker tells him/her, no matter how outrageous, and act upon those beliefs. If told contradictory things, the affected character will either go insane (think like HAL), or catatonic, until the effect wears off — and the character may make rational judgements on what he/she was told, probably unjustly biased by circumstances (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-geas"><h3>Geas</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§6A9</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Geas the recipient to perform a task according to a 25- (or fewer) word instruction to which he/she has verbally agreed.
+
+Once laid, the geas will cause the recipient pain if he/she knowingly acts against the letter of it: the recipient must make a PR roll once per hour for the first day (cumulative) of such action, once per five minutes for the second day, and once per pulse thereafter. Failure stuns the recipient normally; a QR10 increases his/her damage level by one.
+
+(Duration infinite, <strong>controlled</strong> or <strong>fixed</strong>, <strong>bestowed</strong>.) !!!</p></section><section class="ev-card" id="app-bind-will"><h3>Bind Will</h3><dl class="ev-fields"><dt>Intensity</dt><dd>5</dd><dt>Code</dt><dd>§6A11</dd><dt>Source</dt><dd>compulsion</dd></dl><p class="ev-body">Bind the will of a target to that of the invoker, so that he/she does the invoker's bidding (but is otherwise free to do as he/she pleases).
+
+If faced with a highly traumatic situation, forced to do something abhorrent, or alien to its nature, the target may make a resistance roll:
+
+- <strong>QR1</strong> — the binding is broken.
+- <strong>QR2</strong> — he/she may ignore the instructions which led to the roll (and receives a +1 modifier to subsequent rolls).
+- <strong>QR3</strong> — he/she hesitates (for one pulse) before continuing.
+- otherwise the roll has no effect.
+
+(Duration infinite, <strong>fixed, bestowed</strong>.) !!!</p></section></div></div>
+</div>
+<!-- /magic-apps -->

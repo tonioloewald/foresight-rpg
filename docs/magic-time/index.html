@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Time — ForeSight RPG</title>
+  <meta name="description" content="Hasten, delay, or perceive the flow of time" />
+  <link rel="canonical" href="https://foresight-rpg.com/magic-time/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Time — ForeSight RPG" />
+  <meta property="og:description" content="Hasten, delay, or perceive the flow of time" />
+  <meta property="og:url" content="https://foresight-rpg.com/magic-time/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Time","description":"Hasten, delay, or perceive the flow of time","url":"https://foresight-rpg.com/magic-time/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Time</h1>
+<!--{ "parent": "magic", "order": 20 }-->
+
+<p><em>hasten, delay, or perceive the flow of time</em></p>
+<p>A <strong>Fundamental</strong> — a Field of Magical Knowledge whose applications reach <strong>10m</strong> and last <strong>10min</strong>; the usual props are <strong>a timepiece</strong>. Learn it <strong>Basic</strong> (1 yr) for the easy end, <strong>Advanced</strong> (3 yr) for the deep.</p>
+<p>Its <strong>7 applications</strong>, by intensity:</p>
+<!-- magic-apps: Time -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-slow">Slow</a></td><td align="center">1</td><td align="center">§23B1</td></tr><tr><td><a href="#app-quicken">Quicken</a></td><td align="center">2</td><td align="center">§23A2</td></tr><tr><td><a href="#app-temporal-immunity">Temporal Immunity</a></td><td align="center">3</td><td align="center">§23A3</td></tr><tr><td><a href="#app-hibernation">Hibernation</a></td><td align="center">3</td><td align="center">§23A4</td></tr><tr><td><a href="#app-stasis-field">Stasis Field</a></td><td align="center">4</td><td align="center">§23A5</td></tr><tr><td><a href="#app-age">Age</a></td><td align="center">4</td><td align="center">§23A6</td></tr><tr><td><a href="#app-mass-age">Mass Age</a></td><td align="center">4</td><td align="center">§23A6</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-slow"><h3>Slow</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§23B1</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Slow a target's metabolism (by 50%*), reducing his/her/its speed and Initiative BEF by one (<strong>bestowed</strong>).</p></section><section class="ev-card" id="app-quicken"><h3>Quicken</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§23A2</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Quicken a target's metabolism (by 100%<em>), increasing his/her speed and Initiative BEF by one (<strong>bestowed</strong>).
+
+<p></em> This will have many effects if maintained for a prolonged period. It will affect the time between environment-related fatigue rolls, aging, nutritional requirements, day-night cycles, long-distance travel, the effects of disease, and a character&#39;s emotional makeup and interactions with other people.</p></section><section class="ev-card" id="app-temporal-immunity"><h3>Temporal Immunity</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§23A3</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Render a target immune to the effects of any of the other applications of the Time fundamental (<strong>bestowed</strong>). !!!</p>
+<p>Designer&#39;s Note: this is a fiddly application. As a rule, it can be made part of a magical effect, immunising the effect to applications of the Time fundamental. (Eg. an effect of long, but finite, duration could be temporarily neutralised by Stasis Field, §23A6, below, unless it had been immunised by this application.) On the other hand, while this immunisation would allow an effect to pass through a stasis field, it would not allow it to affect something within the stasis field.</p></section><section class="ev-card" id="app-hibernation"><h3>Hibernation</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§23A4</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Slow down the metabolism of a sleeping target by a factor of 100,000 (so that a year seems like a few minutes). (Duration: until awakened — naturally, or by being, for example, shaken.)</p></section><section class="ev-card" id="app-stasis-field"><h3>Stasis Field</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§23A5</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Create a stasis field no larger than 5m×5m×5m. All creatures and objects within are (unless immunised) in stasis, and cannot act or be harmed in any fashion. All creatures and objects outside are (unless immunised) unable to enter the field. !!!</p></section><section class="ev-card" id="app-age"><h3>Age</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§23A6</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Increase or reduce the age of a target by up to ten years. (Targets made older are aged, while those made younger also lose experience, skills, etc. Ie. when a target&#39;s age is reduced by X years, it becomes as it was X years ago, whereas increasing a target&#39;s age does not make it as it will be in X years, but as it might be were it to lie around — doing nothing and having nothing done to it — for that time.)</p>
+<p>Note that this application, as stated, is temporary, and reverses once the effect is ended (either by running out of time or being dispelled).</p></section><section class="ev-card" id="app-mass-age"><h3>Mass Age</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§23A6</dd><dt>Source</dt><dd>time</dd></dl><p class="ev-body">Age multiple targets, otherwise as Age (§23A6).</p></section></div></div></p>
+</div>
+<!-- /magic-apps -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link current" href="/magic-time/" aria-current="page">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

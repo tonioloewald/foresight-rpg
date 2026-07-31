@@ -33,6 +33,29 @@ export interface EntitySpec {
   card: EntityField[]
   /** prop holding the long prose shown as the card's body paragraph */
   body?: string
+  /** render the body with light inline markdown (**bold**, *italic*) rather than escaped */
+  bodyMarkdown?: boolean
+}
+
+// The applications of a single magic Fundamental (sliced from
+// magic-applications.json by entity-views.ts). Static-only — a per-fundamental
+// list of ~10 is small enough that it wants no filter, so no browser side.
+export const APP_SPEC: EntitySpec = {
+  file: 'magic-applications.json',
+  noun: 'application',
+  idPrefix: 'app',
+  columns: [
+    { prop: 'name', name: 'Application', width: 200 },
+    { prop: 'intensity', name: 'Int', width: 48, align: 'center' },
+    { prop: 'code', name: '§', width: 72, align: 'center' },
+  ],
+  card: [
+    { label: 'Intensity', prop: 'intensity' },
+    { label: 'Code', prop: 'code' },
+    { label: 'Source', prop: 'source' },
+  ],
+  body: 'desc',
+  bodyMarkdown: true,
 }
 
 export const ENTITY_SPECS: Record<string, EntitySpec> = {

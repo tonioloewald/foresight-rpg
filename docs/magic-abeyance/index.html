@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Abeyance — ForeSight RPG</title>
+  <meta name="description" content="Hold a magical effect in reserve, released on a trigger or condition" />
+  <link rel="canonical" href="https://foresight-rpg.com/magic-abeyance/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Abeyance — ForeSight RPG" />
+  <meta property="og:description" content="Hold a magical effect in reserve, released on a trigger or condition" />
+  <meta property="og:url" content="https://foresight-rpg.com/magic-abeyance/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Abeyance","description":"Hold a magical effect in reserve, released on a trigger or condition","url":"https://foresight-rpg.com/magic-abeyance/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Abeyance</h1>
+<!--{ "parent": "magic", "order": 1 }-->
+
+<p><em>hold a magical effect in reserve, released on a trigger or condition</em></p>
+<p>A <strong>Fundamental</strong> — a Field of Magical Knowledge whose applications reach <strong>infinite</strong> and last <strong>see below</strong>; the usual props are <strong>a leash, or an hourglass</strong>. Learn it <strong>Basic</strong> (1 yr) for the easy end, <strong>Advanced</strong> (3 yr) for the deep.</p>
+<p>Its <strong>4 applications</strong>, by intensity:</p>
+<!-- magic-apps: Abeyance -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-simple-abeyance">Simple Abeyance</a></td><td align="center">0</td><td align="center">§1B1</td></tr><tr><td><a href="#app-abeyance">Abeyance</a></td><td align="center">1</td><td align="center">§1B2</td></tr><tr><td><a href="#app-master-abeyance">Master Abeyance</a></td><td align="center">2</td><td align="center">§1A3</td></tr><tr><td><a href="#app-external-link">External Link</a></td><td align="center">3</td><td align="center">§1A4</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-simple-abeyance"><h3>Simple Abeyance</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§1B1</dd><dt>Source</dt><dd>abeyance</dd></dl><p class="ev-body">Delay the whole or a part of the magical effect of which this application is part by up to 30s (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-abeyance"><h3>Abeyance</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§1B2</dd><dt>Source</dt><dd>abeyance</dd></dl><p class="ev-body">Delay the whole or a part of the magical effect of which this application is part by up to one day (<strong>controlled</strong> or <strong>fixed</strong>, <strong>bestowed</strong>).</p></section><section class="ev-card" id="app-master-abeyance"><h3>Master Abeyance</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§1A3</dd><dt>Source</dt><dd>abeyance</dd></dl><p class="ev-body">Delay a magical effect of which this application is part indefinitely (<strong>controlled</strong> or <strong>fixed</strong>, <strong>bestowed</strong>).</p></section><section class="ev-card" id="app-external-link"><h3>External Link</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§1A4</dd><dt>Source</dt><dd>abeyance</dd></dl><p class="ev-body">Delay a magical effect's starting to work until another effect is incorporated into it.
+
+<p>The subsequently incorporated effect must be prespecified (although it can, itself, include this application), and the behaviour of the completed effect must be determined in advance.</p>
+<p>Once a new magical effect is incorporated into an effect with an external link, the link is sealed (disappears), and the two combine to form a single magical effect, which starts functioning straight away.</p>
+<p>This application is designed to allow a group of magicians to build complex effects, combining their knowledge and skills, or to allow a single magician to produce a difficult effect in stages. As such, it is particularly useful if the &#39;flashy magic&#39; option is not in use.</p>
+<p>(Duration: 24h.)</p></section></div></div></p>
+</div>
+<!-- /magic-apps -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link current" href="/magic-abeyance/" aria-current="page">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

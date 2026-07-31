@@ -1,0 +1,46 @@
+# Sense
+<!--{ "parent": "magic", "order": 17 }-->
+
+*grant, sharpen, or manipulate the senses* *(formerly Perception)*
+
+A **Fundamental** — a Field of Magical Knowledge whose applications reach **touch** and last **1 hour**; the usual props are **animal eyes, ears, tongues, lips, noses, etc. as**. Learn it **Basic** (1 yr) for the easy end, **Advanced** (3 yr) for the deep.
+
+Its **8 applications**, by intensity:
+
+<!-- magic-apps: Sense -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+</style>
+<div class="ev-static"><table class="ev-table"><thead><tr><th>Application</th><th align="center">Int</th><th align="center">§</th></tr></thead><tbody><tr><td><a href="#app-bestow-sense">Bestow Sense</a></td><td align="center">0</td><td align="center">§16B1</td></tr><tr><td><a href="#app-heighten-sense">Heighten Sense</a></td><td align="center">1</td><td align="center">§16B2</td></tr><tr><td><a href="#app-bestow-heightened-sense">Bestow Heightened Sense</a></td><td align="center">2</td><td align="center">§16A3</td></tr><tr><td><a href="#app-extraordinary-sense">Extraordinary Sense</a></td><td align="center">2</td><td align="center">§16A4</td></tr><tr><td><a href="#app-transfer-sense-to-object">Transfer Sense to Object</a></td><td align="center">2</td><td align="center">§16A6</td></tr><tr><td><a href="#app-bestow-replacement-sense">Bestow Replacement Sense</a></td><td align="center">3</td><td align="center">§16A5</td></tr><tr><td><a href="#app-true-sight">True Sight</a></td><td align="center">4</td><td align="center">§16A7</td></tr><tr><td><a href="#app-bestow-true-sight">Bestow True Sight</a></td><td align="center">5</td><td align="center">§16A8</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="app-bestow-sense"><h3>Bestow Sense</h3><dl class="ev-fields"><dt>Intensity</dt><dd>0</dd><dt>Code</dt><dd>§16B1</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">Bestow a target with a human sense, and Search and Scan PCSs (if none are possessed) of 5, +5 per sense bestowed (<strong>fixed, bestowed</strong>).
+
+Possible senses: eyesight, hearing, touch, taste, smell, balance.</p></section><section class="ev-card" id="app-heighten-sense"><h3>Heighten Sense</h3><dl class="ev-fields"><dt>Intensity</dt><dd>1</dd><dt>Code</dt><dd>§16B2</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">Augment one sense the <strong>target</strong> already possesses to a degree found in nature (<strong>controlled</strong>). The recipient gains the heightened sense, but <strong>you own the spell</strong> for its duration — you can switch it off, you sustain it, and it lapses if the recipient leaves your range. E.g. the eyesight of a hawk, cat, or owl; the nose of a bloodhound; the palate of a winetaster (the taste, not the experience); the hearing of a dog, bat, or dolphin.
+
+<em>(Each such sense raises a sandestin's Search/Scan by a further 5.)</em></p></section><section class="ev-card" id="app-bestow-heightened-sense"><h3>Bestow Heightened Sense</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§16A3</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">As <strong>Heighten Sense</strong> (§16B2), but <strong>bestowed</strong> — the recipient now <strong>owns and controls</strong> the heightened sense themselves: it persists independently of you and your range, and you can neither sustain nor switch it off.
+
+<em>(Sense offers a bestowed form one intensity above the controlled one. Bestowal is granted per-application, not a universal option — for many effects it would be badly unbalancing.)</em></p></section><section class="ev-card" id="app-extraordinary-sense"><h3>Extraordinary Sense</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§16A4</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">Replace an ordinary sense (already possessed) with an appropriate, and similarly implemented, extraordinary sense (<strong>fixed</strong>). Eg.:
+
+- the sonar of a bat;
+- the ability to sense operating (eg. non-abeyed) magical effects. (Eg. a wall of force might seem to such a sense to be a smooth wall; a compelled person might seem to be held on a leash by the effect's controller; an illusion, however, would seem no different.)
+- infra-red vision (must replace eyesight);
+- ultra-violet vision (as above, only useless);
+- analytic taste;
+- magnifying vision (up to ×100 as a microscope, and ×10 as a telescope).</p></section><section class="ev-card" id="app-transfer-sense-to-object"><h3>Transfer Sense to Object</h3><dl class="ev-fields"><dt>Intensity</dt><dd>2</dd><dt>Code</dt><dd>§16A6</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">Transfer one of one's senses to an object, for use as though the appropriate sensory apparatus were located on/in it (<strong>fixed, bestowed</strong>).</p></section><section class="ev-card" id="app-bestow-replacement-sense"><h3>Bestow Replacement Sense</h3><dl class="ev-fields"><dt>Intensity</dt><dd>3</dd><dt>Code</dt><dd>§16A5</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">As <strong>Replace Sense</strong> (§16A4), but <strong>bestowed</strong> — the recipient owns and controls the new sense themselves, independent of you and your range. (Bestowing costs +1 intensity over the controlled version.)</p></section><section class="ev-card" id="app-true-sight"><h3>True Sight</h3><dl class="ev-fields"><dt>Intensity</dt><dd>4</dd><dt>Code</dt><dd>§16A7</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">Gain the ability to see one's surroundings free of all magically induced sensory data, and complete with any magically subdued sensory data (<strong>fixed</strong>).</p></section><section class="ev-card" id="app-bestow-true-sight"><h3>Bestow True Sight</h3><dl class="ev-fields"><dt>Intensity</dt><dd>5</dd><dt>Code</dt><dd>§16A8</dd><dt>Source</dt><dd>perception</dd></dl><p class="ev-body">Confer the ability to see one's surroundings free of all magically induced sensory data, and complete with any magically subdued sensory data (<strong>bestowed</strong>).</p></section></div></div>
+</div>
+<!-- /magic-apps -->

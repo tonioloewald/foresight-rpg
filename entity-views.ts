@@ -18,13 +18,21 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { ENTITY_SPECS, MATRIX_SPECS, fmt, slug, type EntitySpec, type MatrixSpec } from './src/entity-specs'
+import { ENTITY_SPECS, MATRIX_SPECS, APP_SPEC, fmt, slug, type EntitySpec, type MatrixSpec } from './src/entity-specs'
 
 const RULES_DIR = 'src/rules'
 const DATA_DIR = 'static/data'
 
 const esc = (s: unknown) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+
+// Light inline markdown for data fields (magic app descriptions carry **bold** /
+// *italic*): escape HTML first, then unescape just those two so the source can't
+// inject tags. No block-level anything.
+const mdInline = (s: unknown) =>
+  esc(s)
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
 
 // Styling for both outputs. Theme-agnostic (rgba borders, `color: inherit`) so
 // it sits correctly on the doc-system's light/dark themes AND on an e-reader's
@@ -124,7 +132,9 @@ function renderStatic(spec: EntitySpec, rows: any[]): string {
       const defs = spec.card
         .map((f) => `<dt>${esc(f.label)}</dt><dd>${esc(fmt(row[f.prop]))}</dd>`)
         .join('')
-      const prose = spec.body && row[spec.body] ? `<p class="ev-body">${esc(row[spec.body])}</p>` : ''
+      const prose = spec.body && row[spec.body]
+        ? `<p class="ev-body">${spec.bodyMarkdown ? mdInline(row[spec.body]) : esc(row[spec.body])}</p>`
+        : ''
       return `<section class="ev-card" id="${id}"><h3>${esc(row.name)}</h3><dl class="ev-fields">${defs}</dl>${prose}</section>`
     })
     .join('')
@@ -137,11 +147,26 @@ function renderStatic(spec: EntitySpec, rows: any[]): string {
   )
 }
 
-/** Rewrite every build-time table block (`entity-view` and `matrix`) in the rules pages. */
+/**
+ * A single Fundamental's applications, sliced from the nested magic-applications.json
+ * and rendered as the static table + cards (sorted by intensity). Static-only.
+ */
+function renderMagicApps(fundamental: string, path: string): string {
+  const groups = JSON.parse(readFileSync(join(DATA_DIR, 'magic-applications.json'), 'utf8')) as any[]
+  const g = groups.find((x) => x.fundamental === fundamental)
+  if (!g) throw new Error(`magic-apps: no fundamental "${fundamental}" in magic-applications.json (${path})`)
+  const rows = (g.applications ?? [])
+    .slice()
+    .sort((a: any, b: any) => a.intensity - b.intensity || String(a.code).localeCompare(String(b.code)))
+  return `<div class="entity-view">\n${STYLE}\n${renderStatic(APP_SPEC, rows)}\n</div>`
+}
+
+/** Rewrite every build-time table block (`entity-view`, `matrix`, `magic-apps`) in the rules pages. */
 export function renderEntityViews(): void {
   const files = readdirSync(RULES_DIR).filter((f) => f.endsWith('.md'))
   let ev = 0
   let mx = 0
+  let ma = 0
 
   for (const file of files) {
     const path = join(RULES_DIR, file)
@@ -189,7 +214,18 @@ export function renderEntityViews(): void {
       )
     }
 
+    // <!-- magic-apps: Fundamental --> — that fundamental's applications, by intensity.
+    if (out.includes('<!-- magic-apps:')) {
+      out = out.replace(
+        /(<!-- magic-apps: *([^>]+?) *-->)[\s\S]*?(<!-- \/magic-apps -->)/g,
+        (_all, open, fundamental, close) => {
+          ma++
+          return `${open}\n${renderMagicApps(fundamental, path)}\n${close}`
+        }
+      )
+    }
+
     if (out !== orig) writeFileSync(path, out)
   }
-  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix block(s)`)
+  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix + ${ma} magic-apps block(s)`)
 }
