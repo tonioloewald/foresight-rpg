@@ -28,7 +28,7 @@ Magic runs on **two skills**, and the split is the whole engine:
 
 A **Fundamental** is a *Field of Magical Knowledge* (so it obeys the [Fields](/fields/) rules — **Basic** covers the easy end, **Advanced** the deep). Each Fundamental offers a set of **Applications**, each rated by an **Intensity** (its difficulty and mana flux). A **Magical Effect** is one core application plus any number of **modifiers** — a *spell* and its *metaspells* — assembled just like modifying any other object in ForeSight. An effect is only ever as good as its meanest part: its **range and duration are the smallest** of its components'. The GM adjudicates whether the combination actually produces the intended effect.
 
-There are **23 Fundamentals**, each with its own page and its applications laid out as a table and cards (browse them below).
+There are **23 Fundamentals**, each with its own page and its applications laid out as a table and cards (browse them below) — or, if you know the effect you want but not where it lives, **[find any effect](/magic-find/)** by name or description across all of them.
 
 ## Keeping it balanced — the keystones
 
@@ -43,6 +43,7 @@ Because the system is generative, balance can't live in a spell list; it lives i
 *Designer's Note: the point of a generative system is that players surprise you — four playtesters once found four different ways to conjure an instant fortress in about two minutes. That's a feature, but only if the GM prices the **capability** rather than the flavour, and only if magic can't quietly do to the setting what the GM never agreed to. Everything above exists to keep "you can build anything" from becoming "so nothing matters."*
 
 <!-- toc -->
+- [Find an Effect](/magic-find/)
 - [Abeyance](/magic-abeyance/)
 - [Air](/magic-air/)
 - [Apportation](/magic-apportation/)

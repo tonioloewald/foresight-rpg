@@ -27,6 +27,10 @@ class ForesightTable extends HTMLElement {
     if (this._init) return
     this._init = true
 
+    // `filter` mode: no data fetch, no cards — just add a free-text box that
+    // hides non-matching rows of the static table (matching a hidden data-search).
+    if (this.hasAttribute('filter')) return this.enhanceFilter()
+
     const file = this.getAttribute('src')
     if (!file) return // nothing to enhance — leave the static content alone
     this._spec = ENTITY_SPECS[file]
@@ -43,6 +47,39 @@ class ForesightTable extends HTMLElement {
       // The book's own view beats an error message.
       this.innerHTML = staticHTML
     }
+  }
+
+  /** Live free-text filter over the static table's rows (preserves their links). */
+  private enhanceFilter(): void {
+    const table = this.querySelector('table')
+    if (!table) return
+    const rows = Array.from(table.querySelectorAll('tbody tr')) as HTMLElement[]
+    const total = rows.length
+
+    const bar = document.createElement('div')
+    bar.className = 'ev-bar'
+    const search = document.createElement('input')
+    search.type = 'search'
+    search.className = 'ev-search'
+    search.placeholder = this.getAttribute('placeholder') || 'Search…'
+    const count = document.createElement('span')
+    count.className = 'ev-count'
+    const setCount = (n: number) => (count.textContent = n === total ? `${total} applications` : `${n} of ${total}`)
+    setCount(total)
+
+    search.oninput = () => {
+      const q = search.value.trim().toLowerCase()
+      let shown = 0
+      for (const r of rows) {
+        const hay = r.getAttribute('data-search') || r.textContent || ''
+        const ok = !q || hay.indexOf(q) >= 0
+        r.style.display = ok ? '' : 'none'
+        if (ok) shown++
+      }
+      setCount(shown)
+    }
+    bar.append(search, count)
+    this.insertBefore(bar, this.firstChild)
   }
 
   private presentTags(): string[] {

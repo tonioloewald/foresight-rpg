@@ -57,6 +57,7 @@ const STYLE = `<style>
 .ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
 .ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
 .ev-empty{opacity:.7;font-style:italic}
+.ev-count{font-size:.85em;opacity:.65;white-space:nowrap}
 </style>`
 
 // Matrix styling — a cross-tab with a spanning header over each axis. The
@@ -161,12 +162,49 @@ function renderMagicApps(fundamental: string, path: string): string {
   return `<div class="entity-view">\n${STYLE}\n${renderStatic(APP_SPEC, rows)}\n</div>`
 }
 
-/** Rewrite every build-time table block (`entity-view`, `matrix`, `magic-apps`) in the rules pages. */
+/**
+ * A single flat, searchable table of EVERY application across all fundamentals —
+ * for finding an effect you know exists but not which Fundamental holds it. No
+ * cards; the Application name links to its detail card on the fundamental's page,
+ * and a hidden `data-search` (name + fundamental + description) lets the browser
+ * filter match on the description too. `<foresight-table filter>` adds the search
+ * box in the browser; the static table is the book/no-JS fallback (a plain index).
+ */
+function renderAllApplications(): string {
+  const groups = JSON.parse(readFileSync(join(DATA_DIR, 'magic-applications.json'), 'utf8')) as any[]
+  const rows = groups
+    .flatMap((g) => (g.applications ?? []).map((a: any) => ({ ...a, fundamental: g.fundamental })))
+    .sort((a, b) => String(a.name).localeCompare(String(b.name)))
+  const plain = (s: unknown) => String(s ?? '').replace(/\*+([^*]+)\*+/g, '$1')
+  const body = rows
+    .map((r) => {
+      const href = `/magic-${slug(r.fundamental)}/#app-${slug(r.name)}`
+      const search = esc(`${r.name} ${r.fundamental} ${plain(r.desc)}`.toLowerCase())
+      return (
+        `<tr data-search="${search}">` +
+        `<td><a href="${href}">${esc(r.name)}</a></td>` +
+        `<td>${esc(r.fundamental)}</td>` +
+        `<td align="center">${esc(r.intensity)}</td>` +
+        `<td align="center">${esc(r.code)}</td></tr>`
+      )
+    })
+    .join('')
+  const table =
+    `<table class="ev-table"><thead><tr><th>Application</th><th>Fundamental</th>` +
+    `<th align="center">Int</th><th align="center">§</th></tr></thead><tbody>${body}</tbody></table>`
+  return (
+    `<div class="entity-view">\n${STYLE}\n` +
+    `<foresight-table filter placeholder="Search all ${rows.length} applications…">${table}</foresight-table>\n</div>`
+  )
+}
+
+/** Rewrite every build-time table block (`entity-view`, `matrix`, `magic-apps`, `all-applications`) in the rules pages. */
 export function renderEntityViews(): void {
   const files = readdirSync(RULES_DIR).filter((f) => f.endsWith('.md'))
   let ev = 0
   let mx = 0
   let ma = 0
+  let aa = 0
 
   for (const file of files) {
     const path = join(RULES_DIR, file)
@@ -225,7 +263,18 @@ export function renderEntityViews(): void {
       )
     }
 
+    // <!-- all-applications --> — the flat, searchable index of every application.
+    if (out.includes('<!-- all-applications')) {
+      out = out.replace(
+        /(<!-- all-applications *-->)[\s\S]*?(<!-- \/all-applications -->)/g,
+        (_all, open, close) => {
+          aa++
+          return `${open}\n${renderAllApplications()}\n${close}`
+        }
+      )
+    }
+
     if (out !== orig) writeFileSync(path, out)
   }
-  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix + ${ma} magic-apps block(s)`)
+  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix + ${ma} magic-apps + ${aa} all-applications block(s)`)
 }
