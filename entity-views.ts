@@ -31,6 +31,7 @@ const esc = (s: unknown) =>
 // inject tags. No block-level anything.
 const mdInline = (s: unknown) =>
   esc(s)
+    .replace(/\s+/g, ' ') // collapse newlines — a raw-HTML block must have no blank line
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
 
@@ -179,7 +180,7 @@ function renderAllApplications(): string {
   const body = rows
     .map((r) => {
       const href = `/magic-${slug(r.fundamental)}/#app-${slug(r.name)}`
-      const search = esc(`${r.name} ${r.fundamental} ${plain(r.desc)}`.toLowerCase())
+      const search = esc(`${r.name} ${r.fundamental} ${plain(r.desc)}`.replace(/\s+/g, ' ').toLowerCase())
       return (
         `<tr data-search="${search}">` +
         `<td><a href="${href}">${esc(r.name)}</a></td>` +
