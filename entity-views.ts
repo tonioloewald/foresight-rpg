@@ -183,7 +183,7 @@ function renderAllApplications(): string {
       return (
         `<tr data-search="${search}">` +
         `<td><a href="${href}">${esc(r.name)}</a></td>` +
-        `<td>${esc(r.fundamental)}</td>` +
+        `<td><a href="/magic-${slug(r.fundamental)}/">${esc(r.fundamental)}</a></td>` +
         `<td align="center">${esc(r.intensity)}</td>` +
         `<td align="center">${esc(r.code)}</td></tr>`
       )
