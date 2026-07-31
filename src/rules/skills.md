@@ -12,6 +12,7 @@ The full skill list — the single source of truth shared with the character bui
 .ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 .ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
 .ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
 .ev-fields{margin:0 0 .6em}
 .ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
 .ev-fields dt::after{content:": "}

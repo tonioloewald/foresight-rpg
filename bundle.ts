@@ -190,6 +190,16 @@ class ForesightTable extends HTMLElement {
     section.className = 'ev-card'
     section.id = `${spec.idPrefix}-${slug(row.name)}`
 
+    // Optional per-item illustration (root-relative path in `image`).
+    if (row.image) {
+      const img = document.createElement('img')
+      img.className = 'ev-img'
+      img.src = new URL(row.image, SITE_ROOT).href
+      img.alt = row.name
+      img.loading = 'lazy'
+      section.append(img)
+    }
+
     const title = document.createElement('h3')
     title.textContent = row.name
     section.append(title)

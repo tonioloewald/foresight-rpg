@@ -47,6 +47,7 @@ const STYLE = `<style>
 .ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 .ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
 .ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
 .ev-fields{margin:0 0 .6em}
 .ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
 .ev-fields dt::after{content:": "}
@@ -137,7 +138,10 @@ function renderStatic(spec: EntitySpec, rows: any[]): string {
       const prose = spec.body && row[spec.body]
         ? `<p class="ev-body">${spec.bodyMarkdown ? mdInline(row[spec.body]) : esc(row[spec.body])}</p>`
         : ''
-      return `<section class="ev-card" id="${id}"><h3>${esc(row.name)}</h3><dl class="ev-fields">${defs}</dl>${prose}</section>`
+      // Optional per-item illustration (any entity may carry an `image` path,
+      // root-relative, e.g. "images/weapons/pistol.png"). Absent on most items.
+      const img = row.image ? `<img class="ev-img" src="/${esc(row.image)}" alt="${esc(row.name)}" loading="lazy"/>` : ''
+      return `<section class="ev-card" id="${id}">${img}<h3>${esc(row.name)}</h3><dl class="ev-fields">${defs}</dl>${prose}</section>`
     })
     .join('')
 
