@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Weapons — ForeSight RPG</title>
+  <meta name="description" content="A weapon is an object with combat stats. The list is deliberately short — one noun carries many real items as adjectives (a carbine is a light rifle, a…" />
+  <link rel="canonical" href="https://foresight-rpg.com/weapons/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Weapons — ForeSight RPG" />
+  <meta property="og:description" content="A weapon is an object with combat stats. The list is deliberately short — one noun carries many real items as adjectives (a carbine is a light rifle, a…" />
+  <meta property="og:url" content="https://foresight-rpg.com/weapons/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Weapons","description":"A weapon is an object with combat stats. The list is deliberately short — one noun carries many real items as adjectives (a carbine is a light rifle, a…","url":"https://foresight-rpg.com/weapons/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Weapons</h1>
+<!--{ "parent": "world", "order": 3 }-->
+
+<p><em>A weapon is an <a href="/equipment/">object</a> with combat stats. The list is deliberately short — one noun carries many real items as adjectives (a <strong>carbine</strong> is a <em>light</em> rifle, a <strong>sawn-off</strong> is a <em>cut-down</em> shotgun), so add variety with a modifier, not a new row.</em></p>
+<p><strong>Damage Class (DC)</strong> is the number that meets the <a href="/damage/">Damage</a> table; the whole scale is anchored to three points — an <strong>inhuman fist is 4</strong>, a <strong>9mm pistol is 8</strong>, a <strong>7.62 rifle is 11</strong>. <strong>PM</strong> is the ease-factor bonus for using it as intended. <strong>Damage type</strong> is <strong>M</strong>echanical (cutting), <strong>I</strong>mpact (crushing), or <strong>B</strong>urning/ballistic; a trailing <strong>P</strong> means it <em>pierces</em> armor (which armor resists with its own <strong>A</strong>bsorb). <strong>Range</strong> is short–long in metres (melee weapons give reach); <strong>RoF</strong> in brackets is the automatic burst size.</p>
+<blockquote>
+<p>A weapon is only a benchmark, not a licence: in combat, magic and gear alike are judged against <em>what a good archer does without either</em>. That&#39;s why the humble Bow sits on this list as a yardstick.</p>
+</blockquote>
+<!-- entity-view: weapons.json -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+.ev-count{font-size:.85em;opacity:.65;white-space:nowrap}
+</style>
+<foresight-table src="weapons.json" columns="[{&quot;prop&quot;:&quot;name&quot;,&quot;name&quot;:&quot;Weapon&quot;,&quot;width&quot;:170},{&quot;prop&quot;:&quot;kind&quot;,&quot;name&quot;:&quot;Kind&quot;,&quot;width&quot;:90},{&quot;prop&quot;:&quot;damage&quot;,&quot;name&quot;:&quot;DC&quot;,&quot;width&quot;:90,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;range&quot;,&quot;name&quot;:&quot;Range&quot;,&quot;width&quot;:110,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;tl&quot;,&quot;name&quot;:&quot;TL&quot;,&quot;width&quot;:48,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;price&quot;,&quot;name&quot;:&quot;Price&quot;,&quot;width&quot;:72,&quot;align&quot;:&quot;center&quot;}]"><div class="ev-static"><table class="ev-table"><thead><tr><th>Weapon</th><th>Kind</th><th align="center">DC</th><th align="center">Range</th><th align="center">TL</th><th align="center">Price</th></tr></thead><tbody><tr><td><a href="#weapon-fist-kick">Fist / Kick</a></td><td>melee</td><td align="center">2 I</td><td align="center">touch</td><td align="center">0</td><td align="center">—</td></tr><tr><td><a href="#weapon-knife-dagger">Knife / Dagger</a></td><td>melee</td><td align="center">4 M/P</td><td align="center">touch</td><td align="center">0</td><td align="center">5</td></tr><tr><td><a href="#weapon-sword">Sword</a></td><td>melee</td><td align="center">6 M</td><td align="center">reach</td><td align="center">1</td><td align="center">60</td></tr><tr><td><a href="#weapon-greatsword">Greatsword</a></td><td>melee</td><td align="center">8 M</td><td align="center">long reach</td><td align="center">1</td><td align="center">120</td></tr><tr><td><a href="#weapon-spear">Spear</a></td><td>melee</td><td align="center">6 M/P</td><td align="center">long reach</td><td align="center">0</td><td align="center">20</td></tr><tr><td><a href="#weapon-axe">Axe</a></td><td>melee</td><td align="center">7 M</td><td align="center">reach</td><td align="center">0</td><td align="center">30</td></tr><tr><td><a href="#weapon-mace-club">Mace / Club</a></td><td>melee</td><td align="center">6 I</td><td align="center">reach</td><td align="center">0</td><td align="center">25</td></tr><tr><td><a href="#weapon-quarterstaff">Quarterstaff</a></td><td>melee</td><td align="center">4 I</td><td align="center">long reach</td><td align="center">0</td><td align="center">5</td></tr><tr><td><a href="#weapon-bow">Bow</a></td><td>ranged</td><td align="center">6 M/P</td><td align="center">50–150</td><td align="center">1</td><td align="center">80</td></tr><tr><td><a href="#weapon-crossbow">Crossbow</a></td><td>ranged</td><td align="center">7 M/P</td><td align="center">40–120</td><td align="center">2</td><td align="center">150</td></tr><tr><td><a href="#weapon-revolver">Revolver</a></td><td>ranged</td><td align="center">8 B</td><td align="center">12–60</td><td align="center">4</td><td align="center">300</td></tr><tr><td><a href="#weapon-pistol-9mm">Pistol (9mm)</a></td><td>ranged</td><td align="center">8 B</td><td align="center">15–80</td><td align="center">5</td><td align="center">400</td></tr><tr><td><a href="#weapon-submachine-gun">Submachine Gun</a></td><td>ranged</td><td align="center">8 B</td><td align="center">20–120</td><td align="center">4</td><td align="center">600</td></tr><tr><td><a href="#weapon-shotgun">Shotgun</a></td><td>ranged</td><td align="center">10 B</td><td align="center">10–40</td><td align="center">4</td><td align="center">350</td></tr><tr><td><a href="#weapon-assault-rifle">Assault Rifle</a></td><td>ranged</td><td align="center">10 B</td><td align="center">50–300</td><td align="center">5</td><td align="center">900</td></tr><tr><td><a href="#weapon-battle-rifle-7-62">Battle Rifle (7.62)</a></td><td>ranged</td><td align="center">11 B</td><td align="center">80–500</td><td align="center">5</td><td align="center">1000</td></tr><tr><td><a href="#weapon-sniper-rifle">Sniper Rifle</a></td><td>ranged</td><td align="center">12 B/P</td><td align="center">150–1200</td><td align="center">5</td><td align="center">2500</td></tr><tr><td><a href="#weapon-machine-gun">Machine Gun</a></td><td>heavy</td><td align="center">11 B/P</td><td align="center">100–1500</td><td align="center">5</td><td align="center">4000</td></tr><tr><td><a href="#weapon-hand-grenade">Hand Grenade</a></td><td>thrown</td><td align="center">12 B</td><td align="center">thrown</td><td align="center">5</td><td align="center">40</td></tr><tr><td><a href="#weapon-laspistol">Laspistol</a></td><td>ranged</td><td align="center">8 B</td><td align="center">70–120</td><td align="center">7</td><td align="center">1k</td></tr><tr><td><a href="#weapon-laser-rifle">Laser Rifle</a></td><td>ranged</td><td align="center">10 B</td><td align="center">250–500</td><td align="center">7</td><td align="center">2k</td></tr><tr><td><a href="#weapon-stun-pistol">Stun Pistol</a></td><td>ranged</td><td align="center">6 stun</td><td align="center">16–20</td><td align="center">7</td><td align="center">700</td></tr><tr><td><a href="#weapon-cone-rifle">Cone Rifle</a></td><td>ranged</td><td align="center">13 B</td><td align="center">110–190</td><td align="center">6</td><td align="center">6c</td></tr><tr><td><a href="#weapon-autolasercannon">Autolasercannon</a></td><td>heavy</td><td align="center">14 B/P</td><td align="center">1.2k–1.5k</td><td align="center">8</td><td align="center">4k</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="weapon-fist-kick"><h3>Fist / Kick</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>2 I</dd><dt>Range</dt><dd>touch</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>0</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>—</dd><dt>Tags</dt><dd>standard, ancient, modern</dd></dl><p class="ev-body">Bare unarmed strike. The DC-4 anchor is an *inhuman* fist; an ordinary person lands about 2. Unarmed Combat skill does the rest.</p></section><section class="ev-card" id="weapon-knife-dagger"><h3>Knife / Dagger</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>4 M/P</dd><dt>Range</dt><dd>touch</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>0.3</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>5</dd><dt>Tags</dt><dd>standard, ancient, modern</dd></dl><p class="ev-body">Short blade — concealable, pierces armor, doubles as a tool and a thrown weapon. The floor of every weapon list.</p></section><section class="ev-card" id="weapon-sword"><h3>Sword</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>6 M</dd><dt>Range</dt><dd>reach</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>1.3</dd><dt>TL</dt><dd>1</dd><dt>Price</dt><dd>60</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">The arming sword — one-handed cut-and-thrust. *Fine*, *great*, and *short* are all adjectives on this one noun.</p></section><section class="ev-card" id="weapon-greatsword"><h3>Greatsword</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>8 M</dd><dt>Range</dt><dd>long reach</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>2.7</dd><dt>TL</dt><dd>1</dd><dt>Price</dt><dd>120</dd><dt>Tags</dt><dd>ancient, fantasy</dd></dl><p class="ev-body">Two-handed blade. More reach and bite; no hand free for a shield.</p></section><section class="ev-card" id="weapon-spear"><h3>Spear</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>6 M/P</dd><dt>Range</dt><dd>long reach</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>1.5</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>20</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">Reach weapon that pierces. Set against a charge it counts double. A *thrown* spear is the same noun, one adjective.</p></section><section class="ev-card" id="weapon-axe"><h3>Axe</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>7 M</dd><dt>Range</dt><dd>reach</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>1.4</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>30</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">Heavy chopping edge — hits hard, harder to recover for a parry than a sword.</p></section><section class="ev-card" id="weapon-mace-club"><h3>Mace / Club</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>6 I</dd><dt>Range</dt><dd>reach</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>1.4</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>25</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">Impact rather than edge — cheap, and it doesn't care how good your armor's edge-turning is.</p></section><section class="ev-card" id="weapon-quarterstaff"><h3>Quarterstaff</h3><dl class="ev-fields"><dt>Kind</dt><dd>melee</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>4 I</dd><dt>Range</dt><dd>long reach</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>—</dd><dt>Weight</dt><dd>1.1</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>5</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">Two-handed staff: reach, a good Parry PM, and it's just a stick when the guards ask.</p></section><section class="ev-card" id="weapon-bow"><h3>Bow</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>6 M/P</dd><dt>Range</dt><dd>50–150</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>1</dd><dt>Weight</dt><dd>0.9</dd><dt>TL</dt><dd>1</dd><dt>Price</dt><dd>80</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">Half-skill ranged weapon (Archery). Quiet, pierces, and only as good as the archer — the mundane benchmark magic is judged against.</p></section><section class="ev-card" id="weapon-crossbow"><h3>Crossbow</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>7 M/P</dd><dt>Range</dt><dd>40–120</dd><dt>RoF</dt><dd>1/2</dd><dt>Ammo</dt><dd>1</dd><dt>Weight</dt><dd>2.5</dd><dt>TL</dt><dd>2</dd><dt>Price</dt><dd>150</dd><dt>Tags</dt><dd>ancient, fantasy</dd></dl><p class="ev-body">Point-and-hold power — trivial to aim, slow to span. Punches armor a bow can't.</p></section><section class="ev-card" id="weapon-revolver"><h3>Revolver</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>8 B</dd><dt>Range</dt><dd>12–60</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>6</dd><dt>Weight</dt><dd>1</dd><dt>TL</dt><dd>4</dd><dt>Price</dt><dd>300</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Reliable double-action sidearm; six shots, slow to reload. *Cut-down* makes it a concealable snub-nose.</p></section><section class="ev-card" id="weapon-pistol-9mm"><h3>Pistol (9mm)</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>8 B</dd><dt>Range</dt><dd>15–80</dd><dt>RoF</dt><dd>2</dd><dt>Ammo</dt><dd>15</dd><dt>Weight</dt><dd>0.9</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>400</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">The DC-8 anchor. Self-loading, high-capacity magazine — the default modern handgun.</p></section><section class="ev-card" id="weapon-submachine-gun"><h3>Submachine Gun</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>8 B</dd><dt>Range</dt><dd>20–120</dd><dt>RoF</dt><dd>[6]</dd><dt>Ammo</dt><dd>30</dd><dt>Weight</dt><dd>3</dd><dt>TL</dt><dd>4</dd><dt>Price</dt><dd>600</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Pistol round, automatic fire. Devastating up close, thirsty and wild at range.</p></section><section class="ev-card" id="weapon-shotgun"><h3>Shotgun</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>10 B</dd><dt>Range</dt><dd>10–40</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>6</dd><dt>Weight</dt><dd>3.2</dd><dt>TL</dt><dd>4</dd><dt>Price</dt><dd>350</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Brutal and forgiving up close; falls off fast. *Cut-down* trades the last of its range for concealment.</p></section><section class="ev-card" id="weapon-assault-rifle"><h3>Assault Rifle</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>10 B</dd><dt>Range</dt><dd>50–300</dd><dt>RoF</dt><dd>[10]</dd><dt>Ammo</dt><dd>30</dd><dt>Weight</dt><dd>3.6</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>900</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Intermediate cartridge, select fire — the standard modern long arm. *Carbine* is the light adjective.</p></section><section class="ev-card" id="weapon-battle-rifle-7-62"><h3>Battle Rifle (7.62)</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>11 B</dd><dt>Range</dt><dd>80–500</dd><dt>RoF</dt><dd>2</dd><dt>Ammo</dt><dd>20</dd><dt>Weight</dt><dd>4.2</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>1000</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">The DC-11 anchor. Full-power rifle round: range and penetration at the cost of weight and recoil.</p></section><section class="ev-card" id="weapon-sniper-rifle"><h3>Sniper Rifle</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>2</dd><dt>Damage</dt><dd>12 B/P</dd><dt>Range</dt><dd>150–1200</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>5</dd><dt>Weight</dt><dd>5.5</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>2500</dd><dt>Tags</dt><dd>modern</dd></dl><p class="ev-body">Precision, optics, and armor-piercing reach. A patient specialist's tool, not a firefight weapon.</p></section><section class="ev-card" id="weapon-machine-gun"><h3>Machine Gun</h3><dl class="ev-fields"><dt>Kind</dt><dd>heavy</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>11 B/P</dd><dt>Range</dt><dd>100–1500</dd><dt>RoF</dt><dd>[20]</dd><dt>Ammo</dt><dd>100</dd><dt>Weight</dt><dd>10</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>4000</dd><dt>Tags</dt><dd>modern</dd></dl><p class="ev-body">Belt-fed area denial — see Fire Combat. Emplaced or bipod; suppresses ground you never actually hit.</p></section><section class="ev-card" id="weapon-hand-grenade"><h3>Hand Grenade</h3><dl class="ev-fields"><dt>Kind</dt><dd>thrown</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>12 B</dd><dt>Range</dt><dd>thrown</dd><dt>RoF</dt><dd>—</dd><dt>Ammo</dt><dd>1</dd><dt>Weight</dt><dd>0.4</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>40</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Blast in a radius — no aim roll against a point, a scatter roll against an area. Fragmentation ignores light cover.</p></section><section class="ev-card" id="weapon-laspistol"><h3>Laspistol</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>8 B</dd><dt>Range</dt><dd>70–120</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>25</dd><dt>Weight</dt><dd>0.5</dd><dt>TL</dt><dd>7</dd><dt>Price</dt><dd>1k</dd><dt>Tags</dt><dd>sf</dd></dl><p class="ev-body">Energy sidearm: no recoil, no ballistic drop, a power cell instead of a magazine. The SF echo of the 9mm.</p></section><section class="ev-card" id="weapon-laser-rifle"><h3>Laser Rifle</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>1</dd><dt>Damage</dt><dd>10 B</dd><dt>Range</dt><dd>250–500</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>50</dd><dt>Weight</dt><dd>3</dd><dt>TL</dt><dd>7</dd><dt>Price</dt><dd>2k</dd><dt>Tags</dt><dd>sf</dd></dl><p class="ev-body">Line-of-sight beam weapon — flat trajectory, hungry for cells, dimmed by smoke and fog.</p></section><section class="ev-card" id="weapon-stun-pistol"><h3>Stun Pistol</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>0</dd><dt>Damage</dt><dd>6 stun</dd><dt>Range</dt><dd>16–20</dd><dt>RoF</dt><dd>1</dd><dt>Ammo</dt><dd>15</dd><dt>Weight</dt><dd>1</dd><dt>TL</dt><dd>7</dd><dt>Price</dt><dd>700</dd><dt>Tags</dt><dd>sf</dd></dl><p class="ev-body">Non-lethal takedown — damage feeds a Pain Resistance / stun check rather than a wound. Short-ranged by design.</p></section><section class="ev-card" id="weapon-cone-rifle"><h3>Cone Rifle</h3><dl class="ev-fields"><dt>Kind</dt><dd>ranged</dd><dt>PM</dt><dd>2</dd><dt>Damage</dt><dd>13 B</dd><dt>Range</dt><dd>110–190</dd><dt>RoF</dt><dd>[6]</dd><dt>Ammo</dt><dd>30</dd><dt>Weight</dt><dd>4</dd><dt>TL</dt><dd>6</dd><dt>Price</dt><dd>6c</dd><dt>Tags</dt><dd>sf</dd></dl><p class="ev-body">Fires micro-rockets — recoilless, heavy hitting, and it arcs, so cover is less help than you'd hope.</p></section><section class="ev-card" id="weapon-autolasercannon"><h3>Autolasercannon</h3><dl class="ev-fields"><dt>Kind</dt><dd>heavy</dd><dt>PM</dt><dd>2</dd><dt>Damage</dt><dd>14 B/P</dd><dt>Range</dt><dd>1.2k–1.5k</dd><dt>RoF</dt><dd>2</dd><dt>Ammo</dt><dd>100</dd><dt>Weight</dt><dd>10</dd><dt>TL</dt><dd>8</dd><dt>Price</dt><dd>4k</dd><dt>Tags</dt><dd>sf</dd></dl><p class="ev-body">Vehicle- or emplacement-scale beam weapon. Uses the Damage Scale rules — meant for things bigger than people.</p></section></div></div></foresight-table>
+</div>
+<!-- /entity-view -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/equipment-find/">Find Equipment</a></li>
+      <li><a class="doc-link current" href="/weapons/" aria-current="page">Weapons</a></li>
+      <li><a class="doc-link" href="/armor/">Armor</a></li>
+      <li><a class="doc-link" href="/vehicles/">Vehicles</a></li>
+      <li><a class="doc-link" href="/spacecraft/">Spacecraft</a></li>
+      <li><a class="doc-link" href="/tools/">Tools &amp; Gear</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-find/">Find an Effect</a></li>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

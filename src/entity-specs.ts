@@ -59,6 +59,131 @@ export const APP_SPEC: EntitySpec = {
 }
 
 export const ENTITY_SPECS: Record<string, EntitySpec> = {
+  // ── Equipment ────────────────────────────────────────────────────────────
+  // Objects = noun + adjectives (see equipment.md). Each category is a flat
+  // JSON array with a shared core (name, tl, price, weight, tags, desc, image?)
+  // plus its own stats. The summary columns stay scannable; the card carries the
+  // rest. `weapons`/`armor` anchor to the DC scale (fist 4, 9mm 8, 7.62 rifle 11).
+  'weapons.json': {
+    file: 'weapons.json',
+    noun: 'weapon',
+    idPrefix: 'weapon',
+    columns: [
+      { prop: 'name', name: 'Weapon', width: 170 },
+      { prop: 'kind', name: 'Kind', width: 90 },
+      { prop: 'damage', name: 'DC', width: 90, align: 'center' },
+      { prop: 'range', name: 'Range', width: 110, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 48, align: 'center' },
+      { prop: 'price', name: 'Price', width: 72, align: 'center' },
+    ],
+    card: [
+      { label: 'Kind', prop: 'kind' },
+      { label: 'PM', prop: 'pm' },
+      { label: 'Damage', prop: 'damage' },
+      { label: 'Range', prop: 'range' },
+      { label: 'RoF', prop: 'rof' },
+      { label: 'Ammo', prop: 'ammo' },
+      { label: 'Weight', prop: 'weight' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Price', prop: 'price' },
+      { label: 'Tags', prop: 'tags' },
+    ],
+    body: 'desc',
+  },
+  'armor.json': {
+    file: 'armor.json',
+    noun: 'armor',
+    idPrefix: 'armor',
+    columns: [
+      { prop: 'name', name: 'Armor', width: 170 },
+      { prop: 'protection', name: 'Protection', width: 130, align: 'center' },
+      { prop: 'penalty', name: 'Penalty', width: 100, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 48, align: 'center' },
+      { prop: 'price', name: 'Price', width: 72, align: 'center' },
+    ],
+    card: [
+      { label: 'Coverage', prop: 'coverage' },
+      { label: 'Protection', prop: 'protection' },
+      { label: 'Absorb', prop: 'absorb' },
+      { label: 'Penalty', prop: 'penalty' },
+      { label: 'Weight', prop: 'weight' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Price', prop: 'price' },
+      { label: 'Tags', prop: 'tags' },
+    ],
+    body: 'desc',
+  },
+  'vehicles.json': {
+    file: 'vehicles.json',
+    noun: 'vehicle',
+    idPrefix: 'vehicle',
+    columns: [
+      { prop: 'name', name: 'Vehicle', width: 170 },
+      { prop: 'domain', name: 'Domain', width: 84 },
+      { prop: 'cruise', name: 'Cruise', width: 90, align: 'center' },
+      { prop: 'max', name: 'Max', width: 80, align: 'center' },
+      { prop: 'passengers', name: 'Pass.', width: 64, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 48, align: 'center' },
+    ],
+    card: [
+      { label: 'Domain', prop: 'domain' },
+      { label: 'Cruise', prop: 'cruise' },
+      { label: 'Max', prop: 'max' },
+      { label: 'Terrain', prop: 'terrain' },
+      { label: 'Passengers', prop: 'passengers' },
+      { label: 'Cargo', prop: 'cargo' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Price', prop: 'price' },
+      { label: 'Tags', prop: 'tags' },
+    ],
+    body: 'desc',
+  },
+  // Spacecraft ARE vehicles (equipment.md), split out because their stats and,
+  // above all, their *drives* are setting-defining. Sample fleets are tagged by
+  // `setting` so a table can show one world's ships at a time.
+  'spacecraft.json': {
+    file: 'spacecraft.json',
+    noun: 'spacecraft',
+    idPrefix: 'craft',
+    columns: [
+      { prop: 'name', name: 'Craft', width: 180 },
+      { prop: 'setting', name: 'Setting', width: 130 },
+      { prop: 'class', name: 'Class', width: 120 },
+      { prop: 'drive', name: 'Drive', width: 150 },
+      { prop: 'crew', name: 'Crew', width: 72, align: 'center' },
+    ],
+    card: [
+      { label: 'Setting', prop: 'setting' },
+      { label: 'Class', prop: 'class' },
+      { label: 'Drive', prop: 'drive' },
+      { label: 'Sublight', prop: 'sublight' },
+      { label: 'FTL', prop: 'ftl' },
+      { label: 'Crew', prop: 'crew' },
+      { label: 'Tags', prop: 'tags' },
+    ],
+    body: 'desc',
+  },
+  'tools.json': {
+    file: 'tools.json',
+    noun: 'tool',
+    idPrefix: 'tool',
+    columns: [
+      { prop: 'name', name: 'Item', width: 170 },
+      { prop: 'aids', name: 'Helps with', width: 200 },
+      { prop: 'pm', name: 'PM', width: 60, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 48, align: 'center' },
+      { prop: 'price', name: 'Price', width: 72, align: 'center' },
+    ],
+    card: [
+      { label: 'Helps with', prop: 'aids' },
+      { label: 'PM', prop: 'pm' },
+      { label: 'Weight', prop: 'weight' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Price', prop: 'price' },
+      { label: 'Tags', prop: 'tags' },
+    ],
+    body: 'desc',
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
@@ -82,6 +207,17 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
     body: 'covers',
   },
 }
+
+// The equipment collections, in the order the "Find Equipment" index lists
+// them. `page` is the rules-page slug that hosts that collection's cards, so the
+// finder can link each item to its detail card (`/${page}/#${idPrefix}-${slug}`).
+export const EQUIPMENT_COLLECTIONS: { file: string; category: string; page: string }[] = [
+  { file: 'weapons.json', category: 'Weapon', page: 'weapons' },
+  { file: 'armor.json', category: 'Armor', page: 'armor' },
+  { file: 'vehicles.json', category: 'Vehicle', page: 'vehicles' },
+  { file: 'spacecraft.json', category: 'Spacecraft', page: 'spacecraft' },
+  { file: 'tools.json', category: 'Gear', page: 'tools' },
+]
 
 // ── Matrix (cross-tab) specs ────────────────────────────────────────────────
 // A reference matrix — rows × columns of cells, with a spanning header over each

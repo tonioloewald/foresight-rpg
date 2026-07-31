@@ -1,5 +1,5 @@
 # The SVU
-<!--{ "parent": "world", "order": 2 }-->
+<!--{ "parent": "world", "order": 8 }-->
 
 Prices in ForeSight are given in **svu** (Standard Value Units), pronounced "svoo" — a coin borrowed from Jack Vance's Gaean Reach novels. It's a measure of *value*, not a currency: it lets one price list serve every setting, from a medieval market to a starport.
 

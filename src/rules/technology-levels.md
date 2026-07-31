@@ -1,5 +1,5 @@
 # Technology Levels
-<!--{ "parent": "world", "order": 3 }-->
+<!--{ "parent": "world", "order": 9 }-->
 
 *One-pager. A Tech Level (TL) is shorthand for "how advanced is this?" — used to price gear, gate availability, and set the feel of a setting. It is a single number only because, on Earth, the threads of technology happened to advance together. They needn't anywhere else.*
 

@@ -18,7 +18,7 @@
 import { readFileSync, writeFileSync } from 'node:fs'
 import { readdirSync } from 'node:fs'
 import { join } from 'node:path'
-import { ENTITY_SPECS, MATRIX_SPECS, APP_SPEC, fmt, slug, type EntitySpec, type MatrixSpec } from './src/entity-specs'
+import { ENTITY_SPECS, MATRIX_SPECS, APP_SPEC, EQUIPMENT_COLLECTIONS, fmt, slug, type EntitySpec, type MatrixSpec } from './src/entity-specs'
 
 const RULES_DIR = 'src/rules'
 const DATA_DIR = 'static/data'
@@ -203,13 +203,54 @@ function renderAllApplications(): string {
   )
 }
 
-/** Rewrite every build-time table block (`entity-view`, `matrix`, `magic-apps`, `all-applications`) in the rules pages. */
+/**
+ * A single flat, searchable table of EVERY equipment item across all categories
+ * (weapons, armor, vehicles, spacecraft, gear) — the "Find Equipment" index, the
+ * exact analogue of renderAllApplications(). No cards; the item name links to its
+ * detail card on the category page, a Category column links to that page, and a
+ * hidden `data-search` (name + category + description) lets the browser filter
+ * match on the description too. Book/no-JS fallback is the plain sorted index.
+ */
+function renderAllEquipment(): string {
+  const plain = (s: unknown) => String(s ?? '').replace(/\*+([^*]+)\*+/g, '$1')
+  const rows = EQUIPMENT_COLLECTIONS.flatMap((c) => {
+    const items = JSON.parse(readFileSync(join(DATA_DIR, c.file), 'utf8')) as any[]
+    return items.map((it) => ({ ...it, _category: c.category, _page: c.page }))
+  }).sort((a, b) => String(a.name).localeCompare(String(b.name)))
+
+  const idPrefixOf = (page: string) =>
+    Object.values(ENTITY_SPECS).find((s) => EQUIPMENT_COLLECTIONS.some((c) => c.page === page && c.file === s.file))?.idPrefix ?? page
+
+  const body = rows
+    .map((r) => {
+      const href = `/${r._page}/#${idPrefixOf(r._page)}-${slug(r.name)}`
+      const search = esc(`${r.name} ${r._category} ${plain(r.desc)}`.replace(/\s+/g, ' ').toLowerCase())
+      return (
+        `<tr data-search="${search}">` +
+        `<td><a href="${href}">${esc(r.name)}</a></td>` +
+        `<td><a href="/${r._page}/">${esc(r._category)}</a></td>` +
+        `<td align="center">${esc(fmt(r.tl))}</td>` +
+        `<td align="center">${esc(fmt(r.price))}</td></tr>`
+      )
+    })
+    .join('')
+  const table =
+    `<table class="ev-table"><thead><tr><th>Item</th><th>Category</th>` +
+    `<th align="center">TL</th><th align="center">Price</th></tr></thead><tbody>${body}</tbody></table>`
+  return (
+    `<div class="entity-view">\n${STYLE}\n` +
+    `<foresight-table filter placeholder="Search all ${rows.length} items…">${table}</foresight-table>\n</div>`
+  )
+}
+
+/** Rewrite every build-time table block (`entity-view`, `matrix`, `magic-apps`, `all-applications`, `all-equipment`) in the rules pages. */
 export function renderEntityViews(): void {
   const files = readdirSync(RULES_DIR).filter((f) => f.endsWith('.md'))
   let ev = 0
   let mx = 0
   let ma = 0
   let aa = 0
+  let ae = 0
 
   for (const file of files) {
     const path = join(RULES_DIR, file)
@@ -279,7 +320,18 @@ export function renderEntityViews(): void {
       )
     }
 
+    // <!-- all-equipment --> — the flat, searchable index of every equipment item.
+    if (out.includes('<!-- all-equipment')) {
+      out = out.replace(
+        /(<!-- all-equipment *-->)[\s\S]*?(<!-- \/all-equipment -->)/g,
+        (_all, open, close) => {
+          ae++
+          return `${open}\n${renderAllEquipment()}\n${close}`
+        }
+      )
+    }
+
     if (out !== orig) writeFileSync(path, out)
   }
-  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix + ${ma} magic-apps + ${aa} all-applications block(s)`)
+  console.log(`entity-views: rendered ${ev} entity-view + ${mx} matrix + ${ma} magic-apps + ${aa} all-applications + ${ae} all-equipment block(s)`)
 }

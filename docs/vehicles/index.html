@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>Vehicles — ForeSight RPG</title>
+  <meta name="description" content="A vehicle is an object you travel in. Ground, water, and air share one stat block; spacecraft are vehicles too, split onto their own page because their drives…" />
+  <link rel="canonical" href="https://foresight-rpg.com/vehicles/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Vehicles — ForeSight RPG" />
+  <meta property="og:description" content="A vehicle is an object you travel in. Ground, water, and air share one stat block; spacecraft are vehicles too, split onto their own page because their drives…" />
+  <meta property="og:url" content="https://foresight-rpg.com/vehicles/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Vehicles","description":"A vehicle is an object you travel in. Ground, water, and air share one stat block; spacecraft are vehicles too, split onto their own page because their drives…","url":"https://foresight-rpg.com/vehicles/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Vehicles</h1>
+<!--{ "parent": "world", "order": 5 }-->
+
+<p><em>A vehicle is an <a href="/equipment/">object</a> you travel in. Ground, water, and air share one stat block; <strong>spacecraft are vehicles too</strong>, split onto their <a href="/spacecraft/">own page</a> because their drives define whole settings.</em></p>
+<p><strong>Cruise</strong> is the comfortable all-day speed; <strong>Max</strong> is the redline. <strong>Terrain</strong> says where those speeds hold — a road car divides its speed on rough ground, an off-roader barely notices. <strong>Passengers</strong> and <strong>Cargo</strong> are capacity. As with every object, the interesting variety is adjectives: <em>sporty</em>, <em>luxury</em>, <em>police</em>, <em>cheap/rusty</em> — see the Vehicle Modification set on the <a href="/equipment/">Equipment</a> page. Travel time, pursuit, and crashes run off these numbers rather than a separate subsystem.</p>
+<!-- entity-view: vehicles.json -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+.ev-count{font-size:.85em;opacity:.65;white-space:nowrap}
+</style>
+<foresight-table src="vehicles.json" columns="[{&quot;prop&quot;:&quot;name&quot;,&quot;name&quot;:&quot;Vehicle&quot;,&quot;width&quot;:170},{&quot;prop&quot;:&quot;domain&quot;,&quot;name&quot;:&quot;Domain&quot;,&quot;width&quot;:84},{&quot;prop&quot;:&quot;cruise&quot;,&quot;name&quot;:&quot;Cruise&quot;,&quot;width&quot;:90,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;max&quot;,&quot;name&quot;:&quot;Max&quot;,&quot;width&quot;:80,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;passengers&quot;,&quot;name&quot;:&quot;Pass.&quot;,&quot;width&quot;:64,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;tl&quot;,&quot;name&quot;:&quot;TL&quot;,&quot;width&quot;:48,&quot;align&quot;:&quot;center&quot;}]"><div class="ev-static"><table class="ev-table"><thead><tr><th>Vehicle</th><th>Domain</th><th align="center">Cruise</th><th align="center">Max</th><th align="center">Pass.</th><th align="center">TL</th></tr></thead><tbody><tr><td><a href="#vehicle-riding-horse">Riding Horse</a></td><td>ground</td><td align="center">10 km/h</td><td align="center">50 km/h</td><td align="center">1</td><td align="center">0</td></tr><tr><td><a href="#vehicle-cart-wagon">Cart / Wagon</a></td><td>ground</td><td align="center">6 km/h</td><td align="center">15 km/h</td><td align="center">4</td><td align="center">1</td></tr><tr><td><a href="#vehicle-motorcycle">Motorcycle</a></td><td>ground</td><td align="center">90 km/h</td><td align="center">180 km/h</td><td align="center">2</td><td align="center">5</td></tr><tr><td><a href="#vehicle-sedan">Sedan</a></td><td>ground</td><td align="center">100 km/h</td><td align="center">180 km/h</td><td align="center">5</td><td align="center">5</td></tr><tr><td><a href="#vehicle-off-road-4-4">Off-Road (4×4)</a></td><td>ground</td><td align="center">80 km/h</td><td align="center">150 km/h</td><td align="center">5</td><td align="center">5</td></tr><tr><td><a href="#vehicle-truck">Truck</a></td><td>ground</td><td align="center">90 km/h</td><td align="center">130 km/h</td><td align="center">3</td><td align="center">5</td></tr><tr><td><a href="#vehicle-speedboat">Speedboat</a></td><td>water</td><td align="center">40 km/h</td><td align="center">90 km/h</td><td align="center">6</td><td align="center">5</td></tr><tr><td><a href="#vehicle-sailing-ship">Sailing Ship</a></td><td>water</td><td align="center">15 km/h</td><td align="center">25 km/h</td><td align="center">40</td><td align="center">2</td></tr><tr><td><a href="#vehicle-helicopter">Helicopter</a></td><td>air</td><td align="center">220 km/h</td><td align="center">300 km/h</td><td align="center">6</td><td align="center">5</td></tr><tr><td><a href="#vehicle-light-aircraft">Light Aircraft</a></td><td>air</td><td align="center">250 km/h</td><td align="center">350 km/h</td><td align="center">4</td><td align="center">5</td></tr><tr><td><a href="#vehicle-airliner">Airliner</a></td><td>air</td><td align="center">900 km/h</td><td align="center">950 km/h</td><td align="center">200</td><td align="center">6</td></tr><tr><td><a href="#vehicle-aircar">Aircar</a></td><td>air</td><td align="center">200 km/h</td><td align="center">400 km/h</td><td align="center">4</td><td align="center">7</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="vehicle-riding-horse"><h3>Riding Horse</h3><dl class="ev-fields"><dt>Domain</dt><dd>ground</dd><dt>Cruise</dt><dd>10 km/h</dd><dt>Max</dt><dd>50 km/h</dd><dt>Terrain</dt><dd>off-road</dd><dt>Passengers</dt><dd>1</dd><dt>Cargo</dt><dd>40 kg</dd><dt>TL</dt><dd>0</dd><dt>Price</dt><dd>300</dd><dt>Tags</dt><dd>standard, ancient, fantasy</dd></dl><p class="ev-body">The original vehicle — self-fuelling, cross-country, and a character in its own right. A *warhorse* (destrier) is one adjective on this noun.</p></section><section class="ev-card" id="vehicle-cart-wagon"><h3>Cart / Wagon</h3><dl class="ev-fields"><dt>Domain</dt><dd>ground</dd><dt>Cruise</dt><dd>6 km/h</dd><dt>Max</dt><dd>15 km/h</dd><dt>Terrain</dt><dd>road</dd><dt>Passengers</dt><dd>4</dd><dt>Cargo</dt><dd>500 kg</dd><dt>TL</dt><dd>1</dd><dt>Price</dt><dd>150</dd><dt>Tags</dt><dd>ancient, fantasy</dd></dl><p class="ev-body">Animal-drawn hauler. Slow, roads-only when loaded, but it moves the cargo a party can't carry.</p></section><section class="ev-card" id="vehicle-motorcycle"><h3>Motorcycle</h3><dl class="ev-fields"><dt>Domain</dt><dd>ground</dd><dt>Cruise</dt><dd>90 km/h</dd><dt>Max</dt><dd>180 km/h</dd><dt>Terrain</dt><dd>road</dd><dt>Passengers</dt><dd>2</dd><dt>Cargo</dt><dd>20 kg</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>8k</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Fast, nimble, exposed. Best Maneuver rating on the road and no protection at all when it goes wrong.</p></section><section class="ev-card" id="vehicle-sedan"><h3>Sedan</h3><dl class="ev-fields"><dt>Domain</dt><dd>ground</dd><dt>Cruise</dt><dd>100 km/h</dd><dt>Max</dt><dd>180 km/h</dd><dt>Terrain</dt><dd>road</dd><dt>Passengers</dt><dd>5</dd><dt>Cargo</dt><dd>80 kg</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>25k</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">The default car. *Sporty*, *luxury*, *police*, and *cheap/rusty* are all adjectives — see the Vehicle Modification table.</p></section><section class="ev-card" id="vehicle-off-road-4-4"><h3>Off-Road (4×4)</h3><dl class="ev-fields"><dt>Domain</dt><dd>ground</dd><dt>Cruise</dt><dd>80 km/h</dd><dt>Max</dt><dd>150 km/h</dd><dt>Terrain</dt><dd>all-terrain</dd><dt>Passengers</dt><dd>5</dd><dt>Cargo</dt><dd>300 kg</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>35k</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Trades top speed for a terrain value that laughs at mud and rock. The expedition workhorse.</p></section><section class="ev-card" id="vehicle-truck"><h3>Truck</h3><dl class="ev-fields"><dt>Domain</dt><dd>ground</dd><dt>Cruise</dt><dd>90 km/h</dd><dt>Max</dt><dd>130 km/h</dd><dt>Terrain</dt><dd>road</dd><dt>Passengers</dt><dd>3</dd><dt>Cargo</dt><dd>10 t</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>60k</dd><dt>Tags</dt><dd>modern</dd></dl><p class="ev-body">Heavy road hauler. Slow to accelerate, ponderous to turn, and it carries what nothing else here can.</p></section><section class="ev-card" id="vehicle-speedboat"><h3>Speedboat</h3><dl class="ev-fields"><dt>Domain</dt><dd>water</dd><dt>Cruise</dt><dd>40 km/h</dd><dt>Max</dt><dd>90 km/h</dd><dt>Terrain</dt><dd>water</dd><dt>Passengers</dt><dd>6</dd><dt>Cargo</dt><dd>200 kg</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>40k</dd><dt>Tags</dt><dd>standard, modern</dd></dl><p class="ev-body">Planing hull — fast on flat water, brutal in chop. The chase vehicle for anywhere with a coastline.</p></section><section class="ev-card" id="vehicle-sailing-ship"><h3>Sailing Ship</h3><dl class="ev-fields"><dt>Domain</dt><dd>water</dd><dt>Cruise</dt><dd>15 km/h</dd><dt>Max</dt><dd>25 km/h</dd><dt>Terrain</dt><dd>open water</dd><dt>Passengers</dt><dd>40</dd><dt>Cargo</dt><dd>100 t</dd><dt>TL</dt><dd>2</dd><dt>Price</dt><dd>50k</dd><dt>Tags</dt><dd>ancient, fantasy</dd></dl><p class="ev-body">Wind-powered blue-water vessel — crew-hungry, weather-dependent, and the reason the map has other continents on it.</p></section><section class="ev-card" id="vehicle-helicopter"><h3>Helicopter</h3><dl class="ev-fields"><dt>Domain</dt><dd>air</dd><dt>Cruise</dt><dd>220 km/h</dd><dt>Max</dt><dd>300 km/h</dd><dt>Terrain</dt><dd>air / VTOL</dd><dt>Passengers</dt><dd>6</dd><dt>Cargo</dt><dd>500 kg</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>500k</dd><dt>Tags</dt><dd>modern</dd></dl><p class="ev-body">Vertical take-off, hover, and land where there's no runway. Skilled to fly, thirsty, and loud enough to end any surprise.</p></section><section class="ev-card" id="vehicle-light-aircraft"><h3>Light Aircraft</h3><dl class="ev-fields"><dt>Domain</dt><dd>air</dd><dt>Cruise</dt><dd>250 km/h</dd><dt>Max</dt><dd>350 km/h</dd><dt>Terrain</dt><dd>air</dd><dt>Passengers</dt><dd>4</dd><dt>Cargo</dt><dd>100 kg</dd><dt>TL</dt><dd>5</dd><dt>Price</dt><dd>200k</dd><dt>Tags</dt><dd>modern</dd></dl><p class="ev-body">Small fixed-wing plane — needs a strip to land, uses terrain value only against where it puts down.</p></section><section class="ev-card" id="vehicle-airliner"><h3>Airliner</h3><dl class="ev-fields"><dt>Domain</dt><dd>air</dd><dt>Cruise</dt><dd>900 km/h</dd><dt>Max</dt><dd>950 km/h</dd><dt>Terrain</dt><dd>air</dd><dt>Passengers</dt><dd>200</dd><dt>Cargo</dt><dd>20 t</dd><dt>TL</dt><dd>6</dd><dt>Price</dt><dd>—</dd><dt>Tags</dt><dd>modern</dd></dl><p class="ev-body">Long-haul passenger jet. Not a PC's to drive, but it's how everyone gets to the adventure.</p></section><section class="ev-card" id="vehicle-aircar"><h3>Aircar</h3><dl class="ev-fields"><dt>Domain</dt><dd>air</dd><dt>Cruise</dt><dd>200 km/h</dd><dt>Max</dt><dd>400 km/h</dd><dt>Terrain</dt><dd>air / hover</dd><dt>Passengers</dt><dd>4</dd><dt>Cargo</dt><dd>100 kg</dd><dt>TL</dt><dd>7</dd><dt>Price</dt><dd>80k</dd><dt>Tags</dt><dd>sf</dd></dl><p class="ev-body">Grav or ducted-fan personal flyer — the SF sedan. Point-to-point, no roads, a licence and an autopilot away from trivial.</p></section></div></div></foresight-table>
+</div>
+<!-- /entity-view -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/equipment-find/">Find Equipment</a></li>
+      <li><a class="doc-link" href="/weapons/">Weapons</a></li>
+      <li><a class="doc-link" href="/armor/">Armor</a></li>
+      <li><a class="doc-link current" href="/vehicles/" aria-current="page">Vehicles</a></li>
+      <li><a class="doc-link" href="/spacecraft/">Spacecraft</a></li>
+      <li><a class="doc-link" href="/tools/">Tools &amp; Gear</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-find/">Find an Effect</a></li>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>
