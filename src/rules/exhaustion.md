@@ -24,9 +24,11 @@ Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a w
 
 Do something genuinely taxing — a sustained sprint, a long mêlée, a forced march, harsh exposure — and make an **EN or WP check** (player's choice, as with wounds), the *magnitude* of the effort a modifier rather than a pile of extra rolls:
 
-- **Solid success** — you're fine.
-- **Marginal success / ordinary failure** — one level of exhaustion.
-- **Bad failure** — worse, or the effort simply fails.
+| The check | Result |
+|---|---|
+| **Solid success** | you're fine |
+| **Marginal / ordinary failure** | one level of exhaustion |
+| **Bad failure** | worse, or the effort simply fails |
 
 Some efforts cost a level **automatically**, no roll — a thing you cannot do without burning yourself.
 

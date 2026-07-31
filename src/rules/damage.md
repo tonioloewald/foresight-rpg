@@ -42,9 +42,11 @@ New damage **adds to your current level** (a medium 2 plus a heavy 3 is a dying 
 
 Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stun floor** (or any **stun-class "S" weapon**, which skips straight to it) forces a **pain-resistance roll — EN or WP**:
 
-- **Shrug it off** (good roll) — carry on.
-- **Shaken** (ordinary) — −2 to everything and one action only; roll EN/WP at end of turn to clear it.
-- **Stunned** (poor roll, or an S-weapon) — no action but to **recover** (another EN/WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious.
+| The roll | Effect |
+|---|---|
+| **Shrug it off** (good) | carry on |
+| **Shaken** (ordinary) | −2 to everything and one action only; roll EN/WP at end of turn to clear it |
+| **Stunned** (poor, or any S-weapon) | no action but to **recover** (an EN/WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious |
 
 Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.
 
@@ -56,14 +58,18 @@ By default roll **D10** for where a hit lands. Or **call your shot** — the hea
 
 What the damage *is* decides how armor and bodies answer it:
 
-- **M — Melee:** slow, low-energy, high-momentum (blades, clubs, fists).
-- **I — Impact:** fast, high-energy, low-momentum (bullets, shrapnel).
-- **B — Beam:** energy, no momentum (lasers). Respectable, never a pulp death-ray — we were physics majors.
+| Type | What it is |
+|---|---|
+| **M — Melee** | slow, low-energy, high-momentum (blades, clubs, fists) |
+| **I — Impact** | fast, high-energy, low-momentum (bullets, shrapnel) |
+| **B — Beam** | energy, no momentum (lasers) — respectable, but never a pulp death-ray (we were physics majors) |
 
 **Armor** carries a **Protection** rating (a DC of defence) against the types it's built for; subtract it from the incoming DC before the damage formula. A DC reduced **below zero is harmless**. Two annotations settle the arms race at the margin:
 
-- **P — Piercing** (on a weapon): ignores that many points of the target's Protection.
-- **A — Absorbing** (on armor): stops one point of *damage* that still gets through.
+| Mark | Effect |
+|---|---|
+| **P — Piercing** (weapon) | ignores that many points of the target's Protection |
+| **A — Absorbing** (armor) | stops one point of *damage* that still gets through |
 
 *Designer's Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.*
 

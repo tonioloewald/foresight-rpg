@@ -13,22 +13,26 @@ This is also how the catalog stays short. If a "new" item is really a variant of
 
 Most objects need only a couple of these; list a stat only when it isn't obvious.
 
-- **PM (Performance Modifier)** — the ease-factor modifier for using the object as intended. A *+1* sword is a better sword; it does nothing extra when used to hammer nails. Some objects carry several labeled PMs (a melee weapon has Attack, Parry, and Damage).
-- **Size / Weight** — for carrying, concealment, and encumbrance.
-- **TL** — its technology level (and so whether a given culture can buy, repair, or *originate* it — see Technology Levels).
-- **Price** — in svu.
-- **Fail** — how prone it is to break or jam, if that ever matters.
-- **Damage Scale** — for very large or tough objects (see Damage).
+| Stat | What it is |
+|---|---|
+| **PM** (Performance Modifier) | the ease-factor modifier for using the object as intended — a *+1* sword is a better sword, but does nothing extra hammering nails. Some objects carry several labeled PMs (a melee weapon has Attack, Parry, Damage) |
+| **Size / Weight** | for carrying, concealment, and encumbrance |
+| **TL** | its technology level — whether a culture can buy, repair, or *originate* it (see [Technology Levels](/technology-levels/)) |
+| **Price** | in svu |
+| **Fail** | how prone it is to break or jam, if that ever matters |
+| **Damage Scale** | for very large or tough objects (see [Damage](/damage/)) |
 
 ## Categories
 
 Each category is its own short, **alphabetized** list with a few category-specific stats:
 
-- **Weapons** — Attack, Parry, Damage (with type and penetration), Reach or Range, Usage (one/two-handed, etc.).
-- **Armor** — Protection (by damage type), and the penalties it imposes (perception in a helmet, coordination in gauntlets, agility in a heavy suit).
-- **Vehicles** — Cruise, Max, Terrain, Accelerate, Turn, Redline, Passengers, Cargo. **Spacecraft are vehicles**; an electric/hybrid drive is a TL6 modification, not a new category.
-- **Tools** — the PM they grant to the task they're for (binoculars, lock picks, a surgeon's kit).
-- **Other Stuff** — everything else, with the minimal stats it actually needs.
+| Category | Its stats |
+|---|---|
+| **Weapons** | Attack, Parry, Damage (with type and penetration), Reach or Range, Usage (one/two-handed…) |
+| **Armor** | Protection (by damage type), and the penalties it imposes (perception in a helmet, coordination in gauntlets, agility in a heavy suit) |
+| **Vehicles** | Cruise, Max, Terrain, Accelerate, Turn, Redline, Passengers, Cargo. **Spacecraft are vehicles**; an electric/hybrid drive is a TL6 modification, not a new category |
+| **Tools** | the PM they grant to the task they're for (binoculars, lock picks, a surgeon's kit) |
+| **Other Stuff** | everything else, with the minimal stats it actually needs |
 
 ## Modifications (the general set)
 
