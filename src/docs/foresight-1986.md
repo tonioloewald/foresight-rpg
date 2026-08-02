@@ -13,12 +13,15 @@
 
 The out-of-print 1986 rules are hard to find, and a number of players want a faithful, readable copy very badly. So rather than sit on a private extraction, it's public — rough edges and all — as a base the community can correct toward a fully-restored original.
 
+## Read alongside the original
+
+Every chapter is machine-extracted, so **the source scan is the ground truth**. Download it and compare: **[ForeSight 1986 — original scan (PDF, 37 MB)](/foresight-1986.pdf)**. Each page here carries a small **`ForeSight 1986 · p.N ↗`** link that opens the PDF at that exact page — so a correction can point right at the original.
+
 ## How the extraction works (so you can read around the noise)
 
-- **Prose** is reflowed into normal paragraphs and lightly de-noised (only unambiguous OCR fixes — nothing is reworded, and no rule is "improved").
-- **Tables and stat charts** (the Master Weapon Chart, vehicle and starship tables) are shown **verbatim in monospaced blocks** to preserve their alignment. These are the noisiest part and the most valuable to clean up.
-- Each page carries an invisible `<!-- 1986 p.N -->` marker (view source) so a correction can cite the original page.
-- This section is **site-only** — it's deliberately left out of the streamlined edition's ePub; it's a different book.
+- **Prose** is reflowed into flowing paragraphs using the original's indentation, and lightly de-noised. This is a **best-effort cleanup**, not a faithful typesetting — expect residual OCR glitches (mangled title-graphics, the odd wrong letter, split words). Nothing is knowingly reworded and no rule is "improved"; when in doubt, trust the PDF.
+- **Stat charts** are being **reconstructed into live, filterable data tables** (the weapon chart, damage table, vehicle table, and more are done — browse and filter them). Charts not yet reconstructed are shown verbatim in monospaced blocks.
+- This section is **site-only** on the web, and also ships as its **own ePub volume** — separate from the streamlined edition; it's a different book.
 
 ## Help finish it
 
@@ -40,7 +43,6 @@ The only known corrections to the 1986 rules, printed **Fri, Oct 23 1987**, keye
 - **Starships (804R)** — Hibersleep compartments **do not consume 0.25 power**; they run on bleed power from the drives.
 
 <!-- toc -->
-- [Front Matter & Contents](/1986-00-front-matter/)
 - [ForeWord — Introduction & Definitions](/1986-01-foreword/)
 - [Characters](/1986-02-characters/)
 - [Resolution System](/1986-03-resolution/)

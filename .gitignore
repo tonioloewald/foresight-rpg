@@ -24,3 +24,6 @@ tls/
 # generated JS source maps in the served site — never tracked (debug artifacts,
 # and hydrate.js.map alone is >1MB). The .js they map IS committed.
 docs/**/*.map
+
+# Large derived asset — regenerate from legacy/ForeSight.pdf via gs (see legacy/foresight-1986/); the served copy in docs/ is committed for Pages.
+static/foresight-1986.pdf

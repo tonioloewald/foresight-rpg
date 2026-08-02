@@ -1,9 +1,9 @@
 # Appendices
 <!--{ "parent": "foresight-1986", "order": 9 }-->
 
-*ForeSight (1986), pp. 102–110 — machine-extracted, work in progress. [About this restoration](/foresight-1986/).*
+*ForeSight (1986), pp. 102–110 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the [source PDF](/foresight-1986.pdf#page=102). [About this restoration](/foresight-1986/).*
 
-<!-- 1986 p.102 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=102">ForeSight 1986 · p.102 ↗</a></div>
 
 ForeSight Appendix IN": the organism's intelligence: A-insect, fish; Blizard, snake; C-bird; D-horse; E-raccoon, cat; Fdog; 1+ as per standard IN scale. FT": the organism's Fatigue.
 Size: the size of the organism, especially important with regard to fire combat modifiers ("I hate cute, furry animals I"). Sizes are: microscopic, tiny, small, Mansized, 1-hex, 2-hex, etc.
@@ -40,7 +40,7 @@ HOW TO PLA Y FORESIGHT (A quick guide to [3.0] Resolution) The following is a su
 
 [3] All that matters about a skill in play is its BEF (Base Ease Factor - how easy it is), and its PCS (which usually lies between 6 and 34, the higher the
 
-<!-- 1986 p.103 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=103">ForeSight 1986 · p.103 ↗</a></div>
 
 ```
 t-:S:-::a-,-P_ie_n_t-::-s-'p'-e-:c:-:i=-e_s_--:---::-:----:-~~------------t Pia net 0 fOri g in
@@ -95,7 +95,7 @@ I=--~-,--~..,.......------~------..=-------+                                    
       ..................................................................................................................................................................................................... ..................................................................................... .
 ```
 
-<!-- 1986 p.104 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=104">ForeSight 1986 · p.104 ↗</a></div>
 
 ```
 large HeHgrid © Tonio loewald 1986
@@ -103,7 +103,7 @@ large HeHgrid © Tonio loewald 1986
 h
 ```
 
-<!-- 1986 p.105 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=105">ForeSight 1986 · p.105 ↗</a></div>
 
 better). Where a BEF has some letters in it, look at the values in the top-right of the character sheet. The appropriate number should be substituted in for these letters (the GM will explain).
 [4] You may be asked to roll against some attribute or skill at some EF (Ease Factor) or at plus some number or minus some number. In the latter case add (or subtract) the number to the skill's BEF (or to 7, if an attribute is being rolled against) to determine the EF; if you were given an EF, then use it. Change any EF> 10 to 10, 0 to 0.5, -1 to 0.25, -2 or less to O. Multiply the attribute or skill PCS by this EF to get SC. Roll D100: Roll ~ SC/10: OR (Quality Rating) 1, brilliant success SC/10 < Roll ~ SC/S: OR 2, good success SCIS < Roll S SC/2: QR 3, competent result SC/2 < Roll ~ SC: OR 4, bare success (or possibly failure, GM will tell you which) Roll> SC, not ending in zero: QR 7, failure Roll> SC, ending in zero: OR 10, fumble/klutz-up A 99 may never give a better result than QR 4; a 100 may never give a better result than QR 7.
@@ -121,7 +121,7 @@ Caveat: the weapons in ForeSight were not chosen to be representative templates 
 
 INTERPLANETARY TRANSPORT COSTS & AVAILABILITY The fares for interplanetary travel under [8.0] are really only accurate for travel within the Federation. Fares should be (as a guide) doubled for travel into and out of Federal jurisdiction, unless entirely within a star system containing a Federal planet (in which case multiply by one and a half; the price should be quadrupled for travel entirely outside the Federation). Why? Piracy, licensed and otherwise, plagues those regions beyond the Federal Navy's reach, and furthermore the Federation has tariffs and duties to discourage trade with and travel to the beyond (since, for example, unscrupulous MegaCorporations use slave labour out there): cash and goods suffer 3050% import duties upon entrance to the Federation. Some planets beyond are as scrupulous in destroying pirates and such as the Federation, and so for purposes of these guidelines, treat them as Federal planets. As a reminder, the formula for interplanet fares is: 200(..J(s)+1Slml) (SVU) Where 8 is the distance to be covered in AUs, and m the total of the jump modifiers the ship will incur in reaching the destination (m = 0 for planet to planet hops; -1 for jumps of less than 5LY, -2 for jumps of 5 to 10LY; -3 for 10 to 25LY; -4 for 25 to 50 LY; -5 for 50 to 1OOLY, and so forth). People may also travel through space in "hibersleep", but incur a 1% chance of death, and (should they survive) suffer a -1 modifier to all activity (and Speed) for indefinite period afterwards (the character makes a Fatigue roll after every full eight hours of sleep - but no more than twice per day - and shrugs off the
 
-<!-- 1986 p.106 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=106">ForeSight 1986 · p.106 ↗</a></div>
 
 ForeSight Appendix modifier after he/she achieves a OR 3 or better). Hibersleep fares cost one half as much as normal. Luxury passage costs two and a half times as much as normal, while super lUXUry costs around forty times as much as normal.
 
@@ -153,7 +153,7 @@ The character can attempt one of a number of measures to reduce this damage:
 
 BURNS Exposure to very hot, very cold, and very corrosive substances and objects, and to high voltages, can be a health hazard. A rough guide to resultant damage classes appears in the Burn Damage Class Table (see Appended Tables). Damage to specific locations has the usual effects, while damage to the [front of the] head is also liable to be blinding if the victim's eyes are unprotected.
 
-<!-- 1986 p.107 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=107">ForeSight 1986 · p.107 ↗</a></div>
 
 ASPHYXIATION (This is most important for swimming, also see [5.0].) A character can hold hislher breath for his/her ENx2 pulses without great strain (EN pulses without first taking a breath). Beyond this, he/she must make a Fatigue roll (costing one fatigue point) every EN/3 pulses (at -1 per such Fatigue roll already made). QR1-3 indicates that the character can continue to do without air; QR4 that he/she must get air within ENI3 pulses or pass out; QR7 that he/she passes out; QR10 that he/she passes out and suffers an increase of one in wound level. This will kill anybody eventually. A character who receives two wound levels in this fashion will not revive unassisted when air is restored.
 
@@ -165,7 +165,7 @@ S
 
 ForeSight Appendix Hexes containing other character. also qualify as treacherous. A hex containing a prone or kneeling, and inactive (stunned, incapacitated, or dead) character qualifies as broken ground. Hexes containing active characters present hazards already detailed in the combat rules; stunned and upright characters can be avoided. Soft Sand and Snow do not provide a solid footing, and not only reduce the amount of footwork one is able to do (causing -1 to attack and parry, -2 to dodge actions), but are one and a half times as difficult to (Combat) Move or Turn in, and any character doing any of the above in a sand/snow hex must make an EF7 agility roll to avoid falling·. Eg. in l T gravity a move action allows a character to enter two sand/snow hexes, and three combat move actions would allow a character to enter two sand/snow hexes. Doors are a pretty common decoration of urban settings, and deserve attention. A quick, reliable, fully automatic door (ie. one which detects you and slides out of the way in a split second) will not even slow a character up. On the other hand slow, unreliable, automatic doors, such as we find in supermarkets today, require one or two action points to open (and then close as an opportunity action (with speed S 0; determined by the GM) after the character has passed through). The sort of door with which most of us are most familiar, which swings open on hinges and has a knob, requires two action points to open towards one, and only action point to open away. They require two action points to close. Sliding doors require from one action point to an entire pulse to slide open or shut, depending on how stiff they are. To unlockl1ock a door with a mechanical lock, using a key, requires the character to make an EF7 OX roll during declaration. If successful, then OR is number of action points the unlocking/locking process will require, QR7 indicates that the door remains locked/unlocked, and the character fumbles for that pulse; QR10 indicates that not only does the character fumble, but he/she drops the key, or breaks it off in the lock. (looking in one's pockets or purse for a key is another matter, and probably requires a Search roll to be made each pulse until successfuL..) Characters may also wish, from time to time, to leap through panes of glass. This will require a move/jump action, and inflict damage upon the character determined by OC1-5 (depending on how strong the glass was) and a random OR. The broken glass will render the ground on the far side of the pane loose covered. Of course a far more embarrassing possibility is that the character bciunces off the glass. Underwater melee combat, as a rough guide, is performed at -1 to attack, and -1 to damage class for melee attacks using thrusting weapons (natural denizens can be assumed to use thrusting weapons); and -2 and -3 respecitvely with smashing or slashing weapons. Most firearms will be useless, although lasers could conceivably be tuned for use in water, and weapons firing slow, heavy projectiles would work over short ranges. Note that gravity when underwater is always NW (near weightless).
 
-<!-- 1986 p.108 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=108">ForeSight 1986 · p.108 ↗</a></div>
 
 ForeSight Appendix Humans underwater should treat Turn, Combat Turn, Move, and Combat Move as costing one point of Fatigue, and APs equal to the 1 + the OR of a Swimming roll (made during the Declaration Segment), with QR7 indicating that no such actions can be taken that turn, and QR10 indicating that no actions of any kind can be taken that turn, or the next. The costs (in APs/pulses and Fatigue) for all other actions performed underwater are doubled. Shallow Water & Mud each double the cost of movement and turning. Mud covered by shallow water costs triple (eg. in such terrain and LT gravity Move action would only be good for one hex of movement, and a Turn action would only allow a 60° change of facing in place; alternatively, one could take three combat move actions to move one hex in' any direction). (Shallow means roughly knee-deep.)
 Final Note: these notes primarily apply to characters. The movement rates for vehicles through various kinds of terrain are clearly defined by the appropriate tables in [5.0).
@@ -181,7 +181,7 @@ Definition: the rules which follow are based on the hero point (HP). A hero poin
 
 A6
 
-<!-- 1986 p.109 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=109">ForeSight 1986 · p.109 ↗</a></div>
 
 #### Vehicle Modification Table
 
@@ -232,7 +232,7 @@ A6
 
 **Notes.** If something's wound level exceeds the number in the **Dead** column, it's still dead. **Part** (partially destroyed): equipment reaching this status is partially destroyed and certainly non-functional. **Destroyed**: not only non-functional, but beyond repair.
 
-<!-- 1986 p.110 -->
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=110">ForeSight 1986 · p.110 ↗</a></div>
 
 #### Weapon Modification Table
 

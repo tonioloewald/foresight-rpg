@@ -26,7 +26,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/character-builder/ — Character Builder
   The interactive, rule-enforcing character builder — the same rules as [Creating Characters](/creating-characters/), l...
 - https://foresight-rpg.com/1986-02-characters/ — Characters
-  Designer's Notes: the character is the most important object in a role-playing setting; like a television program or ...
+  ..
 - https://foresight-rpg.com/1986-04-combat/ — Combat
   Designer's Notes: the FS combat system is designed, as are many wargames, to use a hex-grid to regulate movement, and...
 - https://foresight-rpg.com/magic-communication/ — Communication
@@ -42,7 +42,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/damage/ — Damage
   Every attack has a **Damage Class (DC)** — how hard it hits before quality, armor, or luck. The scale is numerical an...
 - https://foresight-rpg.com/1986-10-commentary/ — Designer's Commentary
-  FORESIGHT Designer's Commentary
+  APPEnD
 - https://foresight-rpg.com/magic-dimension/ — Dimension
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **100m** and last **10min**; the usual prop...
 - https://foresight-rpg.com/magic-divination/ — Divination
@@ -54,7 +54,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/equipment/ — Equipment
   A **basic object** is the noun: *sword*, *pistol*, *sedan*, *backpack*. A **modification** is an adjective with a def...
 - https://foresight-rpg.com/1986-06-equipment/ — Equipment
-  ...................................................................................................................
+  Skill/Field: any skill or field which the item can be used in conjunction with; this does not mean that the item is n...
 - https://foresight-rpg.com/world/ — Equipment & World
   Gear, value, and how advanced a setting is.
 - https://foresight-rpg.com/magic-essence/ — Essence
@@ -80,11 +80,9 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/ — ForeSight RPG
   A modern edition of the ForeSight RPG: one resolution rule (Score × Ease Factor), lethal fast combat, and a careful generative magic system.
 - https://foresight-rpg.com/1986-01-foreword/ — ForeWord — Introduction & Definitions
-  Designer's Notes: ForeSight (abbreviated FS) was originally intended as a science-fiction based roleplaying game, but...
+  Designer's Notes: ForeSight (abbreviated FS) was originally intended as a science-fiction based role-playing game, bu...
 - https://foresight-rpg.com/magic-form/ — Form
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **5m** and last **30sec**; the usual props ...
-- https://foresight-rpg.com/1986-00-front-matter/ — Front Matter & Contents
-  )
 - https://foresight-rpg.com/magic-image/ — Image
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **50m** and last **10min**; the usual props...
 - https://foresight-rpg.com/initiative/ — Initiative
@@ -106,7 +104,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/reference/ — Reference
   Cheat sheets, the printable sheet, and the playtest pack.
 - https://foresight-rpg.com/1986-03-resolution/ — Resolution System
-  Designer's Notes: Various procedures and game situations will call for tasks to be resolved, ·rolls· to be made, and ...
+  LUTIon System
 - https://foresight-rpg.com/magic-sandestin/ — Sandestin
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **Note: the sandestin is created in the inv...
 - https://foresight-rpg.com/magic-scent/ — Scent
@@ -122,9 +120,9 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/spacecraft/ — Spacecraft
   The drive decides everything downstream — how long a journey takes, whether space combat is dogfighting or gunnery, w...
 - https://foresight-rpg.com/1986-08-spacecraft/ — Spacecraft Design
-  Designer's Notes: Where would a Science Fiction roleplaying game be without starships? I almost decided to allow user...
+  conSTRUC
 - https://foresight-rpg.com/1986-07-star-system/ — Star System Generation
-  Designer's Notes: the GM should complete the following steps (with the possible exception of step [xvi] for planets i...
+  t-. .
 - https://foresight-rpg.com/magic-summon/ — Summon
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **varies** and last **until arrival**; the ...
 - https://foresight-rpg.com/technology-levels/ — Technology Levels
