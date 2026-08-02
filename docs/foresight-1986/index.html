@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/doc-system.css" data-tosi-doc-system />
+  <title>ForeSight 1986 — the original edition (restoration in progress)</title>
+  <meta name="description" content="A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." />
+  <link rel="canonical" href="https://foresight-rpg.com/foresight-1986/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="ForeSight 1986 — the original edition (restoration in progress)" />
+  <meta property="og:description" content="A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." />
+  <meta property="og:url" content="https://foresight-rpg.com/foresight-1986/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"ForeSight 1986","description":"A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome.","url":"https://foresight-rpg.com/foresight-1986/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="/favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="/docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>ForeSight 1986</h1>
+<!--{ "pin": "top", "order": 99, "headTitle": "ForeSight 1986 — the original edition (restoration in progress)", "description": "A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." }-->
+
+<blockquote>
+<p><strong>⚠️ Work in progress — a machine restoration, not a clean text (yet).</strong>
+These pages are <strong>automatically extracted</strong> from the original 1986 first edition
+and still carry OCR noise — garbled table cells, stray characters, the odd
+run-together line. They are published <em>because</em> they&#39;re rough: help us finish
+restoring them.</p>
+</blockquote>
+<p><em>This is the <strong>original ForeSight</strong> (Tonio Loewald, 1986, ISBN 0958789401) — the edition that actually shipped and was <strong>playtested hard for years</strong>. In all that time, no errors turned up beyond the single <a href="#the-1987-errata">1987 errata sheet</a>, which is folded in below. That track record is why the 1986 numbers are treated as <strong>calibration ground-truth</strong> for the modern edition: where the streamlined rules and the original disagree on a probability, the original has the table evidence.</em></p>
+<h2>Why it&#39;s here</h2>
+<p>The out-of-print 1986 rules are hard to find, and a number of players want a faithful, readable copy very badly. So rather than sit on a private extraction, it&#39;s public — rough edges and all — as a base the community can correct toward a fully-restored original.</p>
+<h2>How the extraction works (so you can read around the noise)</h2>
+<ul>
+<li><strong>Prose</strong> is reflowed into normal paragraphs and lightly de-noised (only unambiguous OCR fixes — nothing is reworded, and no rule is &quot;improved&quot;).</li>
+<li><strong>Tables and stat charts</strong> (the Master Weapon Chart, vehicle and starship tables) are shown <strong>verbatim in monospaced blocks</strong> to preserve their alignment. These are the noisiest part and the most valuable to clean up.</li>
+<li>Each page carries an invisible <code>&lt;!-- 1986 p.N --&gt;</code> marker (view source) so a correction can cite the original page.</li>
+<li>This section is <strong>site-only</strong> — it&#39;s deliberately left out of the streamlined edition&#39;s ePub; it&#39;s a different book.</li>
+</ul>
+<h2>Help finish it</h2>
+<p>Corrections are hugely welcome — this is exactly the kind of thing a few dozen readers can fix faster than one person. Spot a mangled table cell, a dropped word, a chart that needs rebuilding?</p>
+<ul>
+<li><strong>File an issue or a pull request</strong> on the repo: <strong><a href="https://github.com/tonioloewald/foresight-rpg">github.com/tonioloewald/foresight-rpg</a></strong> — cite the page number from the source marker.</li>
+<li>The source lives in <code>src/rules/1986-*.md</code>; table blocks are the priority.</li>
+</ul>
+<h2>The 1987 errata</h2>
+<p>The only known corrections to the 1986 rules, printed <strong>Fri, Oct 23 1987</strong>, keyed to the book&#39;s chapter-page codes (<code>2xx</code> Characters, <code>3xx</code> Resolution, <code>5xx</code> Travel, <code>7xx</code> Star System, <code>8xx</code> Starships):</p>
+<ul>
+<li><strong>Skills / Limit (205R)</strong> — <em>&quot;1 indicates a skill where talent is as important as experience; 1.5 indicates a skill where experience outweighs talent. A character may not possess a skill at a level higher than the highest of the attributes … in the skill&#39;s formula, multiplied by its limit, plus two (rounded off).&quot;</em> (The headline fix; already present in this printing.)</li>
+<li><strong>Resolution table (facing 301)</strong> — the &quot;30&quot; row / &quot;QR4&quot; column entry should be <strong>30</strong>.</li>
+<li><strong>Travel (501R)</strong> — the terrain-value limit for <strong>submarine</strong> vehicles should be <strong>2</strong>.</li>
+<li><strong>Travel (502L)</strong> — the net <strong>Red(line)</strong> rating is normal Red <strong>plus</strong> (Modified Terrain Value)/2 <em>(still misprinted as &quot;minus&quot; — see the inline note on the Travel page)</em>; and <em>&quot;(or 1 if this is lower)&quot;</em> means divide by one only if the <strong>result</strong> would be lower.</li>
+<li><strong>Pursuit (504L)</strong> — &quot;double back&quot; is the old name for the <strong>reverse</strong> manoeuvre.</li>
+<li><strong>Star System (703R)</strong> — the Incident Radiation Table&#39;s bottom row was displaced; a corrected table + collected modifiers were issued.</li>
+<li><strong>Starships (804R)</strong> — Hibersleep compartments <strong>do not consume 0.25 power</strong>; they run on bleed power from the drives.</li>
+</ul>
+<!-- toc -->
+<ul>
+<li><a href="/1986-00-front-matter/">Front Matter &amp; Contents</a></li>
+<li><a href="/1986-01-foreword/">ForeWord — Introduction &amp; Definitions</a></li>
+<li><a href="/1986-02-characters/">Characters</a></li>
+<li><a href="/1986-03-resolution/">Resolution System</a></li>
+<li><a href="/1986-04-combat/">Combat</a></li>
+<li><a href="/1986-05-travel/">Travel &amp; Vehicles</a></li>
+<li><a href="/1986-06-equipment/">Equipment</a></li>
+<li><a href="/1986-07-star-system/">Star System Generation</a></li>
+<li><a href="/1986-08-spacecraft/">Spacecraft Design</a></li>
+<li><a href="/1986-09-appendices/">Appendices</a></li>
+<li><a href="/1986-10-commentary/">Designer&#39;s Commentary</a></li>
+</ul>
+<!-- /toc -->
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="/">ForeSight RPG</a></li>
+    <li><details><summary><a class="doc-link" href="/core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="/the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="/creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="/scores/">Scores</a></li>
+      <li><a class="doc-link" href="/quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="/open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="/skills/">Skills</a></li>
+      <li><a class="doc-link" href="/character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="/intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="/fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="/melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="/pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="/damage/">Damage</a></li>
+      <li><a class="doc-link" href="/exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/equipment-find/">Find Equipment</a></li>
+      <li><a class="doc-link" href="/weapons/">Weapons</a></li>
+      <li><a class="doc-link" href="/armor/">Armor</a></li>
+      <li><a class="doc-link" href="/vehicles/">Vehicles</a></li>
+      <li><a class="doc-link" href="/spacecraft/">Spacecraft</a></li>
+      <li><a class="doc-link" href="/tools/">Tools &amp; Gear</a></li>
+      <li><a class="doc-link" href="/the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="/technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/magic-find/">Find an Effect</a></li>
+      <li><a class="doc-link" href="/magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="/magic-air/">Air</a></li>
+      <li><a class="doc-link" href="/magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="/magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="/magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="/magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="/magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="/magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="/magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="/magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="/magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="/magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="/magic-form/">Form</a></li>
+      <li><a class="doc-link" href="/magic-image/">Image</a></li>
+      <li><a class="doc-link" href="/magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="/magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="/magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="/magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="/magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="/magic-time/">Time</a></li>
+      <li><a class="doc-link" href="/magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="/magic-water/">Water</a></li>
+      <li><a class="doc-link" href="/magic-wood/">Wood</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="/reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="/character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="/playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+    <li><details open><summary><a class="doc-link current" href="/foresight-1986/" aria-current="page">ForeSight 1986</a></summary>
+    <ul>
+      <li><a class="doc-link" href="/1986-00-front-matter/">Front Matter &amp; Contents</a></li>
+      <li><a class="doc-link" href="/1986-01-foreword/">ForeWord — Introduction &amp; Definitions</a></li>
+      <li><a class="doc-link" href="/1986-02-characters/">Characters</a></li>
+      <li><a class="doc-link" href="/1986-03-resolution/">Resolution System</a></li>
+      <li><a class="doc-link" href="/1986-04-combat/">Combat</a></li>
+      <li><a class="doc-link" href="/1986-05-travel/">Travel &amp; Vehicles</a></li>
+      <li><a class="doc-link" href="/1986-06-equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="/1986-07-star-system/">Star System Generation</a></li>
+      <li><a class="doc-link" href="/1986-08-spacecraft/">Spacecraft Design</a></li>
+      <li><a class="doc-link" href="/1986-09-appendices/">Appendices</a></li>
+      <li><a class="doc-link" href="/1986-10-commentary/">Designer's Commentary</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="/hydrate.js"></script>
+</body>
+</html>

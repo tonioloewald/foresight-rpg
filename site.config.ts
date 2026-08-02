@@ -27,7 +27,15 @@ export default defineSiteConfig({
     // The character builder is pure JS with no static substrate — a stub chapter
     // in a book, so it stays out. (`skills.md` is IN: entity-views.ts renders its
     // table + cards at build time, so it's real HTML in the ePub.)
-    exclude: ['character-builder.md'],
+    // The `1986-*` pages are the raw original-edition restoration (site-only, a
+    // different book) — kept out of the streamlined edition's ePub.
+    exclude: [
+      'character-builder.md',
+      '1986-00-front-matter.md', '1986-01-foreword.md', '1986-02-characters.md',
+      '1986-03-resolution.md', '1986-04-combat.md', '1986-05-travel.md',
+      '1986-06-equipment.md', '1986-07-star-system.md', '1986-08-spacecraft.md',
+      '1986-09-appendices.md', '1986-10-commentary.md',
+    ],
   },
   host: 'static',
   port: 1986,                 // dev server (https://localhost:1986/)
