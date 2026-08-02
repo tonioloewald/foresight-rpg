@@ -107,3 +107,18 @@ export-and-PR flow rather than the dev endpoint.
 **Blocks:** turning the 1986 restoration tables (and equipment) into reader-correctable data. Until
 it lands, crowd-sourcing stays "file a GitHub issue/PR" (the current landing-page ask). The public
 persistence path is a foresight-side decision anyway — Firestore backend (planned) vs edit→export→PR.
+
+## ⚠️ OPEN — tosijs-ui: auto-surface download links for built ePub volumes
+
+**Issue:** https://github.com/tonioloewald/tosijs-ui/issues/46 (Tonio implements — do not edit tosijs-ui from here)
+**Raised:** 2026-08-02, against tosijs-ui 1.9.2.
+
+The build produces ePub volume(s) (`epub.volumeTitles`) but surfaces **no download link
+or nav entry** — a reader can't reach them, and the consumer must hard-code the derived
+output filename (`book: "foresight-1986"` → `foresight-rpg-foresight-1986.epub`), which
+rots on rename. We shipped a valid 1986 ePub that nobody could download until review caught
+it. Asked for an auto download nav entry / a fillable `<!-- epub-downloads -->` marker / at
+minimum a documented helper exposing each volume's title + URL.
+
+**Workaround:** hand-authored links in `README.md` and the 1986 landing page, hard-coding
+the `.epub` filenames.
