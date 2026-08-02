@@ -126,7 +126,7 @@ Note: in certain formulae, a planet's size is treated as being a numerical value
 
 **[vi]** Multiply each planet's Density by its CG to determine its surface gravity (in Earth gees, and assuming that it's dense enough to have a recognisable "surface"), and record this in its Gravity slot.
 
-**[vii]** For each planet roll D10, modify the roll as indicated under the Air Pressure table, and write the appropriate result from that table into its Pressure slot.
+**[vii]** For each planet roll D10, modify the roll as indicated under the Air Pressure table *[i.e. the **Atmosphere Density Table** below — the original's prose uses a name that appears nowhere as a heading]*, and write the appropriate result from that table into its Pressure slot.
 
 **Atmosphere Density Table**
 
@@ -159,7 +159,7 @@ G1/G2/G3 planets automatically have density [B]. There may be a modifier for den
 | 0.2 < Gravity ≤ 0.3 | -5 | 1, 2 | -1 |
 | Gravity ≤ 0.2 | -8 | 0 | -3 |
 
-**[viii]** For each planet roll D10, add the appropriate Opacity modifier from the Air Pressure table, consult the Atmosphere Opacity table, and write the approprate result from that table into its Opacity slot.
+**[viii]** For each planet roll D10, add the appropriate Opacity modifier from the Air Pressure table *[again, the **Atmosphere Density Table**]*, consult the Atmosphere Opacity table, and write the approprate result from that table into its Opacity slot.
 
 **Atmosphere Opacity Table**
 
@@ -288,8 +288,8 @@ Subtract |(Mean Temp - 10)/10| (dropping fractions). Note the absolute value sig
 | --- | --- |
 | NW (0.00-0.40) | 2 |
 | LT (0.41-1.00) | 3 |
-| HV (1.01-1.29) | 2 |
-| HV (1.31-1.60) | 1 |
+| HY (1.01-1.29) | 2 |
+| HY (1.31-1.60) | 1 |
 | EX (>1.60) | 0.05 |
 
 **A (Atmosphere)**
@@ -318,8 +318,8 @@ Subtract |(Mean Temp - 10)/10| (dropping fractions). Note the absolute value sig
 
 | T×R×G×A×H | Habitability Index |
 | --- | --- |
-| 0 | **[6] Inimical** — Rapid death without equipment |
-| 1-5 | **[5] Uninhabitable** — Death without equipment |
+| 0 | **[5\*] Inimical** — Rapid death without equipment |
+| ≤5, ≠0 | **[5] Uninhabitable** — Death without equipment |
 | 6-150 | **[4] Marginal** — Probable death without equipment |
 | 151-500 | **[3] Tolerable** — Unsuitable for large scale colonisation |
 | 501-1500 | **[2] Promising** — Suitable for large scale colonisation |
