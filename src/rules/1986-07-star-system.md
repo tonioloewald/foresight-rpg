@@ -242,14 +242,23 @@ Add (Planet's Hydrographics)/20 (rounded off) to, the die roll.
 
 [xiii] Determine each planet's Incident Radiation Class by rolling 010, modifying the roll as indicated under the Incident Radiation table, and recording the result under the planet's Radiation slot.
 
-Incident Radiation Table Result       AO-4AS-9FO-4FS-9GO-4 GS-9 K, M, &S
+#### Incident Radiation Table
 
-Benign       :5:1  s;2   :5:2 :5:3 :5:4:5:5            :5:8 Harmful" 2-3 3-4 3-S 4-6 S-7                 6-9       2:9 Dangerous""4-S 5-7 6-8 7-8 8-9 10-11 Inimical to Life   2:6   2:8 2:9      2:9   2:10      2:12
-(Entries are die rolls [010] required for result)
-*Prolonged exposure is harmful to unprotected humans
-**Exposure is harmful to unprotected humans
+*The star's spectral class × the radiation Result → the D10 roll needed for that result. **\* Prolonged** exposure is harmful to unprotected humans; **\*\* any** exposure is harmful. This is the table the [1987 errata](/foresight-1986/#the-1987-errata) corrected (a displaced bottom row) — this printing already shows it right.*
 
-Modifiers for use with this table Orbital 1-4         +1 Orbital 9-12        -1 Orbital 13-16       -2 Subtract (Atmosphere Opacity - 8) Tolerable Atmosphere     -1 Earthlike Atmosphere     -2 Invigourating Atmosphere -3
+<!-- matrix: 1986-incident-radiation -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="7">Star spectral class →</th></tr><tr><th class="mx-colhead">A0–4</th><th class="mx-colhead">A5–9</th><th class="mx-colhead">F0–4</th><th class="mx-colhead">F5–9</th><th class="mx-colhead">G0–4</th><th class="mx-colhead">G5–9</th><th class="mx-colhead">K, M, S</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="4">Result ↓</th><th class="mx-rowhead">Benign</th><td>≤1</td><td>≤2</td><td>≤2</td><td>≤3</td><td>≤4</td><td>≤5</td><td>≤8</td></tr><tr><th class="mx-rowhead">Harmful *</th><td>2–3</td><td>3–4</td><td>3–5</td><td>4–6</td><td>5–7</td><td>6–9</td><td>≥9</td></tr><tr><th class="mx-rowhead">Dangerous **</th><td>4–5</td><td>5–7</td><td>6–8</td><td>7–8</td><td>8–9</td><td>10–11</td><td class="mx-blocked">—</td></tr><tr><th class="mx-rowhead">Inimical</th><td>≥6</td><td>≥8</td><td>≥9</td><td>≥9</td><td>≥10</td><td>≥12</td><td class="mx-blocked">—</td></tr></tbody></table></div>
+<!-- /matrix -->
+
+**Modifiers.** Orbital 1–4 **+1**, 9–12 **−1**, 13–16 **−2**. Subtract (Atmosphere Opacity − 8). Atmosphere: Tolerable **−1**, Earthlike **−2**, Invigourating **−3**.
 
 [xiv] Determine each planet's Habitability Index
 (HI). Multiply the planet's values for T, G, A, H, and

@@ -443,6 +443,22 @@ export const MATRIX_SPECS: Record<string, MatrixSpec> = {
   // The original Terrain Value Chart (p.58): terrain Contour × terrain Feature →
   // the terrain value that divides a vehicle's speed (Modified Terrain Value / 2).
   // Higher = harder going. (Suburban/Urban features extend this — see the page.)
+  // The original Incident Radiation Table (p.75 / §703) — the star's spectral
+  // class × the radiation Result, giving the D10 roll needed for that result.
+  // This is the table the 1987 errata corrected (a displaced bottom row); this
+  // printing already shows it correct. Modifiers are noted on the page.
+  '1986-incident-radiation': {
+    rowAxis: 'Result ↓',
+    colAxis: 'Star spectral class →',
+    cols: ['A0–4', 'A5–9', 'F0–4', 'F5–9', 'G0–4', 'G5–9', 'K, M, S'],
+    rows: [
+      { head: 'Benign', cells: ['≤1', '≤2', '≤2', '≤3', '≤4', '≤5', '≤8'] },
+      { head: 'Harmful *', cells: ['2–3', '3–4', '3–5', '4–6', '5–7', '6–9', '≥9'] },
+      { head: 'Dangerous **', cells: ['4–5', '5–7', '6–8', '7–8', '8–9', '10–11', '—'] },
+      { head: 'Inimical', cells: ['≥6', '≥8', '≥9', '≥9', '≥10', '≥12', '—'] },
+    ],
+    muted: ['—'],
+  },
   '1986-terrain': {
     rowAxis: 'Contour ↓',
     colAxis: 'Terrain Feature →',
