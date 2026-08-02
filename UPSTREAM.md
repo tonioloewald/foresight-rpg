@@ -86,3 +86,24 @@ Suggested: emit functional URLs **relative** (or resolve base at runtime), keep 
 
 **Workaround:** rebuild with the matching basePath at cutover; `static/CNAME` persists the domain
 through `rm -rf docs`. Now moot for us (we're on the domain at root), but a future move would repeat it.
+
+## ⚠️ OPEN — tosijs-ui: editable data-table + generalized source write-back
+
+**Issue:** https://github.com/tonioloewald/tosijs-ui/issues/44 (Tonio implements — do not edit tosijs-ui from here)
+**Raised:** 2026-08-02, against tosijs-ui 1.9.2.
+
+Goal: surface data tables (equipment; the community 1986 restoration's pixel-art tables) and let
+readers **crowd-source corrections** — edit cells, add/delete rows — persisting to the backing JSON
+the way `<tosi-example>` edits persist to source markdown. From reading 1.9.2:
+`tosi-table` has **no first-class editable mode** (editing only via a custom `dataCell` input that
+mutates the array in place; no add/delete API, no change events, no validation — `src/data-table.ts`
+`:793-805`, `:1173-1214`, `:622-669`), and the source write-back (`/__docstore/source`,
+`editableSources`) is **dev-only and wired only to live examples** (`live-example/component.ts:916-999`,
+`dev-server.ts:485-509,1168-1183`) — a static site returns 501/has no endpoint. Asked for (A) an
+`editable` mode with add/delete + a `change` CustomEvent + optional `type`-driven validation, and
+(B) a pluggable `onSave(payload)` seam so a published site can persist via a backend or an
+export-and-PR flow rather than the dev endpoint.
+
+**Blocks:** turning the 1986 restoration tables (and equipment) into reader-correctable data. Until
+it lands, crowd-sourcing stays "file a GitHub issue/PR" (the current landing-page ask). The public
+persistence path is a foresight-side decision anyway — Firestore backend (planned) vs edit→export→PR.
