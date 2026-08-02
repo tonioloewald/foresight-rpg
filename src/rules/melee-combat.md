@@ -25,11 +25,19 @@ A defence doesn't just win or lose; it can **eat part** of a blow. A defence **e
 <!-- matrix: melee-blocking -->
 <div class="matrix"><style>
 .mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
-.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle;color:inherit}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
 .mx-corner{border:0;background:transparent}
-.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
-.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
-.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+/* Header cells live in <thead>, which the doc-system theme paints
+   background:var(--brand-color) + color:var(--brand-text-color). Overriding only
+   the background there left brand-white text on light grey — so these keep the
+   theme's own background/text PAIR and just restyle the type. (color:inherit
+   doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.mx-colhead{font-weight:600;font-size:.85em}
+/* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
+   text colour is correct and readable in light and dark themes. */
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:inherit;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:inherit}
 .mx-blocked{opacity:.45;font-style:italic}
 </style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="6">Defence →</th></tr><tr><th class="mx-colhead">QR1</th><th class="mx-colhead">QR2</th><th class="mx-colhead">QR3</th><th class="mx-colhead">QR4</th><th class="mx-colhead">QR7 fail</th><th class="mx-colhead">QR10 botch</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="4">Attack ↓</th><th class="mx-rowhead">QR1</th><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td><td>QR1</td><td>QR1</td></tr><tr><th class="mx-rowhead">QR2</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td><td>QR1</td></tr><tr><th class="mx-rowhead">QR3</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td><td>QR2</td></tr><tr><th class="mx-rowhead">QR4</th><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td class="mx-blocked">blocked</td><td>QR4</td><td>QR3</td></tr></tbody></table></div>
 <!-- /matrix -->

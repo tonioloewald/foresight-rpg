@@ -209,11 +209,19 @@
 <!-- matrix: 1986-damage-track -->
 <div class="matrix"><style>
 .mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
-.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle;color:inherit}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
 .mx-corner{border:0;background:transparent}
-.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
-.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
-.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+/* Header cells live in <thead>, which the doc-system theme paints
+   background:var(--brand-color) + color:var(--brand-text-color). Overriding only
+   the background there left brand-white text on light grey — so these keep the
+   theme's own background/text PAIR and just restyle the type. (color:inherit
+   doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.mx-colhead{font-weight:600;font-size:.85em}
+/* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
+   text colour is correct and readable in light and dark themes. */
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:inherit;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:inherit}
 .mx-blocked{opacity:.45;font-style:italic}
 </style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="7">Wound (Damage) Status →</th></tr><tr><th class="mx-colhead">Okay</th><th class="mx-colhead">Light</th><th class="mx-colhead">Medium</th><th class="mx-colhead">Heavy</th><th class="mx-colhead">Inc[4] Part</th><th class="mx-colhead">Inc[5] Dstr</th><th class="mx-colhead">Dead</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="17">DT ↓</th><th class="mx-rowhead">A (0.05)</th><td>0</td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked">S</td></tr><tr><th class="mx-rowhead">B (0.1)</th><td>0</td><td class="mx-blocked"></td><td class="mx-blocked">S</td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td>1</td></tr><tr><th class="mx-rowhead">C (0.2)</th><td>0</td><td class="mx-blocked"></td><td class="mx-blocked">S</td><td class="mx-blocked"></td><td>1</td><td class="mx-blocked"></td><td>2</td></tr><tr><th class="mx-rowhead">D (0.4)</th><td>0</td><td class="mx-blocked">S</td><td class="mx-blocked"></td><td>1</td><td>2</td><td class="mx-blocked"></td><td>3</td></tr><tr><th class="mx-rowhead">E (0.6)</th><td>0</td><td class="mx-blocked">S</td><td>1</td><td>2</td><td>3</td><td class="mx-blocked"></td><td>4</td></tr><tr><th class="mx-rowhead">F (0.8)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td class="mx-blocked"></td><td>5</td></tr><tr><th class="mx-rowhead">1</th><td class="mx-blocked">S</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th class="mx-rowhead">2</th><td>1</td><td>2</td><td>4</td><td>5</td><td>7</td><td>8</td><td>9</td></tr><tr><th class="mx-rowhead">3</th><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td><td>11</td><td>12</td></tr><tr><th class="mx-rowhead">4</th><td>2</td><td>4</td><td>7</td><td>9</td><td>12</td><td>14</td><td>15</td></tr><tr><th class="mx-rowhead">5</th><td>2</td><td>5</td><td>8</td><td>11</td><td>14</td><td>17</td><td>18</td></tr><tr><th class="mx-rowhead">6</th><td>3</td><td>6</td><td>10</td><td>13</td><td>17</td><td>20</td><td>21</td></tr><tr><th class="mx-rowhead">7</th><td>3</td><td>7</td><td>11</td><td>15</td><td>19</td><td>23</td><td>24</td></tr><tr><th class="mx-rowhead">8</th><td>4</td><td>8</td><td>13</td><td>17</td><td>22</td><td>26</td><td>27</td></tr><tr><th class="mx-rowhead">9</th><td>4</td><td>9</td><td>14</td><td>19</td><td>24</td><td>29</td><td>30</td></tr><tr><th class="mx-rowhead">10</th><td>5</td><td>10</td><td>16</td><td>21</td><td>27</td><td>32</td><td>33</td></tr><tr><th class="mx-rowhead">11</th><td>5</td><td>11</td><td>17</td><td>23</td><td>29</td><td>35</td><td>36</td></tr></tbody></table></div>
 <!-- /matrix -->
@@ -255,11 +263,19 @@
 <!-- matrix: 1986-burn-dc -->
 <div class="matrix"><style>
 .mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
-.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle;color:inherit}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
 .mx-corner{border:0;background:transparent}
-.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
-.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
-.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+/* Header cells live in <thead>, which the doc-system theme paints
+   background:var(--brand-color) + color:var(--brand-text-color). Overriding only
+   the background there left brand-white text on light grey — so these keep the
+   theme's own background/text PAIR and just restyle the type. (color:inherit
+   doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.mx-colhead{font-weight:600;font-size:.85em}
+/* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
+   text colour is correct and readable in light and dark themes. */
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:inherit;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:inherit}
 .mx-blocked{opacity:.45;font-style:italic}
 </style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="5">Source type →</th></tr><tr><th class="mx-colhead">Flame</th><th class="mx-colhead">Hot Object</th><th class="mx-colhead">Corrosive</th><th class="mx-colhead">Cold Object</th><th class="mx-colhead">Electricity</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="3">DC ↓</th><th class="mx-rowhead">DC 1</th><td>Campfire</td><td>Boiling Water</td><td>HCl</td><td>Dry Ice</td><td>Appliance</td></tr><tr><th class="mx-rowhead">DC 3</th><td>Blowtorch</td><td>Hot Metal</td><td>Conc. HCl</td><td>Liquid Air</td><td>Mains</td></tr><tr><th class="mx-rowhead">DC 5</th><td>Cutting Torch</td><td>Molten Metal</td><td>Hot H₂SO₄</td><td>Cryogenics</td><td>Heavy Duty</td></tr></tbody></table></div>
 <!-- /matrix -->
