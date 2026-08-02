@@ -249,6 +249,34 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Size', prop: 'size' },
     ],
   },
+  // The original Weapon Modification Table (p.110) — adjectives on a base weapon.
+  // Recoil/PM/DC/Draw/Con/Jam are deltas; Ammo/Ranges/Mass/Cost are multipliers.
+  // Quality (†): one value improved, another worsened (purchaser's choice).
+  '1986-weapon-mods.json': {
+    file: '1986-weapon-mods.json',
+    noun: 'modification',
+    idPrefix: 'wmod86',
+    columns: [
+      { prop: 'name', name: 'Modification', width: 180 },
+      { prop: 'recoil', name: 'Recoil', width: 60, align: 'center' },
+      { prop: 'pm', name: 'PM', width: 48, align: 'center' },
+      { prop: 'dc', name: 'DC', width: 48, align: 'center' },
+      { prop: 'con', name: 'Con', width: 52, align: 'center' },
+      { prop: 'cost', name: 'Cost', width: 60, align: 'center' },
+    ],
+    card: [
+      { label: 'Recoil', prop: 'recoil' },
+      { label: 'PM', prop: 'pm' },
+      { label: 'DC', prop: 'dc' },
+      { label: 'Ammo', prop: 'ammo' },
+      { label: 'Ranges', prop: 'ranges' },
+      { label: 'Draw', prop: 'draw' },
+      { label: 'Concealment', prop: 'con' },
+      { label: 'Jam', prop: 'jam' },
+      { label: 'Mass', prop: 'mass' },
+      { label: 'Cost', prop: 'cost' },
+    ],
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
@@ -364,6 +392,19 @@ export const MATRIX_SPECS: Record<string, MatrixSpec> = {
       { head: '11', cells: ['5', '11', '17', '23', '29', '35', '36'] },
     ],
     muted: ['S', ''],
+  },
+  // The original Burn Damage Class Table (p.110): example sources of burn/energy
+  // damage across categories, by Damage Class. DC is per location per pulse;
+  // brief exposure or small contact area reduces DC by 1–2.
+  '1986-burn-dc': {
+    rowAxis: 'DC ↓',
+    colAxis: 'Source type →',
+    cols: ['Flame', 'Hot Object', 'Corrosive', 'Cold Object', 'Electricity'],
+    rows: [
+      { head: 'DC 1', cells: ['Campfire', 'Boiling Water', 'HCl', 'Dry Ice', 'Appliance'] },
+      { head: 'DC 3', cells: ['Blowtorch', 'Hot Metal', 'Conc. HCl', 'Liquid Air', 'Mains'] },
+      { head: 'DC 5', cells: ['Cutting Torch', 'Molten Metal', 'Hot H₂SO₄', 'Cryogenics', 'Heavy Duty'] },
+    ],
   },
 }
 

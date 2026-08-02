@@ -233,48 +233,48 @@ Designer&#39;s Notes: a lot of the &quot;source material&quot; for a game like F
 <p><strong>Notes.</strong> If something&#39;s wound level exceeds the number in the <strong>Dead</strong> column, it&#39;s still dead. <strong>Part</strong> (partially destroyed): equipment reaching this status is partially destroyed and certainly non-functional. <strong>Destroyed</strong>: not only non-functional, but beyond repair.</p>
 <!-- 1986 p.110 -->
 
-<pre><code>2 ForeSight Appended Tables
+<h4>Weapon Modification Table</h4>
+<p><em>Adjectives on a base weapon. Recoil / PM / DC / Draw / Con / Jam are ease-factor deltas; Ammo / Ranges / Mass / Cost are multipliers. <strong>Cut-down</strong> comes in a handgun (</em>) and a longarm/heavy (**) form; a weapon takes only one. <strong>Quality (†)</strong>: one value (buyer&#39;s choice) improves by one (favourable ±1, or ×1.25) while another worsens by one (unfavourable ±1, or ×0.75). <strong>Reconstructed</strong> — verify against the original.*</p>
+<!-- entity-view: 1986-weapon-mods.json -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+.ev-count{font-size:.85em;opacity:.65;white-space:nowrap}
+</style>
+<foresight-table src="1986-weapon-mods.json" columns="[{&quot;prop&quot;:&quot;name&quot;,&quot;name&quot;:&quot;Modification&quot;,&quot;width&quot;:180},{&quot;prop&quot;:&quot;recoil&quot;,&quot;name&quot;:&quot;Recoil&quot;,&quot;width&quot;:60,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;pm&quot;,&quot;name&quot;:&quot;PM&quot;,&quot;width&quot;:48,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;dc&quot;,&quot;name&quot;:&quot;DC&quot;,&quot;width&quot;:48,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;con&quot;,&quot;name&quot;:&quot;Con&quot;,&quot;width&quot;:52,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;cost&quot;,&quot;name&quot;:&quot;Cost&quot;,&quot;width&quot;:60,&quot;align&quot;:&quot;center&quot;}]"><div class="ev-static"><table class="ev-table"><thead><tr><th>Modification</th><th align="center">Recoil</th><th align="center">PM</th><th align="center">DC</th><th align="center">Con</th><th align="center">Cost</th></tr></thead><tbody><tr><td><a href="#wmod86-cheap">Cheap</a></td><td align="center">+1</td><td align="center">-1</td><td align="center">-1</td><td align="center">0</td><td align="center">×0.6</td></tr><tr><td><a href="#wmod86-heavy">Heavy</a></td><td align="center">+1</td><td align="center">-1</td><td align="center">+1</td><td align="center">+1</td><td align="center">×2.0</td></tr><tr><td><a href="#wmod86-light">Light</a></td><td align="center">-1</td><td align="center">0</td><td align="center">-1</td><td align="center">-1</td><td align="center">×0.9</td></tr><tr><td><a href="#wmod86-target">Target</a></td><td align="center">-1</td><td align="center">+1</td><td align="center">-1</td><td align="center">+1</td><td align="center">×3.0</td></tr><tr><td><a href="#wmod86-reliable">Reliable</a></td><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">×2.0</td></tr><tr><td><a href="#wmod86-cut-down-handgun">Cut-down (handgun)</a></td><td align="center">+1</td><td align="center">-1</td><td align="center">0</td><td align="center">-2</td><td align="center">×0.8</td></tr><tr><td><a href="#wmod86-cut-down-longarm">Cut-down (longarm)</a></td><td align="center">+1</td><td align="center">0</td><td align="center">-1</td><td align="center">-2</td><td align="center">×0.8</td></tr><tr><td><a href="#wmod86-quality">Quality</a></td><td align="center">0†</td><td align="center">0†</td><td align="center">0†</td><td align="center">0†</td><td align="center">×5.0</td></tr><tr><td><a href="#wmod86-old-rusty">Old/Rusty</a></td><td align="center">0</td><td align="center">-1</td><td align="center">-1</td><td align="center">0</td><td align="center">×0.7</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="wmod86-cheap"><h3>Cheap</h3><dl class="ev-fields"><dt>Recoil</dt><dd>+1</dd><dt>PM</dt><dd>-1</dd><dt>DC</dt><dd>-1</dd><dt>Ammo</dt><dd>×0.8</dd><dt>Ranges</dt><dd>×0.75</dd><dt>Draw</dt><dd>+1</dd><dt>Concealment</dt><dd>0</dd><dt>Jam</dt><dd>-2</dd><dt>Mass</dt><dd>×1.0</dd><dt>Cost</dt><dd>×0.6</dd></dl></section><section class="ev-card" id="wmod86-heavy"><h3>Heavy</h3><dl class="ev-fields"><dt>Recoil</dt><dd>+1</dd><dt>PM</dt><dd>-1</dd><dt>DC</dt><dd>+1</dd><dt>Ammo</dt><dd>×0.8</dd><dt>Ranges</dt><dd>×1.25</dd><dt>Draw</dt><dd>+1</dd><dt>Concealment</dt><dd>+1</dd><dt>Jam</dt><dd>-1</dd><dt>Mass</dt><dd>×1.25</dd><dt>Cost</dt><dd>×2.0</dd></dl></section><section class="ev-card" id="wmod86-light"><h3>Light</h3><dl class="ev-fields"><dt>Recoil</dt><dd>-1</dd><dt>PM</dt><dd>0</dd><dt>DC</dt><dd>-1</dd><dt>Ammo</dt><dd>×1.25</dd><dt>Ranges</dt><dd>×0.8</dd><dt>Draw</dt><dd>-1</dd><dt>Concealment</dt><dd>-1</dd><dt>Jam</dt><dd>0</dd><dt>Mass</dt><dd>×0.75</dd><dt>Cost</dt><dd>×0.9</dd></dl></section><section class="ev-card" id="wmod86-target"><h3>Target</h3><dl class="ev-fields"><dt>Recoil</dt><dd>-1</dd><dt>PM</dt><dd>+1</dd><dt>DC</dt><dd>-1</dd><dt>Ammo</dt><dd>×0.8</dd><dt>Ranges</dt><dd>×1.5</dd><dt>Draw</dt><dd>+1</dd><dt>Concealment</dt><dd>+1</dd><dt>Jam</dt><dd>-1</dd><dt>Mass</dt><dd>×1.25</dd><dt>Cost</dt><dd>×3.0</dd></dl></section><section class="ev-card" id="wmod86-reliable"><h3>Reliable</h3><dl class="ev-fields"><dt>Recoil</dt><dd>0</dd><dt>PM</dt><dd>0</dd><dt>DC</dt><dd>0</dd><dt>Ammo</dt><dd>×1.0</dd><dt>Ranges</dt><dd>×1.0</dd><dt>Draw</dt><dd>0</dd><dt>Concealment</dt><dd>0</dd><dt>Jam</dt><dd>+2</dd><dt>Mass</dt><dd>×1.0</dd><dt>Cost</dt><dd>×2.0</dd></dl></section><section class="ev-card" id="wmod86-cut-down-handgun"><h3>Cut-down (handgun)</h3><dl class="ev-fields"><dt>Recoil</dt><dd>+1</dd><dt>PM</dt><dd>-1</dd><dt>DC</dt><dd>0</dd><dt>Ammo</dt><dd>×0.8</dd><dt>Ranges</dt><dd>×0.75</dd><dt>Draw</dt><dd>+1</dd><dt>Concealment</dt><dd>-2</dd><dt>Jam</dt><dd>-1</dd><dt>Mass</dt><dd>×0.75</dd><dt>Cost</dt><dd>×0.8</dd></dl></section><section class="ev-card" id="wmod86-cut-down-longarm"><h3>Cut-down (longarm)</h3><dl class="ev-fields"><dt>Recoil</dt><dd>+1</dd><dt>PM</dt><dd>0</dd><dt>DC</dt><dd>-1</dd><dt>Ammo</dt><dd>×1.0</dd><dt>Ranges</dt><dd>×0.6</dd><dt>Draw</dt><dd>-1</dd><dt>Concealment</dt><dd>-2</dd><dt>Jam</dt><dd>-1</dd><dt>Mass</dt><dd>×0.75</dd><dt>Cost</dt><dd>×0.8</dd></dl></section><section class="ev-card" id="wmod86-quality"><h3>Quality</h3><dl class="ev-fields"><dt>Recoil</dt><dd>0†</dd><dt>PM</dt><dd>0†</dd><dt>DC</dt><dd>0†</dd><dt>Ammo</dt><dd>×1.0†</dd><dt>Ranges</dt><dd>×1.0†</dd><dt>Draw</dt><dd>0†</dd><dt>Concealment</dt><dd>0†</dd><dt>Jam</dt><dd>0†</dd><dt>Mass</dt><dd>×1.0</dd><dt>Cost</dt><dd>×5.0</dd></dl></section><section class="ev-card" id="wmod86-old-rusty"><h3>Old/Rusty</h3><dl class="ev-fields"><dt>Recoil</dt><dd>0</dd><dt>PM</dt><dd>-1</dd><dt>DC</dt><dd>-1</dd><dt>Ammo</dt><dd>×1.0</dd><dt>Ranges</dt><dd>×0.9</dd><dt>Draw</dt><dd>0</dd><dt>Concealment</dt><dd>0</dd><dt>Jam</dt><dd>-2</dd><dt>Mass</dt><dd>×1.0</dd><dt>Cost</dt><dd>×0.7</dd></dl></section></div></div></foresight-table>
+</div>
+<!-- /entity-view -->
 
- Weapon Modification Table
-
- Type         Recoil PM DC          Ammo Ranges Draw Con Jam Mass Cost
-
- Cheap           +1       -1   -1    0.8    0.75     +1      0    -2     1.0   0.6
- Heavy           +1       -1   +1    0.8    1.25     +1     +1    -1    1.25   2.0
- Light           -1        0   -1    1.25   0.8      -1     -1     0    0.75   0.9
- Target          -1       +1   -1    0.8     1.5     +1     +1    -1    1.25   3.0
- Reliable         0        0    0    1.0     1.0      0      0    +2     1.0   2.0
-
-  Cut-down* +1           -1     0    0.8    0.75     +1     -2    -1    0.75   0.8
-  Cut-down** +1           0    -1    1.0    0.6      -1     -2    -1    0.75   0.8
-  Quality    ot          ot    ot    1.0t   1.0t     ot     ot    ot     1.0   5.0
-  Old/Rusty  0           -1    -1    1.0    0.9       0      0    -2     1.0   0.7
-
-  NOTES
-  * applies to modifying handguns; ** applies to modifying longarms and heavy
-     weapons. A weapon may only receive one cut-down modification (subject to
-     GM&#39;s discretion).
-  t one of these values (purchaser&#39;s choice) is improved by one (ie. is treated as a
-     favourable ±1; or as a coefficient of 1.25); while another must be worsened by
-     one (treated as an unfavourable ±1, or 0.75).
-
-  Burn Damage Class Table
-
-  Flame         Hot Object Corrosive          Cold · Object Electrlcltyt       DC·
-  Campfire      Boiling Water HCI     .       Dry Ice       Appliance           1
-  Blowtorch     Hot  Metal    Conc. HCI       Liquid Air    Mains               3
-  Cutting Torch Molten Metal Hot, H2S04       Cryogenics    Heavy Duty          5
-
-  Notes
-  t Electrical damage usually kills by causing cardiac arrest (resuscitation is
-     usually possible if promptly attempted). If a pain resistance roll following
-     damage from electricity is failed, then the victim suffers a cardiac arrest, and
-     must be revived within two minutes to avoid brain damage. Heavy Duty voltages
-     include extraordinarily powerful sources of electricity, like laser batteries.
-  * Damage Class is per location exposed per pulse (damage is via random QR).
-     For briefer exposure, reduce DC by 1 or 2, for small area of contact, reduce DC
-     by 1 or 2.
-</code></pre>
+<h4>Burn Damage Class Table</h4>
+<p><em>Example sources of burn / energy damage by Damage Class. DC is per location exposed per pulse (damage via random QR); for briefer exposure or a small contact area, reduce DC by 1–2. <strong>Electricity (†)</strong> usually kills by cardiac arrest — a failed Pain Resistance roll means arrest, and the victim must be revived within two minutes to avoid brain damage; Heavy-Duty voltages include things like laser batteries.</em></p>
+<!-- matrix: 1986-burn-dc -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="5">Source type →</th></tr><tr><th class="mx-colhead">Flame</th><th class="mx-colhead">Hot Object</th><th class="mx-colhead">Corrosive</th><th class="mx-colhead">Cold Object</th><th class="mx-colhead">Electricity</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="3">DC ↓</th><th class="mx-rowhead">DC 1</th><td>Campfire</td><td>Boiling Water</td><td>HCl</td><td>Dry Ice</td><td>Appliance</td></tr><tr><th class="mx-rowhead">DC 3</th><td>Blowtorch</td><td>Hot Metal</td><td>Conc. HCl</td><td>Liquid Air</td><td>Mains</td></tr><tr><th class="mx-rowhead">DC 5</th><td>Cutting Torch</td><td>Molten Metal</td><td>Hot H₂SO₄</td><td>Cryogenics</td><td>Heavy Duty</td></tr></tbody></table></div>
+<!-- /matrix -->
 
   </article>
   <nav class="doc-nav" aria-label="Documentation">
