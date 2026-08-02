@@ -20,6 +20,14 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **TL recalibration (deferred).** Info-tech is really ~TL7 and biotech ~TL6+ in the original terms; the `technology-levels.md` "now" row pins everything at TL6. Decouple the threads in a later pass.
 - [ ] **Illustrations.** `image` hook exists; no art yet. When added, verify the ePub embeds referenced images (root-relative `/images/...` works on the site but the book needs them bundled + relative).
 
+## ForeSight 1986 restoration (`src/rules/1986-*.md`)
+- [x] ~~Published~~ **Done** — the original edition is on the site as the pinned-last "ForeSight 1986" section (11 chapters, ~78k words, errata folded in), WIP banner + GitHub crowd-source call, excluded from the streamlined ePub.
+- [ ] **Table cleanup is the priority.** Stat charts (Master Weapon Chart, vehicle/starship tables, Damage Table) are verbatim monospaced blocks and the noisiest content — rebuild them into real tables. This is the main crowd-source ask.
+- [ ] **Fold remaining inline errata** — only Travel's Redline "minus→plus" note is inline; add callouts for 301 (resolution "30" cell), 501 (submarine terrain limit 2), 504 (double-back→reverse), 703 (radiation table), 804 (hibersleep power) at their spots.
+- [ ] **Residual OCR noise** — only unambiguous fixes were auto-applied (deliberately, for fidelity). Known recurring garbles left for correction: `eg.`→`ego`, mid-dot `·` for emphasis/quotes, `Interned`/`Internal`, split words in charts. Don't bulk-fix with an LLM (fidelity risk); crowd-source or hand-verify.
+- [ ] **Standalone 1986 ePub (Tonio's idea).** tosijs-ui 1.8 reportedly supports multiple epub targets — emit a separate "ForeSight 1986 (restoration)" ebook for players who want it. Needs the 1.7.0-beta.5 → 1.8 upgrade first (see below); test then.
+- [ ] **1986 vs modern calibration disagreements** surfaced by the restoration — e.g. QR ladder `SC/10·SC/5·SC/2·SC → 100/90/75/50%` (1986) vs `SC/10·SC/4·SC/2·SC → 100/80/50/25%` (2026). 1986 has the playtest weight; log each as a test item (see Calibration section).
+
 ## Book output (ePub / print)
 - [x] ~~Static build-time table rendering~~ **Done** — `entity-views.ts` runs from `site.config`'s `prebuild` (before doc extraction) and renders `static/data/*.json` into a limited-column `<table>` + per-item detail cards, so the book gets real HTML. `<foresight-table>` now *enhances* that substrate (summary/cards toggle, text + tag filter) instead of replacing a blank element. `skills.md` is back in the book (20 rows, 20 cards, 20 working row→card anchors, zero JS).
 - [x] ~~All internal cross-links are dead in the ePub~~ **Fixed** by consuming tosijs-ui 1.7.0-beta.5's `rewriteInBookLinks` ([#15](https://github.com/tonioloewald/tosijs-ui/issues/15)). 21 dead links → 2, both the deliberately-excluded `character-builder` (out-of-book links are left as-is by design). See `UPSTREAM.md`.
