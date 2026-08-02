@@ -121,7 +121,7 @@ Quirks are free. They have an upside and a downside that roughly cancel out, and
 - **Minor Phobia** — –2 dealing with the feared thing, +2 to notice it (with false positives). In combat, WP check or hesitate.
 - **Ugly** — –2 on first impressions with the appropriate audience; but you've learned to suck it up (+1 WP-flavored tasks), turned it into a joke (+1 Charm), or gained insight (+1 reading people) — pick one.
 - **Nondescript** — +2 blending into crowds, +1 reading people; –1 making memorable impressions. Incompatible with high AP.
-- **Reads People** — +2 PC for reading people and detecting lies; –1 PC for noticing physical detail while you're doing it. *(This is where the old EM attribute went.)*
+- **Reads People** — +2 PC for reading people and detecting lies; –1 PC for noticing physical detail while you're doing it.
 - **Oblivious** — –2 PC for reading people; +1 sustained concentration, immune to most social pressure.
 - **Weakness for the Ladies/Gentlemen** — you can't help yourself; you will do foolish things for whoever currently has your attention. +2 where romance helps.
 - **Corrected Vision** — fine with your glasses; lose them and it's –2 on anything at distance.

@@ -237,9 +237,9 @@
     "code": "§3A6",
     "name": "Animation",
     "source": "apportation",
-    "desc": "Fully animate a flexible object massing no more than one kilogram as though it were a live creature (with ST equal to 2, AG and DX at most equal to those of the invoker; **controlled**).",
+    "desc": "Fully animate a flexible object massing no more than one kilogram as though it were a live creature (with ST equal to 2, CO at most equal to those of the invoker; **controlled**).",
     "variable": "at intensity A+B'no more than A3 kg 'with ST equal to 2(A+B)'",
-    "desc_raw": "Fully animate a flexible object massing no more than one kilogram as though it were a live creature (with ST equal to 2, AG and DX at most equal to those of the invoker; controlled)."
+    "desc_raw": "Fully animate a flexible object massing no more than one kilogram as though it were a live creature (with ST equal to 2, CO at most equal to those of the invoker; controlled)."
    },
    {
     "intensity": 2,
@@ -1502,9 +1502,9 @@
     "code": "§18A5",
     "name": "Strengthen",
     "source": "shaping",
-    "desc": "Strengthen all objects in a region no larger than 2m×2m×2m (**fixed, bestowed**).\n\n- Armour has its beam protection increased by one, its impact protection increased by two, and its melee protection increased by A.\n- Weapons designated as broken are dropped 50% of the time instead, and otherwise have any damage (eg. \"cheap\" modifications) taken halved.\n- Living creatures have their DT improved by one, and their (inherent and trained) AG and DX reduced by five for the duration (upon reversion to original DT, retain wound status, not level).\n- And so forth.\n\nNote: any strengthened object which would otherwise have no magic resistance is considered to gain a WP for purposes of resisting magic equal to 10 (note that all \"WP\" thus received must derive from one effect, after which the object has a magic resistance and may not receive more). Strengthened objects, creatures, or characters which already have a magic resistance receive no such benefit from this application.",
+    "desc": "Strengthen all objects in a region no larger than 2m×2m×2m (**fixed, bestowed**).\n\n- Armour has its beam protection increased by one, its impact protection increased by two, and its melee protection increased by A.\n- Weapons designated as broken are dropped 50% of the time instead, and otherwise have any damage (eg. \"cheap\" modifications) taken halved.\n- Living creatures have their DT improved by one, and their CO reduced by five for the duration (upon reversion to original DT, retain wound status, not level).\n- And so forth.\n\nNote: any strengthened object which would otherwise have no magic resistance is considered to gain a WP for purposes of resisting magic equal to 10 (note that all \"WP\" thus received must derive from one effect, after which the object has a magic resistance and may not receive more). Strengthened objects, creatures, or characters which already have a magic resistance receive no such benefit from this application.",
     "variable": null,
-    "desc_raw": "Strengthen all objects in a region no larger than 2mx2mx2m (fixed, bestowed). Armour has its beam protection increased by one, its impact protection increased by two, and its melee protection increased by A. Weapons designated as broken are dropped 50% of the time instead, and otherwise have any damage (eg. \"cheap\" modifications) taken halved. Living creatures have their DT improved by one, and their (inherent and trained) AG and DX reduced by five for the duration (upon reversion to original DT, retain wound status, not level). And so forth. Note: any strengthened object which would otherwise have no magic resistance is considered to gain a WP for purposes of resisting magic equal to 10 (note that all \"WP\" thus received must derive from one effect, after which the object has a magic resistance and may not receive more). Strengthened objects, creatures, or characters which already have a magic resistance receive no such benefit from this application."
+    "desc_raw": "Strengthen all objects in a region no larger than 2mx2mx2m (fixed, bestowed). Armour has its beam protection increased by one, its impact protection increased by two, and its melee protection increased by A. Weapons designated as broken are dropped 50% of the time instead, and otherwise have any damage (eg. \"cheap\" modifications) taken halved. Living creatures have their DT improved by one, and their CO reduced by five for the duration (upon reversion to original DT, retain wound status, not level). And so forth. Note: any strengthened object which would otherwise have no magic resistance is considered to gain a WP for purposes of resisting magic equal to 10 (note that all \"WP\" thus received must derive from one effect, after which the object has a magic resistance and may not receive more). Strengthened objects, creatures, or characters which already have a magic resistance receive no such benefit from this application."
    },
    {
     "intensity": 3,
@@ -2174,9 +2174,9 @@
     "code": "§21A4",
     "name": "Numb",
     "source": "tactile_sensations",
-    "desc": "Numb a target, improving his/her/its Pain Resistance rolls by +2, but penalising any tasks involving DX or DX-dependent skills by -1 (**fixed, bestowed**).",
+    "desc": "Numb a target, improving his/her/its Pain Resistance rolls by +2, but penalising any tasks involving CO or CO-dependent skills by -1 (**fixed, bestowed**).",
     "variable": null,
-    "desc_raw": "Numb a target, improving his/her/its Pain Resistance rolls by +2, but penalising any tasks involving DX or DX dependent skills by -1 (fixed, bestowed)"
+    "desc_raw": "Numb a target, improving his/her/its Pain Resistance rolls by +2, but penalising any tasks involving CO or CO dependent skills by -1 (fixed, bestowed)"
    },
    {
     "intensity": 3,
@@ -2192,9 +2192,9 @@
     "code": "§21A6",
     "name": "Suppress Pain",
     "source": "tactile_sensations",
-    "desc": "Render a character unaware of pain: not stunned by damage, does not suffer negative modifiers for light wound status, and incurs -1 for medium and -2 for heavy wound status; suffers a -2 penalty to all rolls versus DX or DX-dependent skills (**fixed**).",
+    "desc": "Render a character unaware of pain: not stunned by damage, does not suffer negative modifiers for light wound status, and incurs -1 for medium and -2 for heavy wound status; suffers a -2 penalty to all rolls versus CO or CO-dependent skills (**fixed**).",
     "variable": null,
-    "desc_raw": "Render a character unaware of pain (not stunned by damage, does not suffer negative modifiers for light wound status, and incurs -1 for medium, and a -2 for heavy wound status; suffers -2 penalty to all rolls versus DX or DX dependent skills; fixed)"
+    "desc_raw": "Render a character unaware of pain (not stunned by damage, does not suffer negative modifiers for light wound status, and incurs -1 for medium, and a -2 for heavy wound status; suffers -2 penalty to all rolls versus CO or CO dependent skills; fixed)"
    }
   ]
  },
