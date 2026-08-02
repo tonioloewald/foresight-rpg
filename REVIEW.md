@@ -43,6 +43,13 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **Swap the remaining collections to entity views** — add specs to `src/entity-specs.ts` for `background-factors`, `fields`, `magic-fundamentals`, then replace the hand-written Markdown tables in the one-pagers with `<!-- entity-view: … -->` blocks. (`magic-applications.json` is nested — 23 fundamentals × 232 applications — so it needs a grouped renderer, not the flat one.)
 - [ ] `character-builder.md` stays excluded from the book (`site.config.ts` → `book.exclude`): pure JS, no static substrate, so it's a stub chapter in print.
 
+## Editorial principles (apply as we go)
+- [ ] **Edition-change explanations belong in end notes**, not inline in a rule. A note that some rule "no longer exists", referencing terms we no longer use, breaks the flow of an otherwise simple rule — the opposite of the goal. Interim: a blockquote aside right after the rule (done for the attributes "no inherent/trained value" note). **Target: real end notes per section.** *Exception (agreed):* the magic fundamentals' brief "(formerly X)" subtitles stay — a name change doesn't add complexity, and the old name often carries explanatory power.
+- [x] ~~**No dropped-attribute references (DX/AG/EM)**~~ — purged from modern rules + data (armor.json penalties, magic-applications.json). One explanatory block under the attributes list is the *only* place they appear. **Watch for regressions** when adding data or porting 1986/2004 content.
+
+## Planned: quirks for asymmetric ability
+- [ ] **Build out quirks to cover asymmetric dexterity/agility** — e.g. *graceful*, *nimble-fingered* — so a character can buy a **specific** excellent ability. Design intent: getting a really good *specific* ability should be **more affordable than maxing out a whole attribute**. This is the pressure-valve that makes the 7-attribute merge (DX+AG→CO, EM→PC) work: the fine grain moves into quirks rather than into more attributes.
+
 ## Source-edition conflicts (2004 vs 1986)
 - [ ] Where the 2004 draft and the 1986 original disagree on a **number or probability**, log it here rather than defaulting to 2004 — 2004 was never playtested, 1986 shipped. (Prose/structure: 2004 wins, no argument. See CLAUDE.md → Source hierarchy.)
 
