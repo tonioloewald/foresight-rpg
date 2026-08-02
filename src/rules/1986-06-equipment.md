@@ -5,13 +5,13 @@
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=65">ForeSight 1986 · p.65 ↗</a></div>
 
-[6.0] Equipment Characters in FS will almost certainly want equipment of sorts other than weapons and vehicles. This section of the rules provides a very incomplete list of equipment available to FS characters at given tech-nological levels. The descriptions of the items are minimal, but include the following pieces of inform-ation: ...................................................................................................................
+[6.0] Equipment Characters in FS will almost certainly want equipment of sorts other than weapons and vehicles. This section of the rules provides a very incomplete list of equipment available to FS characters at given technological levels. The descriptions of the items are minimal, but include the following pieces of information: ...................................................................................................................
 
 Skill/Field: any skill or field which the item can be used in conjunction with; this does not mean that the item is necessarily appropriate to all tasks involving the field.
 
 PM: a modifier to tasks making appropriate use of an item (eg. an artist could expect to use his camera's +1 PM to improve his photographs, but this does not mean the camera makes a good club). Similarly, if the equipment is required for a task, and has a detrimental PM, this must also be applied. An R indicates that the skill or field listed is used to repair the item.
 
-Wgt: the mass of the item, usually in kg. A Wgt of '-' indicates an item weighing a less than twenty-five grams. The units of mass used are: g, grams; kg, kilograms; t, tonnes (1 t OK 1000 kg).
+Wgt: the mass of the item, usually in kg. A Wgt of '-' indicates an item weighing a less than twenty-five grams. The units of mass used are: g, grams; kg, kilograms; t, tonnes (1 t = 1000 kg).
 
 TL: the tech. level required to produce such an item.
 
@@ -23,7 +23,7 @@ Designer's Notes: there are an awful lot of weapons available in FS, which to so
 
 In summary: ForeSight details the rules of the system; the source material (you know: lots of guns, and cars,
 
-foreSight [6.0] Equipment
+ForeSight [6.0] Equipment
 
 and aliens, and things like that) will be contained in
 ForeScene (for Science Fiction role-playing) and
@@ -32,7 +32,7 @@ Fantasy role-play will be in HindSight. Why am I
 saying this here? I don't know, but it's designer's
 notes, so who cares?
 
-Toolkits The following table gives basic sizes and costs for toolkits of varying efficacies at different TLs. These toolkits are required by anyone wishing to Implem-ent, Diagnose, or Repair using a Field of Knowledge with a Sz (size) rating. A toolkit is field specific, and is referred to as a qua/ity-field-kit (eg. Standard Elect-ronics-kit). To determine the size and cost of a particular kit at a given TL, index the quality desired with the TL to find the basic size, which is multiplied by the Sz of the field it is to be used in conjunction with; the basic price is multiplied by the same number, and then divided by (TL-2)2. The PM is used for tasks involving the toolkit's field.
+Toolkits The following table gives basic sizes and costs for toolkits of varying efficacies at different TLs. These toolkits are required by anyone wishing to Implement, Diagnose, or Repair using a Field of Knowledge with a Sz (size) rating. A toolkit is field specific, and is referred to as a quality-field-kit (eg. Standard Electronics-kit). To determine the size and cost of a particular kit at a given TL, index the quality desired with the TL to find the basic size, which is multiplied by the Sz of the field it is to be used in conjunction with; the basic price is multiplied by the same number, and then divided by (TL-2)2. The PM is used for tasks involving the toolkit's field.
 
 TL:                                   Cost
 Quality        PM     5      6      7    8     9    10 (nu)
@@ -109,7 +109,7 @@ x3/4
 x 112
 Notes on batteries. A "gram of TL8 battery" is the s (roughly equivalent to one kilojoule, or about 740 foot-consumptions, and energy storage and power generatio used as follows: determine the amount of energy (in g battery, and add to this the maximum output per tenth of and multiply it by the factor given for the TL of the batte are given per kilogram. Binoculars                    Search/Scan       +1     1kg
 +1    500g
-BugslTracers                  Surveillance Camera                        Photography       -2 30kg
+Bugs/Tracers                  Surveillance Camera                        Photography       -2 30kg
 -1     1kg
 0    750g
 +1 500g
@@ -161,7 +161,7 @@ room by up to SOD
 room by up to 1000
 4             30 5           2lkg 6           2lkg 7            4lkg    Rechargable 8           10lkg    Rechargable 9           10lkg    Rechargable 10          15lkg    Rechargable standard unit of electrical energy in ForeSight -pounds), used in standardising weapon power on capacities. The entries given under mass are grams of TL8 battery) you want to store in the f a second (this is necessary to power weapons) ery you will be using. The costs for the batteries
 
-4            30      Ranged visual search; 7x30. 5            30      More powerful still; 8x40. 5+          40+      Used for surveillance and tracking 4            6k      Daguerrotype 4            40      Box Brownie 4           200      Leica M3 5           120      Olympus OM-2 5           600      Video camera/recorder/monitor 6            50      Laserdisc still camera 6           200      Laserdisc sound/motion camera 6            2       Laserdisc 'ilm" (750 000 frames or
+4            30      Ranged visual search; 7x30. 5            30      More powerful still; 8x40. 5+          40+      Used for surveillance and tracking 4            6k      Daguerrotype 4            40      Box Brownie 4           200      Leica M3 5           120      Olympus OM-2 5           600      Video camera/recorder/monitor 6            50      Laserdisc still camera 6           200      Laserdisc sound/motion camera 6            2       Laserdisc 'film' (750 000 frames or
 2h of sound/picture)
 6            5k      Computer holographer 7            4k      Portable motion holographer 5           100      Alter environment to taste 5           3M 6            1M 7           20k 8            4k      Analyses any inorganic and most
 organic chemical compounds. The
@@ -245,7 +245,7 @@ TL        Cost      Remarks 7         250       Magnifier, telescope, lA, UV, la
 camera, geiger counter, etc.
 7         400       As above, but binocular 8         500       As above, with TL8 hand computer 4          160      Makeup, wigs, etc 6          200      Implants, contacts, skin dye etc 5           40      Painkillers, antibiotics, etc. 5           40      Illegal and harmful substances 7          120      Last about 1h, side effects 6            1      Harmless recreational drugs 5            2      Beam good for 40m 4           20      Dynamite 5           50     TNT 5           80     Plastique 7           30     DEXAX (very unstable) 8           40     PlasDex (DEXAX derivative) 9            30     Durex (DEXAX derivative) equal destructive capacity 4            20     Minimum requirement for EMT 5            10 4             4     Flare gun, lights 150m radius for
 10s
-5             3      Aocket, lights SOOm radius for 30s 5             2      1d camping rations 6           200k     Barely edible results from human
+5             3      Rocket, lights SOOm radius for 30s 5             2      1d camping rations 6           200k     Barely edible results from human
 waste and electrical power
 7           50k     This produces passable food 8           10k     Standard in many (TL8) homes; a
 serving is almost indistinguishable
@@ -255,7 +255,7 @@ gas as smoke grenade fills with
 smoke; twice as likely to disperse
 4           20k      For vehicle-mounted weapons 5            50      Programmable scientific 5           300      HP-2SC or HP-71 B, say 6           200      Equivalent of Mac XL
 
-For higher 11.s see Computers.
+For higher TLs see Computers.
 4        12      May be placed on restrained or
 submissive character
 5        1       Plastic, one-use cuffs
@@ -281,7 +281,7 @@ Insulated Clothing         Fatigue          +1   4kg
 
 Instrument Displays        varies           R
 
-IRGoggles                  Search/Scan      -2   1kg
+IR Goggles                  Search/Scan      -2   1kg
 
 LI Goggles                 Search/Scan      -1   2kg
 
@@ -300,7 +300,7 @@ PM Mass TL Cost R
 (kg)              (
 -1   40    5    80k
 0   20    6    20k
-· 0     15   7      8k
+0     15   7      8k
 +1   25    7     15k
 +1   20    8      8k
 Note: *affects movement as exoskeleton, and can (m (and cover) while in the air Prefabs                       Construction   R     .5t
@@ -352,9 +352,9 @@ vehicle dashboard or unit above
 specific metals (less reliable still)
 6          75      More reliable, but hardly foolproof
 
-Range CrulselMax          Move· (km)       (km/h) 150        40160          x2 200        50/80          x2 300        60/100         x3 500       100/180         x4 600       120/200         x4 must) ignore terrain for purposes of movement
+Range Cruise/Max          Move (km)       (km/h) 150        40160          x2 200        50/80          x2 300        60/100         x3 500       100/180         x4 600       120/200         x4 must) ignore terrain for purposes of movement
 
-5          lkg     3mx3mx2m frame/sheet shed 5           6k     A-frame cottage, 18mx9mx8m 6           2k     basic foamlfibre unit, with power
+5          lkg     3mx3mx2m frame/sheet shed 5           6k     A-frame cottage, 18mx9mx8m 6           2k     basic foam/fibre unit, with power
 and heat, S4 people
 6           5k     As previous, pressurised 5          300     For use in hostile atmospheres, has
 air for one person for 1day
@@ -401,7 +401,7 @@ Sling                   Plastics Form.      R    500g Sling, gyroscopic       Ma
 4kg
 Stove                                             4kg Tarpaulin                                         2kg
 
-TearGas                 Also see Grenades        500g
+Tear Gas                 Also see Grenades        500g
 
 Tent                                              2kg
 4kg
@@ -447,4 +447,4 @@ are for aerosol can, which affects
 person in adjacent hex for c. 30s
 5      20   Nylon 2-person tent 5      40   Nylon 2-person tent with fly 5      30   Nylon 3-person tent 6      20   4-person, waterproof tent 5     800   Basic non-graphics terminal 7      2k   Superhacker 'intelligent' terminal
 (Sirius Cybernetics)
-6      30   Watch, 1W transceiver, memo-pad 5      20   2W walkie-talkie 5      50   5W walkie-talkie 6      10   5W walkie-talkie 7      10   5W headsetlhelmet radio 5     300   100W station; inc. 50kg antenna 6     150   100W station; inc. 10kg antenna 7     100   100W radio; inc. 5kg antenna 3      50   Fair accuracy and reliability 4      20   Analogue, wind-up 5      10   Digital with spurious functions
+6      30   Watch, 1W transceiver, memo-pad 5      20   2W walkie-talkie 5      50   5W walkie-talkie 6      10   5W walkie-talkie 7      10   5W headset/helmet radio 5     300   100W station; inc. 50kg antenna 6     150   100W station; inc. 10kg antenna 7     100   100W radio; inc. 5kg antenna 3      50   Fair accuracy and reliability 4      20   Analogue, wind-up 5      10   Digital with spurious functions

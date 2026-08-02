@@ -26,7 +26,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/character-builder/ — Character Builder
   The interactive, rule-enforcing character builder — the same rules as [Creating Characters](/creating-characters/), l...
 - https://foresight-rpg.com/1986-02-characters/ — Characters
-  ..
+  Designer's Notes: the character is the most important object in a role-playing setting; like a television program or ...
 - https://foresight-rpg.com/1986-04-combat/ — Combat
   Designer's Notes: the FS combat system is designed, as are many wargames, to use a hex-grid to regulate movement, and...
 - https://foresight-rpg.com/magic-communication/ — Communication
@@ -42,7 +42,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/damage/ — Damage
   Every attack has a **Damage Class (DC)** — how hard it hits before quality, armor, or luck. The scale is numerical an...
 - https://foresight-rpg.com/1986-10-commentary/ — Designer's Commentary
-  APPEnD
+  APPENDIX 2
 - https://foresight-rpg.com/magic-dimension/ — Dimension
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **100m** and last **10min**; the usual prop...
 - https://foresight-rpg.com/magic-divination/ — Divination
@@ -120,7 +120,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/spacecraft/ — Spacecraft
   The drive decides everything downstream — how long a journey takes, whether space combat is dogfighting or gunnery, w...
 - https://foresight-rpg.com/1986-08-spacecraft/ — Spacecraft Design
-  conSTRUC
+  Designer's Notes: Where would a Science Fiction role-playing game be without starships? I almost decided to allow use...
 - https://foresight-rpg.com/1986-07-star-system/ — Star System Generation
   t-. .
 - https://foresight-rpg.com/magic-summon/ — Summon
