@@ -1,0 +1,11 @@
+[
+  { "name": "Breathing Mask", "spd": "0", "vis": "-1", "end": "1h", "ext": "3kg/h", "mass": "4kg", "tl": "5", "cost": "20", "tags": ["standard", "modern"] },
+  { "name": "SCUBA", "spd": "-.75", "vis": "-1", "end": "1h", "ext": "3kg/h", "mass": "8kg", "tl": "5", "cost": "200", "tags": ["standard", "modern"] },
+  { "name": "NBC (TL5)", "spd": "-.5", "vis": "-1", "end": "2h", "ext": "1kg/2h", "mass": "5kg", "tl": "5", "cost": "400", "tags": ["standard", "modern"] },
+  { "name": "NBC (TL6)", "spd": "-.25", "vis": "0", "end": "4h", "ext": "1kg/4h", "mass": "3kg", "tl": "6", "cost": "100", "tags": ["modern", "sf"] },
+  { "name": "NBC (TL7)", "spd": "0", "vis": "0", "end": "6h", "ext": "500g/6h", "mass": "2kg", "tl": "7", "cost": "100", "tags": ["sf"] },
+  { "name": "Thermal Suit", "spd": "-.5", "vis": "0", "end": "8h", "ext": "1kg/4h", "mass": "3kg", "tl": "6", "cost": "100", "tags": ["modern", "sf"] },
+  { "name": "Vacuum Suit (TL6)", "spd": "-.75", "vis": "0", "end": "4h", "ext": "1kg/3h", "mass": "8kg", "tl": "6", "cost": "5000", "tags": ["sf"] },
+  { "name": "Vacuum Suit (TL7)", "spd": "-.5", "vis": "0", "end": "8h", "ext": "1kg/8h", "mass": "5kg", "tl": "7", "cost": "1000", "tags": ["sf"] },
+  { "name": "Vacuum Suit (TL8)", "spd": "-.25", "vis": "0", "end": "12h", "ext": "1kg/12h", "mass": "4kg", "tl": "8", "cost": "1000", "tags": ["sf"] }
+]

@@ -365,6 +365,30 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Cost', prop: 'cost' },
     ],
   },
+  // The original Environment Suits table (p.54) — breathing/NBC/thermal/vacuum
+  // gear. Spd adds to armour speed; Vis is cumulative with armour vision; End is
+  // how long protection lasts; Ext is the mass to extend End by the time shown.
+  '1986-environment-suits.json': {
+    file: '1986-environment-suits.json',
+    noun: 'suit',
+    idPrefix: 'esuit86',
+    columns: [
+      { prop: 'name', name: 'Suit', width: 150 },
+      { prop: 'end', name: 'Endurance', width: 80, align: 'center' },
+      { prop: 'mass', name: 'Mass', width: 60, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 44, align: 'center' },
+      { prop: 'cost', name: 'Cost', width: 60, align: 'center' },
+    ],
+    card: [
+      { label: 'Speed', prop: 'spd' },
+      { label: 'Vision', prop: 'vis' },
+      { label: 'Endurance', prop: 'end' },
+      { label: 'Extension', prop: 'ext' },
+      { label: 'Mass', prop: 'mass' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Cost', prop: 'cost' },
+    ],
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
