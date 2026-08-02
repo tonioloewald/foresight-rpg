@@ -5,19 +5,15 @@
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=111">ForeSight 1986 · p.111 ↗</a></div>
 
-APPENDIX 2
-DESIGNER'S COMMENTARY
+#### [Appendix 2] Designer's Commentary
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=112">ForeSight 1986 · p.112 ↗</a></div>
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=113">ForeSight 1986 · p.113 ↗</a></div>
 
-FORESIGHT
-Designer's Commentary
-
 ForeSight, even though simple in comparison to many other Role-Playing Games, is still very complex for a recreational pastime. In order to help you cope with this complexity, this commentary is designed to function as a set of friendly marginal notes.
 
-What is a role-playing game? I'd like to explain this the way I do to people I meet who ask this question. Think of a [stage] play. Shakespearean will do as well as any. If one were to act well in such a play then one would read the play through carefully, and analyse the actions (or, more probably, lines) of the character one was playing, and from these as a whole, attempt to gauge the character's personality, motivations, and so forth.
+**What is a role-playing game?** I'd like to explain this the way I do to people I meet who ask this question. Think of a [stage] play. Shakespearean will do as well as any. If one were to act well in such a play then one would read the play through carefully, and analyse the actions (or, more probably, lines) of the character one was playing, and from these as a whole, attempt to gauge the character's personality, motivations, and so forth.
 
 We see, for instance, by Hamlet's soliloquys (representing his private thoughts and turmoils), that he is a person deeply concerned by the possible morality of his actions. More importantly, we discover that Hamlet is indecisive, and that he perhaps uses moral issues as an excuse for inaction. So the competent actor divines the personality of the character he/she is to play by examining the thoughts and actions, as set out by the playwright, of that character.
 
@@ -27,15 +23,13 @@ Second: the script has not been worked out in advance. A referee, or Game Master
 
 Of course role-playing is somewhat more subdued than playacting. Players verbally describe their character's actions, and often give only the gists of their character's statements, rather than delivering them verbatim, and capering about on stage; this is perfectly reasonable, since appropriate props are usually unavailable, and most players and GMs are not professional playwrights or actors, but the fun is there, and that's what counts ...
 
-Why play role-playing games? Well mostly because they are fun. Role-playing is social, entertaining, interesting, imaginative, exciting and challenging. No other form of modern entertainment so constantly requires input from its indulgents
-
-FORESIGHT Designer's Commentary 1
+**Why play role-playing games?** Well mostly because they are fun. Role-playing is social, entertaining, interesting, imaginative, exciting and challenging. No other form of modern entertainment so constantly requires input from its indulgents.
 
 Movies, plays, books, and music are passive. You sit and watch (or gyrate and listen, or whatever). Video games, and sport require skill of their participants, but seldom any intellectual input; seldom are they intellectually or emotionally challenging. And none of these, not even computer based adventure games with real time graphics and voice synthesisers, require their players to exercise their imaginations.
 
 I shall defend this statement. Most people will admit that watching a film does not require of the viewer a great deal of imagination. As special effects technology has improved, less and less input from the viewer has been required. Books, some argue, require imagination to appreciate (although I would claim that the millions of readers of Mills & Boon romances hardly exercise their imaginations), but this is passive imagination, where the reader tries to conjure images of whatever it is that the author has thought up. In Role-Playing Games the player must not only see what it is that the GM has constructed, but must also extend his/her vision to include other things that might logically be expected to be found there. Then he/she must decide his/her character's actions on the basis of the imagined setting, and imagine how this setting will respond to any possible courses of action. Simply speaking, there's nothing else like it.
 
-How do I use this book? Good question. Most RPGs you see selling in stores seem to be designed by people who think reading one hundred and fifty pages of legalese is fun, and a thing the purchaser will not only want to do, but want to do several times, to the verge of memorisation. Having familiarised myself all too thoroughly with three successive game systems, I cannot stomach reading RPG rules. Almost invariably they are written by somebody striving for and not achieving clarity, resulting in tortuous sentences, internal contradictions, and so forth, and so on. So, having committed these crimes, I intend to make this a set of rules which should not be read through, nor memorised.
+**How do I use this book?** Good question. Most RPGs you see selling in stores seem to be designed by people who think reading one hundred and fifty pages of legalese is fun, and a thing the purchaser will not only want to do, but want to do several times, to the verge of memorisation. Having familiarised myself all too thoroughly with three successive game systems, I cannot stomach reading RPG rules. Almost invariably they are written by somebody striving for and not achieving clarity, resulting in tortuous sentences, internal contradictions, and so forth, and so on. So, having committed these crimes, I intend to make this a set of rules which should not be read through, nor memorised.
 
 The most important parts of these rules are sections [2.0] Characters and [3.0] Resolution. These should be read carefully, and, in the case of [2.0] used a few times. Once you have generated a few characters this section [2.1] of rules will become close to second nature, and (apart from relevant charts and tables) can be ignored. The other sections should be reasonably familiar to the GM, but memorisation is unnecessary.
 
@@ -43,13 +37,13 @@ The most important parts of these rules are sections [2.0] Characters and [3.0] 
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=114">ForeSight 1986 · p.114 ↗</a></div>
 
-2 FORESIGHT Designer's Commentary
-
 Designer's decision probably received longer thought, the GM's decision was tailored to the exact situation.
 
 If you like analogies, [3.0] is the body, ready to go; the other rules are a bunch of things the body has been told to do if certain situations turn up; and the GM is the body's mind, making spot decisions on actual problems, based on common sense, faced as the body goes about its business. The mind can heed earlier advice, or just use his/her common sense, but the body is there for keeps.
 
-A comment on attributes ... Why those attributes? Well, I looked at all my favorite RPGs, to see which attributes ought to be in an RPG, and then threw out those which were tautologous. No-one generally argues with attributes like Strength and Dexterity being in a game, but attributes like Agility, Intelligence, Empathy, and Appearance are more controversial.
+**A comment on attributes ...**
+
+Why those attributes? Well, I looked at all my favorite RPGs, to see which attributes ought to be in an RPG, and then threw out those which were tautologous. No-one generally argues with attributes like Strength and Dexterity being in a game, but attributes like Agility, Intelligence, Empathy, and Appearance are more controversial.
 
 Dexterity is distinct from Agility in many ways, yet many designers shy away from distinguishing between them. Others put two different attributes, called Dexterity and Agility (or some synonyms) in, but aren't sure how they're different. I can be fairly terse. Rudolf Nureyev, Nadia Comaneci, and Cats (with paws) have a lot of Agility, but not (necessarily) Dexterity. Agility is balance, and coordination. IC assemblers, watchmakers, marksmen, and stage magicians have a lot of Dexterity, but not (necessarily) Agility. Dexterity is steady hands, and deft fingers. Obviously a character could be envisaged by a player who was a great shot, but none too quick on his/her feet, and the game system should allow this.
 
@@ -61,7 +55,9 @@ Appearance is a much abused attribute. A person's appearance is far more tangibl
 
 Intelligence is another controversial attribute. You see it's hard to play a character who is dumber than yourself. Worse, it's impossible to play a character who's smarter than you. Let's think of intelligence as pure academic merit then, not as a measure of how canny, clever, or cunning a character is. As a final thought, if you're playing a dumb character, and you have a bright idea, think twice before using it anyway, or discarding it, and consider passing it on to someone playing a genius.
 
-Knowledge versus Skills Rather than be technical, I'd like to give examples of why this division of capabilities works as it does. This division is a result of my desire to reduce the game mechanics to manageable levels, rather than because it's the way I thought things were. But I think that this division of capabilities is a good one, now that I've made it (I admit that this idea was present, germinally, in James Bond 007 but they never got around to fully formalising it; perhaps because fields play so little part in that system).
+**Knowledge versus Skills**
+
+Rather than be technical, I'd like to give examples of why this division of capabilities works as it does. This division is a result of my desire to reduce the game mechanics to manageable levels, rather than because it's the way I thought things were. But I think that this division of capabilities is a good one, now that I've made it (I admit that this idea was present, germinally, in James Bond 007 but they never got around to fully formalising it; perhaps because fields play so little part in that system).
 
 Think of a skill that you practise and practise, and the more you do it, the better you get at it. A good analogy is a video game. Each time you play it, on the average, you score a little higher. You start by learning the fundamentals (which button does what, how the controls work) and that gives you level one, but through gradual familiarisation with the game, increasing memory of the sequences of events, and so forth, you master the game. Some people never get past a certain point, while others get too good for the game. Each eventually finds a limit to his/her abilities, whether it is Dexterity, or Endurance.
 
@@ -71,21 +67,23 @@ Now imagine learning a foreign language. You must learn and comprehend the synta
 
 This all leads on to ...
 
-Familiarity So someone is bound to write into Murphy's rules saying that in ForeSight car mechanics make great brain surgeons. Look closer. As a car mechanic, you learnt to hold tools steady, use your hands. You figured out what was wrong with a car by listening to the engine, looking at the exhaust gas, checking the oil. A doctor uses the same physical and mental disciplines as does a car mechanic, or an electrical engineer - but different knowledge. Fine, but cutting a cable with one's arm around a corner in a service tube, with an assistant pointing a flashlight at it, and a multimeter balanced against the wall isn't the same as reaching under a patient's heart to adjust a replacement valve, while observing proceedings on a computer image of the patient's radiation tagged blood supply. It isn't totally different. Having learnt brain surgery, the car mechanic will not (usually) be as good a brain surgeon as he/she was a car mechanic, only time, practise, and experience will do these things.
+**Familiarity**
+
+So someone is bound to write into Murphy's rules saying that in ForeSight car mechanics make great brain surgeons. Look closer. As a car mechanic, you learnt to hold tools steady, use your hands. You figured out what was wrong with a car by listening to the engine, looking at the exhaust gas, checking the oil. A doctor uses the same physical and mental disciplines as does a car mechanic, or an electrical engineer - but different knowledge. Fine, but cutting a cable with one's arm around a corner in a service tube, with an assistant pointing a flashlight at it, and a multimeter balanced against the wall isn't the same as reaching under a patient's heart to adjust a replacement valve, while observing proceedings on a computer image of the patient's radiation tagged blood supply. It isn't totally different. Having learnt brain surgery, the car mechanic will not (usually) be as good a brain surgeon as he/she was a car mechanic, only time, practise, and experience will do these things.
 
 Gravity, Temperature, and Environment familiarities may well prove somewhat controversial. Temperature familiarity may well be more a temporary physiological adjustment, than an acquired familiarity, but it can be looked at as a skill instead, if you feel such is the case. In spite of the fact that most SFRPGs ignore gravity familiarity, as an acquired ability, rather than as a transitional adjustment, I have not done so. It is obvious that skin-divers do not have to adjust to submarine weightlessness after a period of non-diving. I rest my case.
 
-Examples of Gravity, Temperature, and Environment familiarities in action ...
+**Examples of Gravity, Temperature, and Environment familiarities in action ...**
 
-A character with a LT (light) gravity score of 2, and speed of 1+G, would have speed 3 on Earth, which has LT gravity (1 g is right at the top end of LT gravity
+A character with a LT (light) gravity score of 2, and speed of 1+G, would have speed 3 on Earth, which has LT gravity (1 g is right at the top end of LT gravity).
 
 A character with a score of 3 in urban would have BEF (base ease factor) of 6 in Scan when in heavily built up areas. If he/she had 1 in suburban, then his/her BEF would drop to 4 in residential areas, parks, and zoos (examples of suburban environs).
 
 Likewise a character with 1 in CD temperatures would have a BEF3 in Fatigue if he/she engaged in Antarctic exploration.
 
-Inclinations What a character would want to do in a situation is at least as important as what he/she is able to do in it. Hamlet could have killed Claudius, quietly, and without fuss, but chose not to do so. If he had, there would have been no interest in his story. Claudius would certainly have been no match for him (Hamlet defeated one of the best fencers in France, after diligent practise). Fictional characters almost always act under some kind of moral constraint, and heroes always do - that's what makes them heroes.
+**Inclinations**
 
-FORESIGHT Designer's Commentary 3
+What a character would want to do in a situation is at least as important as what he/she is able to do in it. Hamlet could have killed Claudius, quietly, and without fuss, but chose not to do so. If he had, there would have been no interest in his story. Claudius would certainly have been no match for him (Hamlet defeated one of the best fencers in France, after diligent practise). Fictional characters almost always act under some kind of moral constraint, and heroes always do - that's what makes them heroes.
 
 Some inclinations provide obvious stimuli for adventurers: a queasy character will avoid dealing with gore; aggressive characters will pick (intellectual or physical) fights; assertive characters will rebel against intimidation, or the infringement of their rights; idealists will pursue their ideals; philanthropists will remove knights from distress, and so forth. Other inclinations provide subtler spurs: involved people will involve themselves in other people's problems (perhaps against their wishes); pious people will be affronted by impiety; self righteous people will be affronted by ridicule; self-doubting people will wish to test themselves.
 
@@ -93,30 +91,37 @@ Characters will seek those things in which they take an interest (eg. money); ch
 
 Finally (back-pedaling a bit) I'd like to say something about...
 
-Tech Levels Sometimes you'll see references to fractional tech levels, eg. TL8.5. Just think of this as turning up somewhere between the advents of TL8 and TL9, and you've got the picture. Later on things get more complex, and we have "Hard" and "Soft" tech levels. Hard technology deals with metals, physics, chemistry, and that kind of stuff. Examples of hard technology: planes, cars, phones, robots, computers, TV, lasers. Soft technology involves biology, biochemistry, genetics, and that sort of stuff. Examples of soft technology: vaccinations, insulin, test tube babies, and wheat hybrids. In the middle we get plastics, surgical technology, and so on. As a guide, anything that can be made with hard technology, can probably be produced two soft tech levels higher, at roughly the same cost, beginning at soft TL7. The reverse does not hold: most of the achievements of soft technology cannot be reproduced with nuts, bolts, and silicon.
+**Tech Levels**
 
-Backgrounds Let me be clear on personal backgrounds: a character with wealthy transient background need not be a wealthy transient (some of my play-testers weren't clear on this). The fact that he/she gets more money for having the same abilities as a poor transient reflects the tendency for children of the wealthy to get upmarket jobs, but really is just a system to generate a character's starting funds. A more detailed and less abstract system is in the works for ForeScene.
+Sometimes you'll see references to fractional tech levels, eg. TL8.5. Just think of this as turning up somewhere between the advents of TL8 and TL9, and you've got the picture. Later on things get more complex, and we have "Hard" and "Soft" tech levels. Hard technology deals with metals, physics, chemistry, and that kind of stuff. Examples of hard technology: planes, cars, phones, robots, computers, TV, lasers. Soft technology involves biology, biochemistry, genetics, and that sort of stuff. Examples of soft technology: vaccinations, insulin, test tube babies, and wheat hybrids. In the middle we get plastics, surgical technology, and so on. As a guide, anything that can be made with hard technology, can probably be produced two soft tech levels higher, at roughly the same cost, beginning at soft TL7. The reverse does not hold: most of the achievements of soft technology cannot be reproduced with nuts, bolts, and silicon.
+
+**Backgrounds**
+
+Let me be clear on personal backgrounds: a character with wealthy transient background need not be a wealthy transient (some of my play-testers weren't clear on this). The fact that he/she gets more money for having the same abilities as a poor transient reflects the tendency for children of the wealthy to get upmarket jobs, but really is just a system to generate a character's starting funds. A more detailed and less abstract system is in the works for ForeScene.
 
 Aside: this leads me to some comments about design (or is it marketing?) approaches to role-playing games. A lot of role-playing games seem to blur the line between reality and game-reality. Eg. they may refer to "the players" when they mean "the players' characters"; they may explain the rules by pretending that the reader is a new recruit, and the rule-book either a training manual, or the transcript of an
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=116">ForeSight 1986 · p.116 ↗</a></div>
 
-4 FORESIGHT Designer's Commentary
-
 instructor's speeches. Many games fail to delineate the rules from the background material, and you will find these intermingled in the text. While these things occur in FS, an effort has been made to avoid them. This is not because I am opposed to detailed background material (this game was written to support ForeScene, not the other way around), but because I feel that these distinctions should be made. Okay?
 
-Character Example
-The Life and Times of G7 (alias Srikkanth)
+**Character Example**
+
+*The Life and Times of G7 (alias Srikkanth)*
 
 It's very fashionable today to have a little example constantly following you around the rulebook. It all started with Rurik the Restless in the old RuneQuest rules, I guess, and since then numerous imitations have followed. The thing is, that these examples are all pretty unrealistic. Most RPGs, for example, have random generation of attributes (ie. the player makes the best of what is dished up, via dice, to him/her). Who the hell names a character before determining his/her attributes? Most game designers, it seems. Let's generate nameless, then, with the tentative title "G7" until we can think of a fitting name for the beggar. Unlike the majority of such examples, G7 is an experienced character, 38 years old (look, I've already broken the rules, by determining the character's age too soon. That's the way it goes).
 
 [1] Social Background first. I roll 23: Wealthy Transient. Ethnic background 14: Indeterminate. This is difficult, I tend to generate Caucasoid physical characteristics reflexively, and so decide to resist this tendency. Brown skin and wavy brown hair, copper coloured eyes (like Marianne O'Hara's in Worlds ). The character will be male, though, so I decide on a moderate height, and slender build (5' 10", and slender). I roll on abilities and limitations, and get a 46: Natural Aptitude. Hmm. I decide that this character is going to be a great scholar (well, talented one), and the aptitude is in Implement.
 
-A note on Abilities & Limitations Since most eyesight problems, congenital defects, and phobias, are either foreseeably, or conceivably curable and/or avoidable, I have restricted this table to [i] phobias which may be culturally implanted, and hence reflect survival instincts (eg. a native of high gravity worlds would do well to have a fear of heights), social sensibilities (and hence be regarded as a virtue; eg. eating in public might be regarded as disgusting beyond description), or the result of some trauma; [ii] native talents, which would be desired and fostered, rather than cured (these may be acquired, eg. Kirth Gersen's, or Japanese Ninjas' extranormal abilities could be regarded as the results of extensive early training; while Darkovan nobles', and those of the Bach and Strauss families could be regarded as, at least partly, inherited; Nadia Comaneci's, and Mozart's abilities can be regarded as the products of both genetic potential and early training); and [iii] chronic ailments (poor eyesight is not, for example, the result of easily cured myopia, astigmatism, or whatever, but of more serious neural problems, only partially curable via TL7-8 technology).
+**A note on Abilities & Limitations**
+
+Since most eyesight problems, congenital defects, and phobias, are either foreseeably, or conceivably curable and/or avoidable, I have restricted this table to [i] phobias which may be culturally implanted, and hence reflect survival instincts (eg. a native of high gravity worlds would do well to have a fear of heights), social sensibilities (and hence be regarded as a virtue; eg. eating in public might be regarded as disgusting beyond description), or the result of some trauma; [ii] native talents, which would be desired and fostered, rather than cured (these may be acquired, eg. Kirth Gersen's, or Japanese Ninjas' extranormal abilities could be regarded as the results of extensive early training; while Darkovan nobles', and those of the Bach and Strauss families could be regarded as, at least partly, inherited; Nadia Comaneci's, and Mozart's abilities can be regarded as the products of both genetic potential and early training); and [iii] chronic ailments (poor eyesight is not, for example, the result of easily cured myopia, astigmatism, or whatever, but of more serious neural problems, only partially curable via TL7-8 technology).
 
 [2] Time to generate the attributes. I prefer the semi-random generation method, because I tend to fall into ruts when generating characters in a completely non-random framework, but I like a fairly high degree of control over generation anyway. The rolls are:
 
-ST9           EN5            DX7           AG5 IN 8 (+4)     PC 10 (+2)     WP 8 (+3)     EM 7 (+5) AP 7 (+1)
+| ST | EN | DX | AG | IN | PC | WP | EM | AP |
+|----|----|----|----|----|--------|---------|--------|--------|--------|
+| 9 | 5 | 7 | 5 | 8 (+4) | 10 (+2) | 8 (+3) | 7 (+5) | 7 (+1) |
 
 I add the 15 points as shown. So: not only a great scholar, but a determined and sensitive one. Not a conscienceless designer of better bombs.
 
@@ -124,7 +129,7 @@ I add the 15 points as shown. So: not only a great scholar, but a determined and
 
 [4] G7 receives 20GPs for being a wealthy transient, and 435 more for being 38, for a total of 455.
 
-Why no rules for aging? Well, it won't concern many PCs (most SF settings at the very least assume a larger life expectancy, and a long productive life, if not near immortality. Most PCs retire before going senile), and aged NPCs can be designed by the GM at whim.
+**Why no rules for aging?** Well, it won't concern many PCs (most SF settings at the very least assume a larger life expectancy, and a long productive life, if not near immortality. Most PCs retire before going senile), and aged NPCs can be designed by the GM at whim.
 
 [5] G7 will be most familiar with LT gravity, and NL temperatures. Most inhabited planets are like this, so statistically speaking, most PCs should choose these. His/her home environment will be SU (suburban), ie. University Campuses, and research facilities, both are fairly suburban environments. G7 has threes in LT, NL, and SU; ones in NW, HY, CO, HO, FL-MV, and UR. G7 takes Charisma and Personal Flyer as free skills. I think a guy like that would be fairly sociable, but he'd like to get away from everything once in a while, to think.
 
@@ -134,7 +139,25 @@ Why no rules for aging? Well, it won't concern many PCs (most SF settings at the
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=117">ForeSight 1986 · p.117 ↗</a></div>
 
-Skills          Level    PCS BEF Fatigue           10      18      T+2 Pain Resistance   10      18      T+2 Initiative        10      24      E+3 Search            10      24      E+3 Scan              10      22      E+3 Empathy           10      22       5 Dancing           6       15      G+2 Aircraft          11      21      G+2 Groundcraft       6       16      E+4 Implement         26      34       5* Recall            26      34       5 Repair            18      30       6 Charisma          11      21      T+2 Handguns          12      22       5 Personal Flyer    11      20      G+2 (* Owing to his Natural Aptitude, allocated to Implement)
+| Skills | Level | PCS | BEF |
+|---|---|---|---|
+| Fatigue | 10 | 18 | T+2 |
+| Pain Resistance | 10 | 18 | T+2 |
+| Initiative | 10 | 24 | E+3 |
+| Search | 10 | 24 | E+3 |
+| Scan | 10 | 22 | E+3 |
+| Empathy | 10 | 22 | 5 |
+| Dancing | 6 | 15 | G+2 |
+| Aircraft | 11 | 21 | G+2 |
+| Groundcraft | 6 | 16 | E+4 |
+| Implement | 26 | 34 | 5* |
+| Recall | 26 | 34 | 5 |
+| Repair | 18 | 30 | 6 |
+| Charisma | 11 | 21 | T+2 |
+| Handguns | 12 | 22 | 5 |
+| Personal Flyer | 11 | 20 | G+2 |
+
+*\* Owing to his Natural Aptitude, allocated to Implement.*
 
 This leaves G7 with 30 GPs. 20 go to purchasing an additional year of education, while ten can be spent raising five environment familiarities by one, or two temperature/gravity slots by one. Choosing the former, I raise G7's UR by two (to three) and FL-LV, FL-HV, and UN-MV to one.
 
@@ -142,21 +165,27 @@ This leaves G7 with 30 GPs. 20 go to purchasing an additional year of education,
 
 [8] I now decide G7's name will be Srikkanth (the surname of an Indian opening batsman; I like the sound of his name). Based on this, I decide his inclinations:
 
-Aggressive 13                 Assertive 11 Brave 11                      Carefree 14 Cheerful 14                   Extrovert 10 Honourable 12                 Idealistic 11 Involved 13                   Philanthropic 12 Pious 9                       Queasy 7 Reliable 13                   Self Righteous 10 Straight 15
+| Inclination | Score | Inclination | Score |
+|---|---|---|---|
+| Aggressive | 13 | Assertive | 11 |
+| Brave | 11 | Carefree | 14 |
+| Cheerful | 14 | Extrovert | 10 |
+| Honourable | 12 | Idealistic | 11 |
+| Involved | 13 | Philanthropic | 12 |
+| Pious | 9 | Queasy | 7 |
+| Reliable | 13 | Self Righteous | 10 |
+| Straight | 15 |  |  |
 
 His interests, and so forth, should gel after he's been played a bit. (A character really can't, and shouldn't be generated, top to toe, before even being played.)
 
-[9] His speed is 17/5 - 5 + G .. -1.6, rounded up gives 1+G (mediocre). Threshold fatigue is 16/6, rounded off, gives 3 (average). UCDC reads off the table as 2
+[9] His speed is 17/5 - 5 + G .. -1.6, rounded up gives 1+G (mediocre). Threshold fatigue is 16/6, rounded off, gives 3 (average). UCDC reads off the table as 2.
 
 Carrying capacity: Srikkanth is unladen by up to 8kg burdened but mobile with 16-32 kg, and laden in between,
 
-[10] Initial wealth: the formula on the Social Background chart is years of education received (2
+[10] Initial wealth: the formula on the Social Background chart is years of education received (2 in this case, but fewer had he failed something), multiplied by age minus fourteen (24) and the SVU figure for wealthy transient (1 k or 1000), for a total of 624kSVU.
 
-FORESIGHT Designer's Commentary 5
+**Using Skills**
 
-in this case, but fewer had he failed something), multiplied by age minus fourteen (24) and the SVU figure for wealthy transient (1 k or 1000), for a total of 624kSVU.
-
-Using Skills
 (You probably will need to read the Resolution rules [3.0] to understand this section. As a rough guide, should you not wish to do so, whenever a task is attempted the result will be a "quality rating" (QR) reflecting the degree of success attained. QR1 is a brilliant success, while QR4 is a marginal success; QR2 and QR3 fall in between. QR7 is a failure, while QR10 is a disastrous failure. An "ease factor" (EF) is a quantification of the ease with which a task may be performed. EF5 is average difficulty, while EF10 is extremely easy, and EF1 (smaller EFs are 0.5, 0.25, and 0) is not easy at all. EFs may be modified for circumstances, or set equal to formulae incorporating the QRs of previously performed tasks.)
 
 ForeSight works on what I call a "push-pull" system. Most RPGs use "push" systems. With a push system you put quantitative information (ie. information expressed in terms of game mechanics, or translated by a player or the GM into game mechanics) into the game system, and get qualitative information out ("succeed", "fail", "hit", "miss", etc.). With a push-pull system you get both qualitative and quantitative results, so that a result can either stand, or it can be altered (easily) by further applications of the game mechanics.
@@ -167,19 +196,15 @@ Some of the skills' purposes are less than obvious, even with the terse notes gi
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=118">ForeSight 1986 · p.118 ↗</a></div>
 
-6 FORESIGHT Designer's Commentary
-
 is established, and the matter to be presented is obvious. Musical Performance is used to execute, with a familiar instrument, a piece which has already been written. Composition involves forming the idea which will be executed. Eg. a painter or photographer arranges his/her scene, judges the lighting, and so forth; a journalist writing a humorous column for a newspaper wants to relate an incident which befell him/her recently, and uses composition to decide how to present the story. It could appear as a piece of verse, or merely doggerel (using composition without any field), or as a short story, or as a piece of journalese; perhaps the GM might add a "Humour" field ...
 
 Acrobatics can be used to perform bizarre manoeuvres in combat. In general if a character wants to (for example) leap through a window, knock a syringe out of someone's hand, and then duck behind a settee, the GM should (a) decide if the manoeuvre is possible in the space of about three seconds, (b) assign it an EF modifier for difficulty. Immediately after declaring his/her intention to perform the action, the character then makes an Acrobatics roll (you don't have acrobatics? How sad) at the stipulated modifier and the result is the number of action points the PC must spend to complete the action (QR7 and 10 indicate failure, also, and at the GM's discretion may result in the PC ending up prone, stunned, or whatever). If the PC's declaration becomes nonsense in the light of the roll, then the action fails, and the GM can decide the results.
 
 Disguise has nothing to do with "blending in" with crowds, by wearing a local hat and cloak. That skill is part of Stealth. Disguise is the ability to convincingly play a role, which may be a specific real or fictitious character. Eg. a spy, with a contrived, fraudulent identity, uses Disguise skill to convincingly play the part of a fictitious "cover" identity. A character quickly donning a lampshade in a living room, or slipping on a toga at an orgy, is not playing a role, but just trying to escape attention; a stealth related task. Obviously, then, Empathy is used to see through a disguise, although someone who was questioning the disguised party might use Diagnose/Interrogation, or Implement/Psychology, to see through a suspected disguise. Remember that Empathy skill fails on a QR4.
 
-Sporting Skills is an example of a generic skill. Eg. skiing is such a skill, and so can be treated exactly like Sporting Skills (with the same Exp, BEF, etc.), but a character with high skiing skill would not be a good basketball player. (Basketball would actually be a collection of skills: throwing, running, and so forth, are already covered elsewhere. Dribbling would qualify as a skill, identical to Sporting Skills.) Tennis, on the other hand, might comprise Running, Service, and Groundstrokes. The formula of Service could be changed to (ST+DX)/2 by an experienced GM. A game could be decided by adding the QR of the server's Service, to that of his/her Running, and his/her Groundstrokes, and comparing this to twice the receiver's Groundstroke QR plus his/her Running QR, plus one (unless he/she allocated a Fatigue point to that game, say, for extra effort). The lower total, of course, wins the game. Other examples of sporting
+Sporting Skills is an example of a generic skill. Eg. skiing is such a skill, and so can be treated exactly like Sporting Skills (with the same Exp, BEF, etc.), but a character with high skiing skill would not be a good basketball player. (Basketball would actually be a collection of skills: throwing, running, and so forth, are already covered elsewhere. Dribbling would qualify as a skill, identical to Sporting Skills.) Tennis, on the other hand, might comprise Running, Service, and Groundstrokes. The formula of Service could be changed to (ST+DX)/2 by an experienced GM. A game could be decided by adding the QR of the server's Service, to that of his/her Running, and his/her Groundstrokes, and comparing this to twice the receiver's Groundstroke QR plus his/her Running QR, plus one (unless he/she allocated a Fatigue point to that game, say, for extra effort). The lower total, of course, wins the game. Other examples of sporting skills include Skating, Catching, and Surfing.
 
-skills include Skating, Catching, and Surfing.
-
-Fields of Knowledge
+**Fields of Knowledge**
 
 A lot of fields of knowledge do not have obvious applications for adventurers, so I'll go through a few examples here.
 
@@ -227,8 +252,6 @@ Interrogation can, in conjunction with Diagnose, be used as Implement/Psychology
 
 Locksmithing is used in conjunction with Diagnose to figure mechanical locks out, and with Repair to pick or otherwise open them. The EFs to recognise and open locks should be modified by adding the TL of the equipment the opener is using and subtracting that of the lock. Mechanical locks and lock picking equipment do not improve after TL6.
 
-FORESIGHT Designer's Commentary 7
-
 Metals Forming is used to fabricate things out of metal, but not refine metal itself. Similarly, plastics forming is used to fabricate objects out of lumps of plastic, or possibly premixed chemicals, but not to make plastics from scratch.
 
 Power Systems entails a working knowledge of solar and fusion generators, high voltage power transmission, and the like.
@@ -237,31 +260,39 @@ Ballet not only requires the ballet field, but uses the lower of the character's
 
 Surveillance includes a working knowledge of remote drones, bugs, tracers, forward and side trailing techniques, and so forth. A character using surveillance simply trailing another character should gain some positive EF modifier (GM's discretion).
 
-Fields of Familiarity Note that apart from not being improvable by good die rolls, NFMs for fields do work exactly as stated under [2.4]. (So a brain surgeon who learns mechanical engineering will incur an NFM determined by the QR of the IN roll to acquire the field, and hence will probably not be as good an engineer as he/she is a brain surgeon; at least for a while.)
+**Fields of Familiarity**
 
-Experience (vs. Generation) You will probably notice that the experience rules favour a character who diversifies, while the generation rules favour a character who specialises. Yes, this is deliberate. So there.
+Note that apart from not being improvable by good die rolls, NFMs for fields do work exactly as stated under [2.4]. (So a brain surgeon who learns mechanical engineering will incur an NFM determined by the QR of the IN roll to acquire the field, and hence will probably not be as good an engineer as he/she is a brain surgeon; at least for a while.)
+
+**Experience (vs. Generation)**
+
+You will probably notice that the experience rules favour a character who diversifies, while the generation rules favour a character who specialises. Yes, this is deliberate. So there.
 
 Since I favour having PCs with considerably varying gross capabilities; favouring the characters who specialise in generation means that even inexperienced characters will probably have not inconsiderable competence in some area where no-one else (in a PC party) does.
 
-Fatigue When I was little I had a couple of books on polar exploration. One was a general overview of polar exploration over the last eighty years, while the other documented Shackleton's ill fated trans-polar expedition. So I have always favoured having role-playing rules cover the horrors of the environment. FS does this, I feel, more than any other RPG, even though these rules can almost be ignored by a well equipped party of PCs. DragonQuest had the best set of fatigue rules in a RPG when it came out, but even it was more concerned with encumbrance, than the vagaries of climate, so that their Alia Akabar module had to have special rules for deserts (regain fatigue from a "hot meal" in the desert?).
+**Fatigue**
+
+When I was little I had a couple of books on polar exploration. One was a general overview of polar exploration over the last eighty years, while the other documented Shackleton's ill fated trans-polar expedition. So I have always favoured having role-playing rules cover the horrors of the environment. FS does this, I feel, more than any other RPG, even though these rules can almost be ignored by a well equipped party of PCs. DragonQuest had the best set of fatigue rules in a RPG when it came out, but even it was more concerned with encumbrance, than the vagaries of climate, so that their Alia Akabar module had to have special rules for deserts (regain fatigue from a "hot meal" in the desert?).
 
 Notice that Survival is dependent on a character's mental attributes. Fatigue already includes Endurance, so Survival, which simply helps a character nurse his/her endurance, need have nothing to do with it. Which is fair enough since Survival involves
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=120">ForeSight 1986 · p.120 ↗</a></div>
 
-8 FORESIGHT Designer's Commentary
-
 knowing the right techniques, and having guts and determination.
 
 Unlike most RPGs, with the notable exception of RuneQuest 3, ForeSight doesn't treat Fatigue as something you get back by sleep, and have decline gradually over a whole day. Instead, fatigue goes up and down like a yo-yo, although nothing beats an eight hour snore. I think the FS fatigue rules are pretty decent. Overall fatigue represents the total glucose and ATP levels, while the one hour recovery rule represents ATP regeneration, and the five minute rule represents respiration (getting the carbon dioxide out, and the oxygen in; getting one's "wind" back). The negative modifiers for not sleeping and eating for extended periods reflects gradual gross fatigue and glycogen depletion.
 
-Psionics I can't pretend to be too keen on psionics, and will look well upon any enthusiast who provides me with an improved psionics system (preferably loosely based on the one provided). I think that the psionics in Marion Zimmer Bradley's books, a sort of alternate technology, is the best for a RPG.
+**Psionics**
+
+I can't pretend to be too keen on psionics, and will look well upon any enthusiast who provides me with an improved psionics system (preferably loosely based on the one provided). I think that the psionics in Marion Zimmer Bradley's books, a sort of alternate technology, is the best for a RPG.
 
 Notice that Sense Emotion is a souped up Empathy skill, and not a replacement for Implement/Psychology. The character with Sense Emotion understands other people's emotions whether he/she likes it or not. But, if the skill is used deliberately, to detect lies, for example, then, and only then, does it cost Fatigue points to operate.
 
 Remote Perception can't be used to see inside a safe, for example, since it would be dark inside. You could smell the inside of a safe, of course. The GM can decide whether or not the sense of touch may be transferred.
 
-NPCs NPCs are the "people" who get played by the cast of thousands. Also, since role-playing games (usually) work best when the players are not entirely at odds, NPCs are the antagonists: the murderous villains, inscrutable aliens, finicky paramours, and whatnot, who populate fiction. NPCs are "played" by the Game Master, who is supposed to treat each and every one of them the way that the players treat their characters; but since they are somewhat more transient than player(s') characters, or PCs, GMs often treat them somewhat more casually. Indeed, the brevity of an NPC's appearance should determine the care taken with his/her treatment, unless his/her role in the proceedings is for some reason of an importance out of proportion with the length of his/her stay.
+**NPCs**
+
+NPCs are the "people" who get played by the cast of thousands. Also, since role-playing games (usually) work best when the players are not entirely at odds, NPCs are the antagonists: the murderous villains, inscrutable aliens, finicky paramours, and whatnot, who populate fiction. NPCs are "played" by the Game Master, who is supposed to treat each and every one of them the way that the players treat their characters; but since they are somewhat more transient than player(s') characters, or PCs, GMs often treat them somewhat more casually. Indeed, the brevity of an NPC's appearance should determine the care taken with his/her treatment, unless his/her role in the proceedings is for some reason of an importance out of proportion with the length of his/her stay.
 
 Obviously, Role-Playing should be fun for everyone concerned, not just the players, and oodles of work fleshing out a cast of thousands is only fun to a very few people. The GM should "wing it" with most NPCs, and just play them as the mood takes him or her. If an NPC ought to have a skill which you forgot to give him/her, then give it to him/her, who cares?
 
@@ -269,9 +300,13 @@ Remember a decision made on the spur of the moment is just as valid as one made,
 
 Aside: actually, NPCs should really be termed GMCs (or Game Master Characters) since they are played by the GM. The terms NPCs should be reserved for "friendly" (to the PCs) characters, not belonging to the players (eg. characters who befriend the PCs and accompany them on their adventures, PCs' spouses and other relations, colleagues, and so forth). Of course all this will just confuse the issue, so we'll ignore it.
 
-Merits, Demerits and Notoriety Essentially, these are designed to give PCs something solid to work towards or away from other than money, power, or violent infamy. In essence another game mechanic to assist the transition away from para-military and alignment based role-playing.
+**Merits, Demerits and Notoriety**
 
-Resolution Bearing in mind the rantings and ravings pertaining to skills these rules are designed not only to show you how the resolution system works, but methods of implementing it to your own taste ...
+Essentially, these are designed to give PCs something solid to work towards or away from other than money, power, or violent infamy. In essence another game mechanic to assist the transition away from para-military and alignment based role-playing.
+
+**Resolution**
+
+Bearing in mind the rantings and ravings pertaining to skills these rules are designed not only to show you how the resolution system works, but methods of implementing it to your own taste ...
 
 The QRs, for example, are rated according to yield, time, and so forth. These figures are to be used only when they are pertinent. Eg. a character is attempting to pick a lock before a security guard's normal routine brings him/her by the location of the lock. Obviously time is of the essence. The character would normally expect to perform the task with a little time to spare, but a QR4, taking twice the normal time, will not be good enough, and the character will either be confronted with the guard, or have to break off the attempt. The GM may perform the roll and conceal the result from the player. Since failures take the same time that QR4s do, the PC may be risking his/her neck for a fouled up lockpicking attempt. Obviously, again, yield is not pertinent in this case. One cannot "successfully" pick a lock, and yet have it only 75% open. So yield is ignored in this case.
 
@@ -279,40 +314,38 @@ Even when a situation is explicitly outlined in these rules, the GM is perfectly
 
 On the other hand, this set of rules was designed to be complete, and [at least in some cases] exhaustive. If you buy a set of rules, only to ignore or constantly modify them, then you're wasting your money. So by all means apply them liberally and accurately if you wish.
 
-Also see the notes pertaining to SKILLS
-and FIELDS OF KNOWLEDGE in [2.0].
+Also see the notes pertaining to SKILLS and FIELDS OF KNOWLEDGE in [2.0].
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=121">ForeSight 1986 · p.121 ↗</a></div>
 
-Character Interaction When should an NPC be "attracted" to a PC?
+**Character Interaction**
+
+**When should an NPC be "attracted" to a PC?**
 
 If the PC is compatible with the NPC (in the NPC's opinion) and the GM rolls under ([the PC's) AP-8)x10 on D100. If the NPC is a professional type, and makes an EF-QR (of that PC's Charisma roll*) WP roll then he/she will be able to suppress his/her feelings, so long as business is involved. (The PC will have to make a Charisma roll if he/she has not already.)
 
-When should an NPC be "friendly" to a PC?
+**When should an NPC be "friendly" to a PC?**
 
 A more difficult question. Relatives, and colleagues will usually start out friendly, and alter their demeanors as time goes on. Some people have sunny dispositions, and will just be friendly to most people.
 
-When should an NPC be "neutral" towards a PC?
+**When should an NPC be "neutral" towards a PC?**
 
 Most NPCs will be neutral towards PCs. If you can't be bothered rationalising an NPC's demeanor, make it neutral. Even an apparently friendly and helpful sales assistant, steward, or receptionist will actually be neutral, the friendliness being a professional mask.
 
-When should an NPC be "unfriendly" to a PC?
+**When should an NPC be "unfriendly" to a PC?**
 
 A PC will motivate unfriendliness in NPCs by acting in a manner discordant with what they regard as norms of behaviour; by stating, or making it obvious that his/her beliefs are contrary to the NPC's own (some NPCs would become friendly ... ); by offending the NPC in some manner (or, even more likely perhaps offending one of the NPC's friends. People often are more likely to become offended on a friend's behalf than on their own).
 
-When should an NPC be "hostile" to a PC?
+**When should an NPC be "hostile" to a PC?**
 
 Some of the things listed as making NPCs unfriendly are prone to make less temperate (or drunk) ones downright hostile. NPCs are more likely to become hostile when one of their implicit beliefs is challenged (eg. someone in an American bar says that Communism is Nice), or one of his/her social mores is contravened (eg. someone makes an open pass at his/her spouse), or if his/her favourite football team is ridiculed, or if his/her status is challenged (deliberately or accidentally).
 
 Some NPCs may be hostile for some professional reason (personally they may have nothing against the PC). Eg. a person paid several thousand dollars to reduce a PC to chowder can't afford to think of that character as a person, and hence may be treated as hostile to that PC.
 
-Again, an NPC is not going to do a favour for a PC which is unreasonable. Eg. a character is knocked unconscious and kidnapped by a thug, and discovers herself bound. She needs to go to the toilet, and persuades the thug's partner (a pilot) to allow her to. She discovers she's been raped while unconscious and tells the pilot this. He says that this is just a job and he's very sorry, and his partner has a nasty
+Again, an NPC is not going to do a favour for a PC which is unreasonable. Eg. a character is knocked unconscious and kidnapped by a thug, and discovers herself bound. She needs to go to the toilet, and persuades the thug's partner (a pilot) to allow her to. She discovers she's been raped while unconscious and tells the pilot this. He says that this is just a job and he's very sorry, and his partner has a nasty accident during subsequent high g manœuvres. Obviously the character (the incident is taken from Worlds by Joe Haldeman, and the character is Marianne O'Hara) has achieved a favourable reaction from the pilot. If she tried to persuade him to release her, then he'd just turn hostile, or at any rate refuse (he is a professional). But he sees no reason not to grant a (perhaps seemingly) harmless request.
 
-FORESIGHT Designer's Commentary 9
+**Seduction**
 
-accident during subsequent high g manœuvres. Obviously the character (the incident is taken from Worlds by Joe Haldeman, and the character is Marianne O'Hara) has achieved a favourable reaction from the pilot. If she tried to persuade him to release her, then he'd just turn hostile, or at any rate refuse (he is a professional). But he sees no reason not to grant a (perhaps seemingly) harmless request.
-
-Seduction
 You may recall the seduction rules in James Bond 007 which were reasonable in context (Seduction is, after all, Bond's second most important interactive tool), but what are rules for seduction doing in a "Hard SF" game?
 
 Based on the assumption that the future will bring a considerably different set of social values, and that (in particular) far less significance will be attached to the sexual act, it seems reasonable that many people will develop skills in acquiring short term sexual partners.
@@ -321,10 +354,12 @@ On the other hand this also means that sex will influence people's feelings far 
 
 Some psychologists claim that there is no such thing as seduction. One might say that perhaps people only seduce themselves, and that if there is any skill involved, it is in identifying people who are likely to do so. Be that as it may, these rules stand, and may be used, abused, or ignored by the GM, as he/she sees fit.
 
-Healing
+**Healing**
+
 If you've been searching through the rules looking for rules for healing, as opposed to natural recovery from wounds, and are seriously contemplating a letter to Murphy's Rules, then look no further than Repair, of which medicine is simply a special case in ForeSight.
 
-Hospitals
+**Hospitals**
+
 Hospitals are advanced, small, or large facilities (see Toolkits, in [6.0]) depending on whether they are located in villages, towns, or cities. Doctors will have PCSs ranging from 15 to 34 in Diagnose and Repair. A GP mainly deals with diagnosis, a surgeon with repair; both have some skill in the other.
 
 Doctors might not, in the future, enjoy the same exalted status and pay they do today, and are regarded as no more than technicians (eg. like programmers, sewerage engineers).
@@ -333,21 +368,27 @@ Normal hospitals do, however, routinely report any patients with unusual symptom
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=122">ForeSight 1986 · p.122 ↗</a></div>
 
-10 FORESIGHT Designer's Commentary
+**Combat**
 
-Combat There is one problem with the FS combat system, as far as I'm concerned. It is considerably more complex than was originally envisaged. The solution to this problem is for the GM to approach combat casually (eg. dispense with hex-grids, guesstimate ranges; basically, use the Find Cover Before Combat rules, and then wing it). Another (better) solution is to avoid combat (considering weapon lethality, a good idea).
+There is one problem with the FS combat system, as far as I'm concerned. It is considerably more complex than was originally envisaged. The solution to this problem is for the GM to approach combat casually (eg. dispense with hex-grids, guesstimate ranges; basically, use the Find Cover Before Combat rules, and then wing it). Another (better) solution is to avoid combat (considering weapon lethality, a good idea).
 
 A consequence of the combat system's relative complexity is that (I feel) it is pretty solid (reasonable at least, and realistic at best), and versatile. Eg. it handles hostage situations (the desperadoes keep close to their hostages, aim their guns at them, and take opportunity fire actions). Incidentally, I think that hostage situations are a fascinating and under-explored area in role-playing (not that I'm for them, but figuring out methods of dealing with them is tense and challenging).
 
-The ForeSight Damage Table David Bofinger (one of the play-testers) said to me one day that the fact that ForeSight, with its near total elimination of tables from play should have a damage table at the heart of its combat system was a silly holdover from James Bond 007. I had to agree, and quickly (ie. after four hours of hard work) came up with the formula you find underneath the (now redundant) table. This is a fairly simple formula with the only displeasing feature being the rounding rule (round off on QR1-2; down on QR3-4). Be assured that this is the simplest formula I could come up with that would closely resemble the original damage table, and also differentiate damage classes (despite having a similar table, 007 manages to have two identical damage classes, namely I & J). Besides, you can always use the table, and the formula is, in any case, far easier to memorise than the table is (or was).
+**The ForeSight Damage Table**
 
-Morale & Role-Playing In Combat Why are there no morale rules in ForeSight? Because, as far as I'm concerned, morale rules fall in the domain of role-play, and indeed represent a prime example of the difference between a character's capabilities and his/her inclinations.
+David Bofinger (one of the play-testers) said to me one day that the fact that ForeSight, with its near total elimination of tables from play should have a damage table at the heart of its combat system was a silly holdover from James Bond 007. I had to agree, and quickly (ie. after four hours of hard work) came up with the formula you find underneath the (now redundant) table. This is a fairly simple formula with the only displeasing feature being the rounding rule (round off on QR1-2; down on QR3-4). Be assured that this is the simplest formula I could come up with that would closely resemble the original damage table, and also differentiate damage classes (despite having a similar table, 007 manages to have two identical damage classes, namely I & J). Besides, you can always use the table, and the formula is, in any case, far easier to memorise than the table is (or was).
+
+**Morale & Role-Playing In Combat**
+
+Why are there no morale rules in ForeSight? Because, as far as I'm concerned, morale rules fall in the domain of role-play, and indeed represent a prime example of the difference between a character's capabilities and his/her inclinations.
 
 A character who is being played properly doesn't require morale rules - in or out of combat. Why should I enforce some sort of artificial role-play (in the shape of morale rules) on poor and mediocre players in combat when there is nothing (other than my guidelines for experience point awards) to make them role-play properly the rest of the time? If a supposedly cowardly or combat-shy character continually performs heroic acts in combat then this is poor role-play, just as an honest character continually lying to acquaintances is poor role-play, and the penalisation system (awarding the player fewer experience points) works the same way.
 
 The upshot: no morale rules.
 
-Advice & Optional Rules You may have noticed an innocuous little optional rule tacked onto the end of the Move action. This rule, which delays the pulses of characters who execute Move actions, is designed to prevent a set of hypothesised combat situations from turning nasty. The effects of this rule can be summarised as advantaging characters with missile weapons who find themselves close to, but not within melee range of, characters equipped only with melee weapons.
+**Advice & Optional Rules**
+
+You may have noticed an innocuous little optional rule tacked onto the end of the Move action. This rule, which delays the pulses of characters who execute Move actions, is designed to prevent a set of hypothesised combat situations from turning nasty. The effects of this rule can be summarised as advantaging characters with missile weapons who find themselves close to, but not within melee range of, characters equipped only with melee weapons.
 
 Action point Reload actions should probably be treated as per Draw actions (ie. they should reduce a character's speed for purposes of determining when he/she acts). Otherwise, a speed five character could conceivably reload and fire a weapon at a speed four character before he/she was able to respond.
 
@@ -357,21 +398,29 @@ Experimental: allow characters to exchange unused actions, at any time, for half
 
 This rule makes winning the Initiative less valuable. It allows some "realistic" actions to be performed more quickly than otherwise.
 
-Initiative Initiative, in ForeSight, represents a character's clear-headedness, and decision-making capacity in combat. Winning the Initiative represents knowing more about what's going on, and what you're going to do about it, than those you're fighting.
+**Initiative**
+
+Initiative, in ForeSight, represents a character's clear-headedness, and decision-making capacity in combat. Winning the Initiative represents knowing more about what's going on, and what you're going to do about it, than those you're fighting.
 
 Strictly speaking, a character should only be able to make Initiative rolls for those with whom he/she is in communication.
 
 Using insecure radio communications in combat should probably incur a negative modifier if one's enemies are listening in.
 
-Notes on Laser Combat By the by, lasers have lots of nifty and spectacular side-effects. They make loud banging noises (their capacitors discharge in a fairly noisy fashion; they punch a hole through the atmosphere, which gets refilled; and they vapourise a chunk of whatever they hit, which explodes fairly violently). They set fire to things ... like the subcutaneous fat of anyone they hit, and anything flammable they get too close to. All of this means that characters should wear reaction glasses (which protect their wearers from flashes) in laser combat, or expect to have their vision deteriorate markedly as combat progresses (say -1 to Search, Scan, and fire rolls per pulse, down to about -4). Lasers also turn lots of air into plasma when they travel through the atmosphere. This leads to a great deal of radio interference. Radios will be no good for
+**Notes on Laser Combat**
+
+By the by, lasers have lots of nifty and spectacular side-effects. They make loud banging noises (their capacitors discharge in a fairly noisy fashion; they punch a hole through the atmosphere, which gets refilled; and they vapourise a chunk of whatever they hit, which explodes fairly violently). They set fire to things ... like the subcutaneous fat of anyone they hit, and anything flammable they get too close to. All of this means that characters should wear reaction glasses (which protect their wearers from flashes) in laser combat, or expect to have their vision deteriorate markedly as combat progresses (say -1 to Search, Scan, and fire rolls per pulse, down to about -4). Lasers also turn lots of air into plasma when they travel through the atmosphere. This leads to a great deal of radio interference. Radios will be no good for
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=123">ForeSight 1986 · p.123 ↗</a></div>
 
 communications in such an environment, unless they screech in several bands at once (ie. rebroadcast their messages several times speeded up).
 
-Military Radio Transceivers PCs will probably want frequency-hopping, scrambled, screech-capable radio transceivers as a result of this. Since these are more or less standard military issue, and are available in the same formats as civilian transceivers at three to five times the price, this should be no problem.
+**Military Radio Transceivers**
 
-Opportunity Actions An opportunity action represents a character committing him/her-self to a response to some expected stimuli. Eg. a character might decide to shoot the next person to emerge from a particular doorway. This is, however, a very difficult concept to formalise. It would seem unreasonable to allow a character to react to just any old thing happening, and yet it would be unrealistic to believe that one could unambiguously delineate the difference between a valid stimulus, and a non-valid stimulus. Rigid preconditions are unviable. If, in my example, the next thing to emerge turned out to be a robot, it would certainly be reasonable to allow the character to fire at that instead. Some partial solutions are possible.
+PCs will probably want frequency-hopping, scrambled, screech-capable radio transceivers as a result of this. Since these are more or less standard military issue, and are available in the same formats as civilian transceivers at three to five times the price, this should be no problem.
+
+**Opportunity Actions**
+
+An opportunity action represents a character committing him/her-self to a response to some expected stimuli. Eg. a character might decide to shoot the next person to emerge from a particular doorway. This is, however, a very difficult concept to formalise. It would seem unreasonable to allow a character to react to just any old thing happening, and yet it would be unrealistic to believe that one could unambiguously delineate the difference between a valid stimulus, and a non-valid stimulus. Rigid preconditions are unviable. If, in my example, the next thing to emerge turned out to be a robot, it would certainly be reasonable to allow the character to fire at that instead. Some partial solutions are possible.
 
 You should only really allow an opportunity action to be performed in response to an action or phenomenon of which the acting character is aware.
 
@@ -383,25 +432,27 @@ This also allows for characters to sneakily perform actions. A character attempt
 
 Also, while this is not explicitly stated, I allow characters to perform any/all unused opportunity actions prior to beginning a new pulse. (This convention is implied by the rules, but never stated explicitly; I just thought you'd like to know.) Without this convention, combats where everyone takes opportunity actions, which are not infrequent, would turn into staring matches.
 
-Travel This is what I call a good rules section. It is terse and yet intelligible, and it does what it has to. You may, however, want to know what various things look like
+**Travel**
 
-FORESIGHT Designer's Commentary 11
+This is what I call a good rules section. It is terse and yet intelligible, and it does what it has to. You may, however, want to know what various things look like and why no hydrofoils are presented, although provision is made for them. With regard to the former, I shall describe the (I think) non-obvious vehicles. Re the latter, hydrofoils can be designed by the GM, and are in any case described in ForeScene.
 
-and why no hydrofoils are presented, although provision is made for them. With regard to the former, I shall describe the (I think) non-obvious vehicles. Re the latter, hydrofoils can be designed by the GM, and are in any case described in ForeScene.
+**Crawler:** this is a 6WD ATV (read "six wheel drive all terrain vehicle") with auxiliary legs (controlled by a computer) allowing traversal of rugged terrain.
 
-Crawler: this is a 6WD ATV (read "six wheel drive all terrain vehicle") with auxiliary legs (controlled by a computer) allowing traversal of rugged terrain.
+**Semi-Trailer:** this is Australian for "Van-rig".
 
-Semi-Trailer: this is Australian for "Van-rig".
+**Jet Skimmer:** basically a jet propelled hovercraft. Incidentally, references to jets can also be taken as references to hi-tech propellers.
 
-Jet Skimmer: basically a jet propelled hovercraft. Incidentally, references to jets can also be taken as references to hi-tech propellers.
+**Air Car:** a hi-tech jet propelled bedstead-style vehicle (imagine a bed with an orientable jet at each corner; whack on a Porsche designer body ... )
 
-Air Car: a hi-tech jet propelled bedstead-style vehicle (imagine a bed with an orientable jet at each corner; whack on a Porsche designer body ... )
+**HellJet:** what they called aircars before farmers could afford them.
 
-HellJet: what they called aircars before farmers could afford them.
+**Equipment**
 
-Equipment There is no way that I'm going to churn out detailed descriptions of all of this rubbish, so you'll have to use your imaginations. Considerable space will be devoted to this sort of stuff in ForeScene.
+There is no way that I'm going to churn out detailed descriptions of all of this rubbish, so you'll have to use your imaginations. Considerable space will be devoted to this sort of stuff in ForeScene.
 
-Star Systems When I was knocked back (rejected) by West End Games there were three major objections mentioned (1) comprehensive skill systems do not encourage good role-play (of course FS has far fewer skills in it than, say, PARANOIA, and far fewer rules governing them); (2) detailed planet generation systems do not encourage GMs to create good plots (perhaps not, but if so don't use it), and (3) the system is colourless (agreed. This was a design OBJECTIVE. FS is designed to replace the SYSTEM a GM is using in his/her campaign, not the campaign itself. For a premixed, ready-to-go campaign, get ForeScene (which includes replacements for various tables, and so forth, to add the colour)).
+**Star Systems**
+
+When I was knocked back (rejected) by West End Games there were three major objections mentioned (1) comprehensive skill systems do not encourage good role-play (of course FS has far fewer skills in it than, say, PARANOIA, and far fewer rules governing them); (2) detailed planet generation systems do not encourage GMs to create good plots (perhaps not, but if so don't use it), and (3) the system is colourless (agreed. This was a design OBJECTIVE. FS is designed to replace the SYSTEM a GM is using in his/her campaign, not the campaign itself. For a premixed, ready-to-go campaign, get ForeScene (which includes replacements for various tables, and so forth, to add the colour)).
 
 So why mention this now? Well, primarily, sour grapes. But apart from that I'd like to highlight some problems people create for themselves when using RPG systems.
 
@@ -410,8 +461,6 @@ You shouldn't buy a game-system if it doesn't do the things you want it to do. I
 Another criticism which has been levelled at the Star System Generator, and with considerable justification, is that star systems and, in particular, planets ought to be designed rather than generated. Fair
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=124">ForeSight 1986 · p.124 ↗</a></div>
-
-12 FORESIGHT Designer's Commentary
 
 enough. If this is what you want to do, then go ahead, and, if you like, think of [7.0] as a set of guidelines and/or useful ideas for designing your star systems. Similarly there is no reason why a GM shouldn't modify, reroll, or ignore die rolls which contradict his/her intentions for a given star system or planet (or, for that matter, task). I see no reason why a GM shouldn't design important planets and/or star systems, and generate unimportant ones.
 
@@ -423,7 +472,9 @@ In brief, you can
 • alter already generated planets; and/or
 • randomly generate your planets and see what comes out.
 
-Starships Would you believe that this isn't the best play-tested section of the rules? You would? Good. The reasons are obvious (Spacecraft combat is deadly, pointless, and tedious). Spacecraft construction, on the other hand, is fun (and it works, so go to it).
+**Starships**
+
+Would you believe that this isn't the best play-tested section of the rules? You would? Good. The reasons are obvious (Spacecraft combat is deadly, pointless, and tedious). Spacecraft construction, on the other hand, is fun (and it works, so go to it).
 
 At the moment, there is a good deal I don't know about this system, so anyone with ideas is welcome to contact me. Eg.
 
@@ -437,20 +488,24 @@ On the other hand I do know some things. Eg. cheapish interplanetary craft can b
 
 Note (grim realists only) that unladen ships will actually have better performance characteristics, while overloaded ships will have worse.
 
-Unmanned Spacecraft There is no reason why an "unmanned" (uncrewed, I suppose, is superior) craft can't carry passengers. Certainly, crewed craft are capable of fully automatic manœuvres. An uncrewed craft then is one not being directed by a person. If desired, the GM can impose disadvantages. It has a Space Tactics PCS equal to
+**Unmanned Spacecraft**
 
-double its TL (This, of course, may or may not be a disadvantage). Furthermore it must operate under some kind of general or specific instructions (go to wherever; survive; pursue such and such; fire only at that blip; that sort of thing).
+There is no reason why an "unmanned" (uncrewed, I suppose, is superior) craft can't carry passengers. Certainly, crewed craft are capable of fully automatic manœuvres. An uncrewed craft then is one not being directed by a person. If desired, the GM can impose disadvantages. It has a Space Tactics PCS equal to double its TL (This, of course, may or may not be a disadvantage). Furthermore it must operate under some kind of general or specific instructions (go to wherever; survive; pursue such and such; fire only at that blip; that sort of thing).
 
 Finally: the GM controls any uncrewed craft (within the latitude of instructions given).
 
-Physics A number of problems in the physics of ForeSight spacecraft have come to light. The higher tech models, for example, simply cannot be fusion powered. So, if you like, assume:
+**Physics**
+
+A number of problems in the physics of ForeSight spacecraft have come to light. The higher tech models, for example, simply cannot be fusion powered. So, if you like, assume:
 • TL6: He3 or deuterium-muon fusion
 • TL7: fusion or relativistically stored particles
 • TL8+: relativistically stored particles or antimatter
 
 Agility can be used as acceleration. Each point of agility counts as one quarter of a point of acceleration. The engines used for agility are less efficient, mass-wise, than those designed expressly for acceleration. This is because while both sorts of drives provide thrust by accelerating ions to relativistic speeds, the Agility drives, which deflect the ions to provide torque (or whatever), use more particles at smaller speeds to reduce power requirements. By the way, I've got a great pseudo-scientific explanation of how the FTL drives work. Write to me if you want it.
 
-Deckplans As a proponent of drama versus excessive realism, I am not particularly keen on deckplans. I dislike location-driven scenarios (ie. scenarios which comprise a map with locations keyed to events, eg. if you enter this room you will be attacked by eleven ettins. I regard such scenarios as dungeons, regardless of context), and deckplans seem to me an excuse to put dungeons in orbit.
+**Deckplans**
+
+As a proponent of drama versus excessive realism, I am not particularly keen on deckplans. I dislike location-driven scenarios (ie. scenarios which comprise a map with locations keyed to events, eg. if you enter this room you will be attacked by eleven ettins. I regard such scenarios as dungeons, regardless of context), and deckplans seem to me an excuse to put dungeons in orbit.
 
 The idea of stating that a tonne equates to a specified volume is pretty ludicrous. Engines and power plants, what with their shielding, cooling systems, and so forth, are far denser than staterooms or cargo holds. If you decide to draw deckplans, then you can more or less disregard the 1 compartment - 50m 3 given in [8.0], and use the following guidelines instead:
 • cargo compartment = 100-200m3
