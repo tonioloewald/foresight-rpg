@@ -3,6 +3,8 @@
 
 *ForeSight (1986), pp. 89–101 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the [source PDF](/foresight-1986.pdf#page=89). [About this restoration](/foresight-1986/).*
 
+> **Set aside — slated for a rewrite.** The 1986 starship system was inspired but never really playable. Kept for historical interest — a fresh spacecraft system will replace this chapter.
+
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=89">ForeSight 1986 · p.89 ↗</a></div>
 
 #### [8.0] Spacecraft Design, Construction & Combat

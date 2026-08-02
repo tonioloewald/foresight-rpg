@@ -3,6 +3,8 @@
 
 *ForeSight (1986), pp. 71–88 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the [source PDF](/foresight-1986.pdf#page=71). [About this restoration](/foresight-1986/).*
 
+> **Set aside — slated for a rewrite.** The planet- and star-system generators here are out of step with modern astrophysics; even devoted 1986 fans won't miss them. Kept for historical interest — a fresh worldbuilding system will replace this chapter.
+
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=71">ForeSight 1986 · p.71 ↗</a></div>
 
 *[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]*
