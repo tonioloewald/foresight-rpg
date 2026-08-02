@@ -5,40 +5,23 @@
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=71">ForeSight 1986 · p.71 ↗</a></div>
 
-t-. .
-.::: ::~~: ~ ~ :~'.':':':~::::::::::::::' Position 184021
-
-[7.0] S
-G PLAnE
-
-STAR System ET GEnERATion
+*[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]*
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=72">ForeSight 1986 · p.72 ↗</a></div>
 
-FORESIGHT SVSTErv1 DISPLAV
-
-IStellar Primary ILocation Distance From Sol
-
-Orbital   Planet   Rtmosphere
-Pressure Compos
-Opacity
-
-IStellar Type   0
-II Year First EKplored
-Temperature     Hydrographics
-sition   Basic Mean           Radiation   H.I.
+*[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]*
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=73">ForeSight 1986 · p.73 ↗</a></div>
 
 #### [7.0] Star System Generation
 Designer's Notes: In a Science Fiction Role-Playing Game, some form of Star System Generator is desireable. This system should not put the GM to too much trouble; it should allow for a good degree of detail; and it should be "dumb" (ie. a GM should be able to plug it into his/her computer without having to add any algorithms), as well as fulfilling the pre-requisites outlined in the Introduction.
 
-I think that the following system qualifies in these respects, although there may be some controversy over how much trouble the system is to implement, I feel that a more simple generation system (like Traveller's) pays for its relative simplicity by being too lacking in detail (planets are neither interesting, nor different enough), and this detail must be added by the GM, without help from the rules. ForeSight planets are detailed enough to be interesting to players and GMs alike, and furthermore the whole thing, down to rough planetary maps, can be performed by a com-puter (the program will not take long to write: if there is sufficient interest, I may publish my own). Finally, the system is, at least to a degree, scientifically sound, which is important in a Science Fiction RPG.
+I think that the following system qualifies in these respects, although there may be some controversy over how much trouble the system is to implement, I feel that a more simple generation system (like Traveller's) pays for its relative simplicity by being too lacking in detail (planets are neither interesting, nor different enough), and this detail must be added by the GM, without help from the rules. ForeSight planets are detailed enough to be interesting to players and GMs alike, and furthermore the whole thing, down to rough planetary maps, can be performed by a computer (the program will not take long to write: if there is sufficient interest, I may publish my own). Finally, the system is, at least to a degree, scientifically sound, which is important in a Science Fiction RPG.
 
 Generating a Star System
-Procedure: A Star-System in ForeSight must first be located around a star. The star should be chosen from an appropriate document (eg. a decent Star Cata-logue), and should be within thirty light-years, or so, of Sol. This system was designed with solitary type V (dwarf) stars (like the sun) in mind. Furthermore, I recommend that, barring special circumstances, you restrict yourself to type F, G, K, and M stars. Once the star has been chosen, and its name recorded appropriately on the System Display, proceed as follows:
+Procedure: A Star-System in ForeSight must first be located around a star. The star should be chosen from an appropriate document (eg. a decent Star Catalogue), and should be within thirty light-years, or so, of Sol. This system was designed with solitary type V (dwarf) stars (like the sun) in mind. Furthermore, I recommend that, barring special circumstances, you restrict yourself to type F, G, K, and M stars. Once the star has been chosen, and its name recorded appropriately on the System Display, proceed as follows:
 
-[i) Determine the star's type: this comprises a letter (ie. A, F. G, K, M, or S) followed by a number (an integer from 0 to 9). Look at the following table under Range; this will give a range of numbers. There are sixteen orbitals listed on the System display: roll D10 for each of orbitals 1 to 10, and D6 for each of orbitals 11 to 16; if the roll for a given orbital falls in the star's range, then tick the Orbital Radius slot of that orbital.
+[i] Determine the star's type: this comprises a letter (ie. A, F, G, K, M, or S) followed by a number (an integer from 0 to 9). Look at the following table under Range; this will give a range of numbers. There are sixteen orbitals listed on the System display: roll D10 for each of orbitals 1 to 10, and D6 for each of orbitals 11 to 16; if the roll for a given orbital falls in the star's range, then tick the Orbital Radius slot of that orbital.
 
 Stellar Type        Range          Radius        Mass BO - B4              5;1            37            6.2 B5 - 89              5;1            11            3.3 AO - A4              5;1             6            2.4 A5 - A9              5;2             3            1.8 FO - F4              5;3             2            1.S F5 - F9              5;4             1.S          1.3 GO - G4              5;6             1            1.1 G5 - G9              5;S             0.65         0.92 KO - K4              5;4             0.4          0.74 K5 - K9              5;3             0.18         0.S4 MO· M4               5;2             0.08         0.22 M5· M9               5;1             0.03         0.11 SO • S4              5;3             0.1?         1.S? S5 • S9              5;2             0.04?          ?
 
@@ -50,7 +33,7 @@ previous step with the multiple of this number and the
 number beside it (in the Base Radius column). The
 new number is the actual Orbital Radius of the
 "planet" located in that orbital, in Astronomical Units
-(1 AU =the Earth's Orbital Radius about Sol).
+(1 AU = the Earth's Orbital Radius about Sol).
 
 [iii] For any orbitals filled in step [i] roll D10 and consult
 the Planet Type Table to determine the table to be
@@ -64,7 +47,7 @@ Roll     Modifier
 10   The "planet" is an asteroid belt.
 
 [iv] For each Orbital to be occupied by a planet (as
-indicated in step [ii)) roll D10, and consult the table
+indicated in step [ii]) roll D10, and consult the table
 indicated. Write down the resulting planet size in the
 Planet Size slot for that orbital.
 
@@ -129,7 +112,7 @@ mine its surface gravity (in Earth gees, and assuming
 that it's dense enough to have a recognisable "sur-
 face"), and record this in its Gravity slot.
 
-[vii] For each planet roll 010, modify the roll as indicated
+[vii] For each planet roll D10, modify the roll as indicated
 under the Air Pressure table, and write the appropriate
 result from that table into its Pressure slot.
 
@@ -176,16 +159,16 @@ Atmosphere Opacity Table 010                           Temperature Roll-       O
 10         [A] Extreme              +300
 ~11         [8] Extreme       Intolerable (Hot/Cold)
 
-* Add the opacity modifer from the Armosphere Density Table to the die roll.
+* Add the opacity modifier from the Atmosphere Density Table to the die roll.
 
-fix] For each planet add the appropriate temperature
+[ix] For each planet add the appropriate temperature
 modifier from the Opacity table to the temperature
 given for that Orbital in the Temp column. Record the
 result in the planet's Mean Temp slot. Intolerable
 over-rides cold. Cold planets will have partially or
 wholly frozen atmospheres.
 
-[x] For each planet roll 010, and modify it as indicated
+[x] For each planet roll D10, and modify it as indicated
 under the Planet Hydrographic. table. Record
 the result from that table in the planet's Hydro slot.
 
@@ -234,13 +217,13 @@ slightly contaminated "Life on Planet: SC = 100
 & Initiative at -1): "Life on Planet: SC = 120
 2:12 Earthlike: "Life on Planet: SC = 120
 
-Subtract IAppropriate Opacity Modifier from Atmos-phere Density Tablel (note absolute value signs) from,
+Subtract IAppropriate Opacity Modifier from Atmosphere Density Tablel (note absolute value signs) from,
 and
 Add (Planet's Hydrographics)/20 (rounded off) to, the die roll.
 
-[xii] Determine whether or not there is life on the planet by rolling against any SC given beside Atmosphere Composition. OR 4 indicates presence of primitive life-forms (certainly no more evolved than, say, bony fishes, amphibians, and ferns; perhaps no more advanced than polyps ... ); OR 3 indicates a moderate stage of evolution: anywhere from (the equivalent of) dinosaurs to mammals; OR 2 indicates highly advanc-ed, but non-sapient organisms - perhaps semi-intelligent and/or very dangerous (eg. Alien ); OR 1 indicates the presence of local HILFs (Highly Intel-ligent Life-Forms, to borrow a term); who will be at a lesser state of advancement than humanity, or orient-ed in non-technological (perhaps psionic or magical) directions. Note any successful result by writing the OR number into the top right corner of the Habitability Index box. In theory, planets with intelligent life will not be knowingly colonised by idealistic regimes.
+[xii] Determine whether or not there is life on the planet by rolling against any SC given beside Atmosphere Composition. QR 4 indicates presence of primitive life-forms (certainly no more evolved than, say, bony fishes, amphibians, and ferns; perhaps no more advanced than polyps ... ); QR 3 indicates a moderate stage of evolution: anywhere from (the equivalent of) dinosaurs to mammals; QR 2 indicates highly advanced, but non-sapient organisms - perhaps semi-intelligent and/or very dangerous (eg. Alien ); QR 1 indicates the presence of local HILFs (Highly Intelligent Life-Forms, to borrow a term); who will be at a lesser state of advancement than humanity, or oriented in non-technological (perhaps psionic or magical) directions. Note any successful result by writing the QR number into the top right corner of the Habitability Index box. In theory, planets with intelligent life will not be knowingly colonised by idealistic regimes.
 
-[xiii] Determine each planet's Incident Radiation Class by rolling 010, modifying the roll as indicated under the Incident Radiation table, and recording the result under the planet's Radiation slot.
+[xiii] Determine each planet's Incident Radiation Class by rolling D10, modifying the roll as indicated under the Incident Radiation table, and recording the result under the planet's Radiation slot.
 
 #### Incident Radiation Table
 
@@ -291,15 +274,13 @@ e 703
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=76">ForeSight 1986 · p.76 ↗</a></div>
 
 #### [7.1] Detailing Planets
-Designer's Notes: the GM should complete the follow-
-ing steps (with the possible exception of step [xvi] for
+Designer's Notes: the GM should complete the following steps (with the possible exception of step [xvi] for
 planets in orbitals 1 to 10) only for planets he/she
 wishes to detail. A copy of the Planet Record
-should be set aside for the planet. and relevant infor-
-mation copied from the Star System Record onto it.
+should be set aside for the planet. and relevant information copied from the Star System Record onto it.
 
 [1] Determine the planet's day length. and average
-dally temperature variation.
+daily temperature variation.
 
 Day Length-
 3.S(D10 + 010+ 12)/I(Planet Size - 1.S)1 hours
@@ -376,7 +357,7 @@ range 4d-4h.
 A planet is mapped in stages (everything in FS is done
 in stages. • sigh .).
 
-[i) Notice that the map is divided up into lots of triangles.
+[i] Notice that the map is divided up into lots of triangles.
 Each triangle is referred to as a sub-zone. A zone
 comprises five sub-zones. Divide the map into thirty
 six disjoint zones in any way you see fit (I suggest
@@ -406,7 +387,7 @@ SO%             1c-4c 5c-9c 1d-5d 6d-1 h 2h-9s
 100%·                                1c-6c·· 7c-9s
 Note: with islands; one sub-zone has islands. rather than being filled with land.
 
-[ii] For each sub-zone not covered with water roll 010: 1-
+[ii] For each sub-zone not covered with water roll D10: 1-
 3 indicates that the sub-zone is predominantly flat.
 mark it with a horizontal line; 4-S indicates that the
 sub-zone is predominantly uneven. mark it with an
@@ -418,9 +399,7 @@ e 704
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=77">ForeSight 1986 · p.77 ↗</a></div>
 
-[7.11 G [7.21 DET
-
-TAILInG PLAnETS
+*[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]*
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=78">ForeSight 1986 · p.78 ↗</a></div>
 
@@ -460,9 +439,9 @@ Space Port I Size        IType                                         1
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=79">ForeSight 1986 · p.79 ↗</a></div>
 
-[iii) For each sub-zone not covered with water roll 010, and modify the roll as instructed beneath the Terrain Features table, mark the presence of the terrain feature indicated in the sub-zone.
+[iii] For each sub-zone not covered with water roll D10, and modify the roll as instructed beneath the Terrain Features table, mark the presence of the terrain feature indicated in the sub-zone.
 
-Note that the map on the Planet Record can be folded into an icosahedron (the same shape as a twenty-sided die). Consider the map as the projection of the planet's features onto such an icosahedron embed-ded in it. The upshot of this is that two sub-zones are considered adjacent if they would be so were the map folded into an icosahedron.
+Note that the map on the Planet Record can be folded into an icosahedron (the same shape as a twenty-sided die). Consider the map as the projection of the planet's features onto such an icosahedron embedded in it. The upshot of this is that two sub-zones are considered adjacent if they would be so were the map folded into an icosahedron.
 
 Terrain Features Sub-zone             Terrain Feature In Sub-zone Temp Contour         BN LV MV HV MA IC VH    BR             s4 5-7 8-9 ~10
 UN             ~3   4-6 7-8 ~10
@@ -490,7 +469,7 @@ Modifiers for use with this table
 -1 planet's hydro - 20 or 30%
 +1 planet's hydro ~ 80%
 
-[iv) To determine whether two, or more, land sub-zones which meet at a point, but not an edge, actually meet or not, roll 0100, and consult the Isthmus table:
+[iv] To determine whether two, or more, land sub-zones which meet at a point, but not an edge, actually meet or not, roll D100, and consult the Isthmus table:
 
 Isthmus Table
 
@@ -503,7 +482,7 @@ Four of six about point      1-75 Two of five about point      1-33 Three of fiv
 
 Notes: *Two of the three share an edge; **No two of the three share an edge
 
-[v) Fill in Planet Description as appropriate (sub-zone
+[v] Fill in Planet Description as appropriate (sub-zone
 size, indicated on the Planet Size table, is the length
 of one of the sides of a triangular sub-zone). The
 actual temperature of a sub-zone varies with latitude,
@@ -520,23 +499,23 @@ humans. In determining the details of a planet's
 population one needs to know the following things
 about it:
 
-[1) Its Habitability Index
+[1] Its Habitability Index
 
-[2) Its distance from Sol
+[2] Its distance from Sol
 
-[3) Its density
+[3] Its density
 
 From these three pieces of data the following system will
 generate, in relative detail, the population of a planet.
 Unless otherwise instructed, conduct the following
 steps in order:
 
-[iJ The first thing to determine is when the system was
+[i] The first thing to determine is when the system was
 first explored. This is a function solely of its distance
 from Sol, and luck. Record this date on the system
 display; all planets in the system's first ten orbitals
 are considered to have been explored at this time. Go
-to the appropriate table, and roll 0100.
+to the appropriate table, and roll D100.
 
 Within 10 LV of Sol
 Roll     First Explored
@@ -572,11 +551,11 @@ e 705
 
 [ii] What is your Campaign Year? If you can't decide, then choose AD2535 (this is my campaign year, and much of ForeSight's support material is geared towards this time). If the date of first exploration is larger than this, the system is unexplored, and hence uninhabited. That was easy.
 
-Otherwise: round down your campaign year to the nearest multiple of twenty-five, so if your campaign year is 2735, round down to 2725. Now, subtract the year of first exploration from this, and divide it by twenty-five. This is about the number of generations since the planet was first explored. Call this number 9 (for generations), and set Date equal to the year the system was first explored.
+Otherwise: round down your campaign year to the nearest multiple of twenty-five, so if your campaign year is 2735, round down to 2725. Now, subtract the year of first exploration from this, and divide it by twenty-five. This is about the number of generations since the planet was first explored. Call this number g (for generations), and set Date equal to the year the system was first explored.
 
 [iii] Subtract one from g. Add 25 to Date.
 
-[iv] Roll D100. If this is greater than (120 - 24 x H I) x planet Density go to step [III].
+[iv] Roll D100. If this is greater than (120 - 24 x H I) x planet Density go to step [iii].
 
 [v] Someone colonised the planet in the year Date (note this). To determine who it was, roll D10, add one to this roll per 25y (after the first 25) since the planet was first explored, to determine the group which instigated colonisation (ie. the Initial settler), and the initial population density (in persons per square km of land).
 
@@ -591,11 +570,11 @@ PO
 14-15 15-16    MegaCorp            21H1
 ~16    ~17    Unsubsidized      5/{HI"2)
 
-[vi] From the information (1) what the planet's initial population density was, and (2) how long ago it was colonised (ie. g), we now determine the current population density. Use the following procedure, keeping track of current population density (PO) and c, which is initially set equal to g. (This 'c' keeps count of 25 year periods assessed.)
+[vi] From the information (1) what the planet's initial population density was, and (2) how long ago it was colonised (ie. g), we now determine the current population density. Use the following procedure, keeping track of current population density (PD) and c, which is initially set equal to g. (This 'c' keeps count of 25 year periods assessed.)
 
 (a) Subtract one from c.
 
-(b) Roll on the appropriate column of the population growth table, to yield a number. Multiply PO by this to determine the new PO value.
+(b) Roll on the appropriate column of the population growth table, to yield a number. Multiply PD by this to determine the new PD value.
 
 Pag
 
@@ -622,15 +601,14 @@ Multiply current Population Density by the resulting number.
 
 (c) If c is greater than zero, go back to step (a).
 
-The value for PO thus obtained becomes the planet's
+The value for PD thus obtained becomes the planet's
 current PD.
 
 The planet's total population = 1t(d"2){1-h/100)PO
 (where d is the planet's diameter in km, and h is the its
 hydrographic percentage).
 
-[vii] From the information (1) the planet's current pop-
-ulation, (2) its density, and (3) g, we determine the
+[vii] From the information (1) the planet's current population, (2) its density, and (3) g, we determine the
 planet's current technological levels (plural is correct)
 relative to "the norm" for its time (ego TL 8 appears
 around 2400, a planet with relative TLs of -1 in a
@@ -736,14 +714,14 @@ e 707
 
 Explanation of Government Types OA No rules or conventions: Might is Right. (A
 truly free market economy.)
-08 Balkanlsed into tribes, or communal autarchies OC Theocracy*: the planet's government is deter-
+08 Balkanised into tribes, or communal autarchies OC Theocracy*: the planet's government is deter-
 mined along religious tenets and rules, and it is
 ruled by a religious hierarchy
 
 1A A (Wo)man's Spread Is Her/His Castle,
 (s)he has full rights to do what (s)he wants on
 herlhis property
-18 Balkanlsed into petty oligarchies, feudal hold-
+18 Balkanised into petty oligarchies, feudal hold-
 ings, and mayoralties
 1C Hereditary Autarchy*: the planet is ruled by a
 single person who shall be succeeded by one of
@@ -752,7 +730,7 @@ his/her offspring
 2A Idealistic Anarchy: the only law is against
 weapons and violence, upheld by convention,
 rather than some agency.
-28 Balkanlsed into republics (democracies),
+28 Balkanised into republics (democracies),
 monarchies, and "empires".
 2C Planetary Oligarchy·: rule by wealthy families,
 and corporations, either in name, or in fact (while
@@ -761,7 +739,7 @@ probably disguised as representative democracy).
 3A Idealistic Anarchy: the only organisation is the
 "police force" who prevent violence and weapon
 ownership and use.
-38 Balkanlsed into republics, dictatorships, and
+38 Balkanised into republics, dictatorships, and
 "superpowers".
 3C Representative Democracy: parliamentary
 (as per Australia, and Great Britain), or presidential
@@ -770,7 +748,7 @@ ownership and use.
 4A Subservient          Bureaucracy: a publicly
 answerable, but generally autonomous
 bureaucracy runs the planet.
-4B Balkanlsed into participant democracies,
+4B Balkanised into participant democracies,
 republics, dictatorships, and MegaCorps.
 4C Participant Democracy: major issues are
 decided by the people as a whole via a vast
@@ -779,7 +757,7 @@ telecommunications net.
 5A Stable Bureaucracy: a self perpetuating
 bureaucracy, answerable to itself only, runs
 everything.
-58 Balkanlsed into MegaCorps, various
+58 Balkanised into MegaCorps, various
 democracies, and dictatorships.
 5C Randomly Selected Assembly: an assembly
 of randomly selected people govern the planet for a
@@ -790,7 +768,7 @@ selected.
 uating, heedless bureaucracy, answerable only to
 itself, runs things; promotion within it may be by
 birth or connections.
-6B Corporate Admlnlstratlon*: the planet is gov-
+6B Corporate Administration*: the planet is gov-
 erned, owned, and run, by a huge corporate entity.
 6C Malevolent Autocrat*: a self seeking person
 has absolute power over the planet.
@@ -802,7 +780,7 @@ t
 7A Stable Bureaucracy: a self perpetuating bur-
 eaucracy, answerable only to itself, runs the
 planet.
-78 Balkanlsed into MegaCorps, various democ-
+78 Balkanised into MegaCorps, various democ-
 racies, and dictatorships.
 7C Benevolent Autocrat*: a well intentioned per-
 son has absolute power over the planet.
@@ -810,7 +788,7 @@ son has absolute power over the planet.
 8A Subservient        Bureaucracy: a publically
 answerable, but generally autonomous, bureau-
 cracy runs things.
-88 Balkanlsed into MegaCorps, various democ-
+88 Balkanised into MegaCorps, various democ-
 racies, and dictatorships.
 8C Malevolent Autocrat*: a self seeking person
 has absolute power over the planet.
@@ -818,13 +796,13 @@ has absolute power over the planet.
 OS Syndlcate*: the planet is ruled by a conglomerate
 of criminal syndicates which use it as a base of
 operations.
-1S Intellectual Ollgarchy*: the planet is ruled by
+1S Intellectual Oligarchy*: the planet is ruled by
 people selected on the basis of their intellectual
 achievement.
 2S Computer*: "The computer is your friend, trust the
 computer. The computer knows the optimal path to
 human happiness and welfare. Thank you for your
-cooperation." The planet isruled by a computer.
+cooperation." The planet is ruled by a computer.
 3S Front: the planet is run by a computer, but
 disguises its decisions by channelling them through
 unwitting human servants.
@@ -845,9 +823,9 @@ OA          0           0               -4         40% 08          1           3
 
 The values given on the above table are used in the stages which follow.
 
-[ix] Individually modify the planet's hard and soft Tl's as follows. The Tech Level value on the Government Effects Table (above) is the chance per generation (25 years) that each of the planet's TLs will have 0.5 subtracted from it while the government is in power. Roll 0100 for each TL g times (remember g? Gener-ations since colonisation?), and reduce each TL by 0.5 per roll less than or equal to the Tech Level rating.
+[ix] Individually modify the planet's hard and soft Tl's as follows. The Tech Level value on the Government Effects Table (above) is the chance per generation (25 years) that each of the planet's TLs will have 0.5 subtracted from it while the government is in power. Roll D100 for each TL g times (remember g? Gener-ations since colonisation?), and reduce each TL by 0.5 per roll less than or equal to the Tech Level rating.
 
-[x] Given the planet's population density, government, and its current Hard TL, we now determine the planet's settlement structure (the organisation of its settle-ments). This is determined simply by rolling 010, which will give a number, n; consulting the Settlement structure chart and choosing the nth lowest structure allowable (ie. the nth structure, with suitable values of TL, and PO, from the bottom of the Settlement Structures table); if there is none, then choose the top-most allowable structure.
+[x] Given the planet's population density, government, and its current Hard TL, we now determine the planet's settlement structure (the organisation of its settle-ments). This is determined simply by rolling D10, which will give a number, n; consulting the Settlement structure chart and choosing the nth lowest structure allowable (ie. the nth structure, with suitable values of TL, and PO, from the bottom of the Settlement Structures table); if there is none, then choose the top-most allowable structure.
 
 Dl0 Roll       n              010 Roll      n
 s-l      5                 6-8         2
@@ -869,7 +847,7 @@ regated Industry
 ~10    6  Megaplexes
 (huge self-sufficient City Structures)
 
-(xi] Determine the planet population's social features via
+[xi] Determine the planet population's social features via
 the following procedure. Add to the number given for
 Social Features on the Government Effects Table the
 modifiers given below, to determine the number of
@@ -897,12 +875,12 @@ Social Features Roll       Structure or Feature
 
 31-40      DESIGN or CHOOSE your own feature.
 
-41-42      Ghetto-Izatlon: informal segregation of
+41-42      Ghetto-ization: informal segregation of
 some racial groups; if rolled a second time this
 becomes Racial Segregation: enforced
 segregation of certain racial groups
 
-43-44      Ghetto-Izatlon: informal segregation of
+43-44      Ghetto-ization: informal segregation of
 some social groups; if rolled a second time this
 becomes Social Segregation: enforced
 segregation of certain social/economic groups
@@ -1025,7 +1003,7 @@ perfumes to indicate their current emotional
 state, marital status, openness to sexual
 advances, etc.
 
-61-62   Clothing: the colour, form, and arragnement
+61-62   Clothing: the colour, form, and arrangement
 of the clothing worn by a local serve to
 announce his/her social standing, emotional
 state, marital status, openness to sexual
@@ -1075,7 +1053,7 @@ above the knees; if rolled five times becomes
 as before plus arms above elbows and body
 below neck; if rolled six times becomes entire
 body, face, etc. Each time this feature is
-rolled, roll 010, and if the result is lower than 4,
+rolled, roll D10, and if the result is lower than 4,
 treat it as though it has been rolled twice,
 instead
 
@@ -1256,7 +1234,7 @@ b
 The sum of the Tech. Factor and the Law Level number
 gleaned from the government effects table deter-
 mines the column used on the law level table, below;
-roll 010, and modify it using the modifiers listed below.
+roll D10, and modify it using the modifiers listed below.
 
 Law Level Table
 SUM
@@ -1294,7 +1272,7 @@ be determined by attempting to roll versus an
 SC = 20 + 3 x Law Level
 
 using percentile dice. Success· indicating corruption
-(and OR determining degree of corruption; so yield
+(and QR determining degree of corruption; so yield
 percentage is percentage of officers on the take, if
 you like; QR10 denotes an incorruptible and ideal-
 istic system, QR1 a wholly corrupt one).
@@ -1338,7 +1316,7 @@ character
 up new character
 52-53 Mindwipe for "subversive" behaviour (TL 8); roll
 up new character
-54-58 Handguns are legal, and readily available 59-61    Light Miltiary weapons are readily available 62      Lethal weapons are strictly licensed and
+54-58 Handguns are legal, and readily available 59-61    Light Military weapons are readily available 62      Lethal weapons are strictly licensed and
 controlled, even for police
 63-65 Vigilante action implicitly encouraged by
 establishment
