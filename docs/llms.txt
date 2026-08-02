@@ -26,7 +26,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/character-builder/ — Character Builder
   The interactive, rule-enforcing character builder — the same rules as [Creating Characters](/creating-characters/), l...
 - https://foresight-rpg.com/1986-02-characters/ — Characters
-  Designer's Notes: the character is the most important object in a role-playing setting; like a television program or ...
+  The character's sex should be decided by the player some time during this step.
 - https://foresight-rpg.com/1986-04-combat/ — Combat
   Designer's Notes: the FS combat system is designed, as are many wargames, to use a hex-grid to regulate movement, and...
 - https://foresight-rpg.com/magic-communication/ — Communication
@@ -80,7 +80,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/ — ForeSight RPG
   A modern edition of the ForeSight RPG: one resolution rule (Score × Ease Factor), lethal fast combat, and a careful generative magic system.
 - https://foresight-rpg.com/1986-01-foreword/ — ForeWord — Introduction & Definitions
-  Designer's Notes: ForeSight (abbreviated FS) was originally intended as a science-fiction based role-playing game, bu...
+  In general, the rules are formatted as follows:
 - https://foresight-rpg.com/magic-form/ — Form
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **5m** and last **30sec**; the usual props ...
 - https://foresight-rpg.com/magic-image/ — Image

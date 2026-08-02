@@ -13,9 +13,14 @@
 
 The out-of-print 1986 rules are hard to find, and a number of players want a faithful, readable copy very badly. So rather than sit on a private extraction, it's public — rough edges and all — as a base the community can correct toward a fully-restored original.
 
+## Download
+
+- **[ForeSight 1986 — restoration ePub](/foresight-rpg-foresight-1986.epub)** — this restoration as an e-book (work in progress).
+- **[ForeSight 1986 — original scan (PDF, 37 MB)](/foresight-1986.pdf)** — the source scan; print it, or read it alongside these pages as the ground truth.
+
 ## Read alongside the original
 
-Every chapter is machine-extracted, so **the source scan is the ground truth**. Download it and compare: **[ForeSight 1986 — original scan (PDF, 37 MB)](/foresight-1986.pdf)**. Each page here carries a small **`ForeSight 1986 · p.N ↗`** link that opens the PDF at that exact page — so a correction can point right at the original.
+Every chapter is machine-extracted, so **the source scan is the ground truth** — compare against the PDF above. Each page here carries a small **`ForeSight 1986 · p.N ↗`** link that opens the PDF at that exact page, so a correction can point right at the original.
 
 ## How the extraction works (so you can read around the noise)
 

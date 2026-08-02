@@ -7,6 +7,8 @@ A streamlined, modern edition of the **ForeSight** tabletop RPG, built on the un
 
 Use the navigation to browse the rules one-pagers, or open the live **[Character Builder](/character-builder/)**.
 
+**Download the book:** the streamlined edition as an **[ePub](/foresight-rpg.epub)** — or the original **[ForeSight 1986](/foresight-1986/)** as a restoration ePub + source-scan PDF.
+
 ## This is work-in-progress
 
 If you have a problem with these rules [file an issue](https://github.com/tonioloewald/foresight-rpg/issues). But remember, the goal of ForeSight is to be "all the rules you can remember", so producing big lists of stuff or complex definitive procedures for things (like Aftermath's bullet impact resolution flowchart, or Universe's wilderness encounter system, or even RuneQuest 3's Dropped Oil Lamp Table) is not the point.
