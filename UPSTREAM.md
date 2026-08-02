@@ -108,7 +108,7 @@ export-and-PR flow rather than the dev endpoint.
 it lands, crowd-sourcing stays "file a GitHub issue/PR" (the current landing-page ask). The public
 persistence path is a foresight-side decision anyway — Firestore backend (planned) vs edit→export→PR.
 
-## ⚠️ OPEN — tosijs-ui: auto-surface download links for built ePub volumes
+## ✅ RESOLVED — tosijs-ui: auto-surface download links for built ePub volumes
 
 **Issue:** https://github.com/tonioloewald/tosijs-ui/issues/46 (Tonio implements — do not edit tosijs-ui from here)
 **Raised:** 2026-08-02, against tosijs-ui 1.9.2.
@@ -120,5 +120,11 @@ rots on rename. We shipped a valid 1986 ePub that nobody could download until re
 it. Asked for an auto download nav entry / a fillable `<!-- epub-downloads -->` marker / at
 minimum a documented helper exposing each volume's title + URL.
 
-**Workaround:** hand-authored links in `README.md` and the 1986 landing page, hard-coding
-the `.epub` filenames.
+**Fixed in:** tosijs-ui **1.9.3** — three ways to surface volumes: a `<!-- epub-downloads -->`
+marker (fills with a link per volume), a `/epub-volumes.json` manifest, and `listEpubVolumes()`
+from `tosijs-ui/site`. The ePub build now names its output through the same helper, so a link
+can't point at a name nothing wrote.
+**Consumed:** on `tosijs-ui@1.9.3`. The hand-written links on the home page and the 1986 landing
+page were replaced with the marker; verified it's consumed (no leftover comment), both volumes
+render with their real titles, and the manifest publishes. NB the marker is a **single** tag
+replaced wholesale — not a paired block like `<!-- toc -->`.
