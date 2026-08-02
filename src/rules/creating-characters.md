@@ -32,7 +32,9 @@ Characters have seven attributes. Each represents both a general ability (how st
 | WP | Willpower | Strength of will and determination |
 | AP | Appearance | Physical attractiveness to others of the same species |
 
-A character has **one score** per attribute. Normal human attributes range from 5 to 16, with 9 typical of the general population. There is no separate "inherent" and "trained" value: an attribute is what it is, and improving one is possible but expensive — markedly more so beyond 12. Genetics is not fair.
+A character has **one score** per attribute. Normal human attributes range from 5 to 16, with 9 typical of the general population. Improving an attribute is possible but expensive — markedly more so beyond 12. Genetics is not fair.
+
+> **Simplified from earlier editions:** there's no separate "inherent" and "trained" value any more — an attribute is simply what it is.
 
 *Designer's Note: readers of earlier editions will notice DX and AG have merged into Coordination, and EM has folded into PC. Remarkable agility, sleight of hand, or unusual empathy are talents and quirks — deviations from the default, not separate attributes (we don't want eyesight or left-hand coordination becoming attributes either). AP remains, because looks are not correlated with anything else and pretending they don't matter is a falsehood of exactly the kind this game was designed to avoid: a good-looking person can do things an ugly person can't, just as surely as an agile or smart person can.*
 
