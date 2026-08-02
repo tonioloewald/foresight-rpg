@@ -277,6 +277,40 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Cost', prop: 'cost' },
     ],
   },
+  // The original Vehicle Table (p.58): every sample vehicle. PUR (pursuit), MAN
+  // (maneuver), RED (redline) are ease-factor ratings; CRUISE/MAX in km/h; CLG =
+  // ceiling (or dive depth for subs); DT = damage track; SIZ = size class; CGO =
+  // cargo (kg), PAS = passengers. Multi-mode vehicles note alternate modes.
+  '1986-vehicles.json': {
+    file: '1986-vehicles.json',
+    noun: 'vehicle',
+    idPrefix: 'veh86',
+    columns: [
+      { prop: 'name', name: 'Vehicle', width: 170 },
+      { prop: 'group', name: 'Class', width: 96 },
+      { prop: 'tl', name: 'TL', width: 44, align: 'center' },
+      { prop: 'cruise', name: 'Cruise', width: 72, align: 'center' },
+      { prop: 'max', name: 'Max', width: 64, align: 'center' },
+      { prop: 'type', name: 'Type', width: 64, align: 'center' },
+    ],
+    card: [
+      { label: 'Class', prop: 'group' },
+      { label: 'Cost', prop: 'cost' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Pursuit', prop: 'pur' },
+      { label: 'Maneuver', prop: 'man' },
+      { label: 'Redline', prop: 'red' },
+      { label: 'Cruise', prop: 'cruise' },
+      { label: 'Max', prop: 'max' },
+      { label: 'Ceiling', prop: 'clg' },
+      { label: 'DT', prop: 'dt' },
+      { label: 'Size', prop: 'siz' },
+      { label: 'Type', prop: 'type' },
+      { label: 'Cargo', prop: 'cargo' },
+      { label: 'Passengers', prop: 'pass' },
+    ],
+    body: 'notes',
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
@@ -405,6 +439,20 @@ export const MATRIX_SPECS: Record<string, MatrixSpec> = {
       { head: 'DC 3', cells: ['Blowtorch', 'Hot Metal', 'Conc. HCl', 'Liquid Air', 'Mains'] },
       { head: 'DC 5', cells: ['Cutting Torch', 'Molten Metal', 'Hot H₂SO₄', 'Cryogenics', 'Heavy Duty'] },
     ],
+  },
+  // The original Terrain Value Chart (p.58): terrain Contour × terrain Feature →
+  // the terrain value that divides a vehicle's speed (Modified Terrain Value / 2).
+  // Higher = harder going. (Suburban/Urban features extend this — see the page.)
+  '1986-terrain': {
+    rowAxis: 'Contour ↓',
+    colAxis: 'Terrain Feature →',
+    cols: ['Barren [BN]', 'Lt.Veg [LV]', 'Md.Veg [MV]', 'Hv.Veg [HV]', 'Marsh [MA]', 'Ice [IC]'],
+    rows: [
+      { head: 'Broken [BR]', cells: ['3', '4', '5', '8', '—', '5'] },
+      { head: 'Uneven [UN]', cells: ['1', '2', '3', '6', '3', '3'] },
+      { head: 'Flat [FL]', cells: ['1', '1', '2', '4', '2', '2'] },
+    ],
+    muted: ['—'],
   },
 }
 

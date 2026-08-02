@@ -140,7 +140,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/magic-touch/ — Touch
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **50m** and last **10min**; the usual props...
 - https://foresight-rpg.com/1986-05-travel/ — Travel & Vehicles
-  Note: *aircraft use the net terrain value as a negative modifier to any Aircraft roll to land the aircraft in that so...
+  .ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
 - https://foresight-rpg.com/vehicles/ — Vehicles
   .ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
 - https://foresight-rpg.com/magic-water/ — Water
