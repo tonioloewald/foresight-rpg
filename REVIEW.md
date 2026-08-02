@@ -43,6 +43,13 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **Swap the remaining collections to entity views** — add specs to `src/entity-specs.ts` for `background-factors`, `fields`, `magic-fundamentals`, then replace the hand-written Markdown tables in the one-pagers with `<!-- entity-view: … -->` blocks. (`magic-applications.json` is nested — 23 fundamentals × 232 applications — so it needs a grouped renderer, not the flat one.)
 - [ ] `character-builder.md` stays excluded from the book (`site.config.ts` → `book.exclude`): pure JS, no static substrate, so it's a stub chapter in print.
 
+## Reading the 1986 source: derive, don't guess
+- **The 1986 playtesters were maths / comp-sci / physics / economics people**, and the text was proofread on top of that. So the rules are **internally consistent** — which makes a mangled formula *recoverable by derivation* rather than a coin-flip. Use this when OCR wrecks a formula: reconstruct it, then check it against the physics/arithmetic and against the same formula where it appears elsewhere in the book.
+  - Worked: `96√(s/a)` travel-time constant — falls out of 2√(1.5×10¹¹·s/5a).
+  - Worked: "ten minutes (`SOO` seconds…)" → **600** — confirmed twice over by "ten minutes" and "200 turns of ground combat" × 3s.
+  - Worked: misjump software recovery `(5+D5)/(TL−5)` minutes — **verified**, not a guess: the chapter says only **TL7+** ships can carry interstellar drives, so the denominator is always ≥2 (no singularity), recovery falls monotonically with TL (TL7 3–5 min → TL9 1.5–2.5 min), and `D5` is a defined ForeSight die (D10 halved, round up).
+- Corollary: where a reconstruction *can't* be made consistent, that's a signal the reading is wrong — leave it verbatim and flag it rather than shipping a plausible-looking number.
+
 ## Editorial principles (apply as we go)
 - [ ] **Edition-change explanations belong in end notes**, not inline in a rule. A note that some rule "no longer exists", referencing terms we no longer use, breaks the flow of an otherwise simple rule — the opposite of the goal. Interim: a blockquote aside right after the rule (done for the attributes "no inherent/trained value" note). **Target: real end notes per section.** *Exception (agreed):* the magic fundamentals' brief "(formerly X)" subtitles stay — a name change doesn't add complexity, and the old name often carries explanatory power.
 - [x] ~~**No dropped-attribute references (DX/AG/EM)**~~ — purged from modern rules + data (armor.json penalties, magic-applications.json). One explanatory block under the attributes list is the *only* place they appear. **Watch for regressions** when adding data or porting 1986/2004 content.
