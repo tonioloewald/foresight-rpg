@@ -525,6 +525,22 @@ export const MATRIX_SPECS: Record<string, MatrixSpec> = {
   // class × the radiation Result, giving the D10 roll needed for that result.
   // This is the table the 1987 errata corrected (a displaced bottom row); this
   // printing already shows it correct. Modifiers are noted on the page.
+  // The original Finding Cover Before Combat table (p.43): terrain value × the
+  // Quality Rating of a Scan roll → the cover a character reaches. A `*` means
+  // the character ends up adjacent to (not in) such a hex. Suburban/Urban get a
+  // higher row for the ready cover there. A character may take any worse result.
+  '1986-finding-cover': {
+    rowAxis: 'Terrain Value ↓',
+    colAxis: 'Quality Rating of Scan roll →',
+    cols: ['QR1', 'QR2', 'QR3', 'QR4'],
+    rows: [
+      { head: '0, 1', cells: ['½ cover', '*½ cover', '—', '—'] },
+      { head: '2, 3', cells: ['*¾ cover', '½ cover', '*½ cover', '—'] },
+      { head: '4, 5, SU', cells: ['¾ cover', '½ cover', '*¾ cover', '*½ cover'] },
+      { head: '6+, UR', cells: ['*blocked', '¾ cover', '½ cover', '*¾ cover'] },
+    ],
+    muted: ['—'],
+  },
   '1986-incident-radiation': {
     rowAxis: 'Result ↓',
     colAxis: 'Star spectral class →',

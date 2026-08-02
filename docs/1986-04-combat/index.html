@@ -59,10 +59,20 @@
 <p>A character has a line of sight from point A to point B if he/she could see point B from point A. Often the presence or lack of a line of sight will be a matter for the GM to decide, so specific rules are not provided (eg. a thick glass wall would form blocking hexes for purposes of movement and missile fire, but not for line of sight (it would stop [most] lasers since the vapourised glass would absorb and refract the beam).</p>
 <p>The GM should also decide where the characters (player and non-player) are located, and which direction they are facing, using events leading up to the combat as a guide. Sometimes it will be stated that one side or the other has been surprised, in which case that side automatically has worse initiative in the first turn than any unsurprised side (but determines initiative with regard to other surprised sides normally), and none of its members may attempt to find cover before combat.</p>
 <p><strong>Finding Cover Before Combat</strong></p>
-<p><strong>Procedure:</strong> a character who finds him/herself about to become involved in a combat will probably try to get behind some sort of cover. Any character in an unsurprised side at the beginning of a combat may attempt to find cover: he/she makes a Scan roll and then consults the following table: Quality Rating of Scan Roll Terrain Value</p>
-<p>0,1 1/2 cover * 1/2 cover 2,3
-<em>3/4 cover 1/2 cover * 1/2 cover 4,5, SU</em>* 3/4 cover 1/2 cover *3/4 cover *1/2 cover 6+, UR *blocked 3/4 cover 1/2 cover *3/4 cover
-Note: *the character is adjacent to, but not in, such a hex. **Suburban (SU) and Urban (UR) areas have a low value reflecting the ease of movement through them; they are given higher places here owing to the ready availability of cover in them. See the Vehicle rules for more information on Terrain values. A character may choose any result under a higher (ie. worse) quality rating than the one he/she achieved.</p>
+<p><strong>Procedure:</strong> a character who finds him/herself about to become involved in a combat will probably try to get behind some sort of cover. Any character in an unsurprised side at the beginning of a combat may attempt to find cover: he/she makes a Scan roll and then consults the following table.</p>
+<!-- matrix: 1986-finding-cover -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="4">Quality Rating of Scan roll →</th></tr><tr><th class="mx-colhead">QR1</th><th class="mx-colhead">QR2</th><th class="mx-colhead">QR3</th><th class="mx-colhead">QR4</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="4">Terrain Value ↓</th><th class="mx-rowhead">0, 1</th><td>½ cover</td><td>*½ cover</td><td class="mx-blocked">—</td><td class="mx-blocked">—</td></tr><tr><th class="mx-rowhead">2, 3</th><td>*¾ cover</td><td>½ cover</td><td>*½ cover</td><td class="mx-blocked">—</td></tr><tr><th class="mx-rowhead">4, 5, SU</th><td>¾ cover</td><td>½ cover</td><td>*¾ cover</td><td>*½ cover</td></tr><tr><th class="mx-rowhead">6+, UR</th><td>*blocked</td><td>¾ cover</td><td>½ cover</td><td>*¾ cover</td></tr></tbody></table></div>
+<!-- /matrix -->
+
+<p>*A <code>*</code> means the character ends up <strong>adjacent to</strong> (not in) such a hex. <strong>SU</strong>burban and <strong>UR</strong>ban areas sit on a higher row — easy to move through, but full of ready cover (see the Vehicle rules on Terrain values). A character may choose any result under a <strong>higher</strong> (ie. worse) Quality Rating than the one they achieved.</p>
 <h4>[4.2] Combat Resolution</h4>
 <p><strong>Procedure:</strong> Combat in FS is divided into turns, each representing three seconds of time in the GameWorld, and ceases when all sides have agreed to cease hostilities, or only one side remains functional. Each turn is divided as follows into segments, which are resolved in the order described:</p>
 <p><strong>[i] Initiative Determination Segment:</strong> each side determines its initiative. A representative of each side makes an Initiative roll (modified for armour visibility and wound status, etc.). A character with raised hands, or some such impediment, is assumed to automatically have QR 10 initiative.</p>
@@ -584,28 +594,7 @@ Note: *the character is adjacent to, but not in, such a hex. **Suburban (SU) and
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=52">ForeSight 1986 · p.52 ↗</a></div>
 
-<pre><code>Sample Terrain
-Flat, med. ueg.
-Temperate Climate
-
-   Blocked (Tree Trunk)
-    1/2 cover; bush
-   Grass: slippery if wet.
-   Moss: slippery
-
-Sample Terrain
-Small Rpartment
-
-   Wall
-   Sofa, Chair, or Bed
-   Table
-    Shelving
-    Misc. Built-ins
-
-    Door
-
-    Window
-</code></pre>
+<p><em>[Sample terrain maps in the original — two hex-grid diagrams (a temperate outdoor scene and a small apartment interior) illustrating blocked / half-cover / three-quarter-cover hexes. See the source-PDF page link above; a clearer replacement is planned.]</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=53">ForeSight 1986 · p.53 ↗</a></div>
 
 <h4>Armour Protection</h4>
@@ -777,11 +766,43 @@ Small Rpartment
 <p><strong>Additional Rules for Melee Combat</strong></p>
 <p><strong>Combat Harness</strong></p>
 <p>While exoskeletons give their wearers artificially augmented strength and mobility, they are not wholly optimised for combat. As armour becomes stronger, more powerful weapons are required to punch through it. and some weapon technicians feel that powerful close combat weapons are the answer to this problem. A combat harness fits onto the arms (and, to a lesser extent, legs) of a full exoskeleton, and involves a battery of industrial lasers, high-tech glove guns, and sharp projections. When a character with combat harness makes an unarmed melee attack against somebody, he/she may use either the melee DC modifier (on top of that for the exoskeleton, and his/her own UCDC), or the beam, or impact. DC ratings of the harness used. The combat harness is, obviously, extremely deadly. For all other purposes (eg. encumberance) it counts as part of the exoskeleton it is attached to.</p>
-<p><strong>Combat Harness Characteristics</strong> — TL Cost Mass Melee B</p>
-<p>7.2k B.4k B.4k</p>
-<p>Bkg 5kg 4kg</p>
-<p>Impact</p>
-<p>Beam</p>
+<p><strong>Combat Harness Characteristics:</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">TL</th>
+<th align="center">Cost</th>
+<th align="center">Mass</th>
+<th align="center">Melee</th>
+<th align="center">Impact</th>
+<th align="center">Beam</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">7</td>
+<td align="center">7.2k</td>
+<td align="center">8kg</td>
+<td align="center">+6</td>
+<td align="center">11</td>
+<td align="center">11</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">8.4k</td>
+<td align="center">5kg</td>
+<td align="center">+6</td>
+<td align="center">13</td>
+<td align="center">12</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">8.4k</td>
+<td align="center">4kg</td>
+<td align="center">+6</td>
+<td align="center">14</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
 <p><strong>Minimum Strength for Weapon Use</strong></p>
 <p>A person may not easily use a melee weapon if the mass of the weapon (in kg) plus five (rounded off) exceeds his/her ST; if this is the case, then he/she suffers an EF penalty equal to his/her ST minus the mass of the weapon, minus five (eg. a ST 8 person using a 5kg weapon suffers an 8 - 5 - 5 = -2 EF penalty when using said weapon).</p>
 <p><strong>Parrying</strong></p>
