@@ -1,0 +1,10 @@
+[
+  { "name": "Augmented (TL7)", "sl": "6", "mv": "2", "dc": "+2", "st": "+4", "pow": "25", "mass": "35", "tl": "7", "cost": "8k", "tags": ["sf"] },
+  { "name": "Augmented (TL8)", "sl": "3", "mv": "2", "dc": "+2", "st": "+4", "pow": "100", "mass": "15", "tl": "8", "cost": "8k", "tags": ["sf"] },
+  { "name": "Augmented (TL9)", "sl": "3", "mv": "2", "dc": "+2", "st": "+4", "pow": "∞", "mass": "12", "tl": "9", "cost": "8k", "tags": ["sf"] },
+  { "name": "Combat (TL7)", "sl": "8", "mv": "2", "dc": "+4", "st": "+6", "pow": "25", "mass": "45", "tl": "7", "cost": "12k", "tags": ["sf"] },
+  { "name": "Combat (TL8)", "sl": "5", "mv": "2", "dc": "+4", "st": "+6", "pow": "100", "mass": "20", "tl": "8", "cost": "12k", "tags": ["sf"] },
+  { "name": "Combat (TL9)", "sl": "5", "mv": "3", "dc": "+4", "st": "+6", "pow": "∞", "mass": "15", "tl": "9", "cost": "12k", "tags": ["sf"] },
+  { "name": "Power-Roo (TL8)", "sl": "8", "mv": "4", "dc": "+3", "st": "+4", "pow": "200", "mass": "30", "tl": "8", "cost": "15k", "tags": ["sf"] },
+  { "name": "Power-Roo (TL9)", "sl": "6", "mv": "5", "dc": "+3", "st": "+4", "pow": "∞", "mass": "20", "tl": "9", "cost": "15k", "tags": ["sf"] }
+]

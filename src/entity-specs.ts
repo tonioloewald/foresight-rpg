@@ -311,6 +311,60 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
     ],
     body: 'notes',
   },
+  // The original Armour Protection table (p.53). Protection by damage type —
+  // M(elee), I(mpact/stun), B(eam) — where an `A`/`AA` suffix marks the armour's
+  // absorb rating. Spd = speed loss per limb, Con = concealability, Vis = the
+  // Search/Scan modifier under a helm. Mass/Cost are per location.
+  '1986-armour.json': {
+    file: '1986-armour.json',
+    noun: 'armour',
+    idPrefix: 'arm86',
+    columns: [
+      { prop: 'name', name: 'Armour', width: 150 },
+      { prop: 'm', name: 'M', width: 48, align: 'center' },
+      { prop: 'i', name: 'I', width: 48, align: 'center' },
+      { prop: 'b', name: 'B', width: 48, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 44, align: 'center' },
+      { prop: 'cost', name: 'Cost', width: 60, align: 'center' },
+    ],
+    card: [
+      { label: 'Melee', prop: 'm' },
+      { label: 'Impact', prop: 'i' },
+      { label: 'Beam', prop: 'b' },
+      { label: 'Speed', prop: 'spd' },
+      { label: 'Concealability', prop: 'con' },
+      { label: 'Vision', prop: 'vis' },
+      { label: 'Mass', prop: 'mass' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Cost', prop: 'cost' },
+    ],
+  },
+  // The original Exoskeletons table (p.53) — powered frames for heavy armour.
+  // SL = min EVA skill level; Mv = move multiplier; DC/ST = melee/strength bonus;
+  // Pow = combat-turns of power (∞ = reactor-fed).
+  '1986-exoskeletons.json': {
+    file: '1986-exoskeletons.json',
+    noun: 'exoskeleton',
+    idPrefix: 'exo86',
+    columns: [
+      { prop: 'name', name: 'Exoskeleton', width: 160 },
+      { prop: 'dc', name: 'DC', width: 48, align: 'center' },
+      { prop: 'st', name: 'ST', width: 48, align: 'center' },
+      { prop: 'mass', name: 'Mass', width: 56, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 44, align: 'center' },
+      { prop: 'cost', name: 'Cost', width: 60, align: 'center' },
+    ],
+    card: [
+      { label: 'EVA SL', prop: 'sl' },
+      { label: 'Move', prop: 'mv' },
+      { label: 'DC bonus', prop: 'dc' },
+      { label: 'ST bonus', prop: 'st' },
+      { label: 'Power', prop: 'pow' },
+      { label: 'Mass', prop: 'mass' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Cost', prop: 'cost' },
+    ],
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
