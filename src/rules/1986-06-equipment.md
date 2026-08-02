@@ -39,57 +39,17 @@ The following table gives basic sizes and costs for toolkits of varying efficaci
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=66">ForeSight 1986 · p.66 ↗</a></div>
 
-```
-             Not only do sunglasses enable you to look amazingly smug, they
-             cut out the high frequency light of type A and F stars, and make
-             you more inscrutable (ie. when you wear reflective sunglasses,
-             anyone looking at you gets a -1 modifier to Empathy; they also
-             tend to be less friendly, but you're a Player Character, so who
-             cares?). Available from any drugstore ... TL5, 200g, 10svu.
+Not only do sunglasses enable you to look amazingly smug, they cut out the high frequency light of type A and F stars, and make you more inscrutable (ie. when you wear reflective sunglasses, anyone looking at you gets a -1 modifier to Empathy; they also tend to be less friendly, but you're a Player Character, so who cares?). Available from any drugstore ... TL5, 200g, 10svu.
 
+Climb kits are extremely unpopular with mountain climbers; they take all the fun out of falling off mountains. The pistol-like attachment can fire a titanium alloy spike into soft rock from a vertical distance of 200m, or an adhesive anchor 300m (PM -1, Short 10, Long 30-50, DC 61, forget about reloading in combat). The harness will pull 100kg that far in 2 minutes (longer if the 100kg doesn't like being banged against rockfaces). Includes 500m of line. In general game terms it gives a +2 to Climbing. TL6, 4kg, 250svu. 500m line: 1kg, 50svu. Spike: 150g, 20svu.
 
-               Climb kits are extremely unpopular with mountain climbers;
-               they take all the fun out of falling off mountains. The pistol-like
-               attachment can fire a titanium alloy spike into soft rock from a
-               vertical distance of 200m, or an adhesive anchor 300m (PM -1,
-               Short 10, Long 30-50, DC 61, forget about reloading in combat).
-               The harness will pull 100kg that far in 2 minutes (longer if the
-               100kg doesn't like being banged against rockfaces). Includes
-               500m of line. In general game terms it gives a +2 to Climbing.
-               TL6, 4kg, 250svu. 500m line: 1kg, 50svu. Spike: 150g, 20svu.
+Briefcases not only look sharp, they're useful for carrying [read: concealing] day-to-day equipment and items, such as packed lunches, newspapers, and DEXAXTM needle pistol ammunition. This case features genuine imitiation leather finish, and a seventeen digit combination lock.
 
+The Sirius Cybernetics Corporation SuperHacker Intelligent Termlnal™ was designed for the express purpose of bypassing modern computer security systems. As such, it gives its user a +1 modifier to Programming tasks directed at penetrating a security system on top of any modifiers for other equipment he/she is using. Of course, possession of superhackers is frowned upon by the police ...
 
-       Briefcases not only look sharp, they're useful for carrying [read:
-       concealing] day-to-day equipment and items, such as packed lunches,
-       newspapers, and DEXAXTM needle pistol ammunition. This case features
-       genuine imitiation leather finish, and a seventeen digit combination lock.
+In ForeSight, suits of armour (including spacesuits, powered armour, and the like) are pretty well custom built. See [4.4] for details on armour.
 
-
-          The Sirius Cybernetics Corporation SuperHacker Intelligent
-          Termlnal™ was designed for the express purpose of bypassing
-          modern computer security systems. As such, it gives its user a +1
-          modifier to Programming tasks directed at penetrating a security
-          system on top of any modifiers for other equipment he/she is using.
-          Of course, possession of superhackers is frowned upon by the police ...
-
-
-
-
-           In ForeSight, suits of
-           armour (including
-           spacesuits, powered
-           armour, and the like) are
-           pretty well custom built.
-           See [4.4] for details on
-           armour.
-
-
-
-                                                        section is vehicles,
-Likewise, you'll find information on the weapons        which are covered in
-used in ForeSight in [4.4] Combat Equipment.                  Travel and Vehicles.
-
-```
+section is vehicles, Likewise, you'll find information on the weapons        which are covered in used in ForeSight in [4.4] Combat Equipment.                  Travel and Vehicles.
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=67">ForeSight 1986 · p.67 ↗</a></div>
 
