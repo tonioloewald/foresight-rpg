@@ -1,0 +1,12 @@
+[
+  { "name": "Cheap/Old/Rusty", "pur": "-1", "man": "-1", "red": "+1", "speed": "×0.8", "dt": "×0.8", "cargo": "×1.0", "pass": "×1.0", "cost": "×0.6", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Compact", "pur": "0", "man": "+1", "red": "0", "speed": "×0.9", "dt": "×0.8", "cargo": "×0.8", "pass": "×0.8", "cost": "×0.8", "size": "−1", "tags": ["standard", "modern"] },
+  { "name": "Luxury", "pur": "-1", "man": "-1", "red": "0", "speed": "×1.0", "dt": "×1.25", "cargo": "×1.5", "pass": "×1.5", "cost": "×2.0", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Sporty", "pur": "+1", "man": "+1", "red": "-1", "speed": "×1.25", "dt": "×0.8", "cargo": "×0.5", "pass": "×0.5", "cost": "×1.5", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Fast", "pur": "+1", "man": "-1", "red": "-2", "speed": "×1.5", "dt": "×1.5", "cargo": "×1.0", "pass": "×1.0", "cost": "×2.0", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Police/Military", "pur": "+1", "man": "+1", "red": "-1", "speed": "×1.25", "dt": "×1.5", "cargo": "×1.5", "pass": "×1.0", "cost": "×2.5", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Heavy", "pur": "0", "man": "0", "red": "0", "speed": "×1.0", "dt": "×2.0", "cargo": "×1.5", "pass": "×1.5", "cost": "×3.0", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Transport", "pur": "-1", "man": "-2", "red": "0", "speed": "×1.0", "dt": "×1.5", "cargo": "×2.0", "pass": "×5.0", "cost": "×3.0", "size": "+1", "tags": ["standard", "modern"] },
+  { "name": "Utility (loaded)", "pur": "-1", "man": "-1", "red": "-1", "speed": "×1.0", "dt": "×1.0", "cargo": "×3.0", "pass": "×0.5", "cost": "×1.0", "size": "—", "tags": ["standard", "modern"] },
+  { "name": "Utility (unloaded)", "pur": "0", "man": "0", "red": "0", "speed": "—", "dt": "—", "cargo": "—", "pass": "—", "cost": "—", "size": "—", "tags": ["standard", "modern"] }
+]

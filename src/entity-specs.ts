@@ -222,6 +222,33 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Cost', prop: 'cost' },
     ],
   },
+  // The original Vehicle Modification Table (p.109) — adjectives on a base
+  // vehicle. Pur/Man/Red are ease-factor deltas; Speed/DT/Cargo/Pass/Cost are
+  // multipliers; Size shifts the size class.
+  '1986-vehicle-mods.json': {
+    file: '1986-vehicle-mods.json',
+    noun: 'modification',
+    idPrefix: 'vmod86',
+    columns: [
+      { prop: 'name', name: 'Modification', width: 180 },
+      { prop: 'pur', name: 'Pur', width: 52, align: 'center' },
+      { prop: 'man', name: 'Man', width: 52, align: 'center' },
+      { prop: 'red', name: 'Red', width: 52, align: 'center' },
+      { prop: 'speed', name: 'Speed', width: 64, align: 'center' },
+      { prop: 'cost', name: 'Cost', width: 64, align: 'center' },
+    ],
+    card: [
+      { label: 'Pursuit', prop: 'pur' },
+      { label: 'Maneuver', prop: 'man' },
+      { label: 'Redline', prop: 'red' },
+      { label: 'Speed', prop: 'speed' },
+      { label: 'Damage Track', prop: 'dt' },
+      { label: 'Cargo', prop: 'cargo' },
+      { label: 'Passengers', prop: 'pass' },
+      { label: 'Cost', prop: 'cost' },
+      { label: 'Size', prop: 'size' },
+    ],
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
@@ -307,6 +334,36 @@ export const MATRIX_SPECS: Record<string, MatrixSpec> = {
       { head: 'QR1', cells: ['S', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7'] },
     ],
     muted: ['S', '—'],
+  },
+  // The original Damage Track Table (p.109): Damage Track (DT) × wound/damage
+  // status → the damage-point threshold at which that status is reached. `S` =
+  // stun-check only; a blank = that DT skips that status; `Inc[4]`/`Inc[5]` are
+  // Part-Destroyed / Destroyed for equipment. To extend past DT 11, alternately
+  // add the two modifier rows noted on the page.
+  '1986-damage-track': {
+    rowAxis: 'DT ↓',
+    colAxis: 'Wound (Damage) Status →',
+    cols: ['Okay', 'Light', 'Medium', 'Heavy', 'Inc[4] Part', 'Inc[5] Dstr', 'Dead'],
+    rows: [
+      { head: 'A (0.05)', cells: ['0', '', '', '', '', '', 'S'] },
+      { head: 'B (0.1)', cells: ['0', '', 'S', '', '', '', '1'] },
+      { head: 'C (0.2)', cells: ['0', '', 'S', '', '1', '', '2'] },
+      { head: 'D (0.4)', cells: ['0', 'S', '', '1', '2', '', '3'] },
+      { head: 'E (0.6)', cells: ['0', 'S', '1', '2', '3', '', '4'] },
+      { head: 'F (0.8)', cells: ['0', '1', '2', '3', '4', '', '5'] },
+      { head: '1', cells: ['S', '1', '2', '3', '4', '5', '6'] },
+      { head: '2', cells: ['1', '2', '4', '5', '7', '8', '9'] },
+      { head: '3', cells: ['1', '3', '5', '7', '9', '11', '12'] },
+      { head: '4', cells: ['2', '4', '7', '9', '12', '14', '15'] },
+      { head: '5', cells: ['2', '5', '8', '11', '14', '17', '18'] },
+      { head: '6', cells: ['3', '6', '10', '13', '17', '20', '21'] },
+      { head: '7', cells: ['3', '7', '11', '15', '19', '23', '24'] },
+      { head: '8', cells: ['4', '8', '13', '17', '22', '26', '27'] },
+      { head: '9', cells: ['4', '9', '14', '19', '24', '29', '30'] },
+      { head: '10', cells: ['5', '10', '16', '21', '27', '32', '33'] },
+      { head: '11', cells: ['5', '11', '17', '23', '29', '35', '36'] },
+    ],
+    muted: ['S', ''],
   },
 }
 

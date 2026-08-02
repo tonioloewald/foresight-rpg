@@ -187,60 +187,50 @@ Designer&#39;s Notes: a lot of the &quot;source material&quot; for a game like F
 <p>A6</p>
 <!-- 1986 p.109 -->
 
-<pre><code>foreSight Appended Tables 1
+<h4>Vehicle Modification Table</h4>
+<p>*Adjectives on a base vehicle. <strong>Pur</strong>suit, <strong>Man</strong>euver and <strong>Red</strong>line are ease-factor deltas; Speed / DT / Cargo / Pass / Cost are multipliers; Size shifts the size class. <strong>Reconstructed</strong> — verify against the original. (Police/Military carries a footnote in the source.)*</p>
+<!-- entity-view: 1986-vehicle-mods.json -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+.ev-count{font-size:.85em;opacity:.65;white-space:nowrap}
+</style>
+<foresight-table src="1986-vehicle-mods.json" columns="[{&quot;prop&quot;:&quot;name&quot;,&quot;name&quot;:&quot;Modification&quot;,&quot;width&quot;:180},{&quot;prop&quot;:&quot;pur&quot;,&quot;name&quot;:&quot;Pur&quot;,&quot;width&quot;:52,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;man&quot;,&quot;name&quot;:&quot;Man&quot;,&quot;width&quot;:52,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;red&quot;,&quot;name&quot;:&quot;Red&quot;,&quot;width&quot;:52,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;speed&quot;,&quot;name&quot;:&quot;Speed&quot;,&quot;width&quot;:64,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;cost&quot;,&quot;name&quot;:&quot;Cost&quot;,&quot;width&quot;:64,&quot;align&quot;:&quot;center&quot;}]"><div class="ev-static"><table class="ev-table"><thead><tr><th>Modification</th><th align="center">Pur</th><th align="center">Man</th><th align="center">Red</th><th align="center">Speed</th><th align="center">Cost</th></tr></thead><tbody><tr><td><a href="#vmod86-cheap-old-rusty">Cheap/Old/Rusty</a></td><td align="center">-1</td><td align="center">-1</td><td align="center">+1</td><td align="center">×0.8</td><td align="center">×0.6</td></tr><tr><td><a href="#vmod86-compact">Compact</a></td><td align="center">0</td><td align="center">+1</td><td align="center">0</td><td align="center">×0.9</td><td align="center">×0.8</td></tr><tr><td><a href="#vmod86-luxury">Luxury</a></td><td align="center">-1</td><td align="center">-1</td><td align="center">0</td><td align="center">×1.0</td><td align="center">×2.0</td></tr><tr><td><a href="#vmod86-sporty">Sporty</a></td><td align="center">+1</td><td align="center">+1</td><td align="center">-1</td><td align="center">×1.25</td><td align="center">×1.5</td></tr><tr><td><a href="#vmod86-fast">Fast</a></td><td align="center">+1</td><td align="center">-1</td><td align="center">-2</td><td align="center">×1.5</td><td align="center">×2.0</td></tr><tr><td><a href="#vmod86-police-military">Police/Military</a></td><td align="center">+1</td><td align="center">+1</td><td align="center">-1</td><td align="center">×1.25</td><td align="center">×2.5</td></tr><tr><td><a href="#vmod86-heavy">Heavy</a></td><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">×1.0</td><td align="center">×3.0</td></tr><tr><td><a href="#vmod86-transport">Transport</a></td><td align="center">-1</td><td align="center">-2</td><td align="center">0</td><td align="center">×1.0</td><td align="center">×3.0</td></tr><tr><td><a href="#vmod86-utility-loaded">Utility (loaded)</a></td><td align="center">-1</td><td align="center">-1</td><td align="center">-1</td><td align="center">×1.0</td><td align="center">×1.0</td></tr><tr><td><a href="#vmod86-utility-unloaded">Utility (unloaded)</a></td><td align="center">0</td><td align="center">0</td><td align="center">0</td><td align="center">—</td><td align="center">—</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="vmod86-cheap-old-rusty"><h3>Cheap/Old/Rusty</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>+1</dd><dt>Speed</dt><dd>×0.8</dd><dt>Damage Track</dt><dd>×0.8</dd><dt>Cargo</dt><dd>×1.0</dd><dt>Passengers</dt><dd>×1.0</dd><dt>Cost</dt><dd>×0.6</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-compact"><h3>Compact</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>0</dd><dt>Speed</dt><dd>×0.9</dd><dt>Damage Track</dt><dd>×0.8</dd><dt>Cargo</dt><dd>×0.8</dd><dt>Passengers</dt><dd>×0.8</dd><dt>Cost</dt><dd>×0.8</dd><dt>Size</dt><dd>−1</dd></dl></section><section class="ev-card" id="vmod86-luxury"><h3>Luxury</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>0</dd><dt>Speed</dt><dd>×1.0</dd><dt>Damage Track</dt><dd>×1.25</dd><dt>Cargo</dt><dd>×1.5</dd><dt>Passengers</dt><dd>×1.5</dd><dt>Cost</dt><dd>×2.0</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-sporty"><h3>Sporty</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>-1</dd><dt>Speed</dt><dd>×1.25</dd><dt>Damage Track</dt><dd>×0.8</dd><dt>Cargo</dt><dd>×0.5</dd><dt>Passengers</dt><dd>×0.5</dd><dt>Cost</dt><dd>×1.5</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-fast"><h3>Fast</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>-2</dd><dt>Speed</dt><dd>×1.5</dd><dt>Damage Track</dt><dd>×1.5</dd><dt>Cargo</dt><dd>×1.0</dd><dt>Passengers</dt><dd>×1.0</dd><dt>Cost</dt><dd>×2.0</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-police-military"><h3>Police/Military</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>-1</dd><dt>Speed</dt><dd>×1.25</dd><dt>Damage Track</dt><dd>×1.5</dd><dt>Cargo</dt><dd>×1.5</dd><dt>Passengers</dt><dd>×1.0</dd><dt>Cost</dt><dd>×2.5</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-heavy"><h3>Heavy</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>0</dd><dt>Speed</dt><dd>×1.0</dd><dt>Damage Track</dt><dd>×2.0</dd><dt>Cargo</dt><dd>×1.5</dd><dt>Passengers</dt><dd>×1.5</dd><dt>Cost</dt><dd>×3.0</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-transport"><h3>Transport</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>-2</dd><dt>Redline</dt><dd>0</dd><dt>Speed</dt><dd>×1.0</dd><dt>Damage Track</dt><dd>×1.5</dd><dt>Cargo</dt><dd>×2.0</dd><dt>Passengers</dt><dd>×5.0</dd><dt>Cost</dt><dd>×3.0</dd><dt>Size</dt><dd>+1</dd></dl></section><section class="ev-card" id="vmod86-utility-loaded"><h3>Utility (loaded)</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>-1</dd><dt>Speed</dt><dd>×1.0</dd><dt>Damage Track</dt><dd>×1.0</dd><dt>Cargo</dt><dd>×3.0</dd><dt>Passengers</dt><dd>×0.5</dd><dt>Cost</dt><dd>×1.0</dd><dt>Size</dt><dd>—</dd></dl></section><section class="ev-card" id="vmod86-utility-unloaded"><h3>Utility (unloaded)</h3><dl class="ev-fields"><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>0</dd><dt>Speed</dt><dd>—</dd><dt>Damage Track</dt><dd>—</dd><dt>Cargo</dt><dd>—</dd><dt>Passengers</dt><dd>—</dd><dt>Cost</dt><dd>—</dd><dt>Size</dt><dd>—</dd></dl></section></div></div></foresight-table>
+</div>
+<!-- /entity-view -->
 
-Vehicle Modification Table
+<h4>Damage Track Table</h4>
+<p><em>Damage Track (DT) × wound/damage status → the damage-point threshold at which that status is reached. <strong>S</strong> = a stun-check only; a blank cell = that DT skips that status; <strong>Inc[4] / Inc[5]</strong> are Part-Destroyed / Destroyed for equipment. To extend past DT 11, alternately add the two modifier rows from the original. <strong>Reconstructed</strong> from the pixel-art grid.</em></p>
+<!-- matrix: 1986-damage-track -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+.mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
+.mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-colhead,.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="7">Wound (Damage) Status →</th></tr><tr><th class="mx-colhead">Okay</th><th class="mx-colhead">Light</th><th class="mx-colhead">Medium</th><th class="mx-colhead">Heavy</th><th class="mx-colhead">Inc[4] Part</th><th class="mx-colhead">Inc[5] Dstr</th><th class="mx-colhead">Dead</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="17">DT ↓</th><th class="mx-rowhead">A (0.05)</th><td>0</td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked">S</td></tr><tr><th class="mx-rowhead">B (0.1)</th><td>0</td><td class="mx-blocked"></td><td class="mx-blocked">S</td><td class="mx-blocked"></td><td class="mx-blocked"></td><td class="mx-blocked"></td><td>1</td></tr><tr><th class="mx-rowhead">C (0.2)</th><td>0</td><td class="mx-blocked"></td><td class="mx-blocked">S</td><td class="mx-blocked"></td><td>1</td><td class="mx-blocked"></td><td>2</td></tr><tr><th class="mx-rowhead">D (0.4)</th><td>0</td><td class="mx-blocked">S</td><td class="mx-blocked"></td><td>1</td><td>2</td><td class="mx-blocked"></td><td>3</td></tr><tr><th class="mx-rowhead">E (0.6)</th><td>0</td><td class="mx-blocked">S</td><td>1</td><td>2</td><td>3</td><td class="mx-blocked"></td><td>4</td></tr><tr><th class="mx-rowhead">F (0.8)</th><td>0</td><td>1</td><td>2</td><td>3</td><td>4</td><td class="mx-blocked"></td><td>5</td></tr><tr><th class="mx-rowhead">1</th><td class="mx-blocked">S</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr><tr><th class="mx-rowhead">2</th><td>1</td><td>2</td><td>4</td><td>5</td><td>7</td><td>8</td><td>9</td></tr><tr><th class="mx-rowhead">3</th><td>1</td><td>3</td><td>5</td><td>7</td><td>9</td><td>11</td><td>12</td></tr><tr><th class="mx-rowhead">4</th><td>2</td><td>4</td><td>7</td><td>9</td><td>12</td><td>14</td><td>15</td></tr><tr><th class="mx-rowhead">5</th><td>2</td><td>5</td><td>8</td><td>11</td><td>14</td><td>17</td><td>18</td></tr><tr><th class="mx-rowhead">6</th><td>3</td><td>6</td><td>10</td><td>13</td><td>17</td><td>20</td><td>21</td></tr><tr><th class="mx-rowhead">7</th><td>3</td><td>7</td><td>11</td><td>15</td><td>19</td><td>23</td><td>24</td></tr><tr><th class="mx-rowhead">8</th><td>4</td><td>8</td><td>13</td><td>17</td><td>22</td><td>26</td><td>27</td></tr><tr><th class="mx-rowhead">9</th><td>4</td><td>9</td><td>14</td><td>19</td><td>24</td><td>29</td><td>30</td></tr><tr><th class="mx-rowhead">10</th><td>5</td><td>10</td><td>16</td><td>21</td><td>27</td><td>32</td><td>33</td></tr><tr><th class="mx-rowhead">11</th><td>5</td><td>11</td><td>17</td><td>23</td><td>29</td><td>35</td><td>36</td></tr></tbody></table></div>
+<!-- /matrix -->
 
- Description            Pur      Man     Red Speed DT Cargo Pass Cost
-
- Cheap/Old/Rusty         -1       -1     +1         0.8    0.8  1.0         1.0   0.6
- Compact                   0      +1       0        0.9    0.8  0.8         0.8   0.8 Size -1
- Luxury                   -1       -1      0        1.0    1.25 1.5         1.5   2.0
- Sporty                  +1       +1      -1        1.25   0.8  0.5         0.5   1.5
- Fast                    +1        -1     -2        1.5    1.5  1.0         1.0   2.0
- Police/Military·        +1       +1      -1        1.25   1.5  1.5         1.0   2.5
-
- Heavy                       0     0      0         1.0    2.0   1.5        1.5   3.0
- Transport                  -1    -2      0         1.0    1.5   2.0        5.0   3.0 Size +1
- Utility (loaded)           -1    -1     -1         1.0    1.0   3.0        0.5   1.0
-        (unloaded)           0     0      0
-
- Damage Track Table
-
-                                 Wound (Damage) Status
-                                                  Part Destroyed
- DT         Okay      Light      Medium Heavy Ine[4]     Ine[S]  Dead·
- A (0.05)    0                                                     S
- 8 (0.1)     0                     S                               1
- C (0.2)     0                     S               1               2
- 0(0.4)      0          S                  1       2               3
- E (0.6)     0          S           1      2       3               4
- F (0.8)     0          1           2      3       4               5
- 1 S         1          2           3      4       5        6
- 2 1         2          4           5      7       8        9
- 3 1         3          5           7      9       11      12
- 4 2         4          7           9      12      14      15
- 5 2         5          8          11      14      17      18
- 6 3         6         10          13      17      20      21
- 7 3         7         11          15      19      23      24
- 8 4          8        13          17      22      26      27
- 9 4          9        14          19      24      29      30
- 105          10       16          21      27      32      33
- 11 5         11       17          23      29      35      36
-
-    +1       +1        +2           +2         +3          +3          +3
-    +0       +1        +1           +2         +2          +3          +3
-
- To expand this table, alternate these modifiers.
-
- Notes:
-
- • If something&#39;s wound level exceeds the number in this column, it&#39;s still dead.
- Part: partially destroyed (a damage status); a piece of equipment which reaches
-      this damage status is partially destroyed, and certainly non-functional.
- Destroyed: a piece of equipment which reaches this damage status is not only
-      non-functional, but beyond repair.
-</code></pre>
+<p><strong>Notes.</strong> If something&#39;s wound level exceeds the number in the <strong>Dead</strong> column, it&#39;s still dead. <strong>Part</strong> (partially destroyed): equipment reaching this status is partially destroyed and certainly non-functional. <strong>Destroyed</strong>: not only non-functional, but beyond repair.</p>
 <!-- 1986 p.110 -->
 
 <pre><code>2 ForeSight Appended Tables
