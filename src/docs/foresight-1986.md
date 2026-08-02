@@ -1,5 +1,5 @@
 # ForeSight 1986
-<!--{ "pin": "top", "order": 99, "headTitle": "ForeSight 1986 — the original edition (restoration in progress)", "description": "A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." }-->
+<!--{ "pin": "top", "order": 99, "book": "foresight-1986", "headTitle": "ForeSight 1986 — the original edition (restoration in progress)", "description": "A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." }-->
 
 > **⚠️ Work in progress — a machine restoration, not a clean text (yet).**
 > These pages are **automatically extracted** from the original 1986 first edition
