@@ -7,9 +7,9 @@ The heart of the system: how to resolve anything, and how to make a character.
 - [Introduction](/introduction/)
 - [The One Rule](/the-one-rule/)
 - [Creating Characters](/creating-characters/)
+- [Character Builder](/character-builder/)
 - [Scores](/scores/)
 - [Quality Ratings & Yield](/quality-ratings/)
 - [Open-Ended Resolution](/open-ended-resolution/)
 - [Skills](/skills/)
-- [Character Builder](/character-builder/)
 <!-- /toc -->
