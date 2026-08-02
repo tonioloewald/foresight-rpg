@@ -184,6 +184,44 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
     ],
     body: 'desc',
   },
+  // ── 1986 restoration tables ──────────────────────────────────────────────
+  // The original ForeSight Master Weapon Chart (p.51), reconstructed from the
+  // pixel-art table into structured data so it's filterable + card-backed (and
+  // correctable). Columns: PM · Ammo · RoF · DC · short/long range · Con · Draw ·
+  // Reload · Jam · melee Close/Reach/Long-reach (PM/DC) · Wgt · Use · TL · Cost.
+  '1986-weapons.json': {
+    file: '1986-weapons.json',
+    noun: 'weapon',
+    idPrefix: 'w86',
+    columns: [
+      { prop: 'name', name: 'Weapon', width: 180 },
+      { prop: 'dc', name: 'DC', width: 70, align: 'center' },
+      { prop: 'long', name: 'Long Rng', width: 100, align: 'center' },
+      { prop: 'use', name: 'Use', width: 56, align: 'center' },
+      { prop: 'tl', name: 'TL', width: 44, align: 'center' },
+      { prop: 'cost', name: 'Cost', width: 64, align: 'center' },
+    ],
+    card: [
+      { label: 'PM', prop: 'pm' },
+      { label: 'Ammo', prop: 'ammo' },
+      { label: 'RoF', prop: 'rof' },
+      { label: 'DC', prop: 'dc' },
+      { label: 'Short range', prop: 'short' },
+      { label: 'Long range', prop: 'long' },
+      { label: 'Concealment', prop: 'con' },
+      { label: 'Draw', prop: 'draw' },
+      { label: 'Reload', prop: 'reload' },
+      { label: 'Jam', prop: 'jam' },
+      { label: 'Close PM/DC', prop: 'mClose' },
+      { label: 'Reach PM/DC', prop: 'mReach' },
+      { label: 'Long-reach PM/DC', prop: 'mLong' },
+      { label: 'Recoil', prop: 'recoil' },
+      { label: 'Weight', prop: 'weight' },
+      { label: 'Use', prop: 'use' },
+      { label: 'TL', prop: 'tl' },
+      { label: 'Cost', prop: 'cost' },
+    ],
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
@@ -253,6 +291,22 @@ export const MATRIX_SPECS: Record<string, MatrixSpec> = {
       { head: 'QR4', cells: ['blocked', 'blocked', 'blocked', 'blocked', 'QR4', 'QR3'] },
     ],
     muted: ['blocked'],
+  },
+  // The original 1986 Damage Table (p.49): Quality Rating × Damage Class → the
+  // Damage Result. `S` = target must make a Pain Resistance roll or be stunned;
+  // a number = that increase in wound level (and a PR roll). `—` = no effect
+  // (QR4 at DC0). DAMAGE = DC × (yield% for QR)/2, rounded; a zero becomes `S`.
+  '1986-damage-table': {
+    rowAxis: 'QR ↓',
+    colAxis: 'Damage Class (DC) →',
+    cols: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'],
+    rows: [
+      { head: 'QR4', cells: ['—', 'S', 'S', '1', '1', '1', '1', '2', '2', '2', '2', '2', '3', '3'] },
+      { head: 'QR3', cells: ['S', 'S', 'S', '1', '1', '1', '2', '2', '3', '3', '3', '4', '4', '4'] },
+      { head: 'QR2', cells: ['S', 'S', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '5', '6'] },
+      { head: 'QR1', cells: ['S', '1', '1', '2', '2', '3', '3', '4', '4', '5', '5', '6', '6', '7'] },
+    ],
+    muted: ['S', '—'],
   },
 }
 
