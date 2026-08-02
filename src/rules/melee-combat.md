@@ -25,7 +25,7 @@ A defence doesn't just win or lose; it can **eat part** of a blow. A defence **e
 <!-- matrix: melee-blocking -->
 <div class="matrix"><style>
 .mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
-.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle;color:inherit}
 .mx-corner{border:0;background:transparent}
 .mx-colaxis,.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;background:rgba(128,128,128,.14);font-weight:600}
 .mx-rowaxis{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
