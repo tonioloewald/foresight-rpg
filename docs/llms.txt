@@ -104,7 +104,7 @@ Full documentation, with live code examples, is at the links below.
 - https://foresight-rpg.com/reference/ — Reference
   Cheat sheets, the printable sheet, and the playtest pack.
 - https://foresight-rpg.com/1986-03-resolution/ — Resolution System
-  LUTIon System
+  1. Determine the **Skill**, **Attribute**, or **Skill/Field** combination, in use.
 - https://foresight-rpg.com/magic-sandestin/ — Sandestin
   A **Fundamental** — a Field of Magical Knowledge whose applications reach **Note: the sandestin is created in the inv...
 - https://foresight-rpg.com/magic-scent/ — Scent

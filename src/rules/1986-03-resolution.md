@@ -5,72 +5,59 @@
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=29">ForeSight 1986 · p.29 ↗</a></div>
 
-#### [3.0] RESOL
-
-LUTIon System
+#### [3.0] Resolution System
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=30">ForeSight 1986 · p.30 ↗</a></div>
 
-p
+#### Summary of Resolution System
 
-Summary of Re
-[1] Determine the Skill, Attribute, or Skil
+1. Determine the **Skill**, **Attribute**, or **Skill/Field** combination, in use.
+2. Determine **Base Ease Factor (BEF)**; substituting relevant Familiarities (G, E, T) if necessary. For attribute rolls the BEF is generally seven (7); for skills a value of five (5) is typical.
+3. Determine difficulty of task, and hence **EF** modifier. A modifier of −4 reflecting extreme difficulty; −2 – moderate difficulty; −1 – slight difficulty; etc.
+4. Multiply the net **EF** by the skill **PCS** or *trained* attribute value to get the **Success Chance (SC)**. (A multiplication table is provided, if required.)
+5. Roll **D100**. Compare this to the SC (see below).
 
-[2] Determine Base Ease Factor (BEF); su necessary. For attribute rolls the BEF is gen is typical.
+| If Roll ≤ | Result | Description | Yield | Time |
+|---|:--:|---|:--:|:--:|
+| SC/10 | **QR1** | Excellent | 100% | 50% |
+| SC/5 | **QR2** | Good | 90% | 75% |
+| SC/2 | **QR3** | Competent | 75% | 100% |
+| SC | **QR4** | Bare Success/Failure | 50% | 200% |
+| > SC | QR7 | Failure | 20% | 200% |
+| > SC and a multiple of 10 | QR10 | Fumble | 0% | 200% |
 
-[3] Determine difficulty of task, and henc extreme difficulty; -2 - moderate difficulty; -1
+*Yield is the proportion (of what might conceivably have been obtained) of information or material yielded, assuming such was the objective. Time is time taken (as a proportion of how long a competent effort would require), assuming this is significant.*
 
-[4] Multiply the net EF by the skill PCS or Chance (SC). (A multiplication table is prov
+**Multiplication table — the maximum roll for a given QR at a given SC:**
 
-[5] Roll D100. Compare this to the SC. (S
+| SC | QR1 | QR2 | QR3 | QR4 |
+|--:|:--:|:--:|:--:|:--:|
+| 001 | – | – | – | 1 |
+| 002 | – | – | 1 | 2 |
+| 003 | – | – | 1 | 3 |
+| 004 | – | – | 2 | 4 |
+| 005 | – | 1 | 2 | 5 |
+| 006 | – | 1 | 3 | 6 |
+| 007 | – | 1 | 3 | 7 |
+| 008 | – | 1 | 4 | 8 |
+| 009 | – | 1 | 4 | 9 |
+| 010 | 1 | 2 | 5 | 10 |
+| 020 | 2 | 4 | 10 | 20 |
+| 030 | 3 | 6 | 15 | 30 |
+| 040 | 4 | 8 | 20 | 40 |
+| 050 | 5 | 10 | 25 | 50 |
+| 060 | 6 | 12 | 30 | 60 |
+| 070 | 7 | 14 | 35 | 70 |
+| 080 | 8 | 16 | 40 | 80 |
+| 090 | 9 | 18 | 45 | 90 |
+| 100 | 10 | 20 | 50 | 100 |
+| 200 | 20 | 40 | 100 | 200 |
+| 300 | 30 | 60 | 150 | 300 |
+| 400 | 40 | 80 | 200 | 400 |
 
-Result           Des
-If Roll ~ SC/10              QR1             Exce If Roll ~ SC/5                QR2             Goo If Roll ~ SC/2                QR3             Com If Roll ~ SC                  QR4             Bare If Roll> SC                   QR7             Failu If Roll> SC and 110          QR10             Fum Yield is the proportion (of what might conceivably h assuming such was the objective. Time is time ta would require). assuming this is significant.
+> **⟶ ERRATA (Oct 1987):** the printed table gives the **030 / QR4** cell as **20**; it should be **30** (shown corrected here). The errata adds that the QR4 column is anyway spurious/redundant — it always equals SC. (Page facing 301.)
 
-SC         QRs 1
-010                 1
-020                2
-030                 3
-040                 4
-050                5
-060                6
-070                 7
-080                8
-090                9
-100                10
-200                20
-300                30
-400                40
-
-How to Use This Table
-
-If you have trouble multiplying (but not adding) th upper bound for die rolls to achieve a given QR at units. and add the entries for those values correspo 20 + 5. The maximum roll for a QR3 = 50 + 10 + 2 = 6
-
-esolution System l/Field combination, in use.
-
-ubstituting relevant Familiarities (G, E, T) if nerally seven (7); for skills a value of five (5)
-
-ce EF modifier. A modifier of -4 reflecting 1 - slight difficulty; etc ..
-
-r trained attribute value to get the Success vided, if required.)
-
-See below.)
-
-scription                        Yield       Time ellent                          100%         50% od                                90%         75% mpetent                           75%        100% e Success/Fai lu re               50%        200% ure                              20%        200% mble                               0%        200% have been obtained) of information or material yielded. aken (as a proportion of how long a competent effort
-
-2       3       4
-1       2
-1       3
-2       4
-1        2       5
-1       3       6
-1       3       7
-1       4       8
-1       4       9
-2        5       10 4        10      20 6        15      20 8        20      40 10       25      50 12       30      60 14       35      70 16       40      80 18       45      90 20       50     100 40      100     200 60      150     300 80      200     400
-
-hen you may find this table handy. To determine the t a given SC, divide the SC into hundreds. tens. and onding to the QR. For example. an SC of 125 = 100 +
-62. So a roll under 62 would at worst be a QR3.
+**How to Use This Table.** If you have trouble multiplying (but not adding) then you may find this table handy. To determine the upper bound for die rolls to achieve a given QR at a given SC, divide the SC into hundreds, tens, and units, and add the entries for those values corresponding to the QR. For example, an SC of 125 = 100 + 20 + 5. The maximum roll for a QR3 = 50 + 10 + 2 = 62. So a roll under 62 would at worst be a QR3.
 
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=31">ForeSight 1986 · p.31 ↗</a></div>
 
