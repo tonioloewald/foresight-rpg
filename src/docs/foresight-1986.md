@@ -15,7 +15,7 @@ The out-of-print 1986 rules are hard to find, and a number of players want a fai
 
 ## Download
 
-- **[ForeSight 1986 — restoration ePub](/foresight-rpg-foresight-1986.epub)** — this restoration as an e-book (work in progress).
+<!-- epub-downloads -->
 - **[ForeSight 1986 — original scan (PDF, 37 MB)](/foresight-1986.pdf)** — the source scan; print it, or read it alongside these pages as the ground truth.
 
 ## Read alongside the original

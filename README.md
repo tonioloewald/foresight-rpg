@@ -7,7 +7,9 @@ A streamlined, modern edition of the **ForeSight** tabletop RPG, built on the un
 
 Use the navigation to browse the rules one-pagers, or open the live **[Character Builder](/character-builder/)**.
 
-**Download the book:** the streamlined edition as an **[ePub](/foresight-rpg.epub)** — or the original **[ForeSight 1986](/foresight-1986/)** as a restoration ePub + source-scan PDF.
+**Download the book** — or read the original **[ForeSight 1986](/foresight-1986/)** (restoration + source-scan PDF):
+
+<!-- epub-downloads -->
 
 ## This is work-in-progress
 

@@ -60,180 +60,759 @@
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=73">ForeSight 1986 · p.73 ↗</a></div>
 
 <h4>[7.0] Star System Generation</h4>
-<p>Designer&#39;s Notes: In a Science Fiction Role-Playing Game, some form of Star System Generator is desireable. This system should not put the GM to too much trouble; it should allow for a good degree of detail; and it should be &quot;dumb&quot; (ie. a GM should be able to plug it into his/her computer without having to add any algorithms), as well as fulfilling the pre-requisites outlined in the Introduction.</p>
+<p><strong>Designer&#39;s Notes:</strong> In a Science Fiction Role-Playing Game, some form of Star System Generator is desireable. This system should not put the GM to too much trouble; it should allow for a good degree of detail; and it should be &quot;dumb&quot; (ie. a GM should be able to plug it into his/her computer without having to add any algorithms), as well as fulfilling the pre-requisites outlined in the Introduction.</p>
 <p>I think that the following system qualifies in these respects, although there may be some controversy over how much trouble the system is to implement, I feel that a more simple generation system (like Traveller&#39;s) pays for its relative simplicity by being too lacking in detail (planets are neither interesting, nor different enough), and this detail must be added by the GM, without help from the rules. ForeSight planets are detailed enough to be interesting to players and GMs alike, and furthermore the whole thing, down to rough planetary maps, can be performed by a computer (the program will not take long to write: if there is sufficient interest, I may publish my own). Finally, the system is, at least to a degree, scientifically sound, which is important in a Science Fiction RPG.</p>
-<p>Generating a Star System
-Procedure: A Star-System in ForeSight must first be located around a star. The star should be chosen from an appropriate document (eg. a decent Star Catalogue), and should be within thirty light-years, or so, of Sol. This system was designed with solitary type V (dwarf) stars (like the sun) in mind. Furthermore, I recommend that, barring special circumstances, you restrict yourself to type F, G, K, and M stars. Once the star has been chosen, and its name recorded appropriately on the System Display, proceed as follows:</p>
-<p>[i] Determine the star&#39;s type: this comprises a letter (ie. A, F, G, K, M, or S) followed by a number (an integer from 0 to 9). Look at the following table under Range; this will give a range of numbers. There are sixteen orbitals listed on the System display: roll D10 for each of orbitals 1 to 10, and D6 for each of orbitals 11 to 16; if the roll for a given orbital falls in the star&#39;s range, then tick the Orbital Radius slot of that orbital.</p>
-<p>Stellar Type        Range          Radius        Mass BO - B4              5;1            37            6.2 B5 - 89              5;1            11            3.3 AO - A4              5;1             6            2.4 A5 - A9              5;2             3            1.8 FO - F4              5;3             2            1.S F5 - F9              5;4             1.S          1.3 GO - G4              5;6             1            1.1 G5 - G9              5;S             0.65         0.92 KO - K4              5;4             0.4          0.74 K5 - K9              5;3             0.18         0.S4 MO· M4               5;2             0.08         0.22 M5· M9               5;1             0.03         0.11 SO • S4              5;3             0.1?         1.S? S5 • S9              5;2             0.04?          ?</p>
-<p>Pag</p>
-<p>[ii] Consult the Stellar Type table under Radius; this will
-yield a number. Replace each tick placed in the
-previous step with the multiple of this number and the
-number beside it (in the Base Radius column). The
-new number is the actual Orbital Radius of the
-&quot;planet&quot; located in that orbital, in Astronomical Units
-(1 AU = the Earth&#39;s Orbital Radius about Sol).</p>
-<p>[iii] For any orbitals filled in step [i] roll D10 and consult
-the Planet Type Table to determine the table to be
-used used to determine planet size.</p>
-<p>Planet Type Table
-Roll     Modifier
-1-3      Use the Standard Planet Size Table.
-4-9      Use the Gas Giant Planet Size Table if Orbital
-11 to 16, otherwise as above.
-10   The &quot;planet&quot; is an asteroid belt.</p>
-<p>[iv] For each Orbital to be occupied by a planet (as
-indicated in step [ii]) roll D10, and consult the table
-indicated. Write down the resulting planet size in the
-Planet Size slot for that orbital.</p>
-<p>Standard Planet Size Table RolI*         Size     CG Diameter       SubZone Size
-(km)              (km)
-:s1           0       0.2   2S00               SOO
-2         1       0.3   37S0               7S0
-3         2       0.4   SOOO              1000
-4         3       0.6   7S00              1S00
-S         4       0.8  10000              2000
-6         S       1.0  12S00              2S00
-7         6       1.2  1S000              3000
-8         7       1.6  20000              4000
-9         8       2.4  30000              6000
-~10           9       3.6  45000              9000</p>
-<p>Gas Giant Size Table RolI*         Size   CG Diameter SubZone Size
-(km)             (km)
-5;0         Add ten to result and consult previous table.
-1-4          G1      4.8      60000           12000
-5-9          G2      9.6    120000            24000
-~1 0         G3     20.0 250000               50000</p>
-<p>Subtract 3 from the roll if planet orbiting a Type S star.</p>
-<p>Note: in certain formulae, a planet&#39;s size is treated as
-being a numerical value. In such cases, treat sizes
-G1, G2, and G3, as having values of 10, 11, and 12
-respectively.</p>
-<p>[v] Determine the density of each planet generated by
-rolling D6, modifying the roll as indicated under the
-Planet Density table, and then consulting the
-table. Write the results into the appropriate Planet
-Density slots.</p>
-<p>ge 701</p>
+<h5>Generating a Star System</h5>
+<p><strong>Procedure:</strong> A Star-System in ForeSight must first be located around a star. The star should be chosen from an appropriate document (eg. a decent Star Catalogue), and should be within thirty light-years, or so, of Sol. This system was designed with solitary type V (dwarf) stars (like the sun) in mind. Furthermore, I recommend that, barring special circumstances, you restrict yourself to type F, G, K, and M stars. Once the star has been chosen, and its name recorded appropriately on the System Display, proceed as follows:</p>
+<p><strong>[i]</strong> Determine the star&#39;s type: this comprises a letter (ie. A, F, G, K, M, or S) followed by a number (an integer from 0 to 9). Look at the following table under Range; this will give a range of numbers. There are sixteen orbitals listed on the System display: roll D10 for each of orbitals 1 to 10, and D6 for each of orbitals 11 to 16; if the roll for a given orbital falls in the star&#39;s range, then tick the Orbital Radius slot of that orbital.</p>
+<p><strong>Stellar Type Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stellar Type</th>
+<th>Range</th>
+<th>Radius</th>
+<th>Mass</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B0 - B4</td>
+<td>≤1</td>
+<td>37</td>
+<td>6.2</td>
+</tr>
+<tr>
+<td>B5 - B9</td>
+<td>≤1</td>
+<td>11</td>
+<td>3.3</td>
+</tr>
+<tr>
+<td>A0 - A4</td>
+<td>≤1</td>
+<td>6</td>
+<td>2.4</td>
+</tr>
+<tr>
+<td>A5 - A9</td>
+<td>≤2</td>
+<td>3</td>
+<td>1.8</td>
+</tr>
+<tr>
+<td>F0 - F4</td>
+<td>≤3</td>
+<td>2</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>F5 - F9</td>
+<td>≤4</td>
+<td>1.5</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>G0 - G4</td>
+<td>≤6</td>
+<td>1</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>G5 - G9</td>
+<td>≤5</td>
+<td>0.65</td>
+<td>0.92</td>
+</tr>
+<tr>
+<td>K0 - K4</td>
+<td>≤4</td>
+<td>0.4</td>
+<td>0.74</td>
+</tr>
+<tr>
+<td>K5 - K9</td>
+<td>≤3</td>
+<td>0.18</td>
+<td>0.54</td>
+</tr>
+<tr>
+<td>M0 - M4</td>
+<td>≤2</td>
+<td>0.08</td>
+<td>0.22</td>
+</tr>
+<tr>
+<td>M5 - M9</td>
+<td>≤1</td>
+<td>0.03</td>
+<td>0.11</td>
+</tr>
+<tr>
+<td>S0 - S4</td>
+<td>≤3</td>
+<td>0.1?</td>
+<td>1.5?</td>
+</tr>
+<tr>
+<td>S5 - S9</td>
+<td>≤2</td>
+<td>0.04?</td>
+<td>?</td>
+</tr>
+</tbody></table>
+<p><strong>[ii]</strong> Consult the Stellar Type table under Radius; this will yield a number. Replace each tick placed in the previous step with the multiple of this number and the number beside it (in the Base Radius column). The new number is the actual Orbital Radius of the &quot;planet&quot; located in that orbital, in Astronomical Units (1 AU = the Earth&#39;s Orbital Radius about Sol).</p>
+<p><strong>[iii]</strong> For any orbitals filled in step [i] roll D10 and consult the Planet Type Table to determine the table to be used to determine planet size.</p>
+<p><strong>Planet Type Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Modifier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1-3</td>
+<td>Use the Standard Planet Size Table.</td>
+</tr>
+<tr>
+<td>4-9</td>
+<td>Use the Gas Giant Planet Size Table if Orbital 11 to 16, otherwise as above.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>The &quot;planet&quot; is an asteroid belt.</td>
+</tr>
+</tbody></table>
+<p><strong>[iv]</strong> For each Orbital to be occupied by a planet (as indicated in step [ii]) roll D10, and consult the table indicated. Write down the resulting planet size in the Planet Size slot for that orbital.</p>
+<p><strong>Standard Planet Size Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll*</th>
+<th>Size</th>
+<th>CG</th>
+<th>Diameter (km)</th>
+<th>SubZone Size (km)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤1</td>
+<td>0</td>
+<td>0.2</td>
+<td>2500</td>
+<td>500</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>0.3</td>
+<td>3750</td>
+<td>750</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>0.4</td>
+<td>5000</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>0.6</td>
+<td>7500</td>
+<td>1500</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>0.8</td>
+<td>10000</td>
+<td>2000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>1.0</td>
+<td>12500</td>
+<td>2500</td>
+</tr>
+<tr>
+<td>7</td>
+<td>6</td>
+<td>1.2</td>
+<td>15000</td>
+<td>3000</td>
+</tr>
+<tr>
+<td>8</td>
+<td>7</td>
+<td>1.6</td>
+<td>20000</td>
+<td>4000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>8</td>
+<td>2.4</td>
+<td>30000</td>
+<td>6000</td>
+</tr>
+<tr>
+<td>≥10</td>
+<td>9</td>
+<td>3.6</td>
+<td>45000</td>
+<td>9000</td>
+</tr>
+</tbody></table>
+<p><strong>Gas Giant Size Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll*</th>
+<th>Size</th>
+<th>CG</th>
+<th>Diameter (km)</th>
+<th>SubZone Size (km)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤0</td>
+<td>Add ten to result and consult previous table.</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1-4</td>
+<td>G1</td>
+<td>4.8</td>
+<td>60000</td>
+<td>12000</td>
+</tr>
+<tr>
+<td>5-9</td>
+<td>G2</td>
+<td>9.6</td>
+<td>120000</td>
+<td>24000</td>
+</tr>
+<tr>
+<td>≥10</td>
+<td>G3</td>
+<td>20.0</td>
+<td>250000</td>
+<td>50000</td>
+</tr>
+</tbody></table>
+<p>* Subtract 3 from the roll if planet orbiting a Type S star.</p>
+<p>Note: in certain formulae, a planet&#39;s size is treated as being a numerical value. In such cases, treat sizes G1, G2, and G3, as having values of 10, 11, and 12 respectively.</p>
+<p><strong>[v]</strong> Determine the density of each planet generated by rolling D6, modifying the roll as indicated under the Planet Density table, and then consulting the table. Write the results into the appropriate Planet Density slots.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=74">ForeSight 1986 · p.74 ↗</a></div>
 
-<p>Planet Density Table 06 Density            Effects on Atmosphere: Roll (Earth&#39;a .. 1)   Density             Composition ~- 1     0.10         [e] Soupy           Modify roll by -12
-o       0.12         [e] Soupy           Modify roll by -8
-1       0.18         Modify roll by + 12 Modify roll by -4
-2       0.25         Modify roll by +8   Modify roll by -2
-3       0.35         Modify roll by +4   Modify roll by -1
-4       0.5          Modify roll by +2
-5       0.7
-6       0.8
-7       0.9
-8        1.0
-9        1.05
-10       1.1
-11       1.2
-12       1.4
-13       1.6
-~14       1.8</p>
-<p>Modifiers for use with this table: Size G3    -4       Type S star    +3 Size G2    -3       Orbital 1      +6 Size G1    -2       Orbital 2-4    +5 Size 7-9    -1      Orbital 5-8    +4 Size 4-6     0      Orbital 9-10   +3 Size 0-3   +1       Orbital 11-16   0</p>
-<p>[vi] Multiply each planet&#39;s Density by its CG to deter-
-mine its surface gravity (in Earth gees, and assuming
-that it&#39;s dense enough to have a recognisable &quot;sur-
-face&quot;), and record this in its Gravity slot.</p>
-<p>[vii] For each planet roll D10, modify the roll as indicated
-under the Air Pressure table, and write the appropriate
-result from that table into its Pressure slot.</p>
-<p>Atmosphere Density Table 010     Atmosphere          Opacity      Hydrographlcs Roll       Density          Modifier       Modifier
-~-1     [-1] None           -11             -10
-o      [0] Trace              -9           -10
-1      [1] Trace              -6           -10
-2      [2] Very Thin          -5            -8
-3      [3] Very Thin          -4            -6
-4      [4] Thin               -3            -4
-5      [5] Thin               -2            -2
-6      [6] Normal             -1               o
-7      [7] Normal              o             +1
-8      [8] Dense              +2               o
-9       [9] Dense             +5              -2
-10      [10] Soupy            +8              -4
-~11      [11] Soupy           +10             -10</p>
-<p>Modifiers for use with this table G1/G2/G3 planets automatically have density [e] There may be a modifier for density (see Density Table) Gravity<del>.O       +3         Size 9       +5 1.3</del>Gravity&lt;2.0  +1         Size 8       +3 O.4&lt;Gravity<del>0.7   -1        Size 7       +2 0.3&lt;Gravity</del>0.4   -3        Size 5, 6    +1 0.2&lt;Gravity<del>0.3   -5        Size 1,2      -1 Gravity</del>0.2       -8        Size 0        -3</p>
-<p>Pag</p>
-<p>L</p>
-<p>[viii] For each planet roll D10, add the appropriate
-Opacity modifier from the Air Pressure table, consult
-the Atmosphere Opacity table, and write the
-approprate result from that table into its Opacity
-slot.</p>
-<p>Atmosphere Opacity Table 010                           Temperature Roll-       Opacity             Modifier</p>
-<p>~-1         [-1] None                -350
-0          [0] Very Small           -25 0
-1          [1] Very Small           -20 0
-2          [2] Small                -15 0
-3          [3] Small                -10 0
-4          [4] Average               _50
-5          [5] Average             None
-6          [6] Average             None
-7          [7] Average               +50
-8          [8] High                 +100
-9          [9] High                 +150
-10         [A] Extreme              +300
-~11         [8] Extreme       Intolerable (Hot/Cold)</p>
-<ul>
-<li>Add the opacity modifier from the Atmosphere Density Table to the die roll.</li>
-</ul>
-<p>[ix] For each planet add the appropriate temperature
-modifier from the Opacity table to the temperature
-given for that Orbital in the Temp column. Record the
-result in the planet&#39;s Mean Temp slot. Intolerable
-over-rides cold. Cold planets will have partially or
-wholly frozen atmospheres.</p>
-<p>[x] For each planet roll D10, and modify it as indicated
-under the Planet Hydrographic. table. Record
-the result from that table in the planet&#39;s Hydro slot.</p>
-<p>Hydrographlcs Table 010 Roll          Hydrographic.
-~o                0%
-1                 10%
-2                 20%
-3                 30%
-4                 40%
-5                 50%
-6                 60%
-7                 70%
-8                 80%
-9                 90%
-10       100%. Scattered Islands.
-~11         100%. No islands.</p>
-<p>Modifiers for use with this table Use the hydrographics modifier from the Atmosphere
-Density table.
-Subtract I(Mean Temp - 10)/101 (dropping fractions) Note the absolute value signs in this formulaI</p>
-<p>[xi] For each planet roll D10, and modify it as indicated
-under the Atmosphere Composition table. Write
-the appropriate result from that table into the planet&#39;s
-AtComp slot.</p>
-<p>ge 702</p>
+<p><strong>Planet Density Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>D6 Roll</th>
+<th>Density (Earth&#39;s = 1)</th>
+<th>Effect on Atmosphere Density</th>
+<th>Effect on Atmosphere Composition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>0.10</td>
+<td>[B] Soupy</td>
+<td>Modify roll by -12</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0.12</td>
+<td>[B] Soupy</td>
+<td>Modify roll by -8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0.18</td>
+<td>Modify roll by +12</td>
+<td>Modify roll by -4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.25</td>
+<td>Modify roll by +8</td>
+<td>Modify roll by -2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.35</td>
+<td>Modify roll by +4</td>
+<td>Modify roll by -1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.5</td>
+<td>Modify roll by +2</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.8</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.9</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>1.0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>1.05</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>1.1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>1.2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>1.4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>1.6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>≥14</td>
+<td>1.8</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Modifiers for use with this table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Size</th>
+<th>Mod</th>
+<th>Orbital / Star</th>
+<th>Mod</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>G3</td>
+<td>-4</td>
+<td>Type S star</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>G2</td>
+<td>-3</td>
+<td>Orbital 1</td>
+<td>+6</td>
+</tr>
+<tr>
+<td>G1</td>
+<td>-2</td>
+<td>Orbital 2-4</td>
+<td>+5</td>
+</tr>
+<tr>
+<td>7-9</td>
+<td>-1</td>
+<td>Orbital 5-8</td>
+<td>+4</td>
+</tr>
+<tr>
+<td>4-6</td>
+<td>0</td>
+<td>Orbital 9-10</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>0-3</td>
+<td>+1</td>
+<td>Orbital 11-16</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><strong>[vi]</strong> Multiply each planet&#39;s Density by its CG to determine its surface gravity (in Earth gees, and assuming that it&#39;s dense enough to have a recognisable &quot;surface&quot;), and record this in its Gravity slot.</p>
+<p><strong>[vii]</strong> For each planet roll D10, modify the roll as indicated under the Air Pressure table, and write the appropriate result from that table into its Pressure slot.</p>
+<p><strong>Atmosphere Density Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>D10 Roll</th>
+<th>Atmosphere Density</th>
+<th>Opacity Modifier</th>
+<th>Hydrographics Modifier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>[-1] None</td>
+<td>-11</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>0</td>
+<td>[0] Trace</td>
+<td>-9</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>1</td>
+<td>[1] Trace</td>
+<td>-6</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[2] Very Thin</td>
+<td>-5</td>
+<td>-8</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[3] Very Thin</td>
+<td>-4</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[4] Thin</td>
+<td>-3</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[5] Thin</td>
+<td>-2</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>[6] Normal</td>
+<td>-1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>[7] Normal</td>
+<td>0</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>[8] Dense</td>
+<td>+2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>9</td>
+<td>[9] Dense</td>
+<td>+5</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>10</td>
+<td>[10] Soupy</td>
+<td>+8</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>≥11</td>
+<td>[11] Soupy</td>
+<td>+10</td>
+<td>-10</td>
+</tr>
+</tbody></table>
+<p><strong>Modifiers for use with this table</strong></p>
+<p>G1/G2/G3 planets automatically have density [B]. There may be a modifier for density (see Density Table).</p>
+<table>
+<thead>
+<tr>
+<th>Gravity</th>
+<th>Mod</th>
+<th>Size</th>
+<th>Mod</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gravity ≥ 2.0</td>
+<td>+3</td>
+<td>9</td>
+<td>+5</td>
+</tr>
+<tr>
+<td>1.3 ≤ Gravity &lt; 2.0</td>
+<td>+1</td>
+<td>8</td>
+<td>+3</td>
+</tr>
+<tr>
+<td>0.4 &lt; Gravity ≤ 0.7</td>
+<td>-1</td>
+<td>7</td>
+<td>+2</td>
+</tr>
+<tr>
+<td>0.3 &lt; Gravity ≤ 0.4</td>
+<td>-3</td>
+<td>5, 6</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>0.2 &lt; Gravity ≤ 0.3</td>
+<td>-5</td>
+<td>1, 2</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>Gravity ≤ 0.2</td>
+<td>-8</td>
+<td>0</td>
+<td>-3</td>
+</tr>
+</tbody></table>
+<p><strong>[viii]</strong> For each planet roll D10, add the appropriate Opacity modifier from the Air Pressure table, consult the Atmosphere Opacity table, and write the approprate result from that table into its Opacity slot.</p>
+<p><strong>Atmosphere Opacity Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>D10 Roll*</th>
+<th>Opacity</th>
+<th>Temperature Modifier</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>[-1] None</td>
+<td>-35°</td>
+</tr>
+<tr>
+<td>0</td>
+<td>[0] Very Small</td>
+<td>-25°</td>
+</tr>
+<tr>
+<td>1</td>
+<td>[1] Very Small</td>
+<td>-20°</td>
+</tr>
+<tr>
+<td>2</td>
+<td>[2] Small</td>
+<td>-15°</td>
+</tr>
+<tr>
+<td>3</td>
+<td>[3] Small</td>
+<td>-10°</td>
+</tr>
+<tr>
+<td>4</td>
+<td>[4] Average</td>
+<td>-5°</td>
+</tr>
+<tr>
+<td>5</td>
+<td>[5] Average</td>
+<td>None</td>
+</tr>
+<tr>
+<td>6</td>
+<td>[6] Average</td>
+<td>None</td>
+</tr>
+<tr>
+<td>7</td>
+<td>[7] Average</td>
+<td>+5°</td>
+</tr>
+<tr>
+<td>8</td>
+<td>[8] High</td>
+<td>+10°</td>
+</tr>
+<tr>
+<td>9</td>
+<td>[9] High</td>
+<td>+15°</td>
+</tr>
+<tr>
+<td>10</td>
+<td>[A] Extreme</td>
+<td>+30°</td>
+</tr>
+<tr>
+<td>≥11</td>
+<td>[B] Extreme</td>
+<td>Intolerable (Hot/Cold)</td>
+</tr>
+</tbody></table>
+<p>* Add the opacity modifier from the Atmosphere Density Table to the die roll.</p>
+<p><strong>[ix]</strong> For each planet add the appropriate temperature modifier from the Opacity table to the temperature given for that Orbital in the Temp column. Record the result in the planet&#39;s Mean Temp slot. Intolerable over-rides cold. Cold planets will have partially or wholly frozen atmospheres.</p>
+<p><strong>[x]</strong> For each planet roll D10, and modify it as indicated under the Planet Hydrographics table. Record the result from that table in the planet&#39;s Hydro slot.</p>
+<p><strong>Hydrographics Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>D10 Roll</th>
+<th>Hydrographics</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>70%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>80%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>90%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>100%. Scattered Islands.</td>
+</tr>
+<tr>
+<td>≥11</td>
+<td>100%. No islands.</td>
+</tr>
+</tbody></table>
+<p><strong>Modifiers for use with this table.</strong> Use the hydrographics modifier from the Atmosphere Density table.</p>
+<p>Subtract |(Mean Temp - 10)/10| (dropping fractions). Note the absolute value signs in this formula!</p>
+<p><strong>[xi]</strong> For each planet roll D10, and modify it as indicated under the Atmosphere Composition table. Write the appropriate result from that table into the planet&#39;s AtComp slot.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=75">ForeSight 1986 · p.75 ↗</a></div>
 
-<p>Atmosphere Composition Table RolI* Atmosphere Composition</p>
-<p>:5:-1Hostile: poisonous, oxygen-free o   Hostile: poisonous, oxygen-free, corrosive 1 Unpleasant: poisonous Life on Planet: SC .. 2% 2 Unpleasant: oxygen-free Life on Planet: SC = 2% 3 Unpleasant: corrosive Life on Planet: SC - 2% 4 Hostile: poisonous, oxygen-free
-Life on Planet: SC = 2%
-5 Tolerable (Fatigue rolls at -2): oxygen-poor
-Life on Planet: SC = SO -IMean Temp-101
-6 Tolerable (Fatigue rolls at -2): contaminated
-Life on Planet: SC = SO -IMean Temp-101
-7 Tolerable (Fatigue rolls at -2): oxygen-poor
-Life on Planet: SC = SO -IMean Temp-1 01
-8 Breathable (Fatigue rolls at -1):
-slightly poisonous. Life on Planet: SC = 100
-9 Breathable (Fatigue rolls at -1):
-slightly contaminated &quot;Life on Planet: SC = 100
-10 Earthlike: &quot;Life on Planet: SC = 120 11 Invigourating (Fatigue rolls at + 1; Search, Scan,
-&amp; Initiative at -1): &quot;Life on Planet: SC = 120
-2:12 Earthlike: &quot;Life on Planet: SC = 120</p>
-<p>Subtract IAppropriate Opacity Modifier from Atmosphere Density Tablel (note absolute value signs) from,
-and
-Add (Planet&#39;s Hydrographics)/20 (rounded off) to, the die roll.</p>
-<p>[xii] Determine whether or not there is life on the planet by rolling against any SC given beside Atmosphere Composition. QR 4 indicates presence of primitive life-forms (certainly no more evolved than, say, bony fishes, amphibians, and ferns; perhaps no more advanced than polyps ... ); QR 3 indicates a moderate stage of evolution: anywhere from (the equivalent of) dinosaurs to mammals; QR 2 indicates highly advanced, but non-sapient organisms - perhaps semi-intelligent and/or very dangerous (eg. Alien ); QR 1 indicates the presence of local HILFs (Highly Intelligent Life-Forms, to borrow a term); who will be at a lesser state of advancement than humanity, or oriented in non-technological (perhaps psionic or magical) directions. Note any successful result by writing the QR number into the top right corner of the Habitability Index box. In theory, planets with intelligent life will not be knowingly colonised by idealistic regimes.</p>
-<p>[xiii] Determine each planet&#39;s Incident Radiation Class by rolling D10, modifying the roll as indicated under the Incident Radiation table, and recording the result under the planet&#39;s Radiation slot.</p>
+<p><strong>Atmosphere Composition Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll*</th>
+<th>Atmosphere Composition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>Hostile: poisonous, oxygen-free</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Hostile: poisonous, oxygen-free, corrosive</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Unpleasant: poisonous. Life on Planet: SC = 2%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Unpleasant: oxygen-free. Life on Planet: SC = 2%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Unpleasant: corrosive. Life on Planet: SC = 2%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hostile: poisonous, oxygen-free. Life on Planet: SC = 2%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Tolerable (Fatigue rolls at -2): oxygen-poor. Life on Planet: SC = 50 - |Mean Temp - 10|</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Tolerable (Fatigue rolls at -2): contaminated. Life on Planet: SC = 50 - |Mean Temp - 10|</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Tolerable (Fatigue rolls at -2): oxygen-poor. Life on Planet: SC = 50 - |Mean Temp - 10|</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Breathable (Fatigue rolls at -1): slightly poisonous. Life on Planet: SC = 100</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Breathable (Fatigue rolls at -1): slightly contaminated. Life on Planet: SC = 100</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Earthlike: Life on Planet: SC = 120</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Invigourating (Fatigue rolls at +1; Search, Scan, &amp; Initiative at -1): Life on Planet: SC = 120</td>
+</tr>
+<tr>
+<td>≥12</td>
+<td>Earthlike: Life on Planet: SC = 120</td>
+</tr>
+</tbody></table>
+<p>* Subtract |Appropriate Opacity Modifier from Atmosphere Density Table| (note absolute value signs) from, and add (Planet&#39;s Hydrographics)/20 (rounded off) to, the die roll.</p>
+<p><strong>[xii]</strong> Determine whether or not there is life on the planet by rolling against any SC given beside Atmosphere Composition. QR 4 indicates presence of primitive life-forms (certainly no more evolved than, say, bony fishes, amphibians, and ferns; perhaps no more advanced than polyps ... ); QR 3 indicates a moderate stage of evolution: anywhere from (the equivalent of) dinosaurs to mammals; QR 2 indicates highly advanced, but non-sapient organisms - perhaps semi-intelligent and/or very dangerous (eg. Alien ); QR 1 indicates the presence of local HILFs (Highly Intelligent Life-Forms, to borrow a term); who will be at a lesser state of advancement than humanity, or oriented in non-technological (perhaps psionic or magical) directions. Note any successful result by writing the QR number into the top right corner of the Habitability Index box. In theory, planets with intelligent life will not be knowingly colonised by idealistic regimes.</p>
+<p><strong>[xiii]</strong> Determine each planet&#39;s Incident Radiation Class by rolling D10, modifying the roll as indicated under the Incident Radiation table, and recording the result under the planet&#39;s Radiation slot.</p>
 <h4>Incident Radiation Table</h4>
 <p><em>The star&#39;s spectral class × the radiation Result → the D10 roll needed for that result. <strong>* Prolonged</strong> exposure is harmful to unprotected humans; <strong>** any</strong> exposure is harmful. This is the table the <a href="/foresight-1986/#the-1987-errata">1987 errata</a> corrected (a displaced bottom row) — this printing already shows it right.</em></p>
 <!-- matrix: 1986-incident-radiation -->
@@ -249,135 +828,384 @@ Add (Planet&#39;s Hydrographics)/20 (rounded off) to, the die roll.</p>
 <!-- /matrix -->
 
 <p><strong>Modifiers.</strong> Orbital 1–4 <strong>+1</strong>, 9–12 <strong>−1</strong>, 13–16 <strong>−2</strong>. Subtract (Atmosphere Opacity − 8). Atmosphere: Tolerable <strong>−1</strong>, Earthlike <strong>−2</strong>, Invigourating <strong>−3</strong>.</p>
-<p>[xiv] Determine each planet&#39;s Habitability Index
-(HI). Multiply the planet&#39;s values for T, G, A, H, and
-R; this product determines the planet&#39;s HI (see
-subsequent table).</p>
-<p>T (Temperature)                 R (Radiation) VC       -      0               Benign             5 CD               1              Harmful            4 Nl               5              Dangerous          1 HO               1              Inimical to Life   0.01 VH               0</p>
-<p>G (Gravity) NW (0.00-0.40)              2 IT    (0.41-1.00)           3 HY    (1.01-1.29)           2 HY    (1.31-1.60)            1 EX    (&gt;1.60)                O.OS</p>
-<p>A (Atmosphere)                  H (Hydrographics) Invigourating 10                o            0.2 Earthlike      9                10%            1 Breathable     5                20-30%         2 Tolerable      2                40-S0%         3 Unpleasant     0.2S             60-80%         4 Hostile        0                90-100%        5</p>
-<p>Habitability Index TxRxGxAxH            Habitability Index</p>
-<p>o            [SOl Inimical
-Rapid death without equipment
-[S] Uninhabitable
-Death without equipment
-6-1S0          [4] Marginal
-Probable death without equipment
-1S1-S00         [3] Tolerable
-Unsuitable for large scale colonisation
-501-1S00        [2] Promising
-Suitable for large scale colonisation
-2:1S01         [1] Paradise
-Ideal for human habitation</p>
-<p>e 703</p>
+<p><strong>[xiv]</strong> Determine each planet&#39;s <strong>Habitability Index</strong> (<strong>HI</strong>). Multiply the planet&#39;s values for T, G, A, H, and R; this product determines the planet&#39;s HI (see subsequent table).</p>
+<p><strong>T (Temperature)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>VC</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CD</td>
+<td>1</td>
+</tr>
+<tr>
+<td>NL</td>
+<td>5</td>
+</tr>
+<tr>
+<td>HO</td>
+<td>1</td>
+</tr>
+<tr>
+<td>VH</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><strong>R (Radiation)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Benign</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Harmful</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Dangerous</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Inimical to Life</td>
+<td>0.01</td>
+</tr>
+</tbody></table>
+<p><strong>G (Gravity)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NW (0.00-0.40)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>LT (0.41-1.00)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>HV (1.01-1.29)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>HV (1.31-1.60)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>EX (&gt;1.60)</td>
+<td>0.05</td>
+</tr>
+</tbody></table>
+<p><strong>A (Atmosphere)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Invigourating</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Earthlike</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Breathable</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Tolerable</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Unpleasant</td>
+<td>0.25</td>
+</tr>
+<tr>
+<td>Hostile</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p><strong>H (Hydrographics)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Coverage</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>10%</td>
+<td>1</td>
+</tr>
+<tr>
+<td>20-30%</td>
+<td>2</td>
+</tr>
+<tr>
+<td>40-50%</td>
+<td>3</td>
+</tr>
+<tr>
+<td>60-80%</td>
+<td>4</td>
+</tr>
+<tr>
+<td>90-100%</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<p><strong>Habitability Index</strong></p>
+<table>
+<thead>
+<tr>
+<th>T×R×G×A×H</th>
+<th>Habitability Index</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td><strong>[6] Inimical</strong> — Rapid death without equipment</td>
+</tr>
+<tr>
+<td>1-5</td>
+<td><strong>[5] Uninhabitable</strong> — Death without equipment</td>
+</tr>
+<tr>
+<td>6-150</td>
+<td><strong>[4] Marginal</strong> — Probable death without equipment</td>
+</tr>
+<tr>
+<td>151-500</td>
+<td><strong>[3] Tolerable</strong> — Unsuitable for large scale colonisation</td>
+</tr>
+<tr>
+<td>501-1500</td>
+<td><strong>[2] Promising</strong> — Suitable for large scale colonisation</td>
+</tr>
+<tr>
+<td>≥1501</td>
+<td><strong>[1] Paradise</strong> — Ideal for human habitation</td>
+</tr>
+</tbody></table>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=76">ForeSight 1986 · p.76 ↗</a></div>
 
 <h4>[7.1] Detailing Planets</h4>
-<p>Designer&#39;s Notes: the GM should complete the following steps (with the possible exception of step [xvi] for
-planets in orbitals 1 to 10) only for planets he/she
-wishes to detail. A copy of the Planet Record
-should be set aside for the planet. and relevant information copied from the Star System Record onto it.</p>
-<p>[1] Determine the planet&#39;s day length. and average
-daily temperature variation.</p>
-<p>Day Length-
-3.S(D10 + 010+ 12)/I(Planet Size - 1.S)1 hours</p>
-<p>Dally Temperature Variation ..
-±1.67d/(Atmosphere Opacity + O.S)O celsius</p>
-<p>(Where d is day length in hours. Add this value to
-determine approximate maximum daily temperature.
-subtract it for minimum. Seasonal variation depends
-on axial tilt. ocean currents. etc. and will be partially
-handled in ForeScene.)</p>
-<p>[2] (Optional) Determine if the planet has any moons.
-Roll on the moon table a number of times equal to the
-planet&#39;s size plus one (treat G1 as size 10. G2 as size
-11. G3 as size 12. for the purposes of this rule); this
-will yield a modifier to the planet&#39;s size. indicating the&#39;
-planet has a moon of that size (if the result is zero or
-positive), or derives no moon from that roll.</p>
-<p>Each moon acquired has a one in ten chance of having
-broken up into a ring. otherwise it is generated exactly
-as a planet its size in the orbital of the planet it orbits.
-except that it will not have [its own] moons.</p>
-<p>Example: the rolls for a size five planet are 99. 49,
-30,58, 96, and 9. The modifiers resulting are -1, -9, -
-10, -8, -4, and -12 (since the rol/ of 9 is modified by -2
-for the two moons already acquired, reducing the rol/
-to 7). The planet ends up with one size 4 moon, and
-one size 1 moon.</p>
-<p>Moon Table D100 RolI*         Modifier to Planet Size
-<del>8                      -12
-9-28                     -11
-29-48                    -10
-49-72                    -9
-73-S4                    -S
-S</del>90                        ~
-91-93                    -6
-94-9S                    -S
-96                      -4
-97                      -3
-98                      -2
-99                      -1
-100                     0
-Subtract one from the die roll for each moon (or ring) the planet has already acquired.</p>
-<p>Note: a result of 10 gives a moon of size G1; 11 gives G2. and 12 gives G3.</p>
-<p>b</p>
-<p>[3] Mapping Planets
-Designer&#39;s Notes: GMs will probably want reasonable
-maps of habitable planets; if for no other reason than
-that they are pretty. The following system allows GMs
-to map any of the planets generated using the
-previous system. except Gas Giants (G1. and G2
-planets). I do not recommend that the you map
-planets with Habitability Indices greater than 3 unless
-you have a specific purpose in mind (ie. some part of
-a planned scenario has something to do with it). or
-you will just be making extra work for yourself (unless
-you&#39;re using a computer. in which case paper is your
-greatest constraint).</p>
-<p>You will require a copy of the Planet Record. and a
-normal deck of playing cards minus tens and picture-
-cards. The cards are ordered 1c •..• 9c.1d •.. 9d,1h •..
-•9h.1s •..• 9s (where &quot;1 &quot;s are aces). ego Sd is in the
-range 4d-4h.</p>
-<p>A planet is mapped in stages (everything in FS is done
-in stages. • sigh .).</p>
-<p>[i] Notice that the map is divided up into lots of triangles.
-Each triangle is referred to as a sub-zone. A zone
-comprises five sub-zones. Divide the map into thirty
-six disjoint zones in any way you see fit (I suggest
-taking them in groups of five from top left to bottom
-right. but never let anyone claim I don&#39;t allow freedom
-of choice). Now shuffle your deck of thirty-six cards.
-Draw one card for each zone in turn and consult the
-water distribution over surface table. which will inform
-you how many of the sub-zones of that zone are
-covered in water. choose that many sub-zones (your
-choice of method. random is as good as any) within
-that zone. and put a light cross in them to signify
-coverage by water. Do this for each of the thirty-six
-zones.</p>
-<p>Water Distribution over Surface Planet Hydro- Number of Water Sub-zones In Zone graphics 0           1      2     3      4       5
-0%   1c-9s
-10% 1c-9h 1s-3s 4s-6s 7s-9s
-20% 1c-Sd 9d-4h Sh-9h 1s-Ss 6s-9s
-30% 1c-4d Sd-2h 3h-Sh 9h-4s Ss-9s
-40% 1c-Sc 9c-6d 7d-4h Sh-2s 3s-7s Ss-9s
-SO% 1c-6c 7c-3d 4d-9d 1h-6h 7h-3s 4s-9s
-60% 1c-2c 3c-7c Sc-Sd 6d-3h 4h-1s 2s-9s
-70%             1c-Sc 6c-1d 2d-7d Sd-Sh 6h-9s
-SO%             1c-4c 5c-9c 1d-5d 6d-1 h 2h-9s
-90%                     1c-3c 4c-6c 7c-9c 1d-9s
-100%·                                1c-6c·· 7c-9s
-Note: with islands; one sub-zone has islands. rather than being filled with land.</p>
-<p>[ii] For each sub-zone not covered with water roll D10: 1-
-3 indicates that the sub-zone is predominantly flat.
-mark it with a horizontal line; 4-S indicates that the
-sub-zone is predominantly uneven. mark it with an
-upside-down U shape; 9-10 indicates that the sub-
-zone is predominantly broken. mark it with an upside-
-down W shape.</p>
-<p>e 704</p>
+<p><strong>Designer&#39;s Notes:</strong> the GM should complete the following steps (with the possible exception of step [xvi] for planets in orbitals 1 to 10) only for planets he/she wishes to detail. A copy of the Planet Record should be set aside for the planet, and relevant information copied from the Star System Record onto it.</p>
+<p><strong>[1]</strong> Determine the planet&#39;s day length, and average daily temperature variation.</p>
+<p><strong>Day Length</strong> = 3.5(D10 + D10 + 12)/|(Planet Size - 1.5)| hours</p>
+<p><strong>Daily Temperature Variation</strong> = ±1.67d/(Atmosphere Opacity + 0.5)° celsius</p>
+<p>(Where d is day length in hours. Add this value to determine approximate maximum daily temperature, subtract it for minimum. Seasonal variation depends on axial tilt, ocean currents, etc. and will be partially handled in ForeScene.)</p>
+<p><strong>[2]</strong> (Optional) Determine if the planet has any moons. Roll on the moon table a number of times equal to the planet&#39;s size plus one (treat G1 as size 10, G2 as size 11, G3 as size 12, for the purposes of this rule); this will yield a modifier to the planet&#39;s size, indicating the planet has a moon of that size (if the result is zero or positive), or derives no moon from that roll.</p>
+<p>Each moon acquired has a one in ten chance of having broken up into a ring, otherwise it is generated exactly as a planet its size in the orbital of the planet it orbits, except that it will not have [its own] moons.</p>
+<p><em>Example: the rolls for a size five planet are 99, 49, 30, 58, 96, and 9. The modifiers resulting are -1, -9, -10, -8, -4, and -12 (since the roll of 9 is modified by -2 for the two moons already acquired, reducing the roll to 7). The planet ends up with one size 4 moon, and one size 1 moon.</em></p>
+<p><strong>Moon Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>D100 Roll*</th>
+<th>Modifier to Planet Size</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤8</td>
+<td>-12</td>
+</tr>
+<tr>
+<td>9-28</td>
+<td>-11</td>
+</tr>
+<tr>
+<td>29-48</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>49-72</td>
+<td>-9</td>
+</tr>
+<tr>
+<td>73-84</td>
+<td>-8</td>
+</tr>
+<tr>
+<td>85-90</td>
+<td>-7</td>
+</tr>
+<tr>
+<td>91-93</td>
+<td>-6</td>
+</tr>
+<tr>
+<td>94-95</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>96</td>
+<td>-4</td>
+</tr>
+<tr>
+<td>97</td>
+<td>-3</td>
+</tr>
+<tr>
+<td>98</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>99</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>* Subtract one from the die roll for each moon (or ring) the planet has already acquired.</p>
+<p>Note: a result of 10 gives a moon of size G1; 11 gives G2, and 12 gives G3.</p>
+<h5>[3] Mapping Planets</h5>
+<p><strong>Designer&#39;s Notes:</strong> GMs will probably want reasonable maps of habitable planets; if for no other reason than that they are pretty. The following system allows GMs to map any of the planets generated using the previous system, except Gas Giants (G1, and G2 planets). I do not recommend that the you map planets with Habitability Indices greater than 3 unless you have a specific purpose in mind (ie. some part of a planned scenario has something to do with it), or you will just be making extra work for yourself (unless you&#39;re using a computer, in which case paper is your greatest constraint).</p>
+<p>You will require a copy of the Planet Record, and a normal deck of playing cards minus tens and picture-cards. The cards are ordered 1c ... 9c, 1d ... 9d, 1h ... 9h, 1s ... 9s (where &quot;1&quot;s are aces). eg. 5d is in the range 4d-4h.</p>
+<p>A planet is mapped in stages (everything in FS is done in stages ... sigh ...).</p>
+<p><strong>[i]</strong> Notice that the map is divided up into lots of triangles. Each triangle is referred to as a sub-zone. A zone comprises five sub-zones. Divide the map into thirty six disjoint zones in any way you see fit (I suggest taking them in groups of five from top left to bottom right, but never let anyone claim I don&#39;t allow freedom of choice). Now shuffle your deck of thirty-six cards. Draw one card for each zone in turn and consult the water distribution over surface table, which will inform you how many of the sub-zones of that zone are covered in water, choose that many sub-zones (your choice of method, random is as good as any) within that zone, and put a light cross in them to signify coverage by water. Do this for each of the thirty-six zones.</p>
+<p><strong>Water Distribution over Surface</strong></p>
+<p><em>Number of Water Sub-zones in Zone</em></p>
+<table>
+<thead>
+<tr>
+<th>Planet Hydrographics</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0%</td>
+<td>1c-9s</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10%</td>
+<td>1c-9h</td>
+<td>1s-3s</td>
+<td>4s-6s</td>
+<td>7s-9s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20%</td>
+<td>1c-8d</td>
+<td>9d-4h</td>
+<td>5h-9h</td>
+<td>1s-5s</td>
+<td>6s-9s</td>
+<td></td>
+</tr>
+<tr>
+<td>30%</td>
+<td>1c-4d</td>
+<td>5d-2h</td>
+<td>3h-8h</td>
+<td>9h-4s</td>
+<td>5s-9s</td>
+<td></td>
+</tr>
+<tr>
+<td>40%</td>
+<td>1c-8c</td>
+<td>9c-6d</td>
+<td>7d-4h</td>
+<td>5h-2s</td>
+<td>3s-7s</td>
+<td>8s-9s</td>
+</tr>
+<tr>
+<td>50%</td>
+<td>1c-6c</td>
+<td>7c-3d</td>
+<td>4d-9d</td>
+<td>1h-6h</td>
+<td>7h-3s</td>
+<td>4s-9s</td>
+</tr>
+<tr>
+<td>60%</td>
+<td>1c-2c</td>
+<td>3c-7c</td>
+<td>8c-5d</td>
+<td>6d-3h</td>
+<td>4h-1s</td>
+<td>2s-9s</td>
+</tr>
+<tr>
+<td>70%</td>
+<td></td>
+<td>1c-5c</td>
+<td>6c-1d</td>
+<td>2d-7d</td>
+<td>8d-5h</td>
+<td>6h-9s</td>
+</tr>
+<tr>
+<td>80%</td>
+<td></td>
+<td>1c-4c</td>
+<td>5c-9c</td>
+<td>1d-5d</td>
+<td>6d-1h</td>
+<td>2h-9s</td>
+</tr>
+<tr>
+<td>90%</td>
+<td></td>
+<td></td>
+<td>1c-3c</td>
+<td>4c-6c</td>
+<td>7c-9c</td>
+<td>1d-9s</td>
+</tr>
+<tr>
+<td>100%*</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>1c-6c**</td>
+<td>7c-9s</td>
+</tr>
+</tbody></table>
+<p>Note: ** with islands; one sub-zone has islands, rather than being filled with land.</p>
+<p><strong>[ii]</strong> For each sub-zone not covered with water roll D10: 1-3 indicates that the sub-zone is predominantly flat, mark it with a horizontal line; 4-8 indicates that the sub-zone is predominantly uneven, mark it with an upside-down U shape; 9-10 indicates that the sub-zone is predominantly broken, mark it with an upside-down W shape.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=77">ForeSight 1986 · p.77 ↗</a></div>
 
 <p><em>[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
@@ -413,811 +1241,2379 @@ Size Density Pressure Notes
 
 Space Port I Size        IType                                         1
                                           Planet is beyond the Pale? YES I NO
-
 </code></pre>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=79">ForeSight 1986 · p.79 ↗</a></div>
 
-<p>[iii] For each sub-zone not covered with water roll D10, and modify the roll as instructed beneath the Terrain Features table, mark the presence of the terrain feature indicated in the sub-zone.</p>
+<p><strong>[iii]</strong> For each sub-zone not covered with water roll D10, and modify the roll as instructed beneath the Terrain Features table, mark the presence of the terrain feature indicated in the sub-zone.</p>
 <p>Note that the map on the Planet Record can be folded into an icosahedron (the same shape as a twenty-sided die). Consider the map as the projection of the planet&#39;s features onto such an icosahedron embedded in it. The upshot of this is that two sub-zones are considered adjacent if they would be so were the map folded into an icosahedron.</p>
-<p>Terrain Features Sub-zone             Terrain Feature In Sub-zone Temp Contour         BN LV MV HV MA IC VH    BR             s4 5-7 8-9 ~10
-UN             ~3   4-6 7-8 ~10
-FL             ~5   6-7 8    9   ~10
-HO    BR             s3 4-7 8-9 ~10
-UN             ~2   3-5 6-8 9-10 ~11
-FL             ~4   5-7 8-9 10 ~11
-NL    BR             s2 3-6 7-8 ~9
-UN             ~1   2-4 5-7 8-10 ~11
-FL             s1   2-4 5-7 8-10 ~11
-CD    BR             s3 4-5 6      7        ~8
-UN             S2 3-5 6-7 8           ~
-FL             ~4   5-6 7             ~8
-VC    BR             S5 6                   ~7
-UN             ~4   5   6             ~7
-FL             ~5   6                 ~7</p>
+<p><strong>Terrain Features.</strong> <em>This table came through the scanner too badly scrambled to reconstruct — the roll ranges survive, but which feature column each belongs to does not. Reproduced as extracted; see the source-PDF page link above.</em></p>
+<pre><code>Terrain Features Sub-zone             Terrain Feature In Sub-zone
+Temp Contour         BN LV MV HV MA IC VH
+     BR             s4 5-7 8-9 ~10
+     UN             ~3   4-6 7-8 ~10
+     FL             ~5   6-7 8    9   ~10
+HO   BR             s3 4-7 8-9 ~10
+     UN             ~2   3-5 6-8 9-10 ~11
+     FL             ~4   5-7 8-9 10 ~11
+NL   BR             s2 3-6 7-8 ~9
+     UN             ~1   2-4 5-7 8-10 ~11
+     FL             s1   2-4 5-7 8-10 ~11
+CD   BR             s3 4-5 6      7        ~8
+     UN             S2 3-5 6-7 8           ~
+     FL             ~4   5-6 7             ~8
+VC   BR             S5 6                   ~7
+     UN             ~4   5   6             ~7
+     FL             ~5   6                 ~7
+</code></pre>
 <p>If the planet has no life on it, change -V results to BN.</p>
-<p>Modifiers for use with this table
--2 no water subzone shares a side with this one</p>
-<ul>
-<li>1 this subzone shares sides only with water subzones
--4 planet&#39;s hydro .. 0%
--2 planet&#39;s hydro - 10%
--1 planet&#39;s hydro - 20 or 30%
-+1 planet&#39;s hydro ~ 80%</li>
-</ul>
-<p>[iv] To determine whether two, or more, land sub-zones which meet at a point, but not an edge, actually meet or not, roll D100, and consult the Isthmus table:</p>
-<p>Isthmus Table</p>
-<p>Proportion of Land           Likelihood of Isthmus
-(0100 range required)</p>
-<p>Two of six about point       1-25 Three of six about point*    1-50 Three of six about point**   01-25, all three meet;
-26-50, two of three meet
-Four of six about point      1-75 Two of five about point      1-33 Three of five about point    1-67</p>
+<p><strong>Modifiers for use with this table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-2</td>
+<td>no water subzone shares a side with this one</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>this subzone shares sides only with water subzones</td>
+</tr>
+<tr>
+<td>-4</td>
+<td>planet&#39;s hydro = 0%</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>planet&#39;s hydro = 10%</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>planet&#39;s hydro = 20 or 30%</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>planet&#39;s hydro ≥ 80%</td>
+</tr>
+</tbody></table>
+<p><strong>[iv]</strong> To determine whether two, or more, land sub-zones which meet at a point, but not an edge, actually meet or not, roll D100, and consult the Isthmus table:</p>
+<p><strong>Isthmus Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Proportion of Land</th>
+<th>Likelihood of Isthmus (D100 range required)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Two of six about point</td>
+<td>1-25</td>
+</tr>
+<tr>
+<td>Three of six about point*</td>
+<td>1-50</td>
+</tr>
+<tr>
+<td>Three of six about point**</td>
+<td>01-25, all three meet; 26-50, two of three meet</td>
+</tr>
+<tr>
+<td>Four of six about point</td>
+<td>1-75</td>
+</tr>
+<tr>
+<td>Two of five about point</td>
+<td>1-33</td>
+</tr>
+<tr>
+<td>Three of five about point</td>
+<td>1-67</td>
+</tr>
+</tbody></table>
 <p>Notes: *Two of the three share an edge; **No two of the three share an edge</p>
-<p>[v] Fill in Planet Description as appropriate (sub-zone
-size, indicated on the Planet Size table, is the length
-of one of the sides of a triangular sub-zone). The
-actual temperature of a sub-zone varies with latitude,
-as indicated on the Planet Record, and you may wish
-to fill in the boxes provided with the latitude mean
-temperature (equal to the Planet&#39;s Mean Temperature,
-modified as indicated).</p>
-<h4>[7.2] Detailing the Human</h4>
-<p>Population of a Planet
-A planet with a Habitability index of 1, 2, or 3, is pretty
-likely to be inhabited, if it has been discovered, by
-humans. In determining the details of a planet&#39;s
-population one needs to know the following things
-about it:</p>
-<p>[1] Its Habitability Index</p>
-<p>[2] Its distance from Sol</p>
-<p>[3] Its density</p>
-<p>From these three pieces of data the following system will
-generate, in relative detail, the population of a planet.
-Unless otherwise instructed, conduct the following
-steps in order:</p>
-<p>[i] The first thing to determine is when the system was
-first explored. This is a function solely of its distance
-from Sol, and luck. Record this date on the system
-display; all planets in the system&#39;s first ten orbitals
-are considered to have been explored at this time. Go
-to the appropriate table, and roll D100.</p>
-<p>Within 10 LV of Sol
-Roll     First Explored
-01-90    c.2100
-91-99    c.2150
-100      c.2200</p>
-<p>10-30 LV from Sol
-Roll    First Explored
-01-15   c.2200
-15-95   c.2250
-96-99   c.2300
-100     c.2350</p>
-<p>30-50 LV from Sol
-Roll    First Explored
-01-40   c.2300
-41-99   c.2350
-100     c.2400</p>
-<p>50-100 LV from Sol
-Roll    First Explored
-01-15   c.2350
-16-30   c.2400
-31-60   c.2450
-61-95   c.2500
-96-99   c.2550
-100     c.2550 + 010 x 50</p>
-<p>e 705</p>
+<p><strong>[v]</strong> Fill in Planet Description as appropriate (sub-zone size, indicated on the Planet Size table, is the length of one of the sides of a triangular sub-zone). The actual temperature of a sub-zone varies with latitude, as indicated on the Planet Record, and you may wish to fill in the boxes provided with the latitude mean temperature (equal to the Planet&#39;s Mean Temperature, modified as indicated).</p>
+<h4>[7.2] Detailing the Human Population of a Planet</h4>
+<p>A planet with a Habitability index of 1, 2, or 3, is pretty likely to be inhabited, if it has been discovered, by humans. In determining the details of a planet&#39;s population one needs to know the following things about it:</p>
+<p><strong>[1]</strong> Its Habitability Index</p>
+<p><strong>[2]</strong> Its distance from Sol</p>
+<p><strong>[3]</strong> Its density</p>
+<p>From these three pieces of data the following system will generate, in relative detail, the population of a planet. Unless otherwise instructed, conduct the following steps in order:</p>
+<p><strong>[i]</strong> The first thing to determine is when the system was first explored. This is a function solely of its distance from Sol, and luck. Record this date on the system display; all planets in the system&#39;s first ten orbitals are considered to have been explored at this time. Go to the appropriate table, and roll D100.</p>
+<p><strong>Within 10 LY of Sol</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>First Explored</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-90</td>
+<td>c.2100</td>
+</tr>
+<tr>
+<td>91-99</td>
+<td>c.2150</td>
+</tr>
+<tr>
+<td>100</td>
+<td>c.2200</td>
+</tr>
+</tbody></table>
+<p><strong>10-30 LY from Sol</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>First Explored</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-15</td>
+<td>c.2200</td>
+</tr>
+<tr>
+<td>15-95</td>
+<td>c.2250</td>
+</tr>
+<tr>
+<td>96-99</td>
+<td>c.2300</td>
+</tr>
+<tr>
+<td>100</td>
+<td>c.2350</td>
+</tr>
+</tbody></table>
+<p><strong>30-50 LY from Sol</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>First Explored</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-40</td>
+<td>c.2300</td>
+</tr>
+<tr>
+<td>41-99</td>
+<td>c.2350</td>
+</tr>
+<tr>
+<td>100</td>
+<td>c.2400</td>
+</tr>
+</tbody></table>
+<p><strong>50-100 LY from Sol</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>First Explored</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-15</td>
+<td>c.2350</td>
+</tr>
+<tr>
+<td>16-30</td>
+<td>c.2400</td>
+</tr>
+<tr>
+<td>31-60</td>
+<td>c.2450</td>
+</tr>
+<tr>
+<td>61-95</td>
+<td>c.2500</td>
+</tr>
+<tr>
+<td>96-99</td>
+<td>c.2550</td>
+</tr>
+<tr>
+<td>100</td>
+<td>c.2550 + D10 × 50</td>
+</tr>
+</tbody></table>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=80">ForeSight 1986 · p.80 ↗</a></div>
 
-<p>[ii] What is your Campaign Year? If you can&#39;t decide, then choose AD2535 (this is my campaign year, and much of ForeSight&#39;s support material is geared towards this time). If the date of first exploration is larger than this, the system is unexplored, and hence uninhabited. That was easy.</p>
+<p><strong>[ii]</strong> What is your Campaign Year? If you can&#39;t decide, then choose AD2535 (this is my campaign year, and much of ForeSight&#39;s support material is geared towards this time). If the date of first exploration is larger than this, the system is unexplored, and hence uninhabited. That was easy.</p>
 <p>Otherwise: round down your campaign year to the nearest multiple of twenty-five, so if your campaign year is 2735, round down to 2725. Now, subtract the year of first exploration from this, and divide it by twenty-five. This is about the number of generations since the planet was first explored. Call this number g (for generations), and set Date equal to the year the system was first explored.</p>
-<p>[iii] Subtract one from g. Add 25 to Date.</p>
-<p>[iv] Roll D100. If this is greater than (120 - 24 x H I) x planet Density go to step [iii].</p>
-<p>[v] Someone colonised the planet in the year Date (note this). To determine who it was, roll D10, add one to this roll per 25y (after the first 25) since the planet was first explored, to determine the group which instigated colonisation (ie. the Initial settler), and the initial population density (in persons per square km of land).</p>
-<p>Habitability Index
-4      3      2      1     Instigator        Initial
-PO</p>
-<p>010          1-3    1-7   1-9     Government          51H1 Roll    1    4-5    8-9   10      Social Group        1/HI
-2     6    10-11 11-12    MegaCorp            2IH1
-7      12   13      Subsidized        3.5- HI
-~3    ~8      13   14      Unsubsidized      1/{HI&quot;2)
-14-15 15-16    MegaCorp            21H1
-~16    ~17    Unsubsidized      5/{HI&quot;2)</p>
-<p>[vi] From the information (1) what the planet&#39;s initial population density was, and (2) how long ago it was colonised (ie. g), we now determine the current population density. Use the following procedure, keeping track of current population density (PD) and c, which is initially set equal to g. (This &#39;c&#39; keeps count of 25 year periods assessed.)</p>
-<p>(a) Subtract one from c.</p>
-<p>(b) Roll on the appropriate column of the population growth table, to yield a number. Multiply PD by this to determine the new PD value.</p>
-<p>Pag</p>
-<p>Population Growth Table (Adjusted) HI (Habitability Index) 010 Roll    5       4         3      2            ~
-1       o       0        0.2   0.75          0.9
-2       o      0.1       0.5   0.9           0.95
-3        o      0.2      0.75    1.0          1.0
-4      0.1     0.4       0.9   1.1           1.1
-5      0.2     0.6       1.0    1.1          1.2
-6      0.4     0.8       1.1    1.2          1.2
-7      0.6     1.0       1.2    1.2          1.2
-8      0.8     1.1       1.3   1.2           1.3
-9      1.0     1.2       1.4    1.3           1.3
-10      1.1     1.3       1.5    1.3          1.4</p>
-<p>Ole Roll Modifiers for this table
--1 if Pop. Density &lt; 0.1
-+1 if 10 ~ Pop. Densit y~ 25 HI Modifiers for this table
--1 if Pop. Density ~ 25
-+1 if Pop. Density ~ 20{6-{unmodified]HI)
-+1 if Pop. Density ~ 40{6-HI) (These modifiers are cumulative)</p>
+<p><strong>[iii]</strong> Subtract one from g. Add 25 to Date.</p>
+<p><strong>[iv]</strong> Roll D100. If this is greater than (120 - 24 × HI) × planet Density go to step [iii].</p>
+<p><strong>[v]</strong> Someone colonised the planet in the year Date (note this). To determine who it was, roll D10, add one to this roll per 25y (after the first 25) since the planet was first explored, to determine the group which instigated colonisation (ie. the Initial settler), and the initial population density (in persons per square km of land).</p>
+<p><strong>Initial Settler Table</strong> — <em>D10 Roll, by Habitability Index</em></p>
+<table>
+<thead>
+<tr>
+<th>HI 4</th>
+<th>HI 3</th>
+<th>HI 2</th>
+<th>HI 1</th>
+<th>Instigator</th>
+<th>Initial PD</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>1-3</td>
+<td>1-7</td>
+<td>1-9</td>
+<td>Government</td>
+<td>5/HI</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4-5</td>
+<td>8-9</td>
+<td>10</td>
+<td>Social Group</td>
+<td>1/HI</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+<td>10-11</td>
+<td>11-12</td>
+<td>MegaCorp</td>
+<td>2/HI</td>
+</tr>
+<tr>
+<td></td>
+<td>7</td>
+<td>12</td>
+<td>13</td>
+<td>Subsidized</td>
+<td>3.5/HI</td>
+</tr>
+<tr>
+<td>≥3</td>
+<td>≥8</td>
+<td>13</td>
+<td>14</td>
+<td>Unsubsidized</td>
+<td>1/(HI^2)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>14-15</td>
+<td>15-16</td>
+<td>MegaCorp</td>
+<td>2/HI</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>≥16</td>
+<td>≥17</td>
+<td>Unsubsidized</td>
+<td>5/(HI^2)</td>
+</tr>
+</tbody></table>
+<p><strong>[vi]</strong> From the information (1) what the planet&#39;s initial population density was, and (2) how long ago it was colonised (ie. g), we now determine the current population density. Use the following procedure, keeping track of current population density (PD) and c, which is initially set equal to g. (This &#39;c&#39; keeps count of 25 year periods assessed.)</p>
+<p><strong>(a)</strong> Subtract one from c.</p>
+<p><strong>(b)</strong> Roll on the appropriate column of the population growth table, to yield a number. Multiply PD by this to determine the new PD value.</p>
+<p><strong>Population Growth Table</strong> — <em>(Adjusted) HI (Habitability Index)</em></p>
+<table>
+<thead>
+<tr>
+<th>D10 Roll</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.2</td>
+<td>0.75</td>
+<td>0.9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.5</td>
+<td>0.9</td>
+<td>0.95</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>0.2</td>
+<td>0.75</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0.1</td>
+<td>0.4</td>
+<td>0.9</td>
+<td>1.1</td>
+<td>1.1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0.2</td>
+<td>0.6</td>
+<td>1.0</td>
+<td>1.1</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0.4</td>
+<td>0.8</td>
+<td>1.1</td>
+<td>1.2</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.6</td>
+<td>1.0</td>
+<td>1.2</td>
+<td>1.2</td>
+<td>1.2</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.8</td>
+<td>1.1</td>
+<td>1.3</td>
+<td>1.2</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1.0</td>
+<td>1.2</td>
+<td>1.4</td>
+<td>1.3</td>
+<td>1.3</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1.1</td>
+<td>1.3</td>
+<td>1.5</td>
+<td>1.3</td>
+<td>1.4</td>
+</tr>
+</tbody></table>
+<p><strong>Die Roll Modifiers for this table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-1</td>
+<td>if Pop. Density &lt; 0.1</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>if 10 ≤ Pop. Density ≤ 25</td>
+</tr>
+</tbody></table>
+<p><strong>HI Modifiers for this table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-1</td>
+<td>if Pop. Density ≥ 25</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>if Pop. Density ≥ 20(6-[unmodified]HI)</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>if Pop. Density ≥ 40(6-HI)</td>
+</tr>
+</tbody></table>
+<p>(These modifiers are cumulative)</p>
 <p>Multiply current Population Density by the resulting number.</p>
-<p>(c) If c is greater than zero, go back to step (a).</p>
-<p>The value for PD thus obtained becomes the planet&#39;s
-current PD.</p>
-<p>The planet&#39;s total population = 1t(d&quot;2){1-h/100)PO
-(where d is the planet&#39;s diameter in km, and h is the its
-hydrographic percentage).</p>
-<p>[vii] From the information (1) the planet&#39;s current population, (2) its density, and (3) g, we determine the
-planet&#39;s current technological levels (plural is correct)
-relative to &quot;the norm&quot; for its time (ego TL 8 appears
-around 2400, a planet with relative TLs of -1 in a
-campaign set in 2400 would have TLs of 7).</p>
-<p>A planet&#39;s technology is rated by the degree of
-advancement the planet has achieved in (1) physical
-(&quot;hard&quot;) sciences, and (2) biological (&quot;soft&quot;) sciences.
-The former is easier to utilize, and often cheaper.
-while the other does not require heavy elements (such
-as copper and iron). Very little information on
-biotechnology appears in ForeSight at this stage. but
-more is included in ForeScene.</p>
-<p>Procedure: roll D10 and modify it using the Hard
-Technology Modifiers, index this on the proper column
-(determined by total population) and this will yield the
-relative Hard TL of the planet. Do the same using the
-Soft Technology Modifiers to determine the planet&#39;s
-Soft TL</p>
-<p>ge 706</p>
+<p><strong>(c)</strong> If c is greater than zero, go back to step (a).</p>
+<p>The value for PD thus obtained becomes the planet&#39;s current PD.</p>
+<p>The planet&#39;s total population = π(d^2)(1-h/100)PD (where d is the planet&#39;s diameter in km, and h is its hydrographic percentage).</p>
+<p><strong>[vii]</strong> From the information (1) the planet&#39;s current population, (2) its density, and (3) g, we determine the planet&#39;s current technological levels (plural is correct) relative to &quot;the norm&quot; for its time (eg. TL 8 appears around 2400, a planet with relative TLs of -1 in a campaign set in 2400 would have TLs of 7).</p>
+<p>A planet&#39;s technology is rated by the degree of advancement the planet has achieved in (1) physical (&quot;hard&quot;) sciences, and (2) biological (&quot;soft&quot;) sciences. The former is easier to utilize, and often cheaper, while the other does not require heavy elements (such as copper and iron). Very little information on biotechnology appears in ForeSight at this stage, but more is included in ForeScene.</p>
+<p><strong>Procedure:</strong> roll D10 and modify it using the Hard Technology Modifiers, index this on the proper column (determined by total population) and this will yield the relative Hard TL of the planet. Do the same using the Soft Technology Modifiers to determine the planet&#39;s Soft TL.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=81">ForeSight 1986 · p.81 ↗</a></div>
 
-<p>Relative Technology Level Table Modified          Total Population Ole Roll     S10 4 10 4 10 1 10&#39; 10&#39; 10-
-;,10&#39;
--10 1 -10&#39; -10 7 -10- -10&#39;
-S-l   -5   -4     -4   -4   -3   -3   -3 o -5      -4     -3   -3   -3   -2   -2 1    -5   -3     -3   -2   -2   -2   -1 2    -4   -3     -2   -2   -2   -1   -1</p>
-<p>3    -4     -2    -2      -1     -1     -1      0
-4    -3     -2    -1      -1     -1      o      0
-5    -3     -1    -1      -1      o      o      0
-6    -2     -1    -1       o      o      o      0</p>
-<p>7    -2     -1     o       o      o      o      0
-8    -1     -1     o       o      o      o    +1*
-9    -1     o      o       o      o    +1*    +1*
-10   -1      o     o       o    +1*    +1*     +1</p>
-<p>11    0        0 &#39;  0     +1*     +1*     +1     +1 2!12 +1*     + 1* + 1*     + 1*     +1     +1     +1</p>
-<p>Note: * this applies only in some specific areas, in many the relative TL is O.</p>
-<p>Hard Technology ModHlers
--3 Density S 0.5       - g/4 (round up)
--2 0.5 &lt; Density S 0.8 Hthe modifier for density is
--1    0.8 &lt; Density s 0.95   negative
-+1    1.1 &lt; Density S 1.2    + g/4 (round down)
-+2    1.2 &lt; Density s 1.3    H the modifier for density is
-+3    Density&gt; 1.3           positive</p>
-<p>Soft Technology Modifiers
-+3    Density s 0.5          + g/4 (round down)
-+2    0.5 &lt; Density s 0.8     Hthe modifier for density is
-+1    0.8 &lt; Density S 0.95   positive
--1    1.1 &lt; Density s 1.2    - g/4 (round up)
--2    1.2 &lt; Density S 1.3    Hthe modifier for density is
--3    Density&gt; 1.3           negative</p>
-<p>[viii] Using much of the information collated above, we now determine the planet&#39;s government type by rolling D5 and multiplying it by ten, modifying it as follows and then consulting the government type chart.        &#39;</p>
-<p>Modifiers for Government Type Roll</p>
-<p>+206 Roll two 06 and add their sum to the roll
--50 Planet&#39;s Population Density S 0.0078 --40 0.0078 &lt; Planet&#39;s Population Density s 0.0156
--30 0.0156 &lt; Planet&#39;s Population Density s 0.0313
--20 0.0313 &lt; Planet&#39;s Population Density s 0.0625
--10 0.0625 &lt; Planet&#39;s Population Density s 0.125
-+0   0.125 &lt; Planet&#39;s Population Density s 0.25
-+10 0.25 &lt; Planet&#39;s Population Density S 0.5
-+20 0.5 &lt; Planet&#39;s Population Density S 1
-+30 1 &lt; Planet&#39;s Population Density s 2
-+40 2 &lt; Planet&#39;s Population Density s 4
-+50 4 &lt; Planet&#39;s Population Density s 8
-+60 8 &lt; Planet&#39;s Population Density S 16
-+70 16 &lt; Planet&#39;s Population Density s 32
-+80 32 &lt; Planet&#39;s Population Density S 64
-+90 64 &lt; Planet&#39;s Population Density S 128
-+100 Planet&#39;s Population Density&gt; 128
-+3   Planet originally colonised by government
-+6   Planet originally colonised by social group
-+7   Planet originally colonised by MegaCorp
-+5   Colonisation of planet was government subsid-
-ized
-+8   Colonisation of planet was unsubsidized</p>
-<p>Roll    Govt. Type      Roll    Govt. Type</p>
-<p>S25         OA          76           2C 26          OC          77           1C 27-28       OB          78-79        4B 29-30       OA          80-81        4C 31          OB          82-83        4A 32-33       1B          84-85        6B 34-35       1C          86-87        6C 36-38       1A          88-89        5A 39-40       2B          90-91        5C 41          2A          92-94        5A</p>
-<p>42-44       2B          95-96        5B 45          2C          97           4C 46          OC          98-100       3C 47          OB          101-102      6B 48          1S          103-104      6A 49-50       OA          105-106      6C 51          OB          107          6B 52-53       1B          108          4S 54-55       lC          109-111      7C 56-57       1A          112-113      7A</p>
-<p>58          os          114-116      7B 59-60       28          117          OC 61          2A          118          5C 62-64       2B          119-120      8A 65-66       2C          121-122      8B 67          OC          123          8A 68           os         124-126      8C 69          3A          127          2S 70-71       3C          128          3S 72-73       38          129          3C</p>
-<p>74          2C          2!130 Subtract 60 from roll 75          1C          (Then check table again)</p>
+<p><strong>Relative Technology Level Table</strong> — <em>Total Population</em></p>
+<table>
+<thead>
+<tr>
+<th>Modified Die Roll</th>
+<th>≤10^4</th>
+<th>10^4-10^5</th>
+<th>10^5-10^6</th>
+<th>10^6-10^7</th>
+<th>10^7-10^8</th>
+<th>10^8-10^9</th>
+<th>≥10^9</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>-5</td>
+<td>-4</td>
+<td>-4</td>
+<td>-4</td>
+<td>-3</td>
+<td>-3</td>
+<td>-3</td>
+</tr>
+<tr>
+<td>0</td>
+<td>-5</td>
+<td>-4</td>
+<td>-3</td>
+<td>-3</td>
+<td>-3</td>
+<td>-2</td>
+<td>-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-5</td>
+<td>-3</td>
+<td>-3</td>
+<td>-2</td>
+<td>-2</td>
+<td>-2</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-4</td>
+<td>-3</td>
+<td>-2</td>
+<td>-2</td>
+<td>-2</td>
+<td>-1</td>
+<td>-1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-4</td>
+<td>-2</td>
+<td>-2</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>-3</td>
+<td>-2</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>-3</td>
+<td>-1</td>
+<td>-1</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>-2</td>
+<td>-1</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>7</td>
+<td>-2</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>8</td>
+<td>-1</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>+1*</td>
+</tr>
+<tr>
+<td>9</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>+1*</td>
+<td>+1*</td>
+</tr>
+<tr>
+<td>10</td>
+<td>-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>+1*</td>
+<td>+1*</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>+1*</td>
+<td>+1*</td>
+<td>+1</td>
+<td>+1</td>
+</tr>
+<tr>
+<td>≥12</td>
+<td>+1*</td>
+<td>+1*</td>
+<td>+1*</td>
+<td>+1*</td>
+<td>+1</td>
+<td>+1</td>
+<td>+1</td>
+</tr>
+</tbody></table>
+<p>Note: * this applies only in some specific areas, in many the relative TL is 0.</p>
+<p><strong>Hard Technology Modifiers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Density</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-3</td>
+<td>Density ≤ 0.5</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>0.5 &lt; Density ≤ 0.8</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>0.8 &lt; Density ≤ 0.95</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>1.1 &lt; Density ≤ 1.2</td>
+</tr>
+<tr>
+<td>+2</td>
+<td>1.2 &lt; Density ≤ 1.3</td>
+</tr>
+<tr>
+<td>+3</td>
+<td>Density &gt; 1.3</td>
+</tr>
+</tbody></table>
+<p>Then: - g/4 (round up) if the modifier for density is negative; + g/4 (round down) if the modifier for density is positive.</p>
+<p><strong>Soft Technology Modifiers</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Density</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+3</td>
+<td>Density ≤ 0.5</td>
+</tr>
+<tr>
+<td>+2</td>
+<td>0.5 &lt; Density ≤ 0.8</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>0.8 &lt; Density ≤ 0.95</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>1.1 &lt; Density ≤ 1.2</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>1.2 &lt; Density ≤ 1.3</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>Density &gt; 1.3</td>
+</tr>
+</tbody></table>
+<p>Then: + g/4 (round down) if the modifier for density is positive; - g/4 (round up) if the modifier for density is negative.</p>
+<p><strong>[viii]</strong> Using much of the information collated above, we now determine the planet&#39;s government type by rolling D5 and multiplying it by ten, modifying it as follows and then consulting the government type chart.</p>
+<p><strong>Modifiers for Government Type Roll</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+2D6</td>
+<td>Roll two D6 and add their sum to the roll</td>
+</tr>
+<tr>
+<td>-50</td>
+<td>Planet&#39;s Population Density ≤ 0.0078</td>
+</tr>
+<tr>
+<td>-40</td>
+<td>0.0078 &lt; Planet&#39;s Population Density ≤ 0.0156</td>
+</tr>
+<tr>
+<td>-30</td>
+<td>0.0156 &lt; Planet&#39;s Population Density ≤ 0.0313</td>
+</tr>
+<tr>
+<td>-20</td>
+<td>0.0313 &lt; Planet&#39;s Population Density ≤ 0.0625</td>
+</tr>
+<tr>
+<td>-10</td>
+<td>0.0625 &lt; Planet&#39;s Population Density ≤ 0.125</td>
+</tr>
+<tr>
+<td>+0</td>
+<td>0.125 &lt; Planet&#39;s Population Density ≤ 0.25</td>
+</tr>
+<tr>
+<td>+10</td>
+<td>0.25 &lt; Planet&#39;s Population Density ≤ 0.5</td>
+</tr>
+<tr>
+<td>+20</td>
+<td>0.5 &lt; Planet&#39;s Population Density ≤ 1</td>
+</tr>
+<tr>
+<td>+30</td>
+<td>1 &lt; Planet&#39;s Population Density ≤ 2</td>
+</tr>
+<tr>
+<td>+40</td>
+<td>2 &lt; Planet&#39;s Population Density ≤ 4</td>
+</tr>
+<tr>
+<td>+50</td>
+<td>4 &lt; Planet&#39;s Population Density ≤ 8</td>
+</tr>
+<tr>
+<td>+60</td>
+<td>8 &lt; Planet&#39;s Population Density ≤ 16</td>
+</tr>
+<tr>
+<td>+70</td>
+<td>16 &lt; Planet&#39;s Population Density ≤ 32</td>
+</tr>
+<tr>
+<td>+80</td>
+<td>32 &lt; Planet&#39;s Population Density ≤ 64</td>
+</tr>
+<tr>
+<td>+90</td>
+<td>64 &lt; Planet&#39;s Population Density ≤ 128</td>
+</tr>
+<tr>
+<td>+100</td>
+<td>Planet&#39;s Population Density &gt; 128</td>
+</tr>
+<tr>
+<td>+3</td>
+<td>Planet originally colonised by government</td>
+</tr>
+<tr>
+<td>+6</td>
+<td>Planet originally colonised by social group</td>
+</tr>
+<tr>
+<td>+7</td>
+<td>Planet originally colonised by MegaCorp</td>
+</tr>
+<tr>
+<td>+5</td>
+<td>Colonisation of planet was government subsidized</td>
+</tr>
+<tr>
+<td>+8</td>
+<td>Colonisation of planet was unsubsidized</td>
+</tr>
+</tbody></table>
+<p><strong>Government Type Chart</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Govt. Type</th>
+<th>Roll</th>
+<th>Govt. Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤25</td>
+<td>0A</td>
+<td>76</td>
+<td>2C</td>
+</tr>
+<tr>
+<td>26</td>
+<td>0C</td>
+<td>77</td>
+<td>1C</td>
+</tr>
+<tr>
+<td>27-28</td>
+<td>0B</td>
+<td>78-79</td>
+<td>4B</td>
+</tr>
+<tr>
+<td>29-30</td>
+<td>0A</td>
+<td>80-81</td>
+<td>4C</td>
+</tr>
+<tr>
+<td>31</td>
+<td>0B</td>
+<td>82-83</td>
+<td>4A</td>
+</tr>
+<tr>
+<td>32-33</td>
+<td>1B</td>
+<td>84-85</td>
+<td>6B</td>
+</tr>
+<tr>
+<td>34-35</td>
+<td>1C</td>
+<td>86-87</td>
+<td>6C</td>
+</tr>
+<tr>
+<td>36-38</td>
+<td>1A</td>
+<td>88-89</td>
+<td>5A</td>
+</tr>
+<tr>
+<td>39-40</td>
+<td>2B</td>
+<td>90-91</td>
+<td>5C</td>
+</tr>
+<tr>
+<td>41</td>
+<td>2A</td>
+<td>92-94</td>
+<td>5A</td>
+</tr>
+<tr>
+<td>42-44</td>
+<td>2B</td>
+<td>95-96</td>
+<td>5B</td>
+</tr>
+<tr>
+<td>45</td>
+<td>2C</td>
+<td>97</td>
+<td>4C</td>
+</tr>
+<tr>
+<td>46</td>
+<td>0C</td>
+<td>98-100</td>
+<td>3C</td>
+</tr>
+<tr>
+<td>47</td>
+<td>0B</td>
+<td>101-102</td>
+<td>6B</td>
+</tr>
+<tr>
+<td>48</td>
+<td>1S</td>
+<td>103-104</td>
+<td>6A</td>
+</tr>
+<tr>
+<td>49-50</td>
+<td>0A</td>
+<td>105-106</td>
+<td>6C</td>
+</tr>
+<tr>
+<td>51</td>
+<td>0B</td>
+<td>107</td>
+<td>6B</td>
+</tr>
+<tr>
+<td>52-53</td>
+<td>1B</td>
+<td>108</td>
+<td>4S</td>
+</tr>
+<tr>
+<td>54-55</td>
+<td>1C</td>
+<td>109-111</td>
+<td>7C</td>
+</tr>
+<tr>
+<td>56-57</td>
+<td>1A</td>
+<td>112-113</td>
+<td>7A</td>
+</tr>
+<tr>
+<td>58</td>
+<td>0S</td>
+<td>114-116</td>
+<td>7B</td>
+</tr>
+<tr>
+<td>59-60</td>
+<td>2B</td>
+<td>117</td>
+<td>0C</td>
+</tr>
+<tr>
+<td>61</td>
+<td>2A</td>
+<td>118</td>
+<td>5C</td>
+</tr>
+<tr>
+<td>62-64</td>
+<td>2B</td>
+<td>119-120</td>
+<td>8A</td>
+</tr>
+<tr>
+<td>65-66</td>
+<td>2C</td>
+<td>121-122</td>
+<td>8B</td>
+</tr>
+<tr>
+<td>67</td>
+<td>0C</td>
+<td>123</td>
+<td>8A</td>
+</tr>
+<tr>
+<td>68</td>
+<td>0S</td>
+<td>124-126</td>
+<td>8C</td>
+</tr>
+<tr>
+<td>69</td>
+<td>3A</td>
+<td>127</td>
+<td>2S</td>
+</tr>
+<tr>
+<td>70-71</td>
+<td>3C</td>
+<td>128</td>
+<td>3S</td>
+</tr>
+<tr>
+<td>72-73</td>
+<td>3B</td>
+<td>129</td>
+<td>3C</td>
+</tr>
+<tr>
+<td>74</td>
+<td>2C</td>
+<td>≥130</td>
+<td>Subtract 60 from roll (then check table again)</td>
+</tr>
+<tr>
+<td>75</td>
+<td>1C</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <p>The Government Type codes are explained later under Explanation of Government Types.</p>
-<p>e 707</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=82">ForeSight 1986 · p.82 ↗</a></div>
 
-<p>Explanation of Government Types OA No rules or conventions: Might is Right. (A
-truly free market economy.)
-08 Balkanised into tribes, or communal autarchies OC Theocracy*: the planet&#39;s government is deter-
-mined along religious tenets and rules, and it is
-ruled by a religious hierarchy</p>
-<p>1A A (Wo)man&#39;s Spread Is Her/His Castle,
-(s)he has full rights to do what (s)he wants on
-herlhis property
-18 Balkanised into petty oligarchies, feudal hold-
-ings, and mayoralties
-1C Hereditary Autarchy*: the planet is ruled by a
-single person who shall be succeeded by one of
-his/her offspring</p>
-<p>2A Idealistic Anarchy: the only law is against
-weapons and violence, upheld by convention,
-rather than some agency.
-28 Balkanised into republics (democracies),
-monarchies, and &quot;empires&quot;.
-2C Planetary Oligarchy·: rule by wealthy families,
-and corporations, either in name, or in fact (while
-probably disguised as representative democracy).</p>
-<p>3A Idealistic Anarchy: the only organisation is the
-&quot;police force&quot; who prevent violence and weapon
-ownership and use.
-38 Balkanised into republics, dictatorships, and
-&quot;superpowers&quot;.
-3C Representative Democracy: parliamentary
-(as per Australia, and Great Britain), or presidential
-(as per France, and the U.S.A.).</p>
-<p>4A Subservient          Bureaucracy: a publicly
-answerable, but generally autonomous
-bureaucracy runs the planet.
-4B Balkanised into participant democracies,
-republics, dictatorships, and MegaCorps.
-4C Participant Democracy: major issues are
-decided by the people as a whole via a vast
-telecommunications net.</p>
-<p>5A Stable Bureaucracy: a self perpetuating
-bureaucracy, answerable to itself only, runs
-everything.
-58 Balkanised into MegaCorps, various
-democracies, and dictatorships.
-5C Randomly Selected Assembly: an assembly
-of randomly selected people govern the planet for a
-fixed period, after which a new assembly is
-selected.</p>
-<p>6A Oppressive Bureaucracy*: a self perpet-
-uating, heedless bureaucracy, answerable only to
-itself, runs things; promotion within it may be by
-birth or connections.
-6B Corporate Administration*: the planet is gov-
-erned, owned, and run, by a huge corporate entity.
-6C Malevolent Autocrat*: a self seeking person
-has absolute power over the planet.</p>
-<p>Pag</p>
-<p>t</p>
-<p>7A Stable Bureaucracy: a self perpetuating bur-
-eaucracy, answerable only to itself, runs the
-planet.
-78 Balkanised into MegaCorps, various democ-
-racies, and dictatorships.
-7C Benevolent Autocrat*: a well intentioned per-
-son has absolute power over the planet.</p>
-<p>8A Subservient        Bureaucracy: a publically
-answerable, but generally autonomous, bureau-
-cracy runs things.
-88 Balkanised into MegaCorps, various democ-
-racies, and dictatorships.
-8C Malevolent Autocrat*: a self seeking person
-has absolute power over the planet.</p>
-<p>OS Syndlcate*: the planet is ruled by a conglomerate
-of criminal syndicates which use it as a base of
-operations.
-1S Intellectual Oligarchy*: the planet is ruled by
-people selected on the basis of their intellectual
-achievement.
-2S Computer*: &quot;The computer is your friend, trust the
-computer. The computer knows the optimal path to
-human happiness and welfare. Thank you for your
-cooperation.&quot; The planet is ruled by a computer.
-3S Front: the planet is run by a computer, but
-disguises its decisions by channelling them through
-unwitting human servants.
-4S Computer Balkans*: As per 2S, or 3S, above,
-but the planet is balkanised into lots of small
-computer controlled communities.
-5S Rule by Dice: the planet is ruled by wargamers.</p>
-<p>Note: * indicates a government unacceptable to the Federation , and hence automatically external to it (&quot;Beyond the Pale&quot;). Also note that some government types are repeated. The reasons for this may, one day, become clear, if the planetary history generator is ever completed, which seems unlikely.</p>
-<p>ge 708</p>
+<h5>Explanation of Government Types</h5>
+<p><strong>0A</strong> No rules or conventions: Might is Right. (A truly free market economy.)</p>
+<p><strong>0B</strong> Balkanised into tribes, or communal autarchies</p>
+<p><strong>0C Theocracy*</strong>: the planet&#39;s government is determined along religious tenets and rules, and it is ruled by a religious hierarchy</p>
+<p><strong>1A</strong> A (Wo)man&#39;s Spread Is Her/His Castle, (s)he has full rights to do what (s)he wants on her/his property</p>
+<p><strong>1B</strong> Balkanised into petty oligarchies, feudal holdings, and mayoralties</p>
+<p><strong>1C Hereditary Autarchy*</strong>: the planet is ruled by a single person who shall be succeeded by one of his/her offspring</p>
+<p><strong>2A Idealistic Anarchy</strong>: the only law is against weapons and violence, upheld by convention, rather than some agency.</p>
+<p><strong>2B</strong> Balkanised into republics (democracies), monarchies, and &quot;empires&quot;.</p>
+<p><strong>2C Planetary Oligarchy*</strong>: rule by wealthy families, and corporations, either in name, or in fact (while probably disguised as representative democracy).</p>
+<p><strong>3A Idealistic Anarchy</strong>: the only organisation is the &quot;police force&quot; who prevent violence and weapon ownership and use.</p>
+<p><strong>3B</strong> Balkanised into republics, dictatorships, and &quot;superpowers&quot;.</p>
+<p><strong>3C Representative Democracy</strong>: parliamentary (as per Australia, and Great Britain), or presidential (as per France, and the U.S.A.).</p>
+<p><strong>4A Subservient Bureaucracy</strong>: a publicly answerable, but generally autonomous bureaucracy runs the planet.</p>
+<p><strong>4B</strong> Balkanised into participant democracies, republics, dictatorships, and MegaCorps.</p>
+<p><strong>4C Participant Democracy</strong>: major issues are decided by the people as a whole via a vast telecommunications net.</p>
+<p><strong>5A Stable Bureaucracy</strong>: a self perpetuating bureaucracy, answerable to itself only, runs everything.</p>
+<p><strong>5B</strong> Balkanised into MegaCorps, various democracies, and dictatorships.</p>
+<p><strong>5C Randomly Selected Assembly</strong>: an assembly of randomly selected people govern the planet for a fixed period, after which a new assembly is selected.</p>
+<p><strong>6A Oppressive Bureaucracy*</strong>: a self perpetuating, heedless bureaucracy, answerable only to itself, runs things; promotion within it may be by birth or connections.</p>
+<p><strong>6B Corporate Administration*</strong>: the planet is governed, owned, and run, by a huge corporate entity.</p>
+<p><strong>6C Malevolent Autocrat*</strong>: a self seeking person has absolute power over the planet.</p>
+<p><strong>7A Stable Bureaucracy</strong>: a self perpetuating bureaucracy, answerable only to itself, runs the planet.</p>
+<p><strong>7B</strong> Balkanised into MegaCorps, various democracies, and dictatorships.</p>
+<p><strong>7C Benevolent Autocrat*</strong>: a well intentioned person has absolute power over the planet.</p>
+<p><strong>8A Subservient Bureaucracy</strong>: a publically answerable, but generally autonomous, bureaucracy runs things.</p>
+<p><strong>8B</strong> Balkanised into MegaCorps, various democracies, and dictatorships.</p>
+<p><strong>8C Malevolent Autocrat*</strong>: a self seeking person has absolute power over the planet.</p>
+<p><strong>0S Syndicate*</strong>: the planet is ruled by a conglomerate of criminal syndicates which use it as a base of operations.</p>
+<p><strong>1S Intellectual Oligarchy*</strong>: the planet is ruled by people selected on the basis of their intellectual achievement.</p>
+<p><strong>2S Computer*</strong>: &quot;The computer is your friend, trust the computer. The computer knows the optimal path to human happiness and welfare. Thank you for your cooperation.&quot; The planet is ruled by a computer.</p>
+<p><strong>3S Front</strong>: the planet is run by a computer, but disguises its decisions by channelling them through unwitting human servants.</p>
+<p><strong>4S Computer Balkans*</strong>: As per 2S, or 3S, above, but the planet is balkanised into lots of small computer controlled communities.</p>
+<p><strong>5S Rule by Dice</strong>: the planet is ruled by wargamers.</p>
+<p>Note: * indicates a government unacceptable to the Federation, and hence automatically external to it (&quot;Beyond the Pale&quot;). Also note that some government types are repeated. The reasons for this may, one day, become clear, if the planetary history generator is ever completed, which seems unlikely.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=83">ForeSight 1986 · p.83 ↗</a></div>
 
-<p>Government Effects Table Type       Law       Social       Settlement       Tech Code      Level     Feature.      Structure        Level</p>
-<p>OA          0           0               -4         40% 08          1           3               -3         40% DC          6           3              -1          60% 1A          0           0               -3         30% 18          2           2               -2         30% 1C          2           3               -2         40% 2A          1           1               -2         20% 28          3           2               -1          2% 2C          4           2                0         10% 3A          2           2               -1         10% 38          4           2                0          2% 3C          3           2                0          1% 4A          4           2                0         10% 48          4           1                0          2% 4C          3           3                0          1% 5A          5           2              +1           2% 58          4           2                0          2% 5C          3           3                0          4% 6A          6           2              +1          20% 68          5           0              +2           7% 6C          6           2                0         15% 7A          5           1               -1          7% 78          5           0              +1           2% 7C          4           2              +2          10% SA          5           1               -1          7% 88          6           0                0          2% SC          7           3               -2         40% OS          1           2                0         10% 1S          3           3              +2           2% 2S          7           3              +6          20% 3S          6           2              +5          10% 4S          7           4              +6           5%</p>
+<p><strong>Government Effects Table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type Code</th>
+<th>Law Level</th>
+<th>Social Features</th>
+<th>Settlement Structure</th>
+<th>Tech Level</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0A</td>
+<td>0</td>
+<td>0</td>
+<td>-4</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>0B</td>
+<td>1</td>
+<td>3</td>
+<td>-3</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>0C</td>
+<td>6</td>
+<td>3</td>
+<td>-1</td>
+<td>60%</td>
+</tr>
+<tr>
+<td>1A</td>
+<td>0</td>
+<td>0</td>
+<td>-3</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>1B</td>
+<td>2</td>
+<td>2</td>
+<td>-2</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>1C</td>
+<td>2</td>
+<td>3</td>
+<td>-2</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>2A</td>
+<td>1</td>
+<td>1</td>
+<td>-2</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>2B</td>
+<td>3</td>
+<td>2</td>
+<td>-1</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>2C</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>3A</td>
+<td>2</td>
+<td>2</td>
+<td>-1</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>3B</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>3C</td>
+<td>3</td>
+<td>2</td>
+<td>0</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>4A</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>4B</td>
+<td>4</td>
+<td>1</td>
+<td>0</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>4C</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>1%</td>
+</tr>
+<tr>
+<td>5A</td>
+<td>5</td>
+<td>2</td>
+<td>+1</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>5B</td>
+<td>4</td>
+<td>2</td>
+<td>0</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>5C</td>
+<td>3</td>
+<td>3</td>
+<td>0</td>
+<td>4%</td>
+</tr>
+<tr>
+<td>6A</td>
+<td>6</td>
+<td>2</td>
+<td>+1</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>6B</td>
+<td>5</td>
+<td>0</td>
+<td>+2</td>
+<td>7%</td>
+</tr>
+<tr>
+<td>6C</td>
+<td>6</td>
+<td>2</td>
+<td>0</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>7A</td>
+<td>5</td>
+<td>1</td>
+<td>-1</td>
+<td>7%</td>
+</tr>
+<tr>
+<td>7B</td>
+<td>5</td>
+<td>0</td>
+<td>+1</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>7C</td>
+<td>4</td>
+<td>2</td>
+<td>+2</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>8A</td>
+<td>5</td>
+<td>1</td>
+<td>-1</td>
+<td>7%</td>
+</tr>
+<tr>
+<td>8B</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>8C</td>
+<td>7</td>
+<td>3</td>
+<td>-2</td>
+<td>40%</td>
+</tr>
+<tr>
+<td>0S</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>1S</td>
+<td>3</td>
+<td>3</td>
+<td>+2</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>2S</td>
+<td>7</td>
+<td>3</td>
+<td>+6</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>3S</td>
+<td>6</td>
+<td>2</td>
+<td>+5</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>4S</td>
+<td>7</td>
+<td>4</td>
+<td>+6</td>
+<td>5%</td>
+</tr>
+</tbody></table>
 <p>The values given on the above table are used in the stages which follow.</p>
-<p>[ix] Individually modify the planet&#39;s hard and soft Tl&#39;s as follows. The Tech Level value on the Government Effects Table (above) is the chance per generation (25 years) that each of the planet&#39;s TLs will have 0.5 subtracted from it while the government is in power. Roll D100 for each TL g times (remember g? Gener-ations since colonisation?), and reduce each TL by 0.5 per roll less than or equal to the Tech Level rating.</p>
-<p>[x] Given the planet&#39;s population density, government, and its current Hard TL, we now determine the planet&#39;s settlement structure (the organisation of its settle-ments). This is determined simply by rolling D10, which will give a number, n; consulting the Settlement structure chart and choosing the nth lowest structure allowable (ie. the nth structure, with suitable values of TL, and PO, from the bottom of the Settlement Structures table); if there is none, then choose the top-most allowable structure.</p>
-<p>Dl0 Roll       n              010 Roll      n
-s-l      5                 6-8         2
-0-2      4                   ~         1
-3-5      3</p>
+<p><strong>[ix]</strong> Individually modify the planet&#39;s hard and soft TLs as follows. The Tech Level value on the Government Effects Table (above) is the chance per generation (25 years) that each of the planet&#39;s TLs will have 0.5 subtracted from it while the government is in power. Roll D100 for each TL g times (remember g? Generations since colonisation?), and reduce each TL by 0.5 per roll less than or equal to the Tech Level rating.</p>
+<p><strong>[x]</strong> Given the planet&#39;s population density, government, and its current Hard TL, we now determine the planet&#39;s settlement structure (the organisation of its settlements). This is determined simply by rolling D10, which will give a number, n; consulting the Settlement structure chart and choosing the nth lowest structure allowable (ie. the nth structure, with suitable values of TL, and PD, from the bottom of the Settlement Structures table); if there is none, then choose the top-most allowable structure.</p>
+<table>
+<thead>
+<tr>
+<th>D10 Roll</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>0-2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3-5</td>
+<td>3</td>
+</tr>
+<tr>
+<td>6-8</td>
+<td>2</td>
+</tr>
+<tr>
+<td>≥9</td>
+<td>1</td>
+</tr>
+</tbody></table>
 <p>Modify the die roll by the Settlement Structure modifier given on the Government Effects Table.</p>
-<p>Settlement Structures
-Hard
-PD     TL Description 0-2        Nomadic and Primitive Agriculture
-0-5 ~1    Pastoral Subsistence Farming, and
-Cottage Industry
-0.25-20 ~4 Spread Farming and Centralised Industry
-1-30 ~ Factory Farming and Centralised, Seg-
-regated Industry
-0-20 ~     Oecentralised Co-operative Communes 2-50 ~     Purpose-specific Community Modules 0-30 ~     SeH-sufficient Community Modules
-(&quot;Arcologies&quot;)
-~10    6  Megaplexes
-(huge self-sufficient City Structures)</p>
-<p>[xi] Determine the planet population&#39;s social features via
-the following procedure. Add to the number given for
-Social Features on the Government Effects Table the
-modifiers given below, to determine the number of
-times you should roll on the Social Features table for
-social features or structures.</p>
-<p>Modifiers to Base Number of Social Features</p>
-<p>+0612-1 (round up); add this to the number of social
-features for all planets</p>
-<p>-1         PO&lt; 1
--3         PO &lt;0.1
-+1         Population S 10 000 000</p>
-<p>o          Originally colonised by Government
-+3         Colonised by Social Group
--1         Colonised by MegaCorp
-+1         Colonisation was subsidized
-+2         Colonisation was unsubsidized</p>
-<p>Social Features Roll       Structure or Feature</p>
-<p>01-30      No Feature</p>
-<p>31-40      DESIGN or CHOOSE your own feature.</p>
-<p>41-42      Ghetto-ization: informal segregation of
-some racial groups; if rolled a second time this
-becomes Racial Segregation: enforced
-segregation of certain racial groups</p>
-<p>43-44      Ghetto-ization: informal segregation of
-some social groups; if rolled a second time this
-becomes Social Segregation: enforced
-segregation of certain social/economic groups</p>
-<p>e 709</p>
+<p><strong>Settlement Structures</strong></p>
+<p><em>The Hard TL thresholds marked &quot;≥ ?&quot; were illegible in the scan.</em></p>
+<table>
+<thead>
+<tr>
+<th>PD</th>
+<th>Hard TL</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0-2</td>
+<td></td>
+<td>Nomadic and Primitive Agriculture</td>
+</tr>
+<tr>
+<td>0-5</td>
+<td>≥1</td>
+<td>Pastoral Subsistence Farming, and Cottage Industry</td>
+</tr>
+<tr>
+<td>0.25-20</td>
+<td>≥4</td>
+<td>Spread Farming and Centralised Industry</td>
+</tr>
+<tr>
+<td>1-30</td>
+<td>≥ ?</td>
+<td>Factory Farming and Centralised, Segregated Industry</td>
+</tr>
+<tr>
+<td>0-20</td>
+<td>≥ ?</td>
+<td>Decentralised Co-operative Communes</td>
+</tr>
+<tr>
+<td>2-50</td>
+<td>≥ ?</td>
+<td>Purpose-specific Community Modules</td>
+</tr>
+<tr>
+<td>0-30</td>
+<td>≥ ?</td>
+<td>Self-sufficient Community Modules (&quot;Arcologies&quot;)</td>
+</tr>
+<tr>
+<td>≥10</td>
+<td>6</td>
+<td>Megaplexes (huge self-sufficient City Structures)</td>
+</tr>
+</tbody></table>
+<p><strong>[xi]</strong> Determine the planet population&#39;s social features via the following procedure. Add to the number given for Social Features on the Government Effects Table the modifiers given below, to determine the number of times you should roll on the Social Features table for social features or structures.</p>
+<p><strong>Modifiers to Base Number of Social Features</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>+D6/2 - 1</td>
+<td>(round up); add this to the number of social features for all planets</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>PD &lt; 1</td>
+</tr>
+<tr>
+<td>-3</td>
+<td>PD &lt; 0.1</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>Population ≤ 10 000 000</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Originally colonised by Government</td>
+</tr>
+<tr>
+<td>+3</td>
+<td>Colonised by Social Group</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>Colonised by MegaCorp</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>Colonisation was subsidized</td>
+</tr>
+<tr>
+<td>+2</td>
+<td>Colonisation was unsubsidized</td>
+</tr>
+</tbody></table>
+<p><strong>Social Features</strong></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Structure or Feature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-30</td>
+<td>No Feature</td>
+</tr>
+<tr>
+<td>31-40</td>
+<td>DESIGN or CHOOSE your own feature.</td>
+</tr>
+<tr>
+<td>41-42</td>
+<td><strong>Ghetto-ization</strong>: informal segregation of some racial groups; if rolled a second time this becomes <strong>Racial Segregation</strong>: enforced segregation of certain racial groups</td>
+</tr>
+<tr>
+<td>43-44</td>
+<td><strong>Ghetto-ization</strong>: informal segregation of some social groups; if rolled a second time this becomes <strong>Social Segregation</strong>: enforced segregation of certain social/economic groups</td>
+</tr>
+</tbody></table>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=84">ForeSight 1986 · p.84 ↗</a></div>
 
-<p>45-46   Family Reputation: a person&#39;s initial
-standing is determined by his/her family repu-
-tation, which he/she can do little to alter; if
-rolled a second time this becomes Class
-System: each person has some social class,
-determined by his/her birth status (at least in
-general), which is not easily changed; if rolled a
-third time this becomes Caste System: each
-person is born into a social caste, which is
-essentially unalterable, and which restricts
-his/her position, profession, and social con-
-tacts to those allowed to one of his/her caste</p>
-<p>47-48   Marked Sex-role Differentiation: a
-person&#39;s sex has a considerable effect on
-his/her possible professions, positions, duties,
-pay-scales, and so forth; if rolled a second
-time this becomes Sexual Discrimination:
-not only are sex-roles differentiated, but one,
-or the other, sex has considerably inferior legal
-status; if rolled a third rime this becomes
-Sexual Segregation: members of one sex
-or the other are segregated from members of
-the opposite sex other than their spouse/-
-owner/whatever, as well as suffering the
-previous two problems</p>
-<p>49-50   National        Religion: there is a vast
-propensity towards one particular religion (ie. it
-has official recognition in the government, the
-armed forces, official documents, the law, ego
-&quot;Christianity&quot; in the U.S.A.); if rolled a second
-time this becomes Religious Discrimin-
-ation: not only is there inherent bias towards
-one religion, other beliefs are discriminated
-against, perhaps informally segregated; and if
-rolled a third time this becomes Religious
-Persecution: members of rival religions to
-that of the state (heretics and unbelievers) are
-hunted down and converted, killed, fed to lions,
-crucified, etc.</p>
-<p>51-52   Obligation System: an individual&#39;s actions
-are governed, to a considerable exent, by a
-catalogue of debts and favours owed, which
-he/she feels inclined to (respectively) pay and
-utilize. People who fail their obligations are (at
-least informally) outcast, while those who are
-owed many favours gain status; if rolled again
-this becomes Personal Honour: an indiv-
-idual must act to maintain his/her honour,
-according to a strict ethical, religious, and
-esthetic code; which on a third roll becomes
-Honour System: not only personal, but
-family, and organisation honour, and a concept
-akin to self-esteem must be maintained, even
-unto death, etc.</p>
-<p>53-54    Domination: an individual&#39;s status is to a
-measurable extent governed by his/her ability
-to dominate others in some field of conflict:
-political debate, archaic-style duel, four-
-dimensional chess, hussade, or whatever; if
-rolled a second time this becomes Duel
-System: individual differences, and relative
-status are settled by formal duels, of some</p>
-<p>Pag</p>
-<p>t</p>
-<p>form (not necessarily violent)</p>
-<p>55       No facial expression: people on the planet
-conceal their faces, perhaps as a result of
-exposure taboo, and hence must interact
-without the benefit of facial expression; if rolled
-again this becomes Masks: the people on this
-planet feel that involuntary facial expressions,
-and the differing physical attractivenesses of
-people&#39;s faces, prevent them from fully con-
-trolling the way in which others view them, and
-hence each wears a mask he/she feels suits
-the way he/she wishes to approach a given
-occasion</p>
-<p>56      No gesticulation: people on the planet find
-manual gesticulation to be vulgar and awkward,
-or for some other reason do not gesture when
-interacting</p>
-<p>57      No vocal modulation: if a person cannot
-say precisely what he/she intends to say in a
-level voice, then his/her command of the lan-
-guage is faulty, and he/she is probably too
-stupid to be worth talking to. For whatever
-reasons, people on this planet speak in a dull
-monotone; if rolled a second time this becomes
-No speech: the locals do not use speech in
-any recognisable form, having either dropped it
-for something more precise, and refined, or
-having altered their language to cope with their
-lack of vocal expression</p>
-<p>58      Musical Instruments: in order to perfect
-the conveyance of emotional undertone in
-personal interaction, the locals augment their
-speech with musical accompaniment</p>
-<p>59-60   Perfumes: people on this planet use specific
-perfumes to indicate their current emotional
-state, marital status, openness to sexual
-advances, etc.</p>
-<p>61-62   Clothing: the colour, form, and arrangement
-of the clothing worn by a local serve to
-announce his/her social standing, emotional
-state, marital status, openness to sexual
-advances, etc.</p>
-<p>63-64   Xenophobia: strangers are shunned and
-feared on this planet; if rolled a second time
-this becomes Xenopersecutlon: strangers
-are actively, if not officially, persecuted on this
-planet</p>
-<p>65-66   Mistrust of AI: locals shun and abhor
-Artificial Intelligence, and refuse to allow
-robots, AI computers, and so forth onto the
-planet; if rolled a second time this becomes
-Mistrust of Computers: AI is banned, and
-locals dislike even fairly primitive computers,
-and this has forced most people to avoid using
-them; if rolled a third time becomes Computer
-Ban: computers and AI are banned on the
-planet</p>
-<p>ge 710</p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Structure or Feature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>45-46</td>
+<td><strong>Family Reputation</strong>: a person&#39;s initial standing is determined by his/her family reputation, which he/she can do little to alter; if rolled a second time this becomes <strong>Class System</strong>: each person has some social class, determined by his/her birth status (at least in general), which is not easily changed; if rolled a third time this becomes <strong>Caste System</strong>: each person is born into a social caste, which is essentially unalterable, and which restricts his/her position, profession, and social contacts to those allowed to one of his/her caste</td>
+</tr>
+<tr>
+<td>47-48</td>
+<td><strong>Marked Sex-role Differentiation</strong>: a person&#39;s sex has a considerable effect on his/her possible professions, positions, duties, pay-scales, and so forth; if rolled a second time this becomes <strong>Sexual Discrimination</strong>: not only are sex-roles differentiated, but one, or the other, sex has considerably inferior legal status; if rolled a third time this becomes <strong>Sexual Segregation</strong>: members of one sex or the other are segregated from members of the opposite sex other than their spouse/owner/whatever, as well as suffering the previous two problems</td>
+</tr>
+<tr>
+<td>49-50</td>
+<td><strong>National Religion</strong>: there is a vast propensity towards one particular religion (ie. it has official recognition in the government, the armed forces, official documents, the law, eg. &quot;Christianity&quot; in the U.S.A.); if rolled a second time this becomes <strong>Religious Discrimination</strong>: not only is there inherent bias towards one religion, other beliefs are discriminated against, perhaps informally segregated; and if rolled a third time this becomes <strong>Religious Persecution</strong>: members of rival religions to that of the state (heretics and unbelievers) are hunted down and converted, killed, fed to lions, crucified, etc.</td>
+</tr>
+<tr>
+<td>51-52</td>
+<td><strong>Obligation System</strong>: an individual&#39;s actions are governed, to a considerable extent, by a catalogue of debts and favours owed, which he/she feels inclined to (respectively) pay and utilize. People who fail their obligations are (at least informally) outcast, while those who are owed many favours gain status; if rolled again this becomes <strong>Personal Honour</strong>: an individual must act to maintain his/her honour, according to a strict ethical, religious, and esthetic code; which on a third roll becomes <strong>Honour System</strong>: not only personal, but family, and organisation honour, and a concept akin to self-esteem must be maintained, even unto death, etc.</td>
+</tr>
+<tr>
+<td>53-54</td>
+<td><strong>Domination</strong>: an individual&#39;s status is to a measurable extent governed by his/her ability to dominate others in some field of conflict: political debate, archaic-style duel, four-dimensional chess, hussade, or whatever; if rolled a second time this becomes <strong>Duel System</strong>: individual differences, and relative status are settled by formal duels, of some form (not necessarily violent)</td>
+</tr>
+<tr>
+<td>55</td>
+<td><strong>No facial expression</strong>: people on the planet conceal their faces, perhaps as a result of exposure taboo, and hence must interact without the benefit of facial expression; if rolled again this becomes <strong>Masks</strong>: the people on this planet feel that involuntary facial expressions, and the differing physical attractivenesses of people&#39;s faces, prevent them from fully controlling the way in which others view them, and hence each wears a mask he/she feels suits the way he/she wishes to approach a given occasion</td>
+</tr>
+<tr>
+<td>56</td>
+<td><strong>No gesticulation</strong>: people on the planet find manual gesticulation to be vulgar and awkward, or for some other reason do not gesture when interacting</td>
+</tr>
+<tr>
+<td>57</td>
+<td><strong>No vocal modulation</strong>: if a person cannot say precisely what he/she intends to say in a level voice, then his/her command of the language is faulty, and he/she is probably too stupid to be worth talking to. For whatever reasons, people on this planet speak in a dull monotone; if rolled a second time this becomes <strong>No speech</strong>: the locals do not use speech in any recognisable form, having either dropped it for something more precise, and refined, or having altered their language to cope with their lack of vocal expression</td>
+</tr>
+<tr>
+<td>58</td>
+<td><strong>Musical Instruments</strong>: in order to perfect the conveyance of emotional undertone in personal interaction, the locals augment their speech with musical accompaniment</td>
+</tr>
+<tr>
+<td>59-60</td>
+<td><strong>Perfumes</strong>: people on this planet use specific perfumes to indicate their current emotional state, marital status, openness to sexual advances, etc.</td>
+</tr>
+<tr>
+<td>61-62</td>
+<td><strong>Clothing</strong>: the colour, form, and arrangement of the clothing worn by a local serve to announce his/her social standing, emotional state, marital status, openness to sexual advances, etc.</td>
+</tr>
+<tr>
+<td>63-64</td>
+<td><strong>Xenophobia</strong>: strangers are shunned and feared on this planet; if rolled a second time this becomes <strong>Xenopersecution</strong>: strangers are actively, if not officially, persecuted on this planet</td>
+</tr>
+<tr>
+<td>65-66</td>
+<td><strong>Mistrust of AI</strong>: locals shun and abhor Artificial Intelligence, and refuse to allow robots, AI computers, and so forth onto the planet; if rolled a second time this becomes <strong>Mistrust of Computers</strong>: AI is banned, and locals dislike even fairly primitive computers, and this has forced most people to avoid using them; if rolled a third time becomes <strong>Computer Ban</strong>: computers and AI are banned on the planet</td>
+</tr>
+</tbody></table>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=85">ForeSight 1986 · p.85 ↗</a></div>
 
-<p>67-68   Great Hospitality: tradition has led people
-here to regard hospitality as akin to personal
-decency, and only scum would refuse people
-food and shelter, or abuse it once proffered</p>
-<p>69-70   Spartan Tendency: people on this planet
-take a perverse pride in their ability to do
-without physical comforts; if rolled twice this
-becomes Spartan Propensity: lUxury items
-are regarded as folly on this planet, and no
-native would use such rubbish</p>
-<p>71-72   Exposure Taboo: genitalia are regarded as
-extremely repulsive or religiously forbidden
-subjects for viewing, and exposure of them in
-public, or by way of entertainment, is illegal; if
-rolled twice becomes as before plus breasts; if
-rolled thrice becomes as before plus chests; if
-rolled iour times becomes as before plus legs
-above the knees; if rolled five times becomes
-as before plus arms above elbows and body
-below neck; if rolled six times becomes entire
-body, face, etc. Each time this feature is
-rolled, roll D10, and if the result is lower than 4,
-treat it as though it has been rolled twice,
-instead</p>
-<p>73-74   Strange Performing Art: some performing
-art peculiar to the planet is highly popular. Eg.
-Scent Wafting, or Artistic Public Executions; if
-rolled a second time then this becomes
-Pervasive Performing Art: the planet has
-a peculiar, and almost pervasive performing
-art, which is more or less a National Hobby</p>
-<p>75-76   Strange Sport: some sport peculiar to the
-planet is highly popular. Eg. hussade, hadaul
-(these are described in Trullion, and The
-Face, by Jack Vance); if rolled a second time
-then this becomes Pervasive Sport: this
-planet boasts a peculiar sport which is followed
-by nearly everyone on it</p>
-<p>77-78   Low Cultural Tolerance: the locals are
-sick of foreigners who cannot comprehend
-their customs (if they apparently have none,
-this just shows your insensitivity); if rolled
-twice then this becomes Cultural Intol·
-erance: the locals despise people who fail to
-understand their customs, and have no res-
-pect for anyone else&#39;s; if rolled three times this
-becomes Violent Cultural Intolerance:
-the locals have a violent dislike for people
-unable to comprehend their customs, and, in
-fact, for foreigners in general.</p>
-<p>79-80   Elaborate Business Customs: the locals
-have strange customs which must be per-
-formed before serious business is engaged in,
-involving exchange of gifts, religious observ-
-ances, etc .. , but they make allowance for
-foreigners (in fact if a foreigner does observe
-their customs, their demeanor will improve by
-one rowl); if rolled twice, this becomes Crlt·
-Ical Business Customs: the locals are
-intolerant of those who fail to observe their</p>
-<p>customs, and will become hostile if a person
-tries to make a deal without making proper
-observances.</p>
-<p>81      Horrific Local Cuisine: the local food is
-disgusting to outsiders; if rolled twice becomes
-Perversely Horrific Local Cuisine: not
-only is the local food horrible to outsiders, but
-to locals as well, who take a perverse pride in
-their ability to devour it with (somewhat
-simulated) relish, and eat it off-world as well; if
-rolled three times, becomes Harmful Local
-Cuisine: the local food is downright dan-
-gerous to those not used to it (it is both
-nauseous, and possibly poisonous).</p>
-<p>82      Progress Through           Assassination
-(PTA): the standard method of progress in the
-local society is through either character or
-physical (or both) assassination of direct
-superiors.</p>
-<p>83      Fanatical Cleanliness: members of the
-society are as clean as they are able, and
-prefer sterile, colourless environments.</p>
-<p>84      Tolerance for Dirt: the locals have no
-desire or affection for personal hygiene, and
-take &quot;joy in nature&#39;s gifts&quot; etc., etc..</p>
-<p>85      Intolerance for Animals: the locals
-cannot abide animals, and regard plants with
-distaste. They regard them as &quot;unclean&quot;, or
-whatever (they may still eat them, once
-prepared by robots, or untouchables, or some-
-thing; hypocrisy has always been popular); if
-rolled twice becomes Intolerance for Non-
-human Life: the locals cannot countenance
-any non-human life.</p>
-<p>86-87   Extreme         Privacy: the locals regard
-personal privacy as critically important, and
-avoid large groups where possible. Listening in
-on other people&#39;s conversations is not done,
-and locals are able to &quot;tune out&quot; of their non-
-immediate surroundings, and are extraordinar-
-ily careful to mind their own business.</p>
-<p>88-89   Society without Trust: the locals regard all
-as fair game, although the line is drawn at
-murder, rape, and extortion, it is considered
-okay to lift anything not nailed down and
-protected by a minefield. If rolled several
-times, crimes of greater and greater severity
-become unrestricted.</p>
-<p>90-91   Bizarre Sexual Ritual: the locals steep
-their sexual activity in complex and unusual
-ritual, although they make some allowance for
-outsiders; if rolled twice becomes Compul-
-sory Sexual Ritual: as before, but any
-transgression of the local customs is regarded
-with huge repugnance, similar to that accorded
-rape in our society.</p>
-<p>e 711</p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Structure or Feature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>67-68</td>
+<td><strong>Great Hospitality</strong>: tradition has led people here to regard hospitality as akin to personal decency, and only scum would refuse people food and shelter, or abuse it once proffered</td>
+</tr>
+<tr>
+<td>69-70</td>
+<td><strong>Spartan Tendency</strong>: people on this planet take a perverse pride in their ability to do without physical comforts; if rolled twice this becomes <strong>Spartan Propensity</strong>: luxury items are regarded as folly on this planet, and no native would use such rubbish</td>
+</tr>
+<tr>
+<td>71-72</td>
+<td><strong>Exposure Taboo</strong>: genitalia are regarded as extremely repulsive or religiously forbidden subjects for viewing, and exposure of them in public, or by way of entertainment, is illegal; if rolled twice becomes as before plus breasts; if rolled thrice becomes as before plus chests; if rolled four times becomes as before plus legs above the knees; if rolled five times becomes as before plus arms above elbows and body below neck; if rolled six times becomes entire body, face, etc. Each time this feature is rolled, roll D10, and if the result is lower than 4, treat it as though it has been rolled twice, instead</td>
+</tr>
+<tr>
+<td>73-74</td>
+<td><strong>Strange Performing Art</strong>: some performing art peculiar to the planet is highly popular. Eg. Scent Wafting, or Artistic Public Executions; if rolled a second time then this becomes <strong>Pervasive Performing Art</strong>: the planet has a peculiar, and almost pervasive performing art, which is more or less a National Hobby</td>
+</tr>
+<tr>
+<td>75-76</td>
+<td><strong>Strange Sport</strong>: some sport peculiar to the planet is highly popular. Eg. hussade, hadaul (these are described in Trullion, and The Face, by Jack Vance); if rolled a second time then this becomes <strong>Pervasive Sport</strong>: this planet boasts a peculiar sport which is followed by nearly everyone on it</td>
+</tr>
+<tr>
+<td>77-78</td>
+<td><strong>Low Cultural Tolerance</strong>: the locals are sick of foreigners who cannot comprehend their customs (if they apparently have none, this just shows your insensitivity); if rolled twice then this becomes <strong>Cultural Intolerance</strong>: the locals despise people who fail to understand their customs, and have no respect for anyone else&#39;s; if rolled three times this becomes <strong>Violent Cultural Intolerance</strong>: the locals have a violent dislike for people unable to comprehend their customs, and, in fact, for foreigners in general.</td>
+</tr>
+<tr>
+<td>79-80</td>
+<td><strong>Elaborate Business Customs</strong>: the locals have strange customs which must be performed before serious business is engaged in, involving exchange of gifts, religious observances, etc.., but they make allowance for foreigners (in fact if a foreigner does observe their customs, their demeanor will improve by one row); if rolled twice, this becomes <strong>Critical Business Customs</strong>: the locals are intolerant of those who fail to observe their customs, and will become hostile if a person tries to make a deal without making proper observances.</td>
+</tr>
+<tr>
+<td>81</td>
+<td><strong>Horrific Local Cuisine</strong>: the local food is disgusting to outsiders; if rolled twice becomes <strong>Perversely Horrific Local Cuisine</strong>: not only is the local food horrible to outsiders, but to locals as well, who take a perverse pride in their ability to devour it with (somewhat simulated) relish, and eat it off-world as well; if rolled three times, becomes <strong>Harmful Local Cuisine</strong>: the local food is downright dangerous to those not used to it (it is both nauseous, and possibly poisonous).</td>
+</tr>
+<tr>
+<td>82</td>
+<td><strong>Progress Through Assassination (PTA)</strong>: the standard method of progress in the local society is through either character or physical (or both) assassination of direct superiors.</td>
+</tr>
+<tr>
+<td>83</td>
+<td><strong>Fanatical Cleanliness</strong>: members of the society are as clean as they are able, and prefer sterile, colourless environments.</td>
+</tr>
+<tr>
+<td>84</td>
+<td><strong>Tolerance for Dirt</strong>: the locals have no desire or affection for personal hygiene, and take &quot;joy in nature&#39;s gifts&quot; etc., etc..</td>
+</tr>
+<tr>
+<td>85</td>
+<td><strong>Intolerance for Animals</strong>: the locals cannot abide animals, and regard plants with distaste. They regard them as &quot;unclean&quot;, or whatever (they may still eat them, once prepared by robots, or untouchables, or something; hypocrisy has always been popular); if rolled twice becomes <strong>Intolerance for Non-human Life</strong>: the locals cannot countenance any non-human life.</td>
+</tr>
+<tr>
+<td>86-87</td>
+<td><strong>Extreme Privacy</strong>: the locals regard personal privacy as critically important, and avoid large groups where possible. Listening in on other people&#39;s conversations is not done, and locals are able to &quot;tune out&quot; of their non-immediate surroundings, and are extraordinarily careful to mind their own business.</td>
+</tr>
+<tr>
+<td>88-89</td>
+<td><strong>Society without Trust</strong>: the locals regard all as fair game, although the line is drawn at murder, rape, and extortion, it is considered okay to lift anything not nailed down and protected by a minefield. If rolled several times, crimes of greater and greater severity become unrestricted.</td>
+</tr>
+<tr>
+<td>90-91</td>
+<td><strong>Bizarre Sexual Ritual</strong>: the locals steep their sexual activity in complex and unusual ritual, although they make some allowance for outsiders; if rolled twice becomes <strong>Compulsory Sexual Ritual</strong>: as before, but any transgression of the local customs is regarded with huge repugnance, similar to that accorded rape in our society.</td>
+</tr>
+</tbody></table>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=86">ForeSight 1986 · p.86 ↗</a></div>
 
-<p>92-93    Drug Culture: the taking of mood-altering
-drugs is widely accepted, and even encour-
-aged by the government, The Computer, The
-Church, The Book, or whatever; if rolled twice
-becomes Widespread Drug Depend-
-ence: almost everyone is dependent on drugs
-for coping with day-to-day life, and in fact the
-drugs may be dispensed through the air, the
-water supply, the food, or whatever.</p>
-<p>94       Ritual Torture: the society accepts torture,
-corporal punishment, etc., as natural and
-desirable, and the ability to withstand pain is a
-respected skill.</p>
-<p>95       Perverse Intellectual Duelling: asking
-questions is regarded as a sign of stupidity;
-members of the society do not question others
-directly, but try to deduce what they wish to
-know instead. Furthermore, if someone asks a
-person to do something, then he/she can
-demonstrate superior intelligence by doing
-something else which achieves the desired
-result, or (better) more.</p>
-<p>96       Artificial Reproduction: the locals abstain
-from reproductive acts, since the society relies
-solely upon artificial means to produce its next
-generation (even if their technology is insuffic-
-ient for this, it still applies - the cloning banks
-or artificial wombs, or whatever, are controlled
-by artisans, or priests, etc.); if rolled twice
-becomes Genetic Selection: the locals
-select the genetic background of members of
-the next generation; if rolled three times be-
-comes Genetic Design: the society designs
-its next generation much as androids are
-designed (requires TL9).</p>
-<p>97       Body Beautiful: the human body is
-beautiful, and the locals flaunt as much as they
-can of it (the exterior that is), although not to
-the hazard of their lives; if rolled twice
-becomes Organs Beautiful: the locals not
-only flaunt their body&#39;s exteriors, but their
-working parts as well, through transparent
-membranes grafted into their hides.</p>
-<p>98-99    Roll Twice More</p>
-<p>100      Roll Thrice More</p>
-<p>[xii] Finally, one determines the planet&#39;s law level, and
-legal features, using the following procedure. Add to
-the number under Law Level in the row corresponding
-to the planet&#39;s government type, the Technological
-Factor (use highest TL of Hard and Soft TLs) given
-below.</p>
-<p>TL      Tech. Factor          TL        Tech. Factor 0            -5               6               1 1            -4               7               1 2            -3               8               2 3            -2               9                 3 4            -1               10                4 5             0</p>
-<p>Pag</p>
-<p>b</p>
-<p>The sum of the Tech. Factor and the Law Level number
-gleaned from the government effects table deter-
-mines the column used on the law level table, below;
-roll D10, and modify it using the modifiers listed below.</p>
-<p>Law Level Table
-SUM
-Roll       S1       2-3      4    5   6   7   8 9-10    ~11
-S-1         0        0       0    1   1   2   2   3      3
-0          0        0       0    1   2   2   3   4      5
-1          0        0       1    2   3   3   4    5     6
-2       0        1       1    2   3   4   5    6     7
-3        0       1       2    3   4   5   6    7     8
-4        0       2       3    3   4   5   6    7     8
-5        0      2        3    4   5   6   7    8     9
-6        1      2        4    4   5   6  7     8     9
-7        1      2        4    5   6   7  8     9     10
-8        1       2       4    5   6   7  8     9     10
-9        1       3       4    5   6   7  8     9     10
-10       2       3       5    6   7   8  9     10    10
-11       2       4        5   6   7   8  9     10    10
-~12          3       5        6   7   8   9 10     10    10</p>
-<p>(Ole Roll) Modifiers for use with this table</p>
-<p>-3        PO &lt;0.1                  +2 Colonised by MegaCorp
--2        PO&lt;1                     -2 Unsubsidized Colony
--1        PO&lt;5                     -1 Subsidized Colony
-+1        PO&gt; 15</p>
-<p>Law Level Definition Law Level is a quantification, from 0 (non-existant) to 10
-(all-pervasive) of the planetary law-enforcement
-body&#39;s capabilities and size.</p>
-<p>Whether or not the law enforcement officers are corrupt
-in a given locale, precinct, county, or whatever, can
-be determined by attempting to roll versus an</p>
-<p>SC = 20 + 3 x Law Level</p>
-<p>using percentile dice. Success· indicating corruption
-(and QR determining degree of corruption; so yield
-percentage is percentage of officers on the take, if
-you like; QR10 denotes an incorruptible and ideal-
-istic system, QR1 a wholly corrupt one).</p>
-<p>Not only does law level reflect raw personpower, and
-equipment, but ability to invade privacy, hold without
-charges, use listening and surveillance devices,
-(including satellites), maintain and access detailed
-personal files etc.. On the whole, law level is
-proportional to effectiveness (assuming a non-corrupt
-system).</p>
-<p>ge 712</p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>Structure or Feature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>92-93</td>
+<td><strong>Drug Culture</strong>: the taking of mood-altering drugs is widely accepted, and even encouraged by the government, The Computer, The Church, The Book, or whatever; if rolled twice becomes <strong>Widespread Drug Dependence</strong>: almost everyone is dependent on drugs for coping with day-to-day life, and in fact the drugs may be dispensed through the air, the water supply, the food, or whatever.</td>
+</tr>
+<tr>
+<td>94</td>
+<td><strong>Ritual Torture</strong>: the society accepts torture, corporal punishment, etc., as natural and desirable, and the ability to withstand pain is a respected skill.</td>
+</tr>
+<tr>
+<td>95</td>
+<td><strong>Perverse Intellectual Duelling</strong>: asking questions is regarded as a sign of stupidity; members of the society do not question others directly, but try to deduce what they wish to know instead. Furthermore, if someone asks a person to do something, then he/she can demonstrate superior intelligence by doing something else which achieves the desired result, or (better) more.</td>
+</tr>
+<tr>
+<td>96</td>
+<td><strong>Artificial Reproduction</strong>: the locals abstain from reproductive acts, since the society relies solely upon artificial means to produce its next generation (even if their technology is insufficient for this, it still applies - the cloning banks or artificial wombs, or whatever, are controlled by artisans, or priests, etc.); if rolled twice becomes <strong>Genetic Selection</strong>: the locals select the genetic background of members of the next generation; if rolled three times becomes <strong>Genetic Design</strong>: the society designs its next generation much as androids are designed (requires TL9).</td>
+</tr>
+<tr>
+<td>97</td>
+<td><strong>Body Beautiful</strong>: the human body is beautiful, and the locals flaunt as much as they can of it (the exterior that is), although not to the hazard of their lives; if rolled twice becomes <strong>Organs Beautiful</strong>: the locals not only flaunt their body&#39;s exteriors, but their working parts as well, through transparent membranes grafted into their hides.</td>
+</tr>
+<tr>
+<td>98-99</td>
+<td>Roll Twice More</td>
+</tr>
+<tr>
+<td>100</td>
+<td>Roll Thrice More</td>
+</tr>
+</tbody></table>
+<p><strong>[xii]</strong> Finally, one determines the planet&#39;s law level, and legal features, using the following procedure. Add to the number under Law Level in the row corresponding to the planet&#39;s government type, the Technological Factor (use highest TL of Hard and Soft TLs) given below.</p>
+<table>
+<thead>
+<tr>
+<th>TL</th>
+<th>Tech. Factor</th>
+<th>TL</th>
+<th>Tech. Factor</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>-5</td>
+<td>6</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>-4</td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-3</td>
+<td>8</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>-2</td>
+<td>9</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>-1</td>
+<td>10</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>The sum of the Tech. Factor and the Law Level number gleaned from the government effects table determines the column used on the law level table, below; roll D10, and modify it using the modifiers listed below.</p>
+<p><strong>Law Level Table</strong> — <em>SUM</em></p>
+<table>
+<thead>
+<tr>
+<th>Roll</th>
+<th>≤1</th>
+<th>2-3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9-10</th>
+<th>≥11</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤-1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+<tr>
+<td>10</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>11</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>10</td>
+</tr>
+<tr>
+<td>≥12</td>
+<td>3</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody></table>
+<p><strong>(Die Roll) Modifiers for use with this table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Mod</th>
+<th>Condition</th>
+<th>Mod</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-3</td>
+<td>PD &lt; 0.1</td>
+<td>+2</td>
+<td>Colonised by MegaCorp</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>PD &lt; 1</td>
+<td>-2</td>
+<td>Unsubsidized Colony</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>PD &lt; 5</td>
+<td>-1</td>
+<td>Subsidized Colony</td>
+</tr>
+<tr>
+<td>+1</td>
+<td>PD &gt; 15</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Law Level Definition.</strong> Law Level is a quantification, from 0 (non-existant) to 10 (all-pervasive) of the planetary law-enforcement body&#39;s capabilities and size.</p>
+<p>Whether or not the law enforcement officers are corrupt in a given locale, precinct, county, or whatever, can be determined by attempting to roll versus an</p>
+<p>SC = 20 + 3 × Law Level</p>
+<p>using percentile dice. Success indicating corruption (and QR determining degree of corruption; so yield percentage is percentage of officers on the take, if you like; QR10 denotes an incorruptible and idealistic system, QR1 a wholly corrupt one).</p>
+<p>Not only does law level reflect raw personpower, and equipment, but ability to invade privacy, hold without charges, use listening and surveillance devices, (including satellites), maintain and access detailed personal files etc.. On the whole, law level is proportional to effectiveness (assuming a non-corrupt system).</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=87">ForeSight 1986 · p.87 ↗</a></div>
 
-<p>Legal System Features Roll once on the table below for the planet to determine if the local legal system harbours any peculiarities:</p>
-<p>Ole Roll                     Feature</p>
-<p>01-20   No feature 21-25   No jury system; the verdict in criminal proceed-
-ings is decided by a panel of, or a single legal
-expert(s)
-26-28 No jury system; the verdict in criminal
-proceedings is decided by a specially designed
-legal computer (GM&#39;s whim as to accuracy of
-verdicts)
-29-30 Guilty until proven Innocent (like France); the
-burden of proof falls upon the defendant (al-
-though the prosecution requires some evid-
-ence)
-31      Guilty until discovered DEAD (removes the
-burden from the taxpayer)
-32-36 Death Penalty for murder 37-39 Death Penalty for rape and murder 40-42 Death Penalty for drug trafficking offences (if
-applicable), rape, and murder
-43-44 Death Penalty for grand theft (ie. theft of more
-than an average annual salary), et a!.
-45       Death Penalty for all felonies 46-48 Mindwipe for violent crimes (TL 8); roll up new
-character
-49-51    Mindwipe for &quot;antisocial&quot; behaviour (TL 8); roll
-up new character
-52-53 Mindwipe for &quot;subversive&quot; behaviour (TL 8); roll
-up new character
-54-58 Handguns are legal, and readily available 59-61    Light Military weapons are readily available 62      Lethal weapons are strictly licensed and
-controlled, even for police
-63-65 Vigilante action implicitly encouraged by
-establishment
-66-67 Kidnapping is accepted way of life 68      Murder is a family affair, settled between rela-
-tives
-69      Crimes of passion go unpunished (even
-lauded)
-70      Criminals are indelibly and prominently labelled 71      Criminals are ostracised or exiled (perhaps to a
-region set aside for them)
-72      Jury decisions are based on majority verdicts 73-74 Trials are broadcast live 75      Trials are broadcast live, citizens are polled
-before verdict is finalised
-76      Trials are broadcast live, viewers determine
-verdict
-77-78 Judges are elected 79-80 Prosecution has the right to appeal against a
-&quot;not guilty&quot; verdict
-81-82 legal restrictions on the use and ownership of
-vehicles
-83      Only the government may use and own high
-technology vehicles
-84-85 Choose or Invent a legal feature 86-95 Roll Twice More 96-100 Roll Thrice More</p>
+<p><strong>Legal System Features.</strong> Roll once on the table below for the planet to determine if the local legal system harbours any peculiarities:</p>
+<table>
+<thead>
+<tr>
+<th>Die Roll</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>01-20</td>
+<td>No feature</td>
+</tr>
+<tr>
+<td>21-25</td>
+<td>No jury system; the verdict in criminal proceedings is decided by a panel of, or a single legal expert(s)</td>
+</tr>
+<tr>
+<td>26-28</td>
+<td>No jury system; the verdict in criminal proceedings is decided by a specially designed legal computer (GM&#39;s whim as to accuracy of verdicts)</td>
+</tr>
+<tr>
+<td>29-30</td>
+<td>Guilty until proven Innocent (like France); the burden of proof falls upon the defendant (although the prosecution requires some evidence)</td>
+</tr>
+<tr>
+<td>31</td>
+<td>Guilty until discovered DEAD (removes the burden from the taxpayer)</td>
+</tr>
+<tr>
+<td>32-36</td>
+<td>Death Penalty for murder</td>
+</tr>
+<tr>
+<td>37-39</td>
+<td>Death Penalty for rape and murder</td>
+</tr>
+<tr>
+<td>40-42</td>
+<td>Death Penalty for drug trafficking offences (if applicable), rape, and murder</td>
+</tr>
+<tr>
+<td>43-44</td>
+<td>Death Penalty for grand theft (ie. theft of more than an average annual salary), et al.</td>
+</tr>
+<tr>
+<td>45</td>
+<td>Death Penalty for all felonies</td>
+</tr>
+<tr>
+<td>46-48</td>
+<td>Mindwipe for violent crimes (TL 8); roll up new character</td>
+</tr>
+<tr>
+<td>49-51</td>
+<td>Mindwipe for &quot;antisocial&quot; behaviour (TL 8); roll up new character</td>
+</tr>
+<tr>
+<td>52-53</td>
+<td>Mindwipe for &quot;subversive&quot; behaviour (TL 8); roll up new character</td>
+</tr>
+<tr>
+<td>54-58</td>
+<td>Handguns are legal, and readily available</td>
+</tr>
+<tr>
+<td>59-61</td>
+<td>Light Military weapons are readily available</td>
+</tr>
+<tr>
+<td>62</td>
+<td>Lethal weapons are strictly licensed and controlled, even for police</td>
+</tr>
+<tr>
+<td>63-65</td>
+<td>Vigilante action implicitly encouraged by establishment</td>
+</tr>
+<tr>
+<td>66-67</td>
+<td>Kidnapping is accepted way of life</td>
+</tr>
+<tr>
+<td>68</td>
+<td>Murder is a family affair, settled between relatives</td>
+</tr>
+<tr>
+<td>69</td>
+<td>Crimes of passion go unpunished (even lauded)</td>
+</tr>
+<tr>
+<td>70</td>
+<td>Criminals are indelibly and prominently labelled</td>
+</tr>
+<tr>
+<td>71</td>
+<td>Criminals are ostracised or exiled (perhaps to a region set aside for them)</td>
+</tr>
+<tr>
+<td>72</td>
+<td>Jury decisions are based on majority verdicts</td>
+</tr>
+<tr>
+<td>73-74</td>
+<td>Trials are broadcast live</td>
+</tr>
+<tr>
+<td>75</td>
+<td>Trials are broadcast live, citizens are polled before verdict is finalised</td>
+</tr>
+<tr>
+<td>76</td>
+<td>Trials are broadcast live, viewers determine verdict</td>
+</tr>
+<tr>
+<td>77-78</td>
+<td>Judges are elected</td>
+</tr>
+<tr>
+<td>79-80</td>
+<td>Prosecution has the right to appeal against a &quot;not guilty&quot; verdict</td>
+</tr>
+<tr>
+<td>81-82</td>
+<td>Legal restrictions on the use and ownership of vehicles</td>
+</tr>
+<tr>
+<td>83</td>
+<td>Only the government may use and own high technology vehicles</td>
+</tr>
+<tr>
+<td>84-85</td>
+<td>Choose or Invent a legal feature</td>
+</tr>
+<tr>
+<td>86-95</td>
+<td>Roll Twice More</td>
+</tr>
+<tr>
+<td>96-100</td>
+<td>Roll Thrice More</td>
+</tr>
+</tbody></table>
 <p>Note: this table implies a &quot;normal&quot; legal system not greatly unlike that currently found in (some states of) the U.S.A., but without broadcasting of trials, judicial elections, or the ready availability of concealable weapons. Imprisonment is still widely used as a punitive retaliation against criminals. Recreational drugs, homosexuality, prostitution, are assumed to be legal, and cash gambling, racial and sexual discrimination illegal.</p>
-<p>Space Ports A word on space ports and interstellar trade. A planet is
-likely to see interplanetary cargo shipping (import and
-export) equal to:</p>
-<p>Total population x Tl2      tonnes per day
-5000000</p>
-<p>This corresponds· to about ten grams of cargo per
-person per day at TL 7.</p>
+<h5>Space Ports</h5>
+<p>A word on space ports and interstellar trade. A planet is likely to see interplanetary cargo shipping (import and export) equal to:</p>
+<p>Total population × TL^2 / 5 000 000 tonnes per day</p>
+<p>This corresponds to about ten grams of cargo per person per day at TL 7.</p>
 <p>This value varies as follows:</p>
-<p>x24    Planet&#39;s relative Tl is +2 (hard &amp; soft) x16    Planet&#39;s relative Tl is +2 (either hard or soft) x8     Planet&#39;s relative TL is +1 (hard &amp; soft) x4     Planet&#39;s relative Tl is +1 (either hard or soft) x2     Planet&#39;s relative Tl is +1· (hard &amp; soft) x1.5   Planet&#39;s relative Tl is +1· (either hard or soft) xO.5   Planet&#39;s best relative Tl is -1 xO.25 Planet&#39;s best relative Tl is -2 xO.125 Planet&#39;s best relative Tl is -3 (etc..) xO.2   Planet is &quot;beyond the pale&quot;
-(ie. outside the Federation)</p>
-<p>A planet&#39;s trade tonnage determines the quality of its
-space port facilities. A space port is called a Space
-Port n, where it handles 1on to 10n+1 tonnes of cargo
-per day. Add n to the planet&#39;s Hard Tl to determine
-the space port type.</p>
-<p>Sum       Space Port Type
-S5    N: No formal landing area
-6-9   G: Ground Facility (similar to airport, but better
-shielded)
-10-12     0: Orbital Facility (large orbital &quot;space station&quot;) ~13       T: Tower facility (elevator to geostationary
-orbit)</p>
+<table>
+<thead>
+<tr>
+<th>Multiplier</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>×24</td>
+<td>Planet&#39;s relative TL is +2 (hard &amp; soft)</td>
+</tr>
+<tr>
+<td>×16</td>
+<td>Planet&#39;s relative TL is +2 (either hard or soft)</td>
+</tr>
+<tr>
+<td>×8</td>
+<td>Planet&#39;s relative TL is +1 (hard &amp; soft)</td>
+</tr>
+<tr>
+<td>×4</td>
+<td>Planet&#39;s relative TL is +1 (either hard or soft)</td>
+</tr>
+<tr>
+<td>×2</td>
+<td>Planet&#39;s relative TL is +1* (hard &amp; soft)</td>
+</tr>
+<tr>
+<td>×1.5</td>
+<td>Planet&#39;s relative TL is +1* (either hard or soft)</td>
+</tr>
+<tr>
+<td>×0.5</td>
+<td>Planet&#39;s best relative TL is -1</td>
+</tr>
+<tr>
+<td>×0.25</td>
+<td>Planet&#39;s best relative TL is -2</td>
+</tr>
+<tr>
+<td>×0.125</td>
+<td>Planet&#39;s best relative TL is -3 (etc..)</td>
+</tr>
+<tr>
+<td>×0.2</td>
+<td>Planet is &quot;beyond the pale&quot; (ie. outside the Federation)</td>
+</tr>
+</tbody></table>
+<p>A planet&#39;s trade tonnage determines the quality of its space port facilities. A space port is called a Space Port n, where it handles 10^n to 10^(n+1) tonnes of cargo per day. Add n to the planet&#39;s Hard TL to determine the space port type.</p>
+<table>
+<thead>
+<tr>
+<th>Sum</th>
+<th>Space Port Type</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>≤5</td>
+<td>N: No formal landing area</td>
+</tr>
+<tr>
+<td>6-9</td>
+<td>G: Ground Facility (similar to airport, but better shielded)</td>
+</tr>
+<tr>
+<td>10-12</td>
+<td>O: Orbital Facility (large orbital &quot;space station&quot;)</td>
+</tr>
+<tr>
+<td>≥13</td>
+<td>T: Tower facility (elevator to geostationary orbit)</td>
+</tr>
+</tbody></table>
 <p>So a tower space port handling 11000 tonnes of cargo per day would be referred to as a Space Port 4T.</p>
-<p>A Final Note on Asteroid Belts H Asteroid mining figures prominently in your campaign,
-or you are simply curious, determine the size of the
-belt (roll on the Standard Planet Size Table) and its
-density (again as per a planet, but adding two to the
-roll). The larger and denser an asteroid belt is, the
-more valuable it will be.</p>
-<p>e 713</p>
+<h5>A Final Note on Asteroid Belts</h5>
+<p>If Asteroid mining figures prominently in your campaign, or you are simply curious, determine the size of the belt (roll on the Standard Planet Size Table) and its density (again as per a planet, but adding two to the roll). The larger and denser an asteroid belt is, the more valuable it will be.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=88">ForeSight 1986 · p.88 ↗</a></div>
 
-<p>INFORMATION FOR MAN</p>
-<p>RELATIVE BRIGHTNESS OF STARS</p>
-<p>Spectral       VI        V       IV      III Class BO                  3630      5800     8320 B5                   209       363      525 AO                   52.5      83.2      145 AS                   13.2      27.5     63.1 FO                   6.31      15.9     43.7 F5              1    3.02      10.0     39.8 GO            .44    1.45      6.31     47.5 G5            .23    .692      4.37     57.6 KO            .10    .251      4.37     83.2 K5           .036 .0631                  100 MO          .0083 .0100                  120 M5          .0013 .00132                 120</p>
-<p>Notes: the Radius value given in [7.0] for the square roots of these values. So, if you of the kinds given here, use these values (ie. those of higher spectral type and/or much so that in reasonably extreme cases become geologically mature.</p>
-<p>RELATIVE MASS OF STARS OF</p>
-<p>Spectral        VI        V      IV       II Class BO                      6.2      6.9     9. B5                      3.3      3.7     4. AO                      2.4      2.7     3. AS                      1.8      2.1     2. FO                      1.5      1.9     2. F5                1     1.3      1.7     2. GO              .76     1.1      1.5     2. G5              .61     .92      1.4     2. KO              .46     .74      1.4     2. K5              .33     .54              2. MO              .20     .22              2. M5              .11     .11              2.</p>
-<p>Notes: you can use these values to determ that this formula is independent of the plan</p>
-<p>Year Length = &quot;[(Orbital Radius in AUs)3</p>
-<p>ForeSight Stellar Data</p>
-<p>NIACAL GAMEMASTERS</p>
-<p>OF MK SPECTRAL TYPES (Sol = 1.00)</p>
-<p>I       II      Ib     lab          la       laO</p>
-<p>0 12000 20900 22900 39800 132000 5 2760 17400 30200 52500 158600 5 1100 12000 36300 63100 190700 1   525  6310 47900 110000 229000 7   525  5760 39800 209000 251000 8   525  5760 33100 132000276000 5   525  5250 27600 132000331000 6   525  4790 25100 132000 2   525  4790 20900 132000 0  631  4790 1 7400 132000 0 1000  6310 15900 69200 0 2090  6920 12000 52500</p>
-<p>r various kinds of stars roughly derives from u want to generate star systems around stars s accordingly. Also note that the larger stars lower class) will have shorter lifespans. So s, no planet orbiting them would have time to</p>
-<p>MK SPECTRAL TYPES (Sol = 1.00)</p>
-<p>II       II      Ib     lab          la       laO</p>
-<p>.6    22.9    27.5     28.4       34.1       50.9 .0    14.0    25.9     31.1       37.4       54.1 .0    10.3    22.9     33.1       39.8       57.6 .5     4.0    18.5     36.3       47.9       61.2 .3     4.0    17.9     34.1       59.3       63.1 .3     4.0    17.9     32.1       50.9       65.1 .4     4.0    17.4     30.2       51.0       69.2 .5     4.0    16.9     29.3       51.0 .7     4.0    16.9     27.6       51.0 .8     4.2    16.9     25.9       51.0 .9    10.0    18.5     25.1       41.1 .9    12.8    19.1     22.9       37.4</p>
-<p>mine the length of a planet&#39;s year. (Also note net&#39;s mass.)</p>
-<p>3+(Mass of Star relative to Sol)] EARTH YEARS</p>
+<h4>Information for Maniacal Gamemasters</h4>
+<p><strong>Relative Brightness of Stars of MK Spectral Types (Sol = 1.00)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Spectral Class</th>
+<th>VI</th>
+<th>V</th>
+<th>IV</th>
+<th>III</th>
+<th>II</th>
+<th>Ib</th>
+<th>Iab</th>
+<th>Ia</th>
+<th>IaO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B0</td>
+<td></td>
+<td>3630</td>
+<td>5800</td>
+<td>8320</td>
+<td>12000</td>
+<td>20900</td>
+<td>22900</td>
+<td>39800</td>
+<td>132000</td>
+</tr>
+<tr>
+<td>B5</td>
+<td></td>
+<td>209</td>
+<td>363</td>
+<td>525</td>
+<td>2760</td>
+<td>17400</td>
+<td>30200</td>
+<td>52500</td>
+<td>158600</td>
+</tr>
+<tr>
+<td>A0</td>
+<td></td>
+<td>52.5</td>
+<td>83.2</td>
+<td>145</td>
+<td>1100</td>
+<td>12000</td>
+<td>36300</td>
+<td>63100</td>
+<td>190700</td>
+</tr>
+<tr>
+<td>A5</td>
+<td></td>
+<td>13.2</td>
+<td>27.5</td>
+<td>63.1</td>
+<td>525</td>
+<td>6310</td>
+<td>47900</td>
+<td>110000</td>
+<td>229000</td>
+</tr>
+<tr>
+<td>F0</td>
+<td></td>
+<td>6.31</td>
+<td>15.9</td>
+<td>43.7</td>
+<td>525</td>
+<td>5760</td>
+<td>39800</td>
+<td>209000</td>
+<td>251000</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>1</td>
+<td>3.02</td>
+<td>10.0</td>
+<td>39.8</td>
+<td>525</td>
+<td>5760</td>
+<td>33100</td>
+<td>132000</td>
+<td>276000</td>
+</tr>
+<tr>
+<td>G0</td>
+<td>.44</td>
+<td>1.45</td>
+<td>6.31</td>
+<td>47.5</td>
+<td>525</td>
+<td>5250</td>
+<td>27600</td>
+<td>132000</td>
+<td>331000</td>
+</tr>
+<tr>
+<td>G5</td>
+<td>.23</td>
+<td>.692</td>
+<td>4.37</td>
+<td>57.6</td>
+<td>525</td>
+<td>4790</td>
+<td>25100</td>
+<td>132000</td>
+<td></td>
+</tr>
+<tr>
+<td>K0</td>
+<td>.10</td>
+<td>.251</td>
+<td>4.37</td>
+<td>83.2</td>
+<td>525</td>
+<td>4790</td>
+<td>20900</td>
+<td>132000</td>
+<td></td>
+</tr>
+<tr>
+<td>K5</td>
+<td>.036</td>
+<td>.0631</td>
+<td></td>
+<td>100</td>
+<td>631</td>
+<td>4790</td>
+<td>17400</td>
+<td>132000</td>
+<td></td>
+</tr>
+<tr>
+<td>M0</td>
+<td>.0083</td>
+<td>.0100</td>
+<td></td>
+<td>120</td>
+<td>1000</td>
+<td>6310</td>
+<td>15900</td>
+<td>69200</td>
+<td></td>
+</tr>
+<tr>
+<td>M5</td>
+<td>.0013</td>
+<td>.00132</td>
+<td></td>
+<td>120</td>
+<td>2090</td>
+<td>6920</td>
+<td>12000</td>
+<td>52500</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Notes: the Radius value given in [7.0] for various kinds of stars roughly derives from the square roots of these values. So, if you want to generate star systems around stars of the kinds given here, use these values accordingly. Also note that the larger stars (ie. those of higher spectral type and/or lower class) will have shorter lifespans. So much so that in reasonably extreme cases, no planet orbiting them would have time to become geologically mature.</p>
+<p><strong>Relative Mass of Stars of MK Spectral Types (Sol = 1.00)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Spectral Class</th>
+<th>VI</th>
+<th>V</th>
+<th>IV</th>
+<th>III</th>
+<th>II</th>
+<th>Ib</th>
+<th>Iab</th>
+<th>Ia</th>
+<th>IaO</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>B0</td>
+<td></td>
+<td>6.2</td>
+<td>6.9</td>
+<td>9.6</td>
+<td>22.9</td>
+<td>27.5</td>
+<td>28.4</td>
+<td>34.1</td>
+<td>50.9</td>
+</tr>
+<tr>
+<td>B5</td>
+<td></td>
+<td>3.3</td>
+<td>3.7</td>
+<td>4.0</td>
+<td>14.0</td>
+<td>25.9</td>
+<td>31.1</td>
+<td>37.4</td>
+<td>54.1</td>
+</tr>
+<tr>
+<td>A0</td>
+<td></td>
+<td>2.4</td>
+<td>2.7</td>
+<td>3.0</td>
+<td>10.3</td>
+<td>22.9</td>
+<td>33.1</td>
+<td>39.8</td>
+<td>57.6</td>
+</tr>
+<tr>
+<td>A5</td>
+<td></td>
+<td>1.8</td>
+<td>2.1</td>
+<td>2.5</td>
+<td>4.0</td>
+<td>18.5</td>
+<td>36.3</td>
+<td>47.9</td>
+<td>61.2</td>
+</tr>
+<tr>
+<td>F0</td>
+<td></td>
+<td>1.5</td>
+<td>1.9</td>
+<td>2.3</td>
+<td>4.0</td>
+<td>17.9</td>
+<td>34.1</td>
+<td>59.3</td>
+<td>63.1</td>
+</tr>
+<tr>
+<td>F5</td>
+<td>1</td>
+<td>1.3</td>
+<td>1.7</td>
+<td>2.3</td>
+<td>4.0</td>
+<td>17.9</td>
+<td>32.1</td>
+<td>50.9</td>
+<td>65.1</td>
+</tr>
+<tr>
+<td>G0</td>
+<td>.76</td>
+<td>1.1</td>
+<td>1.5</td>
+<td>2.4</td>
+<td>4.0</td>
+<td>17.4</td>
+<td>30.2</td>
+<td>51.0</td>
+<td>69.2</td>
+</tr>
+<tr>
+<td>G5</td>
+<td>.61</td>
+<td>.92</td>
+<td>1.4</td>
+<td>2.5</td>
+<td>4.0</td>
+<td>16.9</td>
+<td>29.3</td>
+<td>51.0</td>
+<td></td>
+</tr>
+<tr>
+<td>K0</td>
+<td>.46</td>
+<td>.74</td>
+<td>1.4</td>
+<td>2.7</td>
+<td>4.0</td>
+<td>16.9</td>
+<td>27.6</td>
+<td>51.0</td>
+<td></td>
+</tr>
+<tr>
+<td>K5</td>
+<td>.33</td>
+<td>.54</td>
+<td></td>
+<td>2.8</td>
+<td>4.2</td>
+<td>16.9</td>
+<td>25.9</td>
+<td>51.0</td>
+<td></td>
+</tr>
+<tr>
+<td>M0</td>
+<td>.20</td>
+<td>.22</td>
+<td></td>
+<td>2.9</td>
+<td>10.0</td>
+<td>18.5</td>
+<td>25.1</td>
+<td>41.1</td>
+<td></td>
+</tr>
+<tr>
+<td>M5</td>
+<td>.11</td>
+<td>.11</td>
+<td></td>
+<td>2.9</td>
+<td>12.8</td>
+<td>19.1</td>
+<td>22.9</td>
+<td>37.4</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>Notes: you can use these values to determine the length of a planet&#39;s year. (Also note that this formula is independent of the planet&#39;s mass.)</p>
+<p>Year Length = √[(Orbital Radius in AUs)^3 ÷ (Mass of Star relative to Sol)] EARTH YEARS</p>
+<p><em>ForeSight Stellar Data</em></p>
 
   </article>
   <nav class="doc-nav" aria-label="Documentation">
