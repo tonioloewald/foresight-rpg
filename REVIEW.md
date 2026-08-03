@@ -43,6 +43,10 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **Swap the remaining collections to entity views** — add specs to `src/entity-specs.ts` for `background-factors`, `fields`, `magic-fundamentals`, then replace the hand-written Markdown tables in the one-pagers with `<!-- entity-view: … -->` blocks. (`magic-applications.json` is nested — 23 fundamentals × 232 applications — so it needs a grouped renderer, not the flat one.)
 - [ ] `character-builder.md` stays excluded from the book (`site.config.ts` → `book.exclude`): pure JS, no static substrate, so it's a stub chapter in print.
 
+## Design history: planet generation (informs the ch.7 rewrite)
+- **The published population loop is a survivor, not the original design.** Star-system generation originally produced an *iterative broad-strokes post-settlement history* for a planet; it proved **too tedious to actually resolve at the table**, and was streamlined down to the colonisation/population loop that shipped in [7.2] (walk the date forward in 25-year steps, roll against `(120 − 24×HI) × Density`, then settler type → initial PD → current population). Tonio, 2026-08.
+- **Implication for the rewrite:** don't reintroduce a turn-by-turn history generator. If a planet's past matters, it should fall out of a *few* summary rolls (or be GM fiat), not a simulation the GM has to grind through. The tedium was the reason it died the first time.
+
 ## Reading the 1986 source: derive, don't guess
 - **The 1986 playtesters were maths / comp-sci / physics / economics people**, and the text was proofread on top of that. So the rules are **internally consistent** — which makes a mangled formula *recoverable by derivation* rather than a coin-flip. Use this when OCR wrecks a formula: reconstruct it, then check it against the physics/arithmetic and against the same formula where it appears elsewhere in the book.
   - Worked: `96√(s/a)` travel-time constant — falls out of 2√(1.5×10¹¹·s/5a).
