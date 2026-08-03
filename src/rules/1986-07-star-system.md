@@ -325,6 +325,8 @@ Subtract |(Mean Temp - 10)/10| (dropping fractions). Note the absolute value sig
 | 501-1500 | **[2] Promising** — Suitable for large scale colonisation |
 | ≥1501 | **[1] Paradise** — Ideal for human habitation |
 
+*The product T×R×G×A×H is often fractional (several of the multipliers are 0.01, 0.05, 0.25…). ForeSight's general [rounding convention](/1986-01-foreword/) applies: unless otherwise stated, a fractional value that must become an integer is **rounded off to the nearest integer** — so a product rounding to 0 is Inimical, and anything else up to 5 is Uninhabitable.*
+
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=76">ForeSight 1986 · p.76 ↗</a></div>
 
 #### [7.1] Detailing Planets
