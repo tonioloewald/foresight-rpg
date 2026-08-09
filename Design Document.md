@@ -133,6 +133,21 @@ An attribute that absorbs situational variance is a category error. Darkness, mi
 
 Quirks must run **both ways**: a negative quirk gives points back. Otherwise the deft-hands/clumsy-body character is worse off than under the old split (where they'd simply dump AG and bank it) — and that, not expressiveness, is the legitimate core of the pushback.
 
+### Companion case: EM → PC, and why it's an *inclination*, not an ability
+
+The usual framing — "they have trouble understanding emotion" — is a poor model to design to, and building an attribute on it bakes the poor model into the system. A better model, and the one this edition designs to: the difference is largely one of **confidence policy**, not perceptual capability. Someone accustomed to domains where evidence yields a definitive or near-definitive answer is correspondingly reluctant to *act* on a low-certainty read — especially where the stakes are high-value relationships and the inference can't be checked. The neurotypical default is closer to: live in the haze, take the likelier option, move on. That's a difference in **what you'll stake on a marginal read**, not in the quality of the read.
+
+**Sherlock Holmes is the test case, and he breaks the EM attribute.** He reads people superbly *and* is socially disastrous. Under EM-as-an-attribute he is unbuildable — you'd need high EM and low EM at once. That's the same structural failure as the fencer above, from the other direction: the attribute **conflated two different things**, the perception of people and the willingness to act on uncertain perceptions of people.
+
+**ForeSight already has both categories, and has since 1986:** *"while what a character can do is determined by his/her abilities, what he/she chooses to do is governed by his/her inclinations"* — inclinations recorded as Personality Traits. So the fix needs no new machinery, just the correct machinery:
+
+- **Ability → PC.** How well you read people. Holmes: high. This is a roll.
+- **Inclination → Personality Trait.** What you'll commit to on a marginal read. Holmes: won't stake a valuable relationship on a weak inference, but will cheerfully run it as a testable hypothesis.
+
+This fits the resolution system unusually well, because **QR is already a confidence gradient**. The character gets the read their PC earns; the inclination governs what they *do* with a QR3 as against a QR1. No new subsystem, no attribute — and it models the actual phenomenon rather than a deficit that isn't there.
+
+Design consequence worth noting: this makes "empathy variation as a quirk" (item 6 above) more precise. Some of it is a **quirk** (genuinely sharper or duller perception of people — a PC modifier), but much of what people mean by low EM is an **inclination**, and putting it in the wrong bucket produces characters who can't read a room when the truth is they won't bet on the reading.
+
 **Where collapsing stops.** Two failure modes bound it in opposite directions:
 
 - **Too broad → GURPS.** Attributes so general they stop discriminating, then backfilled with a sprawl of special-case faux-attributes: the surgeon picks locks and does sleight of hand, the Nobel physicist is an expert scuba diver. The count of "attributes" becomes meaningless and the game gets *more* complex while looking simpler.
