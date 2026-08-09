@@ -109,6 +109,8 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 *Written in response to community pushback on the merge. Notably there was little objection to EM → PC — which is itself diagnostic (see "leverage", below).*
 
+**The standard this note is measured against.** ForeSight can never be an accurate simulation, and isn't trying to be. It can only **push probabilities in the right direction by plausible amounts** (see First principle). So the theory below — feedback loops, sensitivity vs criterion, the critique of forced-choice instruments — is doing exactly one job: deciding **which bucket** a phenomenon belongs in (Score, quirk, inclination, or Ease Factor) and roughly **how big** the nudge should be. It is justification, not machinery. Nothing here licenses a subsystem, a second roll, or a tracked variable; the deliverable from all of it is *one attribute fewer* and a table of three sentences a GM might say. If any of this argument ever starts generating mechanics, it has been misread.
+
 **The premise: the deft-but-clumsy person is the exception, not the rule.** Coordination is strongly correlated with itself. People who are good with their hands are, overwhelmingly, also good with their feet. Attributes should model *the rule*; quirks model *the exception*. An attribute per exception is how you end up with a character sheet full of things almost nobody differs on.
 
 **Both are the same faculty.** At a neurological level, agility and dexterity are both **sensorimotor feedback loops** — brain wiring plus practice. Whole-body balance and fine finger control differ in which muscles they recruit, not in what kind of capability they are. Splitting them models one faculty as two.
