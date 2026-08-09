@@ -146,6 +146,20 @@ The usual framing — "they have trouble understanding emotion" — is a poor mo
 
 This fits the resolution system unusually well, because **QR is already a confidence gradient**. The character gets the read their PC earns; the inclination governs what they *do* with a QR3 as against a QR1. No new subsystem, no attribute — and it models the actual phenomenon rather than a deficit that isn't there.
 
+**Refinement: it's two dials, not one.** The inclination decomposes into (1) an **evidence threshold** — how much certainty before something counts as actionable — and (2) a **tolerance for suspended judgment** — whether you can hold an unresolved "maybe" open. Their *interaction* produces the behaviour:
+
+| Threshold | Suspension | The same marginal read is experienced as |
+|---|---|---|
+| Low (typical) | either | "I think they're angry." Resolve, act, move on. |
+| High | tolerant | "Something around the eyes — anger or disgust; I can't tell which." Held open as a testable hypothesis. |
+| High | intolerant | "That was noise, not data." Discarded — and *looks* from outside like not having noticed. |
+
+That third row is the one the standard framing misreads. The micro-expression *was* seen. What differed was the disposal of a sub-threshold signal, and with no tolerance for holding it unresolved, discarding is the only move left.
+
+This has a precise name outside gaming: **signal detection theory** distinguishes *sensitivity* (d′ — how well you can actually discriminate signal from noise) from *criterion* (β — where you set the bar for declaring "signal"). Sensitivity is the **ability**; criterion is the **inclination**. A high-criterion observer misses real signals but rarely false-alarms; a low-criterion observer catches more and false-alarms more — which is *adaptive* socially, where warmly misreading someone is usually cheap. The Big Five framing (preference for consistency / openness) and need-for-closure point at the same dials from the personality side. This is worth stating because it makes the split defensible on grounds the playtesting community will respect, rather than as taste.
+
+**Mechanical consequence: nothing new is needed — the GM changes the *phrasing*, not the roll.** The character rolls PC and earns a QR as normal. The inclination determines how the result is *delivered* to the player, per the table above. Same score, same roll, same QR; three different sentences. That is a GM-facing guideline, not a subsystem — and it's the kind of thing the one-pagers should carry as an example rather than a rule.
+
 Design consequence worth noting: this makes "empathy variation as a quirk" (item 6 above) more precise. Some of it is a **quirk** (genuinely sharper or duller perception of people — a PC modifier), but much of what people mean by low EM is an **inclination**, and putting it in the wrong bucket produces characters who can't read a room when the truth is they won't bet on the reading.
 
 **Where collapsing stops.** Two failure modes bound it in opposite directions:
