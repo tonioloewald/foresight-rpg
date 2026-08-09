@@ -105,6 +105,43 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 11. **Broad skills, differentiated by familiarity.** Merge narrow skill splits where the underlying competence is one thing — e.g. handguns + longarms become Firearms, with a familiarity covering the gap if needed. (Same machinery as strategy 5: familiarities absorb what used to be subsystems and skill splits.)
 
+## Design note: Coordination — why DX + AG collapse, and where collapsing stops (2026-08)
+
+*Written in response to community pushback on the merge. Notably there was little objection to EM → PC — which is itself diagnostic (see "leverage", below).*
+
+**The premise: the deft-but-clumsy person is the exception, not the rule.** Coordination is strongly correlated with itself. People who are good with their hands are, overwhelmingly, also good with their feet. Attributes should model *the rule*; quirks model *the exception*. An attribute per exception is how you end up with a character sheet full of things almost nobody differs on.
+
+**Both are the same faculty.** At a neurological level, agility and dexterity are both **sensorimotor feedback loops** — brain wiring plus practice. Whole-body balance and fine finger control differ in which muscles they recruit, not in what kind of capability they are. Splitting them models one faculty as two.
+
+**An attribute measures that loop under good conditions.** Someone may have an excellent loop *and* an inner-ear problem: capable of being a superb dancer, but operating at a deficit whenever the vestibular trouble cuts in. They are not a low-Coordination character; they are a well-wired character with a **condition**. Nobody goes to dance practice while their inner ear is playing up, or practises lockpicking with the shakes from alcohol withdrawal — so what the attribute records is trained capability under the conditions in which it was trained.
+
+That generalises into the governing rule:
+
+> **Stable capability belongs in the Score. Situational variance belongs in the Ease Factor.**
+
+An attribute that absorbs situational variance is a category error. Darkness, missing glasses, gloves, the shakes, an inner-ear flare — these are EF modifiers, not different Scores. This is also the answer to "why not split PC into individual senses?": being unable to see in the dark is a modifier, not an attribute. **1986 already made this call** — superb/inferior eyesight and hearing are entries on the Abilities & Limitations table, written as narrow BEF modifiers to named skills.
+
+**The split let you buy characters who can't exist.** Under separate DX and AG you could build a great fencer with high AG and low DX — but fencing *is* footwork and point control together. At the resolution a character sheet works at, that distinction isn't real. That's a **falsehood implied by the game-system**, which is failure mode (a) in the 1986 ForeWord — the specific thing ForeSight was designed to avoid. Merging removes a way to buy an impossible character.
+
+**Where the variation actually lives** — three homes, narrowing:
+
+| Home | What it covers | Example |
+|---|---|---|
+| **Skill** | learned, specific competence — where "good at X" mostly belongs | Fencing, Lockpicking, Dance |
+| **Quirk** | a narrow permanent trait; cheaper than an attribute point | nimble-fingered, graceful, superb eyesight |
+| **Condition / situation** | an Ease Factor modifier, applied when it bites | inner ear playing up, the shakes, darkness |
+
+Quirks must run **both ways**: a negative quirk gives points back. Otherwise the deft-hands/clumsy-body character is worse off than under the old split (where they'd simply dump AG and bank it) — and that, not expressiveness, is the legitimate core of the pushback.
+
+**Where collapsing stops.** Two failure modes bound it in opposite directions:
+
+- **Too broad → GURPS.** Attributes so general they stop discriminating, then backfilled with a sprawl of special-case faux-attributes: the surgeon picks locks and does sleight of hand, the Nobel physicist is an expert scuba diver. The count of "attributes" becomes meaningless and the game gets *more* complex while looking simpler.
+- **Too concentrated → leverage.** Merging two *mechanically leveraged* stats yields one double-leveraged stat that every character must max. This is the real reason not to keep collapsing: **CO already gates pre-emption plus everything DX and AG separately gated.** That's the ceiling — don't merge another leveraged axis into it. (Watch for CO becoming the must-max attribute during point-economy playtesting.)
+
+*Diagnostic aside:* the muted reaction to EM → PC supports this reading. EM carried little mechanical leverage, so nobody optimised it and nobody mourns it. AG fed Speed, and Speed drove the 1986 combat action economy — so AG was **the** optimisation lever, and the attachment is to the lever, not to the description. That lever is already detached: modern Initiative is awareness- and position-driven rather than derived from a Speed stat.
+
+**The test, stated fully.** Collapse two axes when *all three* hold: (1) they are the **same faculty**, not merely correlated; (2) their apparent differences are explained by **skill, quirk, or condition**; and (3) the merged axis doesn't **concentrate too much mechanical leverage**. Otherwise keep them apart — which is why **AP** stays (it correlates with nothing: you can be weak, stupid, clumsy and gorgeous) and why sub-capabilities like eyesight or left-hand coordination stay quirks.
+
 ## Direction — settings-as-configuration + the one-pager spine (2026-07-22)
 
 Author brain-dump; **direction, not all finalized**. Numbers below marked *proposed* need a drafting/playtest pass and are grounded in **`legacy/foresight2004/ForeSight 2004 v48.pdf`** (with `Ch-i 2004 v2.pdf`, `Resolution_Table_v2.pdf`) — 2004 over 1986, per the source hierarchy.
