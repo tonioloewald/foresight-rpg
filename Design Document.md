@@ -146,6 +146,22 @@ The usual framing — "they have trouble understanding emotion" — is a poor mo
 
 This fits the resolution system unusually well, because **QR is already a confidence gradient**. The character gets the read their PC earns; the inclination governs what they *do* with a QR3 as against a QR1. No new subsystem, no attribute — and it models the actual phenomenon rather than a deficit that isn't there.
 
+**Why we design to the model rather than to the literature's headline.** The finding that autistic people "read emotion worse" rests largely on **forced-choice instruments**: here is a photo or sketch, which emotion is it? Two problems compound.
+
+First, the **key is the modal judgment, not ground truth** — the scorer has no independent access to what a posed subject felt. So the instrument measures *agreement with the consensus reading*, and reports it as accuracy.
+
+Second, and more fatal for our purposes: **forced choice cannot separate sensitivity from criterion.** It collapses exactly the gradient that distinguishes them. A respondent with a high threshold is compelled to answer below it, and their answer then loses to a confident guesser — because a confident guesser is *optimised for precisely this task*, picking the likelier option and moving on. Under that instrument, "I saw something, possibly anger or disgust" scores zero, and "anger" scores one, whether or not the subject was angry.
+
+The isomorph: a multiple-choice English Literature exam where the strongest students score *below* the middling ones. Deeper engagement with a text surfaces defensible alternative readings, and defensible alternatives are marked wrong. Performance on a keyed instrument can be **non-monotonic in actual ability** — which tells you about the instrument, not the students.
+
+To be honest about the limit: none of this shows there is no difference. It shows the instrument **cannot license an *ability* penalty**, because it can't distinguish "perceived less" from "required more before committing" from "declined the forced binary." That is sufficient for a design decision.
+
+Three rules follow, and they generalise past this case:
+
+1. **Never derive a capability score from a forced-choice instrument.** If the measurement destroys the confidence gradient, it can't tell you where to put the number.
+2. **Don't let the system assert a measurement artifact as a truth about people.** Handing autistic-coded characters an attribute penalty would do exactly that — the 1986 ForeWord's failure mode (a), pointed at people instead of physics.
+3. **ForeSight's own resolution is the better instrument.** QR *is* a graded-confidence report: QR1 "you know", QR3 "you have a fair read", QR4 "you have an impression". Keep the read graded and let the inclination govern the report, and the system represents the phenomenon more faithfully than the questionnaire it would otherwise have copied.
+
 **Refinement: it's two dials, not one.** The inclination decomposes into (1) an **evidence threshold** — how much certainty before something counts as actionable — and (2) a **tolerance for suspended judgment** — whether you can hold an unresolved "maybe" open. Their *interaction* produces the behaviour:
 
 | Threshold | Suspension | The same marginal read is experienced as |
