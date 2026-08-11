@@ -49,6 +49,12 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - **The original anticipated this.** [7.0]'s designer's notes deliberately kept the system "dumb" — explicitly so a GM could *plug it into a computer without having to add any algorithms* — and note the whole thing, down to rough planetary maps, could be machine-generated. So automating it isn't a departure from the 1986 design; it's the thing it was shaped for and couldn't have in 1986.
 - **What to keep from the pruning:** the *output* still has to be skimmable. Automate the grind, not the reading — a GM wants a paragraph of history and a few hooks, not a 40-line audit trail (though "show the working" behind a toggle is cheap and nice).
 
+## Planned: World Building section (modern replacement for 1986 ch.7)
+- **Name it "World Building", not "Star System Generation"** (Tonio, 2026-08) — the scope is planets *plus* ecosystems and societies, not just stars. The 1986 restoration chapter keeps its published title (it's a restoration); this is the new modern section.
+- **Bring back the generators that 1986 couldn't afford to run** — the iterative post-settlement history (pruned for table tedium) and ForeScene's species-mutation ecosystem generator (deferred to a supplement). Both are cheap automated; see the design-history notes below.
+- Modern astrophysics replaces the 1986 planet/star tables, but keep the *architecture*: dumb, tabular, machine-runnable — which is what [7.0]'s own designer's notes were aiming at.
+- **Automate the grind, not the reading:** output should be a skimmable summary (a paragraph of history, a few hooks) with "show the working" behind a toggle.
+
 ## Missing source: ForeScene (SF setting supplement)
 - **Scope if we scan: just the RULES sections — robots and ecosystems** (Tonio). The rest is setting material we don't need to digitise. That turns "scan a whole supplement" into a small job.
 - **Physical only, and awkward:** very small type, printed **3 columns** to keep 1986 print costs down. No text layer, so unlike `ForeSight.pdf` this needs real OCR. Practical settings: **600 dpi** (300 loses small glyphs), **greyscale not bilevel** (let OCR threshold, don't bake it in), pages flat and deskewed (tight 3-column gutters are unforgiving).
