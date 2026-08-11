@@ -6,7 +6,8 @@
   "scripts": {
     "build": "bun build.ts",
     "dev": "BASE_PATH= bun dev.ts",
-    "tls": "bunx tosijs-dev-certs"
+    "tls": "bunx tosijs-dev-certs",
+    "check": "bun run src/character-rules.check.ts"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",

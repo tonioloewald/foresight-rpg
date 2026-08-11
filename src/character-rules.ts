@@ -1,0 +1,225 @@
+// ForeSight character rules — the point economy and derived scores, as PURE
+// functions over a plain character record.
+//
+// WHY this is its own module: these rules were methods on the
+// <foresight-character-sheet> element, which meant nothing else could use them
+// and nothing could check them. Extracted, they are consumable by the UI, by the
+// planned Firestore backend (server-side validation of a submitted character),
+// and by NPC/instant-character generation — and they can be exercised without a
+// DOM.
+//
+// Discipline (same as entity-specs.ts): pure data + pure functions. No DOM, no
+// node, no fetch. The caller supplies the character and the catalogs.
+
+import { ALL_TAGS } from './entity-specs'
+
+/** The seven attributes (DX+AG→CO, EM folded into PC — see Design Document). */
+export const ATTRS = ['ST', 'EN', 'CO', 'IN', 'PC', 'WP', 'AP'] as const
+export type Attr = (typeof ATTRS)[number]
+
+/** Background-factor categories, in the order they're offered. */
+export const BF_CAT = ['Species', 'Origin', 'General', 'Unusual', 'Intrinsic'] as const
+
+/** Starting archetypes — a fast on-ramp, not a class system. */
+export const ARCH: Record<string, Record<string, number>> = {
+  Athlete: { ST: 9, EN: 7, CO: 10, IN: 6, PC: 6, WP: 6, AP: 6 },
+  Scholar: { ST: 6, EN: 6, CO: 6, IN: 10, PC: 9, WP: 7, AP: 6 },
+  Socialite: { ST: 6, EN: 6, CO: 6, IN: 7, PC: 8, WP: 7, AP: 10 },
+  Artist: { ST: 6, EN: 6, CO: 8, IN: 6, PC: 10, WP: 6, AP: 8 },
+}
+
+/** Attributes cost 10/point to 12, then 20 — "genetics is not fair". */
+export const ATTR_COST_BREAK = 12
+export const ATTR_COST_LOW = 10
+export const ATTR_COST_HIGH = 20
+/** Fields of Knowledge cost 4 points per year of study. */
+export const FIELD_COST_PER_YEAR = 4
+/** Default background-factor slot budget. */
+export const DEFAULT_SLOTS = 4
+
+export { ALL_TAGS }
+
+export interface SkillDef {
+  /** attributes averaged by the skill's formula */
+  a: string[]
+  /** ½-skill: the average is halved (experience outweighs talent) */
+  half?: boolean
+  /** max-level multiplier (1, or 1.5 for ½ skills) */
+  limit: number
+  /** points per level */
+  cost?: number
+  formula?: string
+  tags?: string[]
+}
+
+export interface BFDef {
+  name: string
+  cat?: string
+  free?: boolean
+  /** points this factor grants */
+  grant?: number
+  attrs?: Record<string, number>
+  skills?: Record<string, number>
+  fields?: { name: string; years: number }[]
+  tags?: string[]
+}
+
+export interface Character {
+  name: string
+  arch: string
+  age: string
+  wealth: string
+  concept: string
+  base: Record<string, number>
+  buyBonus: Record<string, number>
+  skills: Record<string, { level: number }>
+  field: { name: string; years: number }[]
+  ltf: string[]
+  quirk: string[]
+  bfs: any[]
+  awards: { note?: string; amt: number }[]
+  slots: number
+  activeTags: string[]
+  wound: number
+  exh: Record<string, number>
+  shaken: boolean
+  stunned: boolean
+  gear: string
+}
+
+/** A fresh character: attributes at 6, standard+modern content, 4 BF slots. */
+export function blankCharacter(): Character {
+  const base: Record<string, number> = {}
+  const buyBonus: Record<string, number> = {}
+  for (const a of ATTRS) {
+    base[a] = 6
+    buyBonus[a] = 0
+  }
+  return {
+    name: '', arch: '', age: '', wealth: '', concept: '',
+    base, buyBonus, skills: {}, field: [], ltf: [], quirk: [], bfs: [], awards: [],
+    slots: DEFAULT_SLOTS, activeTags: ['standard', 'modern'],
+    wound: 0, exh: { Fatigue: 0 }, shaken: false, stunned: false, gear: '',
+  }
+}
+
+// ── conferred by background factors ────────────────────────────────────────
+// Background factors confer attribute bumps, skill levels and fields. Conferred
+// skill levels are FREE — you only pay for levels bought on top.
+
+export function conferAttr(c: Character, a: string): number {
+  return c.bfs.reduce((s, b) => s + ((b.attrs && b.attrs[a]) || 0), 0)
+}
+
+export function conferSkill(c: Character, name: string): number {
+  return c.bfs.reduce((s, b) => s + ((b.skills && b.skills[name]) || 0), 0)
+}
+
+export function conferFields(c: Character): { name: string; years: number; src: string }[] {
+  const out: { name: string; years: number; src: string }[] = []
+  for (const b of c.bfs) for (const f of b.fields || []) out.push({ name: f.name, years: f.years, src: b.name })
+  return out
+}
+
+// ── derived scores ─────────────────────────────────────────────────────────
+
+export function finalAttr(c: Character, a: string): number {
+  return (c.base[a] || 0) + conferAttr(c, a) + (c.buyBonus[a] || 0)
+}
+
+export function skillTotal(c: Character, name: string): number {
+  return conferSkill(c, name) + ((c.skills[name] && c.skills[name].level) || 0)
+}
+
+/** The skill's formula value: average of its attributes, halved for a ½-skill. */
+export function formulaVal(c: Character, defs: Record<string, SkillDef>, name: string): number {
+  const s = defs[name]
+  if (!s) return 0
+  let sum = 0
+  for (const a of s.a) sum += finalAttr(c, a)
+  let v = sum / s.a.length
+  if (s.half) v /= 2
+  return Math.round(v)
+}
+
+/** Max level = best contributing attribute × the skill's limit (the 1987 errata definition). */
+export function maxLevel(c: Character, defs: Record<string, SkillDef>, name: string): number {
+  const s = defs[name]
+  if (!s) return 0
+  let best = 0
+  for (const a of s.a) best = Math.max(best, finalAttr(c, a))
+  return Math.floor(best * s.limit)
+}
+
+/** Score = formula value + total level. This is the number the One Rule multiplies. */
+export function score(c: Character, defs: Record<string, SkillDef>, name: string): number {
+  return formulaVal(c, defs, name) + skillTotal(c, name)
+}
+
+/** Content filter: an untagged entity always shows; otherwise any tag must be active. */
+export function tagMatch(c: Character, tags?: string[]): boolean {
+  return !tags || !tags.length || tags.some((t) => c.activeTags.includes(t))
+}
+
+// ── point economy ──────────────────────────────────────────────────────────
+
+/** Attribute points bought, priced step by step across the cost break. */
+export function attrBuySpend(c: Character, a: string): number {
+  let pts = 0
+  const floorA = (c.base[a] || 0) + conferAttr(c, a)
+  const fin = floorA + (c.buyBonus[a] || 0)
+  for (let v = floorA + 1; v <= fin; v++) pts += v <= ATTR_COST_BREAK ? ATTR_COST_LOW : ATTR_COST_HIGH
+  return pts
+}
+
+/**
+ * Skill levels bought: cost × (level + 2) from scratch, or cost × level if a
+ * background factor already conferred the skill (you've paid the entry price).
+ */
+export function skillBuySpend(c: Character, defs: Record<string, SkillDef>, name: string): number {
+  const buy = (c.skills[name] && c.skills[name].level) || 0
+  if (buy <= 0) return 0
+  const cost = (defs[name] && defs[name].cost) || 1
+  return conferSkill(c, name) > 0 ? cost * buy : cost * (buy + 2)
+}
+
+export function fieldBuySpend(c: Character): number {
+  return c.field.reduce((s, f) => s + FIELD_COST_PER_YEAR * (f.years || 1), 0)
+}
+
+/** Only non-free factors consume a slot (neutral species are free). */
+export function usedSlots(c: Character): number {
+  return c.bfs.reduce((s, b) => s + (b.free ? 0 : 1), 0)
+}
+
+/** Granted vs spent, and the remainder. Single currency — no separate XP. */
+export function pools(
+  c: Character,
+  defs: Record<string, SkillDef>,
+  skillNames: string[]
+): { pts: number; granted: number; spent: number } {
+  let granted = 0
+  for (const b of c.bfs) granted += b.grant || 0
+  for (const a of c.awards) granted += Number(a.amt) || 0
+
+  let spent = 0
+  for (const a of ATTRS) spent += attrBuySpend(c, a)
+  for (const n of skillNames) if (c.skills[n]) spent += skillBuySpend(c, defs, n)
+  spent += fieldBuySpend(c)
+
+  return { pts: granted - spent, granted, spent }
+}
+
+/**
+ * Clamp bought skill levels so conferred + bought never exceeds the max level.
+ * Needed after anything that lowers an attribute or removes a factor. Mutates.
+ */
+export function clampSkills(c: Character, defs: Record<string, SkillDef>): void {
+  for (const name of Object.keys(c.skills)) {
+    if (!defs[name]) continue
+    const mx = maxLevel(c, defs, name)
+    const conf = conferSkill(c, name)
+    const lv = c.skills[name].level || 0
+    if (conf + lv > mx) c.skills[name].level = Math.max(0, mx - conf)
+  }
+}

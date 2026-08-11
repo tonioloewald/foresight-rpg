@@ -6,16 +6,14 @@
 // from static/data/*.json — the single source of truth shared with the rules.
 
 import { SITE_ROOT } from './site-root'
+// Rules, constants and the point economy live in character-rules.ts as pure
+// functions — shared with (eventually) the Firestore backend and NPC generation.
+import * as R from './character-rules'
 
-const ATTRS = ['ST', 'EN', 'CO', 'IN', 'PC', 'WP', 'AP']
-const ARCH: Record<string, Record<string, number>> = {
-  Athlete: { ST: 9, EN: 7, CO: 10, IN: 6, PC: 6, WP: 6, AP: 6 },
-  Scholar: { ST: 6, EN: 6, CO: 6, IN: 10, PC: 9, WP: 7, AP: 6 },
-  Socialite: { ST: 6, EN: 6, CO: 6, IN: 7, PC: 8, WP: 7, AP: 10 },
-  Artist: { ST: 6, EN: 6, CO: 8, IN: 6, PC: 10, WP: 6, AP: 8 },
-}
-const ALL_TAGS = ['standard', 'ancient', 'modern', 'sf', 'fantasy']
-const BF_CAT = ['Species', 'Origin', 'General', 'Unusual', 'Intrinsic']
+const ATTRS = R.ATTRS as readonly string[]
+const ARCH = R.ARCH
+const ALL_TAGS = R.ALL_TAGS
+const BF_CAT = R.BF_CAT as readonly string[]
 const KEY = 'foresight_characters_v2'
 
 const STYLE = `
@@ -232,13 +230,7 @@ class ForesightCharacterSheet extends HTMLElement {
 
   private uid() { return 'b' + (this.uidc++) }
 
-  private blank() {
-    const base: any = {}, buyBonus: any = {}; ATTRS.forEach(a => { base[a] = 6; buyBonus[a] = 0 })
-    return {
-      name: '', arch: '', age: '', wealth: '', concept: '', base, buyBonus, skills: {}, field: [], ltf: [], quirk: [], bfs: [], awards: [], slots: 4,
-      activeTags: ['standard', 'modern'], wound: 0, exh: { Fatigue: 0 }, shaken: false, stunned: false, gear: '',
-    }
-  }
+  private blank() { return R.blankCharacter() as any }
 
   private async loadData(): Promise<boolean> {
     try {
@@ -284,29 +276,23 @@ class ForesightCharacterSheet extends HTMLElement {
   }
 
   // ── conferred (from BFs) ──
-  private conferAttr(a: string) { let s = 0; this.C.bfs.forEach((b: any) => { if (b.attrs && b.attrs[a]) s += b.attrs[a] }); return s }
-  private conferSkill(n: string) { let s = 0; this.C.bfs.forEach((b: any) => { if (b.skills && b.skills[n]) s += b.skills[n] }); return s }
-  private conferFields() { const out: any[] = []; this.C.bfs.forEach((b: any) => { (b.fields || []).forEach((f: any) => out.push({ name: f.name, years: f.years, src: b.name })) }); return out }
-  private finalAttr(a: string) { return (this.C.base[a] || 0) + this.conferAttr(a) + (this.C.buyBonus[a] || 0) }
-  private skillTotal(n: string) { return this.conferSkill(n) + ((this.C.skills[n] && this.C.skills[n].level) || 0) }
-  private formulaVal(n: string) { const s = this.SKILLS[n]; let sum = 0; s.a.forEach(a => sum += this.finalAttr(a)); let v = sum / s.a.length; if (s.half) v /= 2; return Math.round(v) }
-  private maxLevel(n: string) { const s = this.SKILLS[n]; let b = 0; s.a.forEach(a => b = Math.max(b, this.finalAttr(a))); return Math.floor(b * s.limit) }
-  private score(n: string) { return this.formulaVal(n) + this.skillTotal(n) }
+  private conferAttr(a: string) { return R.conferAttr(this.C, a) }
+  private conferSkill(n: string) { return R.conferSkill(this.C, n) }
+  private conferFields() { return R.conferFields(this.C) }
+  private finalAttr(a: string) { return R.finalAttr(this.C, a) }
+  private skillTotal(n: string) { return R.skillTotal(this.C, n) }
+  private formulaVal(n: string) { return R.formulaVal(this.C, this.SKILLS as any, n) }
+  private maxLevel(n: string) { return R.maxLevel(this.C, this.SKILLS as any, n) }
+  private score(n: string) { return R.score(this.C, this.SKILLS as any, n) }
   private fmtFormula(n: string) { return (this.SKILLS[n] && this.SKILLS[n].formula) || '' }
-  private tagMatch(tags: string[]) { return !tags || !tags.length || tags.some(t => this.C.activeTags.includes(t)) }
+  private tagMatch(tags: string[]) { return R.tagMatch(this.C, tags) }
 
   // ── point economy ──
-  private attrBuySpend(a: string) { let pts = 0; const floorA = (this.C.base[a] || 0) + this.conferAttr(a); const fin = floorA + (this.C.buyBonus[a] || 0); for (let v = floorA + 1; v <= fin; v++) pts += (v <= 12 ? 10 : 20); return pts }
-  private skillBuySpend(n: string) { const buy = (this.C.skills[n] && this.C.skills[n].level) || 0; if (buy <= 0) return 0; const cost = this.SKILLS[n].cost || 1; const conf = this.conferSkill(n); return conf > 0 ? cost * buy : cost * (buy + 2) }
-  private fieldBuySpend() { return this.C.field.reduce((s: number, f: any) => s + 4 * (f.years || 1), 0) }
-  private usedSlots() { return this.C.bfs.reduce((s: number, b: any) => s + (b.free ? 0 : 1), 0) }
-  private pools() {
-    let granted = 0; this.C.bfs.forEach((b: any) => granted += b.grant || 0); this.C.awards.forEach((a: any) => granted += Number(a.amt) || 0)
-    let spent = 0; ATTRS.forEach(a => spent += this.attrBuySpend(a))
-    this.SKILLNAMES.forEach(n => { if (this.C.skills[n]) spent += this.skillBuySpend(n) })
-    spent += this.fieldBuySpend()
-    return { pts: granted - spent, granted, spent }
-  }
+  private attrBuySpend(a: string) { return R.attrBuySpend(this.C, a) }
+  private skillBuySpend(n: string) { return R.skillBuySpend(this.C, this.SKILLS as any, n) }
+  private fieldBuySpend() { return R.fieldBuySpend(this.C) }
+  private usedSlots() { return R.usedSlots(this.C) }
+  private pools() { return R.pools(this.C, this.SKILLS as any, this.SKILLNAMES) }
 
   // ── render ──
   private render() {
@@ -405,7 +391,7 @@ class ForesightCharacterSheet extends HTMLElement {
     })
   }
   bumpLevel(name: string, d: number) { const mx = this.maxLevel(name); let lv = (this.C.skills[name].level || 0) + d; if (lv < 0) lv = 0; if (this.conferSkill(name) + lv > mx) lv = Math.max(0, mx - this.conferSkill(name)); this.C.skills[name].level = lv; this.touch(); this.render() }
-  private clampSkills() { Object.keys(this.C.skills).forEach(n => { if (!this.SKILLS[n]) return; const mx = this.maxLevel(n); if (this.conferSkill(n) + (this.C.skills[n].level || 0) > mx) this.C.skills[n].level = Math.max(0, mx - this.conferSkill(n)) }) }
+  private clampSkills() { R.clampSkills(this.C, this.SKILLS as any) }
 
   // ── tags / fields / awards ──
   private renderTags(kind: string) {
