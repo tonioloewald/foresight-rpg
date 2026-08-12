@@ -166,6 +166,12 @@ There is a second reason to refuse it. Pricing blindness as a fair exchange for 
 
 **The test that follows, for telling a real quirk from a perk in disguise:** *would this drawback actually bite a character who wants this benefit?* If the answer is no — if the downside is one the taker has already decided not to care about — then it is **not a trade, it is an advantage**, and it should be priced as a **perk**. A trade only earns its discount when the same character genuinely feels both halves. (This is the same instinct as the magic keystone *price the capability, not its costume*.)
 
+**So what *is* the reward for playing an interesting character? Playing an interesting character.** That is not a dodge, it is the premise of the activity. A drawback chosen because it makes someone worth playing pays out in every scene they're in; a drawback chosen because it funds a purchase pays out once, on the character sheet, before play starts.
+
+This is also why the system must not bribe you into it. **The moment being interesting earns points, the choice stops being about the character** — you're no longer asking "who is this person?", you're asking "what's the exchange rate?" An incentive doesn't reinforce the good behaviour here; it replaces the motive with a worse one.
+
+**And it scopes the game deliberately.** ForeSight is not built for play whose object is winning character construction — establishing dominance over the other players at the build stage rather than at the table. That's a real thing people enjoy, and there are systems that cater to it well. This isn't one, and future features shouldn't try to make it one: no build-optimisation surface, no arbitrage between subsystems, no reason to bring a spreadsheet. The interesting decisions belong in play.
+
 **This corrects an earlier note in this document.** The Coordination discussion claimed the CO merge "only works if quirks can be negative and grant points", reasoning that a deft-handed, clumsy-bodied character would otherwise be worse off than under DX/AG, where they could dump AG and bank the difference. That imported the GURPS assumption. **The banked points were the minimax artifact, not a feature owed to anyone.** The trade stays available and cheap — but it is a *character* choice, not an *economy*.
 
 > ⚠ **Terminology to settle:** the DX/AG passage above says remarkable agility or prestidigitation "become **talents**". If a talent *is* a perk, unify the word; if they differ, say how. Two names for one carrier is exactly the kind of drift this document exists to prevent.
