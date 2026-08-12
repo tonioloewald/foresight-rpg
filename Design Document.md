@@ -170,7 +170,11 @@ There is a second reason to refuse it. Pricing blindness as a fair exchange for 
 
 This is also why the system must not bribe you into it. **The moment being interesting earns points, the choice stops being about the character** — you're no longer asking "who is this person?", you're asking "what's the exchange rate?" An incentive doesn't reinforce the good behaviour here; it replaces the motive with a worse one.
 
-**And it scopes the game deliberately.** ForeSight is not built for play whose object is winning character construction — establishing dominance over the other players at the build stage rather than at the table. That's a real thing people enjoy, and there are systems that cater to it well. This isn't one, and future features shouldn't try to make it one: no build-optimisation surface, no arbitrage between subsystems, no reason to bring a spreadsheet. The interesting decisions belong in play.
+**And it scopes the game deliberately.** ForeSight is not built for play whose object is winning character construction. To be clear, **that is genuinely fun** — but it is *a different game*, not a style of this one. It's a construction-and-exploit puzzle that happens to use RPG rules as its raw material, and its characteristic output is **monstrosities**: builds that are mechanically superb and incoherent as people. Players who enjoy it entertain themselves precisely by producing the monstrosity; the absurdity is the punchline, and the "character" is a scorecard.
+
+That's why the two can't be served at once. **The optimisation game's success condition is the roleplaying game's failure condition** — an extreme build is a win in one and an unplayable person in the other. A system that rewards both is just a roleplaying game with a superior alternative activity bolted on, and the alternative is easier and more immediately gratifying, so it wins.
+
+So: no build-optimisation surface, no arbitrage between subsystems, no reason to bring a spreadsheet. Future features shouldn't chase it. The interesting decisions belong in play.
 
 **This corrects an earlier note in this document.** The Coordination discussion claimed the CO merge "only works if quirks can be negative and grant points", reasoning that a deft-handed, clumsy-bodied character would otherwise be worse off than under DX/AG, where they could dump AG and bank the difference. That imported the GURPS assumption. **The banked points were the minimax artifact, not a feature owed to anyone.** The trade stays available and cheap — but it is a *character* choice, not an *economy*.
 
