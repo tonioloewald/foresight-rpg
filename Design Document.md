@@ -136,7 +136,18 @@ The same question keeps arriving in different costumes — *shouldn't X be its o
 
 The evidence that this is really true, rather than merely tidy: **non-specialists have been talked through procedures they had no training for**, in real time, by someone who has the knowledge but not the hands. That isolates the variable exactly. Same hands, no knowledge, task impossible; supply the knowledge from outside and the task becomes possible. If the manual skill and the knowledge weren't genuinely separable, remote guidance could not work at all — and the vivid limiting case is someone doing it to themselves. This also explains the ForeSight structure that has been there since 1986: a great many skills are **Skill × Field** pairs, and it's why Repair is a *diagnose-then-fix* chain, with the diagnosis QR feeding the fix.
 
-**So there are four downward carriers, not two** — each cheaper and narrower than a new axis: **quirks** (permanent narrow deviation), **inclinations** (what you'll choose to do), **familiarities** (context tuning, fast to acquire), and **Fields of Knowledge** (what the hands are being pointed at, hierarchical and shared across skills). Before adding an attribute or a skill, check whether one of those four already carries the distinction.
+**So there are four downward carriers, not two** — each *narrower* than a new axis, but they are not interchangeable, and they differ most importantly in **permanence**:
+
+| Carrier | What it says | Permanence | Cost shape |
+|---|---|---|---|
+| **Quirk** | who you *are* — nimble-fingered, one-eyed, graceful | **permanent and irrevocable**, character-defining | a **tradeoff**: the good half is paid for by the bad half (or by points/slots). Cheap in the sense a bargain is cheap, not in the sense a small purchase is |
+| **Inclination** | what you'll *choose* to do | persistent, but shifts through **play** rather than purchase | free; it costs nothing and constrains nothing mechanically |
+| **Familiarity** | what you've *been doing lately* | acquirable, and **losable** | cheap **and fast** — a motivated adult, or a whole stunt team, can go and get one |
+| **Field of Knowledge** | what your hands are *pointed at* | acquired over years, then kept | 4 points per year, hierarchical, shared across skills |
+
+**The selection heuristic falls out of the permanence column: a quirk is who you are; a familiarity is what you've been doing lately.** Jackie Chan learning roller-skating for one film is emphatically *not* a quirk — it isn't permanent and it isn't character-defining; it's a familiarity, and pricing it as a quirk would be a category error that also makes it far too expensive. Conversely "nimble-fingered" is not a familiarity: you don't stop being it because you changed jobs.
+
+Before adding an attribute or a skill, check whether one of those four already carries the distinction — **and check you've picked the right one**, because getting the carrier wrong misprices the thing even when the decision not to add an axis was correct.
 
 **The test — and it must fail in *both* directions to justify a split:**
 
