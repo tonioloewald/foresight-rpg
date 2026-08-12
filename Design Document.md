@@ -405,6 +405,20 @@ Background factors work **like skills**: you add them **sequentially as an order
 
 So a factor = (category, exclusivity) + (cost) + (unrestricted pts) + (restricted pts, with domain) + (default specific skills/fields, swappable). This subsumes the playtest pack's flat "skill +N" grants as the special case where everything is pre-spent into specific skills.
 
+## Evidence standard: use is not testing (2026-08)
+
+**The 1986 core was blind-tested and iterated over decades — sent out to testers who didn't know the intent, across dozens of full distributions.** That is measurement. It is a different kind of evidence from "published and then played by a lot of people", which generates volume but very little signal: there's no control, nothing is recorded, and players **silently house-rule around anything broken**, so the failure is patched at ten thousand tables and reported by none of them. A rule whose text and behaviour diverge can survive many editions on those terms, because editions are additive and nobody re-derives arithmetic that looks fine. (Tonio's example: GURPS's impaling damage rule doing the opposite of what it describes, across six-plus editions.)
+
+**Blind is the load-bearing word.** A tester who knows what the designer intended corrects toward it unconsciously and reports success. That's a demonstration, not a test.
+
+**Now apply it to ourselves, which is the only reason it's worth writing down.** The 1986 *numbers* have this evidence behind them. **The 2026 decisions do not.** The attribute merge, exhaustion replacing pools, the QR-ladder change (SC/5 → SC/4, and the 100/90/75/50 → 100/80/50/25 yields), the point economy, broad skills — all of it is currently in exactly the category we're criticising: reasoned carefully, never measured. Being better-argued than the alternative is not the same as being tested, and this document is full of good arguments.
+
+So the obligations that follow:
+1. **Where 1986 and 2026 disagree on a number, 1986 has evidence and we have an opinion.** Log it as a calibration item rather than defaulting to the new value (already the rule in CLAUDE.md — this is why).
+2. **Prefer anchors checkable against the world** over internal elegance — the tradesman/amateur pair above is worth more than any amount of reasoning about what "feels right", because it can be wrong.
+3. **Playtest blind where we can**, and treat enthusiastic reports from people who've read this document as demonstrations, not data.
+4. **Re-derive the distributions** when a mechanic changes, rather than assuming the text still describes the behaviour. That's the specific failure mode above, and we are not immune to it.
+
 ## Calibration anchor: the tradesman and the amateur (2026-08)
 
 The most useful sanity check we have on the whole engine, because it's checkable against life rather than against taste.
