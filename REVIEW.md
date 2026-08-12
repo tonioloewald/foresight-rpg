@@ -49,6 +49,17 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - **The original anticipated this.** [7.0]'s designer's notes deliberately kept the system "dumb" — explicitly so a GM could *plug it into a computer without having to add any algorithms* — and note the whole thing, down to rough planetary maps, could be machine-generated. So automating it isn't a departure from the 1986 design; it's the thing it was shaped for and couldn't have in 1986.
 - **What to keep from the pruning:** the *output* still has to be skimmable. Automate the grind, not the reading — a GM wants a paragraph of history and a few hooks, not a 40-line audit trail (though "show the working" behind a toggle is cheap and nice).
 
+## Planned: personalized rulebook / cheat sheet from a character (2026-08)
+- **The pitch:** a character sheet can emit *the rules that apply to that character* — "you're a magician, here are your magic rules". We're unusually well placed for this because the rules are already **one-pagers per concept**, i.e. atomic units you can include or exclude; most rulebooks can't do it because their chapters interleave.
+- **⚠ Unify with the settings/configuration filter — don't build two.** Choosing a setting filters the corpus by axes (Tech, Magic, Ch'i, Psionics, Divine); building a character filters it *further* by what that character actually has (skills, BFs, fields, fundamentals). Same predicate evaluation, two scopes (campaign-wide, character-wide). Two separate filters will drift and disagree about whether a page belongs.
+- **Mechanism:** each page declares a small inclusion predicate in its metadata (e.g. include when the setting has Magic *and* the character has Mana). Additive, page by page — not a new subsystem.
+- **Two distinct outputs, don't conflate:** (a) **personalized rulebook** — every applicable one-pager in reading order, now emittable as a **per-character ePub volume** (multi-volume landed in tosijs-ui 1.9.3+); (b) **cheat sheet** — one page of this character's numbers plus only the procedures they'll roll (cf. the existing GM cheat sheet).
+
+## Status: Divine magic & Ch'i — NOT ported (decisions made, no prose)
+- **Divine magic.** The *resource spine* exists: `exhaustion.md` carries divine favour as an exhaustion track gated by **Piety** (a skill driven by **deeds, not experience**, earned back by devotion not rest). **Missing:** what divine casters actually do — intervention, priests, avatars. Source: `legacy/HindSight.pdf` (arcane magic + religion), unextracted.
+- **Ch'i.** Decided: Ch'i is the basis for **Mystic Disciplines** (the HindSight mystic version is dumped), and the setting axis exists (none · rare · common · common+weaving). **Missing:** all of it. Source: `legacy/foresight2004/Ch-i 2004 v2.pdf`, unextracted.
+- Both sit on the undrafted list with NPCs · Interpersonal · Travel & wilderness · Religion.
+
 ## Planned: World Building section (modern replacement for 1986 ch.7)
 - **Name it "World Building", not "Star System Generation"** (Tonio, 2026-08) — the scope is planets *plus* ecosystems and societies, not just stars. The 1986 restoration chapter keeps its published title (it's a restoration); this is the new modern section.
 - **Bring back the generators that 1986 couldn't afford to run** — the iterative post-settlement history (pruned for table tedium) and ForeScene's species-mutation ecosystem generator (deferred to a supplement). Both are cheap automated; see the design-history notes below.
