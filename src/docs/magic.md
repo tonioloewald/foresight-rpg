@@ -67,4 +67,5 @@ Because the system is generative, balance can't live in a spell list; it lives i
 - [Touch](/magic-touch/)
 - [Water](/magic-water/)
 - [Wood](/magic-wood/)
+- [Ch'i](/chi/)
 <!-- /toc -->

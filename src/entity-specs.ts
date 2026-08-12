@@ -389,6 +389,26 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Cost', prop: 'cost' },
     ],
   },
+  // Ch'i orb structures — the vocabulary a Ch'i weaver forms gathered energy
+  // into. `E` in the text is the energy woven into the orb. `path` records which
+  // spiritual path forms that structure more easily (+2); unresolved for now —
+  // the assignment table didn't survive extraction (see REVIEW).
+  'chi-orbs.json': {
+    file: 'chi-orbs.json',
+    noun: 'orb structure',
+    idPrefix: 'orb',
+    columns: [
+      { prop: 'name', name: 'Structure', width: 120 },
+      { prop: 'forms', name: 'Forms', width: 230 },
+      { prop: 'path', name: 'Path', width: 90, align: 'center' },
+    ],
+    card: [
+      { label: 'Forms', prop: 'forms' },
+      { label: 'Preferred path', prop: 'path' },
+      { label: 'Infused', prop: 'infused' },
+    ],
+    body: 'effect',
+  },
   'skills.json': {
     file: 'skills.json',
     noun: 'skill',
