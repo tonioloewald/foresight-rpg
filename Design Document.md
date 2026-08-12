@@ -417,8 +417,11 @@ You call them about something you couldn't fix yourself:
 |---|--:|---|--:|---|
 | **Tradesman** | 15 | BEF 5, **−1** problem beyond a layperson, **+1** professional tools = **5** | **75** | fixes it 3 times in 4 |
 | **You** | 10 | BEF 5, **−1** problem, **−1** whatever was in the kitchen drawer = **3** | **30** | fixes it under a third of the time |
+| **You, but handy** | 15 | BEF 5, **−1** problem, **−2** never done plumbing, **−1** bad tools = **1** | **15** | one time in seven |
 
 And the QR bands do the rest of the work: at SC 75 the bare-success band (QR4) is 38–75, i.e. **half of the tradesman's successes are "barely a fix"** — the tap stops dripping but you know they'll be back. That matches life closely enough to be uncanny, and it wasn't tuned to; it falls out of Score × EF and the QR ladder.
+
+**The third row is the granularity principle made mechanical.** You have *exactly the tradesman's Score* — 15, you're genuinely good at fixing things — and you succeed one seventh as often, because you've never done plumbing (−2) and you're working with the wrong tools (−1). That gap is not skill; it's **familiarity and equipment**. Which is precisely why plumbing doesn't need to be its own skill, and why surgery doesn't either: the broad skill says you're competent with your hands, and the familiarity (plus the Field, plus the kit) says whether you're competent *at this*. If we'd split the skills instead, the same character would be modelled as unskilled — which is false, and would also mean their general repair ability did nothing for them at all.
 
 **What this anchor pins down, and what to check against it:**
 - **Attribute scale** — a 7–8 typical person, not 9. If "typical" drifts upward, the tradesman becomes superhuman.
