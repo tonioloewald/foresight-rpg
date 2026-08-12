@@ -825,12 +825,13 @@
    the background there left brand-white text on light grey — so these keep the
    theme's own background/text PAIR and just restyle the type. (color:inherit
    doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis,.mx-colhead{background:var(--brand-color,transparent);color:var(--brand-text-color,inherit)}
 .mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .mx-colhead{font-weight:600;font-size:.85em}
 /* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
    text colour is correct and readable in light and dark themes. */
-.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:inherit;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
-.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:inherit}
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:var(--tosi-text,inherit);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:var(--tosi-text,inherit)}
 .mx-blocked{opacity:.45;font-style:italic}
 </style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="7">Star spectral class →</th></tr><tr><th class="mx-colhead">A0–4</th><th class="mx-colhead">A5–9</th><th class="mx-colhead">F0–4</th><th class="mx-colhead">F5–9</th><th class="mx-colhead">G0–4</th><th class="mx-colhead">G5–9</th><th class="mx-colhead">K, M, S</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="4">Result ↓</th><th class="mx-rowhead">Benign</th><td>≤1</td><td>≤2</td><td>≤2</td><td>≤3</td><td>≤4</td><td>≤5</td><td>≤8</td></tr><tr><th class="mx-rowhead">Harmful *</th><td>2–3</td><td>3–4</td><td>3–5</td><td>4–6</td><td>5–7</td><td>6–9</td><td>≥9</td></tr><tr><th class="mx-rowhead">Dangerous **</th><td>4–5</td><td>5–7</td><td>6–8</td><td>7–8</td><td>8–9</td><td>10–11</td><td class="mx-blocked">—</td></tr><tr><th class="mx-rowhead">Inimical</th><td>≥6</td><td>≥8</td><td>≥9</td><td>≥9</td><td>≥10</td><td>≥12</td><td class="mx-blocked">—</td></tr></tbody></table></div>
 <!-- /matrix -->

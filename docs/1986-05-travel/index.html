@@ -94,12 +94,13 @@
    the background there left brand-white text on light grey — so these keep the
    theme's own background/text PAIR and just restyle the type. (color:inherit
    doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis,.mx-colhead{background:var(--brand-color,transparent);color:var(--brand-text-color,inherit)}
 .mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .mx-colhead{font-weight:600;font-size:.85em}
 /* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
    text colour is correct and readable in light and dark themes. */
-.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:inherit;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
-.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:inherit}
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:var(--tosi-text,inherit);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:var(--tosi-text,inherit)}
 .mx-blocked{opacity:.45;font-style:italic}
 </style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="6">Terrain Feature →</th></tr><tr><th class="mx-colhead">Barren [BN]</th><th class="mx-colhead">Lt.Veg [LV]</th><th class="mx-colhead">Md.Veg [MV]</th><th class="mx-colhead">Hv.Veg [HV]</th><th class="mx-colhead">Marsh [MA]</th><th class="mx-colhead">Ice [IC]</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="3">Contour ↓</th><th class="mx-rowhead">Broken [BR]</th><td>3</td><td>4</td><td>5</td><td>8</td><td class="mx-blocked">—</td><td>5</td></tr><tr><th class="mx-rowhead">Uneven [UN]</th><td>1</td><td>2</td><td>3</td><td>6</td><td>3</td><td>3</td></tr><tr><th class="mx-rowhead">Flat [FL]</th><td>1</td><td>1</td><td>2</td><td>4</td><td>2</td><td>2</td></tr></tbody></table></div>
 <!-- /matrix -->

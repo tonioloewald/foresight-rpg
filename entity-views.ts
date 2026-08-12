@@ -74,12 +74,13 @@ const MATRIX_STYLE = `<style>
    the background there left brand-white text on light grey — so these keep the
    theme's own background/text PAIR and just restyle the type. (color:inherit
    doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis,.mx-colhead{background:var(--brand-color,transparent);color:var(--brand-text-color,inherit)}
 .mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
 .mx-colhead{font-weight:600;font-size:.85em}
 /* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
    text colour is correct and readable in light and dark themes. */
-.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:inherit;writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
-.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:inherit}
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:var(--tosi-text,inherit);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:var(--tosi-text,inherit)}
 .mx-blocked{opacity:.45;font-style:italic}
 </style>`
 

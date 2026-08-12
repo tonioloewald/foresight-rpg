@@ -180,7 +180,11 @@ class ForesightTable extends HTMLElement {
       columns: colsAttr ? JSON.parse(colsAttr) : undefined,
       rowHeight: 34,
     }) as HTMLElement
-    table.style.height = this.getAttribute('height') || '60vh'
+    // Don't force a tall box on a short table: size to content, capped at 60vh.
+    // (A 10-row table was rendering 773px tall with most of it empty.)
+    const rowH = 34
+    const contentH = rows.length * rowH + 44 // header + chrome
+    table.style.height = this.getAttribute('height') || `min(60vh, ${contentH}px)`
     table.style.display = 'block'
     this._body.append(table)
   }
@@ -225,3 +229,17 @@ class ForesightTable extends HTMLElement {
   }
 }
 if (!customElements.get('foresight-table')) customElements.define('foresight-table', ForesightTable)
+
+// ── Haltija dev widget (localhost only) ──────────────────────────────────────
+// Agent-drivable browser control for UI work. Runtime injection doesn't survive
+// navigation, so it has to be embedded — but it must NEVER load on the published
+// site, hence the hostname guard: foresight-rpg.com never even makes the request.
+// Start the server with `bunx haltija --server --name foresight`, then drive it
+// from a shell with `hj tree` / `hj eval` / `hj click`.
+if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+  const s = document.createElement('script')
+  s.src = 'http://localhost:8700/component.js?autoInject=true&serverUrl=ws://localhost:8700/ws/browser'
+  s.async = true
+  s.onerror = () => {} // no Haltija server running: silently skip
+  document.head.appendChild(s)
+}
