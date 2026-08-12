@@ -411,10 +411,21 @@ So a factor = (category, exclusivity) + (cost) + (unrestricted pts) + (restricte
 
 **Blind is the load-bearing word.** A tester who knows what the designer intended corrects toward it unconsciously and reports success. That's a demonstration, not a test.
 
-**Now apply it to ourselves, which is the only reason it's worth writing down.** The 1986 *numbers* have this evidence behind them. **The 2026 decisions do not.** The attribute merge, exhaustion replacing pools, the QR-ladder change (SC/5 → SC/4, and the 100/90/75/50 → 100/80/50/25 yields), the point economy, broad skills — all of it is currently in exactly the category we're criticising: reasoned carefully, never measured. Being better-argued than the alternative is not the same as being tested, and this document is full of good arguments.
+**Two kinds of evidence, and they must not be conflated.**
+
+- **Behavioural evidence — what players actually did.** Decades of blind testing produced observations about *use*, not just outcomes: **nobody tracked fatigue correctly; everybody tracked wounds.** That is hard evidence about a mechanic, and it is exactly what the 2026 changes are built on. Collapsing pools into an exhaustion track shaped like the wound track isn't a guess — it's collapsing *toward the mechanic that demonstrably worked*, for a reason we can name.
+- **Distributional evidence — whether the numbers come out right.** This is what a specific new value does across the range, and it's what the new work mostly lacks.
+
+**So the 2026 decisions are evidenced in direction and unevidenced in calibration.** The diagnosis (fatigue was ignored, wounds weren't) and the response (make the survivor the model) rest on real observation. The *numbers* — how many exhaustion levels, what each level costs, the QR-ladder yields — do not yet, and that's what still needs measuring. Note also that the tradesman/amateur anchor above is **1986 rules surviving into the present**: it's continuity evidence, not validation of anything new.
+
+**The survival criterion, which is the generalisable prize here.** Fatigue and wounds were both in the tested system; only one was used. The difference:
+
+> A mechanic survives contact with a real table when it is **cheap to track** *and* **only changes when the change matters**.
+
+Wound level passes both — it's one number, and it moves only when something significant just happened, at which point everyone is paying attention anyway. Fatigue-as-a-pool failed both: constant small bookkeeping, and almost all of that bookkeeping changed nothing. **This is a test you can apply to a proposed subsystem before building it**, and it retroactively explains several other decisions in this document (no separate XP currency, familiarities as examples rather than tables, no disadvantage ledger). Anything requiring continuous tracking of a value that rarely alters an outcome will be quietly dropped by the table, and a rule that is quietly dropped is worse than no rule, because the text still claims it applies.
 
 So the obligations that follow:
-1. **Where 1986 and 2026 disagree on a number, 1986 has evidence and we have an opinion.** Log it as a calibration item rather than defaulting to the new value (already the rule in CLAUDE.md — this is why).
+1. **Where 1986 and 2026 disagree on a *number*, 1986 has distributional evidence and we have a reasoned intention.** Log it as a calibration item rather than defaulting to the new value (already the rule in CLAUDE.md — this is why).
 2. **Prefer anchors checkable against the world** over internal elegance — the tradesman/amateur pair above is worth more than any amount of reasoning about what "feels right", because it can be wrong.
 3. **Playtest blind where we can**, and treat enthusiastic reports from people who've read this document as demonstrations, not data.
 4. **Re-derive the distributions** when a mechanic changes, rather than assuming the text still describes the behaviour. That's the specific failure mode above, and we are not immune to it.
