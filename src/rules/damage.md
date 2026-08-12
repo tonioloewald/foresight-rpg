@@ -52,7 +52,7 @@ Shaken is off-balance and hurting; Stunned is out of the fight until you pull yo
 
 ## Hit location
 
-By default roll **D10** for where a hit lands. Or **call your shot** — the head, a weapon hand, the sliver of someone showing past cover — for an **up-front EF penalty** for the smaller target. The same penalty covers shooting through cover: you pay in ease factor for precision, and a success *is* the called hit (don't charge it twice).
+There are **seven locations**: **left leg**, **right leg**, **left arm**, **right arm**, **abdomen**, **chest**, **head**. By default roll **D10** for where a hit lands. Or **call your shot** — the head, a weapon hand, the sliver of someone showing past cover — for an **up-front EF penalty** for the smaller target. The same penalty covers shooting through cover: you pay in ease factor for precision, and a success *is* the called hit (don't charge it twice).
 
 ## Damage type & armor
 

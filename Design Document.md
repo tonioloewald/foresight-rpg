@@ -119,6 +119,33 @@ This converges with the architecture: the delivery model already requires **each
 
 **The general principle, which will recur:** *a player's own character is not a place to hide information.* Uncertainty belongs in the **world** (what the god will actually do, whether the omen means what you think) and in the **roll** (QR is already a graded-confidence report — see the EM/PC note). It does not belong in a hidden stat. Watch for this whenever a subsystem is tempted to track something about a PC in secret — corruption, sanity, standing, true loyalties. Model the *uncertainty*, not the *concealment*.
 
+## Design note: the equipment model (2026-08)
+
+Equipment isn't one thing. Weapons, clothing, vehicles, tools and general gear **aggregate differently**, and that difference is the whole design problem. Three decisions settle it.
+
+**1 · Two levels of modification, kept apart.**
+- **Item-level** — adjectives modify *the item's own stats*. A "target heavy sliver rifle" is `sliver rifle` + `target` + `heavy`, each adjusting PM/DC/ranges/mass/cost. Closed, tabular, and resolvable at *build* time: a modified item can be precomputed into the catalogue.
+- **Character-level** — the item modifies *how an action resolves* (armour protection, a toolkit's PM, a holster's effect on the draw). Resolvable only at *play* time, against a specific action.
+
+**2 · The unifying abstraction is the modifier, not the stat block.** Each item emits zero or more modifiers carrying **target** (what it touches), **scope** (when it applies) and **combine** (how it stacks with others of its kind). Aggregation differences then live in *data*, not in special-case code:
+
+| Kind | Combine rule |
+|---|---|
+| **Weapons** | **select-one** — only what's wielded contributes (mass still counts) |
+| **Clothing / armour** | **per-location, not layered** — see below |
+| **Vehicles** | **substitute / nest** — its stats replace yours for movement; you inherit its damage track and cover |
+| **Tools** | **best applicable, never additive** |
+| **General gear** | **situational hook**, best-of per trigger (draw, concealment, initiative) |
+| *(all)* | **encumbrance sums** — the one thing that genuinely adds |
+
+**3 · The three settled questions.**
+
+- **Hit locations are long established: seven** — left and right legs, left and right arms, abdomen, chest, head. So coverage is real, and clothing that protects *some* locations (a Kevlar vest over chest and abdomen) is the normal case rather than an edge case.
+- **Armour does not layer.** You don't pile armour on and sum protection; more armour is bought with **major coordination costs**, not with arithmetic. This kills the hardest sub-problem outright — no layering formula, no best-plus-one fudge. An item covers locations and protects them; the price is what it does to you.
+- **Tools never stack.** *Two okay toolkits don't add up to a workshop.* Best applicable only. This one matters most numerically: a **+1 EF is worth roughly your whole Score in the sweet spot** (see the grain note), and the tradesman anchor shows the pro-versus-improvised swing is already **two EF steps** — most of the distance between an expert and an amateur. Additive tools would dwarf skill itself.
+
+*The through-line: every combine rule above is a form of "take the relevant one", never "add them up" — except encumbrance, which is the only thing that genuinely accumulates. That's the same instinct as the rest of the system: modifiers stay small, and the interesting decision is which thing applies, not how big a pile you assembled.*
+
 ## Design principle: granularity goes *down*, not sideways (2026-08)
 
 The same question keeps arriving in different costumes — *shouldn't X be its own attribute / skill?* — and it has one answer: **push the fine grain into the cheaper, narrower mechanism rather than adding an axis everyone has to carry.**
