@@ -119,6 +119,22 @@ This converges with the architecture: the delivery model already requires **each
 
 **The general principle, which will recur:** *a player's own character is not a place to hide information.* Uncertainty belongs in the **world** (what the god will actually do, whether the omen means what you think) and in the **roll** (QR is already a graded-confidence report — see the EM/PC note). It does not belong in a hidden stat. Watch for this whenever a subsystem is tempted to track something about a PC in secret — corruption, sanity, standing, true loyalties. Model the *uncertainty*, not the *concealment*.
 
+## Design principle: granularity goes *down*, not sideways (2026-08)
+
+The same question keeps arriving in different costumes — *shouldn't X be its own attribute / skill?* — and it has one answer: **push the fine grain into the cheaper, narrower mechanism rather than adding an axis everyone has to carry.**
+
+| Question | Wrong move | Right move |
+|---|---|---|
+| Deft hands vs. graceful body? | split CO into DX + AG | one **Coordination**, deviations as **quirks** |
+| Reads people vs. acts on the reading? | an **EM** attribute | **PC** for the read, an **inclination** for what you'll stake on it |
+| Tumbling vs. general fitness? | an **Acrobatics** skill | broad **Athletics**, specialisation via **long-term familiarity** |
+
+**The Acrobatics case is the clearest statement of the rule.** In the source genre — the Hong Kong fantasies Ch'i is built from — *everyone* can do acrobatics; it's baseline competence, not a specialist divide, so a separate skill would assert a distinction the setting doesn't have. But hard acrobatic work is genuinely hard, so the specialist needs *something*: that something is **long-term familiarity on top of the broad skill**, which is exactly the mechanism decided-simplification #11 exists to provide (and #5 keeps G/E/T as its flagship examples rather than a subsystem).
+
+Why this is the right default: a new attribute or skill is a **permanent column on every character sheet**, paid for by everyone in complexity whether or not they care. A quirk, an inclination, or a familiarity is **opt-in, cheap, and narrower than the thing it modifies** — and, being narrower, it can express distinctions the broader axis can't (specifically good at *climbing*, not at all agility).
+
+The bound is the same one recorded in the Coordination note: don't collapse so far that one axis concentrates all the mechanical leverage, and don't backfill with a sprawl of faux-attributes (the GURPS failure). Collapse to the level where the *rule* lives, and let quirks, inclinations and familiarities carry the *exceptions*.
+
 ## Design note: Coordination — why DX + AG collapse, and where collapsing stops (2026-08)
 
 *Written in response to community pushback on the merge. Notably there was little objection to EM → PC — which is itself diagnostic (see "leverage", below).*
