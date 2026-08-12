@@ -128,7 +128,8 @@ export class ForesightCharacterSheet extends Component {
   private bumpAttr = (a: string, d: number) => {
     const c = this.char
     const next = (c.buyBonus[a] || 0) + d
-    if (next < 0) return
+    // attributes sell DOWN to the floor (3) as well as buying up
+    if ((c.base[a] || 0) + R.conferAttr(c, a) + next < R.ATTR_FLOOR) return
     c.buyBonus[a] = next
     R.clampSkills(c, this.SKILLS)
     this.changed()
@@ -303,9 +304,9 @@ export class ForesightCharacterSheet extends Component {
       ),
       tosiField(
         { caption: 'Concept' },
-        input({ bindValue: fsSheet.char.concept, onInput: this.changed, style: { width: '100%' } })
+        textarea({ bindValue: fsSheet.char.concept, onInput: this.changed, rows: '3', style: { width: '100%' } })
       ),
-      div({ class: 'fs-row' }, span({ class: 'fs-muted' }, 'Content:'), tosiSegmented({ part: 'tagPick', multiple: true })),
+      div({ class: 'fs-row' }, span({ class: 'fs-muted' }, 'Genre:'), tosiSegmented({ part: 'tagPick', multiple: true })),
       div({ class: 'fs-pool', part: 'pools' })
     ),
     section({ class: 'fs-panel' }, h3('Attributes'), div({ part: 'attrs' })),
@@ -590,7 +591,7 @@ export class ForesightCharacterSheet extends Component {
               )
             )
           )
-        : p({ class: 'fs-muted' }, 'No background factors yet — they confer most of a character’s skills.')
+        : p({ class: 'fs-muted' }, 'No background factors yet — this is where your initial build points come from, and most of your skills. Factors can also be conferred later, to reflect long downtime or a change of life.')
     )
 
     // skills, filtered by the active content tags

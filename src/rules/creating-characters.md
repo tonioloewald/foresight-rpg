@@ -32,7 +32,7 @@ Characters have seven attributes. Each represents both a general ability (how st
 | WP | Willpower | Strength of will and determination |
 | AP | Appearance | Physical attractiveness to others of the same species |
 
-A character has **one score** per attribute. Normal human attributes range from 5 to 16, with 9 typical of the general population. Improving an attribute is possible but expensive — markedly more so beyond 12. Genetics is not fair.
+A character has **one score** per attribute. Human attributes run from **3 to 16** — 3 is truly hopeless, below that is disabling, and above 16 isn't human any more. Most people sit around **7 or 8**; a 10 is the person everyone agrees is remarkable. Improving an attribute is possible but expensive — markedly more so beyond 12. Genetics is not fair.
 
 > **Simplified from earlier editions:** there's no separate "inherent" and "trained" value any more — an attribute is simply what it is.
 

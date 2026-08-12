@@ -29,6 +29,16 @@ export const ARCH: Record<string, Record<string, number>> = {
 }
 
 /** Attributes cost 10/point to 12, then 20 — "genetics is not fair". */
+/** Attributes may be sold down to this floor. Human range is 3–16: 3 is truly
+ *  hopeless, below it is disabling, and above 16 is no longer human. Typical
+ *  people sit around 7–8 — NOT 9. Calibration anchor: a competent experienced
+ *  tradesman has a skill Score of ~15, which is a 7–8 attribute plus levels; at
+ *  EF 5 that's SC 75, so three times in four they fix your simple problem — and
+ *  half of those fixes are bare QR4 successes. Which is about right for life.
+ *  The EF isn't arbitrary: BEF 5, −1 because it's a problem you couldn't fix
+ *  yourself, +1 for professional tools. Do it yourself at skill 10 with whatever
+ *  was in the kitchen drawer (−1 tools) and it's EF 3 → SC 30. */
+export const ATTR_FLOOR = 3
 export const ATTR_COST_BREAK = 12
 export const ATTR_COST_LOW = 10
 export const ATTR_COST_HIGH = 20
@@ -87,12 +97,12 @@ export interface Character {
   gear: string
 }
 
-/** A fresh character: attributes at 6, standard+modern content, 4 BF slots. */
+/** A fresh character: attributes at 5, standard+modern content, 4 BF slots. */
 export function blankCharacter(): Character {
   const base: Record<string, number> = {}
   const buyBonus: Record<string, number> = {}
   for (const a of ATTRS) {
-    base[a] = 6
+    base[a] = 5
     buyBonus[a] = 0
   }
   return {
@@ -165,10 +175,15 @@ export function tagMatch(c: Character, tags?: string[]): boolean {
 
 /** Attribute points bought, priced step by step across the cost break. */
 export function attrBuySpend(c: Character, a: string): number {
-  let pts = 0
   const floorA = (c.base[a] || 0) + conferAttr(c, a)
   const fin = floorA + (c.buyBonus[a] || 0)
-  for (let v = floorA + 1; v <= fin; v++) pts += v <= ATTR_COST_BREAK ? ATTR_COST_LOW : ATTR_COST_HIGH
+  const price = (v: number) => (v <= ATTR_COST_BREAK ? ATTR_COST_LOW : ATTR_COST_HIGH)
+  let pts = 0
+  // Buying up costs; selling down refunds at the same rate (symmetric on one
+  // axis — this is point-buy, not a disadvantage economy: a low attribute is
+  // broad and genuinely bites, so it isn't a free drawback).
+  if (fin >= floorA) for (let v = floorA + 1; v <= fin; v++) pts += price(v)
+  else for (let v = fin + 1; v <= floorA; v++) pts -= price(v)
   return pts
 }
 

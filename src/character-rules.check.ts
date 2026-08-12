@@ -15,17 +15,20 @@ const eq = (label: string, got: any, want: any) => {
   console.log(`${ok ? 'ok  ' : 'FAIL'} ${label}: got ${JSON.stringify(got)} want ${JSON.stringify(want)}`)
 }
 // baseline: all attrs 6
-eq('finalAttr ST (base 6)', R.finalAttr(c, 'ST'), 6)
-eq('formulaVal Climbing (6+6)/2', R.formulaVal(c, defs, 'Climbing'), 6)
-eq('formulaVal Archery half (6+6)/4', R.formulaVal(c, defs, 'Archery'), 3)
-eq('maxLevel Climbing 6*1', R.maxLevel(c, defs, 'Climbing'), 6)
-eq('maxLevel Archery 6*1.5', R.maxLevel(c, defs, 'Archery'), 9)
+eq('finalAttr ST (base 5)', R.finalAttr(c, 'ST'), 5)
+eq('formulaVal Climbing (5+5)/2', R.formulaVal(c, defs, 'Climbing'), 5)
+eq('formulaVal Archery half (5+5)/4', R.formulaVal(c, defs, 'Archery'), 3)
+eq('maxLevel Climbing 5*1', R.maxLevel(c, defs, 'Climbing'), 5)
+eq('maxLevel Archery 5*1.5', R.maxLevel(c, defs, 'Archery'), 7)
 // buy 3 points of ST: 7,8,9 all under the break → 10 each
 c.buyBonus.ST = 3
-eq('attrBuySpend ST 6→9', R.attrBuySpend(c, 'ST'), 30)
+eq('attrBuySpend ST 5→8', R.attrBuySpend(c, 'ST'), 30)
 // push across the 12 break: 10,11,12 @10 then 13 @20
-c.buyBonus.ST = 7
-eq('attrBuySpend ST 6→13 (crosses break)', R.attrBuySpend(c, 'ST'), 10 * 6 + 20)
+c.buyBonus.ST = 8
+eq('attrBuySpend ST 5→13 (crosses break)', R.attrBuySpend(c, 'ST'), 10 * 7 + 20)
+c.buyBonus.ST = -2
+eq('attrBuySpend ST 5→3 sold down (refund)', R.attrBuySpend(c, 'ST'), -20)
+eq('finalAttr ST at floor', R.finalAttr(c, 'ST'), R.ATTR_FLOOR)
 c.buyBonus.ST = 0
 // skill bought from scratch: cost x (level+2)
 c.skills.Climbing = { level: 3 }
@@ -34,7 +37,7 @@ eq('skillBuySpend Climbing L3 from scratch (1x(3+2))', R.skillBuySpend(c, defs, 
 c.bfs.push({ name: 'Mountain Born', skills: { Climbing: 2 }, attrs: { CO: 1 }, grant: 20 })
 eq('conferSkill Climbing', R.conferSkill(c, 'Climbing'), 2)
 eq('conferAttr CO', R.conferAttr(c, 'CO'), 1)
-eq('finalAttr CO 6+1', R.finalAttr(c, 'CO'), 7)
+eq('finalAttr CO 5+1', R.finalAttr(c, 'CO'), 6)
 eq('skillTotal Climbing 2+3', R.skillTotal(c, 'Climbing'), 5)
 eq('skillBuySpend Climbing conferred (1x3)', R.skillBuySpend(c, defs, 'Climbing'), 3)
 eq('score Climbing formula(6,7)+5', R.score(c, defs, 'Climbing'), R.formulaVal(c, defs, 'Climbing') + 5)

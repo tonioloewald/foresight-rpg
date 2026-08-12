@@ -405,6 +405,26 @@ Background factors work **like skills**: you add them **sequentially as an order
 
 So a factor = (category, exclusivity) + (cost) + (unrestricted pts) + (restricted pts, with domain) + (default specific skills/fields, swappable). This subsumes the playtest pack's flat "skill +N" grants as the special case where everything is pre-spent into specific skills.
 
+## Calibration anchor: the tradesman and the amateur (2026-08)
+
+The most useful sanity check we have on the whole engine, because it's checkable against life rather than against taste.
+
+**A competent, experienced tradesman has a skill Score of about 15** — which is a **7–8 attribute** plus levels. (Attributes run 3–16, most people sit at 7–8; 9 is *not* typical, contrary to an earlier draft of `creating-characters.md`.)
+
+You call them about something you couldn't fix yourself:
+
+| | Score | Ease Factor | SC | Outcome |
+|---|--:|---|--:|---|
+| **Tradesman** | 15 | BEF 5, **−1** problem beyond a layperson, **+1** professional tools = **5** | **75** | fixes it 3 times in 4 |
+| **You** | 10 | BEF 5, **−1** problem, **−1** whatever was in the kitchen drawer = **3** | **30** | fixes it under a third of the time |
+
+And the QR bands do the rest of the work: at SC 75 the bare-success band (QR4) is 38–75, i.e. **half of the tradesman's successes are "barely a fix"** — the tap stops dripping but you know they'll be back. That matches life closely enough to be uncanny, and it wasn't tuned to; it falls out of Score × EF and the QR ladder.
+
+**What this anchor pins down, and what to check against it:**
+- **Attribute scale** — a 7–8 typical person, not 9. If "typical" drifts upward, the tradesman becomes superhuman.
+- **The value of tools** — the ±1 swing between professional and improvised kit is **two EF steps**, which is most of the gap between an expert and you. That's the right weight for equipment, and a bound on how much gear should ever be worth (see the Equipment grain note).
+- **The QR ladder** — that half of marginal-SC successes land on QR4 is a *feature*, and it's the 2026 ladder doing it. Worth re-checking if the ladder is ever retuned (see the live 1986-vs-2026 disagreement below).
+
 ## Calibration notes (test these)
 
 **The point economy has shrunk and must be re-tuned by play.** The streamlining cuts how much there is to buy:
