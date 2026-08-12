@@ -29,7 +29,7 @@ When a waiting character reacts to something (usually someone else acting), they
 
 A pre-emption can itself be pre-empted (the counter-sniper), but you'll rarely go deeper. And **you never see each other's Initiative** — that uncertainty is the whole point.
 
-> **You never know for certain you'll act first.** Pretty sure, never certain. The gunslinger *probably* draws first; the sniper *probably* fires before the hostage-taker reacts; neither is guaranteed. It's exactly why a police sniper in a standoff is loath to just shoot the other sniper — and why these scenes work here and collapse into "highest number wins" everywhere else.
+> **You never know for certain you'll act first.** Pretty sure, never certain. The gunslinger *probably* draws first; the sniper *probably* fires before the hostage-taker reacts; neither is guaranteed. It's exactly why a police sniper in a standoff is loath to just shoot a person holding a gun on a hostage — and why these scenes work here and collapse into "highest number wins" everywhere else.
 
 *E.g. an archer waits — trigger: "the mage does something." The mage starts a spell; the archer pre-empts (QR of Initiative). On success the arrow lands before the spell goes off — but a confident archer can still be a hair too slow.*
 
