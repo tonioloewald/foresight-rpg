@@ -146,7 +146,13 @@ The evidence that this is really true, rather than merely tidy: **non-specialist
 | **Familiarity** | what you've *been doing lately* | acquirable, and **losable** | cheap **and fast** — a motivated adult, or a whole stunt team, can go and get one |
 | **Field of Knowledge** | what your hands are *pointed at* | acquired over years, then kept | 4 points per year, hierarchical, shared across skills |
 
-**Quirk and perk are the same *shape*, differing in how you pay.** Both are permanent and narrow. A **quirk is a bargain** — you get the good half by accepting the bad half (and a purely negative quirk hands points back, which is what makes "deft hands, clumsy body" buildable and is the legitimate core of the CO pushback). A **perk is a purchase** — a clean advantage with no drawback, so you pay full freight, and it stays affordable only because it's tightly focused. Offering both matters: some players want the character *defined* by a trade, others just want to be good at one specific thing and are willing to pay.
+**Quirk and perk are the same *shape*, differing in how you pay.** Both are permanent and narrow. A **quirk is a trade** — the good half comes with the bad half. A **perk is a purchase** — a clean advantage with no drawback, paid for in points at full price, affordable only because it is tightly focused.
+
+**We do not adopt disadvantages as a point source** — the GURPS / HERO pattern, where drawbacks fund advantages. A drawback may carry *some minor offset*, but never enough to be worth shopping for. A disadvantage economy turns **building an interesting character into a minimax exercise**: you take blindness to fund telepathy, then see through everyone else's eyes, and the blindness is an accounting entry rather than a fact about the character. Choose to play someone blind **because it is interesting**; the system should neither bill you for it nor pay you a windfall.
+
+**This is empirical, not fastidious.** Every game that adopts the economy turns it into a pathology. ForeSight itself tried it long ago and the result was worse than the commercial examples — precisely *because* it was defined in the most general and powerful form available, which is the natural thing to do and the thing that maximises the exploit surface. Generality is a virtue nearly everywhere in this system; here it is the failure mode.
+
+**This corrects an earlier note in this document.** The Coordination discussion claimed the CO merge "only works if quirks can be negative and grant points", reasoning that a deft-handed, clumsy-bodied character would otherwise be worse off than under DX/AG, where they could dump AG and bank the difference. That imported the GURPS assumption. **The banked points were the minimax artifact, not a feature owed to anyone.** The trade stays available and cheap — but it is a *character* choice, not an *economy*.
 
 > ⚠ **Terminology to settle:** the DX/AG passage above says remarkable agility or prestidigitation "become **talents**". If a talent *is* a perk, unify the word; if they differ, say how. Two names for one carrier is exactly the kind of drift this document exists to prevent.
 
@@ -197,7 +203,7 @@ An attribute that absorbs situational variance is a category error. Darkness, mi
 | **Quirk** | a narrow permanent trait; cheaper than an attribute point | nimble-fingered, graceful, superb eyesight |
 | **Condition / situation** | an Ease Factor modifier, applied when it bites | inner ear playing up, the shakes, darkness |
 
-Quirks must run **both ways**: a negative quirk gives points back. Otherwise the deft-hands/clumsy-body character is worse off than under the old split (where they'd simply dump AG and bank it) — and that, not expressiveness, is the legitimate core of the pushback.
+Quirks run **both ways** — you can be notably worse as well as better — but a drawback yields at most a *minor* offset, never a point windfall: we reject the GURPS/HERO disadvantage economy outright (see "granularity goes down" above). The deft-hands/clumsy-body character is buildable and cheap; what they don't get is banked points, because farming points by being bad at things is exactly what the merge removed.
 
 ### Companion case: EM → PC, and why it's an *inclination*, not an ability
 
