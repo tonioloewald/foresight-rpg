@@ -131,6 +131,15 @@ The same question keeps arriving in different costumes — *shouldn't X be its o
 
 **The Acrobatics case is the clearest statement of the rule.** In the source genre — the Hong Kong fantasies Ch'i is built from — *everyone* can do acrobatics; it's baseline competence, not a specialist divide, so a separate skill would assert a distinction the setting doesn't have. But hard acrobatic work is genuinely hard, so the specialist needs *something*: that something is **long-term familiarity on top of the broad skill**, which is exactly the mechanism decided-simplification #11 exists to provide (and #5 keeps G/E/T as its flagship examples rather than a subsystem).
 
+**The test — and it must fail in *both* directions to justify a split:**
+
+1. *Forward:* does being good at X make you good at Y? — "Can I be a skilled acrobat and be hopeless at climbing a rope or throwing a ball?" **No.**
+2. *Reverse:* does not having X make Y impossible? — "Is a gifted athlete fundamentally unable to do a cartwheel?" **No.**
+
+If competence transfers either way, it's one skill. Split only when both answers are genuinely yes — which is rare, and is why the skill list is short.
+
+**The real-world case is Jackie Chan.** Trained from childhood in acrobatics and martial arts, then acquiring whole new physical vocabularies for individual films — extreme roller-skating for one, a ball sport for another. That is *exactly* the model: a very high broad skill, plus narrow **familiarities picked up deliberately and comparatively fast** for a specific purpose. It also marks the real difference between the two mechanisms — a skill is long accumulation, a familiarity is something a motivated adult can go and get. Trying to model Chan with a pile of separate skills gets both halves wrong: it fails to explain why he's instantly credible at a sport he learned last month, *and* it charges every other character for distinctions they don't have.
+
 Why this is the right default: a new attribute or skill is a **permanent column on every character sheet**, paid for by everyone in complexity whether or not they care. A quirk, an inclination, or a familiarity is **opt-in, cheap, and narrower than the thing it modifies** — and, being narrower, it can express distinctions the broader axis can't (specifically good at *climbing*, not at all agility).
 
 The bound is the same one recorded in the Coordination note: don't collapse so far that one axis concentrates all the mechanical leverage, and don't backfill with a sprawl of faux-attributes (the GURPS failure). Collapse to the level where the *rule* lives, and let quirks, inclinations and familiarities carry the *exceptions*.
