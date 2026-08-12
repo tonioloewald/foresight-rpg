@@ -105,6 +105,16 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 11. **Broad skills, differentiated by familiarity.** Merge narrow skill splits where the underlying competence is one thing — e.g. handguns + longarms become Firearms, with a familiarity covering the gap if needed. (Same machinery as strategy 5: familiarities absorb what used to be subsystems and skill splits.)
 
+## Design note: don't hide a player's own character from them (2026-08)
+
+**The case:** in HindSight, **Piety is a secret the GM keeps about your character**. You spend time and experience pursuing belief, and the GM privately tracks how well you're doing.
+
+**Why it's out.** It is, in one sense, atmospheric — and the reason it's tempting is real: a devout character shouldn't *know* their standing with a god the way they know their Strength. But the cost is that **part of your own character sheet is unavailable to you**, and that makes it an *untrusting* mechanic. It is the same move as making a player roleplay a delusional character by lying to them: it manufactures the experience by withholding, rather than by giving the player something to play. Equivalent techniques used on actors by directors are now generally regarded as abuse, and the analogy is not a stretch — both work by denying an informed participant their own ground truth.
+
+**What replaces it.** Piety is a **skill, visible on the sheet, driven by deeds rather than experience points** and earned back by devotion rather than rest, gating a **divine-favour exhaustion track** (see Exhaustion). The player can see it, plan around it, and *choose* to spend it — which is more playable, and produces the same fiction without the deception. It also decouples the character from one GM's private ledger: the old design effectively welded a character to a single setting and referee, which is fine until the campaign ends or the group changes.
+
+**The general principle, which will recur:** *a player's own character is not a place to hide information.* Uncertainty belongs in the **world** (what the god will actually do, whether the omen means what you think) and in the **roll** (QR is already a graded-confidence report — see the EM/PC note). It does not belong in a hidden stat. Watch for this whenever a subsystem is tempted to track something about a PC in secret — corruption, sanity, standing, true loyalties. Model the *uncertainty*, not the *concealment*.
+
 ## Design note: Coordination — why DX + AG collapse, and where collapsing stops (2026-08)
 
 *Written in response to community pushback on the merge. Notably there was little objection to EM → PC — which is itself diagnostic (see "leverage", below).*
