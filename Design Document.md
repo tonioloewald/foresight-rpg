@@ -128,8 +128,15 @@ The same question keeps arriving in different costumes — *shouldn't X be its o
 | Deft hands vs. graceful body? | split CO into DX + AG | one **Coordination**, deviations as **quirks** |
 | Reads people vs. acts on the reading? | an **EM** attribute | **PC** for the read, an **inclination** for what you'll stake on it |
 | Tumbling vs. general fitness? | an **Acrobatics** skill | broad **Athletics**, specialisation via **long-term familiarity** |
+| Surgery vs. plumbing? | a **Surgery** skill | broad **Repair**, directed by a **Field of Knowledge** |
 
 **The Acrobatics case is the clearest statement of the rule.** In the source genre — the Hong Kong fantasies Ch'i is built from — *everyone* can do acrobatics; it's baseline competence, not a specialist divide, so a separate skill would assert a distinction the setting doesn't have. But hard acrobatic work is genuinely hard, so the specialist needs *something*: that something is **long-term familiarity on top of the broad skill**, which is exactly the mechanism decided-simplification #11 exists to provide (and #5 keeps G/E/T as its flagship examples rather than a subsystem).
+
+**Repair is the precedent, and it carries the strongest evidence.** All the "doing delicate things with your hands" skills were collapsed into **Repair** on exactly this reasoning: *surgery is plumbing with different knowledge driving it.* The manual competence — steady hands, careful sequenced work under pressure, not panicking when it's wet — is generic. What differs is the **Field of Knowledge** that directs it, plus familiarity with the specific job.
+
+The evidence that this is really true, rather than merely tidy: **non-specialists have been talked through procedures they had no training for**, in real time, by someone who has the knowledge but not the hands. That isolates the variable exactly. Same hands, no knowledge, task impossible; supply the knowledge from outside and the task becomes possible. If the manual skill and the knowledge weren't genuinely separable, remote guidance could not work at all — and the vivid limiting case is someone doing it to themselves. This also explains the ForeSight structure that has been there since 1986: a great many skills are **Skill × Field** pairs, and it's why Repair is a *diagnose-then-fix* chain, with the diagnosis QR feeding the fix.
+
+**So there are four downward carriers, not two** — each cheaper and narrower than a new axis: **quirks** (permanent narrow deviation), **inclinations** (what you'll choose to do), **familiarities** (context tuning, fast to acquire), and **Fields of Knowledge** (what the hands are being pointed at, hierarchical and shared across skills). Before adding an attribute or a skill, check whether one of those four already carries the distinction.
 
 **The test — and it must fail in *both* directions to justify a split:**
 
