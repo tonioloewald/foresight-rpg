@@ -70,6 +70,18 @@ Running list of things to revisit. Grouped by area; check off as resolved.
 - [ ] **Section placement:** currently `parent: magic, order: 90`. Ch'i *replaces* magic rather than joining it, so once the settings/configuration axes exist it may want its own section.
 - [ ] Not yet drafted: Mystic Disciplines (the Ch'i analogues), and Ch'i's interaction with the character sheet.
 
+## Piety refined: a drawable resource, deed-driven recovery scaled by depth (2026-08)
+**Tonio's refinement:** Piety is **more of a power pool managed with a skill** than a plain skill gate. You *deliberately draw on it* (unlike fatigue, which accrues as a side-effect of effort), and the **Piety skill manages the drawing**. Recovery is **graduated, exactly like wounds**: a minor deficit comes back through ordinary devotion and observance, while a **big deficit needs deeds** — the same way a light wound heals with rest and a major one doesn't.
+
+Why this is better than "all recovery is deeds": it lets a devout character use small favours *routinely* without a quest attached, while a called-in miracle puts them in real, visible debt. Deed-driven recovery stays the flavour of the deep end, where it belongs, instead of taxing every minor blessing.
+
+It also preserves the property that matters most: **Piety stays visible on the character sheet** (see Design Document → "don't hide a player's own character from them"), and the depth of the deficit is exactly the information a player needs to decide whether to spend now or hold.
+
+**Two conflicts with the current prose, to resolve:**
+- `exhaustion.md` says divine favour "is earned, not rested" full stop — needs the graduated version (shallow: devotion; deep: deeds).
+- Its Designer's Note says "the stamina/mana/piety point-pools are all gone, and good riddance". That still holds for stamina and mana; Piety is now the exception.
+- [ ] **Open fork — pool or levels?** "Power pool" implies counting points; the wound analogy implies a **level track** (0–N, recovery deepest-first, difficulty scaling with depth). The level model keeps decided-simplification #4's real benefit (a check you can't fudge beats bookkeeping people forget) while giving exactly the graduated recovery described. **Recommend levels; needs Tonio's call before the prose is rewritten.**
+
 ## Status: Divine magic — source extracted (2026-08), prose still to write
 - **Ch'i — extracted** to `legacy/foresight-chi/chi-2004-raw.txt` (from `Ch-i 2004 v2.pdf`, 16pp, clean Word-generated text layer, ~42k chars). Structure: **nine Orbs** — Image, Glass, Fire, Bamboo, Metal, Stone, Snake, Sun, Moon — plus *Weaving Procedures*, *Projecting*, *Weaving Props*, *Long-Term Infusions*. Nine orbs vs magic's 23 fundamentals: genuinely simpler, and per Tonio a goldmine (inspired by *Big Trouble in Little China* / 80s–90s Hong Kong fantasy).
   - **Designer's constraints from the source, which bind the setting axes:** Ch'i is an **alternative** to Magic, not an addition — *"characters should not be allowed to operate in both frameworks: only one or the other"* — and it **dominates any setting it features in**. The low cost is defended deliberately: it's so useful that pricing it higher would just make players cripple themselves to have it.
