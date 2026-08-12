@@ -9,7 +9,7 @@ Every attack has a **Damage Class (DC)** — how hard it hits before quality, ar
 
 | DC | Roughly |
 |---|---|
-| 4 | an inhumanly strong person's bare hands |
+| 4 | a very strong person's bare hands — or a nasty targeted punch |
 | 8 | a 9mm pistol (the commonest pistol on Earth) |
 | 11 | a 7.62mm rifle (the commonest rifle class on Earth) |
 

@@ -37,7 +37,7 @@
 
 > **Damage = Yield × (DC ÷ 2)** ⟶ wound levels.  (Large/tough target: **÷ Damage Scale**.)
 
-**DC anchors:** inhumanly-strong fist **4** · 9mm pistol **8** · 7.62 rifle **11**.
+**DC anchors:** very strong person's fist **4** · 9mm pistol **8** · 7.62 rifle **11**.
 **Types:** M melee · I impact · B beam. **P**n weapon pierces n DC of armor; armor **A** absorbs 1 damage.
 **Hit location:** roll D10, or call the shot for an up-front EF penalty (covers cover, too).
 
