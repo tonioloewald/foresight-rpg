@@ -389,6 +389,25 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Cost', prop: 'cost' },
     ],
   },
+  // Ch'i extraordinary feats — the "outer way": what a skill taken twice unlocks.
+  // `home` is the modern skill or attribute the feat hangs off (the 2004 source
+  // used skills this edition merged away — see each feat's note).
+  'chi-feats.json': {
+    file: 'chi-feats.json',
+    noun: 'feat',
+    idPrefix: 'feat',
+    columns: [
+      { prop: 'name', name: 'Feat', width: 170 },
+      { prop: 'home', name: 'Through', width: 200 },
+      { prop: 'path', name: 'Path', width: 90, align: 'center' },
+    ],
+    card: [
+      { label: 'Through', prop: 'home' },
+      { label: 'Path', prop: 'path' },
+      { label: 'Note', prop: 'note' },
+    ],
+    body: 'effect',
+  },
   // Ch'i orb structures — the vocabulary a Ch'i weaver forms gathered energy
   // into. `E` in the text is the energy woven into the orb. `path` records which
   // spiritual path forms that structure more easily (+2); unresolved for now —
