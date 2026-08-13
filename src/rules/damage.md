@@ -58,7 +58,7 @@ By default roll **D10** for where a hit lands:
 |:--:|---|---|
 | 1 | Left leg | |
 | 2 | Right leg | |
-| 3–4 | Abdomen | 1-in-10 chance of an extra point; wounds here are **−1 EF on Pain Resistance** |
+| 3–4 | Abdomen | 1-in-10 chance of an extra point; **−1 EF on Pain Resistance** while you're carrying an abdomen wound (flat, not per wound) |
 | 5–7 | Chest | 1-in-10 chance of an extra point |
 | 8 | Left arm | |
 | 9 | Right arm | |
