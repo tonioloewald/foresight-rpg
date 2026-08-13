@@ -237,8 +237,18 @@ if (!customElements.get('foresight-table')) customElements.define('foresight-tab
 // Start the server with `bunx haltija --server --name foresight`, then drive it
 // from a shell with `hj tree` / `hj eval` / `hj click`.
 if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
+  // Match the page's scheme. An http:// script on an https:// page is mixed
+  // content and gets blocked outright — which silently broke this on the real
+  // dev server (https://localhost:1986). Haltija serves HTTP on 8700 and HTTPS
+  // on 8701, so run it with `--both`:
+  //   bunx haltija --server --both --name foresight
+  // The HTTPS cert is self-signed, so visit https://localhost:8701 once and
+  // accept it, or the script load fails the same way.
+  const secure = location.protocol === 'https:'
+  const http = secure ? 'https://localhost:8701' : 'http://localhost:8700'
+  const ws = secure ? 'wss://localhost:8701' : 'ws://localhost:8700'
   const s = document.createElement('script')
-  s.src = 'http://localhost:8700/component.js?autoInject=true&serverUrl=ws://localhost:8700/ws/browser'
+  s.src = `${http}/component.js?autoInject=true&serverUrl=${ws}/ws/browser`
   s.async = true
   s.onerror = () => {} // no Haltija server running: silently skip
   document.head.appendChild(s)
