@@ -158,3 +158,16 @@ doc note on the blessed pattern, and floated a first-class `devScripts` hook in 
 
 **Workaround:** hostname-guarded loader in `bundle.ts`. Works, but the dev-tool code does ship in the
 production bundle and is merely disabled at runtime.
+
+## ⚠️ OPEN — tosijs-ui: `devScripts` hook for dev-only scripts
+
+**Issue:** https://github.com/tonioloewald/tosijs-ui/issues/76 (Tonio implements — do not edit tosijs-ui from here)
+**Raised:** 2026-08-14. Split out of #74 (which is the docs side; they have different resolutions — prose
+vs an API addition).
+
+Proposes `devScripts` in `defineSiteConfig`: injected by `devServer`, omitted entirely by `buildSite`, so a
+dev tool's script tag **doesn't exist** in `outputDir` rather than shipping disabled. The hostname-guard
+workaround is safe by convention only — the code is compiled into every published build, and any
+environment that *is* localhost (a local preview of a production build, a container, `python -m http.server
+docs/`) activates it. For this project that means an agent-control widget trying to attach to what the
+author believes is a production artifact.
