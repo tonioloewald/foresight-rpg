@@ -128,3 +128,33 @@ can't point at a name nothing wrote.
 page were replaced with the marker; verified it's consumed (no leftover comment), both volumes
 render with their real titles, and the manifest publishes. NB the marker is a **single** tag
 replaced wholesale — not a paired block like `<!-- toc -->`.
+
+## ⚠️ OPEN — haltija: embedding on an HTTPS dev server fails silently (docs)
+
+**Issue:** https://github.com/tonioloewald/haltija/issues/33 (Tonio implements — do not edit haltija from here)
+**Raised:** 2026-08-14, against haltija 1.12.2.
+
+The canonical embed snippet is `http://localhost:8700/component.js`, which is **mixed content** on an
+`https://` page and is blocked outright — no console pointer, no widget, `hj where` just says `0 tabs`.
+Since the tosijs doc-system dev server is HTTPS by default, **the default project setup hits this first
+try**. Asked for: a scheme-aware snippet as canonical; a note that `--both`/`--https` is required and the
+cert is self-signed (needs one browser accept); a warning that **`--force` is required to change flags**
+(a running server prints "already running" and *silently ignores* new flags); and clarification that port
+**8701** is documented both as the default HTTPS port and as the desktop app's internal chrome port.
+
+**Workaround (in `bundle.ts`):** derive the scheme from `location.protocol` — https pages use
+`https://localhost:8701` + `wss://`, http pages keep 8700 — behind a hostname guard so it never loads in
+production. Run the server with `bunx haltija --server --both --name foresight`.
+
+## ⚠️ OPEN — tosijs-ui: no guidance for dev-only scripts on the HTTPS dev server
+
+**Issue:** https://github.com/tonioloewald/tosijs-ui/issues/74 (Tonio implements — do not edit tosijs-ui from here)
+**Raised:** 2026-08-14, against tosijs-ui 1.9.6. Companion to haltija#33.
+
+`devServer` serves HTTPS by default, so any locally-served dev tool must be HTTPS too, and there's no
+documented way to inject a **dev-only** script that stays out of the published `outputDir`. Asked for a
+doc note on the blessed pattern, and floated a first-class `devScripts` hook in `defineSiteConfig`
+(injected by `devServer`, omitted by `buildSite`) — safe by construction rather than by hostname check.
+
+**Workaround:** hostname-guarded loader in `bundle.ts`. Works, but the dev-tool code does ship in the
+production bundle and is merely disabled at runtime.
