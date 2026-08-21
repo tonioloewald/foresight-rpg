@@ -82,6 +82,10 @@ Either is legitimate — ForeSight colours no setting. Just tell the table which
 
 **Changing range is a combat move: a beat, and a Coordination roll** (see *Footwork*, below). Against someone actively keeping you out — or dragging you in — it's opposed. So closing on a pikeman is a real, rollable, failable thing, which is exactly how it looks: three men with spears are a problem you solve with a plan, not by walking up to them.
 
+**Which makes Coordination decisive between equals — and nobody had to write a rule saying so.** Same sword, same shield, but you're the better mover: **strike, then give ground.** Your blow landed in your band at +1; his counter now comes from a band neither of you wants, at −1. To get his +1 back he must **come after you**, and that is where the difference tells — a contest he is worse at, and one that puts him on the floor if he loses it badly. Do it again next beat. That is a fencer, and it emerged from the reach bands and the footwork roll rather than being designed.
+
+**It isn't a free ride, because range is *contested*, not declared.** You don't simply withdraw — he can **pursue**, and the two are one opposed Coordination roll (the general opposed move: better QR takes it, equal QRs cancel and the distance holds). The better mover wins that argument *usually*, not automatically, and the worse one only stumbles when he loses it badly. And withdrawing costs you a beat on the [ladder](/intense-action/) exactly as pursuing costs him one, so what you're buying is **the good end of every exchange**, not free hits.
+
 *This is why a knife is a terrifying weapon in a lift and a joke in a courtyard, without a single special rule about lifts or courtyards.*
 
 **And it needs no miniatures.** ForeSight melee has always made footwork load-bearing — one of the real pleasures of it is that people genuinely *move* — but "who is where" has usually meant a hexgrid or a table full of figures. Three named bands replace measurement with a **shared state you can hold in your head**: not a position for each fighter, but **one word per engagement**, agreed by both. Reach, Normal, Close.
