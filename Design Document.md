@@ -302,6 +302,10 @@ The rule for intermittent quirks: **they must hang off a condition already in pl
 
 **The set has a shape, and the shape is the argument for stopping here.** **ST** and **CO** are the *power* and *finesse* of the body; **WP** and **IN** are the power and finesse of the mind; **PC** is the feedback loop between mind, body and surroundings. That is a structure a reader can hold in their head, which is the whole point of a game you can run from memory — and it is the first time the attribute list has had one. (It is a *presentation* virtue rather than evidence: the structure was noticed after the five were chosen, not derived before. But given two defensible sets, take the memorable one.)
 
+**The cognitive win is geometric, not linear, and this is the part that matters most.** Counting *sinks* — how many places points can go — nine to five is a 44% cut. But that is not what a player actually does at the build screen. They **weigh attributes against each other**, and the number of pairwise tradeoffs is `n(n−1)/2`: **nine attributes present 36 comparisons; five present 10.** A **3.6× reduction in the thing that actually makes character creation feel like work.** Every axis removed takes a whole row and column of the comparison matrix with it.
+
+That is the founding goal restated in arithmetic — *a character buildable in minutes, rules you can run from memory* — and it is the strongest single argument for stopping at five rather than six or seven. It also raises the standard each survivor must meet: with only five axes, each one gets far more of the player's attention, so an attribute that doesn't discriminate between characters is now conspicuous rather than merely inert. That is precisely the test EN and AP failed.
+
 **Where EN's work went — and why the move was nearly free.** Exhaustion, Pain Resistance, convalescence and shaking off a stun are now **WP**. The rules had been writing those as *"EN or WP"* for years, which was the split telling us it wasn't carrying weight: if two attributes are interchangeable at every point of use, they are one attribute wearing two labels. Pushing through exhaustion really is a matter of refusing to stop. Purely **physiological** resistance — poison, venom, disease — went to **ST**, the body's robustness, where willpower plainly doesn't help. Endurance quirks supply the situational modifiers throughout.
 
 **This rescues WP rather than diminishing it.** WP was itself a deletion candidate on the same evidence that indicted EN — it drove no skill formulas, and designs didn't differ on it. It now gates a large share of core resolution, which settles the open question of whether EN's departure should take WP with it: **decisively not.** The two had identical profiles only because neither was doing anything; give one of them the work and the tie breaks.
@@ -359,6 +363,24 @@ If competence transfers either way, it's one skill. Split only when both answers
 Why this is the right default: a new attribute or skill is a **permanent column on every character sheet**, paid for by everyone in complexity whether or not they care. A quirk, an inclination, or a familiarity is **opt-in, cheap, and narrower than the thing it modifies** — and, being narrower, it can express distinctions the broader axis can't (specifically good at *climbing*, not at all agility).
 
 The bound is the same one recorded in the Coordination note: don't collapse so far that one axis concentrates all the mechanical leverage, and don't backfill with a sprawl of faux-attributes (the GURPS failure). Collapse to the level where the *rule* lives, and let quirks, inclinations and familiarities carry the *exceptions*.
+
+## Design note: power/finesse as a framework template (2026-08)
+
+**The five-attribute shape is not only a mnemonic — it's a mould for new subsystems.** ST and CO are the *power* and *finesse* of the body; WP and IN the power and finesse of the mind. Any power framework can be built by naming **which attribute supplies the oomph and which supplies the control**, and it will feel consistent with everything else without further invention.
+
+**Magic already has this shape**, which is worth noticing before building anything new: **Mana** gathers (how much you can raise and hold — the power side) and **Incantation** weaves (how precisely you shape it — the finesse side). The two-skill structure was arrived at for other reasons and turns out to be an instance of the template.
+
+**Psionics — currently vestigial 1986 material — is the obvious next instance**: a *mental* power framework, **WP for oomph, IN for precision**. That's most of the design decided before a word is written, which is the point of having a template at all.
+
+### The anti-pattern this is designed against
+
+**A magic system whose only variable is intensity has no craft in it.** If the lever is amplitude — say the magic word *harder* — then there is nothing to be good at, no interesting choice at the table, and no way for a clever character to beat a stronger one. It is one of the more infuriating features of the Harry Potter books, and it is a trap any power system falls into by default, because amplitude is the easiest dial to write.
+
+**The fix is to let precision substitute for power.** There should be room for a magical **fencer** or **knife-thrower** as well as for Tim the Enchanter: a caster who achieves by *placement* what another achieves by *volume*. Rather than throwing a fireball, ignite the powder in his pistol. The existing two-skill structure already permits this — a high-**Incantation**, low-**Mana** caster is exactly that character — so what's needed is mostly to **say so**, and to make sure the point economy doesn't quietly punish it.
+
+**Precision magic is knowledge-gated where brute magic is power-gated**, and that is what keeps it honest. To ignite the powder you must know the powder is there and how it behaves — a **Field of Knowledge**, bought in years. So the fencer-mage pays too, in a different currency, and **IN** acquires a third job consistent with its other two: it drives **learning rate**, it accumulates **fields**, and it supplies **precision**. The IN build knows more and places better; the WP build simply has more to spend. Both are real characters.
+
+> ⚠ **The balance risk, and it is the serious one.** Precision magic is potentially *far* more efficient — a trivial amount of energy producing a decisive outcome — and if it is priced by the energy involved it becomes strictly better than brute force, at which point the fencer isn't an alternative, it's the answer. The keystone applies exactly as written: **price the capability, not its costume.** Igniting a pistol's charge is priced by what it *achieves* — killing an armed man at range — not by the joules. Get this wrong and the anti-pattern simply inverts: instead of "say it harder", the game becomes "always find the clever tiny effect."
 
 ## Design note: Coordination — why DX + AG collapse, and where collapsing stops (2026-08)
 
@@ -459,6 +481,20 @@ A **configuration page** lets the reader/GM pick a *setting* and have the rules,
 - **Divine Magic** — none · rare-weak · common-weak · common.
 
 **Data-model implication (the load-bearing part):** this generalizes the flat genre `tags` we have now. Genre tags (`standard/ancient/modern/sf/fantasy`) answer *"does this fit the vibe?"*; the axes answer *"can this exist here?"* — a different question, so **keep them orthogonal**. Each entity gains a **capability requirement**: a threshold on the relevant axis (a fireball needs Magic ≥ some level; a laser needs Tech ≥ some level; a psi power needs Psionics ≥ rare). The rare/weak/common "strength" words are just ordinal levels on an axis, and a requirement is a threshold — which is what finally gives those strength words a principled home.
+
+**The axis also sets the character-side baseline, and that is what decides the carrier.** An axis level says what an *ordinary person in this setting* has — and **access above or below that baseline is a perk, a quirk, or a flaw**, by exactly the rule that governs every other quirk: *a quirk is a deviation from the local default.* The setting supplies the default. The capability itself never changes carrier; its **distance from the baseline** does.
+
+| Setting | Axis level | Baseline access | So having *more* is… | And having *less* is… |
+|---|---|---|---|---|
+| **Norstrilia** | Psionics: common | everyone is telepathic | ordinary skill, not a carrier | a **flaw** — you are the deaf one |
+| **Earthsea** | Magic: rare | none | any access at all is a **quirk**; full access a **perk** | nothing — it's the default |
+| **Modern realistic** | Magic: none | none | — | — |
+
+This is the **same rule as the myopia case**: spectacles make short sight a quirk, their absence makes it a flaw, and the condition never changed. Here the setting dial does what the technology did. One rule, two applications — which is the test that it is a real rule.
+
+**The expressive gain is partial access.** Today the entry point is a single Intrinsic factor — *Magical / Mystic / Psionic / Ch'i Talent* — and it is **binary**: you have the talent or you don't. A quirk family gives a ladder instead: **no access · a trickle · full**, with the baseline sitting wherever the axis puts it. A world where most people can light a candle and nobody can do more is now describable, and it wasn't.
+
+> ⚠ **Don't let this become a tax.** In a high-magic setting, access is *free* — it's the baseline — and the interesting variation is **skill**, not access. Charging everyone a slot for the thing everyone has is the failure mode, and it's the same error as a flaw that doesn't bite.
 
 **Rendering is context-dependent, not one switch:** in **rules prose**, an off subsystem shows a **placeholder** ("Magic is not available in this setting") — the reader should know the subsystem exists and is disabled, and can flip it on. In **tables and the character sheet**, unavailable content is **filtered out silently** — don't clutter with options you can't take.
 
@@ -622,7 +658,7 @@ And the QR bands do the rest of the work: at SC 75 the bare-success band (QR4) i
 
 **The point economy has shrunk and must be re-tuned by play.** The streamlining cuts how much there is to buy:
 
-- **5 attributes instead of 9** → only ~5/9 (≈56%) as many attribute sinks.
+- **5 attributes instead of 9** → ~56% as many attribute *sinks*; and, more importantly, **36 → 10 pairwise tradeoffs** for the player to weigh (`n(n−1)/2`), a 3.6× cut in the actual work of building a character.
 - **Fewer skills (heavy folding) + cheaper skills** → the skill point-sink drops by **at least ~50%**.
 - **No familiarities except LTFs and temporary non-familiarities** → the old **E (environment) and G (gravity) familiarity** point-sinks are gone entirely (a sink few players ever bothered with). LTFs (+1 specializations) are now the *only* familiarity you spend points on.
 - **Many minor point-buys are now Quirks (or similar)** — handedness, ambidexterity, small edges, unique insights — so they're free/self-canceling color rather than purchases. Simpler, and one more sink removed.
