@@ -15,7 +15,7 @@ To resolve a task, judge how hard *this particular* attempt is as an **ease-fact
 > ### SC = Score × Ease Factor
 > Roll **D100**. Roll ≤ your Success Chance and you succeed.
 
-*Amy fires a stun pistol at a suspect. Firearms BEF 5; the suspect is 12 m off (−2 range) and moving (−2), but she braced (+1), aimed (+1), and the pistol is well-balanced (+1). EF = 5 − 2 − 2 + 1 + 1 + 1 = **4**. Her Firearms Score is 17, so SC = 4 × 17 = **68%**. That is about as complicated as it ever gets.*
+*Amy fires a stun pistol at a suspect. Firearms BEF 4; the suspect is 12 m off (−2 range) and moving (−2), but she braced (+1), took a bead and got it (+2), and the pistol is well-balanced (+1). EF = 4 − 2 − 2 + 1 + 2 + 1 = **4**. Her Firearms Score is 17, so SC = 4 × 17 = **68%**. That is about as complicated as it ever gets.*
 
 ## How ease factors work
 

@@ -385,6 +385,10 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 - **A bonus is claimed.** The person who benefits is the person who has to remember it — the only bookkeeping arrangement that has ever reliably worked. And a *forgotten* bonus is self-correcting, because the player notices and says so.
 - **A penalty must be imposed.** The GM has to remember it *and* be the one to apply it, against a player who would rather they didn't. A forgotten penalty is **silent and permanent**: it makes everyone quietly better than they should be, and nobody at the table ever finds out.
 
+**Applied, and it also removed a divergence rather than creating one.** Aim was briefly put on `4 − QR` to match PM, which left it disagreeing with the One Rule's general **Build** chain (`5 − QR`). The better fix keeps **one chaining number for the whole system** and moves the *baseline* instead: **aim stays on `5 − QR`, and the aimed-attack skills — Firearms, Archery, Heavy Weapons — take a BEF of 4 rather than 5.** A rough bead (+1) then reproduces the old numbers exactly, and a good one beats them. This is the general lesson in miniature: **when a modifier is mis-framed, fix the baseline, not the modifier** — moving the modifier breaks its consistency with every other use of the same idea.
+
+*(Note the firearm's forgivingness now lives in the **skill formula** rather than the BEF, which is where it belonged: Archery is a ½-skill you spend years on, Firearms is not. That distinction survives the BEF cut untouched.)*
+
 **So set the BEF at the careless baseline** — the shooter who raises the weapon and fires — and let aiming, bracing, choosing the moment, using the right tool and taking a spotter earn their way up. **Failing to do them earns nothing, which is punishment enough.**
 
 **This is another instance of the absolute standard.** Games write "unaimed: −2" because that is how a *designer* thinks — a deviation from the ideal case — not how a *table* plays. It is par for the course, it has never been questioned, and it is wrong for a reason that has nothing to do with the numbers being wrong.

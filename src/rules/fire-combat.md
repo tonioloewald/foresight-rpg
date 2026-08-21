@@ -7,7 +7,7 @@
 
 A shot is a **Firearms** (or Archery, Heavy Weapons) roll — Score × EF, roll under — and that's the whole of it; there is no defence roll, because the target can't block the bullet. Everything interesting lives in the **Ease Factor**, and the skill's **BEF already bakes in the usual case**: a trained, calm shooter putting a round into a **static target at short range** — pistol-practice conditions. The world adds and subtracts from there.
 
-*(Which is why a firearm's BEF is **high** — a pistol is forgiving, thirty minutes' training makes you genuinely dangerous — while a bow's is not: Archery is a hard, strength-hungry ½-skill you spend years getting good at. The gun is easy to be adequate with; the bow is not.)*
+*(A firearm is still forgiving — thirty minutes' training makes you genuinely dangerous — but that shows up in the **skill formula**, not the BEF: Archery is a hard, strength-hungry ½-skill you spend years getting good at. The gun is easy to be adequate with; the bow is not.)*
 
 ## What moves the ease factor
 
@@ -26,7 +26,7 @@ Each of these is the One Rule's "challenge at a glance" made concrete for shooti
 
 ## The BEF is the careless shot, not the careful one
 
-**Set the baseline where a shooter *starts*, and let good practice earn its way up.** A firearm's BEF describes someone who raises the weapon and fires — not someone who took a bead, braced, and picked their moment. Those are **bonuses**, and they should be, because of an asymmetry that has nothing to do with the maths:
+**Set the baseline where a shooter *starts*, and let good practice earn its way up.** The aimed-attack skills — **Firearms, Archery, Heavy Weapons** — carry a **BEF of 4, one lower than the usual 5**, and that 4 describes someone who raises the weapon and fires. It is *not* someone who took a bead, braced, and picked their moment. Those are **bonuses**, and they should be, because of an asymmetry that has nothing to do with the maths:
 
 > **A player will remember a bonus for doing the sensible thing. Nobody reliably remembers a penalty for skipping it.**
 
@@ -56,24 +56,26 @@ Most shooting in a close fight isn't aimed at anyone. It's **area fire**: blind 
 
 **Aiming isn't a free action or a special case — it's a fire action that points the weapon instead of discharging it.** Roll your Firearms exactly as if shooting, against the same situational modifiers, and if you succeed the weapon is *on the target*. What the roll buys is set by how well you did it:
 
-> **Your bead = 4 − QR of your last aim.** It applies to your **next beat** — including your next *aim*.
+> **Your bead = 5 − QR of your last aim.** It applies to your **next beat** — including your next *aim*.
 
 | Your aim rolled | Your bead is now | |
 |:--:|:--:|---|
-| **QR1** | **+3** | the sight picture you dream about |
-| **QR2** | +2 | settled, breathing out |
-| **QR3** | +1 | on him |
-| **QR4** | 0 | pointed at him, and nothing more |
-| **QR7** | **−3** | aimed at the wrong place, and you don't know it |
-| **QR10** | **−6**, and **no further action of this kind this round** | lost him, fumbled the weapon, flinched into the sights |
+| **QR1** | **+4** | the sight picture you dream about |
+| **QR2** | +3 | settled, breathing out |
+| **QR3** | +2 | on him |
+| **QR4** | +1 | roughly pointed |
+| **QR7** | **−2** | aimed at the wrong place, and you don't know it |
+| **QR10** | **−5**, and **no further action of this kind this round** | lost him, fumbled the weapon, flinched into the sights |
 
-**The ceiling is the old rule's flat number.** Earlier editions handed you *taking a bead* as a flat **+3**. That +3 is now the **best** you can do rather than the default you're given — you can reach it, but you have to shoot well enough to earn it, and a merely adequate aim (QR4) leaves you exactly where you started.
+**This is the One Rule's ordinary *Build* chain**, not a special case: a prior result feeds the next at `5 − QR`. Aim is simply a Build chain you're allowed to repeat.
+
+**Where the old flat +3 went.** Earlier editions handed you *taking a bead* as a flat **+3** and left the BEF high. Now the **BEF is one lower** and the bead is earned — a rough aim gets you the old number back, and a good one beats it. Same shot, better bookkeeping (see below).
 
 **A bead is not a sticky bonus — it's a position you have to keep.** Older editions had *taking a bead* hand you a flat **+3** that sat there until you did something else. This doesn't. Your bead lasts **one beat**. Spend that beat shooting and you spend the bead; spend it aiming again and you **re-roll** — at your current bead, so a good bead makes a better one likelier. Spend it on anything else at all and the bead is gone.
 
-**That makes holding a bead an active sport, and it makes it ratchet.** Aim once for a rough +1, aim again *at* +1 and you'll likely settle to +2, again and you're at +3. The sniper who lies there breathing isn't sitting on a stale bonus; he is *doing something*, every beat, and can be interrupted at any of them.
+**That makes holding a bead an active sport, and it makes it ratchet.** Aim once for a rough +1, aim again *at* +1 and you'll likely settle to +2 or +3, again and you're at +4. The sniper who lies there breathing isn't sitting on a stale bonus; he is *doing something*, every beat, and can be interrupted at any of them.
 
-**It also caps itself, with no cap.** The ceiling is **+3**, and once you're there another aim can only hold or lose it — a QR4 drops you from +3 to nothing. So you aim until you're satisfied and then take the shot, because the next aim is pure risk. Nothing has to forbid over-aiming; the mechanic simply stops paying.
+**It also caps itself, with no cap.** The ceiling is **+4**, and once you're there another aim can only hold or lose it — a QR4 drops you from +4 to +1. So you aim until you're satisfied and then take the shot, because the next aim is pure risk. Nothing has to forbid over-aiming; the mechanic simply stops paying.
 
 **Recoil lands here, where it belongs.** Firing spends the bead, and re-acquiring is an aim taken *under recoil* — an ordinary EF penalty, larger on a heavier weapon. Rate of fire then regulates itself physically: a battle rifle's second aimed shot is genuinely harder than a pistol's, with no rule saying "heavy weapons are slower." A **moving** target works the same way — tracking him is a penalty on every aim, so a bead on a runner is one you have to keep buying.
 

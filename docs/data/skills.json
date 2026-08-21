@@ -104,7 +104,7 @@
     "half": false,
     "limit": 1,
     "cost": 2,
-    "bef": 5,
+    "bef": 4,
     "tags": [
       "modern",
       "sf"
@@ -121,7 +121,7 @@
     "half": true,
     "limit": 1.5,
     "cost": 1,
-    "bef": 5,
+    "bef": 4,
     "tags": [
       "ancient",
       "fantasy"
@@ -138,7 +138,7 @@
     "half": false,
     "limit": 1,
     "cost": 1,
-    "bef": 5,
+    "bef": 4,
     "tags": [
       "modern",
       "sf"

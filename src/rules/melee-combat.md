@@ -60,6 +60,26 @@ So decide which reality your table is playing in, and read *dodge* accordingly:
 
 Either is legitimate — ForeSight colours no setting. Just tell the table which one, and modify the dodge to match.
 
+## Reach: every weapon has a range it wants
+
+**One weapon property replaces a table of modifiers.** A melee weapon is happiest at exactly one of three distances:
+
+| Its range | Weapons |
+|---|---|
+| **Reach** | pike, halberd, spear, quarterstaff, two-handed sword |
+| **Normal** | rapier, longsword, battleaxe, mace |
+| **Close** | dagger, cestus, fists, a bottle |
+
+- **At your weapon's own range: +1.** You are fighting the way the thing was designed to be fought with.
+- **One band off: −2.** A longsword in a knife-fight; a dagger against someone at sword's length.
+- **Two bands off: −4.** A two-handed sword in a grapple — you *can* club with the hilt, but it is a badly balanced weapon held by the wrong end.
+
+**Both fighters are on the same range, and they rarely want the same one** — which is the whole tactical engine. The spearman wants you out there; the knife-fighter wants to be inside your arms. **Only one of them can be happy at a time**, so a melee is a running argument about distance, and the loser of that argument is either fighting at −2 or spending beats fixing it.
+
+**Changing range is a combat move: a beat, and a Coordination roll** (see *Footwork*, below). Against someone actively keeping you out — or dragging you in — it's opposed. So closing on a pikeman is a real, rollable, failable thing, which is exactly how it looks: three men with spears are a problem you solve with a plan, not by walking up to them.
+
+*This is why a knife is a terrifying weapon in a lift and a joke in a courtyard, without a single special rule about lifts or courtyards.*
+
 ## Footwork: giving ground, circling, and going over the furniture
 
 A melee is not two people standing still. Fighters **circle, close, and give ground** constantly — and every bit of that is [movement](/intense-action/), which means **Coordination**, which means it can go wrong.
@@ -69,6 +89,7 @@ A melee is not two people standing still. Fighters **circle, close, and give gro
 **Now it does, and it costs nothing to run.** On a clear floor the ease factor is high and nobody rolls. It bites exactly where it should:
 
 - **Giving ground under pressure** — you are retreating while someone actively works to put you down, so the EF is poor. This is where the klutz goes over.
+- **Closing or opening to your weapon's range** — the commonest reason to move in a fight (see *Reach*, above), and the one your opponent is actively resisting.
 - **Fighting on bad footing** — rubble, stairs, a wet deck, a room full of upturned chairs, mud, a slope.
 - **Disengaging from a committed opponent** — turning your back is its own problem; doing it *quickly* is a Coordination task at a penalty.
 
