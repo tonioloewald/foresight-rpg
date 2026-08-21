@@ -206,6 +206,18 @@ The evidence that this is really true, rather than merely tidy: **non-specialist
 
 **The offset exists to make the character right, not to make them whole.**
 
+**And the same logic runs in reverse, which completes the pair.** A flaw redirects capacity *into* the space it leaves open; a **perk suppresses capacity it made unnecessary**. Someone strikingly good-looking may simply be a few skills short, because a range of problems were solved for them before they had to learn anything — the traffic stopped, so they never learned to cross the road carefully. That is not a penalty imposed on the perk; it is a competence that never got bought, because nothing ever forced it.
+
+**General form: a reliably available capability atrophies its mundane substitute.** Looks are only the obvious case. Someone who levitates never learned to climb; someone rich never learned to haggle; someone with perfect recall never learned to take notes. This is the **same lens the magic rules already use** — *benchmark against the mundane, and judge an effect by what the world becomes if it is reliable*. Reliability is precisely what suppresses the ordinary skill, whether the source is a spell or a face.
+
+**It is non-fungible in the same way, and therefore equally safe.** The player does not get to nominate which competences they skipped — the perk determines them. You cannot take *Gorgeous* and elect to have never learned underwater basket weaving; you skipped the things that stopped being your problem. And it is **not a discount**: the perk still costs full price. The gaps are a consequence, not a rebate.
+
+**Mechanically it needs no new rule** — it is the existing permission to *sell off free-package skills a character plausibly lacks*, which until now had no reason attached to it. This is the reason. Same currency as everything else here: time, and what it went into.
+
+> **Two guards.** It must not harden into *beautiful people are stupid* — a tired trope, and false. And it must stay an **invitation, never a tax**: the player chooses a specific, characterful gap because it makes the character real, and the GM never levies one. Keep the gaps **narrow and non-crippling**; anything that genuinely impairs is a **flaw**, and should be written as one.
+
+The payoff is that these gaps are **story engines rather than penalties**. A gorgeous character who never learned to cross a street safely is more fun at the table — and more *legible* — than the same character carrying a −1 somewhere.
+
 **We do not adopt disadvantages as a point source** — the GURPS / HERO pattern, where drawbacks fund advantages. A drawback may carry *some minor offset*, but never enough to be worth shopping for. A disadvantage economy turns **building an interesting character into a minimax exercise**: you take blindness to fund telepathy, then see through everyone else's eyes, and the blindness is an accounting entry rather than a fact about the character. Choose to play someone blind **because it is interesting**; the system should neither bill you for it nor pay you a windfall.
 
 **This is empirical, not fastidious.** Every game that adopts the economy turns it into a pathology. ForeSight itself tried it long ago and the result was worse than the commercial examples — precisely *because* it was defined in the most general and powerful form available, which is the natural thing to do and the thing that maximises the exploit surface. Generality is a virtue nearly everywhere in this system; here it is the failure mode.
