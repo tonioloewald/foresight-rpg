@@ -175,6 +175,20 @@ The same question keeps arriving in different costumes — *shouldn't X be its o
 
 The evidence that this is really true, rather than merely tidy: **non-specialists have been talked through procedures they had no training for**, in real time, by someone who has the knowledge but not the hands. That isolates the variable exactly. Same hands, no knowledge, task impossible; supply the knowledge from outside and the task becomes possible. If the manual skill and the knowledge weren't genuinely separable, remote guidance could not work at all — and the vivid limiting case is someone doing it to themselves. This also explains the ForeSight structure that has been there since 1986: a great many skills are **Skill × Field** pairs, and it's why Repair is a *diagnose-then-fix* chain, with the diagnosis QR feeding the fix.
 
+> ### The governing rule for perks, quirks and flaws
+>
+> **The purpose of a quirk — and this includes perks and flaws — is to help *describe a character*. At best it is a tradeoff. It is never a currency to minimax.**
+>
+> Everything else in this section is a corollary, and any future rule that contradicts this one is wrong no matter how well it prices out:
+>
+> - **Drawbacks fund nothing.** The moment a downside pays, describing a character becomes shopping.
+> - **Compensation must be non-fungible** — redirected attention, never points, because points don't remember where they came from.
+> - **Would the drawback actually bite?** If no, it isn't a quirk; it's a perk wearing one, and it should be paid for.
+> - **Would anyone take this deal on the merits?** If yes, the offset is too big.
+> - **A family is territory, not price** — what a trait touches is a separate question from what it costs.
+>
+> The test to apply to any proposed trait is simply: *does this make the character easier to picture?* If instead it makes the character sheet easier to optimize, it has failed, and no amount of careful costing rescues it.
+
 **So there are six downward carriers, not two** — each *narrower* than a new axis, but they are not interchangeable, and they differ most importantly in **permanence**:
 
 | Carrier | What it says | Permanence | Cost shape |
@@ -258,7 +272,9 @@ The rule for intermittent quirks: **they must hang off a condition already in pl
 
 **A family is defined by its territory, not by how you pay for it — so one family spans perks, quirks and flaws.** *Endurance* holds a **perk** (you are built like a Kalenjin distance runner), several **quirks** (sprinter versus marathoner), and a **flaw** (a condition that guts your endurance across the board). They are one family because they all modify the same rolls and therefore all need the same combine rule; they are different carriers because they are paid for differently. Conflating the two questions — *what does it touch?* and *what does it cost?* — is what makes other systems' trait lists unnavigable.
 
-> **A note on the word.** In conversation "quirk" gets used loosely for the whole spectrum. In this document it is narrow: **quirk = small and two-sided.** Great genes are a **perk**; blindness is a **flaw**. When the distinction doesn't matter, say **trait**.
+> **A note on the word.** "Quirk" is used two ways, both correct in context: loosely, as the umbrella for the whole spectrum (as in the governing rule above), and narrowly, as one of the three carriers — **small and two-sided**, as against a **perk** (great genes) or a **flaw** (blindness). This document uses the narrow sense wherever the carrier matters, and **trait** where it doesn't.
+>
+> ⚠ **Terminology to settle for the book:** whether the chapter is *Quirks*, with perks and flaws as its subtypes — matching how the designer actually talks and how players will ask for it — or whether the three are presented as siblings under *Traits*, matching ForePlay's Perks/Flaws/Quirks tables. Recommend the former: readers will look up "quirks", and the umbrella sense is the natural one. Related to the open *talent vs perk* question below; settle both at once.
 
 **Default: within a family, traits do not stack — best applicable only.** This holds across carriers: a perk and a quirk in the same family that fire for the same reason still give you only the better one. The same rule as tools and armor, and for the same reason: a +1 EF is worth roughly a whole Score in the sweet spot, so anything additive dwarfs the skill it modifies. 
 **Exception: family members that aren't on the same axis do stack.** *Gorgeous* and *Scarred* are both Appearance, but they are not two ends of one dial to be netted off — they fire on different audiences and different readings, and a face can genuinely be both. The test is the one the combine rule is really asking: **do these two fire on this roll for the same reason?** Same reason → take the best. Different reasons → both apply. That question is answerable in a second, which is the only standard that matters.
