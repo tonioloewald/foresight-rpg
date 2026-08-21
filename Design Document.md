@@ -46,7 +46,7 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 5. **Delete gravity/environment/temperature familiarity tables.** G/E/T become flagship *examples* of long-term familiarity and unfamiliarity, not subsystems.
 
-6. **Attribute consolidation: nine → seven. Final set: ST, EN, CO, IN, PC, WP, AP.**
+6. **Attribute consolidation: nine → five. Final set: ST, CO, IN, PC, WP.** *(Was seven — EN and AP left in 2026-08; see "The five" below.)*
 
    DX + AG merge into **Coordination**; remarkable agility or prestidigitation become talents. **EM folds into PC**, with empathy variation as a quirk — empathy is essentially perception of people, possibly handicapped (or sharpened) by neurotype, so PC is the right default and a quirk models the deviation (the way exceptional eyesight or deafness sit on top of PC). **AP stays** *(— superseded 2026-08; AP becomes a quirk family, see "Quirk families" below. The reasoning below is preserved because its premise survives: looks matter. Its conclusion — that they are therefore one number — does not.)* The idea that looks aren't important is a conceit; a good-looking person can do things an ugly person can't, just as surely as an agile or smart person can. Pretending otherwise violates the game's founding principle (no truths denied by the system).
 
@@ -122,6 +122,8 @@ This converges with the architecture: the delivery model already requires **each
 ## Worked case: EN stays separate — the test refusing a merge (2026-08)
 
 A tester proposed folding **EN into ST and WP**. Rejected, and it's worth recording because every other worked case in this document *merges* something — this one shows the same test cutting the other way, which is evidence it's a test rather than a rationalisation for simplification.
+
+> **Superseded in scope, 2026-08 — read this carefully, because it was not simply reversed.** The case below defeats **merging EN into ST**, and it still does: strength and endurance genuinely diverge, and that divergence is the norm. What actually happened is a **redistribution, not a merge.** EN's *rolls* went to **WP** (exhaustion, Pain Resistance, convalescence, stun recovery), its *physiological robustness* went to **ST** (poison, disease), and its *specificity* went to the **Endurance quirk family**. Nothing below is retracted; it simply answered a narrower question than the one that was finally asked. See "The five".
 
 **1 · It fails the two-way transfer test, in both directions and commonly.** Elite endurance athletes are frequently not strong; elite strength athletes frequently have mediocre endurance; at the extremes the training is antagonistic. And the decisive point: **this divergence is the norm, not a pathology.** The whole argument for merging DX+AG was that deft-but-clumsy is the *exception* — so the same reasoning that merged those keeps ST and EN apart. Independent capability → attribute. Deviation from a correlated default → quirk. EN is plainly the former.
 
@@ -294,7 +296,19 @@ The rule for intermittent quirks: **they must hang off a condition already in pl
 >
 > The founding principle that motivated keeping AP — **looks matter, and a system that denies it is lying** — is not abandoned here; it is better served. The false claim was never "looks matter". It was "looks are one number."
 
-**Worked family: Endurance — and why it does *not* follow AP out of the attribute list.** EN and AP look like the same case (both drive few or no skills; both bundle several things under one number) and they resolve differently, which makes the pair a useful calibration of the tests.
+### The five: ST, CO, IN, PC, WP
+
+**Final set, 2026-08.** DX+AG merged into CO, EM folded into PC, and **EN and AP left the attribute list entirely** to become quirk families. Nine down to five.
+
+**The set has a shape, and the shape is the argument for stopping here.** **ST** and **CO** are the *power* and *finesse* of the body; **WP** and **IN** are the power and finesse of the mind; **PC** is the feedback loop between mind, body and surroundings. That is a structure a reader can hold in their head, which is the whole point of a game you can run from memory — and it is the first time the attribute list has had one. (It is a *presentation* virtue rather than evidence: the structure was noticed after the five were chosen, not derived before. But given two defensible sets, take the memorable one.)
+
+**Where EN's work went — and why the move was nearly free.** Exhaustion, Pain Resistance, convalescence and shaking off a stun are now **WP**. The rules had been writing those as *"EN or WP"* for years, which was the split telling us it wasn't carrying weight: if two attributes are interchangeable at every point of use, they are one attribute wearing two labels. Pushing through exhaustion really is a matter of refusing to stop. Purely **physiological** resistance — poison, venom, disease — went to **ST**, the body's robustness, where willpower plainly doesn't help. Endurance quirks supply the situational modifiers throughout.
+
+**This rescues WP rather than diminishing it.** WP was itself a deletion candidate on the same evidence that indicted EN — it drove no skill formulas, and designs didn't differ on it. It now gates a large share of core resolution, which settles the open question of whether EN's departure should take WP with it: **decisively not.** The two had identical profiles only because neither was doing anything; give one of them the work and the tie breaks.
+
+> ⚠ **Watch for leverage concentration** — the standing caution from the Coordination note. **CO** gates pre-emption plus everything DX and AG separately gated; **WP** now gates every exhaustion check, Pain Resistance, and convalescence. Two of five attributes carry a lot. The mitigation for WP is that its load is almost entirely **defensive** — maxing it buys durability, not capability — so it should not dominate the way an offensive concentration would. **Verify during point-economy playtesting.**
+
+**Worked family: Endurance — and why it does *not* follow AP out of the attribute list.** *(Written before the decision above; the conclusion did not survive, but the reasoning that produced the AP/EN distinction did, so it is kept.)* EN and AP look like the same case (both drive few or no skills; both bundle several things under one number) and they resolve differently, which makes the pair a useful calibration of the tests.
 
 EN fails the *multi-dimensionality* half: it currently bundles at least three things that correlate poorly — **sustained output** (can you march all day), **resistance to insult** (disease, poison, cold, hunger), and **recovery rate** (how fast you clear an exhaustion level). The unfit man with an iron gut and the marathoner who catches every cold are both ordinary. So far, this is the AP complaint.
 
@@ -608,7 +622,7 @@ And the QR bands do the rest of the work: at SC 75 the bare-success band (QR4) i
 
 **The point economy has shrunk and must be re-tuned by play.** The streamlining cuts how much there is to buy:
 
-- **7 attributes instead of 9** → only ~7/9 (≈78%) as many attribute sinks.
+- **5 attributes instead of 9** → only ~5/9 (≈56%) as many attribute sinks.
 - **Fewer skills (heavy folding) + cheaper skills** → the skill point-sink drops by **at least ~50%**.
 - **No familiarities except LTFs and temporary non-familiarities** → the old **E (environment) and G (gravity) familiarity** point-sinks are gone entirely (a sink few players ever bothered with). LTFs (+1 specializations) are now the *only* familiarity you spend points on.
 - **Many minor point-buys are now Quirks (or similar)** — handedness, ambidexterity, small edges, unique insights — so they're free/self-canceling color rather than purchases. Simpler, and one more sink removed.

@@ -9,9 +9,9 @@
 
 ## Attributes
 
-| ST | EN | CO | IN | PC | WP | AP |
-|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| __ | __ | __ | __ | __ | __ | __ |
+| ST | CO | IN | PC | WP |
+|:--:|:--:|:--:|:--:|:--:|
+| __ | __ | __ | __ | __ |
 
 *Derived:* Unarmed DC ____ · Carry ____  (from ST)
 
@@ -21,7 +21,7 @@
 
 *Score = formula + level. SC = Score × EF (BEF ± situation). Max level = best constituent attribute × Limit (1, or 1.5 for ½ skills).*
 
-*Pain Resistance = EN or WP · Stamina = EN — not skills, roll the attribute.*
+*Pain Resistance = WP · Stamina = WP — not skills, roll the attribute. Endurance quirks modify both.*
 
 | Skill | Formula | Lvl | **Score** | BEF |
 |---|---|:--:|:--:|:--:|

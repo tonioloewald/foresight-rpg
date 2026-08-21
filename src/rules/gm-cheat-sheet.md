@@ -53,9 +53,9 @@
 
 ## Wounds, Stun & Exhaustion
 
-**Wound level** 0→8(dead); **−(level) to everything**. New damage adds on. Pain Resistance (EN *or* WP) on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO).
-**Convalescence:** roll EN/WP at the level's interval (Light daily, Med 5d, Heavy 20d, Critical+ every 30 min/5 min/min) — success drops a level, QR10 raises; worst-level penalty until healed/treated.
+**Wound level** 0→8(dead); **−(level) to everything**. New damage adds on. Pain Resistance (WP) on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO).
+**Convalescence:** roll WP at the level's interval (Light daily, Med 5d, Heavy 20d, Critical+ every 30 min/5 min/min) — success drops a level, QR10 raises; worst-level penalty until healed/treated.
 
-**Exhaustion** (fatigue, mana, etc.): hard exertion → EN/WP check, fail = **+1 level**. **Full** penalty to its own domain, **half** to all else, tracks **stack** (round half up). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.
+**Exhaustion** (fatigue, mana, etc.): hard exertion → WP check, fail = **+1 level**. **Full** penalty to its own domain, **half** to all else, tracks **stack** (round half up). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.
 
 **Power pools** (Mana/Piety/Spirit): gather roll → success = free · marginal/fail = +1 exhaustion · QR10 = fizzle + exhaustion. **Push it:** take a level for a one-off **+4**.

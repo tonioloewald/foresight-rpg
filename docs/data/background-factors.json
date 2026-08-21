@@ -1,28 +1,433 @@
 [
-  { "name": "Human",                       "category": "Species",   "exclusive": "species", "once": true,  "slot": "free", "grant": 0,  "tags": ["standard"],          "attrs": {},                              "skills": {},                                              "fields": [],                                                                          "confers": "—",                                  "note": "adaptable baseline; costs no slot" },
-  { "name": "Dwarf",                       "category": "Species",   "exclusive": "species", "once": true,  "slot": "free", "grant": 0,  "tags": ["fantasy"],           "attrs": {"EN":1,"ST":1,"CO":-1,"AP":-1}, "skills": {},                                              "fields": [],                                                                          "confers": "EN +1, ST +1, CO −1, AP −1",         "note": "tough, dour; traits balance — free" },
-  { "name": "Halfling",                    "category": "Species",   "exclusive": "species", "once": true,  "slot": "free", "grant": 0,  "tags": ["fantasy"],           "attrs": {"CO":1,"ST":-1},                "skills": {"Stealth":1},                                   "fields": [],                                                                          "confers": "CO +1, ST −1; Stealth 1",            "note": "small, deft; balanced — free" },
-  { "name": "High Elf",                    "category": "Species",   "exclusive": "species", "once": true,  "slot": "1",    "grant": 0,  "tags": ["fantasy"],           "attrs": {"CO":1,"IN":1,"PC":1},          "skills": {},                                              "fields": [],                                                                          "confers": "CO +1, IN +1, PC +1",                "note": "graceful & keen — uses a slot" },
-
-  { "name": "Comfortable Childhood",       "category": "Origin",    "exclusive": "origin",  "once": false, "slot": "1",    "grant": 20, "tags": ["standard"],          "attrs": {},                              "skills": {},                                              "fields": [],                                                                          "confers": "20 build points",                    "note": "stable, middle-class upbringing" },
-  { "name": "Privileged Childhood",        "category": "Origin",    "exclusive": "origin",  "once": false, "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"AP":1},                        "skills": {},                                              "fields": [{"name":"Etiquette","years":1}],                                            "confers": "AP +1; Etiquette 1yr",               "note": "wealth & polish" },
-  { "name": "Abandoned & Self-Sufficient", "category": "Origin",    "exclusive": "origin",  "once": false, "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"WP":1},                        "skills": {"Stealth":2},                                   "fields": [],                                                                          "confers": "WP +1; Stealth 2",                   "note": "fending for yourself young" },
-  { "name": "Trained from Childhood",      "category": "Origin",    "exclusive": "origin",  "once": true,  "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {},                              "skills": {"Melee":3},                                     "fields": [],                                                                          "confers": "a focus skill +3 (swap as needed)",  "note": "single-minded focus" },
-
-  { "name": "College / Educated",          "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["modern"],            "attrs": {},                              "skills": {"Theory":2},                                    "fields": [{"name":"Psychology","years":1},{"name":"Accounting","years":1},{"name":"Business","years":1}], "confers": "Theory 2; Psychology, Accounting, Business 1yr", "note": "a degree — skills + fields, swappable" },
-  { "name": "Apprentice",                  "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {},                              "skills": {"Repair":3},                                    "fields": [{"name":"Electrical","years":1},{"name":"Plumbing","years":1},{"name":"Carpentry","years":1}], "confers": "Repair 3; Electrical, Plumbing, Carpentry 1yr", "note": "a trade — swap the fields" },
-  { "name": "Active Duty",                 "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["modern","sf"],       "attrs": {"EN":1},                        "skills": {"Firearms":3,"Melee":1,"Heavy Weapons":1,"Athletics":1}, "fields": [],                                                          "confers": "EN +1; Firearms 3, Melee 1, Heavy Weapons 1, Athletics 1", "note": "military/police; repeatable" },
-  { "name": "School of Hard Knocks",       "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"EN":1},                        "skills": {"Melee":2,"Stealth":1},                         "fields": [],                                                                          "confers": "EN +1; Melee 2, Stealth 1",          "note": "prison, the streets, the ring" },
-  { "name": "Mooch",                       "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {},                              "skills": {"Charm":2,"Confidence":1},                      "fields": [],                                                                          "confers": "Charm 2, Confidence 1",              "note": "lived off others' goodwill" },
-  { "name": "Dropout",                     "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 12, "tags": ["modern"],            "attrs": {},                              "skills": {},                                              "fields": [],                                                                          "confers": "12 build points",                    "note": "started a path, left it — loose ends" },
-  { "name": "Homeless",                    "category": "General",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"EN":1},                        "skills": {"Stealth":1},                                   "fields": [],                                                                          "confers": "EN +1; Stealth 1",                   "note": "survived on the margins" },
-
-  { "name": "Mysterious Mentor",           "category": "Unusual",   "exclusive": null,      "once": true,  "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {},                              "skills": {},                                              "fields": [],                                                                          "confers": "a unique insight or rare access",    "note": "taken under a wise stranger's wing" },
-  { "name": "Trauma Survivor",             "category": "Unusual",   "exclusive": null,      "once": false, "slot": "1",    "grant": 10, "tags": ["standard"],          "attrs": {"WP":1},                        "skills": {},                                              "fields": [],                                                                          "confers": "WP +1; 10 build points",             "note": "something shattering; take a matching quirk" },
-  { "name": "Magical Apprenticeship",      "category": "Unusual",   "exclusive": null,      "once": false, "slot": "1",    "grant": 0,  "tags": ["fantasy"],           "attrs": {},                              "skills": {},                                              "fields": [],                                                                          "confers": "entry to magic (restrictions apply)","note": "see Magic chapter" },
-
-  { "name": "Natural Athlete",             "category": "Intrinsic", "exclusive": null,      "once": true,  "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"ST":1,"EN":1,"CO":1},          "skills": {},                                              "fields": [],                                                                          "confers": "ST +1, EN +1, CO +1",                "note": "effortless physicality" },
-  { "name": "Gifted",                      "category": "Intrinsic", "exclusive": null,      "once": true,  "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"IN":1,"PC":1,"WP":1},          "skills": {},                                              "fields": [],                                                                          "confers": "IN +1, PC +1, WP +1",                "note": "quick, sharp, hard to rattle" },
-  { "name": "Artistic",                    "category": "Intrinsic", "exclusive": null,      "once": true,  "slot": "1",    "grant": 0,  "tags": ["standard"],          "attrs": {"CO":1,"PC":1,"AP":1},          "skills": {},                                              "fields": [],                                                                          "confers": "CO +1, PC +1, AP +1",                "note": "the maker's eye, hand, and presence" },
-  { "name": "Magical Talent",              "category": "Intrinsic", "exclusive": null,      "once": true,  "slot": "1",    "grant": 0,  "tags": ["fantasy"],           "attrs": {},                              "skills": {},                                              "fields": [],                                                                          "confers": "unlocks Casting & the Mana pool",    "note": "see Magic chapter" }
+  {
+    "name": "Human",
+    "category": "Species",
+    "exclusive": "species",
+    "once": true,
+    "slot": "free",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [],
+    "confers": "—",
+    "note": "adaptable baseline; costs no slot"
+  },
+  {
+    "name": "Dwarf",
+    "category": "Species",
+    "exclusive": "species",
+    "once": true,
+    "slot": "free",
+    "grant": 0,
+    "tags": [
+      "fantasy"
+    ],
+    "attrs": {
+      "ST": 1,
+      "CO": -1
+    },
+    "skills": {},
+    "fields": [],
+    "confers": "ST +1, CO −1; Hardy (Endurance), Plain (Appearance)",
+    "note": "tough, dour; traits balance — free"
+  },
+  {
+    "name": "Halfling",
+    "category": "Species",
+    "exclusive": "species",
+    "once": true,
+    "slot": "free",
+    "grant": 0,
+    "tags": [
+      "fantasy"
+    ],
+    "attrs": {
+      "CO": 1,
+      "ST": -1
+    },
+    "skills": {
+      "Stealth": 1
+    },
+    "fields": [],
+    "confers": "CO +1, ST −1; Stealth 1",
+    "note": "small, deft; balanced — free"
+  },
+  {
+    "name": "High Elf",
+    "category": "Species",
+    "exclusive": "species",
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "fantasy"
+    ],
+    "attrs": {
+      "CO": 1,
+      "IN": 1,
+      "PC": 1
+    },
+    "skills": {},
+    "fields": [],
+    "confers": "CO +1, IN +1, PC +1",
+    "note": "graceful & keen — uses a slot"
+  },
+  {
+    "name": "Comfortable Childhood",
+    "category": "Origin",
+    "exclusive": "origin",
+    "once": false,
+    "slot": "1",
+    "grant": 20,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [],
+    "confers": "20 build points",
+    "note": "stable, middle-class upbringing"
+  },
+  {
+    "name": "Privileged Childhood",
+    "category": "Origin",
+    "exclusive": "origin",
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [
+      {
+        "name": "Etiquette",
+        "years": 1
+      }
+    ],
+    "confers": "Well-turned-out (Appearance); Etiquette 1yr",
+    "note": "wealth & polish"
+  },
+  {
+    "name": "Abandoned & Self-Sufficient",
+    "category": "Origin",
+    "exclusive": "origin",
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 1
+    },
+    "skills": {
+      "Stealth": 2
+    },
+    "fields": [],
+    "confers": "WP +1; Stealth 2",
+    "note": "fending for yourself young"
+  },
+  {
+    "name": "Trained from Childhood",
+    "category": "Origin",
+    "exclusive": "origin",
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {
+      "Melee": 3
+    },
+    "fields": [],
+    "confers": "a focus skill +3 (swap as needed)",
+    "note": "single-minded focus"
+  },
+  {
+    "name": "College / Educated",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "modern"
+    ],
+    "attrs": {},
+    "skills": {
+      "Theory": 2
+    },
+    "fields": [
+      {
+        "name": "Psychology",
+        "years": 1
+      },
+      {
+        "name": "Accounting",
+        "years": 1
+      },
+      {
+        "name": "Business",
+        "years": 1
+      }
+    ],
+    "confers": "Theory 2; Psychology, Accounting, Business 1yr",
+    "note": "a degree — skills + fields, swappable"
+  },
+  {
+    "name": "Apprentice",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {
+      "Repair": 3
+    },
+    "fields": [
+      {
+        "name": "Electrical",
+        "years": 1
+      },
+      {
+        "name": "Plumbing",
+        "years": 1
+      },
+      {
+        "name": "Carpentry",
+        "years": 1
+      }
+    ],
+    "confers": "Repair 3; Electrical, Plumbing, Carpentry 1yr",
+    "note": "a trade — swap the fields"
+  },
+  {
+    "name": "Active Duty",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "modern",
+      "sf"
+    ],
+    "attrs": {},
+    "skills": {
+      "Firearms": 3,
+      "Melee": 1,
+      "Heavy Weapons": 1,
+      "Athletics": 1
+    },
+    "fields": [],
+    "confers": "Conditioned (Endurance); Firearms 3, Melee 1, Heavy Weapons 1, Athletics 1",
+    "note": "military/police; repeatable"
+  },
+  {
+    "name": "School of Hard Knocks",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {
+      "Melee": 2,
+      "Stealth": 1
+    },
+    "fields": [],
+    "confers": "Hardened (Endurance); Melee 2, Stealth 1",
+    "note": "prison, the streets, the ring"
+  },
+  {
+    "name": "Mooch",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {
+      "Charm": 2,
+      "Confidence": 1
+    },
+    "fields": [],
+    "confers": "Charm 2, Confidence 1",
+    "note": "lived off others' goodwill"
+  },
+  {
+    "name": "Dropout",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 12,
+    "tags": [
+      "modern"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [],
+    "confers": "12 build points",
+    "note": "started a path, left it — loose ends"
+  },
+  {
+    "name": "Homeless",
+    "category": "General",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {
+      "Stealth": 1
+    },
+    "fields": [],
+    "confers": "Weathered (Endurance); Stealth 1",
+    "note": "survived on the margins"
+  },
+  {
+    "name": "Mysterious Mentor",
+    "category": "Unusual",
+    "exclusive": null,
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [],
+    "confers": "a unique insight or rare access",
+    "note": "taken under a wise stranger's wing"
+  },
+  {
+    "name": "Trauma Survivor",
+    "category": "Unusual",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 10,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 1
+    },
+    "skills": {},
+    "fields": [],
+    "confers": "WP +1; 10 build points",
+    "note": "something shattering; take a matching quirk"
+  },
+  {
+    "name": "Magical Apprenticeship",
+    "category": "Unusual",
+    "exclusive": null,
+    "once": false,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "fantasy"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [],
+    "confers": "entry to magic (restrictions apply)",
+    "note": "see Magic chapter"
+  },
+  {
+    "name": "Natural Athlete",
+    "category": "Intrinsic",
+    "exclusive": null,
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "ST": 1,
+      "CO": 1
+    },
+    "skills": {},
+    "fields": [],
+    "confers": "ST +1, CO +1; Deep Reserves (Endurance)",
+    "note": "effortless physicality"
+  },
+  {
+    "name": "Gifted",
+    "category": "Intrinsic",
+    "exclusive": null,
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "IN": 1,
+      "PC": 1,
+      "WP": 1
+    },
+    "skills": {},
+    "fields": [],
+    "confers": "IN +1, PC +1, WP +1",
+    "note": "quick, sharp, hard to rattle"
+  },
+  {
+    "name": "Artistic",
+    "category": "Intrinsic",
+    "exclusive": null,
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "CO": 1,
+      "PC": 1
+    },
+    "skills": {},
+    "fields": [],
+    "confers": "CO +1, PC +1; Striking (Appearance)",
+    "note": "the maker's eye, hand, and presence"
+  },
+  {
+    "name": "Magical Talent",
+    "category": "Intrinsic",
+    "exclusive": null,
+    "once": true,
+    "slot": "1",
+    "grant": 0,
+    "tags": [
+      "fantasy"
+    ],
+    "attrs": {},
+    "skills": {},
+    "fields": [],
+    "confers": "unlocks Casting & the Mana pool",
+    "note": "see Magic chapter"
+  }
 ]

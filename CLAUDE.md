@@ -32,7 +32,7 @@ A streamlined, modern edition of **ForeSight**, a general-purpose tabletop RPG b
 ### Source hierarchy (which edition wins)
 
 1. **2004 2nd-edition draft — the base text.** Extensively edited, modernized, and proofread. The rules derive from it: text, structure, terminology.
-2. **2026 simplifications override it** where already decided — power pools/fatigue as exhaustion levels, familiarities cut to examples, generalized combat, 9→7 attributes. See Design Document → "Decided simplifications".
+2. **2026 simplifications override it** where already decided — power pools/fatigue as exhaustion levels, familiarities cut to examples, generalized combat, 9→5 attributes. See Design Document → "Decided simplifications".
 3. **1986 original = a content quarry**, not a rules source. Mine it for material 2004 dropped, and for tone — but assume anything taken from it **needs revision and updating**.
 4. **2015 "ForePlay"** contributes the combat/initiative sequence only. Its dice and four-attribute model are a blind alley.
 
@@ -80,7 +80,7 @@ The Cowork sandbox mounts the repo on a filesystem that **denies `unlink`**, so 
 
 - **One Rule:** Success Chance = **Score × Ease Factor**; roll D100 ≤ SC. EF ladder 0,¼,½,1,2…15. A +1 EF ≈ +your Score in the sweet spot (so modifiers stay small). **Sacred — do not replace** (a clever-dice replacement was tried and failed).
 - **Quality Ratings:** roll vs SC/10, SC/4, SC/2, SC = QR1–4; over = QR7 (fail), over+multiple-of-10 = QR10 (botch); natural 100 never better than QR7, natural 99 never better than QR4. Yield 100/80/50/25%. Read ONE column per task (fast OR good OR much). PM = 4−QR. Never penalize the same choice twice.
-- **7 attributes:** ST EN CO IN PC WP AP (DX+AG→Coordination; EM folded into PC; AP kept). Cost more past 12.
+- **5 attributes:** ST CO IN PC WP (DX+AG→Coordination; EM folded into PC; **EN and AP became quirk families**). ST/CO = power/finesse of body, WP/IN = power/finesse of mind, PC = the feedback loop. EN's rolls moved to **WP** (exhaustion, Pain Resistance, convalescence, stun) and its physiological robustness to **ST** (poison, disease). Cost more past 12.
 - **Skills:** Score = formula (avg of attributes, or ½-avg) + level. Cost 1–2 (powersets dearer). Limit = max level multiplier (1, or 1.5 for ½ skills) → max level = best attribute × limit. Pain Resistance & Stamina are NOT skills (roll EN or WP / EN). Social = Charm + Confidence only.
 - **Combat:** awareness sets Initiative; declare best→worst, act-or-wait (waiting persists → ambush is deadly); pre-empt = Coordination roll modified by Initiative QR (you never *know* you'll act first). Primary + secondary action; reactions stack −2. Turn length elastic.
 - **Damage:** Damage = Yield × DC/2 (round to nearest) (÷ Damage Scale). DC anchors: a very strong person's punch (or a nasty targeted one) 4, 9mm pistol 8, 7.62 rifle 11. Types M/I/B; weapon P pierces armor, armor A absorbs.

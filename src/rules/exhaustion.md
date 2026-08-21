@@ -22,7 +22,7 @@ Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a w
 
 ## Getting exhausted
 
-Do something genuinely taxing — a sustained sprint, a long mêlée, a forced march, harsh exposure — and make an **EN or WP check** (player's choice, as with wounds), the *magnitude* of the effort a modifier rather than a pile of extra rolls:
+Do something genuinely taxing — a sustained sprint, a long mêlée, a forced march, harsh exposure — and make a **WP check** (player's choice, as with wounds), the *magnitude* of the effort a modifier rather than a pile of extra rolls:
 
 | The check | Result |
 |---|---|

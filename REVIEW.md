@@ -132,7 +132,7 @@ This is the **second prong** of the attribute test in action (see below): the De
 | Perform | `(PC+AP)/2` | music, acting, oratory |
 
 If AP is simply dropped, the obvious replacements make all three some blend of **PC and IN** — i.e. **three social skills with identical formulas**, differentiated only by level. That may be acceptable (they are genuinely different skills), but it's worth choosing deliberately rather than arriving at it. Options: single-attribute formulas (Charm = PC, Confidence = IN, Perform = PC), or deliberately different blends, with the AP-family quirks supplying the situational modifier on top.
-- [ ] Decide the three replacement formulas; then attributes are **6**: ST EN CO IN PC WP.
+- [x] ~~Decide the three replacement formulas~~ — done; and attributes went further, to **5**: ST CO IN PC WP.
 
 ## Applied: social skills reformulated off AP (2026-08, Tonio)
 | Skill | Was | Now | Situational modifiers |
@@ -173,7 +173,11 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 - [ ] **Acquired conditions** — a wound that heals badly becomes a chronic quirk — or a flaw if it's bad enough — via the same template. Cross-reference from `damage.md` recovery; this is the honest replacement for a scar table.
 - [ ] **Test the featurelessness hypothesis before touching EN's column.** The critique is that designs don't differ on EN. If the cause is that EN has nothing to *say* — no quirks, no visible content in the builder — then the family is the fix and deleting the attribute would be treating the symptom. Add the family, then look at whether designs differ. Cheaper and more reversible than removing an axis.
 - [ ] **Write Appearance quirks that name their audience.** The point of the family over the attribute is specificity: *striking in a particular way that doesn't work for everyone* is expressible as a quirk and not as a number. Observers agree at the extremes and diverge on type; the quirk should carry that, e.g. *Striking (to those who go for it)* vs *Conventionally handsome* vs *Imposing* vs *Forgettable*.
-- [ ] **AP is not yet removed from the attribute list.** It drives nothing now, but deleting it before the quirk family exists would leave looks modelled by *nothing at all*. Sequence: write the AP quirk family, then drop AP from `ATTRS`/`ARCH`/`creating-characters.md`/the sheet — attributes become **6**.
+- [x] ~~**AP/EN removal**~~ **DONE 2026-08 — attributes are now five: ST CO IN PC WP** (Tonio: *"ST and CO are power and finesse of body, WP and IN power and finesse of mind, PC the feedback loop"*). EN's rolls → **WP**; poison/disease → **ST**; both supply quirk families. Applied to `character-rules.ts` (ATTRS, ARCH), `background-factors.json` (7 factors had their EN/AP grants converted to named quirks in `confers`), `creating-characters.md`, `character-sheet-paper.md`, `damage.md`, `exhaustion.md`, `gm-cheat-sheet.md`, `CLAUDE.md`. Skills needed no change — **EN already drove zero formulas.**
+  - [ ] **`playtest-pack.md` still says seven attributes** and budgets *50 points across seven (each 6–10)*. Needs the budget recalculated for five, plus the Natural Athlete grant (currently ST/EN/CO).
+  - [ ] **The named quirks now referenced by background factors don't exist yet** — Hardy, Plain, Conditioned, Hardened, Weathered, Deep Reserves, Well-turned-out, Striking. Write them with the families.
+  - [ ] **Leverage watch:** CO gates pre-emption + all former DX/AG; WP now gates every exhaustion check, Pain Resistance and convalescence. WP's load is defensive (durability, not capability), which should contain it — verify in playtesting.
+- [ ] **~~AP is not yet removed from the attribute list.~~** It drives nothing now, but deleting it before the quirk family exists would leave looks modelled by *nothing at all*. Sequence: write the AP quirk family, then drop AP from `ATTRS`/`ARCH`/`creating-characters.md`/the sheet — attributes become **6**.
 
 ## Planned: knowledge acquisition driven by IN + WP quirks (2026-08, Tonio)
 **There is no Fields of Knowledge one-pager yet** — Fields appear only in passing in `skills.md` and the playtest pack, though `fields.json` (26 fields, hierarchical: `name/parent/years/thread`) exists. This is the spec for that page.

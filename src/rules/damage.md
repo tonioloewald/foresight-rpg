@@ -32,7 +32,7 @@ Injury is a single number, and it is **−(level) to everything you do** — pai
 | 1 | Light | −1 to all activity |
 | 2 | Medium | −2 |
 | 3 | Heavy | −3 |
-| 4 | Incapacitated | −4; you can barely act — roll EN or WP each turn to do anything at all |
+| 4 | Incapacitated | −4; you can barely act — roll WP each turn to do anything at all |
 | 5 | Dying | down and bleeding out; **without intervention you deteriorate toward 6** |
 | 6 | Dead | — |
 
@@ -45,8 +45,8 @@ Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stu
 | The roll | Effect |
 |---|---|
 | **Shrug it off** (good) | carry on |
-| **Shaken** (ordinary) | −2 to everything and one action only; roll EN/WP at end of turn to clear it |
-| **Stunned** (poor, or any S-weapon) | no action but to **recover** (an EN/WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious |
+| **Shaken** (ordinary) | −2 to everything and one action only; roll WP at end of turn to clear it |
+| **Stunned** (poor, or any S-weapon) | no action but to **recover** (a WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious |
 
 Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.
 
@@ -91,7 +91,7 @@ A very large or tough target — a vehicle, a dragon, a stone wall — has a **D
 
 ## Recovery — and relapse
 
-Healing is slow. At the interval for your level, make a **convalescence roll** (EN or WP):
+Healing is slow. At the interval for your level, make a **convalescence roll** (WP):
 
 | Lvl | Roll every | On the roll |
 |---|---|---|
@@ -107,6 +107,6 @@ Convalescence carries a penalty equal to the **worst level you've sunk to** sinc
 
 The same machine handles the slow killers — resolve each as a task and read its **Yield/QR** for how much it does, or roll a **random QR** (D10: 1→QR1, 2→QR2, 3–5→QR3, 6–10→QR4) when nothing is opposed:
 
-- **Poison & venom** carry a **DC** and a type; the victim resists with an **EN roll**, and what gets through applies as wounds (or, for sedatives and toxins that sap rather than injure, as [exhaustion](/exhaustion/)) on the poison's own clock — seconds for a nerve agent, hours for a septic wound.
-- **Disease & infection** are the tax on untreated wounds and foul conditions: at intervals the GM sets, an **EN roll** either fights it off or lets it add a level / stall convalescence. Antibiotics and clean care are a fat positive modifier; a battlefield wound left dirty is a negative one.
+- **Poison & venom** carry a **DC** and a type; the victim resists with a **ST roll**, and what gets through applies as wounds (or, for sedatives and toxins that sap rather than injure, as [exhaustion](/exhaustion/)) on the poison's own clock — seconds for a nerve agent, hours for a septic wound.
+- **Disease & infection** are the tax on untreated wounds and foul conditions: at intervals the GM sets, a **ST roll** either fights it off or lets it add a level / stall convalescence. Antibiotics and clean care are a fat positive modifier; a battlefield wound left dirty is a negative one.
 - **Environmental damage** — falls, fire, cold, blast, drowning — is just a DC and a QR like any hit (a two-storey fall, a burning room), while slow exposure (heat, cold, thin air, thirst) meters as [exhaustion](/exhaustion/) rather than wounds until it turns lethal.

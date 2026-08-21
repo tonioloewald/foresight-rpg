@@ -13,8 +13,21 @@
 
 import { ALL_TAGS } from './entity-specs'
 
-/** The seven attributes (DX+AG→CO, EM folded into PC — see Design Document). */
-export const ATTRS = ['ST', 'EN', 'CO', 'IN', 'PC', 'WP', 'AP'] as const
+/**
+ * The five attributes. DX+AG→CO; EM→PC; and EN and AP are gone entirely, having
+ * become quirk families (see Design Document → "Quirk families").
+ *
+ * The set has a shape worth keeping in mind, because it is how a reader will
+ * remember it: ST and CO are the *power* and *finesse* of the body, WP and IN
+ * the power and finesse of the mind, and PC is the feedback loop between mind,
+ * body and surroundings.
+ *
+ * EN's mechanical load moved to WP — exhaustion, Pain Resistance, convalescence,
+ * stun recovery — which the rules had already been writing as "EN or WP" all
+ * along. Physical robustness (poison, disease) went to ST. Endurance quirks
+ * supply the situational modifiers on all of it.
+ */
+export const ATTRS = ['ST', 'CO', 'IN', 'PC', 'WP'] as const
 export type Attr = (typeof ATTRS)[number]
 
 /** Background-factor categories, in the order they're offered. */
@@ -22,10 +35,10 @@ export const BF_CAT = ['Species', 'Origin', 'General', 'Unusual', 'Intrinsic'] a
 
 /** Starting archetypes — a fast on-ramp, not a class system. */
 export const ARCH: Record<string, Record<string, number>> = {
-  Athlete: { ST: 9, EN: 7, CO: 10, IN: 6, PC: 6, WP: 6, AP: 6 },
-  Scholar: { ST: 6, EN: 6, CO: 6, IN: 10, PC: 9, WP: 7, AP: 6 },
-  Socialite: { ST: 6, EN: 6, CO: 6, IN: 7, PC: 8, WP: 7, AP: 10 },
-  Artist: { ST: 6, EN: 6, CO: 8, IN: 6, PC: 10, WP: 6, AP: 8 },
+  Athlete: { ST: 9, CO: 10, IN: 6, PC: 6, WP: 8 },
+  Scholar: { ST: 6, CO: 6, IN: 10, PC: 9, WP: 7 },
+  Socialite: { ST: 6, CO: 7, IN: 10, PC: 9, WP: 6 },
+  Artist: { ST: 6, CO: 8, IN: 7, PC: 10, WP: 6 },
 }
 
 /** Attributes cost 10/point to 12, then 20 — "genetics is not fair". */
