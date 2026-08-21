@@ -219,6 +219,10 @@ So: no build-optimisation surface, no arbitrage between subsystems, no reason to
 
 > ⚠ **Terminology to settle:** the DX/AG passage above says remarkable agility or prestidigitation "become **talents**". If a talent *is* a perk, unify the word; if they differ, say how. Two names for one carrier is exactly the kind of drift this document exists to prevent.
 
+**Quirks come in two shapes: standing and intermittent.** A *standing* quirk applies whenever its scope does — nimble-fingered, one-eyed, carrying a few extra kilos (−EF on agility tasks and running speed). An *intermittent* one applies **when something already happening triggers it** — arthritis in cold or damp, an old wound that bites on the first hard exertion of the day, a limp that shows once you're carrying an exhaustion level.
+
+The rule for intermittent quirks: **they must hang off a condition already in play, never their own timer.** Anything that asks the table to track "is it flaring today?" fails the survival criterion (cheap to track, changes only when it matters) and will be quietly dropped — at which point the character sheet is lying. Tie it to weather, exertion, an exhaustion level, or a roll that's being made anyway, and it costs nothing to run.
+
 **The selection heuristic falls out of the permanence column: a quirk is who you are; a familiarity is what you've been doing lately.** Jackie Chan learning roller-skating for one film is emphatically *not* a quirk — it isn't permanent and it isn't character-defining; it's a familiarity, and pricing it as a quirk would be a category error that also makes it far too expensive. Conversely "nimble-fingered" is not a familiarity: you don't stop being it because you changed jobs.
 
 Before adding an attribute or a skill, check whether one of those five already carries the distinction — **and check you've picked the right one**, because getting the carrier wrong misprices the thing even when the decision not to add an axis was correct.
