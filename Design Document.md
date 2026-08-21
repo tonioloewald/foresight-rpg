@@ -247,6 +247,25 @@ This also answers the standing critique that character designs don't differ on E
 
 The family also has somewhere real to attach — every member hangs off the **exhaustion track**, i.e. off rolls that are already being made, which is the survival criterion for intermittent quirks.
 
+**Chronic conditions: a four-line template, not a subsystem.** Haemophilia, asthma, diabetes, epilepsy, chronic pain, a joint that never set right. These are the stress test for the quirk machinery, because they are **diverse, specific, and endless** — no catalogue will ever be complete, so what the game must ship is a way to *write one in a minute*. Four lines, and they are the equipment modifier record (target / scope / combine) with the fields renamed for a human being:
+
+| Line | What it says | Why it's this |
+|---|---|---|
+| **Attach** | the roll or track it touches | must be one **already being made** — wounds, exhaustion, Pain Resistance, an attribute check |
+| **Trigger** | when it bites | must be a condition **already visible at the table** — cold, dust, exertion, a missed meal, an injury. **Never its own timer** |
+| **Effect** | one thing, usually an EF shift, a lost automatic pass, or a recovery penalty | one line, or it won't survive contact with play |
+| **Management** | the medication, equipment or routine that suppresses it | the interesting half — see below |
+
+**Management is where the drama is, and it's why these are worth having at all.** A well-managed condition is *invisible* almost all the time — which is both true to life and exactly right for play, because it means the condition costs the table nothing until the story takes the management away. Insulin needs refrigeration; an inhaler is a small object that can be lost, crushed, or left in the other coat. The condition is not a penalty the character carries around; it is a **dependency the adventure can reach for**, and everyone at the table understands its loss instantly without being told the rule.
+
+It also makes the **setting visible through the rules**, which is a founding principle rather than a bonus: haemophilia at TL5 is a routine prescription, and at TL1 it is a reason you did not reach adulthood. Same four lines, entirely different life.
+
+**Severity needs no levels — write the condition twice.** Mild and severe asthma are two quirks, not one quirk with a dial. Cheaper to run and easier to pick.
+
+**Conditions can be acquired in play.** A wound that heals badly becomes a chronic quirk, by the same template. This is the honest version of a scar table: consequences that are specific, permanent, and hang off machinery already in motion.
+
+**No upside is required, and none is manufactured.** Most of these have no compensating good half, so under the carrier table they are not trades at all. That is fine and it changes nothing: **they grant no points**, because drawbacks never fund anything here, and they cost none, because charging a player for their character's body would be absurd. You take one because it is who the character is — which is the whole answer this game gives about why anyone builds an interesting character. What the game must not do is treat a condition as either a tragedy or a secret advantage. It is a fact about a body, it is specific, it is bounded, and the rules should be as matter-of-fact about it as a character's height.
+
 **The selection heuristic falls out of the permanence column: a quirk is who you are; a familiarity is what you've been doing lately.** Jackie Chan learning roller-skating for one film is emphatically *not* a quirk — it isn't permanent and it isn't character-defining; it's a familiarity, and pricing it as a quirk would be a category error that also makes it far too expensive. Conversely "nimble-fingered" is not a familiarity: you don't stop being it because you changed jobs.
 
 Before adding an attribute or a skill, check whether one of those five already carries the distinction — **and check you've picked the right one**, because getting the carrier wrong misprices the thing even when the decision not to add an axis was correct.
