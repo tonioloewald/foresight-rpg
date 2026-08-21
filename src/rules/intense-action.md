@@ -9,31 +9,34 @@ There is no action budget to track. In a round you have one **primary** focus, r
 
 **Split your focus and everything suffers.** Declare your deliberate tasks in priority order:
 
-| You are attempting | 1st | 2nd | 3rd |
-|---|:--:|:--:|:--:|
-| **one thing** | 0 | | |
-| **two things** | −1 | −2 | |
-| **three things** | −2 | −3 | −4 |
+| You are attempting | 1st | 2nd | 3rd | 4th |
+|---|:--:|:--:|:--:|:--:|
+| **one thing** | **+1** | | | |
+| **two things** | −1 | −2 | | |
+| **three things** | −2 | −3 | −4 | |
+| **four things** | −3 | −4 | −5 | −6 |
 
-Each task takes −1 for every *other* task, and −1 more for each task ranked above it. Take the hit as an **ease factor** (you do it worse) or as **effectiveness** (you do less of it) — a divided move covers **a third to a half** the ground rather than failing outright. Read one column, as always: worse *or* less.
+Each task takes −1 for every *other* task, and −1 more for each task ranked above it. **Doing exactly one thing is worth +1** — see *Concentrate*, below. The ladder doesn't stop at three: keep adding and keep sliding. Take the hit as an **ease factor** (you do it worse) or as **effectiveness** (you do less of it) — a divided move covers **a third to a half** the ground rather than failing outright. Read one column, as always: worse *or* less.
 
-**Concentrate — go all-in on one thing — and buy a bonus at your reflexes' expense.** Pour everything into a single task and it gains a **positive** modifier (about +1; more for absolute tunnel-vision), but your **automatic / reflex actions take a penalty**: you won't notice the flanker, you won't dodge well. The sniper who lives inside the scope makes the shot and is oblivious to all else. That trade *is* the choice.
+**Concentrate — go all-in on one thing — and buy a bonus at your reflexes' expense.** Do exactly one thing this round — one task, one beat, nothing else — and it gains **+1** (more for absolute tunnel-vision), but your **automatic / reflex actions take a penalty**: you won't notice the flanker, you won't dodge well. The sniper who lives inside the scope makes the shot and is oblivious to all else. That trade *is* the choice.
 
 **Promote a reflex when you want it done well.** Automatic actions happen on their own at a baseline; spend real attention on one and it climbs — **+1 as a secondary, +2 as your primary** (measured against leaving it automatic). *A sniper watching for a target: make noticing his **primary** and it's +2 to spot; keep the shot primary but really want to see and it's +1.*
 
 **A secondary action cannot pre-empt.** You can't win the race to act (see Initiative) with something you're only half-attending to — pre-emption belongs to your primary.
 
-## How many beats do you get?
+## How many beats do you get? As many as you like
 
-The ladder above is how *well* each thing goes; this is how *many*. A statement of intent unfolds as beats — draw · aim · fire, or lunge · wind-up · blow (see [Fire](/fire-combat/) and [Melee](/melee-combat/) combat) — and **your Score in the ability sets how many fit in a round**:
+A statement of intent unfolds as beats — draw · aim · fire, or lunge · wind-up · blow (see [Fire](/fire-combat/) and [Melee](/melee-combat/) combat). **There is no limit on how many you attempt. Every beat past the first is another thing you're attempting, and it goes on the same ladder.** Fire once and you're at +1; fire five times and every shot is at −4.
 
-> **Beats in a round: your Score ÷ 5 as your *primary* ability, ÷ 10 as a *secondary* or tertiary one — round up.**
+**So there is nothing to look up and no threshold to hit.** You are never told *how many* actions you get. You decide how thin to spread yourself, and the dice price it.
 
-Skill *is* speed and facility: the gunfighter cycles and fires faster, the swordsman lands more strikes. This is "how much" set by the body and by skill — not an action-point budget with a price list. And being secondary costs you twice over: half the beats *and* the ladder's penalty on each.
+> **Repetitions are tasks.** A second shot costs exactly what a second *anything* costs: **−1 to everything, cumulative.** A **secondary** ability — the thing you're only half-attending to — costs **−2** a beat instead of −1.
 
-*Firearms 25 (a 20+1 shooter), all-in: 25 ÷ 5 = **5** — Aim · Shoot · Aim · Shoot · Shoot. Melee 18 on the attack: 18 ÷ 5 → **4** — stab · stab · wind-up · stab; with defence as his secondary, 18 ÷ 10 → **2** — block · block.*
+**Skill still converts into rate — continuously, instead of at breakpoints.** The gunfighter and the novice may both empty a magazine; the difference is what happens when they do. A **Firearms 25** shooter taking two aimed shots is at −1 (EF 4 → SC 100: both land). Going all-in for five puts every shot at −4 (EF 1 → SC 25) — he *can*, and usually shouldn't. A **Firearms 10** shooter tries the same five and is rolling SC 10 a shot: he burns the magazine and accomplishes nothing, which is exactly what that looks like in life. **Skill buys you the option to spend beats, not a ration of them.**
 
-**An attribute used as the ability counts double.** Movement is Coordination, a shove is Strength — and a raw attribute tops out about where a trained skill is just getting started, so it would otherwise buy almost no beats: **double it for this**. In a firefight you're usually *moving and shooting* — Firearms primary (the shots), Coordination secondary (the footwork). Coordination 8 doubles to 16 → 16 ÷ 10 → **2** movement beats: *pop up · [shoot] · hide*. The lumbering CO-5 bruiser doubles to 10 → just **1**: he can pop up or drop back down, not both as an afterthought, so he's caught in the open — unless he makes *moving* his primary (10 ÷ 5 → 2) and takes the shot as a ragged secondary.
+*Melee 18 on the attack: two strikes at −1, or four at −3 if he's desperate to end it. With defence as his secondary, each block is −2 on top.*
+
+**This deleted three rules and a gotcha.** There is no beats divisor, no rounding, and no "an attribute counts double" patch to stop raw attributes buying almost none. Movement in a firefight is simply another task: *moving and shooting* is two things, at −1 each, and the clumsy character isn't allotted fewer beats — he's just worse at everything he tries to do at once, which he was anyway.
 
 ## What counts as a task
 
