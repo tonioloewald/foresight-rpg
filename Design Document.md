@@ -235,6 +235,18 @@ The rule for intermittent quirks: **they must hang off a condition already in pl
 >
 > The founding principle that motivated keeping AP — **looks matter, and a system that denies it is lying** — is not abandoned here; it is better served. The false claim was never "looks matter". It was "looks are one number."
 
+**Worked family: Endurance — and why it does *not* follow AP out of the attribute list.** EN and AP look like the same case (both drive few or no skills; both bundle several things under one number) and they resolve differently, which makes the pair a useful calibration of the tests.
+
+EN fails the *multi-dimensionality* half: it currently bundles at least three things that correlate poorly — **sustained output** (can you march all day), **resistance to insult** (disease, poison, cold, hunger), and **recovery rate** (how fast you clear an exhaustion level). The unfit man with an iron gut and the marathoner who catches every cold are both ordinary. So far, this is the AP complaint.
+
+But EN **passes the observer-independence test that AP fails**. Whether you can still be walking at hour nine is a fact about the world; nobody's taste enters. There is a real central tendency — *fit* — that a single number tracks usefully. And that is precisely the configuration the framework already has an answer for, because **Coordination is the same shape**: a genuine central axis, with the interesting variation living in deviations from it. CO kept its column and grew a quirk family. EN should do the same.
+
+So the rule the pair establishes: **multi-dimensional + observer-relative → the axis was an illusion, replace it with the family (AP). Multi-dimensional + observer-independent, with a real central tendency → keep the axis, add the family for the deviations (EN, CO).**
+
+This also answers the standing critique that character designs don't differ on EN. The likely cause is not that endurance doesn't matter — it is that **EN is featureless**: there is nothing to *say* about your endurance except a number, so nothing about it is character-defining and nothing about it shows up on the build screen. A family gives it things to say. That is a testable prediction and a cheaper experiment than deleting an attribute: add the family, see whether designs start differing.
+
+The family also has somewhere real to attach — every member hangs off the **exhaustion track**, i.e. off rolls that are already being made, which is the survival criterion for intermittent quirks.
+
 **The selection heuristic falls out of the permanence column: a quirk is who you are; a familiarity is what you've been doing lately.** Jackie Chan learning roller-skating for one film is emphatically *not* a quirk — it isn't permanent and it isn't character-defining; it's a familiarity, and pricing it as a quirk would be a category error that also makes it far too expensive. Conversely "nimble-fingered" is not a familiarity: you don't stop being it because you changed jobs.
 
 Before adding an attribute or a skill, check whether one of those five already carries the distinction — **and check you've picked the right one**, because getting the carrier wrong misprices the thing even when the decision not to add an axis was correct.
