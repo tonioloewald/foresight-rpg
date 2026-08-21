@@ -376,6 +376,21 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 **And it replaces a sticky modifier with an activity.** The old *taking a bead* handed you a flat **+3** that sat there until you did something else — a state, not an action. A bead now lasts **one beat**: spend it shooting, spend it aiming again, or lose it. The sniper lying in wait is *doing something* every beat and can be interrupted at any of them, which is both truer and far better for play. It also gives **recoil** and **target movement** an honest home — each is simply a penalty on the aim you must keep making.
 
+### Framing principle: price the good habit, not the omission (2026-08)
+
+**A bonus for doing the sensible thing and a penalty for skipping it are arithmetically identical and behave completely differently at a table.** ForeSight 2004 already applied this to firearms — the handgun BEF was knocked *down* and *having aimed* became a positive modifier, rather than leaving the BEF high and penalising the unaimed shot. Same numbers, different bookkeeping, and the second one actually happens.
+
+**The asymmetry is about who is holding the incentive:**
+
+- **A bonus is claimed.** The person who benefits is the person who has to remember it — the only bookkeeping arrangement that has ever reliably worked. And a *forgotten* bonus is self-correcting, because the player notices and says so.
+- **A penalty must be imposed.** The GM has to remember it *and* be the one to apply it, against a player who would rather they didn't. A forgotten penalty is **silent and permanent**: it makes everyone quietly better than they should be, and nobody at the table ever finds out.
+
+**So set the BEF at the careless baseline** — the shooter who raises the weapon and fires — and let aiming, bracing, choosing the moment, using the right tool and taking a spotter earn their way up. **Failing to do them earns nothing, which is punishment enough.**
+
+**This is another instance of the absolute standard.** Games write "unaimed: −2" because that is how a *designer* thinks — a deviation from the ideal case — not how a *table* plays. It is par for the course, it has never been questioned, and it is wrong for a reason that has nothing to do with the numbers being wrong.
+
+> ⚠ **The bound.** This does not license inflating everything into bonuses; that just moves the arithmetic and adds a stack of modifiers to remember. It says: when a modifier is genuinely *optional good practice*, express it as the bonus. Situational facts the world imposes — range, darkness, cover, a moving target — remain penalties, because there is no habit being rewarded and no player who wants to remember them anyway.
+
 > **The general move, worth stating because it keeps paying: replace a free or automatic action with an ordinary roll whose *quality* produces the next state.** It adds no subsystem — the roll, the ladder and the QR table already exist — and it converts a piece of dead bookkeeping into a source of situations. It also gives **QR10** a consistent job across every action type: *you may take no further action of this kind this round*, which is what removed the need for a cap on beats.
 
 > ⚠ **Watch for leverage concentration** — the standing caution from the Coordination note. **CO** gates pre-emption plus everything DX and AG separately gated; **WP** now gates every exhaustion check, Pain Resistance, and convalescence. Two of five attributes carry a lot. The mitigation for WP is that its load is almost entirely **defensive** — maxing it buys durability, not capability — so it should not dominate the way an offensive concentration would. **Verify during point-economy playtesting.**

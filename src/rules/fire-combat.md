@@ -24,6 +24,16 @@ Each of these is the One Rule's "challenge at a glance" made concrete for shooti
 - **Did you see the last shot land?** — spot your fall of shot and you correct: a bonus to the follow-up.
 - **Did the last shot buck you off target?** — recoil: repeat or rapid fire past the first shot takes a penalty until you re-acquire.
 
+## The BEF is the careless shot, not the careful one
+
+**Set the baseline where a shooter *starts*, and let good practice earn its way up.** A firearm's BEF describes someone who raises the weapon and fires — not someone who took a bead, braced, and picked their moment. Those are **bonuses**, and they should be, because of an asymmetry that has nothing to do with the maths:
+
+> **A player will remember a bonus for doing the sensible thing. Nobody reliably remembers a penalty for skipping it.**
+
+"Unaimed: −2" and "BEF two lower, aimed: +2" are arithmetically identical and behave completely differently at a table. A **bonus is claimed** — the person who benefits is the one who has to remember it, and that is the only bookkeeping arrangement that has ever worked. A **penalty must be imposed** — the GM has to remember it *and* be the one to apply it, and a forgotten penalty silently makes everybody better than they should be, invisibly and permanently. A forgotten bonus, by contrast, is self-correcting: the player notices, and says so.
+
+**So the rule of thumb throughout: price the good habit, not the omission.** Aim, brace, take your time, use the right tool, get a spotter — these earn modifiers. Failing to do them earns nothing, which is punishment enough.
+
 ## Short-circuit it
 
 You never run that list in full. Assume a **trained, competent, calm shooter** — the BEF already covers it — and add a modifier only where the situation genuinely departs from "the range." Ranged combat stays a one-roll affair; that's the point.
@@ -46,22 +56,24 @@ Most shooting in a close fight isn't aimed at anyone. It's **area fire**: blind 
 
 **Aiming isn't a free action or a special case — it's a fire action that points the weapon instead of discharging it.** Roll your Firearms exactly as if shooting, against the same situational modifiers, and if you succeed the weapon is *on the target*. What the roll buys is set by how well you did it:
 
-> **Your bead = 5 − QR of your last aim.** It applies to your **next beat** — including your next *aim*.
+> **Your bead = 4 − QR of your last aim.** It applies to your **next beat** — including your next *aim*.
 
 | Your aim rolled | Your bead is now | |
 |:--:|:--:|---|
-| **QR1** | **+4** | the sight picture you dream about |
-| **QR2** | +3 | settled, breathing out |
-| **QR3** | +2 | on him |
-| **QR4** | +1 | roughly pointed |
-| **QR7** | **−2** | aimed at the wrong place, and you don't know it |
-| **QR10** | **−5**, and **no further action of this kind this round** | lost him, fumbled the weapon, flinched into the sights |
+| **QR1** | **+3** | the sight picture you dream about |
+| **QR2** | +2 | settled, breathing out |
+| **QR3** | +1 | on him |
+| **QR4** | 0 | pointed at him, and nothing more |
+| **QR7** | **−3** | aimed at the wrong place, and you don't know it |
+| **QR10** | **−6**, and **no further action of this kind this round** | lost him, fumbled the weapon, flinched into the sights |
+
+**The ceiling is the old rule's flat number.** Earlier editions handed you *taking a bead* as a flat **+3**. That +3 is now the **best** you can do rather than the default you're given — you can reach it, but you have to shoot well enough to earn it, and a merely adequate aim (QR4) leaves you exactly where you started.
 
 **A bead is not a sticky bonus — it's a position you have to keep.** Older editions had *taking a bead* hand you a flat **+3** that sat there until you did something else. This doesn't. Your bead lasts **one beat**. Spend that beat shooting and you spend the bead; spend it aiming again and you **re-roll** — at your current bead, so a good bead makes a better one likelier. Spend it on anything else at all and the bead is gone.
 
-**That makes holding a bead an active sport, and it makes it ratchet.** Aim once for a rough +1, aim again *at* +1 and you'll probably settle to +2 or +3, again and you're at +4. The sniper who lies there breathing isn't sitting on a stale bonus; he is *doing something*, every beat, and can be interrupted at any of them.
+**That makes holding a bead an active sport, and it makes it ratchet.** Aim once for a rough +1, aim again *at* +1 and you'll likely settle to +2, again and you're at +3. The sniper who lies there breathing isn't sitting on a stale bonus; he is *doing something*, every beat, and can be interrupted at any of them.
 
-**It also caps itself, with no cap.** The ceiling is **+4**, and once you're there another aim can only hold or lose it — a QR4 drops you from +4 to +1. So you aim until you're satisfied and then take the shot, because the next aim is pure risk. Nothing has to forbid over-aiming; the mechanic simply stops paying.
+**It also caps itself, with no cap.** The ceiling is **+3**, and once you're there another aim can only hold or lose it — a QR4 drops you from +3 to nothing. So you aim until you're satisfied and then take the shot, because the next aim is pure risk. Nothing has to forbid over-aiming; the mechanic simply stops paying.
 
 **Recoil lands here, where it belongs.** Firing spends the bead, and re-acquiring is an aim taken *under recoil* — an ordinary EF penalty, larger on a heavier weapon. Rate of fire then regulates itself physically: a battle rifle's second aimed shot is genuinely harder than a pistol's, with no rule saying "heavy weapons are slower." A **moving** target works the same way — tracking him is a penalty on every aim, so a bead on a runner is one you have to keep buying.
 
