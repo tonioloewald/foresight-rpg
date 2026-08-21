@@ -118,6 +118,31 @@ It also preserves the property that matters most: **Piety stays visible on the c
 - [ ] **Edition-change explanations belong in end notes**, not inline in a rule. A note that some rule "no longer exists", referencing terms we no longer use, breaks the flow of an otherwise simple rule — the opposite of the goal. Interim: a blockquote aside right after the rule (done for the attributes "no inherent/trained value" note). **Target: real end notes per section.** *Exception (agreed):* the magic fundamentals' brief "(formerly X)" subtitles stay — a name change doesn't add complexity, and the old name often carries explanatory power.
 - [x] ~~**No dropped-attribute references (DX/AG/EM)**~~ — purged from modern rules + data (armor.json penalties, magic-applications.json). One explanatory block under the attributes list is the *only* place they appear. **Watch for regressions** when adding data or porting 1986/2004 content.
 
+## Open: do EN and AP earn their columns? (2026-08, Brett Evill + Tonio)
+**The critique:** character designs don't tend to differ in EN and WP, and an attribute that drives no skills gets ignored by players. Proposal: reduce EN and AP to **quirks giving situational modifiers** — AP because attraction is audience-dependent anyway, EN because it's really just an EF modifier on avoiding exhaustion.
+
+**Measured load** (skills.json, 20 skills; core = damage/exhaustion/scores/initiative):
+
+| Attr | Skills driven | Core refs |
+|---|--:|--:|
+| CO | **14** | — |
+| PC | **14** | — |
+| IN | 4 | — |
+| AP | 3 | 1 |
+| ST | 2 | — |
+| WP | **1** (Confidence) | 9 |
+| EN | **0** | 10 |
+
+**Three findings the numbers force:**
+1. **EN drives zero skills** — the critique is empirically correct.
+2. **But WP drives exactly one.** EN and WP have the *same profile*: no skill load, carried entirely by core-rules load. This is **not** a close call between them — on this evidence they stand or fall together, and "drives no skills so players ignore it" condemns both or neither.
+3. **AP is the opposite shape** (3 skills, 1 core ref) — genuinely skill-driven, and its effect really is situational (does this audience care?). It's the strongest quirk candidate of the three.
+
+**The framework gap this exposes.** The Coordination note tests *independence* — is this a separate capability, or a deviation from a correlated default? EN passes that easily (endurance athletes aren't strong; see the worked case). But independence is **necessary and not sufficient**: an attribute must also **discriminate between characters in play**. A capability can be genuinely independent *and* still be better modelled as a quirk, if nearly every character sits at the default. That's the same reasoning that folded Acrobatics — and it needs adding to the test.
+
+**⚠ But check the cause before amputating.** CO and PC drive **14 of 20 skills each**; CO also gates pre-emption. If designs don't differentiate on EN, the likelier cause is that two attributes soak up almost all mechanical relevance and everything else is rounding error. The remedy might be **rebalancing what drives what** (does Melee really key off CO rather than ST+CO? should endurance gate anything a player wants to be *good* at?) rather than deleting attributes that are doing real work in the exhaustion system.
+- [ ] **Decide in this order:** (a) is the CO/PC concentration itself the bug? (b) if EN goes, does WP go with it — and if not, why not, given identical profiles? (c) AP as a situational quirk is separable from both and could go first.
+
 ## Planned: aging quirks (2026-08)
 - **Age should confer quirks**, in the two shapes above: *standing* (you've gained a few kilos — −EF on agility tasks and running speed; stiffness; failing eyesight) and *intermittent* (arthritis in cold or damp; an old break that aches on the first hard exertion; a knee that goes when you're already exhausted).
 - **Acquired, not purchased.** These arrive with time and downtime — the same route by which background factors can be conferred after creation. A player doesn't shop for them.
