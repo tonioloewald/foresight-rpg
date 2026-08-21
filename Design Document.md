@@ -376,6 +376,18 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 **And it replaces a sticky modifier with an activity.** The old *taking a bead* handed you a flat **+3** that sat there until you did something else — a state, not an action. A bead now lasts **one beat**: spend it shooting, spend it aiming again, or lose it. The sniper lying in wait is *doing something* every beat and can be interrupted at any of them, which is both truer and far better for play. It also gives **recoil** and **target movement** an honest home — each is simply a penalty on the aim you must keep making.
 
+### Design note: position as a named state, not a measured distance (2026-08)
+
+**Most systems force a choice, and it is a false one.** Either position is abstracted away entirely — the theatre-of-the-mind approach, where nobody has a meaningful reason to move and combat becomes an exchange of attack rolls — or position is *measured*, which means a hexgrid, a battlemat, and a box of figures. Par for the course, both ways, and neither is what a table actually wants.
+
+**The three-band reach model is the third option.** Each melee weapon prefers **Reach**, **Normal** or **Close**; you get +1 at your own band, −2 one off, −4 two off. Position therefore *exists, matters, and is contested* — but it has **three values**, so it can be tracked in conversation.
+
+**The load-bearing structural detail: it is one state per *engagement*, not a position per combatant.** Two fighters share a single band, agreed between them, and changing it is a contested combat move. That is one word to remember per exchange — which is why it survives without a map, where anything requiring each fighter's location does not.
+
+**What it buys is a *qualitative* reason to move.** *I have a two-handed sword and he has a dagger: I want him out there, he wants to be inside my guard.* That sentence is the whole tactical situation, it needs no measurement, and it generates the manoeuvring that ForeSight melee has always been good at — previously at the cost of wanting figures on the table. It also means **only one fighter can be happy at a time**, so a melee is a running argument about distance rather than a stationary dice exchange.
+
+**And it composes with the footwork rule rather than duplicating it.** Range control is simply *the commonest reason to move in a fight*, so closing on a spearman is an ordinary Coordination task, opposed, that can be failed — and failing it in the wrong place is how you end up on the floor.
+
 ### Framing principle: price the good habit, not the omission (2026-08)
 
 **A bonus for doing the sensible thing and a penalty for skipping it are arithmetically identical and behave completely differently at a table.** ForeSight 2004 already applied this to firearms — the handgun BEF was knocked *down* and *having aimed* became a positive modifier, rather than leaving the BEF high and penalising the unaimed shot. Same numbers, different bookkeeping, and the second one actually happens.

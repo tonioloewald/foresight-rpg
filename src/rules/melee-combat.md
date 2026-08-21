@@ -80,6 +80,10 @@ Either is legitimate — ForeSight colours no setting. Just tell the table which
 
 *This is why a knife is a terrifying weapon in a lift and a joke in a courtyard, without a single special rule about lifts or courtyards.*
 
+**And it needs no miniatures.** ForeSight melee has always made footwork load-bearing — one of the real pleasures of it is that people genuinely *move* — but "who is where" has usually meant a hexgrid or a table full of figures. Three named bands replace measurement with a **shared state you can hold in your head**: not a position for each fighter, but **one word per engagement**, agreed by both. Reach, Normal, Close.
+
+That is enough to give you a **qualitative reason to move** — *I have a two-handed sword and he has a dagger, so I want him out there and he wants to be inside my guard* — with nothing on the table at all. Miniatures remain welcome and add nothing you need.
+
 ## Footwork: giving ground, circling, and going over the furniture
 
 A melee is not two people standing still. Fighters **circle, close, and give ground** constantly — and every bit of that is [movement](/intense-action/), which means **Coordination**, which means it can go wrong.
