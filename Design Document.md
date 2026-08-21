@@ -186,8 +186,15 @@ The evidence that this is really true, rather than merely tidy: **non-specialist
 > - **Would the drawback actually bite?** If no, it isn't a quirk; it's a perk wearing one, and it should be paid for.
 > - **Would anyone take this deal on the merits?** If yes, the offset is too big.
 > - **A family is territory, not price** — what a trait touches is a separate question from what it costs.
+> - **What limits them is credibility, not balance** — a pile of perks is ridiculous long before it is unbalanced.
 >
 > The test to apply to any proposed trait is simply: *does this make the character easier to picture?* If instead it makes the character sheet easier to optimize, it has failed, and no amount of careful costing rescues it.
+
+**On what actually limits perks.** A perk is, by definition, a net good deal — that is what distinguishes it from a quirk. So it is worth being blunt about why you can't have many: **not because the economy forbids it, but because a character wearing a pile of them is ridiculous.** They stop being someone you can picture and become a shopping list. The customary cap (take about three) is a rule of thumb standing in for that judgement, not a balance figure.
+
+**There is no game balance here to protect, and pretending otherwise causes the damage.** ForeSight does not claim that two characters built on equal points are equal, or that they should be. The points economy exists to stop *arithmetic* nonsense — buying the same thing twice, a skill above its ceiling, a total that doesn't add up. **Credibility and the GM stop *fictional* nonsense**, and that has always been an explicit power: the GM may require a rethink because the abilities don't match the concept, or because the character doesn't fit the setting.
+
+Neither mechanism substitutes for the other, and **asking the economy to do the second job is the category error that produces disadvantage economies in the first place.** Once you believe the points guarantee balance, every drawback must have a price, and the moment every drawback has a price the whole thing is a store.
 
 **So there are six downward carriers, not two** — each *narrower* than a new axis, but they are not interchangeable, and they differ most importantly in **permanence**:
 
