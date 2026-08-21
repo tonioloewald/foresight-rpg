@@ -118,6 +118,31 @@ It also preserves the property that matters most: **Piety stays visible on the c
 - [ ] **Edition-change explanations belong in end notes**, not inline in a rule. A note that some rule "no longer exists", referencing terms we no longer use, breaks the flow of an otherwise simple rule — the opposite of the goal. Interim: a blockquote aside right after the rule (done for the attributes "no inherent/trained value" note). **Target: real end notes per section.** *Exception (agreed):* the magic fundamentals' brief "(formerly X)" subtitles stay — a name change doesn't add complexity, and the old name often carries explanatory power.
 - [x] ~~**No dropped-attribute references (DX/AG/EM)**~~ — purged from modern rules + data (armor.json penalties, magic-applications.json). One explanatory block under the attributes list is the *only* place they appear. **Watch for regressions** when adding data or porting 1986/2004 content.
 
+## Decided: AP becomes a family of quirks (2026-08, Tonio)
+**A linear 3–16 attribute is the wrong shape for looks.** "Attractive" isn't one axis — it's *striking*, *imposing*, *trustworthy-faced*, *forgettable*, *distinctive*, *scarred*, each helping and hurting different things. And the effect is audience-dependent: it matters whether this crowd is oriented toward you at all. A quirk family says "imposing — better at intimidation, worse at blending in"; a single number can't.
+
+This is the **second prong** of the attribute test in action (see below): the Design Document defends AP on *independence* grounds — looks correlate with nothing else — and that defence still holds. But independence is necessary and **not sufficient**; AP also has to discriminate between characters *and* apply uniformly enough to be a scale. It fails the second. **Supersedes the AP paragraph in the Coordination note**, which should be updated to say why independence alone didn't save it.
+
+**⚠ Consequence — three formulas lose their driver, and they may converge.** AP currently drives:
+
+| Skill | Formula | covers |
+|---|---|---|
+| Charm | `(AP+PC)/2` | likeability, persuasion, seduction, leadership |
+| Confidence | `(AP+IN)/2` | composure, bluffing, lying, intimidation |
+| Perform | `(PC+AP)/2` | music, acting, oratory |
+
+If AP is simply dropped, the obvious replacements make all three some blend of **PC and IN** — i.e. **three social skills with identical formulas**, differentiated only by level. That may be acceptable (they are genuinely different skills), but it's worth choosing deliberately rather than arriving at it. Options: single-attribute formulas (Charm = PC, Confidence = IN, Perform = PC), or deliberately different blends, with the AP-family quirks supplying the situational modifier on top.
+- [ ] Decide the three replacement formulas; then attributes are **6**: ST EN CO IN PC WP.
+
+## Planned: knowledge acquisition driven by IN + WP quirks (2026-08, Tonio)
+**There is no Fields of Knowledge one-pager yet** — Fields appear only in passing in `skills.md` and the playtest pack, though `fields.json` (26 fields, hierarchical: `name/parent/years/thread`) exists. This is the spec for that page.
+
+- **IN drives speed.** Decide what you want to learn and IN determines how fast you get there. (1986 had IN gate the *acquisition roll* at the end of study; the new emphasis is on rate.)
+- **WP supplies monomania — via quirks, not a formula.** A WP-flavoured quirk lets you pour effort into one field to the neglect of others. Note this is exactly the "would the drawback bite?" test from the Design Document: someone taking *Monomaniacal* has already decided not to care about breadth, so the downside may be **free** — meaning it's a **perk** (paid for) rather than a quirk (traded). Price accordingly.
+- **WP quirks also grant retries** — failing an acquisition roll isn't final if you're stubborn enough. Cheap and characterful, and it hangs off a roll that's already being made.
+- Consistent with the rebalance: IN gains **direct load** (knowledge rate) on top of its formula load, and WP gets its effect **through quirks with stronger effects** rather than through a formula term.
+- [ ] Open: does IN reduce the **years** (which changes cost, at 4 pts/year) or improve the **roll**, or both? Years is the powerful lever and affects the point economy directly.
+
 ## Open: do EN and AP earn their columns? (2026-08, Brett Evill + Tonio)
 **The critique:** character designs don't tend to differ in EN and WP, and an attribute that drives no skills gets ignored by players. Proposal: reduce EN and AP to **quirks giving situational modifiers** — AP because attraction is audience-dependent anyway, EN because it's really just an EF modifier on avoiding exhaustion.
 
