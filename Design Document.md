@@ -400,6 +400,18 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 *(Corrected 2026-08: an earlier version of this note used "Melee 25 → SC 125", forgetting that **Scores cap at 20 for the multiplication**. The conclusion survives; the mechanism is the over-20 EF bonus.)*
 
+### Combat tempo: decisive or ineffectual, never attritional (2026-08)
+
+**The observed figure, across decades of tables: a ForeSight fight takes a few minutes of play, and thirty at the outside. A D&D fight can eat an entire session.** That is behavioural evidence of the kind this document privileges, and the gap is not a matter of pacing skill — it is structural.
+
+**The mechanism is that there is no pool to grind down.** Hit points *are* the war of attrition: if it takes N landed blows to drop someone, combat length is bolted to N and the middle of every fight is arithmetic. ForeSight has a **wound track of 0–6 where 4 is incapacitated**, so a solid hit can simply end it, and the damage rule (`Yield × DC × ½`) puts a serious weapon squarely in range of doing that in one blow.
+
+**So exchanges come out decisive or ineffectual, and rarely in between** — which is also what the QR distribution does on its own: half of all successes are QR4, a quarter of the maximum. Most passes produce a nick, a stumble, a parry that held; occasionally one produces a corpse. The *rhythm* is therefore nothing-nothing-nothing-**everything**, which is both what violence actually looks like and what reads well at a table.
+
+**The consequence worth being explicit about: the decisive phase is *before contact*.** Awareness, initiative, waiting for a trigger, footing, distance, who is armed and who is ready — that is where the small stacked advantages accumulate, and by the time blades cross the fight is largely already decided (see the *Unforgiven* note above). Combat is a **mode you pass through**, not the main loop. If a fight consumes a session, the game is *about* fighting, whatever else its text claims.
+
+> ⚠ **The honest cost, which is real and should be stated in the rules rather than discovered.** Fast and decisive means **lethal**, and lethal changes the play contract: characters avoid fights, negotiate, ambush, run away, and bring overwhelming force when they can't. That is correct for the fiction ForeSight is built to run, and it is genuinely *not* the D&D bargain, where combat is the entertainment and death is rare. A table expecting the latter will be shocked. Tell them first.
+
 ### The quantity that matters is *relative net* success (2026-08)
 
 **SC 100 is certainty of the *roll*, never of the *outcome*.** A melee attack is opposed — his defence can eat part of it or all of it — and even a landed blow is then filtered through location, armour and the wound track. So "I cannot miss" is not "I cannot fail"; it only means the first link in a chain of several holds. The same is true of the shot that is aimed, taken, located, and then absorbed.
