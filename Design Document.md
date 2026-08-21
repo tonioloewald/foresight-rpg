@@ -400,6 +400,18 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 *(Corrected 2026-08: an earlier version of this note used "Melee 25 → SC 125", forgetting that **Scores cap at 20 for the multiplication**. The conclusion survives; the mechanism is the over-20 EF bonus.)*
 
+### The quantity that matters is *relative net* success (2026-08)
+
+**SC 100 is certainty of the *roll*, never of the *outcome*.** A melee attack is opposed — his defence can eat part of it or all of it — and even a landed blow is then filtered through location, armour and the wound track. So "I cannot miss" is not "I cannot fail"; it only means the first link in a chain of several holds. The same is true of the shot that is aimed, taken, located, and then absorbed.
+
+**Which sharpens "adversity favours the expert" considerably.** The point is not the expert's absolute success chance — it's the **gap in net outcomes**. Drop the ease factor on *both* fighters and the expert pays out of surplus while the novice pays out of his chance of doing anything at all; the *ratio* of net successes moves further than either number does. **Skill in this system is expressed as skill-and-counter, not as a solo throw**, so it is always the relative quantity that decides the fight.
+
+**The design exemplar is *Unforgiven*.** Munny does not win because he is fast. He wins on **a stack of small, individually unremarkable advantages** — he shoots the armed man first, he picks the moment, he has the weather and the dark, and above all he is *calm*. The film argues this in its own text: Beauchamp's education is precisely that the man who wins is the one who **took his time**, not the quick one. **A game that models gunfighting as one "Fast Draw" number cannot produce that scene.** A game of many small ease-factor modifiers, each attached to a decision, produces it as a matter of course — a high probability of the expected result, and no certainty.
+
+**And the reason to decompose a task into rolled steps is *narrative legibility*, not fidelity.** This is the real justification for turning aim and movement from free actions into rolls. When the chain is made of real steps, **failure acquires a cause you can name**: you didn't "just miss" — you never settled your bead, or you didn't see him in time, or you went over on the wet cobbles. Success gets the same treatment. One roll yields "you missed"; a chain yields a *story*, at identical probability and no extra bookkeeping, because each step was a decision someone was making anyway.
+
+> ⚠ **The bound.** Decompose only the steps that are **genuine decisions**. A step nobody chooses is not a story, it's a die roll with a costume on — and that way lies the action-point bookkeeping this edition exists to delete.
+
 **And it composes with the footwork rule rather than duplicating it.** Range control is simply *the commonest reason to move in a fight*, so closing on a spearman is an ordinary Coordination task, opposed, that can be failed — and failing it in the wrong place is how you end up on the floor.
 
 ### Framing principle: price the good habit, not the omission (2026-08)

@@ -73,6 +73,8 @@ One roll tells you *whether* and *how well*. Read the **Quality Rating (QR)** of
 | > SC | **QR7** | failure |
 | > SC and a multiple of 10 | **QR10** | fumble — it went *wrong* |
 
+**And succeeding is not the same as prevailing.** A Success Chance of 100 makes the *roll* certain, never the *outcome*: most interesting tasks are **opposed** (his defence meets your attack, better QR taking it) and most consequences are then **mitigated** — by armour, by cover, by location, by what the world does about it. So the quantity that actually decides things is your **net result relative to his**, not your number on its own. This is why stacking several small ease-factor advantages beats holding out for one big one, and why an expert profits from bad conditions: a penalty applied to both of you comes out of his chance of succeeding at all, and merely out of your surplus.
+
 Two hard limits: a roll of **100 is never better than QR7** (even a near-certainty can fail), and **99 is never better than QR4** (you can always succeed, but never brilliantly, on a 99). *(The character sheet's Resolution Table precomputes the four thresholds so you never divide at the table.)*
 
 ### Read one column: fast, good, or much
