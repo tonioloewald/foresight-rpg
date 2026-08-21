@@ -46,20 +46,26 @@ Most shooting in a close fight isn't aimed at anyone. It's **area fire**: blind 
 
 **Aiming isn't a free action or a special case — it's a fire action that points the weapon instead of discharging it.** Roll your Firearms exactly as if shooting, against the same situational modifiers, and if you succeed the weapon is *on the target*. What the roll buys is set by how well you did it:
 
-> **Aiming advantage = 5 − QR**, applied to the shot that follows.
+> **Your bead = 5 − QR of your last aim.** It applies to your **next beat** — including your next *aim*.
 
-| Your aim | Advantage | What it is |
-|---|:--:|---|
+| Your aim rolled | Your bead is now | |
+|:--:|:--:|---|
 | **QR1** | **+4** | the sight picture you dream about |
-| **QR2** | +3 | a good, settled bead |
-| **QR3** | +2 | on target |
+| **QR2** | +3 | settled, breathing out |
+| **QR3** | +2 | on him |
 | **QR4** | +1 | roughly pointed |
-| **QR7** | **−2** | you're aimed at the wrong place and don't know it |
-| **QR10** | **−5**, and **you may take no further action of this kind this round** | lost the target, fumbled the weapon, flinched into the sights |
+| **QR7** | **−2** | aimed at the wrong place, and you don't know it |
+| **QR10** | **−5**, and **no further action of this kind this round** | lost him, fumbled the weapon, flinched into the sights |
 
-**Recoil lands here, where it belongs.** Re-acquiring after a shot is an aim taken *under recoil* — an ordinary EF penalty, larger for a heavier weapon. So rate of fire regulates itself physically: a battle rifle's second aimed shot is genuinely harder than a pistol's, without a separate rate-of-fire rule saying so.
+**A bead is not a sticky bonus — it's a position you have to keep.** Older editions had *taking a bead* hand you a flat **+3** that sat there until you did something else. This doesn't. Your bead lasts **one beat**. Spend that beat shooting and you spend the bead; spend it aiming again and you **re-roll** — at your current bead, so a good bead makes a better one likelier. Spend it on anything else at all and the bead is gone.
 
-**It costs a beat, so it is a real gamble.** Aim-then-fire is two things on the [Intense Action](/intense-action/) ladder — −1 apiece — against a snap shot's +1 for doing exactly one thing. A brilliant bead more than repays it; a poor one leaves you worse off than if you'd simply shot. That is the choice, and it's a different one every round.
+**That makes holding a bead an active sport, and it makes it ratchet.** Aim once for a rough +1, aim again *at* +1 and you'll probably settle to +2 or +3, again and you're at +4. The sniper who lies there breathing isn't sitting on a stale bonus; he is *doing something*, every beat, and can be interrupted at any of them.
+
+**It also caps itself, with no cap.** The ceiling is **+4**, and once you're there another aim can only hold or lose it — a QR4 drops you from +4 to +1. So you aim until you're satisfied and then take the shot, because the next aim is pure risk. Nothing has to forbid over-aiming; the mechanic simply stops paying.
+
+**Recoil lands here, where it belongs.** Firing spends the bead, and re-acquiring is an aim taken *under recoil* — an ordinary EF penalty, larger on a heavier weapon. Rate of fire then regulates itself physically: a battle rifle's second aimed shot is genuinely harder than a pistol's, with no rule saying "heavy weapons are slower." A **moving** target works the same way — tracking him is a penalty on every aim, so a bead on a runner is one you have to keep buying.
+
+**And aiming is not the same as taking more shots.** Beats poured into one shot are *concentration* — you're still doing exactly one thing, and the [Intense Action](/intense-action/) ladder leaves you alone. Beats spent taking *more shots* are division, and the ladder charges for each. Patience is free; greed is not.
 
 **And it makes the aimed shot visible.** A bead is a roll, and a roll is a thing that happens where people can see it — which is why the shooter taking careful aim is also the shooter most likely to be spotted and pre-empted (below).
 

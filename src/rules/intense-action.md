@@ -32,6 +32,8 @@ A statement of intent unfolds as beats — draw · aim · fire, or lunge · wind
 
 > **Repetitions are tasks.** A second shot costs exactly what a second *anything* costs: **−1 to everything, cumulative.** A **secondary** ability — the thing you're only half-attending to — costs **−2** a beat instead of −1.
 
+**But count *outcomes*, not rolls.** The ladder prices how many things you're trying to *accomplish*, not how many beats you spend getting there. Three beats of aiming and then a shot is **one thing** — you are concentrating, and you get the +1 for it. Four shots is **four things**, at −3 apiece. *Advance–attack–retreat* is likewise one thing, as it always was. **Patience is free; greed is not** — which is the distinction that makes a carefully aimed shot better than a snapped one instead of worse.
+
 **Skill still converts into rate — continuously, instead of at breakpoints.** The gunfighter and the novice may both empty a magazine; the difference is what happens when they do. A **Firearms 25** shooter taking two aimed shots is at −1 (EF 4 → SC 100: both land). Going all-in for five puts every shot at −4 (EF 1 → SC 25) — he *can*, and usually shouldn't. A **Firearms 10** shooter tries the same five and is rolling SC 10 a shot: he burns the magazine and accomplishes nothing, which is exactly what that looks like in life. **Skill buys you the option to spend beats, not a ration of them.**
 
 *Melee 18 on the attack: two strikes at −1, or four at −3 if he's desperate to end it. With defence as his secondary, each block is −2 on top.*
