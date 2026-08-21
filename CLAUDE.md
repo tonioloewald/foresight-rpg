@@ -101,6 +101,7 @@ Open (high level): static/build-time rendering for `foresight-table` (so tables 
 
 ## Conventions / preferences
 
+- **The standard is absolute, not relative.** ForeSight began as a delta against the best rules available; since then the question has been *"how about being the best game possible?"* — not the smoothest chargen *compared to everyone else*, but the smoothest we can conceive of. **Consequence: "every game does it this way" is a bug report, not a defence.** Both 2026-08 blind spots (chargen gotchas; free combat movement) were invisible for exactly that reason. Guard: the standard applies to *the goal* — best possible game you can run from memory — never to simulation fidelity, or you get GURPS.
 - Tonio prefers concise, direct responses; challenge assumptions; ask follow-ups when genuinely blocked.
 - Design rationale matters — capture *why*, not just *what* (that's what `Design Document.md` is for).
 - When in doubt on balance, apply the magic balance lenses above and the first principles: **simple mechanics, right-direction/right-magnitude probabilities, and transparency** (the setting seen through the rules is just the setting; never hidden world-shaping).

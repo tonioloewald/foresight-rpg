@@ -16,6 +16,23 @@ A streamlined, updated edition of ForeSight built on the unpublished 2004 2nd ed
 
 This litmus test has driven every refinement of ForeSight for decades, and the family history maps the two ways to fail it. **ForeSight Enhanced (FSE)** overshot into complexity — it went explosively in the wrong direction and is being ignored entirely. **ForePlay** overshot the other way into minimalism — it abandoned Score × EF and collapsed the attributes, losing too much grain — but in the process it produced the **most refined combat sequence** of any version. The new edition aims for the saddle point between those failures: hence we lift ForePlay's combat/initiative sequence wholesale while discarding its dice and its four-attribute model, and keep the proven 2004 chassis everywhere else.
 
+## The standard: absolute, not relative (2026-08)
+
+**ForeSight began as a *delta*.** It started life as the changes worth making to the best game rules available at the time — a set of corrections measured against the competition. Almost every change since has come from a different question: not *how about being better than those?* but **how about being the best game possible?**
+
+**The two questions produce different work, and the difference is not a matter of ambition — it's a matter of what counts as finished.** A relative standard asks for the *smoothest character generation workflow compared to everyone else's*. An absolute one asks for **the smoothest character generation workflow we can conceive of**, and the same substitution applies to every other part: the clearest combat, the least bookkeeping, the fewest rules that carry the most weight.
+
+**The operational consequence is what makes this worth writing down: *"every game does it this way" stops being a defence and becomes a suspicion.*** Under a relative standard, matching the field *is* success, so a universal convention is invisible — there is nothing to compare it against. Under an absolute one, a convention nobody has ever questioned is the most likely place to find an unexamined defect, precisely *because* nobody has examined it.
+
+**That is not theory; it is where the 2026 work has actually come from.** Both of the blind spots found in 2026-08 were of exactly this kind, and both had survived decades of testing without a single complaint:
+
+- **Chargen gotchas** — new players' sheets rebuilt in the first session or two. Nobody logged it, because every RPG of the era did it.
+- **Free combat movement** — a complete klutz manoeuvres in a melee exactly as well as an acrobat. Nobody logged it, because every system does it.
+
+**So the standing heuristic: "par for the course" is a bug report.** Whenever the justification for a rule turns out to be *that's how it's done*, that is the signal to look harder. Comparison with other games remains useful for **finding** problems — they've hit the same walls — and is never sufficient for **settling** whether something is good enough.
+
+> ⚠ **The guard, and it is necessary.** An absolute standard invites infinite polish, and an unbounded "best possible" is how you get **GURPS** — maximal fidelity, permanently unfinished, unplayable from memory. The standard is applied to *the goal*, not to simulation: **the best possible game that you can run from memory and build a character for in minutes.** Every candidate improvement still has to pass the survival criteria (cheap to track, changes only when it matters) and still has to fit on its one-pager. A change that makes the game more faithful and less runnable has failed the absolute standard, not met it.
+
 ## Load-bearing — do not touch
 
 **Score × Ease Factor resolution.** SC = Score × EF, roll D100 under. Playtested to death; works well in the middle of the probability range and acceptably at the edges, which alternative systems (including a clever-dice-math replacement engine that was actually built and tried) do not. Sacred.
