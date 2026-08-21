@@ -38,6 +38,24 @@ A statement of intent unfolds as beats — draw · aim · fire, or lunge · wind
 
 **This deleted three rules and a gotcha.** There is no beats divisor, no rounding, and no "an attribute counts double" patch to stop raw attributes buying almost none. Movement in a firefight is simply another task: *moving and shooting* is two things, at −1 each, and the clumsy character isn't allotted fewer beats — he's just worse at everything he tries to do at once, which he was anyway.
 
+## What stops you, now that nothing caps you
+
+Two things, and neither needs bookkeeping. **The ladder** makes each extra beat worse than the last, so spreading thin has its own price. And **a QR10 ends that line of action for the round** — the botch that jams the weapon, loses the sight picture, or puts you on the floor. Between them there is no need for a cap: you may always try again, and the game simply stops rewarding it.
+
+## Movement is a Coordination action
+
+**Movement in most games is free, automatic, and therefore dramatically inert** — which quietly deletes tripping, slipping, losing your footing on a scree slope, and going down hard on a wet deck. Here it's a task like any other, rolled on **Coordination**.
+
+**It starts easy** — on open, level, dry ground the ease factor is high enough that a competent person essentially never fails, so the rule costs nothing when the ground doesn't matter. **The ground sets the EF**: rubble, scree, ice, a pitching deck, a rooftop, darkness, knee-deep water, a floor full of brass and bodies.
+
+| Your movement | What happens |
+|---|---|
+| **QR1–4** | you get where you were going; a good QR buys ground, position, or arriving *composed* |
+| **QR7** | you lose your balance — off-balance until you recover it (and *balanced* is a firing modifier) |
+| **QR10** | you go down |
+
+**The trade that makes it worth rolling at all:** decline, and you simply move — carefully, slowly, at the GM's discretion, as the *What counts as a task* rule already allows. **Roll, and you're buying speed, distance and position; the stumble is the price of asking for them.** Nobody rolls to walk across a room. Everyone rolls to cross it *fast, under fire, over the furniture*.
+
 ## What counts as a task
 
 **A task is a thing you want *rolled*.** That is the whole test, and it polices itself. A step, a shouted word, drawing a weapon, aiming — these aren't tasks; they happen, with honest consequences (pop up to fire and you're still half-exposed when the round ends). There are no "free actions": a thing is either of no consequence, or it isn't free. But it only costs you *attention* if you cared enough to roll for it. So *advance–attack–retreat* is one task — the attack — and takes no penalty. Decline to make your movement a task and you simply move: noisily, visibly, at the GM's discretion.

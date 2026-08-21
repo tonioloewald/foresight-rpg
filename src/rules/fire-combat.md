@@ -19,7 +19,7 @@ Each of these is the One Rule's "challenge at a glance" made concrete for shooti
 - **How far?** — range (and weapons **shed Damage Class** with distance — see Damage).
 - **How large a target is presented?** — a full silhouette, a head, a hand past a doorframe. Calling a sliver is the same up-front penalty as any called shot.
 - **How well balanced is the shooter?** — set and braced, or off-balance / firing on the move (an [Intense Action](/intense-action/) split).
-- **How carefully aimed?** — taking a bead is spending attention: a secondary action, or your whole focus (concentrate — the sniper).
+- **How carefully aimed?** — taking a bead is its own beat and its own roll; see *Aim is a shot that doesn't go off*, below.
 - **How well is the weapon handled?** — its performance modifier, your familiarity, its fit to the job.
 - **Did you see the last shot land?** — spot your fall of shot and you correct: a bonus to the follow-up.
 - **Did the last shot buck you off target?** — recoil: repeat or rapid fire past the first shot takes a penalty until you re-acquire.
@@ -41,6 +41,27 @@ Most shooting in a close fight isn't aimed at anyone. It's **area fire**: blind 
 ## A shot is several actions
 
 "I'm just going to shoot him" is a *statement of intent*, not a single action — it plays out as discrete beats: **draw, take a bead, fire, clear a jam, drop the magazine, reload**. If shooting is all you're doing they simply happen in sequence, turn by turn, and the cost is in the slow ones. A **reload** is the usual culprit: a heavy or complex weapon's is measured in whole **turns**; a small, simple weapon's in a hit to your **Initiative** for the turn (which already bundles reaction speed and situational awareness). Doing anything *else* while you shoot — moving, covering a second door — is the [Intense Action](/intense-action/) split: primary focus, worse at the rest.
+
+## Aim is a shot that doesn't go off
+
+**Aiming isn't a free action or a special case — it's a fire action that points the weapon instead of discharging it.** Roll your Firearms exactly as if shooting, against the same situational modifiers, and if you succeed the weapon is *on the target*. What the roll buys is set by how well you did it:
+
+> **Aiming advantage = 5 − QR**, applied to the shot that follows.
+
+| Your aim | Advantage | What it is |
+|---|:--:|---|
+| **QR1** | **+4** | the sight picture you dream about |
+| **QR2** | +3 | a good, settled bead |
+| **QR3** | +2 | on target |
+| **QR4** | +1 | roughly pointed |
+| **QR7** | **−2** | you're aimed at the wrong place and don't know it |
+| **QR10** | **−5**, and **you may take no further action of this kind this round** | lost the target, fumbled the weapon, flinched into the sights |
+
+**Recoil lands here, where it belongs.** Re-acquiring after a shot is an aim taken *under recoil* — an ordinary EF penalty, larger for a heavier weapon. So rate of fire regulates itself physically: a battle rifle's second aimed shot is genuinely harder than a pistol's, without a separate rate-of-fire rule saying so.
+
+**It costs a beat, so it is a real gamble.** Aim-then-fire is two things on the [Intense Action](/intense-action/) ladder — −1 apiece — against a snap shot's +1 for doing exactly one thing. A brilliant bead more than repays it; a poor one leaves you worse off than if you'd simply shot. That is the choice, and it's a different one every round.
+
+**And it makes the aimed shot visible.** A bead is a roll, and a roll is a thing that happens where people can see it — which is why the shooter taking careful aim is also the shooter most likely to be spotted and pre-empted (below).
 
 ## Defence: cover, position, and pre-emption
 

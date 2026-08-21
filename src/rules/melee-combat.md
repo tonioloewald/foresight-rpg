@@ -60,6 +60,22 @@ So decide which reality your table is playing in, and read *dodge* accordingly:
 
 Either is legitimate — ForeSight colours no setting. Just tell the table which one, and modify the dodge to match.
 
+## Footwork: giving ground, circling, and going over the furniture
+
+A melee is not two people standing still. Fighters **circle, close, and give ground** constantly — and every bit of that is [movement](/intense-action/), which means **Coordination**, which means it can go wrong.
+
+**This is the gap.** In previous editions of ForeSight — and in essentially every other system — a complete klutz could manoeuvre in a melee exactly as well as an acrobat. Combat movement was free, so the most common physical activity in the game was the one place your body didn't matter. Meanwhile *backing off and tripping over something* is a staple of action cinema **and** of real fights, and it never happened at anybody's table.
+
+**Now it does, and it costs nothing to run.** On a clear floor the ease factor is high and nobody rolls. It bites exactly where it should:
+
+- **Giving ground under pressure** — you are retreating while someone actively works to put you down, so the EF is poor. This is where the klutz goes over.
+- **Fighting on bad footing** — rubble, stairs, a wet deck, a room full of upturned chairs, mud, a slope.
+- **Disengaging from a committed opponent** — turning your back is its own problem; doing it *quickly* is a Coordination task at a penalty.
+
+**QR7 loses your balance; QR10 puts you on the floor** — and being down in a melee is very bad indeed, which is the point. A graceful fighter can break contact, circle to better ground, and re-enter; a clumsy one commits to the fight whether they like it or not, because backing out is a risk they can't afford. **That is a real tactical difference between two characters that the old rules simply couldn't express.**
+
+*This is also where the **graceful** and **nimble** quirks earn their keep, and where Athletics (which absorbed Acrobatics) shows up in an ordinary fight rather than only on a rooftop chase.*
+
 ## Grappling, pinning, and fighting dirty
 
 When a fight collapses into a clinch it stops being about *landing* blows and becomes about **control** — of the other person's limbs, of a weapon, of position. Seizing, pinning, twisting, gouging, choking.
