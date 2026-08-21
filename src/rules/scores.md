@@ -18,7 +18,7 @@ So a character with CO 12, PC 10 has a Firearms *formula* of 11; untrained (leve
 
 ### Talent-light skills (open question)
 
-Some skills reward training far more than raw talent. The classic ForeSight move is to halve the formula for these — **Score = (average of attributes) ÷ 2 + level** — so the untrained baseline is low and almost all of a master's score is earned. *Decision pending: keep this two-tier system (full-average vs. half-average formulas), or flatten to a single full-average rule for simplicity? The 2004 templates went further still, with quarter-average formulas for a few skills (e.g. Confidence at (AP+WP)÷4); those should probably collapse into whichever tiering we keep.*
+Some skills reward training far more than raw talent. The classic ForeSight move is to halve the formula for these — **Score = (average of attributes) ÷ 2 + level** — so the untrained baseline is low and almost all of a master's score is earned. *Decision pending: keep this two-tier system (full-average vs. half-average formulas), or flatten to a single full-average rule for simplicity? The 2004 templates went further still, with quarter-average formulas for a few skills (Confidence, then `(AP+WP)÷4`, was one — both of those attributes have since gone); those should probably collapse into whichever tiering we keep.*
 
 ## Limit (and maximum level)
 

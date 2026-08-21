@@ -40,7 +40,7 @@ New damage **adds to your current level** (a medium 2 plus a heavy 3 is a dying 
 
 ## Stun & Shaken
 
-Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stun floor** (or any **stun-class "S" weapon**, which skips straight to it) forces a **pain-resistance roll — EN or WP**:
+Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stun floor** (or any **stun-class "S" weapon**, which skips straight to it) forces a **pain-resistance roll — WP**:
 
 | The roll | Effect |
 |---|---|

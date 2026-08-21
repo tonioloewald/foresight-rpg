@@ -81,10 +81,10 @@
   },
   {
     "name": "Second Wind",
-    "home": "EN",
+    "home": "WP",
     "path": "either",
     "effect": "Shrug off exhaustion — recover a level of fatigue.",
-    "note": "Hung on the Stamina skill in the source. Stamina is not a skill in this edition, so it's homed on EN; the original's reserve-stamina wording becomes an exhaustion level.",
+    "note": "Hung on the Stamina skill in the source. Stamina is not a skill in this edition and EN is no longer an attribute, so it's homed on WP — which now carries every exhaustion roll. The original's reserve-stamina wording becomes an exhaustion level. Distinct from the *Second Wind* Endurance quirk: the quirk is who you are, this is something you do.",
     "tags": [
       "fantasy"
     ]

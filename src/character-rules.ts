@@ -35,10 +35,11 @@ export const BF_CAT = ['Species', 'Origin', 'General', 'Unusual', 'Intrinsic'] a
 
 /** Starting archetypes — a fast on-ramp, not a class system. */
 export const ARCH: Record<string, Record<string, number>> = {
-  Athlete: { ST: 9, CO: 10, IN: 6, PC: 6, WP: 8 },
-  Scholar: { ST: 6, CO: 6, IN: 10, PC: 9, WP: 7 },
-  Socialite: { ST: 6, CO: 7, IN: 10, PC: 9, WP: 6 },
-  Artist: { ST: 6, CO: 8, IN: 7, PC: 10, WP: 6 },
+  // 40 points each across five attributes (avg 8) — keep in sync with playtest-pack.md
+  Athlete: { ST: 9, CO: 10, IN: 6, PC: 7, WP: 8 },
+  Scholar: { ST: 6, CO: 6, IN: 10, PC: 9, WP: 9 },
+  Socialite: { ST: 6, CO: 7, IN: 10, PC: 10, WP: 7 },
+  Artist: { ST: 6, CO: 9, IN: 7, PC: 10, WP: 8 },
 }
 
 /** Attributes cost 10/point to 12, then 20 — "genetics is not fair". */

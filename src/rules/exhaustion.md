@@ -43,7 +43,7 @@ You clear **one level at a time**, deepest first, and the deeper it is the more 
 | 3 | a good night's sleep → back to 2 |
 | 4–5 | collapse, deep sleep, or outside help |
 
-So a **Spent (3)** character sleeps it off to **Tired (2)**, rests down to **Winded (1)**, and a breather clears the last — deep exhaustion is a slow climb out, not a nap. And past level 3, keep checking EN/WP or exhaustion starts **converting into real wounds** — you can drop from over-exertion, or die of exposure.
+So a **Spent (3)** character sleeps it off to **Tired (2)**, rests down to **Winded (1)**, and a breather clears the last — deep exhaustion is a slow climb out, not a nap. And past level 3, keep checking WP or exhaustion starts **converting into real wounds** — you can drop from over-exertion, or die of exposure.
 
 ## Magic, and the other powers
 
@@ -55,4 +55,4 @@ However it's tracked, the shape is **gather then weave**: a **gather roll** whos
 
 **Divine favour** is spent like the others (temporarily, in the moment), but it isn't refilled by sleep. It's gated by **Piety** — which behaves like a *skill*, except it is driven by **deeds, not experience**: acts of devotion, sacrifice, and living by the god's tenets raise it; betraying them lowers it. A priest doesn't rest to recover standing with their god; they *earn it back*. (Full treatment under Religion.)
 
-*Designer's Note: the stamina/mana/piety point-pools are all gone, and good riddance — a check you can't fudge beats a pool everyone quietly forgets to subtract from. Folding fatigue, magic, and faith into one exhaustion mechanic means one thing to learn, and the "spend a level for +4" lever gives a desperate character a real, costly choice instead of a hard wall. Letting the toughness roll be EN *or* WP means the stoic and the stubborn both endure, by different roads.*
+*Designer's Note: the stamina/mana/piety point-pools are all gone, and good riddance — a check you can't fudge beats a pool everyone quietly forgets to subtract from. Folding fatigue, magic, and faith into one exhaustion mechanic means one thing to learn, and the "spend a level for +4" lever gives a desperate character a real, costly choice instead of a hard wall. The toughness roll used to be *EN **or** WP*, your pick — and that turned out to be the split confessing it wasn't real. Two attributes interchangeable at every point of use are one attribute wearing two labels, so **EN went** and the roll is simply **WP**. Which is honest: staying on your feet is mostly about refusing to stop. What kind of enduring you're good at now comes from **Endurance quirks**, which can say something a number couldn't — sprinter or marathoner, quick to recover or slow, an iron gut. Purely physiological resistance (poison, disease) is **ST**, where willpower is no help at all.*
