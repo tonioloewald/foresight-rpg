@@ -71,10 +71,14 @@ Either is legitimate — ForeSight colours no setting. Just tell the table which
 | **Close** | dagger, cestus, fists, a bottle |
 
 - **At your weapon's own range: +1.** You are fighting the way the thing was designed to be fought with.
-- **One band off: −2.** A longsword in a knife-fight; a dagger against someone at sword's length.
-- **Two bands off: −4.** A two-handed sword in a grapple — you *can* club with the hilt, but it is a badly balanced weapon held by the wrong end.
+- **One band off: −1.** A longsword in a knife-fight; a dagger against someone at sword's length.
+- **Two bands off: −3.** A two-handed sword in a grapple — you *can* club with the hilt, but it is a badly balanced weapon held by the wrong end.
+
+*(Even steps of two: +1, −1, −3.)*
 
 **Both fighters are on the same range, and they rarely want the same one** — which is the whole tactical engine. The spearman wants you out there; the knife-fighter wants to be inside your arms. **Only one of them can be happy at a time**, so a melee is a running argument about distance, and the loser of that argument is either fighting at −2 or spending beats fixing it.
+
+**And identically armed fighters still move, because giving ground is a defence.** Two men with sword and shield both want *Normal*, so reach alone gives them nothing to argue about — but **yielding distance blunts an attack** (see *dodge and give ground*, below), and yielding takes you *out* of your own band. So the defender trades his +1 for a defensive advantage, and the attacker must **spend a beat closing back** to get his own +1 back. Press, yield, close, yield: that exchange is the rhythm of a fight between equals, and it falls out of two rules that were written separately.
 
 **Changing range is a combat move: a beat, and a Coordination roll** (see *Footwork*, below). Against someone actively keeping you out — or dragging you in — it's opposed. So closing on a pikeman is a real, rollable, failable thing, which is exactly how it looks: three men with spears are a problem you solve with a plan, not by walking up to them.
 

@@ -386,6 +386,8 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 **What it buys is a *qualitative* reason to move.** *I have a two-handed sword and he has a dagger: I want him out there, he wants to be inside my guard.* That sentence is the whole tactical situation, it needs no measurement, and it generates the manoeuvring that ForeSight melee has always been good at — previously at the cost of wanting figures on the table. It also means **only one fighter can be happy at a time**, so a melee is a running argument about distance rather than a stationary dice exchange.
 
+**It also answers the *symmetric* case, which is the common one and the one most systems fail.** Two fighters with sword and shield both prefer the same band, so reach alone gives them nothing to contest — and yet real fights between equals are full of movement. Most games have no answer here at all: movement in melee is inert unless somebody has bought a special-case feat for it. ForeSight already had the answer and it only needed connecting: **giving ground is a defence.** Yielding distance blunts an attack *and* takes you out of your own band, so the defender trades his +1 for defensive advantage and the attacker must spend a beat closing back to reclaim his. **Press, yield, close, yield** — the rhythm of a fight between equals, falling out of two rules written independently, with nothing added.
+
 **And it composes with the footwork rule rather than duplicating it.** Range control is simply *the commonest reason to move in a fight*, so closing on a spearman is an ordinary Coordination task, opposed, that can be failed — and failing it in the wrong place is how you end up on the floor.
 
 ### Framing principle: price the good habit, not the omission (2026-08)
