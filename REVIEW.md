@@ -125,13 +125,15 @@ It also preserves the property that matters most: **Piety stays visible on the c
 
 | Attr | Skills driven | Core refs |
 |---|--:|--:|
-| CO | **14** | — |
 | PC | **14** | — |
-| IN | 4 | — |
+| CO | 13 | — |
+| IN | 6 | — |
 | AP | 3 | 1 |
 | ST | 2 | — |
-| WP | **1** (Confidence) | 9 |
+| WP | **0** | 9 |
 | EN | **0** | 10 |
+
+*(Updated after the 2026-08 rebalance below. Originally: CO 14, IN 4, WP 1.)*
 
 **Three findings the numbers force:**
 1. **EN drives zero skills** — the critique is empirically correct.
@@ -141,6 +143,9 @@ It also preserves the property that matters most: **Piety stays visible on the c
 **The framework gap this exposes.** The Coordination note tests *independence* — is this a separate capability, or a deviation from a correlated default? EN passes that easily (endurance athletes aren't strong; see the worked case). But independence is **necessary and not sufficient**: an attribute must also **discriminate between characters in play**. A capability can be genuinely independent *and* still be better modelled as a quirk, if nearly every character sits at the default. That's the same reasoning that folded Acrobatics — and it needs adding to the test.
 
 **⚠ But check the cause before amputating.** CO and PC drive **14 of 20 skills each**; CO also gates pre-emption. If designs don't differentiate on EN, the likelier cause is that two attributes soak up almost all mechanical relevance and everything else is rounding error. The remedy might be **rebalancing what drives what** (does Melee really key off CO rather than ST+CO? should endurance gate anything a player wants to be *good* at?) rather than deleting attributes that are doing real work in the exhaustion system.
+- [x] ~~**First rebalance applied (2026-08, Tonio)**~~ — **Confidence** `(AP+WP)/2` → **`(AP+IN)/2`**, and **Heavy Weapons** `(CO+PC)/2` → **`(IN+PC)/2`** (ranging and observation, not fine motor control). WP is now **deliberately out of every skill formula**, remaining as a *situational modifier* — arguably with stronger effects than it had as a formula term. Net: CO 14→13, IN 4→6, WP 1→0.
+- **Consequence to note:** EN and WP now both drive **zero** skills, which is exactly the pair Brett observed designs don't differ on — but now *by design*. They're a distinct category: **core-resolution attributes** (exhaustion checks, Pain Resistance, willpower rolls) that never appear in a skill Score. Whether that category should exist at all, or collapse to quirks, is the live question.
+- Also note **Melee is already `(ST+CO)/2`**, so brute-force-vs-elegant already works; ST's problem isn't missing from formulae, it's that it never appears *without* CO.
 - [ ] **Decide in this order:** (a) is the CO/PC concentration itself the bug? (b) if EN goes, does WP go with it — and if not, why not, given identical profiles? (c) AP as a situational quirk is separable from both and could go first.
 
 ## Planned: aging quirks (2026-08)

@@ -1,22 +1,325 @@
 [
-  { "name": "Search",          "formula": "(IN+PC)/2", "attributes": ["IN","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["standard"],          "covers": "finding the hidden (everyone has it)" },
-  { "name": "Initiative",       "formula": "(IN+PC)/2", "attributes": ["IN","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["standard"],          "covers": "acting decisively under pressure (everyone has it)" },
-  { "name": "Athletics",        "formula": "(ST+CO)/2", "attributes": ["ST","CO"], "half": false, "limit": 1,   "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "climbing, jumping, running, swimming, throwing (incl. slings), acrobatics, dance" },
-  { "name": "Stealth",          "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["standard"],          "covers": "hiding, moving silently, tailing" },
-  { "name": "Sleight of Hand",  "formula": "CO/2",      "attributes": ["CO"],      "half": true,  "limit": 1.5, "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "palming, pickpocketing, prestidigitation, concealment" },
-  { "name": "Melee",            "formula": "(ST+CO)/2", "attributes": ["ST","CO"], "half": false, "limit": 1,   "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "all close combat, armed and unarmed; LTF per style/weapon" },
-  { "name": "Firearms",         "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 2, "bef": 5, "tags": ["modern","sf"],       "covers": "guns and crossbows; LTF per weapon class" },
-  { "name": "Archery",          "formula": "(CO+PC)/4", "attributes": ["CO","PC"], "half": true,  "limit": 1.5, "cost": 1, "bef": 5, "tags": ["ancient","fantasy"], "covers": "bows and slings; strength-hungry, a ½-skill" },
-  { "name": "Heavy Weapons",    "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["modern","sf"],       "covers": "crew-served weapons, launchers, explosives" },
-  { "name": "Theory",           "formula": "IN/2",      "attributes": ["IN"],      "half": true,  "limit": 1.5, "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "reasoning and all science, via Fields of Knowledge" },
-  { "name": "Repair",           "formula": "(CO+IN)/2", "attributes": ["CO","IN"], "half": false, "limit": 1,   "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "all technical & assembly work — surgery, watchmaking, electronics, mechanics — via Fields" },
-  { "name": "Charm",            "formula": "(AP+PC)/2", "attributes": ["AP","PC"], "half": false, "limit": 1,   "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "likeability, persuasion, seduction, leadership, first impressions (the old Charisma)" },
-  { "name": "Confidence",       "formula": "(AP+WP)/2", "attributes": ["AP","WP"], "half": false, "limit": 1,   "cost": 2, "bef": 5, "tags": ["standard"],          "covers": "composure, persuading, bluffing, lying convincingly, intimidation, disguise" },
-  { "name": "Perform",          "formula": "(PC+AP)/2", "attributes": ["PC","AP"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["standard"],          "covers": "music, acting, oratory, the expressive arts (craft art = Repair + a Field)" },
-  { "name": "Cars",             "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["modern"],            "covers": "driving cars; LTF per model" },
-  { "name": "Bikes",            "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["modern"],            "covers": "motorcycles and bicycles" },
-  { "name": "Boats",            "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["standard"],          "covers": "watercraft, sail and powered" },
-  { "name": "Aircraft",         "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["modern","sf"],       "covers": "fixed-wing and rotary aircraft" },
-  { "name": "Spacecraft",       "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["sf"],                "covers": "spacecraft (just vehicles)" },
-  { "name": "Riding",           "formula": "(CO+PC)/2", "attributes": ["CO","PC"], "half": false, "limit": 1,   "cost": 1, "bef": 5, "tags": ["ancient","fantasy"], "covers": "animal mounts" }
+  {
+    "name": "Search",
+    "formula": "(IN+PC)/2",
+    "attributes": [
+      "IN",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "finding the hidden (everyone has it)"
+  },
+  {
+    "name": "Initiative",
+    "formula": "(IN+PC)/2",
+    "attributes": [
+      "IN",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "acting decisively under pressure (everyone has it)"
+  },
+  {
+    "name": "Athletics",
+    "formula": "(ST+CO)/2",
+    "attributes": [
+      "ST",
+      "CO"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "climbing, jumping, running, swimming, throwing (incl. slings), acrobatics, dance"
+  },
+  {
+    "name": "Stealth",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "hiding, moving silently, tailing"
+  },
+  {
+    "name": "Sleight of Hand",
+    "formula": "CO/2",
+    "attributes": [
+      "CO"
+    ],
+    "half": true,
+    "limit": 1.5,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "palming, pickpocketing, prestidigitation, concealment"
+  },
+  {
+    "name": "Melee",
+    "formula": "(ST+CO)/2",
+    "attributes": [
+      "ST",
+      "CO"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "all close combat, armed and unarmed; LTF per style/weapon"
+  },
+  {
+    "name": "Firearms",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "modern",
+      "sf"
+    ],
+    "covers": "guns and crossbows; LTF per weapon class"
+  },
+  {
+    "name": "Archery",
+    "formula": "(CO+PC)/4",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": true,
+    "limit": 1.5,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "ancient",
+      "fantasy"
+    ],
+    "covers": "bows and slings; strength-hungry, a ½-skill"
+  },
+  {
+    "name": "Heavy Weapons",
+    "formula": "(IN+PC)/2",
+    "attributes": [
+      "IN",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "modern",
+      "sf"
+    ],
+    "covers": "crew-served weapons, launchers, explosives"
+  },
+  {
+    "name": "Theory",
+    "formula": "IN/2",
+    "attributes": [
+      "IN"
+    ],
+    "half": true,
+    "limit": 1.5,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "reasoning and all science, via Fields of Knowledge"
+  },
+  {
+    "name": "Repair",
+    "formula": "(CO+IN)/2",
+    "attributes": [
+      "CO",
+      "IN"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "all technical & assembly work — surgery, watchmaking, electronics, mechanics — via Fields"
+  },
+  {
+    "name": "Charm",
+    "formula": "(AP+PC)/2",
+    "attributes": [
+      "AP",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "likeability, persuasion, seduction, leadership, first impressions (the old Charisma)"
+  },
+  {
+    "name": "Confidence",
+    "formula": "(AP+IN)/2",
+    "attributes": [
+      "AP",
+      "IN"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 2,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "composure, persuading, bluffing, lying convincingly, intimidation, disguise"
+  },
+  {
+    "name": "Perform",
+    "formula": "(PC+AP)/2",
+    "attributes": [
+      "PC",
+      "AP"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "music, acting, oratory, the expressive arts (craft art = Repair + a Field)"
+  },
+  {
+    "name": "Cars",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "modern"
+    ],
+    "covers": "driving cars; LTF per model"
+  },
+  {
+    "name": "Bikes",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "modern"
+    ],
+    "covers": "motorcycles and bicycles"
+  },
+  {
+    "name": "Boats",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "standard"
+    ],
+    "covers": "watercraft, sail and powered"
+  },
+  {
+    "name": "Aircraft",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "modern",
+      "sf"
+    ],
+    "covers": "fixed-wing and rotary aircraft"
+  },
+  {
+    "name": "Spacecraft",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "sf"
+    ],
+    "covers": "spacecraft (just vehicles)"
+  },
+  {
+    "name": "Riding",
+    "formula": "(CO+PC)/2",
+    "attributes": [
+      "CO",
+      "PC"
+    ],
+    "half": false,
+    "limit": 1,
+    "cost": 1,
+    "bef": 5,
+    "tags": [
+      "ancient",
+      "fantasy"
+    ],
+    "covers": "animal mounts"
+  }
 ]
