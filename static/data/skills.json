@@ -178,9 +178,9 @@
   },
   {
     "name": "Charm",
-    "formula": "(AP+PC)/2",
+    "formula": "(IN+PC)/2",
     "attributes": [
-      "AP",
+      "IN",
       "PC"
     ],
     "half": false,
@@ -194,9 +194,8 @@
   },
   {
     "name": "Confidence",
-    "formula": "(AP+IN)/2",
+    "formula": "IN",
     "attributes": [
-      "AP",
       "IN"
     ],
     "half": false,
@@ -206,14 +205,14 @@
     "tags": [
       "standard"
     ],
-    "covers": "composure, persuading, bluffing, lying convincingly, intimidation, disguise"
+    "covers": "composure, persuading, bluffing, lying convincingly, intimidation"
   },
   {
     "name": "Perform",
-    "formula": "(PC+AP)/2",
+    "formula": "(IN+PC)/2",
     "attributes": [
-      "PC",
-      "AP"
+      "IN",
+      "PC"
     ],
     "half": false,
     "limit": 1,
@@ -222,7 +221,7 @@
     "tags": [
       "standard"
     ],
-    "covers": "music, acting, oratory, the expressive arts (craft art = Repair + a Field)"
+    "covers": "music, acting, oratory, the expressive arts (craft art = Repair + a Field); disguise — carrying off a role (the craft of making one is a Field)"
   },
   {
     "name": "Cars",

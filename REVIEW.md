@@ -134,6 +134,18 @@ This is the **second prong** of the attribute test in action (see below): the De
 If AP is simply dropped, the obvious replacements make all three some blend of **PC and IN** — i.e. **three social skills with identical formulas**, differentiated only by level. That may be acceptable (they are genuinely different skills), but it's worth choosing deliberately rather than arriving at it. Options: single-attribute formulas (Charm = PC, Confidence = IN, Perform = PC), or deliberately different blends, with the AP-family quirks supplying the situational modifier on top.
 - [ ] Decide the three replacement formulas; then attributes are **6**: ST EN CO IN PC WP.
 
+## Applied: social skills reformulated off AP (2026-08, Tonio)
+| Skill | Was | Now | Situational modifiers |
+|---|---|---|---|
+| Charm | `(AP+PC)/2` | **`(IN+PC)/2`** | AP-family quirks; EM-flavour quirks |
+| Confidence | `(AP+IN)/2` | **`IN`** | AP / EM quirks — it's *keeping your story straight* |
+| Perform | `(PC+AP)/2` | **`(IN+PC)/2`** | AP / EM quirks |
+
+Charm and Perform now **deliberately** share a formula — chosen, not drifted into; they differ by level and by what they cover. **AP drives no skill at all**, so it's free to become the quirk family. Load is now **PC 14 · CO 13 · IN 8 · ST 2 · EN 0 · WP 0 · AP 0** — IN is a genuine third pillar rather than a minor stat.
+
+**Disguise:** not a separate skill; it was folded into *Confidence*'s coverage, which is now wrong — Confidence is `IN` alone while disguise wants `IN+PC`, i.e. **Perform**. Moved it there. Keeping it folded rather than splitting it out, because it fails the two-way test: a disguise you can't carry off simply fails, so performance competence genuinely transfers. Note 1986 split the **craft** (someone else can do your makeup — their QR averages in) from the **wearing**; that suggests the craft half is a **Field**, the wearing is Perform. Worth preserving that distinction when the Fields page is drafted.
+- [ ] **AP is not yet removed from the attribute list.** It drives nothing now, but deleting it before the quirk family exists would leave looks modelled by *nothing at all*. Sequence: write the AP quirk family, then drop AP from `ATTRS`/`ARCH`/`creating-characters.md`/the sheet — attributes become **6**.
+
 ## Planned: knowledge acquisition driven by IN + WP quirks (2026-08, Tonio)
 **There is no Fields of Knowledge one-pager yet** — Fields appear only in passing in `skills.md` and the playtest pack, though `fields.json` (26 fields, hierarchical: `name/parent/years/thread`) exists. This is the spec for that page.
 
