@@ -119,6 +119,18 @@ This converges with the architecture: the delivery model already requires **each
 
 **The general principle, which will recur:** *a player's own character is not a place to hide information.* Uncertainty belongs in the **world** (what the god will actually do, whether the omen means what you think) and in the **roll** (QR is already a graded-confidence report — see the EM/PC note). It does not belong in a hidden stat. Watch for this whenever a subsystem is tempted to track something about a PC in secret — corruption, sanity, standing, true loyalties. Model the *uncertainty*, not the *concealment*.
 
+## Worked case: EN stays separate — the test refusing a merge (2026-08)
+
+A tester proposed folding **EN into ST and WP**. Rejected, and it's worth recording because every other worked case in this document *merges* something — this one shows the same test cutting the other way, which is evidence it's a test rather than a rationalisation for simplification.
+
+**1 · It fails the two-way transfer test, in both directions and commonly.** Elite endurance athletes are frequently not strong; elite strength athletes frequently have mediocre endurance; at the extremes the training is antagonistic. And the decisive point: **this divergence is the norm, not a pathology.** The whole argument for merging DX+AG was that deft-but-clumsy is the *exception* — so the same reasoning that merged those keeps ST and EN apart. Independent capability → attribute. Deviation from a correlated default → quirk. EN is plainly the former.
+
+**2 · It would concentrate leverage on ST.** EN currently gates exhaustion checks, stamina, and half of Pain Resistance. Folded in, ST would gate melee damage *plus* carrying capacity *plus* exhaustion — exactly the double-leverage failure named as the **bound** on collapsing in the Coordination note. ST becomes the must-max attribute, which is the pathology the merge was supposed to avoid.
+
+**3 · It asserts a falsehood.** Aerobic capacity and maximal force production are distinct physiological systems, not two readings of one. Modelling them as one is failure mode (a) from the 1986 ForeWord, aimed at bodies.
+
+*Process note: the same tester also wants DX and AG re-separated, apparently on the grounds already answered in the Coordination note. Not relitigated here — that argument stands until its pushback is addressed on its merits. But it's telling that one person's two proposals point in opposite directions under a single consistent test: EN separate because the divergence is ordinary, CO merged because it isn't.*
+
 ## Design note: the equipment model (2026-08)
 
 Equipment isn't one thing. Weapons, clothing, vehicles, tools and general gear **aggregate differently**, and that difference is the whole design problem. Three decisions settle it.
