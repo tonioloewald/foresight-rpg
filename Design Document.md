@@ -422,7 +422,21 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 **Two systems can agree on *who wins* and disagree completely on *what winning looks like*.** Put a combat-optimised ForeSight character against a combat-optimised HERO or RuneQuest one and the **probability of prevailing may be equal or better** for the ForeSight character. The *spectrum* is what differs: the HERO/BRP build tends to win **without a scratch**, or with wounds that don't signify. The ForeSight build may come off clean — and stands a fair chance of ending the fight **significantly wounded**.
 
-**The structural reason is that ForeSight does not let you purchase immunity.** Where defence subtracts from damage, an optimiser pushes defence past the damage anybody typically deals, and attacks stop meaning anything at all — the outcome goes binary, bounce or hurt. Here armour absorbs and weapons pierce, and `Yield × DC × ½` keeps a serious weapon in wounding range of anyone. You can be **very good**; you cannot become **unhurtable**. That is the same stance as refusing the disadvantage economy and capping perks by credibility: the system declines to sell the thing that would make the fiction stop working.
+**The structural reason is that ForeSight has a *populated middle*, and the comparison systems mostly don't** (Tonio's reading of them, and both are doing it deliberately):
+
+| | What most outcomes are | What the tail is | Does the middle bite? |
+|---|---|---|---|
+| **HERO** | nothing — *passive defence* is a penalty on incoming attacks, i.e. **"doesn't get hit"** | *(by intent, there isn't one)* — a basic character survives a 9mm to the head, and being hurt means **hit points need topping up** | No. Characters are meant to be **practically unkillable and un-slow-downable** |
+| **RuneQuest / BRP** | *"'tis but a scratch"* — passive **defence** plus active **dodge** and **parry**, and then armour subtracting on top | a critical to the head and **you are dead**; crippling exists but is rare and fixable | Barely — the middle is nominal, so outcomes are effectively **bimodal** |
+| **ForeSight** | **a light wound, and a light wound is a pretty huge bummer** — as is one level of exhaustion | incapacitated, then dying | **Yes. That is the whole design.** |
+
+**And the bimodality isn't a flaw in those systems — it is *forced* by the mitigation stack.** Layer enough machinery that reduces the chance of taking **any** damage — a passive to-hit penalty, a dodge, a parry, then armour subtracting from whatever survives all three — and the probability mass piles up at *zero*. Once nothing normally happens, the only way to make combat frightening again is a **critical, one-shot tail**. The design ends up with *nothing, nothing, nothing, dead* because it built three layers whose job is to produce *nothing*.
+
+**ForeSight's answer is that every defensive layer is *graded* rather than binary.** A defence is an opposed QR that **eats part** of the blow rather than negating it; armour **absorbs** but weapons **pierce**; and what lands arrives as **levels that penalise you immediately**. Nothing in the chain has "and then nothing happens" as its normal output, so the middle of the distribution stays populated and no lethal tail has to be bolted on to make anyone care.
+
+> **Design rule: prefer graded mitigation to binary mitigation.** A layer that *zeroes* outcomes hollows out the middle and forces a lethal tail to compensate. A layer that *reduces* them keeps every outcome in play.
+
+> ⚠ **Calibration constraint that follows, and it is load-bearing: level 1 must already hurt.** A **light wound** and a **single exhaustion level** each need to be a genuine bummer. If either drifts toward "'tis but a scratch", the middle collapses, and everything above — readable state, graduated GM feedback, surrender and flight as live options — collapses with it. **Check this first whenever the damage or exhaustion numbers are recalibrated.**
 
 **But the real prize is what it hands the GM: a feedback channel with intermediate values.** In a game where you are fine until you are dead, the GM's only instrument for *that was a bad decision* is **killing the character** — an instrument that is terminal, unrecoverable, and socially fraught, and which therefore teaches nothing except that the table is dangerous. ForeSight says the same thing quietly and proportionately:
 
