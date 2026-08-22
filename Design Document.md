@@ -488,6 +488,21 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 **And it keeps the GM honest without making them an antagonist.** With only a terminal instrument available, a GM who wants to signal *that was a mistake* must either **fudge** — dishonest, and it hollows out every future roll — or **execute** — adversarial, and it feels personal however fair the dice were. A graduated consequence lets them simply apply the rules and let the result speak, which is what this document asks of every other mechanic (see *don't hide a player's own character from them*). **Mechanics that force the GM to choose between lying and punishing are badly designed mechanics.**
 
+### Closing the circle: the three-hour combat, solved four times over (2026-08)
+
+**The problem is a *time-budget* problem, and that is the honest way to state it.** Session time is the scarcest resource any table has. A fight that eats three hours has not merely been slow — it has **crowded out everything the game is actually for**, and no amount of enjoying the fight changes what it displaced.
+
+**ForeSight attacks it from four directions at once, which is why it doesn't leak.** A single clever rule can always be routed around; four independent mechanisms cannot:
+
+1. **Fights are short.** No hit-point pool to grind, and a QR spread that makes exchanges decisive or ineffectual rather than incremental. There is no middle phase made of arithmetic.
+2. **Fights are worth avoiding.** A light wound is a serious bummer, and you don't recover from it by topping up a number — so the sensible response to a fight is *not to be in one*.
+3. **Fights end before they finish.** Because damage degrades and the state is **readable**, a losing side can see it losing and will surrender, break, or run — so fights conclude at the point of decision rather than running all the way to a body count.
+4. **Avoidance is playable and rewarded.** Awareness, Initiative, waiting on a trigger, position, footing, ambush, and simply talking. The pre-contact phase is where the small advantages stack, so **preparation is where the skill lives** and a well-played approach can settle a fight before anyone rolls to hit.
+
+**The fourth is what makes the first three honest, and it is the one most easily left out.** Making combat unattractive *without* providing something better to do is not design, it's frustration — the table still fights, only now resentfully. This is exactly the friction test applied to combat itself: **combat is friction, and the rewarded countermove is not fighting.** Avoidance has to be *answerable* and *rewarded*, or "combat is dangerous" is just a tax on the only activity you supplied.
+
+> **Net: the game spends its time on what it is about.** Combat stays available, frightening, and quick — and the hours it does not consume go back to the part of the evening that was the reason to turn up.
+
 ### The quantity that matters is *relative net* success (2026-08)
 
 **SC 100 is certainty of the *roll*, never of the *outcome*.** A melee attack is opposed — his defence can eat part of it or all of it — and even a landed blow is then filtered through location, armour and the wound track. So "I cannot miss" is not "I cannot fail"; it only means the first link in a chain of several holds. The same is true of the shot that is aimed, taken, located, and then absorbed.
