@@ -39,13 +39,23 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 **The failure mode at one end is frictionlessness, and it is where the whole medium has drifted.** In Skyrim you cannot even struggle running uphill. The terrain is therefore **scenery**: it can be looked at, and it can never be a *factor*. Nothing in that world is able to talk back to you, so nothing in it means very much. Tabletop has drifted the same way — the systems compared above are the *less* abstract ones; GURPS and D&D go further still.
 
-**But the failure mode at the other end is real, and the market has already run the experiment.** Somebody built a 90s computer RPG that modelled fatigue and bad weather slowing you down. It was **not very popular.** That is evidence and it must be taken seriously rather than explained away: friction done badly is worse than no friction at all, because it converts the world's pushing-back into **paperwork**, and paperwork is not drama.
+**But the same friction succeeds or fails depending on the *medium*, and this is the distinction that actually matters.** Somebody built a 90s computer RPG where fatigue and foul weather slowed you down; it was **not very popular**. Yet trudging exhausted through appalling weather is the **load-bearing** heart of *The Left Hand of Darkness* — Genly Ai and Estraven crossing the Gobrin Ice is the best thing in the book, and it is **nothing but** friction. Identical hardship, opposite results.
 
-**So the distinction the whole edition turns on is this:**
+**The variable is compression: can the medium deliver the *meaning* of an ordeal without making you *undergo its duration*?**
 
-> **Friction must cost you *decisions*, not *bookkeeping*.** It has to be **felt, not administered.**
+| Medium | Compression | So friction becomes |
+|---|---|---|
+| **CRPG** | poor — time passes in real time, and a slowed character means a slowed *player* | **tedium.** The player suffers minutes, not stakes |
+| **Novel** | total — a month of ice is a chapter | **theme.** The ordeal is the point |
+| **Tabletop** | excellent — *if the rules permit it* | **either**, and which one is a design decision |
 
-Fatigue as a number you decrement every hour is administration. **Exhaustion as a level that penalises everything you do, incurred by a check when you push, is friction** — you feel it, you decide about it, and there is nothing to track between the moments when it matters. Same phenomenon, opposite experiences. The **survival criterion** already in this document — *cheap to track, changes only when it matters* — is precisely the filter that separates the two, and it is the reason ForeSight can afford friction that other systems can't.
+**That is not a given for tabletop; it is a requirement we have to meet.** A face-to-face game sits near the novel by nature — the table narrates, elides, and cuts — but a rules set can easily destroy that advantage by demanding resolution at the wrong grain. Forty rolls for a forced march *is* the CRPG failure, reproduced with dice.
+
+> **So the requirement: the unit of resolution must scale to the narrative unit.** A week of hard travel should be a check or three, carrying real stakes and real decisions — push on or make camp, ration or eat, keep the sledge or abandon it — and no rolls at all for the hours in between.
+
+**Which is also the honest reason for the mechanisms this edition chose.** Exhaustion is a short **level track** with a check *when you push*, not a pool drained by the hour; turn length is **elastic**; a pursuit runs at a longer tempo than a fight. Each is a compression device. Fatigue decremented hourly would be the same phenomenon administered at the wrong grain — and the **survival criterion** (*cheap to track, changes only when it matters*) is the filter that catches it.
+
+**Stated as a rule: friction must cost you *decisions*, not *duration* — and not *bookkeeping*.** Felt, not administered, and never merely endured.
 
 **It is also how the setting becomes visible through the rules**, which is the transparency principle from the other side. If climate matters in your world, climate must be able to **reach the dice**; otherwise it is set dressing, however well described. That is what wounds that bite, movement that can fail, aim that can be lost, and reach bands you have to fight over are all *for*. Each one is a place the world gets to answer back.
 
