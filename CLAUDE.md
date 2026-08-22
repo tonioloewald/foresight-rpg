@@ -101,6 +101,7 @@ Open (high level): static/build-time rendering for `foresight-table` (so tables 
 
 ## Conventions / preferences
 
+- **Story comes from friction — but friction must cost *decisions*, not *bookkeeping*.** Remove resistance (Skyrim: you can't even struggle running uphill) and the world becomes scenery that can never be a factor. But friction done as paperwork fails too — the 90s RPG that modelled fatigue and weather was *not very popular*. Test: is this **felt** or **administered**? Exhaustion as a level incurred by a check = friction. A number you decrement hourly = admin. The survival criterion (*cheap to track, changes only when it matters*) is the filter.
 - **The standard is absolute, not relative.** ForeSight began as a delta against the best rules available; since then the question has been *"how about being the best game possible?"* — not the smoothest chargen *compared to everyone else*, but the smoothest we can conceive of. **Consequence: "every game does it this way" is a bug report, not a defence.** Both 2026-08 blind spots (chargen gotchas; free combat movement) were invisible for exactly that reason. Guard: the standard applies to *the goal* — best possible game you can run from memory — never to simulation fidelity, or you get GURPS.
 - Tonio prefers concise, direct responses; challenge assumptions; ask follow-ups when genuinely blocked.
 - Design rationale matters — capture *why*, not just *what* (that's what `Design Document.md` is for).

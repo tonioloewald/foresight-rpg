@@ -33,6 +33,24 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 > ⚠ **The guard, and it is necessary.** An absolute standard invites infinite polish, and an unbounded "best possible" is how you get **GURPS** — maximal fidelity, permanently unfinished, unplayable from memory. The standard is applied to *the goal*, not to simulation: **the best possible game that you can run from memory and build a character for in minutes.** Every candidate improvement still has to pass the survival criteria (cheap to track, changes only when it matters) and still has to fit on its one-pager. A change that makes the game more faithful and less runnable has failed the absolute standard, not met it.
 
+## Story comes from friction (2026-08)
+
+**This is the sentence the combat work keeps arriving back at, so it belongs with the first principles.** A story is something pushing back. Remove the resistance and you don't get a smoother story, you get **no story** — just a sequence of intentions being carried out.
+
+**The failure mode at one end is frictionlessness, and it is where the whole medium has drifted.** In Skyrim you cannot even struggle running uphill. The terrain is therefore **scenery**: it can be looked at, and it can never be a *factor*. Nothing in that world is able to talk back to you, so nothing in it means very much. Tabletop has drifted the same way — the systems compared above are the *less* abstract ones; GURPS and D&D go further still.
+
+**But the failure mode at the other end is real, and the market has already run the experiment.** Somebody built a 90s computer RPG that modelled fatigue and bad weather slowing you down. It was **not very popular.** That is evidence and it must be taken seriously rather than explained away: friction done badly is worse than no friction at all, because it converts the world's pushing-back into **paperwork**, and paperwork is not drama.
+
+**So the distinction the whole edition turns on is this:**
+
+> **Friction must cost you *decisions*, not *bookkeeping*.** It has to be **felt, not administered.**
+
+Fatigue as a number you decrement every hour is administration. **Exhaustion as a level that penalises everything you do, incurred by a check when you push, is friction** — you feel it, you decide about it, and there is nothing to track between the moments when it matters. Same phenomenon, opposite experiences. The **survival criterion** already in this document — *cheap to track, changes only when it matters* — is precisely the filter that separates the two, and it is the reason ForeSight can afford friction that other systems can't.
+
+**It is also how the setting becomes visible through the rules**, which is the transparency principle from the other side. If climate matters in your world, climate must be able to **reach the dice**; otherwise it is set dressing, however well described. That is what wounds that bite, movement that can fail, aim that can be lost, and reach bands you have to fight over are all *for*. Each one is a place the world gets to answer back.
+
+> ⚠ **Be clear-eyed: this is a real cost and it narrows the audience.** Frictionless design is popular for reasons, and a table that wants to carry out its intentions unimpeded will not enjoy this game. The bargain ForeSight offers is that **what happens to you is worth telling someone about afterwards** — and that bargain is only honest if the friction never turns into homework.
+
 ## Load-bearing — do not touch
 
 **Score × Ease Factor resolution.** SC = Score × EF, roll D100 under. Playtested to death; works well in the middle of the probability range and acceptably at the edges, which alternative systems (including a clever-dice-math replacement engine that was actually built and tried) do not. Sacred.
