@@ -55,7 +55,21 @@ This litmus test has driven every refinement of ForeSight for decades, and the f
 
 **Which is also the honest reason for the mechanisms this edition chose.** Exhaustion is a short **level track** with a check *when you push*, not a pool drained by the hour; turn length is **elastic**; a pursuit runs at a longer tempo than a fight. Each is a compression device. Fatigue decremented hourly would be the same phenomenon administered at the wrong grain — and the **survival criterion** (*cheap to track, changes only when it matters*) is the filter that catches it.
 
-**Stated as a rule: friction must cost you *decisions*, not *duration* — and not *bookkeeping*.** Felt, not administered, and never merely endured.
+**And there is a third condition, without which the other two aren't enough: friction must have a *countermove that pays*.** Adding an uphill penalty to Skyrim would improve it **only if reading the ground and finding an efficient route were rewarded**. On its own, a slope penalty is a tax — you go slower, you are mildly annoyed, and nothing you know or notice changes the outcome. Paired with terrain worth reading, the same penalty turns the landscape from an **obstacle** into **information**, and navigation becomes a thing a player can be *good at*.
+
+**This re-diagnoses the 90s game, and more kindly.** Fatigue and weather weren't the mistake. Fatigue and weather **with no rewarded answer** were: the player absorbed the hardship and had no way to be *clever* about it. The genre eventually proved the point — modern survival games are built on exactly that friction and are enormously popular, because they reward route planning, packing, timing your travel, and reading the sky. Same resistance, plus a countermove, minus the duration.
+
+**So the complete test, and all three parts are load-bearing:**
+
+> 1. **Compressible** — the medium can deliver the ordeal's meaning without its duration.
+> 2. **Answerable** — competence can respond to it; there is a *play* available, not just a cost.
+> 3. **Rewarded** — playing that response well visibly pays, so mastery accrues.
+>
+> **Fail (1) and friction becomes tedium. Fail (2) or (3) and it becomes a tax.**
+
+**Every piece of friction this edition has added passes all three**, which is worth checking because it is the reason they feel different from bookkeeping. Wounds bite — and the answer is not being hit: position, disengagement, picking your fight. Movement can fail — and the answer is choosing your ground, and driving *him* onto the bad stuff. A bead can be lost — and the answer is spending beats and picking your moment. Reach bands hurt — and the answer is controlling distance. Exhaustion accumulates — and the answer is pacing yourself and choosing when to push. In each case a good player visibly outplays a poor one, which is what separates friction from a fine.
+
+**Stated as a rule: friction must cost you *decisions*, not *duration* — and not *bookkeeping*. And the decisions must be winnable.** Felt, not administered; answerable, not merely endured.
 
 **It is also how the setting becomes visible through the rules**, which is the transparency principle from the other side. If climate matters in your world, climate must be able to **reach the dice**; otherwise it is set dressing, however well described. That is what wounds that bite, movement that can fail, aim that can be lost, and reach bands you have to fight over are all *for*. Each one is a place the world gets to answer back.
 
