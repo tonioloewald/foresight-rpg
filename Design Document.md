@@ -418,6 +418,20 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 > ⚠ **The honest cost, stated in the rules rather than discovered at the table.** Getting hurt is *expensive* and the loop is unforgiving once it starts, so characters who fight fair and often will accumulate consequences fast. The behaviour that follows is correct for the fiction ForeSight runs — avoid the fight, negotiate, ambush, bring overwhelming force, and disengage early when it turns — but it is genuinely **not** the D&D bargain, where combat is the entertainment, you are at full strength until you drop, and death is rare. A table expecting that will be surprised. Tell them first.
 
+### Same odds, different outcomes — and what that gives the GM (2026-08)
+
+**Two systems can agree on *who wins* and disagree completely on *what winning looks like*.** Put a combat-optimised ForeSight character against a combat-optimised HERO or RuneQuest one and the **probability of prevailing may be equal or better** for the ForeSight character. The *spectrum* is what differs: the HERO/BRP build tends to win **without a scratch**, or with wounds that don't signify. The ForeSight build may come off clean — and stands a fair chance of ending the fight **significantly wounded**.
+
+**The structural reason is that ForeSight does not let you purchase immunity.** Where defence subtracts from damage, an optimiser pushes defence past the damage anybody typically deals, and attacks stop meaning anything at all — the outcome goes binary, bounce or hurt. Here armour absorbs and weapons pierce, and `Yield × DC × ½` keeps a serious weapon in wounding range of anyone. You can be **very good**; you cannot become **unhurtable**. That is the same stance as refusing the disadvantage economy and capping perks by credibility: the system declines to sell the thing that would make the fiction stop working.
+
+**But the real prize is what it hands the GM: a feedback channel with intermediate values.** In a game where you are fine until you are dead, the GM's only instrument for *that was a bad decision* is **killing the character** — an instrument that is terminal, unrecoverable, and socially fraught, and which therefore teaches nothing except that the table is dangerous. ForeSight says the same thing quietly and proportionately:
+
+> *"That was dumb — you died."* versus *"That was dumb — you're medium wounded now."*
+
+**The second one is a lesson; the first is an ending.** The player learns it, keeps playing, and carries the consequence into the next scene — which is also where the wound does its second job, because it is still −(level) to everything when the next thing happens.
+
+**And it keeps the GM honest without making them an antagonist.** With only a terminal instrument available, a GM who wants to signal *that was a mistake* must either **fudge** — dishonest, and it hollows out every future roll — or **execute** — adversarial, and it feels personal however fair the dice were. A graduated consequence lets them simply apply the rules and let the result speak, which is what this document asks of every other mechanic (see *don't hide a player's own character from them*). **Mechanics that force the GM to choose between lying and punishing are badly designed mechanics.**
+
 ### The quantity that matters is *relative net* success (2026-08)
 
 **SC 100 is certainty of the *roll*, never of the *outcome*.** A melee attack is opposed — his defence can eat part of it or all of it — and even a landed blow is then filtered through location, armour and the wound track. So "I cannot miss" is not "I cannot fail"; it only means the first link in a chain of several holds. The same is true of the shot that is aimed, taken, located, and then absorbed.
