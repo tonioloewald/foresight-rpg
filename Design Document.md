@@ -511,6 +511,26 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 > **Net: the game spends its time on what it is about.** Combat stays available, frightening, and quick — and the hours it does not consume go somewhere that can also go wrong, which is the only kind of time worth having back.
 
+### Design brief: Interpersonal — "Interact or Die" (2026-08)
+
+**Source.** A 1986 section survives as **§3.2 Character Interaction** (`legacy/foresight-1986/foresight-1986.md:2825`). A fuller treatment existed in **ForeSight Enhanced**, which is **missing from `legacy/`** and should be hunted down — Tonio gave a talk on this material titled *"Interact or Die"*. Note FSE overshot into complexity generally, so mine it for the **model**, not the machinery.
+
+**What interaction is *about* — four dimensions:** **relationship** (building or maintaining), **information** (getting it), **persuasion**, and **deception**.
+
+**Both parties arrive with a goal**, even if one of them only wants the conversation to end. That is the first thing 1986's version lacks: its NPC is a *demeanour on a table*, not a participant with an aim.
+
+**The load-bearing idea: effects land on any dimension, for either party, intended or not.** You went in for information and the net result is that **you gave** information — they inferred what you were after, and from that your underlying intent — **and annoyed them**, changing a relationship, or creating one where none existed. And all of it runs both ways. **A conversation is an exchange in which every move can move any cell, including cells you weren't playing for.** That is what makes interaction worth mechanising at all, and it is precisely what a single Persuasion roll cannot express.
+
+**Abilities**, in the 2026 five-attribute frame: **PC** (with the empathy quirks) reads, **IN** reasons, **WP** controls. Then the *passive* contributors — **Appearance** (now a quirk family), **Charm**, **Confidence**. The split maps cleanly onto the attribute shape: **WP is what you emit under control, PC is what you read back**, and IN is what you do with it. PC is the feedback loop, exactly as in the five-attribute note.
+
+**Structured, tense interaction can borrow the Initiative rules** — an interrogation, a cross-examination — with empathy modifiers very much applying. **WP is controlling and measuring your own response; PC/Empathy is bomb-damage assessment.** 1986 already gestures at this: the spokesperson makes an Empathy roll *before* to read the demeanour, and *another after* to find out how it landed. Keep that two-roll shape; it is the read-act-read loop.
+
+> ⚠ **The hard constraint, and 1986 states it too:** *"I do not recommend that this system be used against/on PCs, since it is usually more fun to act out the part."* **Mechanics must not turn player input into outcomes, and must never replace talking.** The player says what they say. What the dice decide is **what you perceive**, **what you can control**, and **what happens to NPCs** — never what a player's own character believes, feels, or says.
+>
+> **The concealment distinction that follows** (and it separates this cleanly from the secret-Piety anti-pattern): hiding **how your move landed on someone else** is legitimate — you genuinely don't know, and reading it is what the Empathy roll is *for*. Hiding **your own character's state** is not. 1986 conceals the Charisma QR, which is fine on that test; secret Piety is not.
+
+> ⚠ **The design risk is obvious and must be designed against from the start.** Four dimensions × two parties is eight cells, and eight cells is a spreadsheet — which fails this document's own friction test at *compressible*. The likely resolution: **one roll, one QR; the GM narrates which dimensions moved**, and only *persistent* changes get written down (a relationship level, information gained or leaked). Nothing tracked between the moments it matters.
+
 ### The quantity that matters is *relative net* success (2026-08)
 
 **SC 100 is certainty of the *roll*, never of the *outcome*.** A melee attack is opposed — his defence can eat part of it or all of it — and even a landed blow is then filtered through location, armour and the wound track. So "I cannot miss" is not "I cannot fail"; it only means the first link in a chain of several holds. The same is true of the shot that is aimed, taken, located, and then absorbed.
