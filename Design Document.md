@@ -501,7 +501,15 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 **The fourth is what makes the first three honest, and it is the one most easily left out.** Making combat unattractive *without* providing something better to do is not design, it's frustration — the table still fights, only now resentfully. This is exactly the friction test applied to combat itself: **combat is friction, and the rewarded countermove is not fighting.** Avoidance has to be *answerable* and *rewarded*, or "combat is dangerous" is just a tax on the only activity you supplied.
 
-> **Net: the game spends its time on what it is about.** Combat stays available, frightening, and quick — and the hours it does not consume go back to the part of the evening that was the reason to turn up.
+**But the alternative paths must themselves have friction, stakes and risk — or they are not alternatives, they are exits.** This is where the argument closes on itself: **friction is story, and story is the reward.** Friction is therefore not a cost that some separate reward compensates for; **it is the mechanism by which the reward is produced.** A sneak past the guards that cannot fail, a negotiation that cannot go wrong, a journey that cannot cost anything — these don't *save* the evening from combat, they **empty** it. You have traded a bad three hours for a hollow ten minutes.
+
+**So every path has to be a real one.** Talking your way in must be able to fail badly, and interestingly. Going around must cost time, or footing, or exhaustion, or the element of surprise. Preparation must be spendable and losable. Each path must pass the same three-part test as any other friction — **compressible, answerable, rewarded** — and each must be somewhere that things *go wrong*.
+
+> **The deeper cause of the three-hour combat, and the last one to name: players go where the system has teeth.** If combat is the only subsystem that can genuinely go wrong, a table will fight — not because it wants to, but because fighting is the only place the game answers back. Most systems implement combat to three decimal places and leave persuasion, travel and intrigue as a shrug and a GM ruling. **The fights are long partly because they are the only thing that is really there.**
+
+**Which sets the brief for every chapter still unwritten** — Interpersonal, Travel, Religion, NPCs, and the rest. They do not need combat's page count; they need **combat's consequence**. A social scene that can leave you exposed, a journey that can leave you exhausted in the wrong place, a bargain that binds — each with a countermove that competence answers and skill is rewarded for. Get that right and the game stops needing to *discourage* fighting, because fighting stops being the only place where anything happens.
+
+> **Net: the game spends its time on what it is about.** Combat stays available, frightening, and quick — and the hours it does not consume go somewhere that can also go wrong, which is the only kind of time worth having back.
 
 ### The quantity that matters is *relative net* success (2026-08)
 
