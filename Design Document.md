@@ -566,7 +566,11 @@ This is the payoff, and it was not obvious until the skills were pulled apart:
 
 **That information is an attribute and not a skill is deliberate and consistent**: it sits with Pain Resistance and Stamina, the things everyone does by nature and nobody should be able to *forget to buy* (see *no mandatory purchases*). Reading people is not a purchase; it is what PC is *for*. It also means every character can always attempt the read — which the interaction loop needs, since **PC is the bomb-damage assessment** after every move.
 
-> **Note a real divergence from 1986 to settle when the one-pager is drafted:** the article puts **oration** outside Confidence, calling it *"a combination of literary skill and charisma"*. We currently file oratory under **Perform**. Both readings are defensible — a speech is a performance to an audience rather than a persuasion of a person — but say so explicitly rather than letting it drift.
+**Oratory stays in Perform** *(settled 2026-09)*. The article puts oration outside Confidence, calling it *"a combination of literary skill and charisma"* — and the instinct behind that survives, but the carrier is Perform, for a reason that is mechanical rather than taxonomic:
+
+> **Charm and Confidence work on a *person* whose reaction you can read. Oratory works on a *room* you cannot.** The interaction loop's read-back — PC as bomb-damage assessment — is what those two skills steer by, and it barely functions on a crowd. A speech is committed before you can tell how it is landing, which is a different act, and Perform is where acts-committed-to-an-audience live.
+
+**And the article's "literary skill" half is preserved as the pattern Perform already uses: Perform is *delivery*; a Field is *content*.** Craft art is Repair plus a Field; a disguise is made with a Field and worn with Perform; a speech is written with rhetoric — a Field — and **delivered** with Perform. One rule, three applications, and no need to reach for Charm.
 
 ### The quantity that matters is *relative net* success (2026-08)
 
