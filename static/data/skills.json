@@ -186,11 +186,11 @@
     "half": false,
     "limit": 1,
     "cost": 2,
-    "bef": 5,
+    "bef": 3,
     "tags": [
       "standard"
     ],
-    "covers": "likeability, persuasion, seduction, leadership, first impressions (the old Charisma)"
+    "covers": "being liked — warmth, affability, social grace, presence, first impressions. Moves how they *feel* about you, not what they'll do"
   },
   {
     "name": "Confidence",
@@ -201,11 +201,11 @@
     "half": false,
     "limit": 1,
     "cost": 2,
-    "bef": 5,
+    "bef": 3,
     "tags": [
       "standard"
     ],
-    "covers": "composure, persuading, bluffing, lying convincingly, intimidation"
+    "covers": "getting compliance — persuading, fast-talking, bluffing, lying convincingly, bribery, intimidation, composure under pressure. Moves what they'll *do*, whether or not they like you"
   },
   {
     "name": "Perform",
@@ -217,11 +217,11 @@
     "half": false,
     "limit": 1,
     "cost": 1,
-    "bef": 5,
+    "bef": 3,
     "tags": [
       "standard"
     ],
-    "covers": "music, acting, oratory, the expressive arts (craft art = Repair + a Field); disguise — carrying off a role (the craft of making one is a Field)"
+    "covers": "music, acting, oratory, the expressive arts (craft art = Repair + a Field); disguise and sustained impersonation — carrying off a role (the craft of making one is a Field)"
   },
   {
     "name": "Cars",

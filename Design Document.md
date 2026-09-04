@@ -531,6 +531,43 @@ That is the founding goal restated in arithmetic — *a character buildable in m
 
 > ⚠ **The design risk is obvious and must be designed against from the start.** Four dimensions × two parties is eight cells, and eight cells is a spreadsheet — which fails this document's own friction test at *compressible*. The likely resolution: **one roll, one QR; the GM narrates which dimensions moved**, and only *persistent* changes get written down (a relationship level, information gained or leaked). Nothing tracked between the moments it matters.
 
+### The social skills, in detail (2026-09)
+
+**The BEFs are cut to 3, and the reason is the article's own rule.** *"Interact or Die"*: **any skill use without relevant player input, however inane, incurs a −2 penalty; a player who has a good idea of what he/she wants a given roll to represent and expresses this idea can receive very good positive modifiers."** Written as a penalty that is exactly the mis-framing the *price the good habit* note warns against, so the baseline moves instead: **Charm, Confidence and Perform carry a BEF of 3**, which *is* the "I use my Charm on her" case, and **saying something worth hearing earns it back and more.**
+
+**Why these three and not every skill.** The −2 is stated generally, but for most abilities the input is implicit and adequate — *"I shoot at him"* tells the GM everything. **Social skills are the case where the input is the substance**: what you actually say *is* the attempt, so the bare roll is genuinely a worse attempt rather than a normally-specified one. The BEF should describe the typical application, and for these three the typical unengaged application is the −2 case.
+
+*Worked: a competent professional at Score 15 who just rolls is at EF 3 → **SC 45**. The same professional who says something apt is at EF 5 → **SC 75** — the tradesman anchor. Engagement is worth about thirty points, which is roughly what it's worth in life.*
+
+**And the input has to be *relevant*, which is what stops it inflating.** The article's example is exact: rolling the wine around your mouth and remarking on it works on a villain of good taste and fails on a boor. The size of the bonus is a judgement about **fit to this listener**, not a reward for having spoken — so a player cannot farm it by narrating.
+
+#### Charm and Confidence were overlapping, and the 1986 split is the right one
+
+Both skills claimed "persuasion". They shouldn't. The original definitions are cleaner than what we had:
+
+| | It moves | It is |
+|---|---|---|
+| **Charm** `(IN+PC)/2` | **how they feel about you** | warmth, affability, social grace, presence, first impressions |
+| **Confidence** `IN` | **what they'll do** | persuading, fast-talking, bluffing, lying convincingly, bribery, intimidation, composure |
+| **Perform** `(IN+PC)/2` | **what they believe you are** | music, acting, oratory, the expressive arts; disguise and sustained impersonation |
+
+**Charm makes them like you; Confidence makes them do things.** The two are genuinely independent — the bully who gets compliance without affection, the delightful person nobody obeys — and keeping them separate is what lets a character be one and not the other.
+
+#### The four dimensions are mechanically anchored, not just descriptive
+
+This is the payoff, and it was not obvious until the skills were pulled apart:
+
+| Dimension | Carried by |
+|---|---|
+| **Relationship** | **Charm** |
+| **Persuasion** | **Confidence** |
+| **Deception** | **Confidence** (the quick lie) and **Perform** (the sustained role) |
+| **Information** | **PC**, with the empathy quirks — an *attribute roll*, not a skill |
+
+**That information is an attribute and not a skill is deliberate and consistent**: it sits with Pain Resistance and Stamina, the things everyone does by nature and nobody should be able to *forget to buy* (see *no mandatory purchases*). Reading people is not a purchase; it is what PC is *for*. It also means every character can always attempt the read — which the interaction loop needs, since **PC is the bomb-damage assessment** after every move.
+
+> **Note a real divergence from 1986 to settle when the one-pager is drafted:** the article puts **oration** outside Confidence, calling it *"a combination of literary skill and charisma"*. We currently file oratory under **Perform**. Both readings are defensible — a speech is a performance to an audience rather than a persuasion of a person — but say so explicitly rather than letting it drift.
+
 ### The quantity that matters is *relative net* success (2026-08)
 
 **SC 100 is certainty of the *roll*, never of the *outcome*.** A melee attack is opposed — his defence can eat part of it or all of it — and even a landed blow is then filtered through location, armour and the wound track. So "I cannot miss" is not "I cannot fail"; it only means the first link in a chain of several holds. The same is true of the shot that is aimed, taken, located, and then absorbed.
