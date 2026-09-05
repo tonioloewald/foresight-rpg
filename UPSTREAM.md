@@ -9,6 +9,34 @@ When one lands: mark `✅ RESOLVED (fixed in <pkg>@<version>)` here **and close 
 
 ---
 
+## 💬 INPUT GIVEN — tosijs-coding-practices RFC #10: release structuring
+
+**Issue:** https://github.com/tonioloewald/tosijs-coding-practices/issues/10
+**Our comment:** https://github.com/tonioloewald/tosijs-coding-practices/issues/10#issuecomment-5550682359
+**Given:** 2026-09-05. RFC proposes a **demo-site release branch** + **version release branches**;
+it names foresight as "cowboy" and asks consumers for facts about their own repo.
+
+**What we answered:**
+- **Site branch — yes.** We track **108 of 237 files as generated `docs/` (46%)**, 57 MB, served by
+  **GitHub Pages from `/docs` on `master`** at the custom domain. Migration = repoint Pages + keep
+  `static/CNAME` riding the output. Real, one-time.
+- **Release branches — not applicable**, no caveats. We don't version, tag, or gate.
+- **Reported a migration hazard:** `static/foresight-1986.pdf` is deliberately **gitignored** while
+  `docs/foresight-1986.pdf` is committed — so **the build output is the only tracked copy** of a
+  38 MB asset. A naive `deployBranch` move would drop it from `main`. Asked for a
+  *"check what exists only in your output tree"* migration step.
+- **Asked for one addition to the practice: generated ≠ disposable.** Our `docs/` holds the ePubs —
+  the *product*, not scaffolding — and with no npm in this project's life the site **is** the
+  distribution channel. So the practice should say whether `deployBranch` history is disposable:
+  squash/force-push is right for HTML and wrong for a downloadable artifact.
+- **Flagged for later:** our "releases" will be **editions of a book**, not semver versions — a
+  different curve, not a gated repo that hasn't arrived yet.
+
+**If adopted here:** the work is (a) `deployBranch` in `site.config.ts`, (b) repoint Pages, (c) resolve
+the `foresight-1986.pdf` double-tracking first, (d) confirm CNAME survives.
+
+---
+
 ## ✅ RESOLVED — tosijs-ui: ePub internal cross-links are dead
 
 **Issue:** https://github.com/tonioloewald/tosijs-ui/issues/15 (closed)
