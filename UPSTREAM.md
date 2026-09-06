@@ -35,6 +35,20 @@ it names foresight as "cowboy" and asks consumers for facts about their own repo
 **If adopted here:** the work is (a) `deployBranch` in `site.config.ts`, (b) repoint Pages, (c) resolve
 the `foresight-1986.pdf` double-tracking first, (d) confirm CNAME survives.
 
+**Follow-up 2026-09-06** — https://github.com/tonioloewald/tosijs-coding-practices/issues/10#issuecomment-5560134165
+Corrected our own answer: *"editions of a book"* described **half** the repo. The **software side
+(character generation, campaign/setting support) will change more often than the rules** — so this
+is **two artifacts on two clocks in one `docs/`**: slow edition-shaped rules → the ePub, fast
+continuous app → the live site. Sharpens *generated ≠ disposable* (a deploy-branch squash is right
+for one and destructive to the other).
+
+Withdrew *"release branches not applicable, no caveats"* — still true today, but the **trigger will
+be user data, not maturity**. Partly arrived already: the store key is `foresight_characters_v2`,
+the `_v2` a scar from a real format migration. And the roadmap has entity collections going
+Firestore-backed so **author fixes propagate into live campaigns** — at which point editing the
+rules *is* a deployment against other people's saved characters. Proposed the practice may want a
+slot for **"a project where content edits are deployments."**
+
 ---
 
 ## ✅ RESOLVED — tosijs-ui: ePub internal cross-links are dead
