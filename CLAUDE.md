@@ -38,7 +38,9 @@ A streamlined, modern edition of **ForeSight**, a general-purpose tabletop RPG b
 
 > **The caveat that matters:** 2004 has editorial quality but **zero table evidence** — it was never playtested. 1986 shipped and got played. So "2004 is the base text" must not quietly become "2004's numbers win": where the two disagree on a **number or a probability**, that's an untested 2004 intention meeting 1986's empirical weight. Flag it as a REVIEW.md calibration item rather than defaulting. Prose and structure: 2004, no argument.
 
-Legacy source PDFs/HTML live in `legacy/` and `Abortive Previous Attempt/` (gitignored — large, copyrighted). The 2004 magic rules HTML under `legacy/foresight2004/magic/fundamentals/` is the source for the magic catalog.
+Legacy source PDFs/HTML live in `legacy/` and `Abortive Previous Attempt/` (gitignored — large, copyrighted).
+
+> ⚠️ **Provenance rule — everything in `legacy/` is Tonio's own work and may be mined freely, with two exceptions.** In `legacy/Asgard Bulletin 7/`, **`leads-and-excuses.md` is Brett Evill's** and **`sex-and-role-play.md` is Peter Johnston's** — they share a scan with *Interact or Die* and nothing else. **Do not draw on them** for rules, text, or ideas; they are not ForeSight design intent. Both files carry the warning in their own headers. *(Tonio, 2026-09: "don't steal from them, everything else is mine.")* The 2004 magic rules HTML under `legacy/foresight2004/magic/fundamentals/` is the source for the magic catalog.
 
 ## How to work on it
 
