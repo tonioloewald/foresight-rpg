@@ -40,7 +40,11 @@ A streamlined, modern edition of **ForeSight**, a general-purpose tabletop RPG b
 
 Legacy source PDFs/HTML live in `legacy/` and `Abortive Previous Attempt/` (gitignored — large, copyrighted).
 
-> ⚠️ **Provenance rule — everything in `legacy/` is Tonio's own work and may be mined freely, with two exceptions.** In `legacy/Asgard Bulletin 7/`, **`leads-and-excuses.md` is Brett Evill's** and **`sex-and-role-play.md` is Peter Johnston's** — they share a scan with *Interact or Die* and nothing else. **Do not draw on them** for rules, text, or ideas; they are not ForeSight design intent. Both files carry the warning in their own headers. *(Tonio, 2026-09: "don't steal from them, everything else is mine.")* The 2004 magic rules HTML under `legacy/foresight2004/magic/fundamentals/` is the source for the magic catalog.
+> **Provenance — everything in `legacy/` is Tonio's own work and may be mined freely, with two exceptions.** In `legacy/Asgard Bulletin 7/`, **`leads-and-excuses.md` is Brett Evill's** and **`sex-and-role-play.md` is Peter Johnston's**; they share a scan with *Interact or Die* and nothing else, and neither is ForeSight design intent. Both are close friends of Tonio's.
+> - **Brett's** — don't draw on it without asking. Brett is a long-standing ForeSight tester and permission would be **a conversation, not an obstacle** — but the conversation has to happen first.
+> - **Peter's** — **Peter has since died.** There is no asking, so this is the one piece of material here that cannot be cleared. Don't mine it; treat it with care. It is kept because it was published alongside the others and because it is Peter's.
+>
+> Both files carry this in their own headers, so the caution travels with the content. The 2004 magic rules HTML under `legacy/foresight2004/magic/fundamentals/` is the source for the magic catalog.
 
 ## How to work on it
 
