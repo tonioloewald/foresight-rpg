@@ -231,9 +231,21 @@ Equipment isn't one thing. Weapons, clothing, vehicles, tools and general gear *
 4. **Quirks do not cap, and are qualitative.** They discriminate at *any* attribute level, including the ceiling, and — being narrower than the axis they modify — they can express what a number cannot: *striking in a particular way, and here is who that works on.*
 5. **Quirks are opt-in.** An attribute is a permanent column on every sheet, paid for in complexity by everyone. A quirk costs nothing to the character who doesn't have it.
 
+**Second witness: the Marvel universe (Tonio) — *"attributes are useless differentiator."*** An entire shared universe where the numeric layer is openly decorative: the *Official Handbook* rates everyone 1–7 and **Hulk and Thor are both "Class 100."** Maxed, and indistinguishable by number. Thor, Hulk, Colossus, Juggernaut and She-Hulk are all "super strong" and the ST value separates none of them — **Hulk's rage, Colossus's gentleness, Juggernaut's unstoppability** do, and not one of those is a magnitude.
+
+*And **Daredevil is this document's flaw/perk model in the wild**: blind (a **flaw**, granting no points) + heightened senses (a **perk**, paid for) + Catholic guilt (an **inclination**) + lawyer (**Fields**), over attributes — agile, tough — shared with a dozen others. The non-fungible compensation is visible: the redirected capacity went into the senses, the night work, and the day job.*
+
+**But Marvel also demonstrates the *opposite* failure, and that is what makes the precondition load-bearing.** Those characters are each defined by **a bespoke rule** — Wolverine heals, Juggernaut cannot be stopped once moving, Cyclops has the beam. **Maximum differentiation, unbounded complexity, unlearnable at scale** — which is why superhero RPGs keep collapsing into power-construction kits, and why HERO ends up with characters *"practically unkillable and un-slow-downable."*
+
+| | differentiation | complexity |
+|---|---|---|
+| **Wide numeric spine** (Traveller) | ≈ none | moderate, and paid by everyone |
+| **Bespoke rule per character** (Marvel) | maximum | unbounded, unlearnable |
+| **Narrow spine + familied quirks** | high | **bounded — one *shared* vocabulary** |
+
 > **So: a narrow numeric spine carries the *rule*, and a rich qualitative layer carries the *character*.**
 
-**⚠ The precondition, and it is load-bearing:** this only beats a wide spine if the quirks stay **familied** (grouped, with a combine rule, so stacking is never adjudicated ad hoc) and **bounded** (~3, capped by credibility). Without both it is the GURPS failure this document already names — *"four attributes plus so many special-case faux attributes that the count doesn't matter."* **Narrow spine plus unorganised quirks is GURPS with extra steps.** The family/combine work exists precisely to make the thesis safe.
+**⚠ The precondition, and it is load-bearing:** this only beats a wide spine if the quirks stay **familied** (grouped, with a combine rule, so stacking is never adjudicated ad hoc) and **bounded** (~3, capped by credibility). Without both it is the GURPS failure this document already names — *"four attributes plus so many special-case faux attributes that the count doesn't matter."* **Narrow spine plus unorganised quirks is GURPS with extra steps** — or, per the table above, the **Marvel** end reached by accident: one bespoke rule per character, arrived at a quirk at a time. The family/combine work exists precisely to make the thesis safe.
 
 **And it is a hypothesis under test, not an axiom.** The character-expression ablation (see REVIEW) measures exactly this: the **lift** from adding Fields and quirks to attributes-and-skills. If quirks don't lift, the thesis is wrong and we will know.
 
