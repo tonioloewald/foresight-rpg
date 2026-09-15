@@ -236,16 +236,19 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 
 *Citizens of the Imperium*-era Traveller had a guess-the-SF-character exercise — **six attributes, some skills, and a precis** — and **the precis did a lot of the lifting.**
 
-**Read as evidence for the null hypothesis:** a character sheet may not encode identity in *any* system, and six attributes plus skills is simply not much information. Take that seriously rather than assuming ForeSight will do better.
+**⚠ But Traveller's character representation was *terrible* (Tonio), so its failure is evidence about Traveller — not about character sheets in general.** An earlier version of this note promoted it to a null hypothesis; that over-weighted it. **Traveller is a *floor*, not a *baseline*:** beating something bad proves nothing, so the *"+ skills"* rung below is **not** a meaningful external reference point. The ablation stands on its own logic — the lift curve is interpretable without any comparison system.
 
-**But it is also *predicted* by our own hypothesis.** Traveller had **no quirk layer** — attributes, skills, career history, nothing else. If identity lives in quirks and Fields, a system without them *must* lean on the precis. So their result is consistent with ours behaving differently, and it is the strongest reason to design the test so it can **tell those two cases apart.**
+**Its specific failures are more useful than its result, and two are live risks here:**
+- [ ] **Compressed effective range.** Traveller's 2D6 attributes put nearly everyone at 7 on a nominal 1–15. We say 3–16 but *"most people sit around 7 or 8; a 10 is remarkable"* — a narrow band doing all the discriminating. **Check our range isn't decorative in the same way.**
+- [ ] **Thin skill lists — and ours are thin *by design*.** Traveller's were sparse via term-based acquisition. We **deliberately folded** skills (Acrobatics → Athletics, surgery → Repair) so a sheet has *fewer* entries, arguing Fields and familiarities carry the specificity. **A real tension between simplicity and expressiveness, and the ablation measures what the folding cost:** if the Fields rung lifts and skills doesn't, folding was free; if neither lifts, we bought simplicity with discriminability.
+- Failures we *have* avoided: **no personality layer at all** (we have quirks, albeit unwritten) and **random career generation**, where the sheet records what happened *to* you rather than who you are — two Navy officers with the same rolls being genuinely identical.
 
 **Consequence: absolute accuracy is uninterpretable. Make it an ablation.** *"40% matched"* means nothing alone; run the same characters at increasing layers and read the **lift curve**:
 
 | Sheet contains | Measures |
 |---|---|
 | attributes only | the floor — probably near chance |
-| + skills | **≈ the Traveller condition** |
+| + skills | what folded skills carry — see the folding risk above |
 | + Fields of Knowledge | career / expertise identity |
 | + quirks and flaws | **the layer we predict does the work** |
 
