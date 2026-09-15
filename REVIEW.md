@@ -225,6 +225,16 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 | **Swordsmen** | Lancelot · Fafhrd · Aragorn · Aillas | the melee + reach work; ST vs CO builds |
 | **Faces / con-artists** *(suggested)* | Danny Ocean · Abagnale · Saul Goodman · Sawyer | **the brand-new Charm / Confidence / Perform split** — liked vs obeyed vs believed-to-be-someone-else |
 
+| **Wizards** | Gandalf · Ged · Harry Potter | **the magic power/finesse split** — see below |
+
+**The wizards cluster probes the magic design precisely, because the three sit at different points on the axis:**
+- **Ged** is the **design target** — true names, precision, knowledge-gated power. Literally the *fencer-mage*: IN, Fields, small exact effects.
+- **Gandalf** is the awkward one: most of his power is never spent, and what he *does* all book is **Charm, Confidence, Perform and Fields**. Expect a low-spend social character with a huge unused reserve — arguably correct, and it will *look* wrong on a sheet.
+- [ ] **Harry Potter is the amplitude model we explicitly reject** (spell-per-effect, intensity as the only lever) and **probably cannot be expressed well, by design.** Worth making a **stated limitation rather than a discovered surprise** — tell a reader arriving from those books, in the same breath as naming *"say the magic word harder"* an anti-pattern.
+
+**⚠ Test protocol — strip identity fields from presented sheets** (Tonio, 2026-09: *"omit age and sex from the character sheet"*). **Age** is a real field (paper sheet + `Character.age`) and it is the **most leak-prone one** — Gandalf vs Potter is decidable on age alone. **Sex was never a field** (absent from the paper sheet and the data model; it appears only as something to *decide* in `creating-characters.md` Step 4 prose), so nothing to strip — just don't add it for the test. Same logic as stripping names and flavour text: present mechanical content only.
+- [ ] **Open, one line:** was that also meant as a *general* sheet change — drop **Age** from the sheet entirely? Arguments both ways: age is largely **derivable** (each adult BF is one to five years, so BF count implies it) and aging **quirks** are planned, which argues for keeping it. Recommend **keep the field, strip it for tests**; confirm.
+
 **⚠ Prediction worth recording before running it: within a cluster the *attributes* will not discriminate — the *quirks and fields* will.** Holmes and Poirot are both IN+PC brilliance; what separates them is method, order, vanity, monomania and which Fields they hold. If that holds it cuts two ways: it **validates the 9→5 reduction** (those axes were never doing that work) and it puts the whole expressive burden on **quirk families that are mostly unwritten** — which would **re-prioritise the quirk buildout above everything else queued.**
 
 **Three probes already hiding in the lists:**
