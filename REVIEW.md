@@ -232,8 +232,22 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 - **Gandalf** is the awkward one: most of his power is never spent, and what he *does* all book is **Charm, Confidence, Perform and Fields**. Expect a low-spend social character with a huge unused reserve — arguably correct, and it will *look* wrong on a sheet.
 - [ ] **Harry Potter is the amplitude model we explicitly reject** (spell-per-effect, intensity as the only lever) and **probably cannot be expressed well, by design.** Worth making a **stated limitation rather than a discovered surprise** — tell a reader arriving from those books, in the same breath as naming *"say the magic word harder"* an anti-pattern.
 
-**⚠ Test protocol — strip identity fields from presented sheets** (Tonio, 2026-09: *"omit age and sex from the character sheet"*). **Age** is a real field (paper sheet + `Character.age`) and it is the **most leak-prone one** — Gandalf vs Potter is decidable on age alone. **Sex was never a field** (absent from the paper sheet and the data model; it appears only as something to *decide* in `creating-characters.md` Step 4 prose), so nothing to strip — just don't add it for the test. Same logic as stripping names and flavour text: present mechanical content only.
-- [ ] **Open, one line:** was that also meant as a *general* sheet change — drop **Age** from the sheet entirely? Arguments both ways: age is largely **derivable** (each adult BF is one to five years, so BF count implies it) and aging **quirks** are planned, which argues for keeping it. Recommend **keep the field, strip it for tests**; confirm.
+#### Test protocol: strip *labels*, keep *consequences*
+
+**Settled (Tonio, 2026-09): this is a test-only transform — the fields stay on the real sheet.** Omit *"physical description, name obviously, sex, age, and other trivial correlates."* **"Trivial correlates" is the rule; any enumerated list will be incomplete.**
+
+The line, because over-stripping destroys the test:
+
+| | | |
+|---|---|---|
+| **Labels — STRIP** | name, sex, age, physical description, **any proper noun** | *attached* to a build, not derived from it |
+| **Consequences — KEEP** | attributes, skills, Fields, quirks, wealth | these **are** the build, and they're what's measured |
+
+**Several fields are both mechanically real and revealing, and that's fine.** `Chemistry 3yr · Forensics 4yr · Music 1yr` gives Holmes away — **a pass, not a leak.** The test is not *"make identification hard"*, it is *"make identification depend on mechanics."* If the Fields alone identify him, the build carries distinguishing information, which is exactly the property under test.
+
+- **Equipment is the mixed case:** *generic-ize proper nouns, don't remove the item.* "Walther PPK" is a label; "concealable 9mm, fine (+1)" is the content.
+- **Quirks:** we author the sheets, so use the **shared quirk vocabulary** and never bespoke flavour names — otherwise we're testing our own naming again.
+- **Age stays on the real sheet:** it's largely derivable (each adult BF is one to five years) but **aging quirks** are planned, so the field earns its place.
 
 **⚠ Prediction worth recording before running it: within a cluster the *attributes* will not discriminate — the *quirks and fields* will.** Holmes and Poirot are both IN+PC brilliance; what separates them is method, order, vanity, monomania and which Fields they hold. If that holds it cuts two ways: it **validates the 9→5 reduction** (those axes were never doing that work) and it puts the whole expressive burden on **quirk families that are mostly unwritten** — which would **re-prioritise the quirk buildout above everything else queued.**
 
