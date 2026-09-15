@@ -170,6 +170,50 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
   - *Quick Recovery* / *Slow to Mend* — touches **clearing** exhaustion levels, not acquiring them. Mechanically distinct from every other member and cheap to run.
   - *Second Wind* — intermittent; triggers off carrying an exhaustion level, never its own timer.
   - *Short Sleeper* / *Needs His Nine Hours* — bites on recovery and on long operations.
+## Planned: a review & test process for the RULES (2026-09, Tonio)
+
+**Premise:** the nine-lens code review is oriented to library development and doesn't transfer. Rules need their own lenses. **And the case is stronger than symmetry:** this project has accumulated a pile of *falsifiable distributional claims* — fights end in a few exchanges, the outcome middle is populated, adverse conditions favour the expert, the fencer stays viable at `+1/−1/−3`, a light wound already bites, ambush is decisive — and the Design Document's own evidence standard says **distributional evidence is exactly what the 2026 work lacks.** A test process is the missing half of a standard we already wrote down.
+
+### The lenses (Tonio's five, plus two)
+
+| Lens | Hunts | Runnable by agents? |
+|---|---|---|
+| **Lawyer** | contradictions, double-counting, rules that don't compose | **yes — best yield, start here** |
+| **War-gamer** | dominant strategies, exploits, gaps | yes (a search problem) |
+| **Combat war-game** | what duels / uneven fights / ambushes actually look like | **yes, computationally** |
+| **Blind tester** | comprehension; extrapolation from the page | **only with enforced context isolation** |
+| **Role-player** | can it express oddball characters? | partly — see the matching test below |
+| **+ Survival** | *will anyone bother tracking this?* | needs a table |
+| **+ Regression fixtures** | named behaviours that must not silently break | yes |
+
+- **Lawyer first, on evidence:** it found five real defects in one session *by accident* — the `Score ÷ 5` beats gotcha, the `Build`(5−QR)/`PM`(4−QR) divergence, Charm and Confidence both claiming persuasion, `playtest-pack.md`'s never-synced social formulas, and Firearms BEF double-counting the aimed shot.
+- **Survival is distinct from comprehension:** a rule can be clear, exploit-free, and still get dropped in play — which is what happened to 1986 fatigue tracking.
+- **Regression fixtures:** the **fencer** is the first one (already flagged). Reviews find new problems; fixtures stop old wins breaking when the ladder slope moves.
+- [ ] **Tier by what changed, not by ceremony** (mirrors the code process's *trigger on the work, not the version letter*): a changed **number** → distributional + fixtures; a changed **rule** → lawyer + war-gamer + survival; changed **prose** → blind comprehension; a new **subsystem** → all of it.
+- ⚠ **Ceremony risk:** five lenses on a pre-playtest book generates reports nobody acts on, and `CLAUDE.md` warns against importing ceremony this repo has no use for. **Start with two** (lawyer + simulator); add a third only when one stops finding things.
+
+### Blind testing with local LLMs (Tonio)
+
+**Use deliberately weaker local models** — `ollama` + `llama3:latest` is installed, plus LM Studio. The reason is methodological: **capability is a confound.** A frontier model extrapolates successfully *because* it's smart enough to fill the gap, hiding the defect being hunted. A weak model fails where a tired human fails. **Consistency beats quality** — pin one model so scores compare across revisions.
+
+- **Measure extrapolation and application, not recall.** Best items are cases the page *doesn't* cover but implies: if a weak reader can derive an uncovered case, the page taught the rule; if it only answers what's literally stated, the page listed facts.
+- [ ] **Examples vs statements of principle** — Tonio expects examples to win. Likely true, with a refinement worth testing rather than assuming: examples can *degrade* extrapolation via surface pattern-matching (an example about shooting teaches "this is a shooting rule" when Intense Action is a general attention rule). Hypothesis: **principle once, then an example deliberately *distant* from the obvious case.** Test near-variant vs far-variant on the same battery.
+- Note our one-pagers are **already example-dense**, so the first run may not say "add examples" but **which examples are load-bearing vs decorative**.
+- [ ] **⚠ Validate the instrument first — git history is a labelled test set.** Run the battery against known-bad revisions with already-diagnosed defects: `intense-action.md` before the beats fix, `fire-combat.md` before the bead, `playtest-pack.md` with contradictory social formulas. **If the harness doesn't flag the `Score ÷ 5` breakpoint, the battery is too easy** — and we'd get a clean report on the next gotcha and believe it.
+- **The real prize: a regression harness for prose.** Same model, same battery, re-run on every one-pager edit — comprehension as a number that can go *down*. Only possible because this book is also a build.
+
+### Character-expression test (Tonio's design)
+
+**Phase 1 — recognition.** Express a list of excellent story characters in the rules; hand testers the descriptions and the (shuffled) sheets. Two separate metrics: **discriminability** (can they match sheet → description? — do the rules carry distinguishing information?) and **fidelity** (do they judge it a *good* representation? — a sheet can be matchable and still wrong).
+
+**Phase 2 — generation.** Give descriptions, ask testers to build the character. **Convergence is the metric, and divergence is the finding:** *where* builds scatter names the under-determined axis (agreement on skills but scatter on attributes ⇒ thin attribute guidance).
+
+- [ ] **Run it as a retrospective test of the attribute cut — highest value.** Express the same list under **7 attributes and under 5**, compare matching accuracy. 9→7→5 was argued on the claim that the removed axes didn't discriminate; **matching accuracy is that measurement**, and it currently rests on argument alone.
+- ⚠ **Near-pairs or the test is trivial.** Conan vs Miss Marple is separable by ST alone. It only bites on superficially-similar, actually-different pairs: **Holmes/Poirot, Fafhrd/the Mouser, Ripley/Sarah Connor, Aragorn/Boromir** — which is also where a reduced attribute set is most at risk.
+- ⚠ **Strip names and flavour text.** A tester matches on *"Weaseling in the Beyond"* or a quirk called *Reads People* without reading the mechanics. Mechanical content only, or you're testing our labelling — a real question, but a different one.
+- Local models suit the **matching** task well (closed-form, scoreable, so run it 50× for a distribution). The **fidelity** half needs humans.
+- *Operationalizes the Design Document's existing instinct — "ask objectors for character concepts CO+quirks genuinely can't express" — making it measurable instead of rhetorical.*
+
 - [ ] **NEW SOURCE 2026-09: `legacy/foresight website/` — a 2008 frames site, 271 HTML files.** Built from Tonio's word-processing documents of the time and incomplete, but it is **clean HTML for material we currently hold only as OCR**, which makes it the better extraction target wherever it overlaps. Files encode as **cp1252, not UTF-8** — decode accordingly. Only 19 redundant files; `magic/` is an *earlier, shorter* version of `foresight2004/magic` (50 of 51 pages identical, its `introduction.html` is 470 words vs 2004's 822), so **nothing to gain there — keep using the 2004 magic source.**
   - **`comments.html` — 9,802 words, the 1986 Designer's Commentary in clean text.** Its own header: *"taken from the 1986 edition of ForeSight and has yet to be updated."* We only have this as book OCR. **Highest-value single file in the folder** for a discursive text where OCR hurts most.
   - **`resolution/interaction.html` (974 w)** — the §3.2 Character Interaction text, **clean**. Use this rather than the 1986 OCR when drafting Interpersonal.
