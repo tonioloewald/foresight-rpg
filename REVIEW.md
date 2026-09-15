@@ -238,6 +238,19 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 
 **⚠ But Traveller's character representation was *terrible* (Tonio), so its failure is evidence about Traveller — not about character sheets in general.** An earlier version of this note promoted it to a null hypothesis; that over-weighted it. **Traveller is a *floor*, not a *baseline*:** beating something bad proves nothing, so the *"+ skills"* rung below is **not** a meaningful external reference point. The ablation stands on its own logic — the lift curve is interpretable without any comparison system.
 
+**The decisive example (Tonio): Kimball Kinnison was basically `FFFFFF`** — hex F = 15, i.e. **maxed on all six attributes** — plus a pile of exotic skills. *And he still could not be told apart from Doc Smith's other protagonists except by the precis.*
+
+**That generalises into a real principle: any capped system loses all discriminating power at its ceiling.** A character at maximum on every axis carries zero information beyond *"superman"*, and Smith's protagonists are all supermen, so their sheets converge. **It is the Lancelot problem in its purest form, with evidence attached.**
+
+**We cap too** (attributes 16 human, Score 20 for the multiplication) **but have three layers Traveller didn't, and none of them caps:**
+- **Quirks and flaws** — *qualitative*, not quantitative. Maxed-plus-*Monomaniacal · Known Blade · Iron Gut* ≠ maxed-plus-*Nondescript · Reads People*, and both are legal at `FFFFFF`.
+- **Fields of Knowledge** — unbounded in breadth, don't compete with attributes. Kinnison's Fields aren't Seaton's (Lensman lore vs physics and engineering).
+- **Background factors** — ordered life history, which two supermen don't share.
+- [ ] **Testable prediction: ForeSight should degrade more gracefully at the ceiling than Traveller, *because* of the non-capping qualitative layers** — precisely what the ablation measures. **Add a deliberate *ceiling pair* to the corpus:** Kinnison/Seaton (canonical), **Lancelot/Galahad** (fantasy). Both are maxed-by-definition, so the **attribute rung must score at chance** — making them the cleanest possible test of whether quirks and Fields rescue discriminability.
+
+**⚠ The honest conclusion may be that we're bad at pulp supermen — and that it's a choice, not a defect.** Attribute costs escalate past 12 specifically to discourage maxing (*"genetics is not fair"*), perks are capped by credibility, immunity isn't purchasable. Such a system is built for characters defined by **shape**, not **magnitude**, so `FFFFFF` is outside its expressive range *on purpose*.
+- [ ] **Three accumulating *stated limitations* to declare up front** rather than let a reader discover: **Harry Potter** (amplitude-only magic), **Kimball Kinnison** (the maxed superman), and **Lancelot** as the borderline case where a defining flaw may rescue him.
+
 **Its specific failures are more useful than its result, and two are live risks here:**
 - [ ] **Compressed effective range.** Traveller's 2D6 attributes put nearly everyone at 7 on a nominal 1–15. We say 3–16 but *"most people sit around 7 or 8; a 10 is remarkable"* — a narrow band doing all the discriminating. **Check our range isn't decorative in the same way.**
 - [ ] **Thin skill lists — and ours are thin *by design*.** Traveller's were sparse via term-based acquisition. We **deliberately folded** skills (Acrobatics → Athletics, surgery → Repair) so a sheet has *fewer* entries, arguing Fields and familiarities carry the specificity. **A real tension between simplicity and expressiveness, and the ablation measures what the folding cost:** if the Fields rung lifts and skills doesn't, folding was free; if neither lifts, we bought simplicity with discriminability.
