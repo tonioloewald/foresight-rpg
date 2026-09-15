@@ -232,6 +232,31 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 - **Gandalf** is the awkward one: most of his power is never spent, and what he *does* all book is **Charm, Confidence, Perform and Fields**. Expect a low-spend social character with a huge unused reserve — arguably correct, and it will *look* wrong on a sheet.
 - [ ] **Harry Potter is the amplitude model we explicitly reject** (spell-per-effect, intensity as the only lever) and **probably cannot be expressed well, by design.** Worth making a **stated limitation rather than a discovered surprise** — tell a reader arriving from those books, in the same breath as naming *"say the magic word harder"* an anti-pattern.
 
+#### ⚠ Prior art, and it warns us: Traveller ran this test (Tonio, 2026-09)
+
+*Citizens of the Imperium*-era Traveller had a guess-the-SF-character exercise — **six attributes, some skills, and a precis** — and **the precis did a lot of the lifting.**
+
+**Read as evidence for the null hypothesis:** a character sheet may not encode identity in *any* system, and six attributes plus skills is simply not much information. Take that seriously rather than assuming ForeSight will do better.
+
+**But it is also *predicted* by our own hypothesis.** Traveller had **no quirk layer** — attributes, skills, career history, nothing else. If identity lives in quirks and Fields, a system without them *must* lean on the precis. So their result is consistent with ours behaving differently, and it is the strongest reason to design the test so it can **tell those two cases apart.**
+
+**Consequence: absolute accuracy is uninterpretable. Make it an ablation.** *"40% matched"* means nothing alone; run the same characters at increasing layers and read the **lift curve**:
+
+| Sheet contains | Measures |
+|---|---|
+| attributes only | the floor — probably near chance |
+| + skills | **≈ the Traveller condition** |
+| + Fields of Knowledge | career / expertise identity |
+| + quirks and flaws | **the layer we predict does the work** |
+
+That answers the question that actually matters — **which layer buys expressiveness?** If quirks add 30 points and Fields add 5, the **quirk buildout jumps the queue**. If nothing lifts, sheets don't encode identity and we should stop pretending they do — also a real finding, and cheap.
+
+**And Traveller conflated the two metrics, which is the fixable error.** The precis is the answer key: it must be **absent** during matching and **present** for fidelity.
+- **Discriminability** — sheets only, shuffled, no prose. *Can they be told apart?*
+- **Fidelity** — sheet **and** precis together, deliberately. *Does this fit?*
+
+One test with both materials cannot distinguish *"the stats work"* from *"the prose works."* **Splitting the materials is most of what makes ours worth running.**
+
 #### Test protocol: strip *labels*, keep *consequences*
 
 **Settled (Tonio, 2026-09): this is a test-only transform — the fields stay on the real sheet.** Omit *"physical description, name obviously, sex, age, and other trivial correlates."* **"Trivial correlates" is the rule; any enumerated list will be incomplete.**
