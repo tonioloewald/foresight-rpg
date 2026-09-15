@@ -219,6 +219,26 @@ Equipment isn't one thing. Weapons, clothing, vehicles, tools and general gear *
 
 *The through-line: every combine rule above is a form of "take the relevant one", never "add them up" — except encumbrance, which is the only thing that genuinely accumulates. That's the same instinct as the rest of the system: modifiers stay small, and the interesting decision is which thing applies, not how big a pile you assembled.*
 
+## The thesis: quirks with a narrow attribute spine (2026-09)
+
+**Tonio, closing a long argument:** *"this is why in my opinion quirks with a narrow attribute spine win."* That is the unifying stance behind several decisions that looked separate — 9→5 attributes, the quirk families, Flaw as a carrier, granularity going down. One position, not four.
+
+**The argument, now with outside evidence:**
+
+1. **A numeric axis is uninformative at both ends.** At the **ceiling** it says nothing — Traveller's Kimball Kinnison was effectively `FFFFFF`, maxed on all six, and indistinguishable from Doc Smith's other protagonists. In the **middle** almost everyone sits at the same value, so the effective band is narrow. Magnitude discriminates only in a thin zone between.
+2. **Widening the list does not fix it.** Traveller had six attributes and still couldn't tell its characters apart, while each axis charged every sheet its share of `n(n−1)/2` tradeoffs. More columns, no more discrimination.
+3. **A wide list invites category errors.** Traveller's sixth attribute was **social standing** — a property of your *situation*, not of you, which can change while you don't. Our own test (independent · discriminating · scalar · observer-independent) rejects it outright.
+4. **Quirks do not cap, and are qualitative.** They discriminate at *any* attribute level, including the ceiling, and — being narrower than the axis they modify — they can express what a number cannot: *striking in a particular way, and here is who that works on.*
+5. **Quirks are opt-in.** An attribute is a permanent column on every sheet, paid for in complexity by everyone. A quirk costs nothing to the character who doesn't have it.
+
+> **So: a narrow numeric spine carries the *rule*, and a rich qualitative layer carries the *character*.**
+
+**⚠ The precondition, and it is load-bearing:** this only beats a wide spine if the quirks stay **familied** (grouped, with a combine rule, so stacking is never adjudicated ad hoc) and **bounded** (~3, capped by credibility). Without both it is the GURPS failure this document already names — *"four attributes plus so many special-case faux attributes that the count doesn't matter."* **Narrow spine plus unorganised quirks is GURPS with extra steps.** The family/combine work exists precisely to make the thesis safe.
+
+**And it is a hypothesis under test, not an axiom.** The character-expression ablation (see REVIEW) measures exactly this: the **lift** from adding Fields and quirks to attributes-and-skills. If quirks don't lift, the thesis is wrong and we will know.
+
+**The connection to *story comes from friction* is not decoration.** A character with no quirks has no *internal* friction — no flaw, no tradeoff, nothing pushing back. Kinnison is not merely hard to encode; he is **dramatically inert**. A system built for friction being unable to express him is the system working, not a gap in it. **The characters worth playing are the ones with quirks, which is why the quirk layer is where the expressiveness belongs.**
+
 ## Design principle: granularity goes *down*, not sideways (2026-08)
 
 The same question keeps arriving in different costumes — *shouldn't X be its own attribute / skill?* — and it has one answer: **push the fine grain into the cheaper, narrower mechanism rather than adding an axis everyone has to carry.**
