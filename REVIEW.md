@@ -242,6 +242,14 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 
 **That generalises into a real principle: any capped system loses all discriminating power at its ceiling.** A character at maximum on every axis carries zero information beyond *"superman"*, and Smith's protagonists are all supermen, so their sheets converge. **It is the Lancelot problem in its purest form, with evidence attached.**
 
+**And the sixth attribute was *social standing* (Tonio) — so one of the six wasn't a character attribute at all.** Social standing is a property of your **situation**, not of your body or mind: it can change without *you* changing. So "six attributes" was really **four capability axes** (STR/DEX/END/INT) + **EDU** doing knowledge work that belongs in something like Fields + **one external circumstance**.
+
+**SOC fails our own attribute test harder than anything we removed this session.** The test that emerged: an attribute must be **independent**, must **discriminate between characters**, and must be a **scalar, observer-independent quantity**. AP failed the last for being in the eye of the beholder; **SOC isn't about the character at all.** The framework would have caught it immediately.
+
+**It also explains more of the collapse than the ceiling does alone: their only social axis measured *position*, not *personality*.** Position is nearly worthless for identification — Kinnison and Seaton are both effectively high-standing, Holmes and Watson sit close together — while **disposition** is exactly what distinguishes characters, and Traveller had **no axis for it at all**.
+
+*We already have social standing in the right buckets without needing a rule about it: **background factors** (Privileged Childhood; ForePlay's* Blue Blood *past) and **wealth** as a build-derived field. Neither is an attribute, and both can move during play — correct behaviour for a circumstance.*
+
 **We cap too** (attributes 16 human, Score 20 for the multiplication) **but have three layers Traveller didn't, and none of them caps:**
 - **Quirks and flaws** — *qualitative*, not quantitative. Maxed-plus-*Monomaniacal · Known Blade · Iron Gut* ≠ maxed-plus-*Nondescript · Reads People*, and both are legal at `FFFFFF`.
 - **Fields of Knowledge** — unbounded in breadth, don't compete with attributes. Kinnison's Fields aren't Seaton's (Lensman lore vs physics and engineering).
