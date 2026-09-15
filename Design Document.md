@@ -251,6 +251,32 @@ Equipment isn't one thing. Weapons, clothing, vehicles, tools and general gear *
 
 **The connection to *story comes from friction* is not decoration.** A character with no quirks has no *internal* friction — no flaw, no tradeoff, nothing pushing back. Kinnison is not merely hard to encode; he is **dramatically inert**. A system built for friction being unable to express him is the system working, not a gap in it. **The characters worth playing are the ones with quirks, which is why the quirk layer is where the expressiveness belongs.**
 
+## Open: a structure for personality — filling the Inclination slot (2026-09)
+
+**Tonio:** *"The one thing we haven't formally represented is personality. This shouldn't be a constraint on players but it's worth considering as a structure. Needs, Sense of Self, Big Five…"*
+
+**We already have the carrier; we lack the vocabulary.** The five-carrier table lists **Inclination** — *what you'll choose to do; persistent, shifts through play rather than purchase; free; constrains nothing mechanically* — and it has sat unpopulated. So the question isn't *should personality be represented*, it's **what fills Inclination.**
+
+**Big Five is the wrong shape, by this document's own argument.** Five rated axes is a **wide numeric spine**, and the thesis above establishes that those don't differentiate: high-O/low-A is Traveller's problem relocated to personality. It is empirically respectable and **descriptive** — it says how a person varies from a population mean, not what they do when the door opens. We want **generative**.
+
+**Needs and Sense of Self are generative.** A need produces action; conflicting needs produce scenes. Self-concept is the most potent of the three, because the **gap between self-image and the actual sheet is where character lives** — Lancelot believes he is the perfect knight and isn't, which is his whole story. (It also meets the perk note: the strikingly good-looking character who never learned to cross a road safely does not *know* that's why.)
+
+**Proposed shape — three sentences, no numbers:**
+
+| | | Generates |
+|---|---|---|
+| **Need** | what they want, now | action |
+| **Self-image** | what they believe they are | friction, via the gap against the sheet |
+| **Line** | what they won't do | the hard choice |
+
+**The third is this game's founding principle made operational.** *Willing* is already declared at least as important as *able* — Indiana Jones is able but not willing to destroy the Ark with a rocket launcher. **A stated line is the most playable personality datum available, and costs no mechanics.**
+
+**Two payoffs beyond character creation:**
+- **A GM tool for instant NPCs** (already on the roadmap): three sentences is fast enough to generate at the table and specific enough to play consistently across sessions.
+- **The fidelity rubric for the character-expression test.** Need / self-image / line are essentially what a precis conveys, so scoring *"is this a good representation?"* stops being vibes.
+
+> ⚠ **The failure mode, named so it is never adopted: never roll it.** Pendragon rolls personality traits, taking the choice out of the player's hands — the same violation as secret Piety in a different costume (see *don't hide a player's own character from them*). **No rolls, no bonuses for acting in character, no mechanical reward.** The moment personality pays, it stops being personality and becomes a build — and the disadvantage-economy pathology arrives by the back door.
+
 ## Design principle: granularity goes *down*, not sideways (2026-08)
 
 The same question keeps arriving in different costumes — *shouldn't X be its own attribute / skill?* — and it has one answer: **push the fine grain into the cheaper, narrower mechanism rather than adding an axis everyone has to carry.**
