@@ -234,14 +234,15 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 
 #### Prior art #2 — the Red Letter Media test (Tonio, 2026-09)
 
-In RLM's Star Wars prequel reviews, people are asked to **describe the major characters without mentioning their name or what they do.** For the original trilogy: no trouble. For the prequels: **nobody knows where to start.**
+In RLM's Star Wars prequel reviews, people are asked to **describe the major characters without mentioning their name or their appearance** *(corrected 2026-09 — an earlier version of this note had it as "or what they do", which is wrong and weakened the finding)*. **Behaviour and role are permitted.** For the original trilogy: no trouble. For the prequels: **nobody knows where to start.**
 
-**That is our protocol run on fiction instead of sheets, and it independently reaches the Kinnison finding:** the exercise isn't too hard — **some characters are hollow.**
+**That is our protocol run on fiction instead of sheets, and it independently reaches the Kinnison finding:** the exercise isn't too hard — **some characters are hollow.** And because role *is* allowed, the result is **worse** than the mis-stated version implied: not *"stripping his job left nothing"* but **"even knowing his job leaves nothing."**
 
 **It also validates the proposed Need / Self-image / Line structure.** Han Solo, no name, no job: *wants money; believes he's a cynic who works alone; won't actually abandon his friends* — and the **Line is his whole arc**. Qui-Gon Jinn, no name, no job: *…calm?* Nothing to hold.
 
 - [ ] **Adopt it as a corpus admission criterion.** Before a character enters the expression test, run the RLM check: **describable without name or role?** If not, they go in the **negative-control** group with Kinnison, not the test set — otherwise we measure our sheets against subjects with nothing to encode. *(It also explains Kinnison crisply: describe him without name or deeds and you get "extremely capable and morally upright" — a rating, not a description.)*
-- **⚠ And it exposes a tension in our own protocol: RLM strips *"what they do"*; we deliberately keep skills and Fields.** Holmes-identified-by-`Chemistry · Forensics · Music` is identification by what he does, which RLM would disallow. Both are valid but they measure **different things**, and the ablation's rungs split on exactly that line:
+- **No conflict with our protocol — they agree.** RLM permits what a character *does*, so Holmes-identified-by-`Chemistry · Forensics · Music` is entirely within their rules. And their **appearance** exclusion maps onto our strip rule almost exactly: **appearance is a trivial correlate; behaviour is a consequence.** Same move, arrived at independently.
+- **The competence/personality split still holds, on better logic.** Han Solo and Qui-Gon Jinn *both* have perfectly clear roles, available to the describer in both cases — so **role is not what separates the describable from the hollow.** If it were, both would work. What remains is personality. The ablation's rungs split on that line:
 
 | Rungs | Measures |
 |---|---|
