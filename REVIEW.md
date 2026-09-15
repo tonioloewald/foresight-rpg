@@ -232,6 +232,24 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 - **Gandalf** is the awkward one: most of his power is never spent, and what he *does* all book is **Charm, Confidence, Perform and Fields**. Expect a low-spend social character with a huge unused reserve — arguably correct, and it will *look* wrong on a sheet.
 - [ ] **Harry Potter is the amplitude model we explicitly reject** (spell-per-effect, intensity as the only lever) and **probably cannot be expressed well, by design.** Worth making a **stated limitation rather than a discovered surprise** — tell a reader arriving from those books, in the same breath as naming *"say the magic word harder"* an anti-pattern.
 
+#### Prior art #2 — the Red Letter Media test (Tonio, 2026-09)
+
+In RLM's Star Wars prequel reviews, people are asked to **describe the major characters without mentioning their name or what they do.** For the original trilogy: no trouble. For the prequels: **nobody knows where to start.**
+
+**That is our protocol run on fiction instead of sheets, and it independently reaches the Kinnison finding:** the exercise isn't too hard — **some characters are hollow.**
+
+**It also validates the proposed Need / Self-image / Line structure.** Han Solo, no name, no job: *wants money; believes he's a cynic who works alone; won't actually abandon his friends* — and the **Line is his whole arc**. Qui-Gon Jinn, no name, no job: *…calm?* Nothing to hold.
+
+- [ ] **Adopt it as a corpus admission criterion.** Before a character enters the expression test, run the RLM check: **describable without name or role?** If not, they go in the **negative-control** group with Kinnison, not the test set — otherwise we measure our sheets against subjects with nothing to encode. *(It also explains Kinnison crisply: describe him without name or deeds and you get "extremely capable and morally upright" — a rating, not a description.)*
+- **⚠ And it exposes a tension in our own protocol: RLM strips *"what they do"*; we deliberately keep skills and Fields.** Holmes-identified-by-`Chemistry · Forensics · Music` is identification by what he does, which RLM would disallow. Both are valid but they measure **different things**, and the ablation's rungs split on exactly that line:
+
+| Rungs | Measures |
+|---|---|
+| attributes · skills · Fields | **competence identity** — a distinct *professional*? |
+| + quirks and flaws | **personality identity** — a distinct *person*? |
+
+**RLM's result says the second is what makes a character memorable.** So the quirk rung isn't merely *a* rung — it answers whether the sheet describes **a character at all**, while the earlier rungs answer whether it describes a competent stranger. **Report the two separately.**
+
 #### ⚠ Prior art, and it warns us: Traveller ran this test (Tonio, 2026-09)
 
 *Citizens of the Imperium*-era Traveller had a guess-the-SF-character exercise — **six attributes, some skills, and a precis** — and **the precis did a lot of the lifting.**
