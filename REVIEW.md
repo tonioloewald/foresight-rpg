@@ -214,6 +214,25 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 - Local models suit the **matching** task well (closed-form, scoreable, so run it 50× for a distribution). The **fidelity** half needs humans.
 - *Operationalizes the Design Document's existing instinct — "ask objectors for character concepts CO+quirks genuinely can't express" — making it measurable instead of rhetorical.*
 
+### Character corpus: clusters within a role (Tonio, 2026-09)
+
+**The unit is a cluster of same-role characters, not arbitrary pairs** — it controls for *function*, so a tester can't shortcut via "this one's the detective" and has to match on *how*. Tonio's starting clusters:
+
+| Cluster | Characters | What it probes |
+|---|---|---|
+| **Detectives** | Holmes · Columbo · Poirot · Marlowe | IN/PC brilliance vs method vs street |
+| **Action / spy** | Bond · Ethan Hunt · Bourne · John McClane | resources vs team vs reflex vs punishment |
+| **Swordsmen** | Lancelot · Fafhrd · Aragorn · Aillas | the melee + reach work; ST vs CO builds |
+| **Faces / con-artists** *(suggested)* | Danny Ocean · Abagnale · Saul Goodman · Sawyer | **the brand-new Charm / Confidence / Perform split** — liked vs obeyed vs believed-to-be-someone-else |
+
+**⚠ Prediction worth recording before running it: within a cluster the *attributes* will not discriminate — the *quirks and fields* will.** Holmes and Poirot are both IN+PC brilliance; what separates them is method, order, vanity, monomania and which Fields they hold. If that holds it cuts two ways: it **validates the 9→5 reduction** (those axes were never doing that work) and it puts the whole expressive burden on **quirk families that are mostly unwritten** — which would **re-prioritise the quirk buildout above everything else queued.**
+
+**Three probes already hiding in the lists:**
+
+- [ ] **Columbo — can the system express *"actually sharp, performs dim"*?** His defining trait isn't an attribute; it's **Perform + a quirk (*Underestimated*)**. The best single expressiveness test in the corpus.
+- [ ] **John McClane — a direct probe of this session's EN removal.** Absorbing punishment and continuing was EN's job and is now **ST** (robustness) + **WP** (keeps going) + **Endurance quirks**. If McClane can't be built distinctly from Ethan Hunt, the removal cost something real — a far better test than argument.
+- [ ] **Lancelot — the awkward case, usefully.** *"The best knight in the world"* is a high-everything build: expensive and dull, with nothing but his flaw to make it interesting. Tests whether **quirks and flaws can carry a character whose capability is undifferentiated.**
+
 ### Apply the matching test to the item-modification system (Tonio, 2026-09)
 
 *"Which of these looks like Andúril or the Millennium Falcon?"* — same protocol as the character test, and **the better pilot**: small corpus, sheets that are a handful of numbers, far less flavour text to leak the answer. Validate the methodology here before building character batteries.
