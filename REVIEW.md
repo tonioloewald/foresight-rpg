@@ -232,6 +232,21 @@ Charm and Perform now **deliberately** share a formula — chosen, not drifted i
 - **Gandalf** is the awkward one: most of his power is never spent, and what he *does* all book is **Charm, Confidence, Perform and Fields**. Expect a low-spend social character with a huge unused reserve — arguably correct, and it will *look* wrong on a sheet.
 - [ ] **Harry Potter is the amplitude model we explicitly reject** (spell-per-effect, intensity as the only lever) and **probably cannot be expressed well, by design.** Worth making a **stated limitation rather than a discovered surprise** — tell a reader arriving from those books, in the same breath as naming *"say the magic word harder"* an anti-pattern.
 
+#### Worked confirmation on two clusters (Tonio, 2026-09)
+
+**Skills don't differentiate, in either cluster.** *"Han Solo uses a blaster well but so does Leia and aside from tech so does Chewbacca"* — yet all three are trivially separable by **voice, quote, personality, manner**, any one alone. And *"Bourne vs Hunt vs Bond comes down to personality, edge case abilities, and things like needs."* All three have spy skills maxed.
+
+- [ ] **Testable prediction for the ablation, from this:** the action/spy cluster should show **near-zero lift at the skills rung and large lift at the quirk rung.** If that pattern appears, the thesis is confirmed on data rather than argument.
+
+**"Edge case abilities" = the perk layer — and here it carries the *competence* differentiation skills can't.** Bourne's reflexive training he doesn't remember acquiring; Hunt's absurd physical envelope; Bond's gadget access and social licence. Base skills identical, perks separate them. **So the quirk/perk rung does double duty in this cluster: competence *and* personality.**
+
+**Both of Bourne's defining traits are *Lines*:** *"avoids killing people in general especially bystanders"*; *"doesn't want to do anyone's bidding."* He is defined almost entirely by **refusals**, and the plot is his attempt to stop being an instrument.
+
+- **This upgrades Need/Self-image/Line from a checklist to a structure: *which field dominates is itself characterizing.*** **Need**-dominant: Macbeth, Gatsby. **Self-image**-dominant: Lancelot, Don Quixote. **Line**-dominant: Bourne, Ned Stark. A second axis for free, and it predicts *which* field a given character's sheet most needs filled.
+
+**And *"Bond has no apparent needs beyond libido"* is a finding about Bond.** He sits **between Han Solo and Kinnison** — not hollow (manner, taste, appetite) but thin on interiority, which is exactly why he has been recastable across sixty years and wildly different actors: **there is no fixed person to contradict.**
+- [ ] **Include Bond deliberately as a *mid-hollowness* case**, so the corpus grades **hollow / thin / rich** and the test has resolution rather than a binary pass-fail against Kinnison.
+
 #### Prior art #2 — the Red Letter Media test (Tonio, 2026-09)
 
 In RLM's Star Wars prequel reviews, people are asked to **describe the major characters without mentioning their name or their appearance** *(corrected 2026-09 — an earlier version of this note had it as "or what they do", which is wrong and weakened the finding)*. **Behaviour and role are permitted.** For the original trilogy: no trouble. For the prequels: **nobody knows where to start.**
