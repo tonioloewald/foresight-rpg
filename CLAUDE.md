@@ -13,7 +13,7 @@
 >
 > **This repo is mostly a *book*, not a library** — the deliverable is rules prose, a data layer,
 > and a static site/ePub. So the practices bite unevenly: `cross-project.md` (this project
-> consumes tosijs-ui and files issues against it — see `UPSTREAM.md`), `code-quality.md` and
+> consumes tosijs-ui and files issues against it — see the virta board), `code-quality.md` and
 > `web-components.md` (`bundle.ts`, `src/character-sheet.ts`, `entity-views.ts`) apply directly.
 > `testing.md` / `releasing.md` largely don't — there is no test runner and nothing is published
 > to npm; the build + a look at the dev site is the gate. Don't import ceremony this repo has no
@@ -23,7 +23,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **ForeSight RPG.** Context for any AI agent (Claude Code, Cowork, etc.) continuing this project. Read this first, then `Design Document.md` (the design bible) and `REVIEW.md` (the running to-fix list).
 
-**Talking to other repos:** file a GitHub issue on the target repo — never edit it from here — and mirror it in `UPSTREAM.md` with the issue URL. See `cross-project.md`.
+**Where the work lives: the virta board.** This repo is enrolled (2026-10-04), so `virta project brief` in the checkout says what is in progress, ready and newly filed, and `virta list "project:foresight-rpg"` is the backlog. Tasks are tagged, not filed: `status:` (no tag = inbox), `priority:`, `kind:`, `area:`, `size:`. Pick work up with `virta work #n`, finish with `virta review #n "what to look at"` when a person should eyeball it or `virta done #n "…"` when only the build can tell. **`Design Document.md` stays the design bible** — the board holds work, not reasons, so a decision and its *why* still go in the design doc and the card cites it.
+
+**Talking to other repos:** file it on the **virta board** — `virta new "…" --project tosijs-ui --tags kind:bug,priority:high` — never edit another repo from here. The board (https://virta.tosijs.net) replaced GitHub issues, `TODO.md` and `UPSTREAM.md` across the ecosystem, and unlike `UPSTREAM.md` it **is** a channel: the ask lands on the owner's board where they see it. Their workflow only changes when they onboard, so a GitHub issue is still the right move for a repo that hasn't. See `cross-project.md`.
 
 ## What this is
 

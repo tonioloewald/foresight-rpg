@@ -1,8 +1,15 @@
 # Upstream — issues raised against other repos
 
+> **Superseded as the live list (2026-10-04).** The ecosystem moved to the **virta board**
+> (https://virta.tosijs.net), and every entry below is now a card under `project:foresight-rpg`
+> tagged `upstream:<repo>#<n>` — `virta list "project:foresight-rpg upstream:*"`. **Status lives
+> there, not here.** File new upstream asks with `virta new "…" --project <theirs>`, which unlike
+> this file **is** a channel: it lands on the owner's board. What stays here is the record — the
+> full argument we made and the reasoning behind it, which does not compress into a card.
+
 A local mirror of what this project has raised upstream, so the context stays where we're
-working. **This file is not a channel** — the upstream repo never sees it. Every entry must
-have a filed issue behind it, or it's a complaint nobody will read.
+working. Every entry must have a filed issue or a board card behind it, or it's a complaint
+nobody will read.
 
 See [`../tosijs-coding-practices/practices/cross-project.md`](../tosijs-coding-practices/practices/cross-project.md).
 When one lands: mark `✅ RESOLVED (fixed in <pkg>@<version>)` here **and close the issue**.
