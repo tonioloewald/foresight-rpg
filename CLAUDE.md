@@ -21,7 +21,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-**ForeSight RPG.** Context for any AI agent (Claude Code, Cowork, etc.) continuing this project. Read this first, then `Design Document.md` (the design bible) and `REVIEW.md` (the running to-fix list).
+**ForeSight RPG.** Context for any AI agent (Claude Code, Cowork, etc.) continuing this project. Read this first, then `Design Document.md` (the design bible), `Test Plan.md` (how we find out whether the rules work) and `REVIEW.md` (the backlog as prose — the live list is the board).
 
 **Where the work lives: the virta board.** This repo is enrolled (2026-10-04), so `virta project brief` in the checkout says what is in progress, ready and newly filed, and `virta list "project:foresight-rpg"` is the backlog. Tasks are tagged, not filed: `status:` (no tag = inbox), `priority:`, `kind:`, `area:`, `size:`. Pick work up with `virta work #n`, finish with `virta review #n "what to look at"` when a person should eyeball it or `virta done #n "…"` when only the build can tell. **`Design Document.md` stays the design bible** — the board holds work, not reasons, so a decision and its *why* still go in the design doc and the card cites it.
 
