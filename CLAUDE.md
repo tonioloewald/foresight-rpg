@@ -55,6 +55,8 @@ Legacy source PDFs/HTML live in `legacy/` and `Abortive Previous Attempt/` (giti
 - **Dev:** `bun run tls` once (needs `mkcert`), then `bun run dev` → live-rebuild HTTPS server at `https://localhost:1986/` (watches `README.md`, `src/`, `static/`). Since the domain cutover, both dev and production serve at **root** (`basePath: '/'`), so `dev`'s `BASE_PATH=` is now vestigial.
 - **Deploy:** `bun run build` then commit `docs/` and push. GitHub Pages serves from `/docs` at the custom domain **foresight-rpg.com** (apex A/AAAA to GitHub + `www` CNAME → `tonioloewald.github.io`; `static/CNAME` carries the domain through the build's `rm -rf docs`). Repo: `github.com/tonioloewald/foresight-rpg`.
 - First time / after pulling: `rm -rf docs && bun install`.
+**Not applicable: Prettier never touches markdown (board #2556)** — there is no Prettier in this repo: no config, no dependency, nothing formats anything, so the markdown `requirePragma` override has no config to live in. The deliverable is hand-written rules prose, where a formatter reflowing paragraphs would be actively harmful.
+
 - **No tests, linter, or formatter are configured** (`package.json` has only `build`/`dev`/`tls` scripts). Don't hunt for a test runner — validate changes by building and loading the dev site. The build also emits a `demo/` dir (created by `build.ts`/`dev.ts`).
 
 ### Important environment caveat (Cowork sandbox only)
