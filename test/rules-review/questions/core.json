@@ -1,0 +1,133 @@
+{
+  "note": "Ground truth derived from src/rules/the-one-rule.md as of 2026-10. Each item names the rule it probes and, where it has one, the TRAP — the specific misreading we expect. Scoring: a wrong answer is a comprehension failure; a right answer with a wrong derivation is luck and scores half; 'the pages do not say' is correct wherever stated.",
+  "items": [
+    {
+      "id": "sc-basic",
+      "pages": ["the-one-rule"],
+      "q": "A character with Firearms Score 17 shoots under conditions the GM rates as Ease Factor 4. What is the Success Chance, and what does the player roll?",
+      "a": "SC = 17 x 4 = 68. Roll D100, succeeding on 68 or less.",
+      "probes": "the core multiplication",
+      "trap": null
+    },
+    {
+      "id": "sc-over-20",
+      "pages": ["the-one-rule"],
+      "q": "A duellist has Melee Score 25. Her BEF is 5 and she is fighting at a range her weapon dislikes, worth -1. What is her Success Chance?",
+      "a": "100. A Score over 20 counts as 20 for the multiplication but adds +1 EF per 3 points above 20, so 25 is '20+1'. EF = 5 - 1 + 1 = 5. SC = 20 x 5 = 100.",
+      "probes": "the over-20 conversion",
+      "trap": "Multiplying 25 by the EF (giving 100 by a wrong route, or 125). The Score caps at 20; the surplus becomes EF, which is why the -1 is cancelled rather than paid."
+    },
+    {
+      "id": "sc-21",
+      "pages": ["the-one-rule"],
+      "q": "Does a character with Score 22 roll any better than one with Score 20, all else equal?",
+      "a": "No. The first bonus step is at 23 ('20+1 (23-25)'), so 21 and 22 count as 20 with no EF bonus.",
+      "probes": "the granularity of the over-20 rule",
+      "trap": "Assuming +1 EF per 3 points starts immediately at 21."
+    },
+    {
+      "id": "ladder-down",
+      "pages": ["the-one-rule"],
+      "q": "A task sits at Ease Factor 1 and the GM applies a -2 modifier. What is the resulting Ease Factor?",
+      "a": "1/4. The ladder is 0, 1/4, 1/2, 1, 2, 3... so two steps left from 1 gives 1/2 then 1/4.",
+      "probes": "the non-linear bottom of the ladder",
+      "trap": "Arithmetic: 1 - 2 = -1, then clamping to 0. The ladder is positional, not numeric."
+    },
+    {
+      "id": "ladder-sum-first",
+      "pages": ["the-one-rule"],
+      "q": "A task is at EF 6. Modifiers of +10 and -4 apply. What is the final Ease Factor?",
+      "a": "12. Sum the modifiers first (+6), then move six steps: 6 to 12. Applying them in sequence would cap at 15 and come back to 11.",
+      "probes": "sum-then-apply",
+      "trap": "Applying modifiers one at a time, hitting the 15 ceiling, and losing the surplus."
+    },
+    {
+      "id": "fraction-round",
+      "pages": ["the-one-rule"],
+      "q": "A character with Score 13 attempts something at Ease Factor 1/4. What do they need to roll?",
+      "a": "3 or less. 13 x 1/4 = 3.25, and fractions round to nearest (1/2 or more rounds up).",
+      "probes": "fractional EF arithmetic",
+      "trap": null
+    },
+    {
+      "id": "qr-thresholds",
+      "pages": ["the-one-rule"],
+      "q": "Success Chance is 68. The player rolls 34. What Quality Rating is that?",
+      "a": "QR3. The thresholds are SC/10 = 6.8, SC/4 = 17, SC/2 = 34, SC = 68; 34 is within SC/2, so QR3.",
+      "probes": "reading the QR off one roll",
+      "trap": "Off-by-one at the boundary: 34 is <= SC/2, so it is QR3 and not QR4."
+    },
+    {
+      "id": "qr-fumble",
+      "pages": ["the-one-rule"],
+      "q": "Success Chance is 68. The player rolls 70. What happens?",
+      "a": "QR10, a fumble: it went wrong. 70 is over the SC and a multiple of 10, which is the fumble condition.",
+      "probes": "the multiple-of-10 fumble",
+      "trap": "Reporting a plain failure (QR7) and missing that the roll is a multiple of 10."
+    },
+    {
+      "id": "qr-100",
+      "pages": ["the-one-rule"],
+      "q": "A master has a Success Chance over 100. The player rolls 100. What is the result?",
+      "a": "A fumble, QR10. A roll of 100 is never better than QR7, so it fails; it is also over the SC in the sense that matters and a multiple of 10, so it is QR10. (A reviewer who answers QR7 and flags the interaction as underspecified has found something real: the page states the 100-is-never-better rule and the multiple-of-10 rule separately and does not explicitly resolve them together.)",
+      "probes": "interaction of the two hard limits with the fumble rule",
+      "trap": "Either answer is defensible from the text, which is itself the finding. Credit a reviewer who notices the ambiguity."
+    },
+    {
+      "id": "yield-damage",
+      "pages": ["the-one-rule"],
+      "q": "A weapon with Damage Class 8 hits at QR3. How much damage does it do?",
+      "a": "2. QR3 yields 50%, and Damage = Yield x DC / 2, so 0.5 x 8 / 2 = 2.",
+      "probes": "the Yield column and the damage formula",
+      "trap": "Dropping the /2, giving 4."
+    },
+    {
+      "id": "pm-vs-build",
+      "pages": ["the-one-rule"],
+      "q": "Two different chaining rules appear on this page. A diagnosis rolled at QR2 feeds a repair; and separately, a prior result 'builds' into a following task at QR2. What modifier does each give, and why are they different?",
+      "a": "The diagnosis gives PM = 4 - QR = +2. The build gives +(5 - QR) = +3. The page states both and does not reconcile them. A reviewer who reports this as an inconsistency, or asks which applies when, has found the real thing: these are deliberately separate (PM is the quality of a thing made, Build is momentum carried forward) but the page does not say so.",
+      "probes": "whether two chaining formulas one page apart read as one rule misremembered",
+      "trap": "This item has no clean answer by design. The finding is the point."
+    },
+    {
+      "id": "double-penalty",
+      "pages": ["the-one-rule"],
+      "q": "A player calls a head shot, accepting a penalty, and the roll succeeds. Does the GM now roll to see where the bullet landed?",
+      "a": "No. 'Never penalize the same choice twice': the penalty was the price, so success means it landed where aimed. Pay once, up front.",
+      "probes": "the pay-once principle",
+      "trap": null
+    },
+    {
+      "id": "opposed-tie",
+      "pages": ["the-one-rule"],
+      "q": "An attacker and a defender both roll QR3. What happens?",
+      "a": "Nothing decisive: equal QRs cancel. The blow is just parried and the struggle continues. If someone must act now, the higher Score edges it.",
+      "probes": "opposed resolution and the deliberate stalemate",
+      "trap": "Inventing a tiebreak (re-roll, higher roll wins) when the page states ties cancel."
+    },
+    {
+      "id": "retry",
+      "pages": ["the-one-rule"],
+      "q": "A character fails to pick a lock. Can they simply try again until they succeed?",
+      "a": "They can retry, but it is not free: a failure already spent the time (a QR7 eats about 200% of the estimate), so when time matters the guard is coming. A QR10 shuts the door entirely and they must find another way.",
+      "probes": "why no explicit retry rule is needed",
+      "trap": "Looking for a retry penalty or an attempt limit, which the page deliberately does not have."
+    },
+    {
+      "id": "random-qr",
+      "pages": ["the-one-rule"],
+      "q": "The GM needs a Quality Rating for an unseen NPC's work, with no Score to roll against. What do they do?",
+      "a": "Roll D10: 1 is QR1, 2 is QR2, 3-5 is QR3, 6-10 is QR4.",
+      "probes": "the random QR table",
+      "trap": null
+    },
+    {
+      "id": "expert-bad-conditions",
+      "pages": ["the-one-rule"],
+      "q": "A penalty applies equally to an expert and an amateur attempting the same opposed task. Who is hurt more, and why?",
+      "a": "The amateur. A shared penalty comes out of the amateur's chance of succeeding at all, but merely out of the expert's surplus. This is also why stacking several small ease-factor advantages beats holding out for one big one.",
+      "probes": "whether the page's central claim about relative net success is legible",
+      "trap": null
+    }
+  ]
+}
