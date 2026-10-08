@@ -57,3 +57,38 @@ revision**. Adding questions resets the baseline.
 It does not measure whether the game is *fun*, whether a rule survives contact with a table,
 or whether anyone will bother tracking it. Those need people. This measures the properties the
 text can be held to on its own: consistency, legibility, and derivability.
+
+## First run, 2026-10-08 — and what it taught us about the harness
+
+**Instrument validated.** Battery A on fixture 1 (`e06095e`) found the planted defect
+unprompted, in the category it was predicted to fall in: *"Score 5 → 6 = 1 beat → 2 beats. One
+point of Score doubles your attacks per round."* It then found the same cliff recurring every
+five points, and noticed that the page's **own example character** escapes its own verdict for
+one point of Coordination — a sharper statement of the defect than the commit that fixed it.
+So Battery A detects breakpoints, and a clean category-4 report from it now means something.
+
+**Battery B scored 16/16 — twice.** That is a ceiling effect, not a triumph: these questions
+do not discriminate at the top of the model range. What the runs produced of value was not the
+score but the **ambiguity reports**, which is why those are collected separately and not
+penalised. Two of them independently out-reasoned this bank's own ground truth on `qr-100`
+(the fumble row's `> SC` condition cannot fire when SC exceeds 100), and the bank has been
+corrected. **Run Battery B on a smaller model** — the floor is the measurement.
+
+**The contamination channel we missed, and that the harness caught.** A subagent inherits the
+parent session's project context, so this repo's `CLAUDE.md` — which summarises the EF ladder,
+the QR thresholds and yields, and a damage formula — arrived in both reviewers' windows before
+the task did. Neither opened a file outside the staging directory, and both disclosed the
+injection unprompted because the battery asks what they read. **The FILES READ audit is the
+part of this harness that works; do not drop it.**
+
+Two fixes landed: `run.sh` runs the reviewer with cwd inside the staging directory and settings
+sources suppressed, which a probe confirms yields no `CLAUDE.md` and no memory; and `stage.ts`
+now **refuses a staging path that names the system**, because a reviewer that can read
+`.../-Users-someone-foresight/...` in its own cwd can name the game.
+
+**And then the measurement that matters: it made no difference.** The contaminated and
+clean-room runs of Battery B both scored 16/16 and flagged the same four ambiguities with the
+same reasoning. So the first run's findings stand, and more usefully: on these pages the
+battery is reading the page rather than the context. That is a result about the instrument,
+obtained for the price of one extra run, and it is the reason to keep running the clean path
+anyway — the next page set may not be so robust.

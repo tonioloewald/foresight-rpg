@@ -33,6 +33,18 @@ if (!out || pages.length === 0) {
   process.exit(1)
 }
 
+// The staging PATH is itself a contamination channel: a reviewer that can see
+// ".../-Users-someone-foresight/..." in its cwd can name the game, and may then answer from
+// what it knows rather than from the page. Stage somewhere neutral.
+const leak = /foresight|rpg/i.exec(out)
+if (leak) {
+  console.error(
+    `refusing: the output path contains "${leak[0]}", which names the system under test.\n` +
+      `Stage somewhere neutral, e.g. $(mktemp -d /tmp/rules-review.XXXX).`,
+  )
+  process.exit(1)
+}
+
 await rm(out, { recursive: true, force: true })
 await mkdir(out, { recursive: true })
 
