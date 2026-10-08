@@ -7,7 +7,7 @@
 >
 > 1. **Pick a template** (Detective, Soldier, Scholar, Thief…). It has your attributes and core skills.
 > 2. **Pick three to five background factors.** Each is a piece of your life story and a block of abilities. Take one childhood factor first.
-> 3. **Pick up to three quirks** (free, optional). Take a talent if your setting and background allow one.
+> 3. **Pick up to three quirks** (free, optional). A perk, if your setting and background allow one, costs points.
 > 4. **Name your character**, decide who they are and what they want, note your age and wealth.
 >
 > That's a complete, competent, ready-to-play character. Everything else in this chapter is detail and customization.
@@ -117,20 +117,20 @@ If two sources grant the same skill or field, **take the better grant, +1**. Ove
 
 A background factor is a background factor: if a player wants one that isn't listed, build it by analogy — a block of about the same weight, matching how the years were actually spent. If it doesn't make sense and make the character more interesting, the GM should disallow it. There are no rules to stop players choosing nonsensical factors; there is a GM.
 
-## Step 3: Quirks (and Talents)
+## Step 3: Quirks
 
-Quirks are free. They have an upside and a downside that roughly cancel out, and they make characters out of stat blocks. Take up to three — more and your character becomes a basket case.
+Quirks are **free**, and they have an upside and a downside that roughly cancel out. They are what make characters out of stat blocks. **Take up to three** — more and your character becomes a basket case.
 
 - **Nervous Disposition** — +1 PC, –1 WP for stress-related purposes.
 - **Minor Phobia** — –2 dealing with the feared thing, +2 to notice it (with false positives). In combat, WP check or hesitate.
-- **Ugly** *(Appearance)* — –2 on first impressions with the appropriate audience; but you've learned to suck it up (+1 WP-flavored tasks), turned it into a joke (+1 Charm), or gained insight (+1 reading people) — pick one.
-- **Nondescript** *(Appearance)* — +2 blending into crowds, +1 reading people; –1 making memorable impressions. Doesn't stack with another Appearance quirk that fires for the same reason.
-- **Reads People** — +2 PC for reading people and detecting lies; –1 PC for noticing physical detail while you're doing it.
-- **Oblivious** — –2 PC for reading people; +1 sustained concentration, immune to most social pressure.
 - **Weakness for the Ladies/Gentlemen** — you can't help yourself; you will do foolish things for whoever currently has your attention. +2 where romance helps.
 - **Corrected Vision** — fine with your glasses; lose them and it's –2 on anything at distance.
 
-**Talents** (remarkable agility, sleight of hand, perfect pitch, eidetic memory…) are the positive-only cousins of quirks: they're not free — they come from templates, background factors (Trained from Childhood, Mysterious Mentor), or intrinsic factors. Talents and quirks are deviations from an attribute's default — which is exactly why agility and empathy don't need to be attributes.
+**The full chapter is [Quirks, Perks and Flaws](quirks.md)**, and you only need it if you want one that isn't on a list: it has the five families (Appearance, Empathy, Endurance, Coordination, Age), the one question that settles stacking, the four-line template for chronic conditions, and how to write your own.
+
+Two things from there that bear on this step. **Perks** — perfect pitch, eidetic memory, remarkable agility — are the positive-only cousins of quirks, so they are *not* free and they do not come out of your three: they arrive through templates, background factors (Trained from Childhood, Mysterious Mentor) or intrinsic factors, and cost points at full price. **Flaws** — blind, haemophiliac — aren't taken at all; they're decided, and they grant no points, though they may justify a field or a familiarity in an area the flaw doesn't touch.
+
+Quirks, perks and flaws are all deviations from an attribute's default — which is exactly why agility and empathy don't need to be attributes.
 
 ## Step 4: Finishing Touches
 

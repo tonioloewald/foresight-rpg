@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
+       a 4s safety-net timeout), because an undefined custom element is
+       display:inline, so the pre-rendered page stacked as bare text and hydration
+       reflowed the whole thing. The cost was a blank screen for as long as the
+       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
+       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
+       out as though the chrome were there, so hydration only ADDS the chrome and
+       nothing moves. Paint immediately; don't hide readable content. -->
+  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
+       than hiding it, a dark-mode reader would otherwise get a flash of the light
+       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
+       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
+       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
+       light default, exactly as before. -->
+  <script>
+    try {
+      var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
+      var t = p.theme || 'system'
+      if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches))
+        document.documentElement.classList.add('darkmode')
+      if (p.highContrast) document.documentElement.classList.add('high-contrast')
+    } catch (e) {}
+  </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <title>Quirks, Perks and Flaws — ForeSight RPG</title>
+  <meta name="description" content="Attributes and skills say what a character can do. These say who they are — and they are what turns a stat block into a person." />
+  <link rel="canonical" href="https://foresight-rpg.com/quirks/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="ForeSight RPG" />
+  <meta property="og:title" content="Quirks, Perks and Flaws — ForeSight RPG" />
+  <meta property="og:description" content="Attributes and skills say what a character can do. These say who they are — and they are what turns a stat block into a person." />
+  <meta property="og:url" content="https://foresight-rpg.com/quirks/" />
+  <meta name="twitter:card" content="summary" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Quirks, Perks and Flaws","description":"Attributes and skills say what a character can do. These say who they are — and they are what turns a stat block into a person.","url":"https://foresight-rpg.com/quirks/","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"ForeSight RPG","url":"https://foresight-rpg.com"}}</script>
+  <link rel="icon" href="../favicon.svg" />
+</head>
+<body>
+  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
+  <article class="doc-content">
+<h1>Quirks, Perks and Flaws</h1>
+<!--{ "parent": "core", "order": 8 }-->
+
+<p><em>Attributes and skills say what a character <strong>can</strong> do. These say who they <strong>are</strong> — and they are what turns a stat block into a person. A quirk is small and two-sided and free; a perk is a clean advantage you paid for; a flaw is an outright bummer nobody chose. All three work the same way, and the chapter is called Quirks because that is what you will look it up under.</em></p>
+<h2>The three</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>What it says</th>
+<th>Cost</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Quirk</strong></td>
+<td>who you are, in a <strong>small</strong> way — nimble-fingered, short-sighted <em>(with glasses)</em>, reads people</td>
+<td><strong>free</strong>, because it is a <strong>trade</strong>: the good half is paid for by the bad half</td>
+</tr>
+<tr>
+<td><strong>Perk</strong></td>
+<td>a focused advantage with <strong>no downside</strong> — perfect pitch, eidetic memory, great genes</td>
+<td><strong>points, at full price.</strong> Narrow scope is what makes it affordable</td>
+</tr>
+<tr>
+<td><strong>Flaw</strong></td>
+<td>an outright bummer — blind, haemophiliac in a world without clotting factor</td>
+<td><strong>free, and it funds nothing</strong></td>
+</tr>
+</tbody></table>
+<p>All three are <strong>permanent</strong>, all three are <strong>narrow</strong>, and all three emit the same thing: a modifier with a <strong>target</strong> (what rolls it touches), a <strong>scope</strong> (when), and a <strong>combine</strong> (how it interacts with its relatives). That is deliberately the same shape as a piece of equipment — a quirk is a modification to a person, the way <em>fine</em> is a modification to a sword.</p>
+<p><strong>Take up to three quirks.</strong> More and the character reads as a basket case rather than a person. Perks come from templates, background factors and intrinsic factors — not from the quirk allowance. Flaws aren&#39;t taken at all; they&#39;re decided, usually by the GM and the character&#39;s history together.</p>
+<h2>Two tests, and they point opposite ways</h2>
+<p>A quirk is a trade, so <strong>the drawback has to actually bite</strong>: <em>Weakness for the Ladies</em> that never costs you anything is a perk you didn&#39;t pay for. If you cannot name a session in which the bad half would have hurt, it isn&#39;t a quirk.</p>
+<p>A flaw&#39;s compensation runs the other way: <strong>nobody may ever want the deal.</strong> However the years were redirected, a blind person would still, in almost every case, rather not be blind — and that has to stay true <em>after</em> the compensation. The moment it doesn&#39;t, the flaw has a price, and a priced flaw is one you go shopping for.</p>
+<blockquote>
+<p>So: <strong>would the drawback bite? yes.</strong> <strong>Would the compensation tempt? no.</strong> A quirk failing the first is a perk; a flaw failing the second is a purchase.</p>
+</blockquote>
+<h2>Flaws pay in capacity, never in currency</h2>
+<p>A flaw grants <strong>no points</strong>. It is not a trade and there is no good half.</p>
+<p>But it does leave a mark on the build, and it should. It genuinely makes sense that someone blind from childhood concentrated on the things blindness doesn&#39;t cripple — <strong>and had more hours to spend on them.</strong> The question was never whether that&#39;s real; it&#39;s what it&#39;s denominated in.</p>
+<p><strong>Points are the wrong currency, because points don&#39;t remember where they came from.</strong> Grant them and blindness funds marksmanship by way of the character sheet. So the compensation is denominated in the thing a flaw actually costs: <strong>time.</strong> ForeSight already measures a life in years — background factors are years lived, fields are four points a year — so a flaw is an argument about how those years went, and may justify <strong>one field, or one familiarity, GM-approved, in an area the flaw doesn&#39;t touch.</strong></p>
+<p>Never in a skill, and never routing around the flaw&#39;s own domain. One field is nowhere near tempting enough to buy blindness with, which is exactly why it&#39;s safe.</p>
+<p><em>This is the same exchange as age, and should read the same way: <strong>capability for capacity.</strong> A fifty-five-year-old with four more background factors and a bad knee is a better character than a twenty-five-year-old, not a worse one.</em></p>
+<p><em>Designer&#39;s Note: ForePlay (2015) priced flaws at an attribute point or two skill points — and then apologised for it in the same breath: &quot;this isn&#39;t intended to be a store: design the character you want; sometimes a weakness is just a weakness.&quot; That caveat was already the right answer, so the price tag goes and the sentence stays. The consequence is a large simplification: because no flaw is purchasable, <strong>blindness and haemophilia never have to be costed against each other.</strong> There is no flaw point table to build, balance or argue about — a whole chapter other systems carry that this one simply doesn&#39;t.</em></p>
+<h2>Families, and the one question that settles stacking</h2>
+<p>Quirks come in named <strong>families</strong>, and a family carries its own combine rule. This is not filing convenience — it is what stops a GM adjudicating stacking case by case at the table.</p>
+<blockquote>
+<p><strong>Default: within a family, best applicable only.</strong> They do not add.</p>
+</blockquote>
+<p>That matters because <strong>+1 EF is worth roughly your whole Score</strong> in the sweet spot, so anything additive dwarfs the skill it modifies. Same rule as tools and armour, same reason.</p>
+<p>A family is defined by <strong>what it touches, not by what it cost</strong> — so one family spans all three carriers. <em>Endurance</em> holds a perk (built like a Kalenjin distance runner), several quirks (sprinter versus marathoner), and a flaw (a condition that guts your stamina across the board). They&#39;re one family because they modify the same rolls and so need the same combine rule.</p>
+<p><strong>The exception, and the question that decides it:</strong> family members that aren&#39;t on the same axis <em>do</em> stack. <em>Striking</em> and <em>Scarred</em> are both Appearance, but they are not two ends of one dial to be netted off — a face can genuinely be both, and they fire on different audiences and different readings.</p>
+<blockquote>
+<p><strong>Do these two fire on this roll for the same reason?</strong> Same reason → take the best. Different reasons → both apply.</p>
+</blockquote>
+<p>That question is answerable in a second, which is the only standard that matters at a table.</p>
+<h2>The five families</h2>
+<p><strong>Appearance</strong> — what people see first, and how differently they read it. Not one axis: observers agree at the extremes and diverge sharply on <em>type</em>.</p>
+<ul>
+<li><strong>Striking</strong> <em>(quirk)</em> — a face people look at twice. +2 where being noticed and remembered helps; −2 where you needed to be forgettable, and you don&#39;t get to be nobody in a crowd. <em>Name the audience: striking in a particular way, and here is who it works on.</em></li>
+<li><strong>Well-turned-out</strong> <em>(quirk)</em> — good clothes, good teeth, the accent. +2 where someone is deciding whether you belong; −1 anywhere that reads as money, where it marks you.</li>
+<li><strong>Plain</strong> <em>(quirk)</em> — +1 blending in and being underestimated; −1 making a memorable first impression.</li>
+<li><strong>Nondescript</strong> <em>(quirk)</em> — +2 blending into crowds, +1 reading people; −1 making memorable impressions.</li>
+<li><strong>Scarred</strong>, <strong>Disfigured</strong> <em>(quirk → flaw, by degree)</em> — −2 on first impressions with the appropriate audience. A quirk pays it back one way, chosen once: you learned to suck it up (+1 on WP-flavoured tasks), turned it into a joke (+1 Charm), or gained insight (+1 reading people). A <strong>flaw</strong> does not pay it back at all.</li>
+</ul>
+<p><strong>Empathy</strong> — reading people. PC is the spine; these are the deviations, and the family exists because empathy is perception <em>of people</em> and neurotype moves it hard in both directions.</p>
+<ul>
+<li><strong>Reads People</strong> <em>(quirk)</em> — +2 PC reading people and detecting lies; −1 PC noticing physical detail while you&#39;re doing it.</li>
+<li><strong>Oblivious</strong> <em>(quirk)</em> — −2 PC reading people; +1 sustained concentration, and most social pressure simply doesn&#39;t land.</li>
+<li><strong>Face-blind</strong>, <strong>no theory of mind</strong> <em>(flaw)</em> — the thing PC does for everyone else, it doesn&#39;t do for you. Routes capacity hard: there is a reason this character knows the timetable, the ledger or the machine better than anyone.</li>
+</ul>
+<p><strong>Endurance</strong> — the rolls that were EN&#39;s before the attributes went to five: exhaustion checks, Pain Resistance, convalescence, shaking off a stun. WP carries them now; these say <em>how</em>.</p>
+<ul>
+<li><strong>Deep Reserves</strong> <em>(perk)</em> — +1 EF on exhaustion checks. Built for distance.</li>
+<li><strong>Hardy</strong> <em>(quirk)</em> — +1 EF resisting cold, hunger, poison and disease; −1 on anything requiring a turn of speed.</li>
+<li><strong>Conditioned</strong> <em>(quirk)</em> — +1 EF on exhaustion checks while fit; the catch is that it is <em>maintained</em>, and lapses when the training does.</li>
+<li><strong>Hardened</strong> <em>(quirk)</em> — +1 EF on Pain Resistance and shrugging off a stun; −1 where someone needed you to show you cared.</li>
+<li><strong>Weathered</strong> <em>(quirk)</em> — +1 EF on exposure and going without; −1 on convalescence, because the body is already running a deficit.</li>
+<li><strong>Sprinter / Marathoner</strong> <em>(quirk, either way)</em> — +1 EF at your distance, −1 at the other. Both are Endurance; they fire for the same reason, so they never stack.</li>
+</ul>
+<p><strong>Coordination</strong> — CO is the spine; these are the sub-capabilities that must not become attributes.</p>
+<ul>
+<li><strong>Nimble-fingered</strong>, <strong>Graceful</strong>, <strong>Remarkable Agility</strong>, <strong>Sleight of Hand</strong> <em>(perk, narrow)</em> — +1 EF in one named kind of movement.</li>
+<li><strong>Corrected Vision</strong> <em>(quirk)</em> — fine with your glasses; lose them and it&#39;s −2 on anything at distance.</li>
+<li><strong>Short-sighted</strong>, <strong>one-handed</strong>, <strong>blind</strong> <em>(flaw, by degree)</em> — a flaw names what it closes off, and the capacity goes somewhere the flaw cannot reach.</li>
+</ul>
+<p><strong>Age</strong> — the same capability-for-capacity exchange as a flaw, arriving with time rather than history. Age quirks are <strong>acquired, not purchased</strong>, and <strong>grant no points</strong>: ageing already pays in the other direction, in background factors, fields and skill.</p>
+<ul>
+<li><strong>Standing</strong> <em>(quirk)</em> — a few kilos on, and stiffness. −1 EF on agility tasks and running speed.</li>
+<li><strong>Acquired condition</strong> <em>(quirk or flaw)</em> — the specific injuries a life leaves behind. Use the template below.</li>
+</ul>
+<h2>Chronic conditions — four lines, and you&#39;re done</h2>
+<p>A condition is a quirk or a flaw depending on what the fourth line says. Write all four:</p>
+<blockquote>
+<p><strong>Attach</strong> — which rolls it touches.
+<strong>Trigger</strong> — what brings it on.
+<strong>Effect</strong> — what it does when it fires.
+<strong>Management</strong> — what holds it off, and what happens when that isn&#39;t available.</p>
+</blockquote>
+<p><strong>The management line is the one that decides the carrier.</strong> Manageable with something a character can reasonably carry is a quirk — the drama is the day the inhaler is in the other coat. Unmanageable in this setting is a flaw.</p>
+<ul>
+<li><strong>Asthma</strong> — <em>attach:</em> exhaustion checks. <em>Trigger:</em> cold air, dust, smoke, hard exertion. <em>Effect:</em> −1 EF on the check, and a failure costs an extra exhaustion level. <em>Management:</em> an inhaler, used in time.</li>
+<li><strong>Haemophilia</strong> — <em>attach:</em> wounds and convalescence. <em>Trigger:</em> any wound. <em>Effect:</em> −2 EF on convalescence, and a wound that would normally close keeps bleeding — treat an untreated wound as one level worse after a scene. <em>Management:</em> clotting factor, where the setting has it. <strong>Without it, this is a flaw</strong>, and in most settings it is a severe one.</li>
+<li><strong>Insulin-dependent diabetes</strong> — <em>attach:</em> the exhaustion track. <em>Trigger:</em> a missed meal, or no insulin. <em>Effect:</em> start the scene one exhaustion level down; no insulin and it worsens each scene. <em>Management:</em> insulin and food on a schedule, which is a logistics problem for the whole party.</li>
+<li><strong>Chronic pain, an old break</strong> — <em>attach:</em> Pain Resistance and agility tasks. <em>Trigger:</em> cold, damp, the first hour of the day. <em>Effect:</em> −1 EF while it&#39;s up. <em>Management:</em> warmth, movement, and something for it.</li>
+</ul>
+<p><strong>Severity means writing it twice, not adding a dial.</strong> Mild and severe asthma are two entries — and often the mild one is a quirk while the severe one is a flaw. The same goes for the degree ladders above: <em>Scarred</em> and <em>Disfigured</em> are two entries, not one with a knob.</p>
+<blockquote>
+<p><strong>Intermittent conditions must hang off something already in play — never their own timer.</strong> Tie it to weather, exertion, an exhaustion level, or a roll someone is making anyway. Anything that asks the table to track <em>&quot;is it flaring today?&quot;</em> will be quietly dropped, and then the character sheet is lying.</p>
+</blockquote>
+<p><strong>A wound that heals badly becomes one of these.</strong> Convalescence that goes wrong is the commonest way a character acquires a chronic condition mid-campaign — same four lines, written at the table.</p>
+<h2>Writing your own</h2>
+<p>There is no list to pick from; the ones above are examples, and a good quirk is specific to the character. Build one by analogy: name the family, write the two halves, and check it against the two tests. If it has no bad half it&#39;s a perk and costs points. If nobody would ever want the deal, it&#39;s a flaw and grants nothing. If you can&#39;t say which rolls it touches, it isn&#39;t a quirk yet — it&#39;s a personality note, and those are free and need no mechanics at all.</p>
+<p><em>Designer&#39;s Note: these used to be attributes. Endurance and Appearance each had a column, and the argument for cutting them was not that they don&#39;t matter — it&#39;s that neither is <strong>one number</strong>. Appearance asserted a total order on faces, which is not what the world looks like; Endurance had a genuine central axis but drove no skill formula, so nothing on the build screen ever showed a player what it was for. A family fixes both: a quirk can say <em>striking in a particular way, and here is who that works on</em>, where an attribute could only say 13. The general principle is worth keeping: <strong>attributes are for independent capabilities; quirks are for deviations from a correlated default.</strong> It is why exceptional eyesight and left-hand coordination don&#39;t get columns either.</em></p>
+
+  </article>
+  <nav class="doc-nav" aria-label="Documentation">
+  <ul>
+    <li><a class="doc-link" href="../">ForeSight RPG</a></li>
+    <li><details open><summary><a class="doc-link" href="../core/">Core Rules</a></summary>
+    <ul>
+      <li><a class="doc-link" href="../introduction/">Introduction</a></li>
+      <li><a class="doc-link" href="../the-one-rule/">The One Rule</a></li>
+      <li><a class="doc-link" href="../creating-characters/">Creating Characters</a></li>
+      <li><a class="doc-link" href="../scores/">Scores</a></li>
+      <li><a class="doc-link" href="../quality-ratings/">Quality Ratings &amp; Yield</a></li>
+      <li><a class="doc-link" href="../open-ended-resolution/">Open-Ended Resolution</a></li>
+      <li><a class="doc-link" href="../skills/">Skills</a></li>
+      <li><a class="doc-link current" href="../quirks/" aria-current="page">Quirks, Perks and Flaws</a></li>
+      <li><a class="doc-link" href="../character-builder/">Character Builder</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="../conflict/">Conflict</a></summary>
+    <ul>
+      <li><a class="doc-link" href="../initiative/">Initiative</a></li>
+      <li><a class="doc-link" href="../intense-action/">Intense Action</a></li>
+      <li><a class="doc-link" href="../fire-combat/">Fire Combat</a></li>
+      <li><a class="doc-link" href="../melee-combat/">Melee Combat</a></li>
+      <li><a class="doc-link" href="../pursuit/">Pursuit</a></li>
+      <li><a class="doc-link" href="../damage/">Damage</a></li>
+      <li><a class="doc-link" href="../exhaustion/">Exhaustion</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="../world/">Equipment &amp; World</a></summary>
+    <ul>
+      <li><a class="doc-link" href="../equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="../equipment-find/">Find Equipment</a></li>
+      <li><a class="doc-link" href="../weapons/">Weapons</a></li>
+      <li><a class="doc-link" href="../armor/">Armor</a></li>
+      <li><a class="doc-link" href="../vehicles/">Vehicles</a></li>
+      <li><a class="doc-link" href="../spacecraft/">Spacecraft</a></li>
+      <li><a class="doc-link" href="../tools/">Tools &amp; Gear</a></li>
+      <li><a class="doc-link" href="../the-svu/">The SVU</a></li>
+      <li><a class="doc-link" href="../technology-levels/">Technology Levels</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="../magic/">Magic</a></summary>
+    <ul>
+      <li><a class="doc-link" href="../magic-find/">Find an Effect</a></li>
+      <li><a class="doc-link" href="../magic-abeyance/">Abeyance</a></li>
+      <li><a class="doc-link" href="../magic-air/">Air</a></li>
+      <li><a class="doc-link" href="../magic-apportation/">Apportation</a></li>
+      <li><a class="doc-link" href="../magic-cancellation/">Cancellation</a></li>
+      <li><a class="doc-link" href="../magic-communication/">Communication</a></li>
+      <li><a class="doc-link" href="../magic-compulsion/">Compulsion</a></li>
+      <li><a class="doc-link" href="../magic-dimension/">Dimension</a></li>
+      <li><a class="doc-link" href="../magic-divination/">Divination</a></li>
+      <li><a class="doc-link" href="../magic-earth/">Earth</a></li>
+      <li><a class="doc-link" href="../magic-emotion/">Emotion</a></li>
+      <li><a class="doc-link" href="../magic-essence/">Essence</a></li>
+      <li><a class="doc-link" href="../magic-fire/">Fire</a></li>
+      <li><a class="doc-link" href="../magic-form/">Form</a></li>
+      <li><a class="doc-link" href="../magic-image/">Image</a></li>
+      <li><a class="doc-link" href="../magic-sandestin/">Sandestin</a></li>
+      <li><a class="doc-link" href="../magic-scent/">Scent</a></li>
+      <li><a class="doc-link" href="../magic-sense/">Sense</a></li>
+      <li><a class="doc-link" href="../magic-sound/">Sound</a></li>
+      <li><a class="doc-link" href="../magic-summon/">Summon</a></li>
+      <li><a class="doc-link" href="../magic-time/">Time</a></li>
+      <li><a class="doc-link" href="../magic-touch/">Touch</a></li>
+      <li><a class="doc-link" href="../magic-water/">Water</a></li>
+      <li><a class="doc-link" href="../magic-wood/">Wood</a></li>
+      <li><a class="doc-link" href="../chi/">Ch'i</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="../reference/">Reference</a></summary>
+    <ul>
+      <li><a class="doc-link" href="../gm-cheat-sheet/">ForeSight — GM Cheat Sheet</a></li>
+      <li><a class="doc-link" href="../character-sheet-paper/">ForeSight — Character Sheet</a></li>
+      <li><a class="doc-link" href="../playtest-pack/">ForeSight — Playtest Pack</a></li>
+    </ul>
+    </details></li>
+    <li><details><summary><a class="doc-link" href="../foresight-1986/">ForeSight 1986</a></summary>
+    <ul>
+      <li><a class="doc-link" href="../1986-01-foreword/">ForeWord — Introduction &amp; Definitions</a></li>
+      <li><a class="doc-link" href="../1986-02-characters/">Characters</a></li>
+      <li><a class="doc-link" href="../1986-03-resolution/">Resolution System</a></li>
+      <li><a class="doc-link" href="../1986-04-combat/">Combat</a></li>
+      <li><a class="doc-link" href="../1986-05-travel/">Travel &amp; Vehicles</a></li>
+      <li><a class="doc-link" href="../1986-06-equipment/">Equipment</a></li>
+      <li><a class="doc-link" href="../1986-07-star-system/">Star System Generation</a></li>
+      <li><a class="doc-link" href="../1986-08-spacecraft/">Spacecraft Design</a></li>
+      <li><a class="doc-link" href="../1986-09-appendices/">Appendices</a></li>
+      <li><a class="doc-link" href="../1986-10-commentary/">Designer's Commentary</a></li>
+    </ul>
+    </details></li>
+  </ul>
+  </nav>
+  <ul class="doc-navbar">
+    <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
+  </ul>
+  </tosi-doc-system>
+  <script type="module" src="../hydrate.js"></script>
+</body>
+</html>
