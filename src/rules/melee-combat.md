@@ -86,7 +86,7 @@ Either is legitimate — ForeSight colours no setting. Just tell the table which
 
 **And a wide skill gap buys the freedom to fight badly on purpose.** If you are far better, back *right* off and wear the −1 yourself: he then chooses between attacking off-band or spending a beat closing while you hit him again.
 
-**You can afford it because a Score past 20 is paid in the same currency as the penalty.** Melee 25 is **20+1** (see [Scores](/scores/)) — that spare **+1 EF cancels the −1 for standing off-band outright**. A 20+1 fighter can fight one band away from his weapon's preferred range and be **no worse off than an ordinary expert standing in his**. That is the fencer's licence, and it is a designed consequence of the over-20 rule rather than an accident.
+**You can afford it because a Score past 20 is paid in the same currency as the penalty.** Melee 25 is **20+1** (see [The One Rule](/the-one-rule/)) — that spare **+1 EF cancels the −1 for standing off-band outright**. A 20+1 fighter can fight one band away from his weapon's preferred range and be **no worse off than an ordinary expert standing in his**. That is the fencer's licence, and it is a designed consequence of the over-20 rule rather than an accident.
 
 **Below that, the same step is far more expensive.** `SC = Score × EF`, so a −1 comes off the top of a big Score's *surplus* — Melee 20 off-band is EF 4, SC 80, still fine — while Melee 10 off-band goes from 60 to **40**, straight off its chance of connecting at all. **Bad conditions are the expert's friend**: distance, darkness, rain, broken ground.
 

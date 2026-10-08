@@ -41,7 +41,7 @@ What a Score buys you on an ordinary task (a typical BEF ≈ 5, no modifiers):
 | 10 | capable | 50% |
 | 15 | seasoned professional | 75% |
 | 20 | expert | 100% |
-| 20+3 (26+) | master — only a natural 100 fails | over 100% |
+| 20+2 (26–28) | master — a bad roll still lands | over 100% |
 
 ### Challenge at a glance
 
