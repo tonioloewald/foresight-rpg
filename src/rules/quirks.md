@@ -80,9 +80,7 @@ That question is answerable in a second, which is the only standard that matters
 - **Corrected Vision** *(quirk)* — fine with your glasses; lose them and it's −2 on anything at distance.
 - **Short-sighted**, **one-handed**, **blind** *(flaw, by degree)* — a flaw names what it closes off, and the capacity goes somewhere the flaw cannot reach.
 
-**Age** — the same capability-for-capacity exchange as a flaw, arriving with time rather than history. Age quirks are **acquired, not purchased**, and **grant no points**: ageing already pays in the other direction, in background factors, fields and skill.
-- **Standing** *(quirk)* — a few kilos on, and stiffness. −1 EF on agility tasks and running speed.
-- **Acquired condition** *(quirk or flaw)* — the specific injuries a life leaves behind. Use the template below.
+**Age** — the same capability-for-capacity exchange as a flaw, arriving with time rather than history. Age quirks are **acquired, not purchased**, and **grant no points**: ageing already pays in the other direction, in background factors, fields and skill. Two shapes — *standing* (it is simply true of you now) and *intermittent* (it fires on a trigger) — written out in **Ageing**, below.
 
 ## Chronic conditions — four lines, and you're done
 
@@ -107,6 +105,32 @@ A condition is a quirk or a flaw depending on what the fourth line says. Write a
 > **Intermittent conditions must hang off something already in play — never their own timer.** Tie it to weather, exertion, an exhaustion level, or a roll someone is making anyway. Anything that asks the table to track *"is it flaring today?"* will be quietly dropped, and then the character sheet is lying.
 
 **A wound that heals badly becomes one of these.** Convalescence that goes wrong is the commonest way a character acquires a chronic condition mid-campaign — same four lines, written at the table.
+
+## Ageing — the family you don't buy
+
+**Nobody spends points to get older, and nobody is paid for it.** Age quirks are **conferred**, by the same route a background factor can be conferred after creation: at downtime, the GM hands one over, and it is simply true from then on. One at a time, and never retroactively.
+
+**The compensation is real, and it is not written next to the drawback — it is the rest of the sheet.** This is the one place where the usual quirk shape doesn't apply: a 55-year-old's fields, familiarities and skill levels *are* what he was paid for the stiffness, and he was paid in the only currency ageing deals in, which is time. So an age entry looks one-sided on the page, and isn't. (It is also why age entries grant no points: that would be charging the character twice for the same decade, once in years and once in build.)
+
+**Standing — it is true of you now.**
+
+- **Stiff** — −1 EF on agility tasks and on running speed. The commonest first one, and the one players feel.
+- **Long-sighted** — −1 EF on fine close work; nothing at all with reading glasses, which makes it the *Corrected Vision* shape and the day you lose them a scene.
+- **Hard of hearing** — −1 EF on PC where hearing carries it, and −2 in a noisy room. People repeat themselves, and you miss what was said behind you.
+- **Slow to mend** — −1 EF on convalescence. The wound that cost a young character a week costs you a month, which is a campaign-level fact rather than a combat one.
+- **Winded** — the first exhaustion level comes one push earlier than it used to.
+
+**Intermittent — it fires on a trigger, and the trigger is never a clock.** Each of these hangs off something already in play, for the reason the chronic-condition rule gives: anything that asks the table to check whether today is a bad day gets dropped.
+
+- **Arthritic** — *trigger:* cold or damp. *Effect:* −1 EF on anything needing hands or fast movement, for as long as the weather lasts. The GM already narrates the weather.
+- **An old break** — *trigger:* the first hard exertion of the day, or the first hit you take. *Effect:* −1 EF on that limb's tasks for the scene.
+- **A knee that goes** — *trigger:* exhaustion level 2 or worse. *Effect:* running and agility tasks are −2 until you have rested it off. It attaches to a track someone is already moving.
+
+**Severity means writing it twice here too.** *Stiff* and *Arthritic* are two entries, not one with a dial; so are *Hard of hearing* and *Deaf*, and the second of each pair is a flaw — which means it closes something off and routes the capacity somewhere the age cannot reach.
+
+**Attributes do not decay.** Ageing is entirely quirk-borne, deliberately, for three reasons. A single number cannot say *which* rolls got harder, and age is specific — the hands go before the eyes, or the other way about, and that difference is the character. A decaying attribute makes a character worse at everything it feeds, including the things that in life get *better* with age. And a sheet that rots is a sheet a player stops wanting to pick up, which is the practical objection and probably the decisive one. If a campaign genuinely runs for decades and the table wants an attribute lowered, lower it — but as something that happened in the fiction, not as a rule the rules make you apply.
+
+*(The young end of the same idea needs no mechanics at all: a sixteen-year-old's disadvantage is a short field list and a thin background, which the point economy already produces.)*
 
 ## Writing your own
 
