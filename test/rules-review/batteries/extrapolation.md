@@ -25,9 +25,23 @@ the subsystem is carrying a special case — which may be right, but should be d
 >
 > Do not hedge into generalities. A specific wrong guess is far more useful than a vague
 > right one.
+>
+> **State the units of anything you invent.** If your rule tracks a quantity, say what one
+> point of it is and what the whole range means. If it is a modifier, say what it modifies.
 
 **Scoring.** Compare against the real page and classify each element: **DERIVED** (predicted
 correctly — the page may be able to shrink to just the non-obvious part), **ARBITRARY**
 (predicted something reasonable but different — the real rule is a choice, so the page must
 *justify* it, not just state it), **UNGUESSABLE** (could not be predicted — a genuine special
 case; check it earns its keep), **BETTER** (the prediction is an improvement; file it).
+
+**Staging note.** Put `scores.md` in the core set whenever the withheld page rolls an
+attribute. Without it a reviewer cannot tell whether `ST` is Strength or a third toughness
+attribute, and the resulting confusion is an artifact of the staging rather than a property of
+the text under test. (2026-10-09: it cost one otherwise-good run a false ambiguity report.)
+
+**Why the units clause is there.** The two sharpest findings of the first run were both missing
+units in the *real* page, and the reviewer only exposed them by supplying its own: a 0-10 Lead
+track where `pursuit.md` says "QR says by how much", and a QR-numbered exhaustion table where
+the page uses prose labels. An extrapolator that hedges on units cannot find that class of
+defect.
