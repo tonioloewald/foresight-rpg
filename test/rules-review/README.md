@@ -92,3 +92,49 @@ same reasoning. So the first run's findings stand, and more usefully: on these p
 battery is reading the page rather than the context. That is a result about the instrument,
 obtained for the price of one extra run, and it is the reason to keep running the clean path
 anyway — the next page set may not be so robust.
+
+## Battery C's first run, 2026-10-09 — the one that found what the lawyer missed
+
+Three runs, each withholding one page and giving the reviewer the core: **intense-action**
+(core + initiative), **exhaustion** (core + damage + intense-action), **pursuit** (core +
+initiative + intense-action). Clean room in all three — every reviewer's FILES READ audit
+listed only the staged directory, and named the injected session metadata (email, date, tool
+lists) explicitly as unused.
+
+**It found a different *class* of defect than Battery A, and this is the point of having it.**
+A lawyer reads for contradiction, and a contradiction needs two statements. An extrapolator has
+to *use* the rules to build a missing one, so it trips over every symbol the text never defines
+and every number the data layer never supplies. The three worst findings of the run were all
+invisible to a reader who only checks the text against itself:
+
+- **`pursuit.md`'s core mechanic cannot be executed.** It makes "the vehicle's own ratings —
+  Accelerate, Turn, Redline" the ease factors for every maneuver. None of the three exists in
+  `vehicles.json` or `spacecraft.json` (board #3179). This is #2904's defect class — rules
+  conferring something the data never defined — and nothing in the prose is wrong, which is
+  exactly why no lawyer pass would catch it.
+- **`damage.md` still offered a cut attribute** ("Endurance *or* Willpower, player's choice"),
+  and `scores.md` used an **undefined symbol in a formula** (`3 + E`). You can read past both;
+  you cannot *predict a rule* with them, because the reviewer had to ask which attribute it
+  rolls and what E is. Fixed.
+- **`quality-ratings.md` offers a third opposition mechanic** — the prior QR as your counter's
+  *base ease factor* — which is neither of the two in `the-one-rule.md` and produces different
+  numbers. Two separate Battery C runs independently flagged it after Battery A had; three
+  independent findings is the strongest signal this harness has produced, and #3157 went to
+  critical on it.
+
+**Derivability, which is the thing the battery is actually for.** The attention ladder came back
+as `-(N-1)` — the shipped ladder exactly, from two tasks on — with **one task at 0 instead of
++1**. So the page is derivable apart from one element, and that element is the one that creates
+the breakpoint already filed as #3167. A prediction that matches except at a single rung is the
+most useful possible result: it localises the arbitrary choice to one number.
+
+Three reviewers also produced rules **better** than the absent page in one place each — a 0-10
+Lead track with shift = QR difference (vs. `pursuit.md`'s undefined "QR says by how much"), and
+a cleaner exhaustion table (QR1 sheds a level, QR2-4 nothing, QR7 +1, QR10 +2 and you stop)
+than the prose-labelled one that ships. **Read a BETTER as a proposal, not just a score.**
+
+**What to fix in the harness.** Battery C's prompt should ask the reviewer to state the
+*units* of anything it invents, since the two best findings were both missing units. And the
+staged core set needs `scores.md` whenever the withheld page rolls an attribute: without it the
+reviewer could not tell whether `ST` was Strength or a third toughness attribute, and that
+confusion is an artifact of the staging rather than a property of the text.
