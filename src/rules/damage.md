@@ -103,6 +103,8 @@ Healing is slow. At the interval for your level, make a **convalescence roll** (
 
 Convalescence carries a penalty equal to the **worst level you've sunk to** since you were last healthy — a relapse leaves you fragile — until you fully recover or get **medical care**. Care (closing wounds, transfusion, surgery) lowers that worst-level penalty or buys levels back directly; it is what hauls a **dying** character off the 5→6 slide before the dice do.
 
+**And a recovery that goes badly leaves something behind.** A wound that relapsed, or healed without care, can become a **chronic condition** — a stiff shoulder, an old break that reads the weather, a lung that never came all the way back. Write it with the four lines on the [Quirks, Perks & Flaws](/quirks/) page (attach / trigger / effect / management) and it costs nothing and grants nothing: it is what happened to the character. That is the honest replacement for a scar table, because it names the rolls it touches instead of the mark it left.
+
 ## Poison, disease, and the environment
 
 The same machine handles the slow killers — resolve each as a task and read its **Yield/QR** for how much it does, or roll a **random QR** (D10: 1→QR1, 2→QR2, 3–5→QR3, 6–10→QR4) when nothing is opposed:
