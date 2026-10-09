@@ -18,7 +18,7 @@ So a character with CO 12, PC 10 has a Firearms *formula* of 11; untrained (leve
 
 ### Talent-light skills (open question)
 
-Some skills reward training far more than raw talent. The classic ForeSight move is to halve the formula for these — **Score = (average of attributes) ÷ 2 + level** — so the untrained baseline is low and almost all of a master's score is earned. *Decision pending: keep this two-tier system (full-average vs. half-average formulas), or flatten to a single full-average rule for simplicity? The 2004 templates went further still, with quarter-average formulas for a few skills (Confidence, then `(AP+WP)÷4`, was one — both of those attributes have since gone); those should probably collapse into whichever tiering we keep.*
+Some skills reward training far more than raw talent. The classic ForeSight move is to halve the formula for these — **Score = (average of attributes) ÷ 2 + level** — so the untrained baseline is low and almost all of a master's score is earned. *Decision pending: keep this two-tier system (full-average vs. half-average formulas), or flatten to a single full-average rule for simplicity? The 2004 templates went further still, with quarter-average formulas for a few skills (Confidence, then `(AP+WP)÷4`, was one — **AP** has since gone, and Confidence is now a flat `IN`); those should probably collapse into whichever tiering we keep.*
 
 ## Limit (and maximum level)
 
@@ -42,6 +42,6 @@ This is what lets the truly exceptional attempt things lesser practitioners simp
 
 ## Base Ease Factor
 
-Each ability also carries a **BEF** — the ease factor of a *standard* application, before any situational modifiers. BEFs hover around 5 and may fold in a standing familiarity (e.g. an Initiative BEF written 3 + E builds in your environment familiarity). The Score × BEF product is your baseline success chance; the situation moves it from there.
+Each ability also carries a **BEF** — the ease factor of a *standard* application, before any situational modifiers. BEFs hover around 5. A BEF can also **fold in a standing familiarity**, written as a sum: `3 + E`, where **E** is your familiarity with the environment, is the classic ForeSight treatment of Initiative — you react faster aboard your own ship than in a strange city. (The skill table ships Initiative at a flat **BEF 5**; the folded form is an alternative to it, not an addition.) The Score × BEF product is your baseline success chance; the situation moves it from there.
 
 *Designer's Note: "formula + level" is why ForeSight needs no separate stat for natural talent versus trained skill — the attributes are the talent, the level is the training, and the same number captures both. Set your attributes once; everything you learn builds on them.*

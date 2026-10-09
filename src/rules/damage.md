@@ -36,7 +36,7 @@ Injury is a single number, and it is **−(level) to everything you do** — pai
 | 5 | Dying | down and bleeding out; **without intervention you deteriorate toward 6** |
 | 6 | Dead | — |
 
-New damage **adds to your current level** (a medium 2 plus a heavy 3 is a dying 5). Toughness rolls throughout are made on **Endurance *or* Willpower, player's choice** — some people are physically hard to put down, some just refuse to quit. Pain resistance is **not a skill**; you roll the raw attribute.
+New damage **adds to your current level** (a medium 2 plus a heavy 3 is a dying 5). Toughness rolls throughout are made on **Willpower** — staying on your feet is mostly about refusing to stop (see [Exhaustion](/exhaustion/); what *kind* of enduring you are good at comes from **Endurance quirks**). Purely physiological resistance — poison, disease — is **Strength (ST)**, where willpower is no help at all. Pain resistance is **not a skill**; you roll the raw attribute.
 
 ## Stun & Shaken
 
