@@ -941,6 +941,64 @@ at the second step: there is no countermove, so it is a wall rather than frictio
 should keep gates in the **minority**, which is the opposite of what a travellers'-problems table
 is built to do.
 
+#### Better: gates get their workarounds from the other axes
+
+> Tonio, 2026-10-19: *"Or gates should have workarounds suggested by other axes."*
+
+**That is better than the quota I proposed**, and structurally rather than by degree. "Keep gates
+in the minority" is a blunt instrument — a count, imposed from outside. This is derived: a gate
+is high tightness on **one** dimension, and tightness says how hard norms bind, not that the
+other axes have stopped having values. **Every gate is a gate on one axis; the other axes are the
+doors.**
+
+Take *Xenophobia* — strangers shunned and feared — and read the rest of the vector:
+
+| The culture is also… | …so the way in is |
+| --- | --- |
+| high **ascription** | get adopted, sponsored, married in, blood-brothered. If the boundary is genealogical there is a genealogical door |
+| high **impersonal obligation** | a licence, a visa, a guild ticket, a contract. The office does not care who you are |
+| high **hierarchy** | a patron vouches for you; the gate opens from above |
+| long **time horizon** | residence. Stay twenty years and you are local |
+| high **openness to novelty** | be a curiosity rather than a threat |
+| low **tightness** | the rule exists and nobody checks — there is a quarter where it is not enforced |
+
+One gate, six different keys, and **which key it is characterises the society more sharply than
+the gate did.** "Strangers are feared here, and the way in is adoption" and "strangers are feared
+here, and the way in is a permit" are two completely different places, generated from the same
+feature.
+
+The sharpest case is *Religious Persecution*, because the ascription axis decides whether
+**conversion is even available**. In a low-ascription society you simply join the state religion
+and the gate opens. In a high-ascription one you cannot convert out of what you were born as, so
+the only routes are concealment or clientage. Same gate, and whether the obvious answer exists at
+all is derived rather than authored.
+
+**Which simplifies the classification above.** Gate / procedure / resource / marker are not four
+*kinds of feature* — they are **how a feature reads against the rest of the vector**. Xenophobia
+is a gate where no other axis supplies a door, and a *procedure* where ascription supplies an
+adoption rite that can be learned and performed. One feature, read differently. That is a smaller
+model than four categories of content, and it does more.
+
+So the generator rule, in place of the quota: **when a feature presents as a gate, derive at least
+one workaround from the highest other axis value, and price it.** A generated culture with a gate
+and no derivable workaround is then a *bug* — either the vector is degenerate, or the projection
+is incomplete.
+
+#### Except that some walls should stay walls
+
+With one caution, because the rule taken absolutely would cost something. **If every wall has a
+door, the setting loses the ability to say no**, and *Violent Cultural Intolerance* with a
+workaround is merely a difficulty modifier. This project's own principle cuts the other way here:
+*an alternative that cannot go wrong is an exit, not an option* — so a genuine wall is what makes
+the other paths matter.
+
+The resolution is the compression principle again: a thing must be **answerable at some scale**,
+not necessarily at the scale where you met it. A gate with no key at the door is legitimate when
+the *world* supplies the alternative — another province, another faction, another planet. So:
+workarounds by default, derived from the vector; and a true wall as a rarer, deliberate output
+whose answer is at campaign scale rather than scene scale. What is never acceptable is a wall with
+no answer at **any** scale, which is the only version that is actually just a tax.
+
 #### And both of Tonio's examples are derived rather than decorative
 
 - **Elaborate weddings** come from **high ascription**. A wedding is the moment ascribed status is
