@@ -363,22 +363,55 @@ model already needs, not a new mechanism. *Can the model produce Tschai?* If tho
 homogenised, either the prestige channel is too weak or the niche rankings are not really
 differentiating.
 
-**The condominium** — a world under **joint external sovereignty**, two powers administering it
-together, neither of them resident. *(Tonio named this as the Codominion in* Galactic Effectuator*;
-I am not certain enough of that source to build on the detail, and I may be confusing it with
-Pournelle's CoDominium, which runs the same mechanism and exports its unwanted population to the
-stars. Correct me and I will record it properly — the mechanism below stands either way.)*
+**Maz** (Vance, *Galactic Effectuator*). Tonio, 2026-10-19: *"three empires have partial
+jurisdiction over a planet with its own indigenous population."* I had guessed at a two-power
+condominium, and the correction matters — three differences, each with a mechanical consequence.
 
-The mechanism is the one that matters, and it forces a **generalisation of the niche set**: a
-faction's power base need not be on the planet. Some niches are **exogenous** — an off-world
-patron, an orbital, a trade route to somewhere else — and a faction standing on one answers to
-something the planet cannot reach. Joint sovereignty then creates a *divided* legitimacy niche,
-which is unstable in a productive way: it opens a niche for brokers and third parties who exist
-only because the two powers cannot see each other's business. That is the whole engine of such a
-setting, and it is unreachable if every power base has to be a province.
+**Three is not two.** Two powers sharing a world is a standoff: a bilateral stalemate that holds
+because neither can move. Three is qualitatively different — any two can combine against the
+third, so there is no stable configuration and the alignment keeps moving. The indigenous
+population then becomes a *prize* each coalition would like and the agreements forbid, which is a
+pressure that cannot be relieved. A two-power model would have produced a stable split and missed
+the entire dynamic.
 
-**Allowing non-geographic power bases is cheap to state now and expensive to retrofit**, so it goes
-in the engine's design from the start even though nothing will use it for some time.
+**Partial jurisdiction is not joint sovereignty.** Joint means both rule all of it. Partial means
+each rules part — and therefore that **the map of authority does not tile the territory**. The
+gaps and overlaps are the interesting object: places and persons where jurisdiction is ambiguous,
+absent or contested. So the niche is not "divided legitimacy" but **the seams themselves**, and
+what lives in them is the effectuator — a man who can act precisely where no power's writ runs
+cleanly. The model needs jurisdiction as a **coverage relation over provinces and persons that may
+be incomplete or overlapping**, not as an assignment of provinces to owners.
+
+**The natives are nobody's client**, which makes Maz the exact counterpart to Tschai. Tschai is
+**capture**: populations acquired and rewritten until they believe a false descent. Maz is
+**constrained non-capture**: the powers would capture if they could, and an agreement between them
+forbids it. So the two scenarios test opposite outcomes of the same prestige channel, which is
+precisely what a corpus should do.
+
+#### What Maz adds to the engine: agreements live on edges
+
+Forbidding capture is not a norm in any single faction's vector — it is a norm **several factions
+hold about each other's conduct**. So the engine wants **edge-level objects**, not only node-level
+traits: an *agreement*, with parties, a subject, a strength, and the property of being
+**breakable** — which is a different event from a norm drifting, and a much louder one.
+
+This is less of an addition than it first looks, because the edges already carry something: the
+prestige-weighted flow of #3401 is directed and asymmetric, so edges are already first-class.
+Agreements extend them rather than introducing a new concept, and the same object then covers the
+non-interference pact on Maz, the patron relation on Tschai, an alliance, a vassalage and a trade
+compact.
+
+It also means **a faction's power base can be an agreement** — which is what a broker's actually
+is. That is the strongest argument for the exogenous-niche generalisation: not merely that a power
+base may sit off-world, but that it need not be a *place* at all. **Any number of external powers,
+and niches that are relations rather than territory.**
+
+*Falsifier:* given three external powers with partial, seamed jurisdiction over a world with a
+native population and a non-interference agreement, the model must produce **persistent
+realignment rather than a settled split**, a **broker niche at the seams**, and **pressure on the
+agreement that occasionally breaks it**. A stable three-way division means the coalition dynamics
+are not being modelled — and note that this cannot be faked by tuning, because the instability
+has to come from there being three parties rather than from a dial labelled instability.
 
 ### The norm vector: a cultural big five
 
