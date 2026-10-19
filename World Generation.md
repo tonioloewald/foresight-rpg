@@ -557,6 +557,79 @@ everything and will not eat at each other's tables. The markers are also what
 distinction-seeking operates on: when substantive norms converge, differentiation goes into the
 cheap channel, which is exactly what it does in life.
 
+#### Kinship theory, and what it actually hands the engine
+
+> Tonio, 2026-10-19: *"Maybe we could look at anthropology and sociology for pointers.
+> Anthropology is very keen on explaining society from kinship theory which tends to map to this."*
+
+It does map, and more usefully than as a source of vocabulary: **kinship theory is already a
+generative model.** Descent, residence and marriage rules are rule systems with computable
+consequences, which is exactly what this engine needs and exactly what a list of value-axes does
+not supply. Five things it gives that would change the implementation, not just the prose.
+
+**1. Residence and descent rules set the flow matrix — the biggest practical gift.** The drift
+engine needs a flow operator, and in kin-based societies the dominant channel of norm transmission
+is **marriage exchange**: who moves, how far, and in which direction. That is not free — it falls
+out of the residence rule. **Patrilocality** means women move between groups every generation: a
+large, regular, *directional* flow. **Matrilocality** reverses it; **neolocality** nearly stops it.
+So a faction should carry a kinship *configuration* — descent, residence, marriage preference —
+and the engine should **derive** its flow matrix from that rather than taking flow as a tunable
+parameter. Fewer free parameters, and the ones that remain are things an anthropologist would
+recognise.
+
+**2. Segmentary lineage theory supplies the split/fuse metric.** I had sketched split and fuse on
+an arbitrary trait-distance threshold. Evans-Pritchard's Nuer material gives something far better:
+fission and fusion at **every level simultaneously**, keyed to **genealogical distance**, with
+mobilisation happening at the level of the dispute — the "structural relativity of the segment".
+So split/fuse is not binary, it is **scale-relative**: the same two groups are one unit against an
+outsider and two units against each other. That is a better operator than the one I had, it is
+already worked out, and it is the behaviour a feud needs.
+
+**3. Marriage rules set the shape of the alliance graph.** Lévi-Strauss's distinction between
+**restricted exchange** (two groups swap, closing a pair) and **generalised exchange** (A → B →
+C → A, chaining many) is directly the difference between a narrow and a wide bridging structure —
+so marriage rule is an *input* to the connectivity graph rather than a flavour note. And
+**cousin marriage is the measurable version of the kin axis**: father's-brother's-daughter marriage
+closes a lineage in on itself, which is the mechanism under amoral familism. It is also the proxy
+the quantitative literature uses, so it is how this axis gets **calibrated against real data**
+rather than guessed.
+
+**4. Grid/group is the projection layer the model is missing.** Mary Douglas's two axes — *group*
+(how strongly one is incorporated into a bounded unit) and *grid* (how far life is regulated by
+classification) — were built to be **generative of cosmology**: social structure predicting what
+people hold to be dangerous, polluting or blameworthy. That is precisely the gap between "a vector
+of six numbers" and "something a GM can play", because it answers **what this faction is afraid
+of**, and fear is what drives a plot. Her four cells (hierarchical, individualist, enclave,
+fatalist) and the cultural theory of risk built on them are a ready-made table from structure to
+anxiety. Worth noting that grid/group is *not* a seventh and eighth axis — group is close to kin
+obligation and grid to tightness — so it is best used as a **readout**, which is what it was for.
+
+**5. The classical sociology is the same split, already argued.** Durkheim's mechanical against
+organic solidarity, with organic solidarity arising from the **division of labour**, is the
+impersonal-obligation axis and its driver, stated in 1893. Tönnies' *Gemeinschaft/Gesellschaft*
+is the same cut. Weber's patrimonialism is already cited above. And the named forms of
+particularistic exchange *inside* modern institutional states — *guanxi*, *blat*, *wasta* — are
+the evidence that the high-kin/high-impersonal cell is genuinely occupied rather than a gap in the
+table.
+
+#### One caution, which the model happens to answer
+
+**Anthropology substantially dismantled kinship-as-foundation**, and it would be careless to build
+on the 1950s version as though it had not. Schneider's critique — that "kinship" may be a
+Western analytic category projected onto everyone — and the later turn toward kinship as
+*practice* rather than structure are both serious, and a model that explains every society from
+descent rules would be baking in a theory the field itself abandoned.
+
+The resolution is pleasing, because the model already contains it. **Kinship's explanatory power is
+a variable here, not an assumption.** In the clan cell it explains nearly everything; in the civic
+cell it explains very little, because obligation has moved into offices and contracts. So
+*"how much does kinship explain this society?"* is an **output** of the kin-obligation axis rather
+than a premise of the engine. Use kinship mechanics hard where that axis is high, and let them
+fall away where it is low — which is also simply what happened historically.
+
+*(The specific citations above are from memory and are offered as pointers, not references. If any
+of this reaches the book rather than the engine, they want checking first.)*
+
 #### The guard rail, stated as a rule
 
 **A norm vector belongs to a faction, never to a species or a world.** A world has many, and the
