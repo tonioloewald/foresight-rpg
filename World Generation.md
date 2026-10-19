@@ -631,6 +631,60 @@ tracking second cousins is **maintenance work**, and the reciprocity it consumes
 finite resource a relationship with a stranger would need. Deep tracking does not merely correlate
 with weak impersonal obligation — it *spends the budget* that impersonal obligation would run on.
 
+#### Finland and Vietnam: the matched pair that settles it
+
+> Tonio, 2026-10-19: *"Finland is a relatively collectivist society but with strong institutional
+> loyalty. Vietnam is more collectivist but far weaker institutional loyalty."*
+
+**This is the best single demonstration that the split is necessary**, and better than the
+Scandinavia-against-familism contrast above, because the pair is **matched**: both societies read
+as collectivist on the folk question, and they sit in **opposite cells**.
+
+| | kin obligation | impersonal obligation | cell |
+| --- | --- | --- | --- |
+| **Finland** | low — nuclear households, neolocal residence, no lineage reckoning, the old cared for institutionally | very high — trusted institutions, accepted taxation, the office outlives its holder | **civic** |
+| **Vietnam** | high — patrilineal lineage, ancestor veneration, dense kin reckoning, multi-generational households | low — relationship-based exchange, the office staffed through someone | **clan** |
+
+What makes Finland *feel* collectivist is not a kin claim at all: it is that its impersonal
+obligation is **enormous**. You owe a great deal — simply not to relatives. One axis cannot say
+that, and this is what it sounds like when it tries.
+
+#### Which yields the cleanest statement yet: collectivism is a magnitude, not a direction
+
+The two obligation axes form a **vector**. What Finland and Vietnam share is its **magnitude** —
+in both, the individual's own claim is weak against whatever group holds them. What they differ on
+is its **direction** — toward kin, or toward offices.
+
+So *"collectivist"* is a reading of the magnitude, and the clan/civic distinction is the
+direction. Individual autonomy is just a short vector. **That means no seventh axis is needed**:
+collectivism is derived, and the information is in the direction, which is exactly where the folk
+term throws it away.
+
+It also explains what Hofstede's individualism index is really measuring. Its items are about
+family and in-group — so it tracks something close to **the kin axis, inverted**, while being
+named as though it measured obligation in general. From memory the scores run Vietnam ~20, Finland
+~63, Sweden ~71, the United States ~91: a clean reading of kin intensity, and nearly blind to
+impersonal obligation, which is why Finland and the United States land on the same side of it
+despite institutional loyalty being the thing that most distinguishes them. The index's
+correlation with prosperity then falls out of the substitution mechanism rather than being a
+discovery. *(Scores from memory — worth checking before any of this is quoted.)*
+
+#### And the pair is a fixture for the projection layer, which is where it will break
+
+Tschai and Maz test the engine. **Finland and Vietnam test the readout**, and that is the part most
+likely to fail, because a GM-facing one-liner is exactly where two axes get flattened back into one
+word — and *collectivist* is a very tempting word.
+
+So: **the projection must never emit "collectivist" on its own.** It has to name the direction.
+
+- Finland: *obligation runs wide and impersonal — you owe the stranger and the office, not the
+  cousin.*
+- Vietnam: *obligation runs deep and narrow — the lineage first, and the office is staffed by
+  somebody's nephew.*
+
+If a generated culture's summary cannot tell those two apart, the readout has collapsed the axes
+whatever the engine is doing underneath. Cheap test, and it catches the likeliest failure.
+
 #### But "less group loyal" hides the same confound as "collectivist"
 
 A deep-kinship society is often **ferociously** loyal to a group — the lineage, the clan, the
