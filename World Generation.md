@@ -984,6 +984,78 @@ one workaround from the highest other axis value, and price it.** A generated cu
 and no derivable workaround is then a *bug* — either the vector is degenerate, or the projection
 is incomplete.
 
+#### A prohibition in a hierarchy does not vanish — it sinks
+
+> Tonio, 2026-10-19: *"a society that bans computers but is very hierarchical might ignore the rule
+> or be blind to it for a certain caste. Oh of course untouchables can use computers, they're too
+> stupid to misuse them."*
+
+**This is a better reading of hierarchy than mine.** I had the exemption at the **top** — a patron
+vouches for you, the gate opens from above. Tonio's is at the **bottom**, and it is the more useful
+of the two for three reasons.
+
+A hierarchy does not only grade power. It grades **who the rules are about** — so a norm's scope
+of applicability is itself ranked, and there are two quite different exemptions:
+
+- **Privilege**, at the top: the rule does not bind you because you are above it.
+- **Beneath notice**, at the bottom: the rule does not bind you because you do not fully count.
+
+The second is better table material. It is **accessible** — a PC cannot become the Prince, but a
+PC can be taken for a nobody, or simply *hire* one. It is **cheaper and dirtier**, which is the
+register adventures live in. And it creates **a class holding a capability the elite have forbidden
+themselves**, which is a time bomb: the untouchables end up the only people who know how the
+machines work.
+
+**So the general rule: a prohibition in a hierarchical society sinks rather than disappearing.** The
+forbidden-but-necessary work is delegated to whoever is beneath the rule's dignity — and the
+prohibition therefore *creates an occupational niche at the bottom*. Which is a **power base**, and
+feeds straight back into the faction engine as a monopoly on something nobody respectable may touch.
+
+This is attested and not speculative: tanners, butchers, gravediggers, executioners, nightsoil
+carriers, moneylenders. The forbidden thing gets done by people who do not count.
+
+#### Three shapes of exemption, one per axis pair
+
+| Tightness combines with… | …and the exemption is | justified by |
+| --- | --- | --- |
+| **hierarchy** | it sinks: an underclass does it, beneath the rule's notice (or the elite are privileged above it) | **contempt** — "they are too stupid to misuse them" |
+| **impersonal obligation** | a **licence**: a registered operator, a bonded technician | **procedure** — it is permitted, in writing, under conditions |
+| **ascription** | a **hereditary keeper**: one lineage has always tended the machines | **tradition** — it is what they are for |
+| low **hierarchy**, no other door | it actually binds, or everyone openly breaks it | nothing — and this is the genuine wall |
+
+Tonio's example **fuses the first and third** — "untouchables" is a caste at a hierarchy's bottom
+— and that compound is the richest version: a lineage both despised and indispensable. It is also
+where the purity cluster in 1986's table finally gets its mechanism, which it lacked when I mapped
+it: **purity norms generate occupational castes**, because what must not be touched still has to be
+handled by somebody. Douglas, arriving exactly where she is useful.
+
+#### The generator should emit the rationalisation, not just the rule
+
+The sharpest thing in Tonio's example is not the exemption, it is *"they're too stupid to misuse
+them."* **The lie is load-bearing**: it is what lets a society hold the prohibition and the
+exemption at once without noticing the contradiction. So a feature should be emitted as **three**
+parts, not one:
+
+> **the rule** — computers are banned
+> **the door** — except for untouchables
+> **the lie** — because they are too stupid to misuse them
+
+The third part is what a GM says out loud, it tells the players more about the society than the
+rule did, and it is the seam a clever player works: *a society's contempt for a class is available
+as cover.* And it is derivable, because the justification follows from whichever axis supplied the
+door — contempt from hierarchy, procedure from impersonal obligation, tradition from ascription.
+
+#### Which yields a falsifier for the engine, not just the readout
+
+The delegated class holds a monopoly on something necessary while being denied standing. **That is
+unstable, and history says how it resolves**: the mamluks and the janissaries were raised to do what
+the elite would not, and ended up holding the state.
+
+So: **the engine should sometimes produce the delegated class seizing power**, without anyone
+authoring a revolution. If prohibition-plus-hierarchy never generates that outcome over enough
+runs, the power-base model is not actually treating a monopoly as power — it is treating it as
+flavour.
+
 #### Except that some walls should stay walls
 
 With one caution, because the rule taken absolutely would cost something. **If every wall has a
