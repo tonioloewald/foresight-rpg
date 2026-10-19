@@ -1,7 +1,8 @@
 # World Generation — design record
 
-> **Status:** plan agreed in principle 2026-10-19 (Tonio). Two decisions taken; the package does
-> not exist yet and nothing is built. Board #3391.
+> **Status:** Stage 0 built 2026-10-19 — the package, the plugin architecture and L0/L1 — in
+> `../tosijs-worlds`, not yet a GitHub repo (Tonio publishes it when ready). 39 tests, typecheck
+> clean. Board #3391.
 >
 > This record lives in `foresight` because the *domain* decisions are the book's. It moves to the
 > new package's repo once that exists, leaving a pointer — the same way `Design Document.md` keeps
@@ -14,6 +15,45 @@ real sky, a real map, a climate that follows from the planet's own facts, and a 
 explains why the colony is the way it is. The reference quality bar is the thing
 [`tosijs-3d`](https://3d.tosijs.net) already draws from NASA's maps of the Earth, the Moon and
 Mars — a generated world should be indistinguishable in kind, not obviously procedural.
+
+## The third decision: configurable by construction
+
+**Tonio, 2026-10-19: consumers must be able to override our assumptions.** That turned out to
+shape the whole package rather than bolt onto it, because assumptions come in two kinds and they
+want different mechanisms.
+
+- **A parameter is a number somebody chose** — the snow-line temperature, the disk's solid budget,
+  the spectral mix. Overridable with a plain object, and *declared*: units, range, and a **required
+  rationale**. The declaration is what makes an override safe rather than merely possible. A typo
+  is an error naming what the namespace does accept; an out-of-range value is refused with the
+  reason the assumption exists attached. The only thing worse than a rejected override is an
+  ignored one.
+- **A stage is a process somebody chose** — how planets form, how a surface is made, how a history
+  advances. Replaceable whole, and a replacement **brings its own parameter namespace**, so a
+  third-party model's assumptions are declared, validated and fingerprinted exactly like ours. The
+  configurability is not a privilege the library keeps for itself.
+
+Two consequences worth recording as decisions in their own right.
+
+**A config fingerprint seeds nothing.** Folding it into the derived seeds would have been easy and
+wrong: tuning the history model would reroll everybody's planets. A parameter reaches a world only
+through the stages that read it — which is precisely what makes one safe to tune. The
+fingerprint's job is provenance: how two people establish they are looking at the same world, and
+what a saved world records beside its address.
+
+**The conformance kit ships in the package.** A configurable generator is only as trustworthy as
+its contract, so the contract is runnable: point it at any configuration and it checks determinism,
+order independence, that nothing touched `Math.random` or the clock (both booby-trapped during the
+run), Kepler, Hill separation, every range — and, with a surface stage registered, that the sea
+it produces matches the hydrographics its world published. That is the layering invariant below,
+enforced against *plugins* and not just against us. The idiom is `tosijs-3d`'s
+`min-sim-conformance`: framework-agnostic, taking the test harness as an argument.
+
+The kit also taught its first lesson by being wrong. It had a `noMigration` option asserting no
+giant sits inside the snow line — but that claim does not follow from its premise: a model
+without migration still puts a giant wherever a core grew past critical mass, and in a rich disk
+that happens inside the snow line. It was removed. **A conformance kit that rejects correct models
+is worse than no kit at all.**
 
 ## The two decisions
 
@@ -117,7 +157,17 @@ and a generator that can *only* produce it is overfitted. So:
 Each stage ships something visible and carries its own falsifier. Nothing proceeds on a stage whose
 falsifier has not run.
 
-**Stage 0 — the package and the harness.** The repo, the `World` types in real units (no strings),
+**Stage 0 — the package and the harness. DONE 2026-10-19.** The architecture above, plus L0 and
+most of Stage 1, in `../tosijs-worlds`. The tests found four model errors on the way, which is
+what they are for: a 40-Earth ball of rock classified as a Neptune (a giant is a body that *took
+gas*, not a body that is heavy); per-slot scatter applied after the budget split, which broke the
+budget; giants at 0.05 AU, i.e. hot Jupiters by accident in a model whose whole claim is that it
+has no migration; and 1200-Earth monsters, three times what a disk lets a planet reach. Median gas
+giant is now 0.90 Mⱼ (p10 0.51, p90 1.49), and an HI 1 world is 0.4% of planets — a find,
+not a commonplace. **Still owed from this stage: the Kepler occurrence comparison**, which is
+Stage 1's real falsifier and is not yet written.
+
+**Stage 0 — original scope.** The repo, the `World` types in real units (no strings),
 and the calibration harness with the corpora above. Deliverable: a failing test suite that says
 precisely how wrong the current generator is. *Falsifier: the harness reproduces today's measured
 numbers for today's generator, so we know it measures what we think.*
