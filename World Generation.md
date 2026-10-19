@@ -292,6 +292,184 @@ snapshots: a lingua franca spreads along trade edges and not across barriers; le
 between separated populations runs at something like the Swadesh rate rather than ten times it; a
 polity with many power centres and weak connectivity fragments without being told to.
 
+### Colonisation waves: site selection is niche occupation
+
+> Tonio, 2026-10-19: *"You might have two colonization waves. The first probably picks the nicest
+> real estate. The second picks best available."*
+
+**This is the same engine again, which is why it belongs here rather than in a system of its own.**
+A wave choosing sites is a founder population occupying niches; a second wave arriving to a
+settled map is an invasive population facing **competitive exclusion** — pushed to marginal
+niches, or into direct competition it has to win. Ecological succession, with ships.
+
+Four things fall out of ordering the waves, and all four are things a GM would otherwise have to
+author by hand:
+
+1. **Wave order stays legible in the map forever.** The oldest settlements sit on the best land,
+   so *"why is the capital there?"* has an answer: they arrived first. A player can read the
+   settlement history off the map without being told it.
+2. **Later waves are structurally poorer**, which manufactures grievance without anyone writing
+   any. Arrival order is then a natural **initial faction split** — the drift engine starts with
+   populations already differentiated by *when they got here*, which is exactly the seed it needs.
+3. **"Best" is per-wave, not absolute.** A wave with different biology or different technology
+   ranks the same map differently, so it may happily take land an earlier wave passed over — and
+   then the two barely compete at all. Highland against lowland agriculture; Tschai, below.
+4. **The criteria move with technology.** A wave arriving at TL 10 can settle what TL 6 could not,
+   so "best available" is a function of the wave's own tech level — which couples this directly to
+   the history stage rather than leaving it a separate subsystem.
+
+*Falsifier, and it is the same two-run shape as the archipelago test:* with **identical** waves,
+wave two's mean site quality must come out measurably below wave one's, and the gap must widen with
+each further wave. With **disjoint** criteria, there must be no penalty at all. If the model cannot
+show both, site selection is not really reading the waves' preferences.
+
+### Shocks: the gold rush
+
+A strike is not a slow process at all — it is an **exogenous shock to the niche-value field**. A
+worthless province becomes the most valuable one on the planet overnight, and the model needs to
+take that as an event rather than grow into it.
+
+So the engine wants **two shock channels, not one**. #3401 already needs trait shocks, for a
+faction that changes a norm deliberately; a strike is a shock to a **niche**. Different channel,
+same requirement that the simulation be open rather than closed.
+
+What a rush then produces is worth being precise about, because the obvious model gets it backwards.
+Drift goes as 1/√N, so a big rush population should drift *slowly* — and rush societies
+notoriously do the opposite. The resolution is that a rush is not drift at all: it is a **founder
+event with biased sampling**. The new population is drawn non-randomly from many sources at once
+(young, transient, self-selected for appetite), with weak flow back to any of them and almost no
+institutional transmission. That diverges fast and in an unpredictable direction — which is the
+Klondike, and it is a *prediction* of the model rather than a special case bolted onto it.
+
+And the bust is the part worth having: carrying capacity for *mining* was enormous and carrying
+capacity for *living there* never was, so what is left is a stranded population, abandoned
+infrastructure, and a grievance. Ghost towns fall out of the same arithmetic that made the boom.
+
+### Two worlds worth stealing from, as a test corpus
+
+Named scenarios are the same discipline as the rules-review harness's `fixtures.md`: **a labelled
+test set written before the instrument.** Each of these can be specified now — inputs, and the
+output the model must be able to produce — without the engine existing.
+
+**Tschai** (Vance, *Planet of Adventure*). Layered, mutually hostile settlement over long
+timescales: Chasch, Wankh and Dirdir each arrive, and each keeps a **client human population** —
+Chaschmen, Dirdirmen, Wankhmen — shaped so thoroughly that each believes itself descended from its
+patron. The Pnume were there before all of them. As a test it demands three things: waves with
+**disjoint niche rankings** (so they coexist instead of resolving), **capture rather than
+displacement** (a population acquired, not removed), and a **native** population older than every
+wave. The capture relation is the prestige-weighted flow of #3401 turned to its maximum — norms
+rewritten past the point of a false origin story — so Tschai is a stress test of a channel the
+model already needs, not a new mechanism. *Can the model produce Tschai?* If those inputs come out
+homogenised, either the prestige channel is too weak or the niche rankings are not really
+differentiating.
+
+**The condominium** — a world under **joint external sovereignty**, two powers administering it
+together, neither of them resident. *(Tonio named this as the Codominion in* Galactic Effectuator*;
+I am not certain enough of that source to build on the detail, and I may be confusing it with
+Pournelle's CoDominium, which runs the same mechanism and exports its unwanted population to the
+stars. Correct me and I will record it properly — the mechanism below stands either way.)*
+
+The mechanism is the one that matters, and it forces a **generalisation of the niche set**: a
+faction's power base need not be on the planet. Some niches are **exogenous** — an off-world
+patron, an orbital, a trade route to somewhere else — and a faction standing on one answers to
+something the planet cannot reach. Joint sovereignty then creates a *divided* legitimacy niche,
+which is unstable in a productive way: it opens a niche for brokers and third parties who exist
+only because the two powers cannot see each other's business. That is the whole engine of such a
+setting, and it is unreachable if every power base has to be a province.
+
+**Allowing non-geographic power bases is cheap to state now and expensive to retrofit**, so it goes
+in the engine's design from the start even though nothing will use it for some time.
+
+### The norm vector: a cultural big five
+
+> Tonio, 2026-10-19: *"I think we need something like a cultural big five."*
+
+**The analogy is apt for a reason worth being precise about.** The Big Five is not a theory of
+personality someone proposed; it is what *fell out of the covariance structure* of trait words
+under factor analysis. So "a cultural big five" is a methodological instruction, not a shopping
+list: find the axes that genuinely vary independently, and stop at the number that explains the
+variance.
+
+**And it misleads in one place that matters.** The Big Five describes *individuals*, and a culture
+is not a large individual. Averaging personality over a population gives national character —
+which is bad modelling and worse manners. The axes a society model needs are **relational**: how
+power is graded, how obligation flows, how deviance is handled. Not dispositional.
+
+There is real prior art — Hofstede's six dimensions, Schwartz's value orientations,
+Inglehart–Welzel's two factor-analytic axes, GLOBE's nine, Gelfand's tight/loose — and none of
+it is adoptable wholesale, because every one of them selected its axes for *what varies in survey
+data*. We need a different criterion: **what changes what a faction does.**
+
+#### What an axis has to earn its slot
+
+1. **Mechanically load-bearing.** It must change a decision at the table — who this faction
+   allies with, what it forbids, how it treats a stranger. An axis that produces no decision is
+   decoration, and this project already has a name for that: a tax.
+2. **Selectable.** The drift engine needs selection, so some niche must reward one end of it.
+3. **Nearly independent**, or drift in one shows up as drift in another and the dimensionality is
+   a lie.
+4. **Readable in a sentence**, so a GM can say what this culture is like in one line.
+5. **Few.** Parsimony is the whole point of invoking the Big Five.
+
+#### The proposal: five relational axes
+
+| Axis | What it is | What it changes | What selects it |
+| --- | --- | --- | --- |
+| **Tightness** | how hard norms are enforced; tolerance of deviance | law level, treatment of strangers, whether dissent drifts or schisms | **threat** — scarcity, disease, raiders, a hostile biosphere |
+| **Hierarchy** | how steeply power and deference are graded | government type, who may address whom, whether a deal needs a patron | **concentration of the power base** — one pass, one aquifer, one elevator rewards steepness |
+| **Reach of obligation** | the radius of "us": household, clan, city, species | who you must help, who you may cheat, whether a contract with a stranger binds | **connectivity** — long trade edges reward a wide radius, isolation a narrow one |
+| **Openness** | novelty and outsiders as opportunity or as contamination | tech adoption, immigration, and *whether a foreign norm transmits on contact* | **whether contact has historically paid** |
+| **Time horizon** | how far ahead obligation runs; ancestors and descendants against now | infrastructure, debt, whether a windfall is invested or spent | **predictability** — a reliable season rewards planning; a lottery rewards taking it now |
+
+**Tightness is a meta-axis, and that is why it is first.** It is not a norm; it is how strongly
+norms are held — so in the engine it *is* the selection strength and the drift rate. A loose
+culture drifts fast and tolerates sub-factions; a tight one barely drifts and schisms instead.
+One of the five slots modulating the engine's own dynamics is a property worth having on purpose,
+and tightness earns it: it is also the axis with the clearest environmental driver, since norm
+strength tracks ecological threat.
+
+**Openness gates the prestige channel.** #3401's asymmetric flow — norms travelling from the
+admired to the admiring — is throttled by the receiving faction's openness. That is how client
+capture succeeds or fails, which makes Tschai a test of this axis specifically.
+
+#### Plus a marker vector, which is not one of the five
+
+The five are all *substantive*, and that leaves a hole: two factions can converge on every
+substantive norm and still be unmistakably two factions — dress, diet, dialect, calendar, which
+way you face to pray. So the engine also carries a **marker vector with no selection at all**. It
+drifts freely, and its only job is **distance**.
+
+This is load-bearing rather than flavour. Without an unselected axis, any two populations in
+similar niches converge and fuse, because selection is pulling them to the same place — so the
+model would lose the commonest case in human history, which is neighbours who agree about almost
+everything and will not eat at each other's tables. The markers are also what
+distinction-seeking operates on: when substantive norms converge, differentiation goes into the
+cheap channel, which is exactly what it does in life.
+
+#### The guard rail, stated as a rule
+
+**A norm vector belongs to a faction, never to a species or a world.** A world has many, and the
+model is uninteresting — and ugly — the moment it is read as "people from X are Y". Tschai is
+the illustration: its point is not that humans there are docile, it is that **four human
+populations on one planet carry four different vectors**, each shaped by a different patron. Any
+display, any projection, any book text that collapses a world to one culture is a bug.
+
+#### How the projections land
+
+1986's own outputs read off pairs, which is the test that these axes are the right ones:
+**law level** off tightness × hierarchy; **government type** off hierarchy × obligation reach;
+**tech level drift** off openness × time horizon. And the scenarios above fall out rather than
+needing authoring: a **gold rush** is an unpredictability shock, so it selects short horizon and
+loose tightness — boom-town lawlessness as a prediction instead of a special case; a **second
+wave** on marginal land under threat comes out tighter and more hierarchical, which gives the
+grievance a cultural signature and not merely a resource gap.
+
+**Still open, and a real question:** whether five axes with a marker vector is enough to generate
+cultures that feel distinct at the table, or whether distinctness lives mostly in the markers and
+the institutions rather than in the five. That is answerable only by generating a few hundred and
+reading them, which is Stage 5 work — but it is worth writing the expectation down now so the
+answer can disagree with it.
+
 ### What this does to the 1986 society tables
 
 1986 gave a planet **one** government, one law level, one list of social features — a single
