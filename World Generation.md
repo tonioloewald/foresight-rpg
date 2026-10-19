@@ -139,9 +139,9 @@ The project already has the hard part of this: **`sol.ts`** is our own system as
 radii, days and moons. A generator that cannot reproduce the Solar System's gross shape is wrong,
 and a generator that can *only* produce it is overfitted. So:
 
-- **L1 against the exoplanet census.** Generate a few thousand systems and compare the
-  radius–period occurrence distribution to Kepler's. The known failure modes are the interesting
-  ones: super-Earths are the most common planet in the galaxy and 1986 cannot make one; hot
+- **L1 against the exoplanet census. DONE** — twenty thousand systems against fifteen occurrence
+  rates, each with its standing declared in advance; see Stage 1 below for what it broke. The
+  known failure modes are the interesting ones: super-Earths are the most common planet in the galaxy and 1986 cannot make one; hot
   Jupiters exist and need migration; M-dwarf worlds are tidally locked and that is a *setting*, not
   a footnote.
 - **L1 against Sol.** Eight planets, the rocky/giant split either side of the snow line, a belt
@@ -166,8 +166,99 @@ gas*, not a body that is heavy); per-slot scatter applied after the budget split
 budget; giants at 0.05 AU, i.e. hot Jupiters by accident in a model whose whole claim is that it
 has no migration; and 1200-Earth monsters, three times what a disk lets a planet reach. Median gas
 giant is now 0.90 Mⱼ (p10 0.51, p90 1.49), and an HI 1 world is 0.4% of planets — a find,
-not a commonplace. **Still owed from this stage: the Kepler occurrence comparison**, which is
-Stage 1's real falsifier and is not yet written.
+not a commonplace.
+
+**Stage 1 — the Kepler comparison. DONE 2026-10-19,** and it earned its keep: it falsified three
+things on its first run, two of which no amount of inspection would have found. See below.
+
+### What a falsifier needs that we nearly forgot: standing
+
+A model with **no migration** is *known in advance* to be wrong about some of the exoplanet
+census. So if each claim's status is settled **after** the measurement, the comparison proves
+nothing — every miss becomes a gap and every hit becomes a vindication. The corpus therefore
+declares, before anything is measured, which of five things each claim is:
+
+| Standing | Meaning |
+| --- | --- |
+| **binding** | The model must land in the band. A miss is a defect. |
+| **ceiling** | One-sided. Falling short is expected and allowed, **exceeding is not** — the physics we omit can only add planets, never remove them. |
+| **informational** | Measured and printed, never asserted: the survey's own uncertainty is too wide to decide anything. |
+| **known-gap** | *Nature* doing something we chose not to model. Asserted in the failing direction, so a surprise still shows up. |
+| **defect** | ***Our*** error, in physics we do claim to model. Recorded rather than hidden, pinned at the broken value, and **required to name its fix**. |
+
+The last two are not the same excuse and must never be swapped. A known-gap is migration; a
+defect is us. Calling a defect a gap is the exact dishonesty the table exists to prevent, so the
+code refuses a defect that does not name the mechanism that would fix it — there is a test for it.
+
+The **ceiling** is where most of the honesty lives. We model neither migration nor the inward
+drift of solids, and both of those *move planets inwards*. So a short-period occurrence **below**
+the survey's is the model telling the truth about what it leaves out; one **above** it is the
+inner disk being overfed, which no missing mechanism excuses.
+
+### The three falsifications, and the two mechanisms that fixed them
+
+**1. Giants were ten times too common** — 70% of FGK stars had one inside 5 AU, against a
+measured 10–20%. The diagnosis looked obvious: the minimum-mass solar nebula is reconstructed
+*from Sol*, and Sol has four giants, so **the MMSN is an upper-tail disk and not a median one**.
+Lowering the budget did fix the rate. It was still the wrong fix, because —
+
+**2. Giants were forming in the wrong place.** 25% of stars had one beyond 10 AU, where imaging
+surveys see a few percent, while only 4% had one inside 5 AU against a measured 15%. The *rate*
+was right and the *distribution* was wrong, which is a much more precise accusation. The missing
+physics is that **core growth is a race against the gas disk's lifetime**: growth time rises with
+orbital radius and falls with local solid density, and past about 10 AU the race is simply lost.
+
+Adding the race moved the giant peak to **1–5 AU**, which is where the surveys put it — and that
+shape came out of the timescale, not out of a dial. It also let the budget go back to the MMSN,
+where it was always better justified. The lesson is worth keeping: **the first fix that makes a
+number right is not necessarily the mechanism**, and the way to tell is to check a *shape* rather
+than a rate.
+
+**3. Giant occurrence came out inversely related to stellar mass.** 34% of G stars got a giant
+against 20% of A stars; the surveys find the opposite, and find it strongly. The cause is that a
+luminous star's snow line is far out, where growth is slow, so a budget merely *proportional* to
+stellar mass cannot pay for the extra distance. Disk masses are measured rising **faster** than
+linearly with stellar mass, and that is what pays for it. With that exponent, M-dwarf giants fall
+from 13% to 4% (measured ≈ 3%) and the A/F-to-M ratio goes from 1.55 to 5.8 (measured ≈ 4).
+**Nothing was fitted to that second number** — it is the model's sharpest free prediction, and it
+came out right.
+
+### What it also found, which is not flattering
+
+- **The model cannot build Uranus or Neptune.** The growth race that removed the wide-giant excess
+  means nothing reaches even five Earth masses beyond 20 AU. That is the real in-situ result — the
+  ice giants are evidence *for* migration — but Sol has two planets this model could not have
+  made, and it is asserted as a property so the mechanism cannot be quietly removed later.
+- **Short-period planets come out the right number and the wrong size.** About half of FGK stars
+  get a planet inside 85 days, which matches Kepler almost exactly; but they pile into the
+  Earth-size bin, and the measured distribution is *flat* from 0.8 to 4 Earth radii — a ratio of
+  1.1 where the model gives 0.02. The total being right makes the shape being wrong much more
+  damning than either number alone.
+- **Nearly every G or K star gets a habitable-zone planet.** The orbit ladder steps by 1.65 and a
+  Sun's conservative habitable zone spans a factor of 1.76, so there is almost always *exactly one
+  slot* inside it. This is the most consequential claim the model makes for a game: it decides
+  whether a landfall is a find or a formality, and at 0.92 planets per star it is a formality.
+- Both of the last two are **one** missing mechanism — a late instability that merges neighbours,
+  giving fewer planets, each heavier, more widely spaced — and it is the same reason planet count
+  is still set by the `maxPlanets` cap rather than by anything physical. **That is the next piece
+  of modelling, and it is an architectural change rather than a recalibration, so it waits.**
+
+### Two mistakes of my own, recorded because they are the method
+
+- **One claim was incoherent.** The small-to-giant ratio was measured inside 85 days, where the
+  model produces no giants *by design* — so it divided by a zero that the hot-Jupiter known-gap
+  had deliberately created. A test that contradicts another test is a broken test, not a finding.
+  Measured over all periods it passes at 10.1 against about 10.
+- **One band came from a half-remembered source.** The η-Earth band was set from a vague
+  recollection of the literature rather than from a citation. It did not end up deciding anything,
+  but the rule it broke is the one that matters most here: **a band is the survey's own
+  uncertainty, widened by a stated factor** — never a number chosen to be passable. Widening a
+  band after seeing the model is the one move that would make the whole exercise worthless.
+
+Fifteen claims, stable across five seeds, and pinned against **Sol as well as the surveys** —
+because a model fitted only to the surveys has been fitted. `bun bin/occurrence.ts` prints the
+table; `--param formation.coreGrowthNormYears=1e6` is how you find out what a claim is sensitive
+to.
 
 **Stage 0 — original scope.** The repo, the `World` types in real units (no strings),
 and the calibration harness with the corpora above. Deliverable: a failing test suite that says
