@@ -1045,6 +1045,58 @@ rule did, and it is the seam a clever player works: *a society's contempt for a 
 as cover.* And it is derivable, because the justification follows from whichever axis supplied the
 door — contempt from hierarchy, procedure from impersonal obligation, tradition from ascription.
 
+#### "And funnier" — which turns out to be a correctness check
+
+> Tonio, 2026-10-19: *"And funnier."*
+
+It is, and the humour is diagnostic rather than decorative. **The lie is funny precisely when it is
+self-refuting**: if the untouchables are too stupid to *misuse* a computer they are too stupid to
+*use* one, and the society cannot see it. That is dramatic irony — the players know what the
+speaker does not — sitting on top of bathos, a grand renunciation of the machines resolved by the
+sweepers doing it after dark.
+
+**And that self-refutation is the signature of a real social rationalisation.** A *coherent*
+justification for an exemption would have forced the rule to change; the incoherent ones survive
+exactly because nobody examines them. So:
+
+> **If the generated lie is funny, it is probably right. If it reads as reasonable, the generator
+> has produced a licence rather than a rationalisation.**
+
+A usable heuristic for reading the readout's output, and it also predicts the *register* per axis,
+which falls out of the same table as before:
+
+| The door came from… | …and the register is |
+| --- | --- |
+| **hierarchy** | contempt, and therefore comic — self-refuting on inspection |
+| **ascription** | absurdity by antiquity — *the Vane family have always tended the engines, and no one now remembers why they alone may* |
+| **impersonal obligation** | dry, and correctly so: a licence is coherent, so the comedy is bureaucratic rather than ironic — the form in triplicate, not the self-deception |
+
+#### Tonio wrote this joke in 1986
+
+Worth recording, because it is the best validation in this whole section. The derivation above —
+prohibition sinks, the underclass does the forbidden work, contempt supplies the excuse — is
+already in the Social Features table, as a parenthesis:
+
+> **Intolerance for Animals**: the locals cannot abide animals … They regard them as "unclean", or
+> whatever *(they may still eat them, once prepared by robots, or **untouchables**, or something;
+> **hypocrisy has always been popular**)*
+
+Same mechanism, same class, same joke, forty years earlier and thrown away in a bracket. The model
+did not discover anything here; it **recovered** something the author already knew intuitively and
+had never generalised. That is the best possible result for an axis set — it means the axes are
+tracking what the designer's instincts were tracking, and can now do it on purpose and at volume.
+
+It also fixes the tone. **This is Vance's register**, which is the right one for this project given
+the hussade and Tschai references and 1986's own voice (*"converted, killed, fed to lions,
+crucified, etc."*): appalling customs described with mild ethnographic interest. A generator
+producing wry, straight-faced absurdity is tonally **correct**, not lapsing.
+
+**One guard rail, and it matters.** The butt of the joke is **always the rationaliser**. The
+untouchable-computer line is funny at the *elite's* expense, because the self-deception is theirs.
+If an output reads as mocking the despised class rather than the society that despises them, the
+projection has gone wrong — the same failure, in a different coat, as collapsing a world to one
+culture.
+
 #### Which yields a falsifier for the engine, not just the readout
 
 The delegated class holds a monopoly on something necessary while being denied standing. **That is
