@@ -450,7 +450,7 @@ data*. We need a different criterion: **what changes what a faction does.**
 | --- | --- | --- | --- |
 | **Tightness** | how hard norms are enforced; tolerance of deviance | law level, treatment of strangers, whether dissent drifts or schisms | **threat** — scarcity, disease, raiders, a hostile biosphere |
 | **Hierarchy** | how steeply power and deference are graded | government type, who may address whom, whether a deal needs a patron | **concentration of the power base** — one pass, one aquifer, one elevator rewards steepness |
-| **Kin obligation** | how hard the claims of kin and the face-to-face group bind, and what they override | nepotism as duty or as corruption; inheritance; whether a crime implicates a family; what a marriage is for | **absence of institutions** — where no court will enforce, kin is the enforcement; also risk, frontier, low state capacity |
+| **Kin obligation** | how far the boundary of "us" is **ascribed** — genealogically computable and unresignable — rather than joined and revocable; measured by genealogical depth | nepotism as duty or as corruption; inheritance; whether a crime implicates a family; what a marriage is for | **absence of institutions** — where no court will enforce, kin is the enforcement; also risk, frontier, low state capacity |
 | **Impersonal obligation** | whether an obligation binds independently of who is owed it — contracts, offices, rules | does a stranger's contract hold; is an office separable from its holder; can an outsider find a court; do institutions survive their founder | **scale and anonymity of exchange** — you cannot trade at distance on kin ties alone; state capacity; specialisation |
 | **Openness** | novelty and outsiders as opportunity or as contamination | tech adoption, immigration, and *whether a foreign norm transmits on contact* | **whether contact has historically paid** |
 | **Time horizon** | how far ahead obligation runs; ancestors and descendants against now | infrastructure, debt, whether a windfall is invested or spent | **predictability** — a reliable season rewards planning; a lottery rewards taking it now |
@@ -611,6 +611,70 @@ is the same cut. Weber's patrimonialism is already cited above. And the named fo
 particularistic exchange *inside* modern institutional states — *guanxi*, *blat*, *wasta* — are
 the evidence that the high-kin/high-impersonal cell is genuinely occupied rather than a gap in the
 table.
+
+#### Genealogical depth: the guess, and the ambiguity worth chasing
+
+> Tonio, 2026-10-19: *"At a wild guess I'd suggest societies with deep close kinship ties (where
+> you track your cousins and uncles and so forth tightly) tend to be more family loyal and less
+> group loyal."*
+
+**That is not a wild guess, it is the published result.** Kinship intensity — measured by cousin
+marriage, lineage organisation, clan presence and co-residence — negatively predicts generalised
+trust, impersonal prosociality and institutional quality. It is the spine of Henrich's WEIRD
+argument and of the Schulz work cited above. The axis structure is doing what it should if an
+offhand intuition and the quantitative literature land in the same place.
+
+**Genealogical depth is also the right *measurable* for the axis**, which the vaguer "how hard do
+kin claims bind" was not. *How many relatives can you name, and does naming them impose duties?*
+is a question with an answer, and it gives the mechanism a budget rather than a disposition:
+tracking second cousins is **maintenance work**, and the reciprocity it consumes is the same
+finite resource a relationship with a stranger would need. Deep tracking does not merely correlate
+with weak impersonal obligation — it *spends the budget* that impersonal obligation would run on.
+
+#### But "less group loyal" hides the same confound as "collectivist"
+
+A deep-kinship society is often **ferociously** loyal to a group — the lineage, the clan, the
+sect. What it lacks is not loyalty. So the difference is not *how much*, it is **where the boundary
+comes from**:
+
+- **Ascribed** — the boundary is genealogically computable. You are born inside it, you cannot
+  resign, and anyone can work out whether you are in.
+- **Achieved** — the boundary is membership. You join, you can leave, and being in is a fact about
+  your choices.
+
+That is a better statement of the kin axis than strength was, because **strength is a consequence
+of ascription**: a bond you never chose is a bond you cannot shed. One fact seen twice. (It is also
+Parsons' particularism/universalism and Linton's ascribed/achieved status, arriving from the other
+direction.)
+
+#### Which makes the split/fuse operator asymmetric by cell — a real prediction
+
+This is where the refinement pays, because it tells the engine's own operator to behave
+differently depending on the axis:
+
+| | high kin (ascribed) | low kin (achieved) |
+| --- | --- | --- |
+| **fission** | **easy and clean** — a lineage splits along a genealogical seam that already exists, and everyone knows which side they are on | **messy** — no natural seam, so a split has to be *argued*: doctrine, or markers |
+| **fusion** | **nearly impossible** except through **marriage alliance**, which is exactly why marriage rules are the mechanism rather than a detail | **easy** — you simply join |
+
+So clans split over genealogy and sects split over doctrine, and both fall out of one axis rather
+than needing separate rules. That also explains why the marker vector matters most in the
+*low*-kin cell: where there is no genealogical seam to split along, differentiation has to be
+manufactured, and markers are what it is manufactured from.
+
+*Falsifier, in the engine's own terms:* deep genealogical tracking should yield **many small,
+cohesive, mutually hostile, stable groups with no large-scale cooperation**; shallow tracking on
+the same world should yield **fewer, larger, more permeable ones**. And because kin networks and
+institutions compete for the same functions — insurance, enforcement, credit, care — the
+transition between them should show **hysteresis**: once a world is in a cell it should tend to
+stay, which is what the historical record looks like and what a model with independent axes and
+substitutive selection should produce without being told to.
+
+**And it is the Tschai mechanism exactly.** Fictive descent — a client population believing
+itself descended from its patron — can only bind in an ascribed-boundary society, because the lie
+has to be a *genealogical* lie to do any work. In a civic society you would merely be an employee,
+and could resign. So Tschai is a prediction about its clients' kin axis, and the corpus can check
+it.
 
 #### One caution, which the model happens to answer
 
