@@ -809,6 +809,105 @@ fall away where it is low — which is also simply what happened historically.
 *(The specific citations above are from memory and are offered as pointers, not references. If any
 of this reaches the book rather than the engine, they want checking first.)*
 
+#### Tested against 1986's social features table
+
+> Tonio, 2026-10-19: *"take the social quirks set from foresight 1986 and see which typologies it
+> would map to and if any are clearly missing. When we have typologies they will also evoke missing
+> social features."* — and *"Or big six or whatever."*
+
+**This is a real test and not a circular one**, which is rare. 1986's Social Features table was
+authored in 1986, play-tested for years, and owes nothing to any of the theory above — so it is an
+**independent instrument**. Same discipline as the item-matching pilot (#3062): does an
+independently-built set of items span the space the model claims? All 48 entries mapped. Five
+findings, and three of them are worth more than the agreement.
+
+**1. Every escalation ladder in the table is a tightness ladder.** Ghetto-ization → Segregation;
+Family Reputation → Class → Caste; National Religion → Discrimination → Persecution;
+Xenophobia → Xenopersecution; Low Cultural Tolerance → Intolerance → Violent Intolerance;
+Obligation System → Personal Honour → Honour System; Elaborate → Critical Business Customs;
+every taboo escalation. **In every case, rolling again hardens enforcement rather than adding
+content.** So 1986 encoded tightness as a *meta-operator applied to features* rather than as a
+feature of its own — which is exactly the claim that tightness is a meta-axis and in the engine
+*is* selection strength. That is independent confirmation of the oddest choice in the set, from a
+table that had never heard the argument.
+
+**2. Roughly 40% of the table is pure marker.** No facial expression, masks, no gesticulation, no
+vocal modulation, musical accompaniment, perfumes, clothing-as-signal, strange performing art,
+strange sport, horrific cuisine, fanatical cleanliness, tolerance for dirt, body beautiful,
+bizarre sexual ritual. **None of them is selected for anything**; all of them say *we are the
+people who do this*. An author generating social features from play experience spent nearly half
+his table on identity markers with no adaptive function — which is the evidence that the
+unselected marker vector is load-bearing rather than a nicety. (And *Perversely* Horrific Cuisine,
+where the locals take pride in food they also dislike, is counter-signalling in one table row.)
+
+**3. The gap is Time horizon.** It is the one axis the table barely touches — Spartan Tendency,
+and arguably Drug Culture, out of 48 entries. Two readings, and I think both are true:
+
+- **1986 has a genuine hole**, and the axis *evokes* what is missing: ancestor veneration, dynastic
+  obligation, debt bondage, guild apprenticeship, generational feud, monumental public works, a
+  norm of providing for a descendant nobody will meet.
+- **And the axis projects onto a different readout.** Time horizon shows up in **institutions and
+  infrastructure** — debt, public works, inheritance law — far more than in *customs*. So the
+  lesson is more general and worth stating: **not every axis projects onto every readout.** Time
+  horizon belongs mostly to the history layer, and a social-features generator driven by all six
+  equally would manufacture nonsense on that one.
+
+**4. 1986 named the anomie cell.** *Society without Trust* — "the locals regard all as fair game"
+— is low kin obligation **and** low impersonal obligation, which is the fourth cell of the
+four-cell table above. The cell was predicted from the axis split and an independent author had
+already written an entry for it. Likewise *Progress Through Assassination* is low impersonal
+obligation stated as sharply as it can be: **an office that can be taken by killing its holder is
+not an institution.** And *Great Hospitality* is the subtle one — a duty owed to a stranger *as
+such*, which is impersonal obligation implemented as a norm rather than as an institution, and is
+exactly how a narrow-kin society handles strangers at all.
+
+**5. And one generalisation that pays for itself.** The table has four segregation-flavoured
+entries — by race, by social group, by birth (Family Reputation → Class → Caste), and by sex
+(Marked Sex-role Differentiation → Discrimination → Segregation). Only the third is about kin.
+So the axis is better named **ascription**: *how far a person's standing and group are fixed by
+birth rather than by what they do* — with **kinship as its principal channel but not its only
+one**. Renaming it covers eight entries it did not before, and costs nothing, because the
+mechanism (unresignable, externally checkable, therefore binding) is identical whether the
+ascribed thing is a lineage, a caste, a race or a sex.
+
+*Test before adopting:* societies with strong kin ascription should also show strong non-kin
+ascription. I expect a high correlation, which would make it one axis; if they dissociate, it is
+two.
+
+#### The one candidate for a seventh, and why the count is an output
+
+Tonio: *"Or big six or whatever."* — right, and worth saying why. **The number is an output of
+the method, not a target.** Five became six when reach-of-obligation turned out to be two things,
+and the table above suggests one more candidate while *removing* pressure elsewhere by generalising
+the kin axis.
+
+The candidate is **Openness, which the table splits in two**: *Xenophobia* and *Low Cultural
+Tolerance* are openness to **persons**; *Mistrust of AI → Computer Ban* is openness to
+**novelty**. 1986 gave them separate entries, and they dissociate in life — Tokugawa Japan closed
+to foreigners while selectively importing technique; the Amish comparatively open to persons and
+closed to machines. That is a real dissociation, so this is a genuine seventh axis rather than
+axis-proliferation, and it should be adopted if generated societies show the two uncorrelated.
+
+#### What the axes evoke that 1986 lacks — the test running the other way
+
+Tonio's second half: typologies should evoke missing features. They do, and the pattern of what is
+missing is itself a finding.
+
+| Axis and end | Features 1986 has no entry for |
+| --- | --- |
+| Time horizon | ancestor veneration, dynastic obligation, debt bondage, apprenticeship and guilds, generational feud, monumental works |
+| Impersonal obligation, high | civic duty as an obligation (jury, conscription), oath-of-office ritual, professional licensure, universal record-keeping, whistleblowing as a virtue, the queue as a moral institution |
+| Impersonal obligation, low | patronage networks, nepotism as *explicit duty*, bribery as etiquette |
+| Ascription, high | bride-price and dowry, cousin-marriage preference, blood feud, collective liability, adoption for heirs, ancestor cult |
+| Openness to novelty, high | technophilia, a cult of the new, fashion cycles, planned obsolescence as a virtue |
+| Openness to persons, high | **nothing at all** — no easily-granted citizenship, no cosmopolitanism, no radical hospitality as policy |
+
+**That last row is the finding.** 1986's table is **asymmetric toward the hostile and the exotic**,
+because it was written to generate *problems for travellers* — which is a reasonable GM-facing
+choice for a table a referee rolls on, and a bad one for a generator that has to populate a galaxy.
+A model driven by the axes will produce both ends by construction, and **the entries to write first
+are the positive ones**, because they are the ones no existing table supplies.
+
 #### The guard rail, stated as a rule
 
 **A norm vector belongs to a faction, never to a species or a world.** A world has many, and the
