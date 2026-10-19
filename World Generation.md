@@ -122,8 +122,8 @@ instead of distance:
 | --- | --- | --- | --- |
 | **L0 — star** | spectral detail, luminosity, age, `bestHI` | µs | the galaxy, the HI filter |
 | **L1 — system** | planets: mass, radius, orbit, eccentricity, rotation, obliquity, moons, atmosphere, surface temperature, HI | ≤ 100 µs | the system map, search, the book's dice version |
-| **L2 — surface** | plates → hypsometry → erosion → a height field and a climate, as a `PlanetSurface` | 10–100 ms, worker-friendly, cached | a world someone looks at |
-| **L3 — story** | biosphere, then the iterated history: colonisation, population, tech levels, government, settlement, law | ms | a world someone plays on |
+| **L2 — surface** | plates → hypsometry → erosion → a height field, a climate and a **province graph with crossing costs** | 10–100 ms, worker-friendly, cached | a world someone looks at |
+| **L3 — story** | biosphere and society, on one shared engine: populations with trait vectors drifting in niches, then the iterated history over them | ms | a world someone plays on |
 
 **The invariant that keeps this honest: a lower layer may add detail but may never contradict the
 layer above it.** L2 must land the ocean fraction L1 already published. That is a cheap, strong
@@ -193,6 +193,12 @@ products, keeping 1986's **HI 1–5** as the published index because it is a goo
 the book's other rules reference it. Then rerun `bin/tune-populations.ts` and rebake the sky.
 *Falsifier: the HI freshness fingerprint, which already exists and is designed to fail here.*
 
+**Stage 4b — the drift engine.** The shared substrate of Stages 4 and 5: populations with trait
+vectors in niches on a province graph, moved by drift (∝ 1/√N), selection, prestige-weighted
+flow, and split/fuse on a distance threshold. A substrate rather than a stage, because the
+biosphere runs it to equilibrium for a state and the society runs it tick by tick for a
+trajectory. *Falsifier: the archipelago-versus-plain test, which both instantiations share.*
+
 **Stage 5 — history.** 1986 steps [v]–[xii], re-founded and iterated: colonisation date, 25-year
 generations, population compounding, hard and soft tech levels drifting under government effects,
 government change, settlement structure, social features, law level. **The output is a timeline,
@@ -202,6 +208,102 @@ not a snapshot** — that is the whole point, and it is what makes a colony's pr
 1986's version of this is a gift and should be treated as one: it already iterates, its numbers
 were calibrated by years of play, and the structure was designed by someone who had run it. The
 work is re-founding its inputs on the new model, not inventing a replacement.
+
+## Factions and norms: the same engine as the ecosystem
+
+> Tonio, 2026-10-19: *"the society split into factions and power centers with cultural norms that
+> fuse and drift over time. It would actually be something like the ecosystem generator."*
+
+**It is the same engine, and that is worth building on rather than noting in passing.** Strip both
+to their mechanics and they are one model: a set of **populations**, each carrying a **trait
+vector**, occupying **niches** with finite carrying capacity, connected by a graph, evolving by
+drift, selection and flow, and splitting or merging when distance crosses a threshold.
+
+| | ecosystem | society |
+| --- | --- | --- |
+| population | a species' local population | a faction |
+| niche | habitat and food-web role | a power base: land, trade, force, legitimacy, knowledge |
+| trait vector | tolerances, morphology, diet | norms — who may rule, who owes whom, what is forbidden |
+| carrying capacity | what the habitat yields | what the power base can support |
+| drift | genetic drift | cultural drift |
+| selection | survival and reproduction | which norms keep a faction's grip on its base |
+| flow | migration and interbreeding | contact, trade, conquest, imitation |
+| split | reproductive isolation → speciation | schism |
+| anti-convergence | character displacement | sectarian distinction-seeking |
+| extinction | the niche closes | the power base disappears |
+
+**The strongest evidence that this is one engine and not an analogy: drift scales as 1/√N in
+both.** Small isolated populations drift fast. That single relation gives you founder effects on an
+island *and* a frontier colony with its own dialect in three generations. A superficial
+resemblance would not make the *rates* obey the same law.
+
+The anti-convergence row is the second piece of evidence, and it is the one that surprised me.
+Two factions that grow too alike have a reason to differentiate — which looks like a uniquely
+human vanity until you notice it is **character displacement**, the ecological result that two
+similar species diverge to reduce competition. Same force, same sign, same cause: overlap is
+expensive.
+
+### Where it breaks — three places, each a feature rather than a refutation
+
+1. **Horizontal transmission dominates, where in biology it is a special case.** Genes mostly run
+   parent to child; a norm jumps sideways in one generation. And the flow is **asymmetric and
+   prestige-weighted** — norms travel from the admired to the admiring, not symmetrically down a
+   contact edge. So the society instantiation needs a directed flow operator that the ecosystem
+   one barely uses. This is the biggest difference and it probably dominates the dynamics.
+2. **Agency.** A faction can adopt a norm deliberately, or suppress one. An organism cannot. This
+   is where the *game* lives: a player should be able to move a norm and pay for it. So the engine
+   must take **exogenous trait shocks** and let selection answer them, rather than being a closed
+   simulation that is only ever watched.
+3. **Invocation shape, not mechanics.** An ecosystem is near-static across a campaign; factions
+   move in decades. So the biosphere is **run to equilibrium and handed over as a state**, while
+   the society is **run tick by tick and handed over as a trajectory**. Same engine, two modes —
+   which is the argument for making it a **shared substrate that two stages use**, not a stage of
+   its own. The precedent is `tosijs-3d`'s `biome-chart`: one pure model, two consumers that cannot
+   drift apart because both import it.
+
+### The consequence: L2 owes a connectivity graph
+
+**Isolation is geography.** Both instantiations need the same thing from the surface, and it is not
+the height field: they need **provinces and their adjacency, with crossing costs** — a mountain
+range, a strait, sheer distance. Drift needs something to be isolated *from*.
+
+I checked `tosijs-3d` for this and it does not exist. `world-topology` is a room-and-portal graph
+for the simulation's coordinate-free contract, and `province-climate`'s "province" is an *authored*
+region that biases climate fields. Neither is a generated planetary subdivision. So the L2 contract
+in the table above grows: a surface stage owes a height field, a climate, **and a province graph**.
+
+That also reorders the dependencies. The faction model is **blocked on L2, not on L3** — its
+principal input is the connectivity graph, not the climate. So: star → formation → surface
+(with provinces) → { biosphere, society }, with climate feeding the biosphere far more than the
+factions.
+
+### The falsifier, which is the best one in this plan
+
+**Run the model on two worlds with no parameter changed: an archipelago, and an open plain.** The
+archipelago must fragment into many divergent factions; the plain must homogenise into few. If both
+come out the same, the model is not reading its geography and the province graph is decoration.
+
+The same test, unchanged, is the biosphere's: the archipelago must carry more endemic species. **One
+falsifier for both instantiations** — which is itself the sharpest evidence that there is one
+engine here. And it cannot be fudged by tuning, because the two runs share every parameter.
+
+Secondary checks worth having, all of them things the model would be *wrong* about rather than
+snapshots: a lingua franca spreads along trade edges and not across barriers; lexical divergence
+between separated populations runs at something like the Swadesh rate rather than ten times it; a
+polity with many power centres and weak connectivity fragments without being told to.
+
+### What this does to the 1986 society tables
+
+1986 gave a planet **one** government, one law level, one list of social features — a single
+culture per world. The faction model replaces that monolith, and the old tables get a better job
+than they had: they become the **projection** of the state rather than the state itself. "What
+government type is this?" is then a classifier over the dominant faction's norm vector and power
+base, and "what is the law level?" is read from the norms actually in force.
+
+So the play-tested vocabulary survives, and the thing it was approximating — that a world has a
+politics — gets modelled underneath it. The tables stop being the generator and become the
+readout, which is the same move the whole package makes: a model underneath, a lossy projection on
+top for the table.
 
 ## What stays in the book, and in this repo
 
@@ -226,6 +328,11 @@ Filed on its board when each is needed, never edited from here:
 
 - **Binaries.** Common in reality, and a circumbinary habitable zone is a good setting. Also a large
   increase in model surface area. Not in Stage 1 unless it falls out cheaply.
+- **How many dimensions a norm vector has, and which.** The faction model's whole character
+  depends on it, and picking the axes is a game-design decision rather than a modelling one — the
+  wrong axes give a model that technically drifts and says nothing. Worth settling against the
+  Interpersonal brief (board #2990), whose four dimensions (relationship, information, persuasion,
+  deception) were chosen for the same reason: they are what a table can *play*.
 - **How hard the SF is.** The model can be realistic to a fault; the game wants places worth
   visiting. `GALAXY-DESIGN.md` already settled the galaxy's version of this — the spectral mix is
   skewed on purpose, because a sky of red dwarfs is realistic and dull. The same judgement will be
