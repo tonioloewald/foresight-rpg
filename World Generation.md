@@ -625,8 +625,9 @@ argument and of the Schulz work cited above. The axis structure is doing what it
 offhand intuition and the quantitative literature land in the same place.
 
 **Genealogical depth is also the right *measurable* for the axis**, which the vaguer "how hard do
-kin claims bind" was not. *How many relatives can you name, and does naming them impose duties?*
-is a question with an answer, and it gives the mechanism a budget rather than a disposition:
+kin claims bind" was not. *Which relationships are actually maintained, and do they impose duties?* is a
+question with an answer — note **maintained**, not *nameable*, for the reason set out under
+Finland below — and it gives the mechanism a budget rather than a disposition:
 tracking second cousins is **maintenance work**, and the reciprocity it consumes is the same
 finite resource a relationship with a stranger would need. Deep tracking does not merely correlate
 with weak impersonal obligation — it *spends the budget* that impersonal obligation would run on.
@@ -648,6 +649,66 @@ as collectivist on the folk question, and they sit in **opposite cells**.
 What makes Finland *feel* collectivist is not a kin claim at all: it is that its impersonal
 obligation is **enormous**. You owe a great deal — simply not to relatives. One axis cannot say
 that, and this is what it sounds like when it tries.
+
+#### Nomenclature is a fossil, not a measurement
+
+> Tonio, 2026-10-19: *"And I think Finland's kinship nomenclature is actually weaker than
+> English."*
+
+**I think the specifics go the other way, and the reason they do is the useful part.** Finnish
+distinguishes **setä** (father's brother) from **eno** (mother's brother) where English has only
+*uncle*; and it carries **appi**, **anoppi**, **lanko** and **käly** as single words where English
+compounds *father-in-law*, *mother-in-law*, *brother-in-law*, *sister-in-law*. By word count,
+Finnish is the more differentiated of the two. *(From memory, and Finnish is not a language I can
+check — but the setä/eno distinction in particular is a well-known feature.)*
+
+**And Finland is still plainly the low-kin society.** Which means nomenclature is the wrong
+instrument, for three reasons worth writing into the model:
+
+1. **Kin terms are among the most conservative items in a lexicon.** They record a *past* kinship
+   system, often by centuries. `setä`/`eno` preserves a distinction from a period when paternal
+   and maternal obligations differed in kind; the distinction survived the practice. This is the
+   error that sank Morgan's attempt to read social evolution off terminology, and it is the same
+   error in miniature here.
+2. **A rich terminology coexists easily with weak obligation.** An English speaker can say *second
+   cousin once removed* and will mostly not be able to name one. Having the **word** is not
+   tracking the **person**.
+3. **And the converse**: a sparse terminology coexists with strong obligation wherever the
+   relationships are maintained some other way — recited genealogies, lineage membership, naming
+   systems.
+
+**So the measurable is relationships *maintained*, not categories *available*.** That corrects what
+I wrote above — "how many relatives can you name" was sloppy, because it slides between the two.
+The behavioural measures are the ones the literature uses and the ones this axis should take:
+cousin marriage rate, household structure and co-residence, whether kin obligations are enforceable
+(inheritance, collective liability, who must consent to a marriage), and support flows. Finland is
+low-kin on every one of them while having a richer uncle vocabulary than English, which is the
+whole point.
+
+#### But the intuition is right at the level that carries information
+
+Terminology *does* encode structure — just not in the word count. What carries the signal is
+**which kin are merged**, which is Murdock's typology: *Hawaiian, Eskimo, Iroquois, Omaha, Crow,
+Sudanese*. And there the intuition lands:
+
+- English and Finnish are both **Eskimo/lineal** — all cousins merged under one term, the nuclear
+  family picked out — which is the type that goes with **bilateral descent and weak lineages**.
+  So they are in the **same class**, and `setä`/`eno` is a within-type detail.
+- Vietnamese is **not** in that class: dense differentiation by side, age and lineage position, in
+  the direction of **Sudanese**, which is what a patrilineal descent system produces.
+
+So the instinct — that a weakly kin-organised society should show it in its kinship terms — is
+correct; it is the English comparison that is the wrong instrument, because both languages sit in
+the same type. **Typology separates Finland from Vietnam; word count separates nothing.**
+
+#### Which hands the readout a free piece of colour
+
+This is cheap and worth having: **the engine can emit a terminology type** as a projection of
+descent rule × kin obligation. A generated culture that reckons patrilineally with high kin
+obligation gets a Sudanese-style terminology; a bilateral low-kin one gets a lineal one — and a
+GM who wants to know what these people call their uncles has an answer that **follows from the
+structure** rather than being invented. One of the better ratios of table colour to model
+complexity in the whole plan, and it comes directly from Tonio's observation being worth checking.
 
 #### Which yields the cleanest statement yet: collectivism is a magnitude, not a direction
 
