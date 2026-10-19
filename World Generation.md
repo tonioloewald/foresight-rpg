@@ -1,7 +1,7 @@
 # World Generation — design record
 
 > **Status:** Stage 0 built 2026-10-19 — the package, the plugin architecture and L0/L1 — in
-> `../tosijs-worlds`, not yet a GitHub repo (Tonio publishes it when ready). 39 tests, typecheck
+> `../tosijs-luontu`, not yet a GitHub repo (Tonio publishes it when ready). 39 tests, typecheck
 > clean. Board #3391.
 >
 > This record lives in `foresight` because the *domain* decisions are the book's. It moves to the
@@ -64,8 +64,10 @@ it testable (below), and which is the honest version of what 1986 was reaching f
 for a generator that was *"dumb"* enough to be plugged into a computer. We have the computer now,
 so the depth goes there and the table keeps the dice.
 
-**2. A new engine-free package.** It owns astrophysics → planetology → surface → climate →
-biosphere → history, is Babylon-free and runs headless. `tosijs-3d` consumes it for rendering;
+**2. A new engine-free package — `tosijs-luontu`** (Finnish *luonto*, nature; named 2026-10-19).
+It owns astrophysics → planetology → surface → climate → biosphere → history, is Babylon-free
+and runs headless. The name is deliberately wider than what is built, because the ecosystem and
+history stages are the point of the exercise and not an afterthought. `tosijs-3d` consumes it for rendering;
 `foresight` consumes it for the book, the site's generators and the game-facing tables.
 
 Why not inside `tosijs-3d`: that library's stated north star is *behavioural richness, not
@@ -158,7 +160,7 @@ Each stage ships something visible and carries its own falsifier. Nothing procee
 falsifier has not run.
 
 **Stage 0 — the package and the harness. DONE 2026-10-19.** The architecture above, plus L0 and
-most of Stage 1, in `../tosijs-worlds`. The tests found four model errors on the way, which is
+most of Stage 1, in `../tosijs-luontu`. The tests found four model errors on the way, which is
 what they are for: a 40-Earth ball of rock classified as a Neptune (a giant is a body that *took
 gas*, not a body that is heavy); per-slot scatter applied after the budget split, which broke the
 budget; giants at 0.05 AU, i.e. hot Jupiters by accident in a model whose whole claim is that it
