@@ -450,7 +450,8 @@ data*. We need a different criterion: **what changes what a faction does.**
 | --- | --- | --- | --- |
 | **Tightness** | how hard norms are enforced; tolerance of deviance | law level, treatment of strangers, whether dissent drifts or schisms | **threat** — scarcity, disease, raiders, a hostile biosphere |
 | **Hierarchy** | how steeply power and deference are graded | government type, who may address whom, whether a deal needs a patron | **concentration of the power base** — one pass, one aquifer, one elevator rewards steepness |
-| **Reach of obligation** | the radius of "us": household, clan, city, species | who you must help, who you may cheat, whether a contract with a stranger binds | **connectivity** — long trade edges reward a wide radius, isolation a narrow one |
+| **Kin obligation** | how hard the claims of kin and the face-to-face group bind, and what they override | nepotism as duty or as corruption; inheritance; whether a crime implicates a family; what a marriage is for | **absence of institutions** — where no court will enforce, kin is the enforcement; also risk, frontier, low state capacity |
+| **Impersonal obligation** | whether an obligation binds independently of who is owed it — contracts, offices, rules | does a stranger's contract hold; is an office separable from its holder; can an outsider find a court; do institutions survive their founder | **scale and anonymity of exchange** — you cannot trade at distance on kin ties alone; state capacity; specialisation |
 | **Openness** | novelty and outsiders as opportunity or as contamination | tech adoption, immigration, and *whether a foreign norm transmits on contact* | **whether contact has historically paid** |
 | **Time horizon** | how far ahead obligation runs; ancestors and descendants against now | infrastructure, debt, whether a windfall is invested or spent | **predictability** — a reliable season rewards planning; a lottery rewards taking it now |
 
@@ -464,6 +465,83 @@ strength tracks ecological threat.
 **Openness gates the prestige channel.** #3401's asymmetric flow — norms travelling from the
 admired to the admiring — is throttled by the receiving faction's openness. That is how client
 capture succeeds or fails, which makes Tschai a test of this axis specifically.
+
+#### Why "reach of obligation" was one axis doing two jobs
+
+> Tonio, 2026-10-19: *"Reach of obligation would seem like individual vs collective but there's a
+> weird dichotomy there. A lot of collectivist cultures focus on family loyalty vs separating
+> institutions from family."*
+
+**Correct, and it is the confound that sinks the individualism/collectivism axis wherever it is
+used.** That axis slides together two things which come apart, and the clearest way to see it is
+that the two poles are not opposites:
+
+- A strongly **familistic** society is "collectivist" and has a **narrow** obligation radius: you
+  owe nearly everything to kin and comparatively little to the stranger or the state.
+- A Scandinavian society is "individualist" — weak family claims, children leave, the old are
+  cared for institutionally — and yet carries an enormously **wide** radius of *impersonal*
+  obligation: high taxes for strangers never to be met, and institutions that are trusted.
+
+So the "individualist" pole is not *"I owe nothing to anyone"*. It is *"my obligations run
+through impersonal institutions rather than through persons I am related to"*. One axis cannot
+hold that, and the name **reach of obligation** was hiding it: both of those societies have a wide
+reach, by different routes and with opposite consequences at the table.
+
+**And the thing Tonio named — separating institutions from family — is the second axis
+exactly.** Whether an office, a contract or a rule is separable from the person who holds it, and
+from that person's kin, is Weber's patrimonial-versus-rational-legal distinction, and it is
+independent of how strong the family claim is.
+
+The prior art is unusually good here and it all points the same way: Banfield's amoral familism,
+Fukuyama's **radius of trust** (noting that a strong family can *narrow* it), Putnam's **bonding
+versus bridging** capital — explicitly two quantities, not two ends of one — Greif on clans
+against corporations, and Henrich and Schulz on kinship intensity, where the Western church's
+marriage prohibitions dissolved kin networks and impersonal institutions grew into the space.
+
+#### The four cells, each a recognisable society
+
+| | low impersonal | high impersonal |
+| --- | --- | --- |
+| **high kin** | **clan**. Nepotism is not corruption, it is duty; institutions are captured by families because favouring kin is unthinkable to refuse | **lineage state**. Strong families *and* strong offices — the family as the model for the state rather than its rival |
+| **low kin** | **anomie**. Nobody owes anybody: atomised, post-collapse, the frontier after the boom | **civic**. Nepotism is the *definition* of corruption; care, schooling and insurance are institutional |
+
+Four cells, four societies anyone would recognise, and the two off-diagonals are the ones a single
+axis cannot reach at all. That the off-diagonals are *nameable* is the evidence the split is real.
+
+#### The payoff: a known correlation should emerge, not be assumed
+
+In the real world these two are **negatively correlated** — that is Schulz and Henrich's result,
+kinship intensity against impersonal prosociality. The temptation is to build that in. **Do not:
+build them as two axes and let the correlation fall out of selection**, because the mechanism is
+already in the drivers above — they are **substitutes**. Where kin enforce, no court is needed;
+where courts enforce, the kin claim is a cost. Selection on one erodes the other without anybody
+writing a rule saying so.
+
+That gives a genuine falsifier rather than a fitted parameter: **across a few hundred generated
+societies the two should come out negatively correlated but not collinear, with all four cells
+occupied and the diagonal more populated.** Perfect independence means selection is not coupling
+them; collinearity means the split was wrong and it really is one axis. And Hofstede's single axis
+*assumes* the answer, which is exactly why it cannot produce a clan society and a civic one as
+different kinds of thing.
+
+This is also where the corpus does work. A **broker on Maz** needs high impersonal obligation and
+low kin claim — a contract with a stranger must hold, and no cousin's claim may override the
+deal — so the seams niche is only habitable in one of the four cells. And **Tschai's client
+populations** have the kin claim *redirected*: fictive kinship, a population believing itself
+descended from its patron, which is a maximal kin obligation pointed at non-kin. Capture, in this
+vocabulary, is the prestige channel rewriting who counts as kin.
+
+#### So: six axes, and six is the answer rather than a failure to hit five
+
+Splitting an axis because it turned out to be two is what the method *is* — the Big Five is five
+because that is what the variance gave, not because five is a good number. Three checks that the
+other four survive the same scrutiny:
+
+- **Hierarchy** is not the kin axis: a clan society can be flat among household heads (segmentary
+  lineages) or steeply ranked, and both exist.
+- **Openness** is not impersonal obligation: Tokugawa Japan was highly institutional and deeply
+  closed, which is the case that proves they dissociate.
+- **Time horizon** is independent of all of them.
 
 #### Plus a marker vector, which is not one of the five
 
@@ -490,8 +568,12 @@ display, any projection, any book text that collapses a world to one culture is 
 #### How the projections land
 
 1986's own outputs read off pairs, which is the test that these axes are the right ones:
-**law level** off tightness × hierarchy; **government type** off hierarchy × obligation reach;
-**tech level drift** off openness × time horizon. And the scenarios above fall out rather than
+**law level** off tightness × impersonal obligation (is there a *law*, as against a custom?);
+**government type** off hierarchy × impersonal obligation — which is Weber's patrimonial against
+bureaucratic, arriving for free; **tech level drift** off openness × time horizon. And the split
+earns its keep immediately: **kin obligation** feeds the *social features* list, which 1986 rolled
+on a table and had no generator for — clan structures, feuds, arranged marriage, collective
+liability all read off one axis. And the scenarios above fall out rather than
 needing authoring: a **gold rush** is an unpredictability shock, so it selects short horizon and
 loose tightness — boom-town lawlessness as a prediction instead of a special case; a **second
 wave** on marginal land under threat comes out tighter and more hierarchical, which gives the
