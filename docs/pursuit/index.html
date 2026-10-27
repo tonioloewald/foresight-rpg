@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Pursuit — ForeSight RPG</title>
   <meta name="description" content="One-pager. Pursuit is just combat at a longer tempo — same awareness, Initiative, act-or-wait, reaction and pre-emption, and the same Intense Action split of…" />
   <link rel="canonical" href="https://foresight-rpg.com/pursuit/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Pursuit — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Pursuit — ForeSight RPG" />
@@ -42,18 +29,18 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Pursuit</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="pursuit.md">
+<h1 id="pursuit">Pursuit</h1>
 <!--{ "parent": "conflict", "order": 5 }-->
 
 <p><em>One-pager. Pursuit is just <strong>combat at a longer tempo</strong> — same awareness, <a href="/initiative/">Initiative</a>, act-or-wait, reaction and pre-emption, and the same <a href="/intense-action/">Intense Action</a> split of attention — with a different menu of actions. Know those two pages and you already know this one.</em></p>
 <p>A pursuit is any contest of movement: a car chase, a dogfight, a horseback flight, a submarine running silent, a foot-race through a crowd. Spacecraft are no exception — they&#39;re just vehicles.</p>
-<h2>Turn length scales with the vehicle</h2>
+<h2 id="turn-length-scales-with-the-vehicle">Turn length scales with the vehicle</h2>
 <p>A pursuit round is longer than a combat round, and <em>how</em> much longer depends on what you&#39;re driving. The slower and more ponderous the contest, the longer the turn and the further apart the chances for a direct attack: a fighter-jet dogfight turns over in seconds, a car chase in longer beats, a tall-ship engagement in minutes. The GM picks a tempo that makes the chase feel right and keeps it for the duration — opportunities to shoot, ram, or board arrive on that rhythm.</p>
-<h2>What&#39;s the same</h2>
+<h2 id="whats-the-same">What&#39;s the same</h2>
 <p>Rounds, Initiative, declaration order (best to worst, ties by score), waiting, reaction, and <strong>pre-emption</strong> (Coordination modified by Initiative QR) all work exactly as in combat. A pursuer lining up a ram and a quarry watching for the alley to bolt down are the same act-or-wait standoff as two gunfighters. You still never know for certain you&#39;ll act first.</p>
-<h2>What&#39;s different: the action menu</h2>
+<h2 id="whats-different-the-action-menu">What&#39;s different: the action menu</h2>
 <p>Your <strong>primary action</strong> is usually a maneuver; <strong>secondary actions</strong> are small adjustments and setups. The vehicle&#39;s own ratings — <strong>Accelerate, Turn, Redline</strong> — are the ease-factor modifiers for these tasks, so a sporty car turns well and a transport doesn&#39;t. The driver&#39;s relevant skill is the Score.</p>
 <table>
 <thead>
@@ -83,16 +70,16 @@
 <td>Make the other driver react — cut them off, run them toward a hazard, PIT them. Opposed.</td>
 </tr>
 </tbody></table>
-<h2>The GM provides opportunity and range</h2>
+<h2 id="the-gm-provides-opportunity-and-range">The GM provides opportunity and range</h2>
 <p>Maneuvers are only available when the situation allows them — this is the GM&#39;s main lever. There&#39;s no Quick Turn on a bridge, no Flat Out in gridlock, no ramming a target two cars ahead. The GM narrates the terrain and the <strong>range</strong> between vehicles each round; that terrain is what gates the menu, exactly as cover and reach gate combat options.</p>
-<h2>What players are usually trying to do</h2>
+<h2 id="what-players-are-usually-trying-to-do">What players are usually trying to do</h2>
 <ul>
 <li><strong>Lose the pursuer</strong> — open enough range, or break line of sight, that the chase ends.</li>
 <li><strong>Gain on the pursued</strong> — close range to where you can act on them.</li>
 <li><strong>Wrong-foot</strong> — force or trick the other driver into a bad position (a failed reaction, lost ground, a hazard).</li>
 <li><strong>Incapacitate the vehicle</strong> — shooting it, ramming it, or maneuvering it into a wreck. Vehicle damage uses the <strong>Damage</strong> page; the vehicle is equipment, so it has Toughness and takes wounds like anything else.</li>
 </ul>
-<h2>Range as the scoreboard</h2>
+<h2 id="range-as-the-scoreboard">Range as the scoreboard</h2>
 <p>Treat range abstractly — closing, holding, opening — rather than counting meters. Most maneuvers shift range by one step or hold it; QR says by how much. When range opens past the point of contact and stays there, the quarry has escaped; when it closes to nothing, the chase becomes a ram, a boarding, or a fight.</p>
 <p><em>Designer&#39;s Note: the famously elaborate 1e space-combat system is gone. It was theoretically brilliant and useless in play. A dogfight over Mars and a car chase through Marseille are the same thing — awareness, timing, nerve, and the limits of your machine — and one page covers both.</em></p>
 
@@ -193,6 +180,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

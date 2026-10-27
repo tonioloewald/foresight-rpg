@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>The One Rule — ForeSight RPG</title>
   <meta name="description" content="To play ForeSight you learn one rule. It&#39;s called resolution, and it runs every uncertain thing anyone attempts — a task — from picking a lock to winning a…" />
   <link rel="canonical" href="https://foresight-rpg.com/the-one-rule/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="The One Rule — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="The One Rule — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>The One Rule</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="the-one-rule.md">
+<h1 id="the-one-rule">The One Rule</h1>
 <!--{ "parent": "core", "order": 2 }-->
 
 <p><em>To play ForeSight you learn <strong>one</strong> rule. It&#39;s called <strong>resolution</strong>, and it runs every uncertain thing anyone attempts — a <strong>task</strong> — from picking a lock to winning a trial. Everything else in this book is that rule applied to a situation, or an example of applying it. Learn this page and you can run the game from memory.</em></p>
-<h2>The core</h2>
+<h2 id="the-core">The core</h2>
 <p>Every ability — an <strong>attribute</strong> (innate, like Strength or Perception) or a <strong>skill</strong> (trained, like Firearms or Stealth) — has a <strong>Score</strong> and a <strong>Base Ease Factor (BEF)</strong>.</p>
 <ul>
 <li><strong>Score</strong> is how good you are: 1 is hopeless, 10–15 is competent, 20+ is very good. Skills climb far higher than attributes.</li>
@@ -56,11 +43,11 @@
 </ul>
 <p>To resolve a task, judge how hard <em>this particular</em> attempt is as an <strong>ease-factor modifier</strong>, add it to the BEF to get the <strong>Ease Factor (EF)</strong>, and multiply:</p>
 <blockquote>
-<h3>SC = Score × Ease Factor</h3>
+<h3 id="sc--score--ease-factor">SC = Score × Ease Factor</h3>
 <p>Roll <strong>D100</strong>. Roll ≤ your Success Chance and you succeed.</p>
 </blockquote>
 <p>*Amy fires a stun pistol at a suspect. Firearms BEF 4; the suspect is 12 m off (−2 range) and moving (−2), but she braced (+1), took a bead and got it (+2), and the pistol is well-balanced (+1). EF = 4 − 2 − 2 + 1 + 2 + 1 = <strong>4</strong>. Her Firearms Score is 17, so SC = 4 × 17 = <strong>68%</strong>. That is about as complicated as it ever gets.*</p>
-<h2>How ease factors work</h2>
+<h2 id="how-ease-factors-work">How ease factors work</h2>
 <p>Ease factors aren&#39;t a linear scale at the bottom — they run:</p>
 <blockquote>
 <p><strong>0 — ¼ — ½ — 1 — 2 — 3 — 4 — 5 — 6 — 7 — 8 — 9 — 10 — 11 — 12 — 13 — 14 — 15</strong></p>
@@ -69,7 +56,7 @@
 <p><strong>One step is a big lever, and it scales with skill.</strong> In the sweet spot, <strong>+1 EF adds your whole Score to the SC</strong> — Score 15 going EF 5→6 jumps 75%→90%. Down at the ¼/½ rungs a step is worth about half your Score. Two consequences: modifiers stay <strong>small</strong> (a typical situational modifier is ±1 or ±2 — each is already potent), and the same good conditions help a skilled character <em>more</em>, which is exactly right.</p>
 <p><em>Fractions round to nearest (½ or more rounds up): Score 13 at EF ¼ → 3.25 → roll ≤ 3.</em></p>
 <p><em>Designer&#39;s Note — a lever you can feel. One EF step is a <strong>big</strong> lever, and a <strong>fixed-size</strong> one: because SC = Score × EF, a step moves your success chance by your whole Score in points <strong>wherever you sit on the range</strong> — 30%→45% and 60%→75% cost the same single step. Almost no other dice engine can say that. A 2D6 or 3D6 <strong>bell curve</strong> gives a lever that&#39;s huge near the middle and near-useless at the tails, so a +1 barely dents a long shot or a near-certainty. A flat <strong>D20</strong> is the reverse — a modest lever in the middle that turns brutal at the 1/20 edges, and the change in <em>odds</em> is nastier still. A raw flat <strong>D100</strong> is the cautionary tale: a flat +10 runs 10→20 (doubling your chances) in one place and 45→55 in another — the &quot;same&quot; modifier doing wildly different work, a giant lever with poverty traps at the bottom. (Savage Worlds&#39; exploding dice are more erratic yet.) Score × EF is deliberately none of these: the same-sized step wherever you pull it.</em></p>
-<h3>Competence at a glance</h3>
+<h3 id="competence-at-a-glance">Competence at a glance</h3>
 <p>What a Score buys you on an ordinary task (a typical BEF ≈ 5, no modifiers):</p>
 <table>
 <thead>
@@ -105,7 +92,7 @@
 <td align="right">over 100%</td>
 </tr>
 </tbody></table>
-<h3>Challenge at a glance</h3>
+<h3 id="challenge-at-a-glance">Challenge at a glance</h3>
 <p>What the situation is worth. This table is <em>really all you need to remember</em> — every other modifier in the book is an example of it.</p>
 <table>
 <thead>
@@ -148,7 +135,7 @@
 </tr>
 </tbody></table>
 <p>Modifiers <strong>accumulate</strong>, and can run past either end: wounded <em>and</em> firing at a small, distant, dodging target with a badly-made gun can pile well below −7. So it should be.</p>
-<h2>Success comes in degrees — Quality Ratings</h2>
+<h2 id="success-comes-in-degrees--quality-ratings">Success comes in degrees — Quality Ratings</h2>
 <p>One roll tells you <em>whether</em> and <em>how well</em>. Read the <strong>Quality Rating (QR)</strong> off where your roll fell under the SC:</p>
 <table>
 <thead>
@@ -191,7 +178,7 @@
 </tbody></table>
 <p><strong>And succeeding is not the same as prevailing.</strong> A Success Chance of 100 makes the <em>roll</em> certain, never the <em>outcome</em>: most interesting tasks are <strong>opposed</strong> (his defence meets your attack, better QR taking it) and most consequences are then <strong>mitigated</strong> — by armour, by cover, by location, by what the world does about it. So the quantity that actually decides things is your <strong>net result relative to his</strong>, not your number on its own. This is why stacking several small ease-factor advantages beats holding out for one big one, and why an expert profits from bad conditions: a penalty applied to both of you comes out of his chance of succeeding at all, and merely out of your surplus.</p>
 <p>Two hard limits: a roll of <strong>100 is never better than QR7</strong> (even a near-certainty can fail), and <strong>99 is never better than QR4</strong> (you can always succeed, but never brilliantly, on a 99). <em>(The character sheet&#39;s Resolution Table precomputes the four thresholds so you never divide at the table.)</em></p>
-<h3>Read one column: fast, good, or much</h3>
+<h3 id="read-one-column-fast-good-or-much">Read one column: fast, good, or much</h3>
 <p><strong>A QR1 is quick <em>or</em> superb <em>or</em> plentiful — never all three.</strong> Decide before you roll what was at stake, and read only that column:</p>
 <ul>
 <li><strong>Yield — how <em>much</em>?</strong> QR1 <strong>100%</strong>, QR2 <strong>80%</strong>, QR3 <strong>50%</strong>, QR4 <strong>25%</strong> of the maximum. Damage, intel gathered, ground covered, gold panned, rope salvaged. <em>(Damage = Yield × Damage Class ÷ 2.)</em></li>
@@ -200,15 +187,15 @@
 </ul>
 <p><strong>Never penalize the same choice twice.</strong> If you took a penalty to do it a certain way, <em>success already includes that thing</em>. Pick the lock fast under a haste penalty and a plain success <strong>means you were fast</strong> — no separate Time roll on top. Call the head-shot at a penalty and a hit <strong>lands where you aimed</strong>. Pay once, up front.</p>
 <p><strong>Half of all successes are QR4</strong> — twice the time, a quarter of the take — and that&#39;s just life: the plumbing rarely gets fixed <em>well</em>. When a result is hidden (was the alarm well-installed?), a <strong>failure yields and takes time exactly as a QR4</strong> would; the dice stay quiet and the GM knows.</p>
-<h3>Speed answers &quot;why can&#39;t I just try again?&quot;</h3>
+<h3 id="speed-answers-why-cant-i-just-try-again">Speed answers &quot;why can&#39;t I just try again?&quot;</h3>
 <p>No special rule needed. <strong>A failure already spent the time</strong> — a QR7 eats ~200% of the estimate, same as a QR4 success — so retrying isn&#39;t free, and when time matters the guard is coming. <strong>A QR10 shuts the door</strong>: you&#39;ve fouled the approach (snapped the pick, convinced yourself the safe turns the wrong way) — find another way. The worst-to-best conga line never forms.</p>
-<h2>Opposed resolution — oppose or build</h2>
+<h2 id="opposed-resolution--oppose-or-build">Opposed resolution — oppose or build</h2>
 <p>Tasks rarely stand alone. Two moves cover every chain:</p>
 <ul>
 <li><strong>Oppose — both roll, compare QRs; the better QR wins.</strong> A big gap is a rout, a small gap a narrow win, and <strong>equal QRs cancel</strong> — the blow <em>just</em> parried, the tail <em>almost</em> spotted. That&#39;s a feature: nothing decisive happens, the tension holds, you keep going, and a string of ties is a long taut struggle. If someone <em>must</em> act now, the higher Score edges it.</li>
 <li><strong>Build — a prior result feeds the next as a modifier: +(5 − QR).</strong> QR1 → +4 … QR4 → +1. The follow-up still uses its own ability and BEF, nudged by what came before. Opposing a <em>standing</em> result instead (hacking a system someone built well)? Take the same value as a penalty.</li>
 </ul>
-<h2>Worked examples</h2>
+<h2 id="worked-examples">Worked examples</h2>
 <ul>
 <li><strong>Picking a lock</strong> — Lockpicking (or Sleight of Hand) vs a difficulty for the lock&#39;s quality, minus haste, plus good picks. Time is usually the real stake: take the haste penalty and success <em>is</em> beating the guard.</li>
 <li><strong>Fixing an engine — a chain.</strong> First <strong>diagnose</strong> it: a Knowledge task (the relevant field, with Perception or Intelligence to read the symptoms). The diagnosis is the <em>product</em> that feeds the fix (<strong>PM = 4 − QR</strong>) — a spot-on read (QR1) is <strong>+3</strong> to the repair; a botched one (QR7) sends you chasing the wrong fault at <strong>−3</strong>. The repair may still be hard for its own reasons (access, a seized bolt), and its <strong>Yield</strong> is how much you restore — capped at <em>as good as before</em>. So: <strong>+3 to <em>do</em> the repair from a perfect diagnosis, never +3 to the thing repaired.</strong> A repair only restores.</li>
@@ -223,7 +210,7 @@
 <li><strong>Picking a pocket</strong> — Sleight of Hand opposed by the mark&#39;s Perception. Reaching for a guarded inside pocket is a penalty <em>and</em> a called outcome: succeed and you got <em>that</em> pocket.</li>
 <li><strong>Sneaking past</strong> — Stealth opposed by their Perception (or Search, if they&#39;re actively looking). A tie means they sense <em>something</em> and can&#39;t place it.</li>
 </ul>
-<h2>Random QR</h2>
+<h2 id="random-qr">Random QR</h2>
 <p>When you need a QR out of nowhere — area damage catching a bystander, how well an unseen NPC did their job — roll <strong>D10</strong>: <strong>1</strong>→QR1, <strong>2</strong>→QR2, <strong>3–5</strong>→QR3, <strong>6–10</strong>→QR4.</p>
 <p><em>Designer&#39;s Note: resolution is adapted from Victory Games&#39; James Bond 007 — the finest published RPG of its era — generalized, then beaten into shape by four decades of play. It is not negotiable: a cleverer-looking dice engine was built to replace it, looked fine on paper, and failed at the table. Score × EF works because the value is a <strong>percentage</strong>, and people understand percentages and multiplication in their bones. The QR scale is the secret engine — combat damage, a chase&#39;s gained ground, an interrogation&#39;s leaked truth, a forged passport&#39;s quality are all &quot;read the QR in the column that matters.&quot; Learn these two things and the rest of the book is examples.</em></p>
 
@@ -324,6 +311,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

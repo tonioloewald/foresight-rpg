@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Appendices — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 102–110 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-09-appendices/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Appendices — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Appendices — ForeSight RPG" />
@@ -42,9 +29,9 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Appendices</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-09-appendices.md">
+<h1 id="appendices">Appendices</h1>
 <!--{ "parent": "foresight-1986", "order": 9 }-->
 
 <p><em>ForeSight (1986), pp. 102–110 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=102">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
@@ -175,7 +162,7 @@
 <p><strong>Luck.</strong> Hero points not immediately spent may be used during play to alter the QRs of tasks performed by or directly affecting the characters possessing them. A hero point may alter the QR of such a task by one per point expended (three points must be expended to change a QR7 to QR4 or QR10, or v.v.). Before a die roll is made, a larger than life character may spend a hero point to make two rolls and take the best one.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=109">ForeSight 1986 · p.109 ↗</a></div>
 
-<h4>Vehicle Modification Table</h4>
+<h4 id="vehicle-modification-table">Vehicle Modification Table</h4>
 <p>*Adjectives on a base vehicle. <strong>Pur</strong>suit, <strong>Man</strong>euver and <strong>Red</strong>line are ease-factor deltas; Speed / DT / Cargo / Pass / Cost are multipliers; Size shifts the size class. <strong>Reconstructed</strong> — verify against the original. (Police/Military carries a footnote in the source.)*</p>
 <!-- entity-view: 1986-vehicle-mods.json -->
 <div class="entity-view">
@@ -204,7 +191,7 @@
 </div>
 <!-- /entity-view -->
 
-<h4>Damage Track Table</h4>
+<h4 id="damage-track-table">Damage Track Table</h4>
 <p><em>Damage Track (DT) × wound/damage status → the damage-point threshold at which that status is reached. <strong>S</strong> = a stun-check only; a blank cell = that DT skips that status; <strong>Inc[4] / Inc[5]</strong> are Part-Destroyed / Destroyed for equipment. To extend past DT 11, alternately add the two modifier rows from the original. <strong>Reconstructed</strong> from the pixel-art grid.</em></p>
 <!-- matrix: 1986-damage-track -->
 <div class="matrix"><style>
@@ -230,7 +217,7 @@
 <p><strong>Notes.</strong> If something&#39;s wound level exceeds the number in the <strong>Dead</strong> column, it&#39;s still dead. <strong>Part</strong> (partially destroyed): equipment reaching this status is partially destroyed and certainly non-functional. <strong>Destroyed</strong>: not only non-functional, but beyond repair.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=110">ForeSight 1986 · p.110 ↗</a></div>
 
-<h4>Weapon Modification Table</h4>
+<h4 id="weapon-modification-table">Weapon Modification Table</h4>
 <p><em>Adjectives on a base weapon. Recoil / PM / DC / Draw / Con / Jam are ease-factor deltas; Ammo / Ranges / Mass / Cost are multipliers. <strong>Cut-down</strong> comes in a handgun (</em>) and a longarm/heavy (**) form; a weapon takes only one. <strong>Quality (†)</strong>: one value (buyer&#39;s choice) improves by one (favourable ±1, or ×1.25) while another worsens by one (unfavourable ±1, or ×0.75). <strong>Reconstructed</strong> — verify against the original.*</p>
 <!-- entity-view: 1986-weapon-mods.json -->
 <div class="entity-view">
@@ -259,7 +246,7 @@
 </div>
 <!-- /entity-view -->
 
-<h4>Burn Damage Class Table</h4>
+<h4 id="burn-damage-class-table">Burn Damage Class Table</h4>
 <p><em>Example sources of burn / energy damage by Damage Class. DC is per location exposed per pulse (damage via random QR); for briefer exposure or a small contact area, reduce DC by 1–2. <strong>Electricity (†)</strong> usually kills by cardiac arrest — a failed Pain Resistance roll means arrest, and the victim must be revived within two minutes to avoid brain damage; Heavy-Duty voltages include things like laser batteries.</em></p>
 <!-- matrix: 1986-burn-dc -->
 <div class="matrix"><style>
@@ -379,6 +366,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

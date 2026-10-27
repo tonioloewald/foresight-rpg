@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Creating Characters — ForeSight RPG</title>
   <meta name="description" content="Draft note: the structure here is settled; specific grant sizes and lists are placeholders pending the skill list and calibration." />
   <link rel="canonical" href="https://foresight-rpg.com/creating-characters/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Creating Characters — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Creating Characters — ForeSight RPG" />
@@ -42,14 +29,14 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Creating Characters</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="creating-characters.md">
+<h1 id="creating-characters">Creating Characters</h1>
 <!--{ "parent": "core", "order": 3 }-->
 
 <p><em>Draft note: the structure here is settled; specific grant sizes and lists are placeholders pending the skill list and calibration.</em></p>
 <blockquote>
-<h2>The Five-Minute Character</h2>
+<h2 id="the-five-minute-character">The Five-Minute Character</h2>
 <ol>
 <li><strong>Pick a template</strong> (Detective, Soldier, Scholar, Thief…). It has your attributes and core skills.</li>
 <li><strong>Pick three to five background factors.</strong> Each is a piece of your life story and a block of abilities. Take one childhood factor first.</li>
@@ -58,10 +45,10 @@
 </ol>
 <p>That&#39;s a complete, competent, ready-to-play character. Everything else in this chapter is detail and customization.</p>
 </blockquote>
-<h2>Willing and Able</h2>
+<h2 id="willing-and-able">Willing and Able</h2>
 <p>A character is not solely described by things for which there are rules. These rules deal with <em>abilities</em> — what a character can do — while leaving <em>personality</em> — what a character wants to do — to players and GMs. Laying out a character&#39;s abilities is far less than half the work. The hard part, and the fun part, is deciding who the character is, why they do what they do, and what they believe in. In <em>Raiders of the Lost Ark</em>, Indiana Jones is able but not <em>willing</em> to destroy an archaeological treasure with a rocket launcher. Willing is always at least as important as able; otherwise you&#39;re not role-playing.</p>
 <p>The GM has the absolute right to require a player to rethink a character: because the abilities don&#39;t match the concept, because the character makes another character redundant, because the character is useless, or because the character doesn&#39;t fit the setting or the kind of story the GM has announced. (No, there won&#39;t be any casinos, car chases, or beautiful foils to seduce in the realistic espionage campaign.)</p>
-<h2>Attributes</h2>
+<h2 id="attributes">Attributes</h2>
 <p>Characters have five attributes. Each represents both a general ability (how strong is this character?) and an aptitude (how good can they get at things where strength is the overriding factor?).</p>
 <table>
 <thead>
@@ -106,12 +93,12 @@
 <p><em><strong>Endurance</strong> and <strong>Appearance</strong> are gone as attributes, and this is not a claim that they don&#39;t matter — it&#39;s a claim about <strong>shape</strong>. Neither is really one number. Appearance especially: a score asserts that every observer would rank the same faces the same way, differing only in threshold, and that is simply not how looks work. People agree at the extremes and diverge sharply on type. Endurance bundles at least three things that correlate poorly — sustained output, resistance to insult, and how fast you recover. So both became <strong>quirk families</strong>, where they can be specific: an Appearance quirk names who it works on, and an Endurance quirk says which kind of enduring you&#39;re good at. That is more truthful than a number, not less, and it&#39;s cheaper.</em></p>
 <p><em>Their mechanical work didn&#39;t vanish, it moved. <strong>Endurance rolls are now WP</strong> — exhaustion, Pain Resistance, convalescence, shaking off a stun. In practice this changed almost nothing: the rules had been writing &quot;EN or WP&quot; for those rolls all along, which was the split telling us it wasn&#39;t carrying weight. Pushing through exhaustion really is a matter of refusing to stop, and Endurance quirks supply the situational modifiers. Purely physiological resistance — <strong>poison, venom, disease</strong> — went to <strong>ST</strong>, the body&#39;s robustness.</em></p>
 <p>Derived from ST are unarmed combat damage and carrying capacity; templates record these for you.</p>
-<h2>Step 1: Pick a Template</h2>
+<h2 id="step-1-pick-a-template">Step 1: Pick a Template</h2>
 <p>ForeSight includes fourteen character templates, ready to play in a few minutes, representing the abilities of typical characters from adventure stories:</p>
 <p><strong>Detective, Journalist, Soldier, Athlete, Explorer, Spy, Scholar, Thief, Assassin, Driver, Tech, Doctor, Con-Artist, Martial Artist.</strong></p>
 <p>A template provides attributes, core skills, and a few fields of knowledge. Use it as provided, or customize it once you know the rules (see Tweaking, below). Templates deliberately leave out the most important part of the character — the personality — for you to define.</p>
 <p>Every character also receives a <strong>free package</strong> of skills and knowledge that everyone in the setting can be assumed to have (your native language, literacy where it&#39;s universal, and the skills everyone has: Search and Initiative). <em>(Pain resistance and stamina aren&#39;t skills — you roll WP for both, modified by any Endurance quirks.)</em></p>
-<h2>Step 2: Background Factors</h2>
+<h2 id="step-2-background-factors">Step 2: Background Factors</h2>
 <p>A background factor (BF) represents part of your character&#39;s back-story — upbringing, education, training, experience — and grants a block of abilities to match. Background factors are, mechanically, <em>character modifications</em>: the same machinery that makes a sword &quot;fine&quot; or a vehicle &quot;sporty&quot; makes a character &quot;ex-military.&quot;</p>
 <p><strong>How many?</strong> The GM decides, usually three to five. Three makes a rookie; four or five a competent professional; more than five is formidable.</p>
 <table>
@@ -151,7 +138,7 @@
 <p><em>Designer&#39;s Note: more is not better for starting players. A new player with seven background factors has a character sheet they don&#39;t understand. Start at three or four and grow into it — ForeSight is designed to put you straight into the sweet spot and keep you there, so there&#39;s no grind to escape.</em></p>
 <p><strong>Pick one childhood factor first</strong> (two at most), then fill out the rest from the general list. Unusual factors — the transforming events — should be used sparingly. Take a factor more than once if it makes sense (a factor generally represents one to five years of your life); factors marked * may be taken only once.</p>
 <p>Rename anything. &quot;Field Experience&quot; is mechanics; <em>Weaseling in the Beyond</em> is a character.</p>
-<h3>Childhood Factors (pick one or two)</h3>
+<h3 id="childhood-factors-pick-one-or-two">Childhood Factors (pick one or two)</h3>
 <ul>
 <li><strong>Comfortable Childhood</strong> — nice, boring, middle class. A broad smattering: +1 to three skills of your choice from your template, two Basic fields.</li>
 <li><strong>Underprivileged Childhood</strong> — +2 Streetwise, +1 Stealth, +1 to one template skill, one Basic field. Reduce wealth one level.</li>
@@ -160,7 +147,7 @@
 <li><strong>Traumatic Childhood</strong> — +1 WP (max 12), +2 to two survival-flavored skills, one Basic field. You will have scars; pick at least one quirk to match.</li>
 <li><strong>Trained from Childhood</strong>* — +2 attribute points (no attribute above 12), +2 to one skill central to the training. You are most likely something of a monomaniac.</li>
 </ul>
-<h3>General Factors</h3>
+<h3 id="general-factors">General Factors</h3>
 <ul>
 <li><strong>Full-Time Education</strong> — college and what goes with it. Two Standard fields, one Basic field, +1 to two skills (one of them social or sporting — there&#39;s a certain amount of extracurricular activity).</li>
 <li><strong>Academic Experience</strong> — researcher, analyst. +2 Theory, one Standard field, one Basic field.</li>
@@ -173,7 +160,7 @@
 <li><strong>Horrible Institution</strong> — English boarding school, military academy. +1 WP, +1 Confidence, one Standard field, +1 to two skills the institution valued.</li>
 <li><strong>Wide Travels</strong> — +2 to two travel skills, language and culture fields at half effort (two Basic fields, or one Standard if focused).</li>
 </ul>
-<h3>Unusual Factors (use sparingly)</h3>
+<h3 id="unusual-factors-use-sparingly">Unusual Factors (use sparingly)</h3>
 <ul>
 <li><strong>Mysterious Mentor</strong>* — +1 attribute point, access to an ability normally unobtainable in your setting, or unique insight in a skill (+1 to its BEF).</li>
 <li><strong>Personal Tragedy</strong> — +1 WP or +2 to one skill forged in the fire; pick a quirk or past to match.</li>
@@ -181,16 +168,16 @@
 <li><strong>Religious Transformation</strong> — the entry point for the Religion rules: become a follower, or deepen an existing commitment.</li>
 <li><strong>15 Minutes of Fame</strong> — an Appearance quirk (that face, from the news), one skill that made you famous +1, and people remember you, for good and ill.</li>
 </ul>
-<h3>Intrinsic Factors (birthright; each once only, GM permitting)</h3>
+<h3 id="intrinsic-factors-birthright-each-once-only-gm-permitting">Intrinsic Factors (birthright; each once only, GM permitting)</h3>
 <ul>
 <li><strong>Superior Specimen</strong>* — +3 attribute points (no attribute above the usual range).</li>
 <li><strong>Magical / Mystic / Psionic / Ch&#39;i Talent</strong>* — you have the talent. Required for the corresponding powers; see those chapters.</li>
 </ul>
-<h3>When Factors Overlap</h3>
+<h3 id="when-factors-overlap">When Factors Overlap</h3>
 <p>If two sources grant the same skill or field, <strong>take the better grant, +1</strong>. Overlap is corroboration, not waste — a Detective with Field Experience twice has seen things — but it is deliberately not the fastest way to build a specialist. <em>(Calibration pending.)</em></p>
-<h3>Custom Background Factors</h3>
+<h3 id="custom-background-factors">Custom Background Factors</h3>
 <p>A background factor is a background factor: if a player wants one that isn&#39;t listed, build it by analogy — a block of about the same weight, matching how the years were actually spent. If it doesn&#39;t make sense and make the character more interesting, the GM should disallow it. There are no rules to stop players choosing nonsensical factors; there is a GM.</p>
-<h2>Step 3: Quirks</h2>
+<h2 id="step-3-quirks">Step 3: Quirks</h2>
 <p>Quirks are <strong>free</strong>, and they have an upside and a downside that roughly cancel out. They are what make characters out of stat blocks. <strong>Take up to three</strong> — more and your character becomes a basket case.</p>
 <ul>
 <li><strong>Nervous Disposition</strong> — +1 PC, –1 WP for stress-related purposes.</li>
@@ -201,14 +188,14 @@
 <p><strong>The full chapter is <a href="quirks.md">Quirks, Perks and Flaws</a></strong>, and you only need it if you want one that isn&#39;t on a list: it has the five families (Appearance, Empathy, Endurance, Coordination, Age), the one question that settles stacking, the four-line template for chronic conditions, and how to write your own.</p>
 <p>Two things from there that bear on this step. <strong>Perks</strong> — perfect pitch, eidetic memory, remarkable agility — are the positive-only cousins of quirks, so they are <em>not</em> free and they do not come out of your three: they arrive through templates, background factors (Trained from Childhood, Mysterious Mentor) or intrinsic factors, and cost points at full price. <strong>Flaws</strong> — blind, haemophiliac — aren&#39;t taken at all; they&#39;re decided, and they grant no points, though they may justify a field or a familiarity in an area the flaw doesn&#39;t touch.</p>
 <p>Quirks, perks and flaws are all deviations from an attribute&#39;s default — which is exactly why agility and empathy don&#39;t need to be attributes.</p>
-<h2>Step 4: Finishing Touches</h2>
+<h2 id="step-4-finishing-touches">Step 4: Finishing Touches</h2>
 <p>Decide your character&#39;s name, sex, age (within reason, given the backgrounds — each adult factor is one to five years), personality, and life story. ForeSight includes a set of <strong>character sketches</strong> — potted personalities from adventure stories — to draw on, alter, or ignore. There are no rules here aside from common sense and your understanding of human nature.</p>
 <p>Note your <strong>wealth</strong> (the GM sets the campaign base; backgrounds may have moved yours up or down) and buy starting equipment.</p>
 <p><strong>Personality is the point.</strong> What a character wants to do and is willing to do matter far more than what they can do. Players who consult each other at this stage get better campaigns: two rival archaeologists who were once best friends are worth more than any background factor.</p>
-<h3>Amy Kwan, in Five Minutes</h3>
+<h3 id="amy-kwan-in-five-minutes">Amy Kwan, in Five Minutes</h3>
 <p><em>The GM announces a near-future campaign: the characters are an IAMCE weapons-inspection team, no two from the same country, four background factors each.</em></p>
 <p><em>Amy Kwan is from the Australasian Defence Alliance, a former detective who joined IAMCE because the work sounded important and she wanted to travel. Template: Detective. Backgrounds: Comfortable Childhood, Full-Time Education, Field/Specialist Training (the academy), Field Experience (years working cases). Quirk: Reads People. That makes her 25–30; call it 27. Wealth: campaign base. Personality: methodical, curious, allergic to bullies; wants to see the world and can&#39;t leave a question alone. Done — and most of that time was spent on who she is, which is as it should be.</em></p>
-<h2>Tweaking (Once You Know the Rules)</h2>
+<h2 id="tweaking-once-you-know-the-rules">Tweaking (Once You Know the Rules)</h2>
 <p>Templates plus backgrounds are the fast path, not a straitjacket. Experienced players may rebuild templates, reallocate grants, design custom backgrounds, sell off free-package skills their character plausibly lacks, or build from scratch point-by-point using the full rules in Characters &amp; Development — and the GM may reject the result. The fast path and the full rules produce characters of the same weight; the difference is the time you spend and the control you get.</p>
 
   </article>
@@ -308,6 +295,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

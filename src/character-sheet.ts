@@ -682,6 +682,7 @@ export class ForesightCharacterSheet extends Component {
   }
 }
 
-export const foresightCharacterSheet = ForesightCharacterSheet.elementCreator({
-  tag: 'foresight-character-sheet',
-})
+// The tag comes from `static preferredTagName` above. Passing `tag` here was
+// deprecated in tosijs 1.10 and warns in the console, and the two could
+// disagree — so the class owns the name and this just registers it.
+export const foresightCharacterSheet = ForesightCharacterSheet.elementCreator()

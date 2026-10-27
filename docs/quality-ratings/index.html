@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Quality Ratings &amp; Yield — ForeSight RPG</title>
   <meta name="description" content="One-pager. Every resolved task returns not just success/failure but a Quality Rating — how well it went." />
   <link rel="canonical" href="https://foresight-rpg.com/quality-ratings/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Quality Ratings &amp; Yield — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Quality Ratings &amp; Yield — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Quality Ratings &amp; Yield</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="quality-ratings.md">
+<h1 id="quality-ratings--yield">Quality Ratings &amp; Yield</h1>
 <!--{ "parent": "core", "order": 5 }-->
 
 <p><em>One-pager. Every resolved task returns not just success/failure but a <strong>Quality Rating</strong> — how well it went. One roll, read three ways depending on what was at stake: how <strong>fast</strong>, how <strong>good</strong>, or how <strong>much</strong>.</em></p>
-<h2>The QR scale</h2>
+<h2 id="the-qr-scale">The QR scale</h2>
 <p>A success is graded <strong>QR1</strong> (superb) → <strong>QR2</strong> → <strong>QR3</strong> → <strong>QR4</strong> (it worked, barely). Failures continue the same scale as <strong>QR7</strong> and <strong>QR10</strong> (bad and disastrous). The odd numbering isn&#39;t arbitrary — see <em>PM</em>, below.</p>
 <p>You read the QR off your D100 roll against fractions of your success chance (SC):</p>
 <table>
@@ -85,40 +72,40 @@
 </tbody></table>
 <p>Two hard limits, whatever your SC: <strong>a roll of 100 is never better than QR7</strong> (so even a near-certainty can fail), and <strong>a roll of 99 is never better than QR4</strong> (you can always succeed, never <em>brilliantly</em>, on a 99).</p>
 <p><em>(The character sheet&#39;s Resolution Table precomputes the four success thresholds so you never divide at the table — look up your score and EF, read the numbers. The table holds only those thresholds: Yield, Time, and PM are flat values keyed to the QR itself, below.)</em></p>
-<h2>Read one column, not three</h2>
+<h2 id="read-one-column-not-three">Read one column, not three</h2>
 <blockquote>
 <p><strong>A QR1 is fast <em>or</em> fabulous — never both.</strong> Decide before the roll what was at stake, quantify <em>that</em>, and let the rest be narration.</p>
 </blockquote>
 <p>If speed mattered, read <strong>Time</strong>. If the quality of the product mattered, read <strong>PM</strong>. If the amount mattered, read <strong>Yield</strong>. A superb dance is in time with the music; a superb <em>quick</em> repair is done early — not both at once.</p>
-<h2>Never penalize the same choice twice</h2>
+<h2 id="never-penalize-the-same-choice-twice">Never penalize the same choice twice</h2>
 <p>If a player accepts an ease-factor penalty to do something a particular way, the <strong>success already includes that thing</strong> — don&#39;t also make them earn it on a QR column.</p>
 <ul>
 <li><em>Picking the lock fast because the guard is coming:</em> take the penalty for haste, and then <strong>success means they were fast</strong> (the guard didn&#39;t catch them); <strong>failure means they couldn&#39;t do it that quickly.</strong> You don&#39;t penalize for hurrying <em>and</em> require a good Time QR on top.</li>
 <li><em>The called head shot, or shooting the one part not behind cover:</em> take the penalty for the small target, and a <strong>hit lands where they aimed.</strong> No second hit-location roll to &quot;confirm&quot; it.</li>
 </ul>
 <p>The up-front modifier is the price of the special outcome. Pay once.</p>
-<h2>The three readings</h2>
+<h2 id="the-three-readings">The three readings</h2>
 <p><strong>Yield — how much did you get?</strong> A percentage of the maximum: <strong>QR1 100%, QR2 80%, QR3 50%, QR4 25%</strong> (failures yield as a QR4). Used for damage (<strong>damage = Yield × DC ÷ 2</strong>), and equally for intelligence gathered, gold panned, ground covered, rope salvaged.</p>
 <p><strong>Time — how long did it take?</strong> A percentage of what a competent practitioner would estimate up front. QR4 takes roughly twice as long; QR1 is quick. <em>This is what answers &quot;did you pick the lock before the guard rounded the corner?&quot; — a time-critical task where QR is the whole story.</em></p>
 <p><strong>PM — how good is the product, for later use?</strong> When a task makes something used in a <em>later</em> task (a built weapon, a forged document, a set-up security system), the QR carries forward as a modifier: <strong>PM = 4 − QR.</strong> So QR1 → +3, QR2 → +2, QR3 → +1, QR4 → +0, QR7 → −3, QR10 → −6. (That&#39;s why the scale is numbered this way.)</p>
-<h2>Failures yield like a QR4</h2>
+<h2 id="failures-yield-like-a-qr4">Failures yield like a QR4</h2>
 <p>When players can&#39;t tell success from failure (hidden results — was the alarm well installed? did the panning find anything?), a <em>failure</em> yields and takes time exactly as a <strong>QR4</strong> would. The dice stay quiet; the GM knows.</p>
-<h2>Why QR4 is so common — and so mediocre</h2>
+<h2 id="why-qr4-is-so-common--and-so-mediocre">Why QR4 is so common — and so mediocre</h2>
 <p>Half of all successes are QR4: twice the time, a quarter of the take. That&#39;s not a flaw, it&#39;s life. How often is the plumbing fixed <em>well</em>? How often does the job come in on the estimate? How much of a newspaper article is the 25% that&#39;s both true and relevant? Life is full of QR4s.</p>
-<h2>&quot;Why can&#39;t I just try again?&quot;</h2>
+<h2 id="why-cant-i-just-try-again">&quot;Why can&#39;t I just try again?&quot;</h2>
 <p>The bane of skill systems — players lining up worst-to-best to retry a lock until someone makes it (we&#39;re looking at you, RuneQuest). ForeSight answers it with the time mechanic, no special rule required:</p>
 <ul>
 <li><strong>A failure already cost you time.</strong> A QR7 takes ~200% of the estimate — the same as a QR4 success. So you <em>can</em> try again, but the clock has already run, and it keeps running. When time matters (and in tense situations it does), endless retries aren&#39;t free; eventually the guard rounds the corner.</li>
 <li><strong>QR10 closes the door.</strong> A disastrous failure means you&#39;ve fouled the approach — for yourself and often for the next person (the pick snaps in the lock; you&#39;ve convinced yourself the safe opens left when it opens right). There&#39;s no &quot;try the same thing again&quot;: find another way.</li>
 </ul>
 <p>So the conga line never forms. The first failure is slow, the next is slower, and a bad enough failure spoils the method outright.</p>
-<h2>Open-ended resolution: oppose or build</h2>
+<h2 id="open-ended-resolution-oppose-or-build">Open-ended resolution: oppose or build</h2>
 <p>Any result can be opposed or built upon — this is what makes the system chain. <em>(Full treatment, including the blocking table, is on the Opposed Resolution page.)</em></p>
 <ul>
 <li><strong>Oppose</strong> a prior result two ways: use its QR as the <em>base ease factor</em> for your counter-task, <strong>or</strong> simply roll your own opposing task and compare QRs.</li>
 <li><strong>Build on</strong> a prior result by adding <strong>+(5 − QR)</strong> as a modifier to your follow-up: QR1 → +4, QR2 → +3, QR3 → +2, QR4 → +1. Even a marginal success gives a successor something to stand on. <em>(Distinct from the PM column above, which rates a finished product&#39;s own quality at 4 − QR — see note.)</em></li>
 </ul>
-<h2>Random QR</h2>
+<h2 id="random-qr">Random QR</h2>
 <p>When you need a QR out of nowhere (area damage on a bystander, how well an unseen NPC did their job): roll D10 — <strong>1</strong>→QR1, <strong>2</strong>→QR2, <strong>3–5</strong>→QR3, <strong>6–10</strong>→QR4.</p>
 <p><em>Designer&#39;s Note: this one table is the secret engine of the whole game. Combat damage, a chase&#39;s gained ground, an interrogation&#39;s leaked truth, a forged passport&#39;s quality — all of it is &quot;read the QR in the column that matters.&quot; Learn it once and most of the rest of this book is just examples.</em></p>
 
@@ -219,6 +206,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

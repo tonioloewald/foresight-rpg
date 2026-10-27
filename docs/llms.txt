@@ -9,6 +9,10 @@ A streamlined modern edition of the ForeSight tabletop RPG.
 
 Full documentation, with live code examples, is at the links below.
 
+Pages below are also available as plain markdown: append `index.md` to the URL
+(for example `/core/index.md`).
+Prefer that if you only need the text. A page marked noindex has no markdown copy.
+
 ## Pages
 
 - https://foresight-rpg.com/magic-abeyance/ — Abeyance

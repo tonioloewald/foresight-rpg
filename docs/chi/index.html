@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Ch'i — ForeSight RPG</title>
   <meta name="description" content="One-pager. Ch&#39;i is the essence of being and life. Every living thing has some; a few have a great deal, and fewer still can consciously direct the Ch&#39;i within…" />
   <link rel="canonical" href="https://foresight-rpg.com/chi/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Ch&#39;i — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Ch&#39;i — ForeSight RPG" />
@@ -42,16 +29,16 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Ch&#39;i</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="chi.md">
+<h1 id="chi">Ch&#39;i</h1>
 <!--{ "parent": "magic", "order": 90 }-->
 
 <p><em>One-pager. Ch&#39;i is the essence of being and life. Every living thing has some; a few have a great deal, and fewer still can consciously direct the Ch&#39;i within and around them. Where magic is a careful, generative craft, Ch&#39;i is fast, physical and cinematic — the wire-work fantasy of <strong>Big Trouble in Little China</strong> and the Hong Kong films of the eighties and nineties.</em></p>
 <blockquote>
 <p><strong>Ch&#39;i replaces magic; it does not join it.</strong> A setting can have one or the other, and a character operates in one framework, never both. Ch&#39;i is so useful that it dominates any setting featuring it — that&#39;s by design, not an oversight, so a GM turning it on should mean it. (Its low cost is likewise deliberate: price it higher and players simply cripple themselves to buy it anyway.)</p>
 </blockquote>
-<h2>The skill and the two paths</h2>
+<h2 id="the-skill-and-the-two-paths">The skill and the two paths</h2>
 <p>Ch&#39;i is a single <strong>skill</strong>, and every practitioner picks a <strong>path</strong> — a source of inner strength — when they take it. The choice is permanent.</p>
 <table>
 <thead>
@@ -76,14 +63,14 @@
 <blockquote>
 <p><strong>Ported from 2004:</strong> the Reflective path was <em>(EM + WP)/2</em>. EM folded into PC in this edition, so it reads (PC + WP)/2 — see <a href="/creating-characters/">Creating Characters</a>.</p>
 </blockquote>
-<h2>Spending Ch&#39;i is exhaustion, not a pool</h2>
+<h2 id="spending-chi-is-exhaustion-not-a-pool">Spending Ch&#39;i is exhaustion, not a pool</h2>
 <p>The original tracked a reserve of points equal to three times your Ch&#39;i score. This edition doesn&#39;t track pools: <strong>Ch&#39;i is an <a href="/exhaustion/">Exhaustion</a> track</strong>, exactly as mana is. Effort meters itself.</p>
 <ul>
 <li>Reaching for Ch&#39;i is a <strong>roll</strong>, and the size of what you&#39;re attempting is a <strong>modifier on that roll</strong>, not a separate accounting step.</li>
 <li>Push hard and you take an exhaustion level; push hard when you&#39;re already spent and it costs more. Levels penalise Ch&#39;i work fully and everything else at half.</li>
 <li>The path sets your <strong>recovery rhythm</strong>: Bright recovers at sunrise, Reflective at moonrise. It&#39;s pure flavour that costs nothing mechanically, and it&#39;s worth keeping — a Reflective adept husbanding their strength through a long day is a character beat.</li>
 </ul>
-<h2>Three ways to use it</h2>
+<h2 id="three-ways-to-use-it">Three ways to use it</h2>
 <p><strong>1 · Unconscious — you don&#39;t die easily.</strong> Ch&#39;i keeps its bearer alive without being asked.</p>
 <ul>
 <li><strong>Wounded:</strong> when a blow raises your wound level, roll Ch&#39;i. On QR3 or better you recover that level as soon as you can rest for a few seconds. You can never profit from being wounded — at best you break even.</li>
@@ -123,7 +110,7 @@
 </tbody></table>
 <p><strong>Gathered energy is dangerous.</strong> Anyone — or anything unaccounted for — touching you mid-gather takes a discharge equal to what you&#39;ve gathered so far. Lose control of unformed energy and you can try to disperse it safely; fail, and half goes into you and half into whatever&#39;s handy. The visuals are the point: coils of lightning crawling over your hands and feet, creeping to the torso and head when control slips, and gathering about the eyes, nose, mouth and ears when it&#39;s gone.</p>
 <p><strong>Path affinity:</strong> forming a structure your path favours is <strong>+2</strong>, and projecting or dispersing it <strong>+1</strong>.</p>
-<h2>Extraordinary feats</h2>
+<h2 id="extraordinary-feats">Extraordinary feats</h2>
 <p><em>The <strong>outer way</strong> — what a skill taken twice unlocks. Roll on the lower of your Ch&#39;i and the skill; failure spends the effort anyway, and a fumble goes wrong in public. <strong>Through</strong> is the modern skill or attribute the feat hangs off: several 2004 skills (Acrobatics, Climbing, Throwing, Unarmed Combat) are merged into broader ones here, and Stamina and Pain Resistance aren&#39;t skills at all, so those feats sit on <strong>WP</strong>, which now carries every exhaustion roll.</em></p>
 <!-- entity-view: chi-feats.json -->
 <div class="entity-view">
@@ -152,7 +139,7 @@
 </div>
 <!-- /entity-view -->
 
-<h2>Orb structures</h2>
+<h2 id="orb-structures">Orb structures</h2>
 <p><em>The vocabulary of the weave. <strong>E</strong> is the energy in the orb. Most structures also support a <strong>ball</strong>, a <strong>strike bolt</strong>, sometimes a <strong>barrier</strong>, and an <strong>infusion</strong> that puts the property into a person or object instead of throwing it.</em></p>
 <!-- entity-view: chi-orbs.json -->
 <div class="entity-view">
@@ -280,6 +267,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Open-Ended Resolution — ForeSight RPG</title>
   <meta name="description" content="One-pager. The One Rule resolves a task in isolation. But tasks rarely stand alone — one builds on another, or fights against it." />
   <link rel="canonical" href="https://foresight-rpg.com/open-ended-resolution/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Open-Ended Resolution — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Open-Ended Resolution — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Open-Ended Resolution</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="open-ended-resolution.md">
+<h1 id="open-ended-resolution">Open-Ended Resolution</h1>
 <!--{ "parent": "core", "order": 6 }-->
 
 <p><em>One-pager. The One Rule resolves a task in isolation. But tasks rarely stand alone — one builds on another, or fights against it. This page is how results <strong>chain</strong>: how to <strong>build on</strong> a prior result, and how to <strong>oppose</strong> one. It&#39;s foreshadowed everywhere (parries, persuasion, hacking, a forged document used later) and it&#39;s all the same two moves.</em></p>
-<h2>Opposing — both roll, the QRs fight</h2>
+<h2 id="opposing--both-roll-the-qrs-fight">Opposing — both roll, the QRs fight</h2>
 <p>When two characters contest directly — a parry against an attack, stealth against a searcher, a tug-of-war, a chess match, a lawyer building a case against one tearing it down — <strong>both roll their own task and compare Quality Ratings. The better QR prevails.</strong></p>
 <ul>
 <li>A <strong>large</strong> QR gap is a decisive win; a <strong>small</strong> gap is a narrow one.</li>
@@ -58,7 +45,7 @@
 <blockquote>
 <p><em>Older editions had you use your opponent&#39;s QR as your ease factor. Rolling and comparing QRs is simpler, more symmetric, and produces those satisfying near-stalemates the old way couldn&#39;t.</em></p>
 </blockquote>
-<h2>How much got through — partial blocking</h2>
+<h2 id="how-much-got-through--partial-blocking">How much got through — partial blocking</h2>
 <p>Sometimes you don&#39;t want win/lose but <em>how much</em> of an effort survived a partial defense (an attack partly parried, a case partly undermined). For an <em>effective</em> defense the rule is simple arithmetic: a defense <strong>equal to or better than</strong> the attack negates it; otherwise the attack&#39;s QR drops <strong>(5 − the defending QR)</strong> notches down the 1-2-3-4 scale. The failure end isn&#39;t arithmetic — it follows the general principle that <strong>QR7 is plain failure, QR10 actively backfires</strong>: a QR7 defense is <em>no defense</em> (the attack lands at its full rolled QR), and a QR10 defense <strong>makes the attack worse</strong> by one notch (the defender fumbled into it). The result is the attack&#39;s <strong>effective</strong> QR — what got through.</p>
 <table>
 <thead>
@@ -110,13 +97,13 @@
 </tr>
 </tbody></table>
 <p><em>(The better the defense, the more of the attack it eats; an equal defense blocks it cleanly — the just-barely parry. A botched defense leaves you worse off than no defense at all.)</em></p>
-<h2>Building — a modifier, not a new base</h2>
+<h2 id="building--a-modifier-not-a-new-base">Building — a modifier, not a new base</h2>
 <p>When one task&#39;s product feeds a later task — a tuned engine you then race, a forged passport you then present, intel you then act on — carry the first result forward as an <strong>ease-factor modifier</strong> on the follow-up:</p>
 <blockquote>
 <p><strong>Build: +(5 − QR).</strong> QR1 → +4, QR2 → +3, QR3 → +2, QR4 → +1. Opposing a standing prior result instead? Take the same value as a <strong>penalty</strong>.</p>
 </blockquote>
 <p>Crucially this is a <strong>modifier</strong>, not a replacement base ease factor: the follow-up still uses <em>its own</em> ability and BEF, nudged up or down by what came before. Even a marginal success (QR4) leaves the next person a little something to stand on, and a brilliant one (QR1) hands them a real head start.</p>
-<h2>Examples</h2>
+<h2 id="examples">Examples</h2>
 <ul>
 <li><strong>Sneaking vs. noticing</strong> — your Stealth against their Perception (or Search, if they&#39;re actively looking). Compare QRs; a tie means they sense <em>something</em> but can&#39;t place it.</li>
 <li><strong>Concealing vs. finding</strong> — hiding an object (Stealth/relevant skill) against a searcher; a tie is &quot;they walked right past it.&quot;</li>
@@ -223,6 +210,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

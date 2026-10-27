@@ -1,4 +1,9 @@
 import 'tosijs-ui'
+// Registers <tosi-doc-system>. Since tosijs-ui 1.14.0 the root import no longer
+// carries the doc system, and a bundle of our own REPLACES tosijs-ui's rather
+// than extending it — so without this every page renders its prerendered
+// markup and nothing else: no header, no nav, no menu, and no error anywhere.
+import 'tosijs-ui/doc-browser'
 import { tosiTable } from 'tosijs-ui'
 import './src/character-sheet' // registers <foresight-character-sheet>
 import { ENTITY_SPECS, fmt, slug, ALL_TAGS, type EntitySpec } from './src/entity-specs'

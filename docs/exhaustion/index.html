@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Exhaustion — ForeSight RPG</title>
   <meta name="description" content="One-pager. Fatigue, magic, and divine favour are all the same thing: not a point pool you spend down, but a track of exhaustion levels — wound-shaped, but…" />
   <link rel="canonical" href="https://foresight-rpg.com/exhaustion/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Exhaustion — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Exhaustion — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Exhaustion</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="exhaustion.md">
+<h1 id="exhaustion">Exhaustion</h1>
 <!--{ "parent": "conflict", "order": 7 }-->
 
 <p><em>One-pager. Fatigue, magic, and divine favour are all the <strong>same thing</strong>: not a point pool you spend down, but a track of <strong>exhaustion levels</strong> — wound-shaped, but shorter, and cleared by <strong>rest, not rolls</strong>. You never tally points; you roll to do the tiring thing, and a level piles on when you reach too hard.</em></p>
-<h2>The 0–5 track</h2>
+<h2 id="the-05-track">The 0–5 track</h2>
 <p>Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a wound is — but <strong>domain-weighted</strong>, not universal:</p>
 <table>
 <thead>
@@ -93,7 +80,7 @@
 <blockquote>
 <p><em>A wizard is at −3 fatigue (a forced march) and −3 mana (a duel). Swinging a sword: −3 (fatigue, full) + half of −3 mana = <strong>−5</strong>. Casting: −3 mana + half of −3 fatigue = <strong>−5</strong>. Sweet-talking the innkeeper (neither): half of each = <strong>−3</strong>.</em></p>
 </blockquote>
-<h2>Getting exhausted</h2>
+<h2 id="getting-exhausted">Getting exhausted</h2>
 <p>Do something genuinely taxing — a sustained sprint, a long mêlée, a forced march, harsh exposure — and make a <strong>WP check</strong> (as with wounds), the <em>magnitude</em> of the effort a modifier rather than a pile of extra rolls:</p>
 <table>
 <thead>
@@ -116,7 +103,7 @@
 </tr>
 </tbody></table>
 <p>Some efforts cost a level <strong>automatically</strong>, no roll — a thing you cannot do without burning yourself.</p>
-<h2>Recovery — rest, not rolls</h2>
+<h2 id="recovery--rest-not-rolls">Recovery — rest, not rolls</h2>
 <p>You clear <strong>one level at a time</strong>, deepest first, and the deeper it is the more rest it takes:</p>
 <table>
 <thead>
@@ -143,10 +130,10 @@
 </tr>
 </tbody></table>
 <p>So a <strong>Spent (3)</strong> character sleeps it off to <strong>Tired (2)</strong>, rests down to <strong>Winded (1)</strong>, and a breather clears the last — deep exhaustion is a slow climb out, not a nap. And past level 3, keep checking WP or exhaustion starts <strong>converting into real wounds</strong> — you can drop from over-exertion, or die of exposure.</p>
-<h2>Magic, and the other powers</h2>
+<h2 id="magic-and-the-other-powers">Magic, and the other powers</h2>
 <p>By default <strong>magic is just fatigue</strong>: gathering power is taxing, and casting in a <strong>mana-poor</strong> place is simply more exhausting, a <strong>mana-rich</strong> one less — a modifier, not a second resource to track. A setting that wants magic to feel <em>separate</em> can give it its <strong>own track</strong> (Mana), and likewise <strong>Spirit</strong> for mystic disciplines; each track wears down independently (your Mana can be wrung dry while your Spirit is fresh) and stacks per the rule above.</p>
 <p>However it&#39;s tracked, the shape is <strong>gather then weave</strong>: a <strong>gather roll</strong> whose ease factor reflects how much you&#39;re asking for (a candle-flame is trivial; a firestorm brutal). Read its QR — a solid success and the power comes free and clear; a marginal one and it comes but costs a level; a <strong>QR10 fizzles <em>and</em> costs a level</strong>. And a caster may <strong>volunteer a level for a one-off +4</strong> — reaching past your limit on purpose, reliable but the bill compounds.</p>
-<h2>Divine favour is different — it&#39;s earned, not rested</h2>
+<h2 id="divine-favour-is-different--its-earned-not-rested">Divine favour is different — it&#39;s earned, not rested</h2>
 <p><strong>Divine favour</strong> is spent like the others (temporarily, in the moment), but it isn&#39;t refilled by sleep. It&#39;s gated by <strong>Piety</strong> — which behaves like a <em>skill</em>, except it is driven by <strong>deeds, not experience</strong>: acts of devotion, sacrifice, and living by the god&#39;s tenets raise it; betraying them lowers it. A priest doesn&#39;t rest to recover standing with their god; they <em>earn it back</em>. (Full treatment under Religion.)</p>
 <p><em>Designer&#39;s Note: the stamina/mana/piety point-pools are all gone, and good riddance — a check you can&#39;t fudge beats a pool everyone quietly forgets to subtract from. Folding fatigue, magic, and faith into one exhaustion mechanic means one thing to learn, and the &quot;spend a level for +4&quot; lever gives a desperate character a real, costly choice instead of a hard wall. The toughness roll used to be <em>EN <strong>or</strong> WP</em>, your pick — and that turned out to be the split confessing it wasn&#39;t real. Two attributes interchangeable at every point of use are one attribute wearing two labels, so <strong>EN went</strong> and the roll is simply <strong>WP</strong>. Which is honest: staying on your feet is mostly about refusing to stop. What kind of enduring you&#39;re good at now comes from <strong>Endurance quirks</strong>, which can say something a number couldn&#39;t — sprinter or marathoner, quick to recover or slow, an iron gut. Purely physiological resistance (poison, disease) is <strong>ST</strong>, where willpower is no help at all.</em></p>
 
@@ -247,6 +234,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

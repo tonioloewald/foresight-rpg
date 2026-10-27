@@ -1,0 +1,351 @@
+# Travel & Vehicles
+<!--{ "parent": "foresight-1986", "order": 5 }-->
+
+*ForeSight (1986), pp. 57–64 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the [source PDF](/foresight-1986.pdf#page=57). [About this restoration](/foresight-1986/).*
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=57">ForeSight 1986 · p.57 ↗</a></div>
+
+*[Chapter illustration in the original: a 'Soft Tech Level 9 Helijet' — see the source-PDF page link above.]*
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=58">ForeSight 1986 · p.58 ↗</a></div>
+
+#### Vehicle Table
+
+*Every sample vehicle. **PUR**suit / **MAN**euver / **RED**line are ease-factor ratings; Cruise & Max in km/h; **CLG** = ceiling (or dive depth for subs); **DT** = damage track; **SIZ** = size class; Cargo in kg, Pass = passengers. Multi-mode vehicles (Crawler, Amphibious ATV) note their alternate modes on the card. **Reconstructed** from the pixel-art chart — verify against the original.*
+
+<!-- entity-view: 1986-vehicles.json -->
+<div class="entity-view">
+<style>
+.ev-table{width:100%;border-collapse:collapse;margin:0 0 1.5em;font-size:.92em}
+.ev-table th,.ev-table td{border:1px solid rgba(128,128,128,.3);padding:.35em .5em;text-align:left;vertical-align:top}
+.ev-table th{font-size:.78em;text-transform:uppercase;letter-spacing:.06em}
+.ev-cards{display:grid;gap:1em;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.ev-card{border:1px solid rgba(128,128,128,.3);border-radius:8px;padding:.75em 1em;break-inside:avoid;page-break-inside:avoid}
+.ev-card h3{margin:0 0 .4em}
+.ev-img{display:block;max-width:100%;height:auto;border-radius:6px;margin:0 0 .5em}
+.ev-fields{margin:0 0 .6em}
+.ev-fields dt{display:inline;font-size:.78em;text-transform:uppercase;letter-spacing:.06em;opacity:.65}
+.ev-fields dt::after{content:": "}
+.ev-fields dd{display:inline;margin:0}
+.ev-fields dd::after{content:"";display:block}
+.ev-body{margin:0}
+.ev-bar{display:flex;gap:.5em;align-items:center;flex-wrap:wrap;margin:0 0 .75em}
+.ev-toggle,.ev-chip{border:1px solid rgba(128,128,128,.4);background:transparent;color:inherit;border-radius:999px;padding:.2em .7em;cursor:pointer;font:inherit;font-size:.85em}
+.ev-toggle[aria-pressed="true"],.ev-chip[aria-pressed="true"]{background:rgba(128,128,128,.25);font-weight:600}
+.ev-search{flex:1;min-width:8em;font:inherit;padding:.25em .5em;border:1px solid rgba(128,128,128,.4);border-radius:6px;background:transparent;color:inherit}
+.ev-empty{opacity:.7;font-style:italic}
+.ev-count{font-size:.85em;opacity:.65;white-space:nowrap}
+</style>
+<foresight-table src="1986-vehicles.json" columns="[{&quot;prop&quot;:&quot;name&quot;,&quot;name&quot;:&quot;Vehicle&quot;,&quot;width&quot;:170},{&quot;prop&quot;:&quot;group&quot;,&quot;name&quot;:&quot;Class&quot;,&quot;width&quot;:96},{&quot;prop&quot;:&quot;tl&quot;,&quot;name&quot;:&quot;TL&quot;,&quot;width&quot;:44,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;cruise&quot;,&quot;name&quot;:&quot;Cruise&quot;,&quot;width&quot;:72,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;max&quot;,&quot;name&quot;:&quot;Max&quot;,&quot;width&quot;:64,&quot;align&quot;:&quot;center&quot;},{&quot;prop&quot;:&quot;type&quot;,&quot;name&quot;:&quot;Type&quot;,&quot;width&quot;:64,&quot;align&quot;:&quot;center&quot;}]"><div class="ev-static"><table class="ev-table"><thead><tr><th>Vehicle</th><th>Class</th><th align="center">TL</th><th align="center">Cruise</th><th align="center">Max</th><th align="center">Type</th></tr></thead><tbody><tr><td><a href="#veh86-crawler">Crawler</a></td><td>Ground</td><td align="center">7</td><td align="center">70</td><td align="center">120</td><td align="center">6WD</td></tr><tr><td><a href="#veh86-ranger">Ranger</a></td><td>Ground</td><td align="center">5</td><td align="center">60</td><td align="center">100</td><td align="center">4WD</td></tr><tr><td><a href="#veh86-semi-trailer">Semi-trailer</a></td><td>Ground</td><td align="center">5</td><td align="center">100</td><td align="center">160</td><td align="center">wheel</td></tr><tr><td><a href="#veh86-automobile-tl4-5">Automobile (TL4.5)</a></td><td>Ground</td><td align="center">4.5</td><td align="center">60</td><td align="center">100</td><td align="center">wheel</td></tr><tr><td><a href="#veh86-automobile-tl5">Automobile (TL5)</a></td><td>Ground</td><td align="center">5</td><td align="center">120</td><td align="center">180</td><td align="center">wheel</td></tr><tr><td><a href="#veh86-horse">Horse</a></td><td>Ground</td><td align="center">1</td><td align="center">20</td><td align="center">45</td><td align="center">quad</td></tr><tr><td><a href="#veh86-snowmobile">Snowmobile</a></td><td>Ground</td><td align="center">5</td><td align="center">25</td><td align="center">50</td><td align="center">track</td></tr><tr><td><a href="#veh86-tractor">Tractor</a></td><td>Ground</td><td align="center">5</td><td align="center">15</td><td align="center">40</td><td align="center">4WD</td></tr><tr><td><a href="#veh86-atv">ATV</a></td><td>Ground</td><td align="center">5</td><td align="center">30</td><td align="center">80</td><td align="center">6WD</td></tr><tr><td><a href="#veh86-heavy-atv">Heavy ATV</a></td><td>Ground</td><td align="center">6</td><td align="center">30</td><td align="center">60</td><td align="center">track</td></tr><tr><td><a href="#veh86-rover">Rover</a></td><td>Ground</td><td align="center">6</td><td align="center">70</td><td align="center">110</td><td align="center">6WD</td></tr><tr><td><a href="#veh86-jet-skimmer">Jet Skimmer</a></td><td>Ground</td><td align="center">7</td><td align="center">200</td><td align="center">340</td><td align="center">hover</td></tr><tr><td><a href="#veh86-human-on-foot">Human (on foot)</a></td><td>Ground</td><td align="center">—</td><td align="center">See rules</td><td align="center">See rules</td><td align="center">biped</td></tr><tr><td><a href="#veh86-ultralight">Ultralight</a></td><td>Air</td><td align="center">6</td><td align="center">25</td><td align="center">50</td><td align="center">mono</td></tr><tr><td><a href="#veh86-monoplane">Monoplane</a></td><td>Air</td><td align="center">4</td><td align="center">400</td><td align="center">700</td><td align="center">mono</td></tr><tr><td><a href="#veh86-executive-jet">Executive Jet</a></td><td>Air</td><td align="center">5</td><td align="center">900</td><td align="center">1150</td><td align="center">mono</td></tr><tr><td><a href="#veh86-passenger-jet">Passenger Jet</a></td><td>Air</td><td align="center">5</td><td align="center">850</td><td align="center">1000</td><td align="center">mono</td></tr><tr><td><a href="#veh86-air-car">Air Car</a></td><td>Air</td><td align="center">8</td><td align="center">700</td><td align="center">950</td><td align="center">VTOL</td></tr><tr><td><a href="#veh86-helicopter">Helicopter</a></td><td>Air</td><td align="center">5</td><td align="center">100</td><td align="center">220</td><td align="center">VTOL</td></tr><tr><td><a href="#veh86-helijet">Helijet</a></td><td>Air</td><td align="center">7</td><td align="center">400</td><td align="center">600</td><td align="center">VTOL</td></tr><tr><td><a href="#veh86-jumpjet">Jumpjet</a></td><td>Air</td><td align="center">5</td><td align="center">900</td><td align="center">1150</td><td align="center">STOL</td></tr><tr><td><a href="#veh86-jet-pack">Jet Pack</a></td><td>Personal Flyer</td><td align="center">6</td><td align="center">50</td><td align="center">80</td><td align="center">VTOL</td></tr><tr><td><a href="#veh86-fast-pack">Fast Pack</a></td><td>Personal Flyer</td><td align="center">7</td><td align="center">100</td><td align="center">180</td><td align="center">VTOL</td></tr><tr><td><a href="#veh86-super-pack">Super Pack</a></td><td>Personal Flyer</td><td align="center">8</td><td align="center">120</td><td align="center">200</td><td align="center">VTOL</td></tr><tr><td><a href="#veh86-sailing-boat">Sailing Boat</a></td><td>Water</td><td align="center">2</td><td align="center">10</td><td align="center">40</td><td align="center">boat</td></tr><tr><td><a href="#veh86-sailing-ship">Sailing Ship</a></td><td>Water</td><td align="center">3</td><td align="center">15</td><td align="center">40</td><td align="center">ship</td></tr><tr><td><a href="#veh86-galley">Galley</a></td><td>Water</td><td align="center">2</td><td align="center">10</td><td align="center">50</td><td align="center">ship</td></tr><tr><td><a href="#veh86-minisub-tl4-5">Minisub (TL4.5)</a></td><td>Water</td><td align="center">4.5</td><td align="center">25</td><td align="center">35</td><td align="center">sub</td></tr><tr><td><a href="#veh86-minisub-tl7">Minisub (TL7)</a></td><td>Water</td><td align="center">7</td><td align="center">60</td><td align="center">100</td><td align="center">sub</td></tr><tr><td><a href="#veh86-motorboat">Motorboat</a></td><td>Water</td><td align="center">5</td><td align="center">70</td><td align="center">100</td><td align="center">boat</td></tr><tr><td><a href="#veh86-motor-scooter">Motor-scooter</a></td><td>Water</td><td align="center">5</td><td align="center">15</td><td align="center">25</td><td align="center">sub</td></tr><tr><td><a href="#veh86-amphibious-atv">Amphibious ATV</a></td><td>Water</td><td align="center">6</td><td align="center">50</td><td align="center">80</td><td align="center">6WD</td></tr><tr><td><a href="#veh86-freighter">Freighter</a></td><td>Water</td><td align="center">5</td><td align="center">35</td><td align="center">50</td><td align="center">ship</td></tr><tr><td><a href="#veh86-human-swimming">Human (swimming)</a></td><td>Water</td><td align="center">—</td><td align="center">See rules</td><td align="center">See rules</td><td align="center">biped</td></tr></tbody></table><div class="ev-cards"><section class="ev-card" id="veh86-crawler"><h3>Crawler</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>20k*</dd><dt>TL</dt><dd>7</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>70</dd><dt>Max</dt><dd>120</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>5</dd><dt>Size</dt><dd>+1</dd><dt>Type</dt><dd>6WD</dd><dt>Cargo</dt><dd>1500</dd><dt>Passengers</dt><dd>7</dd></dl><p class="ev-body">Crawl mode: Pur −3, Man +2, Red 0, Cruise 20, Max 50.</p></section><section class="ev-card" id="veh86-ranger"><h3>Ranger</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>5k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>60</dd><dt>Max</dt><dd>100</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>4WD</dd><dt>Cargo</dt><dd>200</dd><dt>Passengers</dt><dd>3</dd></dl></section><section class="ev-card" id="veh86-semi-trailer"><h3>Semi-trailer</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>40k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>-2</dd><dt>Cruise</dt><dd>100</dd><dt>Max</dt><dd>160</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>7</dd><dt>Size</dt><dd>+2</dd><dt>Type</dt><dd>wheel</dd><dt>Cargo</dt><dd>15000</dd><dt>Passengers</dt><dd>3</dd></dl></section><section class="ev-card" id="veh86-automobile-tl4-5"><h3>Automobile (TL4.5)</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>10k</dd><dt>TL</dt><dd>4.5</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>60</dd><dt>Max</dt><dd>100</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>wheel</dd><dt>Cargo</dt><dd>200</dd><dt>Passengers</dt><dd>4</dd></dl></section><section class="ev-card" id="veh86-automobile-tl5"><h3>Automobile (TL5)</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>6k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>-2</dd><dt>Cruise</dt><dd>120</dd><dt>Max</dt><dd>180</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>wheel</dd><dt>Cargo</dt><dd>200</dd><dt>Passengers</dt><dd>4</dd></dl></section><section class="ev-card" id="veh86-horse"><h3>Horse</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>1k</dd><dt>TL</dt><dd>1</dd><dt>Pursuit</dt><dd>-3</dd><dt>Maneuver</dt><dd>+2</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>20</dd><dt>Max</dt><dd>45</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>2</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>quad</dd><dt>Cargo</dt><dd>20</dd><dt>Passengers</dt><dd>1</dd></dl></section><section class="ev-card" id="veh86-snowmobile"><h3>Snowmobile</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>15c</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>25</dd><dt>Max</dt><dd>50</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>2</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>track</dd><dt>Cargo</dt><dd>100</dd><dt>Passengers</dt><dd>1</dd></dl></section><section class="ev-card" id="veh86-tractor"><h3>Tractor</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>20k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>15</dd><dt>Max</dt><dd>40</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>5</dd><dt>Size</dt><dd>+1</dd><dt>Type</dt><dd>4WD</dd><dt>Cargo</dt><dd>10000</dd><dt>Passengers</dt><dd>1</dd></dl></section><section class="ev-card" id="veh86-atv"><h3>ATV</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>8k*</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>+2</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>30</dd><dt>Max</dt><dd>80</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>6WD</dd><dt>Cargo</dt><dd>500</dd><dt>Passengers</dt><dd>5</dd></dl></section><section class="ev-card" id="veh86-heavy-atv"><h3>Heavy ATV</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>10k</dd><dt>TL</dt><dd>6</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>+2</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>30</dd><dt>Max</dt><dd>60</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>5</dd><dt>Size</dt><dd>+1</dd><dt>Type</dt><dd>track</dd><dt>Cargo</dt><dd>2000</dd><dt>Passengers</dt><dd>9</dd></dl></section><section class="ev-card" id="veh86-rover"><h3>Rover</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>8k</dd><dt>TL</dt><dd>6</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>70</dd><dt>Max</dt><dd>110</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>6WD</dd><dt>Cargo</dt><dd>1000</dd><dt>Passengers</dt><dd>5</dd></dl></section><section class="ev-card" id="veh86-jet-skimmer"><h3>Jet Skimmer</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>20k</dd><dt>TL</dt><dd>7</dd><dt>Pursuit</dt><dd>+2</dd><dt>Maneuver</dt><dd>-2</dd><dt>Redline</dt><dd>-4</dd><dt>Cruise</dt><dd>200</dd><dt>Max</dt><dd>340</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>hover</dd><dt>Cargo</dt><dd>200</dd><dt>Passengers</dt><dd>4</dd></dl></section><section class="ev-card" id="veh86-human-on-foot"><h3>Human (on foot)</h3><dl class="ev-fields"><dt>Class</dt><dd>Ground</dd><dt>Cost</dt><dd>—</dd><dt>TL</dt><dd>—</dd><dt>Pursuit</dt><dd>-3</dd><dt>Maneuver</dt><dd>+3</dd><dt>Redline</dt><dd>1</dd><dt>Cruise</dt><dd>See rules</dd><dt>Max</dt><dd>See rules</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>1</dd><dt>Size</dt><dd>-1</dd><dt>Type</dt><dd>biped</dd><dt>Cargo</dt><dd>varies</dd><dt>Passengers</dt><dd>0</dd></dl></section><section class="ev-card" id="veh86-ultralight"><h3>Ultralight</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>2k</dd><dt>TL</dt><dd>6</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>3</dd><dt>Cruise</dt><dd>25</dd><dt>Max</dt><dd>50</dd><dt>Ceiling</dt><dd>2km</dd><dt>DT</dt><dd>D</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>mono</dd><dt>Cargo</dt><dd>40</dd><dt>Passengers</dt><dd>0</dd></dl></section><section class="ev-card" id="veh86-monoplane"><h3>Monoplane</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>10k</dd><dt>TL</dt><dd>4</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>400</dd><dt>Max</dt><dd>700</dd><dt>Ceiling</dt><dd>7.5km</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>mono</dd><dt>Cargo</dt><dd>2500</dd><dt>Passengers</dt><dd>5</dd></dl></section><section class="ev-card" id="veh86-executive-jet"><h3>Executive Jet</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>100k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>-3</dd><dt>Cruise</dt><dd>900</dd><dt>Max</dt><dd>1150</dd><dt>Ceiling</dt><dd>11km</dd><dt>DT</dt><dd>5</dd><dt>Size</dt><dd>+1</dd><dt>Type</dt><dd>mono</dd><dt>Cargo</dt><dd>5000</dd><dt>Passengers</dt><dd>10</dd></dl></section><section class="ev-card" id="veh86-passenger-jet"><h3>Passenger Jet</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>25M</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>-2</dd><dt>Redline</dt><dd>-3</dd><dt>Cruise</dt><dd>850</dd><dt>Max</dt><dd>1000</dd><dt>Ceiling</dt><dd>12km</dd><dt>DT</dt><dd>6</dd><dt>Size</dt><dd>+3</dd><dt>Type</dt><dd>mono</dd><dt>Cargo</dt><dd>40000</dd><dt>Passengers</dt><dd>200</dd></dl></section><section class="ev-card" id="veh86-air-car"><h3>Air Car</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>25k*</dd><dt>TL</dt><dd>8</dd><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>+2</dd><dt>Redline</dt><dd>-3</dd><dt>Cruise</dt><dd>700</dd><dt>Max</dt><dd>950</dd><dt>Ceiling</dt><dd>6km</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>VTOL</dd><dt>Cargo</dt><dd>200</dd><dt>Passengers</dt><dd>4</dd></dl></section><section class="ev-card" id="veh86-helicopter"><h3>Helicopter</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>80k*</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>+3</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>100</dd><dt>Max</dt><dd>220</dd><dt>Ceiling</dt><dd>8.5km</dd><dt>DT</dt><dd>2</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>VTOL</dd><dt>Cargo</dt><dd>500</dd><dt>Passengers</dt><dd>4</dd></dl></section><section class="ev-card" id="veh86-helijet"><h3>Helijet</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>120k*</dd><dt>TL</dt><dd>7</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>+3</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>400</dd><dt>Max</dt><dd>600</dd><dt>Ceiling</dt><dd>10km</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>VTOL</dd><dt>Cargo</dt><dd>4000</dd><dt>Passengers</dt><dd>2</dd></dl></section><section class="ev-card" id="veh86-jumpjet"><h3>Jumpjet</h3><dl class="ev-fields"><dt>Class</dt><dd>Air</dd><dt>Cost</dt><dd>10M*</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>+2</dd><dt>Redline</dt><dd>-2</dd><dt>Cruise</dt><dd>900</dd><dt>Max</dt><dd>1150</dd><dt>Ceiling</dt><dd>11km</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>STOL</dd><dt>Cargo</dt><dd>2000</dd><dt>Passengers</dt><dd>1</dd></dl></section><section class="ev-card" id="veh86-jet-pack"><h3>Jet Pack</h3><dl class="ev-fields"><dt>Class</dt><dd>Personal Flyer</dd><dt>Cost</dt><dd>20k</dd><dt>TL</dt><dd>6</dd><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>+4</dd><dt>Redline</dt><dd>2</dd><dt>Cruise</dt><dd>50</dd><dt>Max</dt><dd>80</dd><dt>Ceiling</dt><dd>4km</dd><dt>DT</dt><dd>D</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>VTOL</dd><dt>Cargo</dt><dd>20</dd><dt>Passengers</dt><dd>0</dd></dl></section><section class="ev-card" id="veh86-fast-pack"><h3>Fast Pack</h3><dl class="ev-fields"><dt>Class</dt><dd>Personal Flyer</dd><dt>Cost</dt><dd>15k</dd><dt>TL</dt><dd>7</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>+5</dd><dt>Redline</dt><dd>1</dd><dt>Cruise</dt><dd>100</dd><dt>Max</dt><dd>180</dd><dt>Ceiling</dt><dd>8km</dd><dt>DT</dt><dd>E</dd><dt>Size</dt><dd>-1</dd><dt>Type</dt><dd>VTOL</dd><dt>Cargo</dt><dd>40</dd><dt>Passengers</dt><dd>0</dd></dl></section><section class="ev-card" id="veh86-super-pack"><h3>Super Pack</h3><dl class="ev-fields"><dt>Class</dt><dd>Personal Flyer</dd><dt>Cost</dt><dd>8k</dd><dt>TL</dt><dd>8</dd><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>+5</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>120</dd><dt>Max</dt><dd>200</dd><dt>Ceiling</dt><dd>10km</dd><dt>DT</dt><dd>1</dd><dt>Size</dt><dd>-1</dd><dt>Type</dt><dd>VTOL</dd><dt>Cargo</dt><dd>100</dd><dt>Passengers</dt><dd>0</dd></dl></section><section class="ev-card" id="veh86-sailing-boat"><h3>Sailing Boat</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>3c</dd><dt>TL</dt><dd>2</dd><dt>Pursuit</dt><dd>-3</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>10</dd><dt>Max</dt><dd>40</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>+1</dd><dt>Type</dt><dd>boat</dd><dt>Cargo</dt><dd>100</dd><dt>Passengers</dt><dd>2</dd></dl></section><section class="ev-card" id="veh86-sailing-ship"><h3>Sailing Ship</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>80k</dd><dt>TL</dt><dd>3</dd><dt>Pursuit</dt><dd>-3</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>15</dd><dt>Max</dt><dd>40</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>5</dd><dt>Size</dt><dd>+2</dd><dt>Type</dt><dd>ship</dd><dt>Cargo</dt><dd>1000</dd><dt>Passengers</dt><dd>18</dd></dl></section><section class="ev-card" id="veh86-galley"><h3>Galley</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>100k</dd><dt>TL</dt><dd>2</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>10</dd><dt>Max</dt><dd>50</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>5</dd><dt>Size</dt><dd>+2</dd><dt>Type</dt><dd>ship</dd><dt>Cargo</dt><dd>1000</dd><dt>Passengers</dt><dd>40</dd></dl></section><section class="ev-card" id="veh86-minisub-tl4-5"><h3>Minisub (TL4.5)</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>100k</dd><dt>TL</dt><dd>4.5</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>25</dd><dt>Max</dt><dd>35</dd><dt>Ceiling</dt><dd>-100m</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>-1</dd><dt>Type</dt><dd>sub</dd><dt>Cargo</dt><dd>100</dd><dt>Passengers</dt><dd>3</dd></dl></section><section class="ev-card" id="veh86-minisub-tl7"><h3>Minisub (TL7)</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>100k</dd><dt>TL</dt><dd>7</dd><dt>Pursuit</dt><dd>+1</dd><dt>Maneuver</dt><dd>+2</dd><dt>Redline</dt><dd>-2</dd><dt>Cruise</dt><dd>60</dd><dt>Max</dt><dd>100</dd><dt>Ceiling</dt><dd>-8km</dd><dt>DT</dt><dd>6</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>sub</dd><dt>Cargo</dt><dd>4000</dd><dt>Passengers</dt><dd>6</dd></dl></section><section class="ev-card" id="veh86-motorboat"><h3>Motorboat</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>8k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>0</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>-2</dd><dt>Cruise</dt><dd>70</dd><dt>Max</dt><dd>100</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>3</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>boat</dd><dt>Cargo</dt><dd>400</dd><dt>Passengers</dt><dd>4</dd></dl></section><section class="ev-card" id="veh86-motor-scooter"><h3>Motor-scooter</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>1k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>15</dd><dt>Max</dt><dd>25</dd><dt>Ceiling</dt><dd>-50m</dd><dt>DT</dt><dd>2</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>sub</dd><dt>Cargo</dt><dd>20</dd><dt>Passengers</dt><dd>0</dd></dl></section><section class="ev-card" id="veh86-amphibious-atv"><h3>Amphibious ATV</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>6k / 100k*</dd><dt>TL</dt><dd>6</dd><dt>Pursuit</dt><dd>-1</dd><dt>Maneuver</dt><dd>0</dd><dt>Redline</dt><dd>-1</dd><dt>Cruise</dt><dd>50</dd><dt>Max</dt><dd>80</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>4</dd><dt>Size</dt><dd>0</dd><dt>Type</dt><dd>6WD</dd><dt>Cargo</dt><dd>300</dd><dt>Passengers</dt><dd>3</dd></dl><p class="ev-body">Boat mode: Pur −2, Cruise 25, Max 40. Sub mode: Pur −2, Cruise 15, Max 25, Ceiling −75m, Size −1.</p></section><section class="ev-card" id="veh86-freighter"><h3>Freighter</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>200k</dd><dt>TL</dt><dd>5</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>-1</dd><dt>Redline</dt><dd>0</dd><dt>Cruise</dt><dd>35</dd><dt>Max</dt><dd>50</dd><dt>Ceiling</dt><dd>na</dd><dt>DT</dt><dd>25</dd><dt>Size</dt><dd>+2</dd><dt>Type</dt><dd>ship</dd><dt>Cargo</dt><dd>500t</dd><dt>Passengers</dt><dd>30</dd></dl></section><section class="ev-card" id="veh86-human-swimming"><h3>Human (swimming)</h3><dl class="ev-fields"><dt>Class</dt><dd>Water</dd><dt>Cost</dt><dd>—</dd><dt>TL</dt><dd>—</dd><dt>Pursuit</dt><dd>-2</dd><dt>Maneuver</dt><dd>+1</dd><dt>Redline</dt><dd>1</dd><dt>Cruise</dt><dd>See rules</dd><dt>Max</dt><dd>See rules</dd><dt>Ceiling</dt><dd>-10m</dd><dt>DT</dt><dd>1</dd><dt>Size</dt><dd>-1</dd><dt>Type</dt><dd>biped</dd><dt>Cargo</dt><dd>varies</dd><dt>Passengers</dt><dd>0</dd></dl></section></div></div></foresight-table>
+</div>
+<!-- /entity-view -->
+
+#### Terrain Value Chart
+
+*Terrain Contour × Terrain Feature → the terrain value; a vehicle's Cruise/Max is divided by (Modified Terrain Value)/2 (or 1 if that's lower), and its Pur/Man are reduced by it. Higher = harder going. **Suburban / Urban** extend the features: Suburban [SU] 0 / with cover [SF] 1; Urban [UR] 0 / built-up [SB] 2.*
+
+<!-- matrix: 1986-terrain -->
+<div class="matrix"><style>
+.mx-table{border-collapse:collapse;margin:0 0 1em;font-size:.9em}
+.mx-table th,.mx-table td{border:1px solid rgba(128,128,128,.35);padding:.32em .6em;text-align:center;vertical-align:middle}
+.mx-corner{border:0;background:transparent}
+/* Header cells live in <thead>, which the doc-system theme paints
+   background:var(--brand-color) + color:var(--brand-text-color). Overriding only
+   the background there left brand-white text on light grey — so these keep the
+   theme's own background/text PAIR and just restyle the type. (color:inherit
+   doesn't help: it inherits that same brand text colour from <thead>.) */
+.mx-colaxis,.mx-colhead{background:var(--brand-color,transparent);color:var(--brand-text-color,inherit)}
+.mx-colaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.mx-colhead{font-weight:600;font-size:.85em}
+/* Row headers are in <tbody> — no brand paint there, so a subtle tint + the body
+   text colour is correct and readable in light and dark themes. */
+.mx-rowaxis{font-size:.72em;text-transform:uppercase;letter-spacing:.08em;font-weight:600;background:rgba(128,128,128,.14);color:var(--tosi-text,inherit);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap;width:1.7em}
+.mx-rowhead{font-weight:600;background:rgba(128,128,128,.06);font-size:.85em;color:var(--tosi-text,inherit)}
+.mx-blocked{opacity:.45;font-style:italic}
+</style><table class="mx-table"><thead><tr><td class="mx-corner" colspan="2" rowspan="2"></td><th class="mx-colaxis" colspan="6">Terrain Feature →</th></tr><tr><th class="mx-colhead">Barren [BN]</th><th class="mx-colhead">Lt.Veg [LV]</th><th class="mx-colhead">Md.Veg [MV]</th><th class="mx-colhead">Hv.Veg [HV]</th><th class="mx-colhead">Marsh [MA]</th><th class="mx-colhead">Ice [IC]</th></tr></thead><tbody><tr><th class="mx-rowaxis" rowspan="3">Contour ↓</th><th class="mx-rowhead">Broken [BR]</th><td>3</td><td>4</td><td>5</td><td>8</td><td class="mx-blocked">—</td><td>5</td></tr><tr><th class="mx-rowhead">Uneven [UN]</th><td>1</td><td>2</td><td>3</td><td>6</td><td>3</td><td>3</td></tr><tr><th class="mx-rowhead">Flat [FL]</th><td>1</td><td>1</td><td>2</td><td>4</td><td>2</td><td>2</td></tr></tbody></table></div>
+<!-- /matrix -->
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=59">ForeSight 1986 · p.59 ↗</a></div>
+
+**[5.0] Travel**
+
+**Designer's Notes:** travel in FS is important, and to this end there are a fair quantity of rules and guidelines relating to this topic presented. Most travel will be in vehicles and so forth, and to this end I begin the Travel section with a look at vehicles.
+
+**[5.1] Vehicles**
+
+**Definitions:** vehicles in ForeSight are evaluated in terms of the following variables:
+
+**Type:** vehicles can be broadly categorised, and this in turn affects what they are designed to do, and rather than evaluate every vehicle's capacities individually, I categorise them by type, and then attribute each type of vehicle some capacity to perform in given terrain types. Eg. a vehicle may be wheeled, four-wheel drive, hydrofoil, or short take off and landing.
+
+**TL:** the technological level required to produce a given vehicle is fairly important.
+
+**Pur:** vehicles can not only be used to travel, but also to pursue/flee other vehicles. Pur is a performance modifier (PM) used for situations requiring acceleration of a vehicle.
+
+**Man:** sometimes a vehicle's ability to maneuver sharply, safely, and/or accurately is important, and this modifier reflects a vehicle's ability to do these things.
+
+**Designer's Note:** Movement may be in one of three categories: ground, air, and water; the statistics in ForeSight apply only to those categories of movement in which a given vehicles type in FS can attempt, ie. a car's Pur modifier is not comparable to that of a monoplane, but only to those of other ground vehicles.
+
+**Red:** the vehicle's speed redline reflects the point beyond which it is unsafe to push a vehicle's performance; in some sense the vehicle's top speed. The lower this number is, the better.
+
+**Cruise:** the vehicle's cruising speed (in kilometres per hour) determines how far the vehicle will transport its occupant in normal circumstances.
+
+**Max:** the vehicle's maximum speed in kilometres per hour.
+
+**Clg:** the maximum altitude the vehicle can attain in Earth-like conditions (thicker atmospheres and lower gravities increase this, while the reverse holds for thinner atmospheres and higher gravities). For submersibles this represents the depth (of water) the vehicle can safely withstand at Earth gravity (this varies inversely with gravity).
+
+**DT:** the damage track the vehicle uses to convert wound level into damage status.
+
+**Siz:** the relative size of the vehicle, given as a modifier to hit it with other vehicle mounted weaponry (the lower this is, the smaller, and harder to hit, the vehicle).
+
+**Cgo:** the cargo the vehicle is capable of carrying expressed in kilograms.
+
+**Pass:** the number of passengers, ie. other than the driver, the vehicle is designed to carry.
+
+The parenthesised value after name is the vehicle's price (in SVU). An * indicates that the vehicle may be purchased at a TL 0.5 higher for 75% of the stated price, and at a TL one higher for 50% of the stated price.
+
+**Terrain Effects** Each vehicle type has a varying ability to cope with different terrain types. This is covered by two charts: the Terrain Value Chart (see Tables) gives relative values for the difficulty of traversing various sorts of terrain, and the Vehicle Type Characteristic Chart tabulates the varying abilities of vehicles to cope with terrain, or, in the case of aircraft, land on them.
+
+**Note:** [SF] stands for Surface, and [SB] stands for submerged.
+
+**Vehicle Type Characteristic Chart**
+
+| Type | Land | Marsh | Water | Ice | Limit |
+|---|---|---|---|---|---|
+| Wheel(ed) | +1 | — | — | +1 | 3 |
+| 4WD | 0 | +3 | — | 0 | 3 |
+| 6WD | -1 | +2 | — | 0 | 3 |
+| 2-wheel(ed) | 0 | — | — | +3 | 5 |
+| Tracked | -1 | +2 | (+3) | 0 | 5 |
+| Biped | 0 | +2 | 0 | 0 | 8 |
+| Quadruped | 0 | +4 | (+4) | 0 | 6 |
+| Crawler | -2 | +3 | (+3) | 0 | 5 |
+| Hovercraft | 0 | -1 | (0) | 0 | 2 |
+| Boat | — | 0 | (0) | — | 2 |
+| Ship | — | — | (0) | — | 1 |
+| Submarine | — | — | -1 | — | 1 |
+| Airboat | — | -1 | (0) | — | 2 |
+| Hydrofoil | — | — | (0) | — | 1 |
+| Monoplane* | 0 | — | (+1) | 0 | 2 |
+| STOL* | -1 | +1 | (-1) | -1 | 3 |
+| VTOL* | -2 | 0 | (-1) | -2 | 4 |
+
+Each vehicle type is thus given a rating for a given sort
+of terrain (land includes all non marsh, surface,
+submerged, or ice environments; the other categories
+are obvious), either '-' or a number.
+
+A '-' indicates vehicles of this type may not be used in
+this sort of terrain.
+
+**Limit:** this is the highest (unadjusted) terrain value in
+which such a vehicle can operate.
+
+A plus or minus sign followed by a number is the
+adjustment that vehicle makes to the terrain
+values in that category before using them. (Negative
+values are good.)
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=60">ForeSight 1986 · p.60 ↗</a></div>
+
+**Note:** aircraft use the net terrain value as a negative modifier to any Aircraft roll to land the aircraft in that sort of terrain. Aircraft always use their normal speeds for travel (although these may be altered by the atmosphere and gravity of the planet on which they are being operated).
+
+The Cruise Speed of a vehicle in a given (permitted) terrain type is its normal Cruise rating divided by (Modified Terrain Value)/2 (or 1 if that is lower). The Maximum Speed of a vehicle in a given (permitted) terrain type is its normal Max rating divided by (Modified Terrain Value)/2 (or 1 if that is lower). The net Pur(suit) Modifier of a vehicle in a given (permitted) terrain type is its normal Pur modifier minus the Modified Terrain Value.
+
+**Designer's Note:** this can, and is intended to, nearly cripple some vehicles (pursuit-wise) in adverse terrains.
+
+The net Man(euver) Modifier of a vehicle in a given (permitted) terrain type is its normal Man modifier minus the Modified Terrain Value.
+
+**Designer's Note:** this can, and is intended to, nearly cripple some vehicles (pursuit-wise) in adverse terrains.
+
+The net Red(line) rating of a vehicle in a given permitted terrain type is equal to its normal Red rating minus
+
+> **⟶ ERRATA (Oct 1987):** This printing prints the net Red(line) rating as *minus* (Modified Terrain Value)/2 — a **downright error**. It should be **plus (Modified Terrain Value)/2**. (Page 502L.)
+
+(Modified Terrain Value)/2.
+
+**[5.2] Long Distance Travel**
+
+When travelling some considerable distance in FS the important things to know are the Time the trip required, whether any Accidents took place en route, and whether the traveller(s) reached his/her/their destination. Note that speeds for a person on foot are given under the rules for Fatigue [2.6]; they choose a rate of exercise which yields a speed for overland movement (Running is the appropriate skill) which is treated as Cruise, while the next speed up (if any) is treated as Max. If long distance swimming is attempted, divide the speeds by five. The maximum time a character may travel on foot depends on how long his/her fatigue holds out. Also note that a driver should have to stop for rest breaks every WP hours, and thus this is the greatest period any one Driving (or Navigation) roll can apply to.
+
+**Navigation:** in unfamiliar terrain one of the characters must navigate (ie. make a Navigation roll), and the worse of this and any Driving roll is used to determine the duration of any journey, with the exception that a QR 10 result for navigation indicates that the characters are lost, and at best are considerably off course.
+
+**Normal Travel:** if characters are not in a hurry, then they choose a driver (if applicable) and he/she makes a normal driving roll, the result of which yields a mean speed for that leg (see below). If this speed is insufficient to finish the journey in the driver's WP hours, then simply this speed multiplied by the driver's WP km are covered in that time (the characters may then rest, or select a relief driver), otherwise the journey is completed in the distance, of the journey (in km), divided by the mean speed hours.
+
+**QR 1, 2:** Mean Speed is average of Cruise and Max speeds of vehicle (adjusted for terrain).
+
+**QR 3, 4:** Mean speed is Cruise speed of vehicle (adjusted for terrain).
+
+**QR 7:** Mean speed is half the Cruise speed of vehicle (adjusted for terrain).
+
+**QR 10:** the vehicle has suffered some sort of mishap (probably non-serious in nature), eg. a flat tyre, ruptured fuel line, or faulty tape deck. This simply means that a few hours have been wasted without making progress (alternatively the GM may spice up the situation by forcing the characters to tramp off for spare parts, or whatever). A person on foot may have injured him/her self, eg. sprained an ankle.
+
+**Hasty Travel** is handled a little differently: it is assumed the characters are in a hurry to get somewhere, and want to minimise the time taken. Hasty travel may not be attempted by people on foot (they use normal travel, above, and increase their rate of exercise). The procedure is otherwise as for normal (unhurried) travel, with the following changes:
+
+**QR 1:** the Mean speed is the Max speed of the vehicle adjusted for terrain.
+
+**QR 2:** the Mean speed is 90% Max speed of the vehicle adjusted for terrain, or the speed for QR 3 if that is higher.
+
+**QR 3:** the Mean speed is the mean of the Max and Cruise speeds of the vehicle adjusted for terrain.
+
+**QR 4:** the Mean speed is the Cruise speed of the vehicle adjusted for terrain.
+
+**QR 7:** the vehicle has suffered an accident of a minor sort, and is delayed for a few hours, but otherwise has a Mean speed as under QR 4.
+
+**QR 10:** some time into the leg a serious mishap occurs, damaging the vehicle, and perhaps the characters. The driver should make another driving roll at Man rating of vehicle − 3:
+
+- **QR 1** — the accident is easily avoided; treat as QR 4 above.
+- **QR 2** — the accident causes the vehicle light damage; treat as QR 7 above, with a delay of one hour.
+- **QR 3** — the vehicle suffers medium damage, and must be repaired before the journey can continue (at least in it).
+- **QR 4** — the vehicle suffers heavy damage, and everyone inside suffers damage indicated by indexing a random QR with DC 4.
+- **QR 7** — the vehicle suffers incapacitation (4); the passengers suffer DC 8 (random QR).
+- **QR 10** — the vehicle suffers incapacitation (5) and the passengers DC 10 (random QR).
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=61">ForeSight 1986 · p.61 ↗</a></div>
+
+**Designer's Note:** there is deliberately almost no chance of killing a healthy character using this system; that's the idea. It's pretty frustrating for players to lose characters in the comparatively mundane area of travel.
+
+**[5.3] Pursuit**
+
+Sometimes characters will either desire to catch up to, overtake, or escape from, someone in a vehicle; in such a case, Pursuit occurs. Long distance pursuit can be handled in an obvious way by the longdistance travel system above, detailed pursuits are a different matter. Detailed pursuits are really only of interest when comparable vehicles are involved: obviously a jethelicopter will rapidly outrun or overtake an automobile, while a submarine would probably escape an SR-71 (high speed reconnaissance plane). Furthermore the ratings given for various vehicles are only designed for comparison within a certain range: land, water, or air. In some cases comparisons may be required: for ground vehicles chasing water vehicles, or vice-versa, subtract one from the water vehicles' Pur, Man, and add one to Red (water vehicles are slower and less maneuverable than ground vehicles). Aircraft chasing ground vehicles (and not vice-versa) have their Red and Man ratings reduced by three, and their Pur ratings increased by three. Comparison between water and air craft follows from this.
+
+**Note:** Pur, Man, and Red ratings of air and water craft are altered by terrain values. A Detailed Pursuit begins when a situation warrants it, and the GM has decided [a] who is in front, and who is behind, [b] what range the pursuit begins at (5, within sight, to 0, tailgating). Detailed Pursuits are conducted in turns, each (very approximately) representing fifteen seconds (for ground, or mixed pursuits), one minute (for water), or three seconds (for aerial) in the Game-World, and each is divided into segments.
+
+**Designer's Note:** Taking these estimates as even vaguely accurate can lead to strange conclusions. Pursuits should be thought of as being dramatic rather than accurate.
+
+**[i]** Each side, beginning with the fleeing party, bids an EF, at most 2, and decreasing with each bid (to a negative number, if desired). The last side to bid is said to have the initiative.
+
+**[ii]** The side with the initiative decides whether it or the others will move first.
+
+**[iii]** Each side, in the order determined by the side with initiative, chooses a maneuver, and makes a driving roll using the modifiers stipulated in the maneuver description. The QR yields a result indicated in the maneuver description.
+
+**[iv]** Both sides may fire any weapons if within range: pursuers fire before their quarries.
+
+**[v]** Unless the pursuers wish to cease their pursuit, or their quarry has escaped (ie. is at range 7), start a new turn. Characters who are running, swimming, or otherwise using muscle power, lose one point of fatigue (two if laden, four if burdened) at the end of each turn.
+
+**Physical Ranges Represented By Pursuit Ranges**
+
+| Range Number | Ground | Water | Air |
+|---|---|---|---|
+| 0 | 5m | 10m | 250m |
+| 1 | 20m | 40m | 1000m |
+| 2 | 50m | 100m | 2500m |
+| 3 | 100m | 200m | 5000m |
+| 4 | 500m | 1000m | 10km |
+| 5 | 1km | 2km | 20km |
+| 6 | 2km | 4km | 40km |
+| 7 | The pursuers have completely lost contact. | | |
+
+The ranges indicated above are used for determining the range for purposes of any weapons fire. Note that while turns can be (much) longer than the normal Combat [4.0] turns, and somewhat (very) approximate in length, the rates of fire given for combat still apply (since fire is being performed whenever the opportunity presents itself, rather than continuously).
+
+**Manoeuvers**
+
+**Note:** Driving rolls are assumed to be made using the appropriate vehicle skills.
+
+**Pursue/Flee:** the Driving roll is modified by sum of the final bid, and the vehicle's Pur modifier. A pursuing vehicle subtracts 5−QR from the range, while a fleeing vehicle adds this much; range may not be modified to below zero. If unsuccessful, a safety roll must also be made.
+
+**Force:** the target of a force maneuver must be at range 0 from the vehicle performing the maneuver. The driving roll is modified by the sum of the final bid, and the vehicle's Siz, DT/2, and Pur, minus the sum of the target vehicle's Siz, DT/2, and Pur. If successful, the target vehicle's driver must make a safety roll; otherwise the forcing vehicle's driver must make a safety roll.
+
+**Quick Turn:** this may only be performed by the fleeing party (and only if the situation is deemed appropriate by the GM, ie. there is somewhere to turn), and the Driving roll is modified by the vehicle's Man rating; if performed at range ≤2 it counts as a flee maneuver; at range 3 or 4 if performed successfully, the vehicle is assumed to escape, unless the pursuers successfully perform a Search roll at EF - QR (of Quick Turn), in which case the range drops to 1 or 2 (respectively); at range 5 or 6 if performed success-
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=62">ForeSight 1986 · p.62 ↗</a></div>
+
+fully the vehicle is assumed to escape unless the pursuers successfully perform an EF - QR (of Quick Turn) Scan roll, in which case the range drops to 3 or 4, respectively.
+
+**Reverse:** may only be initially performed by fleeing party, and the Driving roll is modified by the sum of the vehicle's Pur, and Man, and the final bid. If unsuccessful then Range is reduced to 1, unless it was already ≤1, in which case it is reduced to 0. If successful, range will go to 0, 6 and then 7, on the subsequent three turns, unless the pursuer is able to successfully double back during one of them, in which case normal pursuit is resumed.
+
+**Trick:** one or another party is attempting to perform an unforseeable maneuver, and the GM must decide what modifiers apply (the final bid should always apply, however) and what the effects of success and failure are.
+
+**Climb:** (or Dive), may only be performed by a vehicle with a Clg rating. Modifier is the sum of the vehicle's Pur and Man, and the final bid, otherwise treat as Pursue/Flee, with following exceptions. During any turn in which the quarry Climbs, the pursuer may only close the range by climbing also. If fleeing party has larger (ie. greater and positive, or smaller and negative) ceiling then treat range 6 as range 7 (treat range 5 as range 7 also, if the fleeing party's ceiling is double that of the pursuer's).
+
+A Safety Roll must be made by the driver of any vehicle which failed to perform a maneuver, and/or whose vehicle's Red rating exceeded the final bid for the turn. A Safety Roll is modified by +(the final bid − the vehicle's Red), and is performed using the appropriate driving skill (of the character steering the vehicle).
+
+**QR 4:** the vehicle increases its Damage Status by one (eg. light damage becomes medium) - note the effect on performance this has.
+
+**QR 7:** the vehicle is out of action, and the passengers suffer damage equal to that indicated by a random QR against DC (8 - Vehicle's DT), while the vehicle is considered to be damaged to some degree (GM's discretion, varying upon circumstances).
+
+**QR 10:** the vehicle is totalled, and the passengers suffer DC (12 - Vehicle's DT), or worse (if they're in a plane, or submarine, for example).
+
+Optionally subtract (the final bid + 2) to the DCs listed for accidents (resulting in a net increase for high-speed accidents).
+
+**Damage to Vehicles from weapon fire** (or whatever) has its DC reduced (by the vehicle's DT, if a melee attack, or the result of an accident or collision; DT/2, if an impact attack; or DT/4, if a beam attack; as well as by any additional armour) and then is assessed as follows: roll D10 and consult the table below for damage inflicted on a vehicle:
+
+| Roll | Result |
+|---|---|
+| 1–4 | The damage has affected the vehicle's motive systems, and aggregates normally. |
+| 5–7 | The damage has affected the vehicle's accessories (eg. weapons, radar, air-conditioning, tapedeck), and has no effect on its damage level unless it is an aircraft* or submarine, in which case it aggregates normally. |
+| 8–10 | Compartment hit: divide the vehicle's cargo into 100kg lots, and give each passenger and each 100kg of cargo an equal likelihood of receiving the damage, which has no effect on the vehicle unless it is an aircraft* or submarine, in which case it aggregates normally. |
+
+**Note:** * an aircraft other than a helijet, helicopter, or aircar.
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=63">ForeSight 1986 · p.63 ↗</a></div>
+
+Soft TL7
+Stun Rifle                        SL Pistol I                     Actually, weapon & armour costs are g PUR
++11Ilm"R                 r:ztr:ztI'7l.I'7I.l'7lr..c.lr:ztr:zt
+"+21.tIRED -3 DT 4 l!!Il!tj                    l!!:Il!!I             I
+c. 7001"'                  950 SZ 0        . :
+
+Aircar
+SuperHacker Intemgent
+Terminal
+Likewise, you'll find vehicles in [5.
+I Planetary I                              I
+.<. ....::::::
+... ~...
+
+Observation Drone                              Headset Radio
+
+These, a nd other pop ular items, are ava itab
+Suitcase
+
+rr·····················I
+Parabolic                                . .......................:.::....
+:: :
+
+Microphone
+
+[6.0] GEnERAL
+
+PROT. EVA SL     ~                                        10 m3AA min 6 ~"'.H
+
+illi
+13AA Mv x2 ITl.~~ 8 4A DC +2 !WI      WI! SPD -3 ST +4 I<:L.B..D mlls \,. Vis -1 Crr..D Augmented        ~~~~                            ~, 1 Exo-                               ..·-..n"'" Skeleton         ~~           10kg Sattery given in [4.0], but batteries are here ... IUnaimed Shots         +11. Move Actions x4                                      DT
+c.      "n.
+1201'"                          200
+
+r;;l,                       ~ (1
+r·                                   ~
+Sighting Headset                      Personal Flyer .0], but personal fliers are here ... ISearch & Scan          +11
+
+Datastick Camera, Audio Recorder, Flashlight, Thermograph
+llill
+-- -
+Explosives
+250g PlasDex
+
+b Ie at any 5 EI=i R5 5 P I=i CEBUCK reta iter... Attache Case                 I Electronics                                              +1\
+
+.:' --. . . -/ ,. . . . "j
+eo
+1---':
+.",,0 ••••••• u n . . . . . . . . . 0°
+
+HdL'anced Electronics I<it
+
+L EQUIPmEnT
+
+<div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=64">ForeSight 1986 · p.64 ↗</a></div>
+
+The **sighting helmet** comprises an attachment which fits onto the barrel of a weapon, and the headset shown. The attachment points a low-powered ultra-violet laser in the direction the weapon will fire, while the headset projects the weapon's current target onto its wearer's retina.
+
+The **PLASDEX Versacharge** is a simple-to-use, multi-purpose demolition charge, suitable for use unskilled personnel. Each unit contains 250g of PLASDEX (plasticicized DEXAX), and a variety of detonators, controlled by a small microchip. Easy to understand controls allow from 5g to 250g of explosive to be set off either as a shaped or general charge, with either a delay, proximity, coded radio signal, or electrical impulse bringing detonation. (The unused explosive is, of course, lost.). TL8, 750g, 100svu.
+
+The **Personal Flyer**, or Jetpack, represents the culmination of technology perfected in the late 200th Century. A sort of one-person VTOL, earlier versions, comprising a haversack-like unit were found impractical, and the more stable design shown (incorporating stirrups, saddle, and handlebars) slowly gained favour. Faster versions have more bodywork to reduce air-resistance.
+
+The **Datastick** is considered by most people whose professions call for work "in the field" an indispensable aid. A flashlight sized and shaped unit, the datastick performs the functions of video-camera, telescope, microscope, geiger counter, IR and UV scanner, and it can even function as a (visible, IR, or UV) flashlight.
+
+**Remote Probes** are used extensively by spies, police forces, naturalists, and television reporters to look at listen to things from a difficult to reach, or hazardous, vantage point. Most such units, such as that shown, comprise a control box, similar to those used to fly model aircraft but incorporating a video-recorder, and the drone itself, which may be one of a number of types.
+
+You can never have too many **toolkits** ... Toolkits come in a variety of shapes and sizes, and are distinguished by their Tech Level, Purpose, and degree of sophistication/quality. Naturally, sophisticated (high quality), high tech, lightweight toolkits are the most desirable, but also the most expensive and difficult to get. Many ForeSight characters will carry a variety of toolkits.
+
+Almost as vital to the typical adventurer will be a reliable, secure form of communication. **Radio-transceivers** are, barring unusual natural phenomena or deliberate interference, reliable, and generally the simplest option when the population density of visiphone booths starts falling. When sufficiently sophisticated, radio communications can also be secure. Two catch-words here are "screeching" (sending information very fast) and "scrambling" (encrypting the information). Also see the Designer's Commentary for further information ...

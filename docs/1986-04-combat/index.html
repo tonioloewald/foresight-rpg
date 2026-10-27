@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Combat — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 43–56 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-04-combat/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Combat — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Combat — ForeSight RPG" />
@@ -42,18 +29,18 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Combat</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-04-combat.md">
+<h1 id="combat">Combat</h1>
 <!--{ "parent": "foresight-1986", "order": 4 }-->
 
 <p><em>ForeSight (1986), pp. 43–56 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=43">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=43">ForeSight 1986 · p.43 ↗</a></div>
 
-<h4>[4.0] Combat</h4>
+<h4 id="40-combat">[4.0] Combat</h4>
 <p><strong>Designer&#39;s Notes:</strong> the FS combat system is designed, as are many wargames, to use a hex-grid to regulate movement, and determine ranges. Players may use miniatures, counters, dice, or whatever, to indicate their characters&#39; positions and facings on the hex-grid, assuming you use a full-sized hex-grid. The problem of course is that most people aren&#39;t going to bother with the hex-grid, and will resolve combat by having the GM keep a rough record of what is going on, and essentially &quot;wing it&quot;. This is okay, since the hex-grid is provided more as a method of giving a person reading these rules an idea of how the system works, rather than to force users of the system to lay out a hex-grid for every combat.</p>
 <p>There is an intermediate possibility: the GM can record the terrain, and the positions and facings of the combatants on a grid of very small hexes (or squares, if preferred), and alter them as combat proceeds.</p>
-<h4>[4.1] Set-up</h4>
+<h4 id="41-set-up">[4.1] Set-up</h4>
 <p><strong>Procedure:</strong> Combat in ForeSight is generally the result of previous actions which have placed the involved parties in a combat situation. A combat will have some sort of setting: a building, cave complex, forest, or whatever. The GM must decide how this is to be represented on a map which is tiled with hexagons (to regulate movement, and assist range-determination), each representing an area approximately equal to one square metre (ie. they are one metre across). In FS the setting is expressed in terms of blocking, half cover, three quarter cover, and open hexes; if the GM wishes to incorporate elevation and so forth into the system, she/he may do so in the obvious way. A half cover hex has some sort of cover, eg. a bush, cactus plant, or table, in it. A character may enter it normally, and is treated as having half cover when kneeling, or prone in that hex.</p>
 <p>A three-quarter cover hex has some fairly prominent sort of cover, eg. part of a tree, a pillar or doorway, in it. A character must spend an entire move action (see below) to enter such a hex, but is treated as having half cover when standing, and three-quarter cover when kneeling, or prone in that hex. A line of sight may not be traced through such a hex; nor may a prone character in such a hex trace a line of sight out of it. A blocked hex contains some impenetrable obstacle eg. a brick wall, tree trunk, or boulder, and may not be entered, nor may a line of sight pass through it.</p>
 <p>A character has a line of sight from point A to point B if he/she could see point B from point A. Often the presence or lack of a line of sight will be a matter for the GM to decide, so specific rules are not provided (eg. a thick glass wall would form blocking hexes for purposes of movement and missile fire, but not for line of sight (it would stop [most] lasers since the vapourised glass would absorb and refract the beam).</p>
@@ -82,7 +69,7 @@
 <!-- /matrix -->
 
 <p>*A <code>*</code> means the character ends up <strong>adjacent to</strong> (not in) such a hex. <strong>SU</strong>burban and <strong>UR</strong>ban areas sit on a higher row — easy to move through, but full of ready cover (see the Vehicle rules on Terrain values). A character may choose any result under a <strong>higher</strong> (ie. worse) Quality Rating than the one they achieved.</p>
-<h4>[4.2] Combat Resolution</h4>
+<h4 id="42-combat-resolution">[4.2] Combat Resolution</h4>
 <p><strong>Procedure:</strong> Combat in FS is divided into turns, each representing three seconds of time in the GameWorld, and ceases when all sides have agreed to cease hostilities, or only one side remains functional. Each turn is divided as follows into segments, which are resolved in the order described:</p>
 <p><strong>[i] Initiative Determination Segment:</strong> each side determines its initiative. A representative of each side makes an Initiative roll (modified for armour visibility and wound status, etc.). A character with raised hands, or some such impediment, is assumed to automatically have QR 10 initiative.</p>
 <p><strong>[ii] Declaration Segment:</strong> The sides declare the actions of their constituents in order of descending QR of their representatives&#39; initiative rolls (in the case of ties, in the order of ascending Initiative PCS).</p>
@@ -129,7 +116,7 @@
 <p><strong>Rise (Takes 1 Pulse):</strong> the character may rise to kneeling or standing.</p>
 <p><strong>Recover From Stun (Takes 1 Pulse):</strong> a character may be stunned as a result of damage taken, and may only take these actions thereafter, until unstunned. This action allows one attempt to become unstunned. A Pain Resistance roll is made (adjusted for Wound Status) and if QR 4 or better is achieved, the character is unstunned.</p>
 <p>Any Action Point Action may be performed in a pulse, as a (one) pulse action.</p>
-<h4>[4.3] Combat Procedures</h4>
+<h4 id="43-combat-procedures">[4.3] Combat Procedures</h4>
 <p><strong>Fire [Fire Combat] Resolution</strong></p>
 <p>The shaded hexes in the following diagram are legitimate target hexes for the character, provided he/she can see into them. The effect of this is to say that a character cannot shoot backwards (at least with an accuracy) bar in exceptional circumstances (to be determined by the GM).</p>
 <p><em>[Diagram in the original — see the source-PDF page link above. A clearer replacement is planned.]</em></p>
@@ -422,7 +409,7 @@
 </tbody></table>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=49">ForeSight 1986 · p.49 ↗</a></div>
 
-<h4>Damage Table</h4>
+<h4 id="damage-table">Damage Table</h4>
 <p><em>Quality Rating × Damage Class → the Damage Result. <strong>Reconstructed</strong> from the original pixel-art grid (the column-crop scramble it replaced is in git history).</em></p>
 <!-- matrix: 1986-damage-table -->
 <div class="matrix"><style>
@@ -545,7 +532,7 @@
 </tr>
 </tbody></table>
 <p><strong>Optional &quot;Critical&quot; Damage:</strong> hits doing positive damage (ie. ~1) do one point of extra damage on a D10 roll ~ 2.</p>
-<h4>[4.4] Combat Equipment</h4>
+<h4 id="44-combat-equipment">[4.4] Combat Equipment</h4>
 <p><strong>Designer&#39;s Notes:</strong> the ForeSight Master Weapons Chart completely describes each of a number of weapons in terms of the combat system; eg. firearms are also rated as melee weapons (ie. for use as clubs). No detailed descriptions of the weapons are given in ForeSight, but a brief description of nonobvious weapons from the chart is given below:</p>
 <p><strong>SDH Cone Rifle:</strong> the Self-Designating Heavy Cone Rifle fires small rocket propelled grenades at whatever target is designated by its inbuilt laser target designator, and incorporates a telescopic sight.</p>
 <p><strong>Protein Disruptor:</strong> a high powered maser (a sort of pointable microwave oven); this weapon is highly illegal.</p>
@@ -581,7 +568,7 @@
 <p><strong>Cost:</strong> the cost of the weapon in SVU (c: multiply by 100, k: multiply by 1000).</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=51">ForeSight 1986 · p.51 ↗</a></div>
 
-<h4>ForeSight Master Weapon Chart</h4>
+<h4 id="foresight-master-weapon-chart">ForeSight Master Weapon Chart</h4>
 <p><em>Reconstructed from the original pixel-art chart into filterable data + cards (toggle Summary/Cards, filter by text or era). DC = damage class (+letter: <strong>I</strong> impact / <strong>B</strong> beam / <strong>S</strong> stun); ranges in metres or ST-multiples; melee pairs are PM/DC as a club at close/reach/long-reach. <strong>Verify against the original — corrections welcome.</strong></em></p>
 <!-- entity-view: 1986-weapons.json -->
 <div class="entity-view">
@@ -615,7 +602,7 @@
 <p><em>[Sample terrain maps in the original — two hex-grid diagrams (a temperate outdoor scene and a small apartment interior) illustrating blocked / half-cover / three-quarter-cover hexes. See the source-PDF page link above; a clearer replacement is planned.]</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=53">ForeSight 1986 · p.53 ↗</a></div>
 
-<h4>Armour Protection</h4>
+<h4 id="armour-protection">Armour Protection</h4>
 <p>*Armour in ForeSight is constructed for individual locations on a character&#39;s body (costs are in SVU). Protection is by damage type — <strong>M</strong>elee, <strong>I</strong>mpact/stun, <strong>B</strong>eam — where an <code>A</code>/<code>AA</code> suffix is the armour&#39;s absorb rating.*</p>
 <!-- entity-view: 1986-armour.json -->
 <div class="entity-view">
@@ -649,7 +636,7 @@
 <li><strong>Speed</strong> — speed reduction per limb protected. <strong>Con</strong> — concealability (works as for weapons). <strong>Vision</strong> — the Initiative / Search / Scan modifier when a helmet of this armour is worn.</li>
 <li><strong>Mass</strong> — kg to protect one location (double for a leg); total across locations for Mass of Armour. <strong>TL</strong> — tech level to produce it. <strong>Cost</strong> — SVU per location (doubled for a limb or the head).</li>
 </ul>
-<h4>Exoskeletons</h4>
+<h4 id="exoskeletons">Exoskeletons</h4>
 <p><em>Some heavier armour is too heavy to lug around (a full invulnasuit weighs 27 kg) and is best mounted on a powered exoskeleton — which may also be used without armour.</em></p>
 <!-- entity-view: 1986-exoskeletons.json -->
 <div class="entity-view">
@@ -685,7 +672,7 @@
 </ul>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=54">ForeSight 1986 · p.54 ↗</a></div>
 
-<h4>Environment Suits</h4>
+<h4 id="environment-suits">Environment Suits</h4>
 <p><em>Environment suits shelter their wearer partially or entirely from their environment. They can be built into a suit of armour or used independently.</em></p>
 <!-- entity-view: 1986-environment-suits.json -->
 <div class="entity-view">
@@ -718,8 +705,8 @@
 <li><strong>Speed</strong> — add to total Spd for armour. <strong>Vision</strong> — as for armour, cumulative with any such modifier. <strong>Endurance</strong> — how long the suit provides protection (may be increased). <strong>Extension</strong> — the additional mass to extend Endurance by the time given. <strong>Mass</strong> — add to Mass of Armour. <strong>TL</strong> — tech level to construct. <strong>Cost</strong> — SVU.</li>
 <li>A <strong>Breathing Mask</strong> uses bottled air; <strong>NBC</strong> gear uses advanced filters to remove noxious substances; <strong>SCUBA</strong> mass excludes weights (nullified underwater anyway) but includes fins etc.; a <strong>Thermal Suit</strong> lets the wearer shift the outer temperature bracket by one (eg. CD→NL), or two — but two quarters End; a <strong>Vacuum Suit</strong> is self-contained <em>and</em> has a thermal suit&#39;s properties.</li>
 </ul>
-<h4>[4.5] Optional Combat Rules</h4>
-<h5>Grenades</h5>
+<h4 id="45-optional-combat-rules">[4.5] Optional Combat Rules</h4>
+<h5 id="grenades">Grenades</h5>
 <p><em>Grenades are used via two new pulse actions.</em></p>
 <table>
 <thead>
@@ -770,7 +757,7 @@
 <li><strong>QR 7</strong> — it detonates D6+1 hexes away (determine the first hex randomly with a D6, then restrict the remaining scatter to that direction and 60° clockwise of it).</li>
 <li><strong>QR 10</strong> — the thrower has fumbled and discards the grenade (per the discard action — which won&#39;t help much).</li>
 </ul>
-<h5>Results of Grenade Detonation</h5>
+<h5 id="results-of-grenade-detonation">Results of Grenade Detonation</h5>
 <p>Once a grenade detonates in a hex, its results are resolved after characters take any opportunity actions. A character making a scan roll may fall prone at this point, but loses their next pulse. Characters cannot tell what sort of grenade is about to detonate (unless they know by other means).</p>
 <p><strong>HE</strong> (high-explosive concussion): explode, attacking anyone/thing in the detonation hex at some DC (given in the equipment rules) with a random QR; adjacent hexes are attacked at DC−1, two hexes away at DC−2, and so on. In a confined space (eg. a building), increase the grenade&#39;s DC by three. Kneeling characters reduce DC by 1; prone characters by 4.</p>
 <p><strong>Frag</strong> (fragmentation): works exactly as HE, but the DC decreases half as fast (round up).</p>
@@ -937,6 +924,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

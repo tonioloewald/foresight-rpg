@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Characters — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 13–28 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-02-characters/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Characters — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Characters — ForeSight RPG" />
@@ -42,23 +29,23 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Characters</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-02-characters.md">
+<h1 id="characters">Characters</h1>
 <!--{ "parent": "foresight-1986", "order": 2 }-->
 
 <p><em>ForeSight (1986), pp. 13–28 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=13">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=13">ForeSight 1986 · p.13 ↗</a></div>
 
-<h4>[2.0] CHARACTERS</h4>
+<h4 id="20-characters">[2.0] CHARACTERS</h4>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=14">ForeSight 1986 · p.14 ↗</a></div>
 
 <p><em>[Illustration in the original (the character sheet / a figure) — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=15">ForeSight 1986 · p.15 ↗</a></div>
 
-<h4>[2.0] Characters</h4>
+<h4 id="20-characters-1">[2.0] Characters</h4>
 <p><strong>Designer&#39;s Notes:</strong> the character is the most important object in a role-playing setting; like a television program or a motion picture, a role-playing adventure generally deals with the interactions of central characters (the protagonists - in this case the player characters) and their environment, including not only natural hazards and dire beasts, but other (perhaps non-human) characters (the supporting caste of allies, antagonists, and bystanders - the non-player characters). The rules in this section deal with the creation of both player and non-player characters.</p>
-<h4>[2.1] Character Generation</h4>
+<h4 id="21-character-generation">[2.1] Character Generation</h4>
 <p><strong>Designer&#39;s Notes:</strong> The Player Character (or PC) is the most important product of a role-playing system. The following rules enable you to generate a (human) character for the FS system cold, ie. without any knowledge of the other rules. Of course knowledge of the other rules helps.</p>
 <p><strong>Procedure:</strong> A PC in FS is generated using the following procedure. A copy of the FS character sheet is necessary.
 <em>[Illustration in the original (the character sheet / a figure) — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
@@ -888,7 +875,7 @@ D100. If the result is less than or equal to the character&#39;s IN x the field&
 <p>Note: * Laden is not on the character sheet; ** Adjustment owing to encumbrance.</p>
 <p><strong>Step 10:</strong> The character&#39;s initial wealth should be calculated (one method of doing this is provided on the Social Background table.</p>
 <p>His/her skill PCSs should be calculated; the PCS possessed by a character in a skill she/he possesses at level one or more is equal to its formula (with the values of the character&#39;s trained attributes substituted into it) plus the level the character possesses it (the skill) at, rounding fractions off. Incidentally, all of these things should be recorded in the obvious places on the character sheet I told you to have, as playing from memory is more difficult.</p>
-<h4>[2.2] Skills</h4>
+<h4 id="22-skills">[2.2] Skills</h4>
 <p>The following skills are available in ForeSight. Where their applications are not obvious, I include a brief explanatory note. Also see [3.0] Resolution.</p>
 <table>
 <thead>
@@ -1282,7 +1269,7 @@ D100. If the result is less than or equal to the character&#39;s IN x the field&
 <p>t Cha (in a formula) denotes the character&#39;s Charisma skill level (0 if Charisma not possessed by the character); this skill level is treated as an attribute for purposes of level limits.</p>
 <p><strong>PCS:</strong> a character&#39;s primary chance of success in a skill represents his/her competence in that skill. It is equal to the sum of the skill&#39;s formula (as a function of the character&#39;s attributes) and the level the character possesses in it. A character who does not possess a skill calculates his/her PCS as though his/her level in the skill is zero.</p>
 <p>(Optional) Tasks involving A G (Agility), eg. those requiring the use of a skill with AG in its formula, incur the same modifiers (to their ease factors) as does the performing character&#39;s speed (ie. the Encumbrance and Armour related speed penalties). Eg. a character whose speed was reduced by two for being laden, and wearing kevlar on all limbs (while not having any EVA skill), would incur a -2 modifier to Running, Jumping, Acrobatics, Dancing, Unarmed Combat, and so forth, as well as to his/her speed.</p>
-<h4>[2.3] Fields of Knowledge</h4>
+<h4 id="23-fields-of-knowledge">[2.3] Fields of Knowledge</h4>
 <p><strong>Designer&#39;s Notes:</strong> A field of knowledge represents a thorough grounding in the practical and theoretical principles of a subject, including sufficient knowledge to determine the need for, and make use of, specific higher order information in that field. Eg. a character with biology will not know the characteristics of every animal he/she encounters, but will know how to classify one he/she has seen, look it up, and understand and utilize the information retrieved.</p>
 <p>The following fields of knowledge are available in FS, and are listed below with relevant game information. Time is the time normal time required (in years) to study and have a chance to acquire a field of knowledge. A character is said to have a number of years of education equal to the sum of the time values associated with the fields he/she possesses, no matter how long it actually took him/her to acquire</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=22">ForeSight 1986 · p.22 ↗</a></div>
@@ -1880,13 +1867,13 @@ D100. If the result is less than or equal to the character&#39;s IN x the field&
 <p>Note: • requires physics as prerequisite; •• requires electronics as prerequisite; # requires appropriate instrument/equipment</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=23">ForeSight 1986 · p.23 ↗</a></div>
 
-<h4>[2.4] Fields of Familiarity</h4>
+<h4 id="24-fields-of-familiarity">[2.4] Fields of Familiarity</h4>
 <p><strong>Procedure:</strong> a Field of Familiarity is a number (usually negative) reflecting the degree of familiarity a character has with a particular situation or item. A character is assumed to be familiar with any thing he/she possesses at the beginning of an &quot;Adventure&quot;, and with any situation he/she has previously dealt with. When faced with a new situation or item to/with which a character wishes to apply a skill, the GM decides how foreign the situation or item is to the character and assigns an NFM (non-familiarity modifier, also referred to as familiarity) to it: -3 for very strange, to -1 for somewhat similar to something the character is familiar (ie. has familiarity zero or better) with. When in doubt, make the NFM -2.</p>
 <p>There are three ways of improving an NFM: during play, a character may grow more familiar with a situation or item, and this is reflected by improving it by one (but never above zero), every time the character achieves a QR 1 or 2 in a task involving the situation or item; after a session where a character has been assigned an NFM, that NFM is removed, assuming the character is able to continue contact with the situation or item; experience may provide positive familiarity with a situation or item with which the character has been familiar with for over a year (see Experience, directly below).</p>
 <p>Note that these last rules apply to familiarity with situations and items, not fields of knowledge. NFMs for fields of knowledge are handled differently in that they cannot be improved by die rolls, but only by expending experience points, see [2.5], [3.0].</p>
 <p>Players may wish to record their familiarity with things in the space provided. Recording familiarity with possessions and the like is unnecessary, as it is assumed; but situations are less obvious.</p>
 <p>Examples of situations and items requiring application of NFMs: a character must use a strange Aircar to make an escape, since the controls are unusual, but not entirely unfamiliar, an NFM -1 is assigned, which is nullified once the character achieves his/her first QR 1 or 2, or finishes the adventure and can study the machine at leisure; a character brought up in modern society lands on Darkover and is unused to strange and implicitly different social conventions, which can easily result in his/her causing considerable offense, the GM assigns an NFM -3 to the society, applying to all interactions (seduction, confidence, charisma, especially) and perhaps social studies, and so forth -again this can be ameliorated by good QRs, or out of game-time experimentation - but note that familiarity with Darkovan society in this case reflects figuring out how to avoid offending people, not an understanding of the society, which would be a field of knowledge on its own.</p>
-<h4>[2.5] Experience</h4>
+<h4 id="25-experience">[2.5] Experience</h4>
 <p><strong>Procedure:</strong> in most role-playing games there is some method by which a character&#39;s abilities may improve as a result of the training and experience obtained by that character. In ForeSight a character may be improved by expending experience points (as distinct from generation points). A character gains experience points by being played, the number thus gained depending on the duration and quality of play of the owning player.</p>
 <p>The basic award of experience in FS is 75 experience points (or EPs) per four or five hour session of play per character. This amount may be modified at the GM&#39;s discretion along the following lines: competent, productive play should receive higher awards, but not more than an extra 25 bar in exceptional circumstances, while a similar amount should be deducted for incompetent, unproductive play. Similarly adjustments for superior and inferior role-play should be made, on the basis of whether the character&#39;s actions befitted his/her stated persona. The upshot of this is that a character will receive 25 to 125 experience points per five or so hours of play.
 <em>[Illustration in the original (the character sheet / a figure) — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
@@ -1912,7 +1899,7 @@ D100. If the result is less than or equal to the character&#39;s IN x the field&
 [2.4]), these modifiers may only be improved by experience point expenditure (see [2.5]), since entire fields of knowledge are considerably more complex than individual situations or items.</p>
 <p>If a character wishes to use a field he/she has not finished studying (but has at least half completed), or has previously failed, the GM should assign a modifier equal to the field&#39;s NFM - (half the number of years required to learn the skill); Do not adjust this number for memory, etc..</p>
 <p>Time spent in boring circumstances, eg. on spacecraft, should count double towards time spent studying fields, while time spent adventuring, and so forth, should not count at all. A character who takes time off to study should be able to learn one field twice as quickly (perhaps only if he/she makes a WP roll) or two fields concurrently.</p>
-<h4>[2.6] Fatigue</h4>
+<h4 id="26-fatigue">[2.6] Fatigue</h4>
 <p><strong>Designer&#39;s Notes:</strong> Although fatigue is a skill in FS it is treated differently to other skills, in some respects. As well having a PCS, a character has fatigue values: a character&#39;s Threshold Fatigue is a reflection of a character&#39;s ability to bounce back from exhaustion (if you want to be technical, the character&#39;s body&#39;s ability to convert over to glycogen-glucose consumption); the formula for this is on the character sheet, and its value should be filled in. A character&#39;s Reserve Fatigue measures his/her overall fitness, and training, and equals the sum of his/her threshold fatigue, and fatigue skill level. Finally, a character has a number of Fatigue Points (recorded under fatigue on the reverse side of the character sheet) equal to his/her fatigue PCS, this value is also referred to as Normal Fatigue.</p>
 <p><em>[Illustration in the original (the character sheet / a figure) — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
 <p>Various activities a character engages in will cost fatigue points, but a character may recover them in various ways as well.</p>
@@ -1968,7 +1955,7 @@ D100. If the result is less than or equal to the character&#39;s IN x the field&
 <p>Eg. A character with 16 fatigue points could stroll unladen for four hours without resting, but only run for thirty minutes (ignoring climate).</p>
 <p><strong>Final suggestions:</strong> a character who has not eaten in 2t hours, slept in WP+t hours, or drunk in t hours should incur penalties. If one of these things is true, then fatigue loss is increased by 50%; if two are true, then it is doubled; and if all are true, then it is tripled.</p>
 <p>Any modifier a character is incurring to all activity as a result of wounds he/she has taken (eg. -2 for a medium wound) should affect the character&#39;s effective level of exercise; a -1 modifier would shift the effects of any activity one column to the left. Eg. strenuous activity by a character with a medium wound would achieve the same results as medium activity by the same person when healthy (strenuous gets shifted twice to the left).</p>
-<h4>[2.7] Psionics</h4>
+<h4 id="27-psionics">[2.7] Psionics</h4>
 <p>Psionics in FS are presented for those who wish to use them, not as an integral part of the implied Game-World, but as a module which can be added to it painlessly. If you want to make psionics integral to the Game-World, either give them to everybody in some degree (eg. make them available to everybody, exactly like normal skills), or tie them to communications, faster than light travel, or some other all-pervasive aspect of the environment.</p>
 <p>Normally, a player character has a psionic skill if and only if it is so indicated under abilities and limitations. The GM may discuss with the player which ones he/she can have, or send word down from the mountain. The Exp value of skills reflects the cost to improve them, not to acquire them. In some places psionic characters are persecuted by society (especially if it can detect them), so players may eliminate them by paying the cost for removing any other ability or limitation.</p>
 <p>A psionic task succeeds or fails normally, but using a psionic skill always costs the psionic character fatigue equal to the QR of the attempt, and if a QR 10 was achieved, increases his/her wound level by one. If this cost exceeds the character&#39;s remaining fatigue, then the character automatically fails, and has his/her fatigue reduced to zero, or may take the excess fatigue loss as an increase in wound status, and die after the task is completed; a character can (deliberately) die this way.</p>
@@ -2070,7 +2057,7 @@ D100. If the result is less than or equal to the character&#39;s IN x the field&
 <p><strong>Sixth Sense:</strong> This skill may work involuntarily. and cost nothing to use; in which case it gives a tingling sensation when a character has overlooked something potentially dangerous, or important (assuming it works. ie. is successful). The GM may decide it is an active skill (the character deliberately appeals to his/her higher faculties. ie. the player chooses to apply it. and performs the roll). instead. The latter gives more information. but not when you most need it. The GM makes the rolls in the former case.</p>
 <p><strong>Command Voice:</strong> The subject (who must be able to hear the character) must make an EF - QR WP roll or succumb do anything not directly suicidal that the character tells him/her to do. Using this skill in combat is a (one) pulse action.</p>
 <p>Note: the same notes apply to psionic skills as apply to skills, see [2.2].</p>
-<h4>[2.8] Non-Player Characters</h4>
+<h4 id="28-non-player-characters">[2.8] Non-Player Characters</h4>
 <p>A non-player character (NPC) is a character not controlled by a player. ie .• in most cases. a character controlled by the GM. Such characters. by nature. will be far more numerous than player characters. while the GM is far less numerous than the players. This means more work for the GM. who already has to figure out how the entire Universe works! The solution is simple:</p>
 <p>[i] Do not generate important NPCs the way PCs are generated. If this wasn&#39;t already obvious. the best way to generate an NPC is decide what attributes. skills. etc. such a character would possess. and give them to him/her. Finished. Don&#39;t bother about experience points for NPCs either. If they survive, and the PCs bump into them again, maybe they&#39;ve gotten better at something, maybe they&#39;ve been too busy.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=27">ForeSight 1986 · p.27 ↗</a></div>
@@ -2082,7 +2069,7 @@ majority.</p>
 <p>[iii] NPCs are not as good as PCs, at least in general. Certainly powerful villains whom the PCs have sought long and hard, should be more than a match for a solitary PC, or at least possessed of wicked henchpersons, but by and large, NPCs, having less initiative, and drive, than PCs, will possess lesser capabilities. Bear this in mind.</p>
 <p>If an NPC is to be generated, the way a PC is, then give him/her base values of 3 in all attributes except AP (which remains 5). Otherwise generate the character as per normal (roll D6+2 rather than D6+4 if the semi-random method is desired). This system may be used by players who wish to generate their characters&#39; spouses, siblings, etc. (subject to GM intervention: &quot;Why does your husband have such a high Handguns skill, while you claim he works as a pharmacist?&quot;).</p>
 <p>Apart from that, less space should be required to list an NPC&#39;s capabilities than a PC&#39;s, so a (more compact) NPC record is provided.</p>
-<h4>[2.9] Merits, Demerits, and Notoriety (Optional)</h4>
+<h4 id="29-merits-demerits-and-notoriety-optional">[2.9] Merits, Demerits, and Notoriety (Optional)</h4>
 <p>If a character works for somebody, or is involved in some form of pecking order, then it is a good idea for the GM to keep some numerical record of his/her situation. In ForeSight a character&#39;s status in a hierarchy can be kept track of via merit points (MPs, if you like abbreviations). When a character is seen to perform some (contextually) meritorious act, he/she will gain merit points, and if he/she is seen to perform some unmeritorious act, he or she will lose merit points (or gain demerits). Note that inaction may, in some cases, constitute either a meritorious or (more probably) an unmeritorious one.</p>
 <p><strong>Example:</strong> a character who is a law enforcement officer might gain MPs for preventing an armed hold-up, successfully resolving a hostage situation, or rescuing a drowning person from a river; he/she might lose MPs for not attempting to do any of the above in appropriate circumstances, or displaying incompetence or poor judgement in an attempt to do one of the above, or using unconventional and unsanctioned methods to do any of the above (especially if he/she fails).</p>
 <p>Merit points are in general non-transferable: one&#39;s MPs gained as a policeman count for nothing if one becomes a spaceship pilot, but some proportion of one&#39;s merit points might be convertable to a related field: a paramedic might retain half of his/her merit points if he/she became a fire-fighter (and if he/she returned to being a paramedic, he/she could have the higher of his/her previous merit as a paramedic, and half his/her merit as a fire-fighter).</p>
@@ -2301,6 +2288,6 @@ majority.</p>
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

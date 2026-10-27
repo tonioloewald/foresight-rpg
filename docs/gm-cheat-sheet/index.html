@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>ForeSight — GM Cheat Sheet — ForeSight RPG</title>
   <meta name="description" content="EF ladder: 0 — ¼ — ½ — 1 — 2 — 3 … 15. (0 = impossible, 15 = automatic.) Add all modifiers, then apply." />
   <link rel="canonical" href="https://foresight-rpg.com/gm-cheat-sheet/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="ForeSight — GM Cheat Sheet — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="ForeSight — GM Cheat Sheet — ForeSight RPG" />
@@ -42,19 +29,19 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>ForeSight — GM Cheat Sheet</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="gm-cheat-sheet.md">
+<h1 id="foresight--gm-cheat-sheet">ForeSight — GM Cheat Sheet</h1>
 <!--{ "parent": "reference", "order": 1 }-->
 
-<h2>The One Rule</h2>
+<h2 id="the-one-rule">The One Rule</h2>
 <blockquote>
 <p><strong>Success Chance = Score × Ease Factor.</strong> Roll <strong>D100 ≤ SC</strong> to succeed.</p>
 </blockquote>
 <p><strong>EF ladder:</strong> 0 — ¼ — ½ — 1 — 2 — 3 … 15. (0 = impossible, 15 = automatic.) Add all modifiers, <em>then</em> apply.</p>
 <p><strong>A +1 EF is worth your whole Score</strong> in the sweet spot (Score 15: EF 5→6 = 75%→90%), ~half at the ¼/½ rungs. Keep modifiers small.</p>
 <p><strong>Rule of thumb:</strong> <code>+5</code> trivial · <code>+3</code> very easy · <code>+1</code> easy · <code>0</code> average · <code>−1</code> hard · <code>−3</code> very hard · <code>−5</code> extreme · <code>−7</code> near-impossible. <em>(Just remember +5 easy / −5 hard.)</em></p>
-<h2>Quality Ratings</h2>
+<h2 id="quality-ratings">Quality Ratings</h2>
 <table>
 <thead>
 <tr>
@@ -90,20 +77,20 @@
 <p><em>Caps: a 100 is never better than QR7; a 99 never better than QR4.</em></p>
 <p><strong>Yield %:</strong> QR1 <strong>100</strong> · QR2 <strong>80</strong> · QR3 <strong>50</strong> · QR4 <strong>25</strong> (failures yield as QR4).
 <strong>Read one column only:</strong> <em>Yield</em> (how much) · <em>Time</em> (QR4 ≈ 200% of estimate) · <em>PM</em> = <strong>4 − QR</strong>. Never penalize the same choice twice (pay the EF up front, the success includes it).</p>
-<h2>Open-Ended Resolution</h2>
+<h2 id="open-ended-resolution">Open-Ended Resolution</h2>
 <ul>
 <li><strong>Oppose:</strong> both roll, <strong>compare QRs</strong> — better wins; <strong>equal cancels</strong> (just-barely block; keep going); break ties by Score only if forced.</li>
 <li><strong>Block (how much got through):</strong> defense ≥ attack negates; else attack drops <strong>(5 − defending QR)</strong> notches; failed defense = full; QR10 defense = attack one notch <em>worse</em>.</li>
 <li><strong>Build on a result:</strong> <strong>+(5 − QR)</strong> as an EF <em>modifier</em> (QR1 +4 … QR4 +1); opposing a standing result, same as a penalty.</li>
 </ul>
-<h2>Damage</h2>
+<h2 id="damage">Damage</h2>
 <blockquote>
 <p><strong>Damage = Yield × (DC ÷ 2)</strong> ⟶ wound levels.  (Large/tough target: <strong>÷ Damage Scale</strong>.)</p>
 </blockquote>
 <p><strong>DC anchors:</strong> very strong person&#39;s fist <strong>4</strong> · 9mm pistol <strong>8</strong> · 7.62 rifle <strong>11</strong>.
 <strong>Types:</strong> M melee · I impact · B beam. <strong>P</strong>n weapon pierces n DC of armor; armor <strong>A</strong> absorbs 1 damage.
 <strong>Hit location:</strong> roll D10, or call the shot for an up-front EF penalty (covers cover, too).</p>
-<h2>Combat (sequence)</h2>
+<h2 id="combat-sequence">Combat (sequence)</h2>
 <ol>
 <li><strong>Awareness → Initiative.</strong> Surprised → Startled → Alert → Ready → Lying-in-wait; modify for big factors (can&#39;t see = bad). Sets the roll.</li>
 <li><strong>Declare best → worst Init</strong> (ties by Score): each chooses <strong>Act</strong> or <strong>Wait</strong>. Waiting <em>persists</em> across rounds — the unaware get no declaration turn 1 (ambush!).</li>
@@ -112,7 +99,7 @@
 <li><strong>Reactions</strong> (parry/dodge/flinch/cover): unlimited, <strong>cumulative −2 each</strong>.</li>
 </ol>
 <p><em>Round ≈ 3–5 s (longer for vehicles). Spread attacks — a hurt/stunned foe is far less dangerous than a dead-or-healthy one.</em></p>
-<h2>Wounds, Stun &amp; Exhaustion</h2>
+<h2 id="wounds-stun--exhaustion">Wounds, Stun &amp; Exhaustion</h2>
 <p><strong>Wound level</strong> 0→8(dead); <strong>−(level) to everything</strong>. New damage adds on. Pain Resistance (WP) on a hit → shrug / <strong>Shaken</strong> (−2, one action) / <strong>Stunned</strong> (only recover-from-stun; QR1 clears, QR10 KO).
 <strong>Convalescence:</strong> roll WP at the level&#39;s interval (Light daily, Med 5d, Heavy 20d, Critical+ every 30 min/5 min/min) — success drops a level, QR10 raises; worst-level penalty until healed/treated.</p>
 <p><strong>Exhaustion</strong> (fatigue, mana, etc.): hard exertion → WP check, fail = <strong>+1 level</strong>. <strong>Full</strong> penalty to its own domain, <strong>half</strong> to all else, tracks <strong>stack</strong> (round half up). Clears by <strong>rest, one level at a time</strong> — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.</p>
@@ -215,6 +202,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

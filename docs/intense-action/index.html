@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Intense Action — ForeSight RPG</title>
   <meta name="description" content="One-pager. Intense Action answers how much can you do at once, and how well? It replaces the action-point and &quot;how many actions&quot; bookkeeping that thrashed…" />
   <link rel="canonical" href="https://foresight-rpg.com/intense-action/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Intense Action — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Intense Action — ForeSight RPG" />
@@ -42,14 +29,14 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Intense Action</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="intense-action.md">
+<h1 id="intense-action">Intense Action</h1>
 <!--{ "parent": "conflict", "order": 2 }-->
 
 <p><em>One-pager. Intense Action answers <strong>how much can you do at once, and how well?</strong> It replaces the action-point and &quot;how many actions&quot; bookkeeping that thrashed between every past edition with one idea: <strong>attention is finite, and your modifier is how you spread it.</strong> Its companion is <a href="/initiative/">Initiative</a> — Initiative sets <strong>when</strong> you act; this sets <strong>how much</strong>.</em></p>
 <p>There is no action budget to track. In a round you have one <strong>primary</strong> focus, room for one deliberate <strong>secondary</strong> action, and your <strong>automatic / reflex</strong> actions — dodging, flinching, keeping balance, noticing — ticking along underneath. What you <em>can</em> do is set by the body and by skill, not a point pool; what it <em>costs</em> is attention.</p>
-<h2>Your modifier is how you spread your attention</h2>
+<h2 id="your-modifier-is-how-you-spread-your-attention">Your modifier is how you spread your attention</h2>
 <p><strong>Split your focus and everything suffers.</strong> Declare your deliberate tasks in priority order:</p>
 <table>
 <thead>
@@ -94,7 +81,7 @@
 <p><strong>Concentrate — go all-in on one thing — and buy a bonus at your reflexes&#39; expense.</strong> Do exactly one thing this round — one task, one beat, nothing else — and it gains <strong>+1</strong> (more for absolute tunnel-vision), but your <strong>automatic / reflex actions take a penalty</strong>: you won&#39;t notice the flanker, you won&#39;t dodge well. The sniper who lives inside the scope makes the shot and is oblivious to all else. That trade <em>is</em> the choice.</p>
 <p><strong>Promote a reflex when you want it done well.</strong> Automatic actions happen on their own at a baseline; spend real attention on one and it climbs — <strong>+1 as a secondary, +2 as your primary</strong> (measured against leaving it automatic). <em>A sniper watching for a target: make noticing his <strong>primary</strong> and it&#39;s +2 to spot; keep the shot primary but really want to see and it&#39;s +1.</em></p>
 <p><strong>A secondary action cannot pre-empt.</strong> You can&#39;t win the race to act (see Initiative) with something you&#39;re only half-attending to — pre-emption belongs to your primary.</p>
-<h2>How many beats do you get? As many as you like</h2>
+<h2 id="how-many-beats-do-you-get-as-many-as-you-like">How many beats do you get? As many as you like</h2>
 <p>A statement of intent unfolds as beats — draw · aim · fire, or lunge · wind-up · blow (see <a href="/fire-combat/">Fire</a> and <a href="/melee-combat/">Melee</a> combat). <strong>There is no limit on how many you attempt. Every beat past the first is another thing you&#39;re attempting, and it goes on the same ladder.</strong> Fire once and you&#39;re at +1; fire five times and every shot is at −4.</p>
 <p><strong>So there is nothing to look up and no threshold to hit.</strong> You are never told <em>how many</em> actions you get. You decide how thin to spread yourself, and the dice price it.</p>
 <blockquote>
@@ -104,9 +91,9 @@
 <p><strong>Skill still converts into rate — continuously, instead of at breakpoints.</strong> The gunfighter and the novice may both empty a magazine; the difference is what happens when they do. A <strong>Firearms 25</strong> shooter taking two aimed shots is at −1 — and because a Score over 20 counts as 20 with the surplus paid as EF, that&#39;s EF 4 → SC 80, with both shots very likely to land. Going all-in for five puts every shot at −4 (EF 1 → SC 20) — he <em>can</em>, and usually shouldn&#39;t. A <strong>Firearms 10</strong> shooter tries the same five and has no surplus to spend, so his BEF 4 walks four rungs down to EF ½ and he is rolling SC 5 a shot: he burns the magazine and accomplishes nothing, which is exactly what that looks like in life. <strong>Skill buys you the option to spend beats, not a ration of them.</strong></p>
 <p><em>Melee 18 on the attack: two strikes at −1, or four at −3 if he&#39;s desperate to end it. With defence as his secondary, each block is −2 on top.</em></p>
 <p><strong>This deleted three rules and a gotcha.</strong> There is no beats divisor, no rounding, and no &quot;an attribute counts double&quot; patch to stop raw attributes buying almost none. Movement in a firefight is simply another task: <em>moving and shooting</em> is two things, at −1 each, and the clumsy character isn&#39;t allotted fewer beats — he&#39;s just worse at everything he tries to do at once, which he was anyway.</p>
-<h2>What stops you, now that nothing caps you</h2>
+<h2 id="what-stops-you-now-that-nothing-caps-you">What stops you, now that nothing caps you</h2>
 <p>Two things, and neither needs bookkeeping. <strong>The ladder</strong> makes each extra beat worse than the last, so spreading thin has its own price. And <strong>a QR10 ends that line of action for the round</strong> — the botch that jams the weapon, loses the sight picture, or puts you on the floor. Between them there is no need for a cap: you may always try again, and the game simply stops rewarding it.</p>
-<h2>Movement is a Coordination action</h2>
+<h2 id="movement-is-a-coordination-action">Movement is a Coordination action</h2>
 <p><strong>Movement in most games is free, automatic, and therefore dramatically inert</strong> — which quietly deletes tripping, slipping, losing your footing on a scree slope, and going down hard on a wet deck. Here it&#39;s a task like any other, rolled on <strong>Coordination</strong>.</p>
 <p><strong>It starts easy</strong> — on open, level, dry ground the ease factor is high enough that a competent person essentially never fails, so the rule costs nothing when the ground doesn&#39;t matter. <strong>The ground sets the EF</strong>: rubble, scree, ice, a pitching deck, a rooftop, darkness, knee-deep water, a floor full of brass and bodies.</p>
 <table>
@@ -130,11 +117,11 @@
 </tr>
 </tbody></table>
 <p><strong>The trade that makes it worth rolling at all:</strong> decline, and you simply move — carefully, slowly, at the GM&#39;s discretion, as the <em>What counts as a task</em> rule already allows. <strong>Roll, and you&#39;re buying speed, distance and position; the stumble is the price of asking for them.</strong> Nobody rolls to walk across a room. Everyone rolls to cross it <em>fast, under fire, over the furniture</em>.</p>
-<h2>What counts as a task</h2>
+<h2 id="what-counts-as-a-task">What counts as a task</h2>
 <p><strong>A task is a thing you want <em>rolled</em>.</strong> That is the whole test, and it polices itself. A step, a shouted word, drawing a weapon, aiming — these aren&#39;t tasks; they happen, with honest consequences (pop up to fire and you&#39;re still half-exposed when the round ends). There are no &quot;free actions&quot;: a thing is either of no consequence, or it isn&#39;t free. But it only costs you <em>attention</em> if you cared enough to roll for it. So <em>advance–attack–retreat</em> is one task — the attack — and takes no penalty. Decline to make your movement a task and you simply move: noisily, visibly, at the GM&#39;s discretion.</p>
-<h2>Help sheds tasks</h2>
+<h2 id="help-sheds-tasks">Help sheds tasks</h2>
 <p>A helper doesn&#39;t hand you a bonus — they <strong>take a task off your list</strong>, and the ladder does the rest. A sniper ranging his own shot <em>and</em> firing is two things (the shot at −1); give him a spotter who owns the ranging and he&#39;s down to one thing, at <strong>+1</strong> — so the spotter is worth <strong>+2</strong>, and it falls out of the rule. Two consequences worth having: help can&#39;t push you past your own focused best (the ladder bottoms out at one task, so assistance can&#39;t be stacked into absurdity), and a helper who takes nothing gives nothing — the shed task is real, the spotter rolls it, and a spotter who blows the roll hands over bad numbers. A helper who is genuinely <em>better</em> than you is a separate thing — good information — earning an ordinary situational bonus (the <em>aimed</em> / <em>braced</em> family), not a rung on this ladder.</p>
-<h2>Reactions: parry, dodge, flinch, duck</h2>
+<h2 id="reactions-parry-dodge-flinch-duck">Reactions: parry, dodge, flinch, duck</h2>
 <p>Reactions are tasks too — but ones you <em>didn&#39;t plan</em>, so they&#39;re priced apart. Not a pool: take as many as you like, each at a <strong>cumulative −2</strong>. Keep parrying and you simply get worse at it; skill decides how far down that ladder you stay dangerous — so the better fighter gets more good reactions, with no bookkeeping.</p>
 <blockquote>
 <p><strong>The parry you saw coming is cheaper than the parry you didn&#39;t.</strong> Tasks you <em>declare together</em> share the ladder above; a reaction you were surprised into pays the full −2 each. This is a large part of why waiting — declaring a trigger and holding for it — is worth so much.</p>
@@ -144,9 +131,9 @@
 <li><strong>Dodge</strong> (opposed): <strong>dodge and give ground</strong> for a one-off advantage — which is what makes melee <em>move</em>, fighters circling and yielding ground instead of standing toe-to-toe.</li>
 <li><strong>Flinch / duck:</strong> exposed and shot at, ducking back to cover is a legitimate reaction (at the stacking penalty).</li>
 </ul>
-<h2>Never pay twice</h2>
+<h2 id="never-pay-twice">Never pay twice</h2>
 <p>The ladder prices dividing <em>your own</em> attention. <strong>The situation&#39;s ease factor prices the world</strong> — range, cover, light, the target&#39;s movement — never your multitasking. If firing-on-the-move already cost −1 for being two tasks, it does <em>not</em> also take a separate &quot;firing on the move&quot; penalty. Charge it once, on the ladder, and leave it there.</p>
-<h2>Beyond combat</h2>
+<h2 id="beyond-combat">Beyond combat</h2>
 <p>Attention is finite everywhere. A <strong>Pursuit</strong> is this at a longer tempo — driving <em>and</em> shooting <em>and</em> reading the road split the same way. <strong>Space combat</strong> is a crew <em>shedding tasks</em> to one another (that is what a crew is <em>for</em>), each station one focused task. And because the split is measured against the round, the rule scales with tempo for free: move-and-watch are two tasks inside a three-second firefight, one-each across an afternoon of tracking.</p>
 <p><em>Emergent tactics: in almost every other RPG, players concentrate fire to kill one target at a time, because a dead enemy is the only less-dangerous enemy. In ForeSight a wound is −(level) to everything and a stun takes an enemy out of the turn, so a hurt, rattled foe is dramatically less dangerous than a healthy one. Once the worst threats are handled, the smart play is to <strong>spread</strong> attacks across as many enemies as possible — degrade the whole group rather than execute one at a time. It falls out of the rules on its own, and it mirrors how real firefights are won: by suppression, not by headcount.</em></p>
 
@@ -247,6 +234,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

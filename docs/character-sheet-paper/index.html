@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>ForeSight — Character Sheet — ForeSight RPG</title>
   <meta name="description" content="Name ______________________  Archetype ____________  Age ____  Wealth ____" />
   <link rel="canonical" href="https://foresight-rpg.com/character-sheet-paper/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="ForeSight — Character Sheet — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="ForeSight — Character Sheet — ForeSight RPG" />
@@ -42,15 +29,15 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>ForeSight — Character Sheet</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="character-sheet-paper.md">
+<h1 id="foresight--character-sheet">ForeSight — Character Sheet</h1>
 <!--{ "parent": "reference", "order": 2 }-->
 
 <p><strong>Name</strong> ______________________  <strong>Archetype</strong> ____________  <strong>Age</strong> ____  <strong>Wealth</strong> ____</p>
 <p><strong>Concept / personality / what they want</strong> ________________________________________</p>
 <hr>
-<h2>Attributes</h2>
+<h2 id="attributes">Attributes</h2>
 <table>
 <thead>
 <tr>
@@ -71,7 +58,7 @@
 </tbody></table>
 <p><em>Derived:</em> Unarmed DC ____ · Carry ____  (from ST)</p>
 <hr>
-<h2>Skills</h2>
+<h2 id="skills">Skills</h2>
 <p><em>Score = formula + level. SC = Score × EF (BEF ± situation). Max level = best constituent attribute × Limit (1, or 1.5 for ½ skills).</em></p>
 <p><em>Pain Resistance = WP · Stamina = WP — not skills, roll the attribute. Endurance quirks modify both.</em></p>
 <table>
@@ -160,7 +147,7 @@
 <p><strong>Background Factors:</strong> ___________________________________________</p>
 <p><strong>Quirks / Perks / Flaws:</strong> ___________________________________________</p>
 <hr>
-<h2>Status</h2>
+<h2 id="status">Status</h2>
 <p><strong>Wounds</strong> (−level to <em>everything</em>): 0 ▢ 1 ▢ 2 ▢ 3 ▢ 4 ▢ 5 ▢ 6 ▢ 7 ▢ 8💀<br><em>Worst level reached:</em> ____</p>
 <p><strong>Exhaustion</strong> (full to own domain, ½ to others; clears 1 level/rest by depth):</p>
 <ul>
@@ -168,11 +155,11 @@
 </ul>
 <p><strong>Shaken</strong> ▢  <strong>Stunned</strong> ▢</p>
 <hr>
-<h2>Gear</h2>
+<h2 id="gear">Gear</h2>
 <hr>
 <hr>
 <hr>
-<h2>Resolution reminder</h2>
+<h2 id="resolution-reminder">Resolution reminder</h2>
 <p><strong>Roll D100 ≤ Score × EF.</strong> QR: ≤SC/10 <strong>1</strong> · ≤SC/4 <strong>2</strong> · ≤SC/2 <strong>3</strong> · ≤SC <strong>4</strong> · over = fail (×10 = botch).
 Yield: 100 / 80 / 50 / 25%.  ·  +1 EF ≈ +your Score.  ·  +5 easy, −5 hard.</p>
 
@@ -273,6 +260,6 @@ Yield: 100 / 80 / 50 / 25%.  ·  +1 EF ≈ +your Score.  ·  +5 easy, −5 hard.
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

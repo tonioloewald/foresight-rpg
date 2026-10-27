@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Technology Levels — ForeSight RPG</title>
   <meta name="description" content="One-pager. A Tech Level (TL) is shorthand for &quot;how advanced is this?&quot; — used to price gear, gate availability, and set the feel of a setting." />
   <link rel="canonical" href="https://foresight-rpg.com/technology-levels/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Technology Levels — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Technology Levels — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Technology Levels</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="technology-levels.md">
+<h1 id="technology-levels">Technology Levels</h1>
 <!--{ "parent": "world", "order": 9 }-->
 
 <p><em>One-pager. A Tech Level (TL) is shorthand for &quot;how advanced is this?&quot; — used to price gear, gate availability, and set the feel of a setting. It is a single number only because, on Earth, the threads of technology happened to advance together. They needn&#39;t anywhere else.</em></p>
-<h2>Tech is many threads, not one number</h2>
+<h2 id="tech-is-many-threads-not-one-number">Tech is many threads, not one number</h2>
 <p>Technology isn&#39;t a single ladder. Read the table by <strong>column</strong>: each column is a thread that has its own level. For human history the threads stayed close enough together that one number is a fair summary — so a single TL is just that summary.</p>
 <p>The <strong>Social/Legal</strong> column is not flavor: it&#39;s the substrate the others grow on. Without the joint-stock company, currency, and global trade you don&#39;t get integrated circuits or modular reactors — there&#39;s no capital, no supply chain, no fab, however sound the Physics. So the upper threads rest on Social/Legal, with one important asymmetry:</p>
 <blockquote>
@@ -58,7 +45,7 @@
 <blockquote>
 <p><em>The original 1985 scale badly underestimated information technology. Rather than pretend otherwise, this edition simply recalibrates: TL6 is defined by the computing and networks we actually got, so the threads sit back in rough lockstep for present-day Earth. The lesson survives as history — if we misjudged our own near future this much, don&#39;t assume an alien or fantasy civilization&#39;s threads line up at all.</em></p>
 </blockquote>
-<h2>The table</h2>
+<h2 id="the-table">The table</h2>
 <table>
 <thead>
 <tr>
@@ -135,7 +122,7 @@
 <td>Define per setting</td>
 </tr>
 </tbody></table>
-<h2>Finer grain (quarter levels)</h2>
+<h2 id="finer-grain-quarter-levels">Finer grain (quarter levels)</h2>
 <p>Whole numbers are usually enough, but quarter-levels are available when a setting needs to distinguish near-contemporaries:</p>
 <ul>
 <li><strong>TL6</strong> — present day.</li>
@@ -144,7 +131,7 @@
 <li><em>…and onward, as you like. The scale assumes no faster-than-light travel; if your setting has FTL, it&#39;s a deliberate addition, not a rung on this ladder.</em></li>
 </ul>
 <p>Quarter-levels can apply to a single thread — &quot;TL6, but Physics 6.25&quot; — without dragging the others along.</p>
-<h2>Using TL at the table</h2>
+<h2 id="using-tl-at-the-table">Using TL at the table</h2>
 <ul>
 <li><strong>Pricing &amp; availability.</strong> An item from a higher TL than the local culture is exotic — expensive, hard to repair, or simply unobtainable. The 2004 campaign convention is a good default: assume the local TL is freely available, and rule higher-TL items in case by case.</li>
 <li><strong>Skills &amp; fields.</strong> Operating or repairing higher-TL gear may require a field of knowledge at that TL; lacking it is an unfamiliarity penalty.</li>
@@ -249,6 +236,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

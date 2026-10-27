@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Spacecraft Design — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 89–101 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-08-spacecraft/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Spacecraft Design — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Spacecraft Design — ForeSight RPG" />
@@ -42,9 +29,9 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Spacecraft Design</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-08-spacecraft.md">
+<h1 id="spacecraft-design">Spacecraft Design</h1>
 <!--{ "parent": "foresight-1986", "order": 8 }-->
 
 <p><em>ForeSight (1986), pp. 89–101 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=89">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
@@ -53,20 +40,20 @@
 </blockquote>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=89">ForeSight 1986 · p.89 ↗</a></div>
 
-<h4>[8.0] Spacecraft Design, Construction &amp; Combat</h4>
+<h4 id="80-spacecraft-design-construction--combat">[8.0] Spacecraft Design, Construction &amp; Combat</h4>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=90">ForeSight 1986 · p.90 ↗</a></div>
 
 <p><em>[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=91">ForeSight 1986 · p.91 ↗</a></div>
 
-<h4>[8.0] Starships</h4>
+<h4 id="80-starships">[8.0] Starships</h4>
 <p><strong>Designer&#39;s Notes:</strong> Where would a Science Fiction role-playing game be without starships? I almost decided to allow users of FS to find out for themselves. This is because [i] I feel that very little role-playing is done in Space Combat; [ii] Space Combat is too deadly; [iii] Starships are too expensive for PCs to own; [iv] any &quot;fun&quot; Space Combat system is incredibly unrealistic, and any realistic system is too boring.</p>
 <p>But the people said: No, that isn&#39;t good enough. We want a Space Combat system.</p>
 <p>Always one to satisfy a money burdened community, I have included for your use a Space Combat system, and a Starship Construction system (which is probably more fun to use). All I can say is that this is one section of the rules I recommend you avoid using. Travel with InterWorld Spacelines, or Pan Solar; avoid Space Pirates and used starship salesman, and you&#39;ll be fine.</p>
 <p><strong>Your Own Starship</strong></p>
 <p>So you ignored my warnings huh? Okay, this is how to build a starship in ForeSight (if I knew how to build a real one, do you think I&#39;d waste my time typing up rules?).</p>
 <p><strong>Procedure:</strong> Starship design comprises a number of stages. First, one decides what one wants: how much stuff the ship will be able to haul around, how fast it will be able to accelerate, and so on. The necessary specifics are listed under Specifications. Second, one figures out how big and expensive the ship&#39;s functional components will need to be in order to fulfil its specifications. The procedures necessary to do this are listed under Construction. One may discover, after all this, that the ship is too expensive, and/or that one has to start over again because the design is too ambitious, but this is pretty well the only unknown the designer must juggle.</p>
-<h4>[8.1] Specifications</h4>
+<h4 id="81-specifications">[8.1] Specifications</h4>
 <p><strong>Note:</strong> the mass of starship components is expressed in compartments (Cs) representing units of 10t (tonnes, = 1000kg). This corresponds, on average, to a volume of 50m³ (cubic metres). This does not mean that one can fill this much space up with lead, but simply approximates the volume taken up by one C.</p>
 <p>The following capabilities of the starship must be specified:</p>
 <p><strong>S (Space):</strong> the number of unfilled Cs the starship is to contain. These may later be filled with systems of some sort or another, including cabins for passengers, or cargo.</p>
@@ -75,7 +62,7 @@
 <p><strong>IS (Interstellar Capability):</strong> the number of interstellar jump points the ship is to have. Only TL7+ spacecraft can have interstellar drives.</p>
 <p>The endurance of the acceleration and agility engines should be specified.</p>
 <p><strong>Armour:</strong> you should decide at this point how much armour any given C (in Space) is going to have, and how much armour the drives are going to have. Note these things down.</p>
-<h4>[8.2] Construction</h4>
+<h4 id="82-construction">[8.2] Construction</h4>
 <p>[i] Note the <strong>TL</strong> at which the starship is being constructed.</p>
 <p>[ii] Each compartment in the ship has some specified amount of armour on it, and this yields a mass per compartment on the Armour Mass table. Add up these values for every single compartment on the ship, and label this value S&#39;.</p>
 <p><strong>Armour Mass</strong> (by compartment armour grade)</p>
@@ -476,7 +463,7 @@
 <p>Can a starship land on a planet (you know, streamlining, and stuff)? Well, any ship whose compartments are more than one third exterior is capable of surface landing on, and take-off from, a planet whose gravity is less than half its V rating (each point of V represents half a g of acceleration), if its builder so desires. No extra cost. Why? Because its assumed such ships are either small or fairly spread out, and can land on their thrusters. Whether planetary authorities permit them to do so is another matter entirely (hint, the answer is usually no).</p>
 <p><strong>Designer&#39;s Note:</strong> I should like to acknowledge the invaluable assistance of Nick Doulgeris, Brett Evill, and (especially) David Botinger in &quot;improving&quot; these rules. It is through the efforts of these people that the preceding rules were rendered somewhat more realistic and vastly more tedious than originally was the case.</p>
 <p>Also: these rules implicitly allow for ships to be equipped with multiple drives of different specs (eg. &quot;travel&quot; drives and &quot;combat&quot; drives). If you can figure out how to do it (it isn&#39;t hard) then by all means consider your design to be legitimate.</p>
-<h4>[8.3] Starship Systems</h4>
+<h4 id="83-starship-systems">[8.3] Starship Systems</h4>
 <p><strong>Notes:</strong> systems are listed as having varying capacities and power consumptions, and as taking up a certain number of interior compartments. If there is no functional system on a ship able to supply sufficient power to the system, or the system is damaged or destroyed, then that system&#39;s capability is unavailable to the user of the starship. (It follows that the capabilities of a system requiring no power, which is operative, are always available.)</p>
 <p><strong>Generators</strong></p>
 <p>A generator provides power for other ship systems. A generator takes up one interior compartment, and provides a quantity of power, and has a cost, dependent upon its TL.</p>
@@ -853,14 +840,14 @@
 
 <p>A luxury passenger compartment costs 200k SVU, and includes larger cabins, and a larger recreational area.</p>
 <p>A super luxury passenger compartment costs 500k SVU and is designed for one very wealthy person and a spouse (or whatever), and two servants.</p>
-<h4>[8.4] Space Travel</h4>
+<h4 id="84-space-travel">[8.4] Space Travel</h4>
 <p>In order to travel s AUs (astronomical units; 1 AU = 150 000 000 km, or 93 000 000 miles) at an acceleration of a half gravities (ie. in a starship with V = a going full bore) it will take <code>96√(s/a)</code> hours, assuming turn-around and deceleration at the half-way point.</p>
 <p>In order to make an interstellar jump you must be 25 x The Stellar Type Coefficient (see [7.0]) AUs away from the star (and at least an AU away from any planets); the destination must be located likewise. The modifier for the Jump, which is instantaneous, is -1 for any jump, -1 if the jump distance ≥ 5 LY (light years), -1 if the jump distance ≥ 10, -1 if the jump distance ≥ 25 LY, -1 if the jump distance ≥ 50 LY, -1 if the jump distance ≥ 100 LY, and so on for the increments 250 LY, 500 LY, 1000 LY, etc.. The jump requires a successful Starship Functions roll at the above modifier: QR 1-3 indicates a perfect jump; QR 4 indicates lifeforms on the craft suffer a LW (not one damage point, but sufficient damage to incur a LW), and computer software develops bugs (a ship will automatically recover from these problems in <code>(5+D5)/(TL-5)</code> minutes); QR 7 indicates that delicate machinery, including computers, suffers light damage, and lifeforms suffer a MW; QR 10 indicates a severe misjump: everything is lightly damaged, except delicate machinery suffers medium damage, and lifeforms which receive 14 damage.</p>
 <p>(Optionally, jumps can be made from within the 25 x Coefficient radius, but at the expense of worsening the jump modifier by one per (Stellar Type Coefficient) AUs, or fraction thereof, the ship executing the jump is within the stated radius.)</p>
 <p>Add the modifier to the Jump rating of the ship&#39;s jump drives: each jump reduces the jump drives&#39; IS Jump rating, until it is reduced to zero, or less, or receives maintenance (costs 1% of the original cost of the jump drives). If the ship&#39;s IS Jump rating is reduced to zero or below, then its IS drives are inoperable, and must receive maintenance to be used again (the cost of the necessary parts was mentioned above, but they weigh 5% as much as the jump drives, and may be carried aboard). If it is reduced below zero then the drives are damaged, -1 indicates light, -2 medium, -3 heavy, -4 partially destroyed, -5 or lower indicates they are permanently ruined; successful repair only improves the jump rating to 0 (ie. does not restore the full Jump rating).</p>
 <p>Note that the modifier of +√(unused Jump capacity) to jump resolution rolls does not affect the reduction of the drives&#39; Jump rating; it only increases the likelihood of a successful jump. (Jumping from within the safe jump radius does affect this reduction.)</p>
 <p>Standard passage on a spacecraft (including meals etc.) costs <code>200(√(s)+15|m|)</code> SVU where s is the distance covered sublight in AUs, and m is the total of the modifiers of the jumps undertaken. Luxury passage costs two and a half times as much (replace the 200 in the formula with a 500), while super luxury is negotiable (usually forty times as much as standard fare for the entire suite). Costs for low traffic lines is liable to be 50-200% more expensive, while dangerous routes are completely negotiable.</p>
-<h4>[8.5] Space Combat</h4>
+<h4 id="85-space-combat">[8.5] Space Combat</h4>
 <p>Space Combat is resolved on a hex-grid, each hex of which represents a volume of space almost 2000km (1250 miles) across (and, if using the three dimensional variant, of a similar depth); and is divided into turns, each representing the passage of ten minutes (600 seconds, or 200 turns of ground combat — enough to resolve most boarding actions which may occur).</p>
 <p>Each participating craft (spacecraft, missile, or what-ever) is represented at any one time by two counters on the hexgrid. These counters are called the craft&#39;s location and its destination. A craft is considered to be in the hex occupied by its location marker, travelling towards its destination marker, at a velocity sufficient to bring it there by the next turn. The further away a craft is from its destination marker, the faster it is moving; acceleration is represented by moving the destination marker.</p>
 <p>Each turn of Space Combat comprises a series of phases which are performed in order. When each phase has been completed, either a new turn is commenced, or the combat has been resolved (eg. all remaining craft are unable, or unwilling, to pursue hostilities), in which case normal travel ensues.</p>
@@ -875,7 +862,7 @@
 <p><strong>Acceleration:</strong> In order of worst to best initiative, each craft may alter the position of its destination counter by moving it a number of hexes up to its unused acceleration. Pursuing ships accelerate out of sequence, immediately after their targets, by moving their destination counter a number of hexes towards their target&#39;s destination counter equal to the acceleration thus allocated in the launch phase.</p>
 <p><strong>Direct Fire Phase:</strong> [i] in order of worst to best initiative each craft declares which (if any) targets any of its operable weapons will fire at; [ii] in order of worst to best initiative each craft declares how much ECM and ECCM it will produce that turn, and, in the case of ECCM, against which targets it will be used; [iii] the firing of each weapon is resolved, and the results recorded; [iv] the damage to each craft is assessed.</p>
 <p><strong>Impact Phase:</strong> In order of best to worst initiative resolve all potential impacts of pursuing craft (ie. those which have entered the hexagon containing their target).</p>
-<h4>[8.6] Space Combat Procedures</h4>
+<h4 id="86-space-combat-procedures">[8.6] Space Combat Procedures</h4>
 <p>There are two important formulae for use in conjunction with the procedure outlined above: the probability of scoring a hit with a shipboard weapon; and the probability of a pursuing craft having entered its target&#39;s hex, impacting upon it.</p>
 <p><strong>Direct Fire Hit Probability</strong></p>
 <p>Direct Fire weapon combat is resolved exactly like fire combat, at BEF 10, using the weapon&#39;s accuracy as a skill PCS, and the following modifiers.</p>
@@ -1109,6 +1096,6 @@ Casual Conversat ion ...........................................................
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

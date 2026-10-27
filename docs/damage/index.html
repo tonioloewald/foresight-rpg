@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Damage — ForeSight RPG</title>
   <meta name="description" content="One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s Quality Rating, the weapon&#39;s Damage Class, and the target&#39;s armor decide how badly…" />
   <link rel="canonical" href="https://foresight-rpg.com/damage/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Damage — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Damage — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Damage</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="damage.md">
+<h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
 
 <p><em>One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s <strong>Quality Rating</strong>, the weapon&#39;s <strong>Damage Class</strong>, and the target&#39;s <strong>armor</strong> decide how badly it hurts. Injury is tracked as <strong>wound levels</strong>, 0 (healthy) to 6 (dead) — each level is a −(level) penalty to everything you do.</em></p>
-<h2>Damage Class</h2>
+<h2 id="damage-class">Damage Class</h2>
 <p>Every attack has a <strong>Damage Class (DC)</strong> — how hard it hits before quality, armor, or luck. The scale is numerical and calibrated, not flavour:</p>
 <table>
 <thead>
@@ -70,14 +57,14 @@
 <td>a 7.62mm rifle (the commonest rifle class on Earth)</td>
 </tr>
 </tbody></table>
-<h2>How much damage a hit does</h2>
+<h2 id="how-much-damage-a-hit-does">How much damage a hit does</h2>
 <blockquote>
 <p><strong>Damage (in wound levels) = Yield × DC × ½, rounded down.</strong>
 And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (below), even when it rounds to no wound.</p>
 </blockquote>
 <p>Read the hit&#39;s <strong>Yield</strong> off its QR (QR1 100%, QR2 80%, QR3 50%, QR4 25% — see The One Rule), multiply by half the DC, and round down for the <strong>wound levels</strong> dealt. The quarter-level stun floor is why even a graze rattles you: real weapons are dangerous and ForeSight doesn&#39;t pretend otherwise.</p>
 <p>*A 9mm (DC 8): a solid QR3 hit does 0.5 × 8 × ½ = <strong>2</strong> (medium); a brilliant QR1 does <strong>4</strong> (incapacitated); a scraping QR4 does 0.25 × 8 × ½ = 1.0 → <strong>1</strong> (light) plus a stun check. A 7.62 rifle (DC 11) center-mass at QR1 does 5.5 → <strong>5 (dying)</strong>. A bare fist (DC 4) at QR4 does 0.5 raw → no wound, but a stun check.*</p>
-<h2>Wounds — the 0–6 track</h2>
+<h2 id="wounds--the-06-track">Wounds — the 0–6 track</h2>
 <p>Injury is a single number, and it is <strong>−(level) to everything you do</strong> — pain and blood loss don&#39;t care what you&#39;re attempting:</p>
 <table>
 <thead>
@@ -124,7 +111,7 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </tbody></table>
 <p>New damage <strong>adds to your current level</strong> (a medium 2 plus a heavy 3 is a dying 5). Toughness rolls throughout are made on <strong>Willpower</strong> — staying on your feet is mostly about refusing to stop (see <a href="/exhaustion/">Exhaustion</a>; what <em>kind</em> of enduring you are good at comes from <strong>Endurance quirks</strong>). Purely physiological resistance — poison, disease — is <strong>Strength (ST)</strong>, where willpower is no help at all. Pain resistance is <strong>not a skill</strong>; you roll the raw attribute.</p>
-<h2>Stun &amp; Shaken</h2>
+<h2 id="stun--shaken">Stun &amp; Shaken</h2>
 <p>Damage doesn&#39;t only wound — it rattles. Any hit that clears the <strong>¼-level stun floor</strong> (or any <strong>stun-class &quot;S&quot; weapon</strong>, which skips straight to it) forces a <strong>pain-resistance roll — WP</strong>:</p>
 <table>
 <thead>
@@ -147,7 +134,7 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </tbody></table>
 <p>Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.</p>
-<h2>Hit location</h2>
+<h2 id="hit-location">Hit location</h2>
 <p>By default roll <strong>D10</strong> for where a hit lands:</p>
 <table>
 <thead>
@@ -194,7 +181,7 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </tbody></table>
 <p>The distribution is the body as a target: the chest is the biggest thing pointing at you, the head the smallest and the worst place to be hit. Or <strong>call your shot</strong> — the head, a weapon hand, the sliver of someone showing past cover — for an <strong>up-front EF penalty</strong> for the smaller target. The same penalty covers shooting through cover: you pay in ease factor for precision, and a success <em>is</em> the called hit (don&#39;t charge it twice).</p>
-<h2>Damage type &amp; armor</h2>
+<h2 id="damage-type--armor">Damage type &amp; armor</h2>
 <p>What the damage <em>is</em> decides how armor and bodies answer it:</p>
 <table>
 <thead>
@@ -234,9 +221,9 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </tbody></table>
 <p><em>Designer&#39;s Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.</em></p>
-<h2>Scale</h2>
+<h2 id="scale">Scale</h2>
 <p>A very large or tough target — a vehicle, a dragon, a stone wall — has a <strong>Damage Scale</strong>; divide the damage done by the scale before applying it. A person is Scale 1. That is the whole of how one DC is &quot;lethal&quot; to a man and &quot;a scratch&quot; to a tank, with no separate rules. (Vehicle damage in <a href="/pursuit/">Pursuit</a> routes here.)</p>
-<h2>Recovery — and relapse</h2>
+<h2 id="recovery--and-relapse">Recovery — and relapse</h2>
 <p>Healing is slow. At the interval for your level, make a <strong>convalescence roll</strong> (WP):</p>
 <table>
 <thead>
@@ -274,7 +261,7 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tbody></table>
 <p>Convalescence carries a penalty equal to the <strong>worst level you&#39;ve sunk to</strong> since you were last healthy — a relapse leaves you fragile — until you fully recover or get <strong>medical care</strong>. Care (closing wounds, transfusion, surgery) lowers that worst-level penalty or buys levels back directly; it is what hauls a <strong>dying</strong> character off the 5→6 slide before the dice do.</p>
 <p><strong>And a recovery that goes badly leaves something behind.</strong> A wound that relapsed, or healed without care, can become a <strong>chronic condition</strong> — a stiff shoulder, an old break that reads the weather, a lung that never came all the way back. Write it with the four lines on the <a href="/quirks/">Quirks, Perks &amp; Flaws</a> page (attach / trigger / effect / management) and it costs nothing and grants nothing: it is what happened to the character. That is the honest replacement for a scar table, because it names the rolls it touches instead of the mark it left.</p>
-<h2>Poison, disease, and the environment</h2>
+<h2 id="poison-disease-and-the-environment">Poison, disease, and the environment</h2>
 <p>The same machine handles the slow killers — resolve each as a task and read its <strong>Yield/QR</strong> for how much it does, or roll a <strong>random QR</strong> (D10: 1→QR1, 2→QR2, 3–5→QR3, 6–10→QR4) when nothing is opposed:</p>
 <ul>
 <li><strong>Poison &amp; venom</strong> carry a <strong>DC</strong> and a type; the victim resists with a <strong>ST roll</strong>, and what gets through applies as wounds (or, for sedatives and toxins that sap rather than injure, as <a href="/exhaustion/">exhaustion</a>) on the poison&#39;s own clock — seconds for a nerve agent, hours for a septic wound.</li>
@@ -379,6 +366,6 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

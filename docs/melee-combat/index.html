@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Melee Combat — ForeSight RPG</title>
   <meta name="description" content="One-pager. Melee is nothing new — it&#39;s opposed resolution applied to hitting someone at arm&#39;s length: your attack against their defence, QRs compared, exactly…" />
   <link rel="canonical" href="https://foresight-rpg.com/melee-combat/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Melee Combat — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Melee Combat — ForeSight RPG" />
@@ -42,24 +29,24 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Melee Combat</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="melee-combat.md">
+<h1 id="melee-combat">Melee Combat</h1>
 <!--{ "parent": "conflict", "order": 4 }-->
 
 <p><em>One-pager. Melee is nothing new — it&#39;s <a href="/the-one-rule/">opposed resolution</a> applied to hitting someone at arm&#39;s length: your attack against their defence, <strong>QRs compared</strong>, exactly like stealth-vs-search or a tennis point. It just asks four questions in order, and hands the last one to <a href="/damage/">Damage</a>.</em></p>
-<h2>The four questions</h2>
+<h2 id="the-four-questions">The four questions</h2>
 <ol>
 <li><strong>Did it land?</strong> — your weapon skill against their <strong>parry</strong> or <strong>dodge</strong>; compare QRs.</li>
 <li><strong>Was it wholly or partially mitigated?</strong> — the blocking table below turns the two QRs into the attack&#39;s <em>effective</em> QR.</li>
 <li><strong>Where did it strike?</strong> — hit location — <strong>unless it was an aimed strike, in which case this came first</strong> (you called the target and paid for it up front).</li>
 <li><strong>How hard?</strong> — the effective QR and the weapon&#39;s DC, through armor → <a href="/damage/">Damage</a>. Armor and damage are that page&#39;s business, not this one&#39;s.</li>
 </ol>
-<h2>Attack vs defence — compare QRs</h2>
+<h2 id="attack-vs-defence--compare-qrs">Attack vs defence — compare QRs</h2>
 <p>Both sides roll their own task and the <strong>better QR prevails</strong> — the general opposed-resolution move. The attacker rolls their melee skill; the defender <strong>parries</strong> or <strong>dodges</strong>, each a <em>reaction</em> (so it stacks the cumulative −2 of <a href="/intense-action/">Intense Action</a> — the parry you saw coming is cheaper than the one you didn&#39;t). Equal QRs cancel: the blow <em>just</em> turned aside, the tension holds, you both go again — which is what makes a melee a taut back-and-forth rather than one roll.</p>
-<h3>Attack and defence are two intents</h3>
+<h3 id="attack-and-defence-are-two-intents">Attack and defence are two intents</h3>
 <p>&quot;Kill him with this sword&quot; is a <em>statement of intent</em>, not one action — it plays out as discrete beats: a <strong>lunge</strong> to close, a <strong>wind-up</strong> for an especially heavy blow, the <strong>blow</strong> itself. <strong>&quot;Don&#39;t get hit&quot; is a second intent</strong>, and a fighter is almost always pursuing both at once — pressing the attack while keeping a guard up — one <strong>primary</strong>, one <strong>secondary</strong>; or (the berserker, the duellist waiting for the opening) all-in on just one. That is exactly the <a href="/intense-action/">Intense Action</a> split: your focus is sharp and everything else is worse. So the all-out attacker hits harder and guards poorly, while the careful fighter trades a step off the attack (−1) to keep a real defence (−2) — and melee&#39;s ebb and flow <em>is</em> that choice, remade each exchange.</p>
-<h2>Partial blocking — how much got through</h2>
+<h2 id="partial-blocking--how-much-got-through">Partial blocking — how much got through</h2>
 <p>A defence doesn&#39;t just win or lose; it can <strong>eat part</strong> of a blow. A defence <strong>equal to or better than</strong> the attack negates it; otherwise the attack&#39;s QR drops <strong>(5 − the defending QR)</strong> notches down the 1-2-3-4 scale. The failure end isn&#39;t arithmetic: a <strong>QR7</strong> defence is <em>no defence</em> (the attack lands at its full rolled QR), and a <strong>QR10</strong> defence <strong>makes it worse</strong> by a notch (you fumbled into it). Read off the attack&#39;s <strong>effective QR</strong> — what actually reaches the target:</p>
 <!-- matrix: melee-blocking -->
 <div class="matrix"><style>
@@ -83,9 +70,9 @@
 <!-- /matrix -->
 
 <p><em>(The better the defence, the more of the attack it eats; an equal defence blocks it clean — the just-barely parry. A botched defence leaves you worse off than no defence at all.)</em></p>
-<h2>Parry, and the counter</h2>
+<h2 id="parry-and-the-counter">Parry, and the counter</h2>
 <p>A <strong>parry</strong> meets steel with steel (or shield, or forearm). A <em>critical</em> parry (a QR well over the attack&#39;s) lets you <strong>counter</strong> on the same beat; an <em>overwhelming</em> one leaves the attacker off-balance — a chance to <strong>disarm</strong> or <strong>trade places</strong>. A parry can also shade the hit rather than stop it: a strong-but-not-clean one may <strong>shift the location roll</strong> a step or <strong>shave a point of DC</strong> instead of eating a whole QR.</p>
-<h2>Dodge — movie reality, or actual reality</h2>
+<h2 id="dodge--movie-reality-or-actual-reality">Dodge — movie reality, or actual reality</h2>
 <p>A <strong>dodge</strong> gives ground to deny the opening — and this is where forty years show. When these rules were first written, the reconstruction of historical Western martial arts was in its infancy (the SCA and its kin); it&#39;s a far more serious discipline now, and one thing it has taught us plainly is that <strong>dodging a blow is a losing strategy</strong> — you do not lean out of the way of a sword.</p>
 <p>So decide which reality your table is playing in, and read <em>dodge</em> accordingly:</p>
 <ul>
@@ -93,7 +80,7 @@
 <li><strong>Actual reality</strong> — a &quot;dodge&quot; is really <strong>pre-emptive movement</strong>: you anticipate the attack and shift <em>before</em> it commits, so it can&#39;t land well — denying the opportunity, not out-reacting the blade. That makes it a matter of <em>positioning and timing</em> (a held/pre-empting action — see <a href="/initiative/">Initiative</a>), not a reflex save after the fact. Under this reading, favour the parry, treat a dodge as something set up early, and penalize the desperate leap-aside for what it is.</li>
 </ul>
 <p>Either is legitimate — ForeSight colours no setting. Just tell the table which one, and modify the dodge to match.</p>
-<h2>Reach: every weapon has a range it wants</h2>
+<h2 id="reach-every-weapon-has-a-range-it-wants">Reach: every weapon has a range it wants</h2>
 <p><strong>One weapon property replaces a table of modifiers.</strong> A melee weapon is happiest at exactly one of three distances:</p>
 <table>
 <thead>
@@ -132,7 +119,7 @@
 <p><em>This is why a knife is a terrifying weapon in a lift and a joke in a courtyard, without a single special rule about lifts or courtyards.</em></p>
 <p><strong>And it needs no miniatures.</strong> ForeSight melee has always made footwork load-bearing — one of the real pleasures of it is that people genuinely <em>move</em> — but &quot;who is where&quot; has usually meant a hexgrid or a table full of figures. Three named bands replace measurement with a <strong>shared state you can hold in your head</strong>: not a position for each fighter, but <strong>one word per engagement</strong>, agreed by both. Reach, Normal, Close.</p>
 <p>That is enough to give you a <strong>qualitative reason to move</strong> — <em>I have a two-handed sword and he has a dagger, so I want him out there and he wants to be inside my guard</em> — with nothing on the table at all. Miniatures remain welcome and add nothing you need.</p>
-<h2>Footwork: giving ground, circling, and going over the furniture</h2>
+<h2 id="footwork-giving-ground-circling-and-going-over-the-furniture">Footwork: giving ground, circling, and going over the furniture</h2>
 <p>A melee is not two people standing still. Fighters <strong>circle, close, and give ground</strong> constantly — and every bit of that is <a href="/intense-action/">movement</a>, which means <strong>Coordination</strong>, which means it can go wrong.</p>
 <p><strong>This is the gap.</strong> In previous editions of ForeSight — and in essentially every other system — a complete klutz could manoeuvre in a melee exactly as well as an acrobat. Combat movement was free, so the most common physical activity in the game was the one place your body didn&#39;t matter. Meanwhile <em>backing off and tripping over something</em> is a staple of action cinema <strong>and</strong> of real fights, and it never happened at anybody&#39;s table.</p>
 <p><strong>Now it does, and it costs nothing to run.</strong> On a clear floor the ease factor is high and nobody rolls. It bites exactly where it should:</p>
@@ -144,7 +131,7 @@
 </ul>
 <p><strong>QR7 loses your balance; QR10 puts you on the floor</strong> — and being down in a melee is very bad indeed, which is the point. A graceful fighter can break contact, circle to better ground, and re-enter; a clumsy one commits to the fight whether they like it or not, because backing out is a risk they can&#39;t afford. <strong>That is a real tactical difference between two characters that the old rules simply couldn&#39;t express.</strong></p>
 <p><em>This is also where the <strong>graceful</strong> and <strong>nimble</strong> quirks earn their keep, and where Athletics (which absorbed Acrobatics) shows up in an ordinary fight rather than only on a rooftop chase.</em></p>
-<h2>Grappling, pinning, and fighting dirty</h2>
+<h2 id="grappling-pinning-and-fighting-dirty">Grappling, pinning, and fighting dirty</h2>
 <p>When a fight collapses into a clinch it stops being about <em>landing</em> blows and becomes about <strong>control</strong> — of the other person&#39;s limbs, of a weapon, of position. Seizing, pinning, twisting, gouging, choking.</p>
 <p>There&#39;s a light spine if you want one: track <strong>control</strong> as a few steps — <strong>partially restrained → restrained → completely restrained</strong> — and when the struggle is over an <em>object</em> (a knife, a gun, a fountain pen), simply <em>who holds it</em>. Each contested moment is an opposed roll — Strength, or whatever skill fits — and the winner shifts control a step; someone completely restrained is at the other&#39;s mercy: choked out, disarmed, pinned, or worse.</p>
 <p>But mostly: <strong>don&#39;t reach for a rule.</strong> Grappling is the purest case of ForeSight&#39;s founding bet — that the people at the table understand <em>this</em> particular tangle far better than any designer ever could. Run it on <a href="/initiative/">Initiative</a> (who acts, who&#39;s waiting for an opening) and <a href="/the-one-rule/">opposed resolution</a> (each contested thing), and improvise the rest.</p>
@@ -251,6 +238,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

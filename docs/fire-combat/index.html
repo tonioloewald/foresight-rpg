@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Fire Combat — ForeSight RPG</title>
   <meta name="description" content="One-pager. Ranged combat is the simplest application of the One Rule — one task against situational modifiers, not an opposed contest; you don&#39;t parry a…" />
   <link rel="canonical" href="https://foresight-rpg.com/fire-combat/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Fire Combat — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Fire Combat — ForeSight RPG" />
@@ -42,16 +29,16 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Fire Combat</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="fire-combat.md">
+<h1 id="fire-combat">Fire Combat</h1>
 <!--{ "parent": "conflict", "order": 3 }-->
 
 <p><em>One-pager. Ranged combat is the <strong>simplest</strong> application of the One Rule — one task against situational modifiers, not an opposed contest; you don&#39;t parry a bullet. But it rests on four facts almost every game skips: to shoot a thing you must <strong>know (or think you know) where it is</strong>; you must <strong>aim</strong>; <strong>firing disturbs your aim</strong> (recoil); and <strong>the target doesn&#39;t want to be hit</strong>.</em></p>
-<h2>One shot, one roll</h2>
+<h2 id="one-shot-one-roll">One shot, one roll</h2>
 <p>A shot is a <strong>Firearms</strong> (or Archery, Heavy Weapons) roll — Score × EF, roll under — and that&#39;s the whole of it; there is no defence roll, because the target can&#39;t block the bullet. Everything interesting lives in the <strong>Ease Factor</strong>, and the skill&#39;s <strong>BEF already bakes in the usual case</strong>: a trained, calm shooter putting a round into a <strong>static target at short range</strong> — pistol-practice conditions. The world adds and subtracts from there.</p>
 <p><em>(A firearm is still forgiving — thirty minutes&#39; training makes you genuinely dangerous — but that shows up in the <strong>skill formula</strong>, not the BEF: Archery is a hard, strength-hungry ½-skill you spend years getting good at. The gun is easy to be adequate with; the bow is not.)</em></p>
-<h2>What moves the ease factor</h2>
+<h2 id="what-moves-the-ease-factor">What moves the ease factor</h2>
 <p>Each of these is the One Rule&#39;s &quot;challenge at a glance&quot; made concrete for shooting. Reach for the ones that bite; ignore the rest:</p>
 <ul>
 <li><strong>How good an idea do you have of where it is?</strong> — cover, lighting, smoke and weather, your own eyesight. You shoot at where you <em>think</em> the target is.</li>
@@ -65,23 +52,23 @@
 <li><strong>Did you see the last shot land?</strong> — spot your fall of shot and you correct: a bonus to the follow-up.</li>
 <li><strong>Did the last shot buck you off target?</strong> — recoil: repeat or rapid fire past the first shot takes a penalty until you re-acquire.</li>
 </ul>
-<h2>The BEF is the careless shot, not the careful one</h2>
+<h2 id="the-bef-is-the-careless-shot-not-the-careful-one">The BEF is the careless shot, not the careful one</h2>
 <p><strong>Set the baseline where a shooter <em>starts</em>, and let good practice earn its way up.</strong> The aimed-attack skills — <strong>Firearms, Archery, Heavy Weapons</strong> — carry a <strong>BEF of 4, one lower than the usual 5</strong>, and that 4 describes someone who raises the weapon and fires. It is <em>not</em> someone who took a bead, braced, and picked their moment. Those are <strong>bonuses</strong>, and they should be, because of an asymmetry that has nothing to do with the maths:</p>
 <blockquote>
 <p><strong>A player will remember a bonus for doing the sensible thing. Nobody reliably remembers a penalty for skipping it.</strong></p>
 </blockquote>
 <p>&quot;Unaimed: −2&quot; and &quot;BEF two lower, aimed: +2&quot; are arithmetically identical and behave completely differently at a table. A <strong>bonus is claimed</strong> — the person who benefits is the one who has to remember it, and that is the only bookkeeping arrangement that has ever worked. A <strong>penalty must be imposed</strong> — the GM has to remember it <em>and</em> be the one to apply it, and a forgotten penalty silently makes everybody better than they should be, invisibly and permanently. A forgotten bonus, by contrast, is self-correcting: the player notices, and says so.</p>
 <p><strong>So the rule of thumb throughout: price the good habit, not the omission.</strong> Aim, brace, take your time, use the right tool, get a spotter — these earn modifiers. Failing to do them earns nothing, which is punishment enough.</p>
-<h2>Short-circuit it</h2>
+<h2 id="short-circuit-it">Short-circuit it</h2>
 <p>You never run that list in full. Assume a <strong>trained, competent, calm shooter</strong> — the BEF already covers it — and add a modifier only where the situation genuinely departs from &quot;the range.&quot; Ranged combat stays a one-roll affair; that&#39;s the point.</p>
-<h2>Modifiers follow what you <em>describe</em>, not labels</h2>
+<h2 id="modifiers-follow-what-you-describe-not-labels">Modifiers follow what you <em>describe</em>, not labels</h2>
 <p>Distrust the shorthand other games hand out — &quot;target unaware, +2.&quot; Unawareness is not a bonus in itself; it is <em>time and freedom to aim carefully</em>, and the bonus comes from <strong>the careful aim you then take</strong>. Quick-draw hip-fire at an oblivious target dummy? The dummy&#39;s obliviousness buys you nothing. Price what the character actually <strong>does</strong>.</p>
 <p>This is the general shape of it: the table rewards what a player <strong>narrates</strong>. Describe taking cover, steadying on the doorframe, waiting for the mark to turn — and earn the modifiers those actions deserve. Describe something reckless and eat the penalty — though a reckless choice that&#39;s <em>good story</em> is often worth the in-game cost. Punished by the dice, rewarded at the table.</p>
-<h2>Area fire — making a space dangerous</h2>
+<h2 id="area-fire--making-a-space-dangerous">Area fire — making a space dangerous</h2>
 <p>Most shooting in a close fight isn&#39;t aimed at anyone. It&#39;s <strong>area fire</strong>: blind or suppressive rounds thrown at a doorway, a window, a stretch of street to <strong>keep heads down and stop people breaking cover</strong>. It doesn&#39;t target a person — it makes an <strong>area dangerous to be in</strong>. Anyone caught in the beaten zone, crossing it, or breaking from cover through it risks a hit (resolve as a chance per exposed target — roughly one in QR of the rounds finds someone in the zone). Its worth is <strong>tactical, not a body count</strong>: pin the enemy, deny the ground, cover a teammate&#39;s rush — the spread-don&#39;t-concentrate logic from <a href="/intense-action/">Intense Action</a>. Full-auto and covering fire are the same idea with more lead.</p>
-<h2>A shot is several actions</h2>
+<h2 id="a-shot-is-several-actions">A shot is several actions</h2>
 <p>&quot;I&#39;m just going to shoot him&quot; is a <em>statement of intent</em>, not a single action — it plays out as discrete beats: <strong>draw, take a bead, fire, clear a jam, drop the magazine, reload</strong>. If shooting is all you&#39;re doing they simply happen in sequence, turn by turn, and the cost is in the slow ones. A <strong>reload</strong> is the usual culprit: a heavy or complex weapon&#39;s is measured in whole <strong>turns</strong>; a small, simple weapon&#39;s in a hit to your <strong>Initiative</strong> for the turn (which already bundles reaction speed and situational awareness). Doing anything <em>else</em> while you shoot — moving, covering a second door — is the <a href="/intense-action/">Intense Action</a> split: primary focus, worse at the rest.</p>
-<h2>Aim is a shot that doesn&#39;t go off</h2>
+<h2 id="aim-is-a-shot-that-doesnt-go-off">Aim is a shot that doesn&#39;t go off</h2>
 <p><strong>Aiming isn&#39;t a free action or a special case — it&#39;s a fire action that points the weapon instead of discharging it.</strong> Roll your Firearms exactly as if shooting, against the same situational modifiers, and if you succeed the weapon is <em>on the target</em>. What the roll buys is set by how well you did it:</p>
 <blockquote>
 <p><strong>Your bead = 5 − QR of your last aim.</strong> It applies to your <strong>next beat</strong> — including your next <em>aim</em>.</p>
@@ -133,9 +120,9 @@
 <p><strong>Recoil lands here, where it belongs.</strong> Firing spends the bead, and re-acquiring is an aim taken <em>under recoil</em> — an ordinary EF penalty, larger on a heavier weapon. Rate of fire then regulates itself physically: a battle rifle&#39;s second aimed shot is genuinely harder than a pistol&#39;s, with no rule saying &quot;heavy weapons are slower.&quot; A <strong>moving</strong> target works the same way — tracking him is a penalty on every aim, so a bead on a runner is one you have to keep buying.</p>
 <p><strong>And aiming is not the same as taking more shots.</strong> Beats poured into one shot are <em>concentration</em> — you&#39;re still doing exactly one thing, and the <a href="/intense-action/">Intense Action</a> ladder leaves you alone. Beats spent taking <em>more shots</em> are division, and the ladder charges for each. Patience is free; greed is not.</p>
 <p><strong>And it makes the aimed shot visible.</strong> A bead is a roll, and a roll is a thing that happens where people can see it — which is why the shooter taking careful aim is also the shooter most likely to be spotted and pre-empted (below).</p>
-<h2>Defence: cover, position, and pre-emption</h2>
+<h2 id="defence-cover-position-and-pre-emption">Defence: cover, position, and pre-emption</h2>
 <p>There is <strong>no roll to dodge a shot once fired</strong> — a bullet grants none of melee&#39;s cinematic grace. The defence against fire is <em>not being shot at</em>: cover, concealment, distance, and movement — run, and <strong>zig-zag</strong>, because a moving, unpredictable target is a hard one. The other half is <strong>anticipation</strong>, which is pure <a href="/initiative/">Initiative</a>: someone lying in wait decides to take their shot, and if you <em>notice</em> — the muzzle swinging toward you — you can <strong>pre-empt</strong> and dive for cover before they fire. And <strong>aiming is itself an action you can react to</strong>: a shooter who takes a careful bead has <em>shown</em> you the threat, so a target who catches it gets to answer. The aimed shot is the deadlier one — and also the one its victim is likeliest to see coming.</p>
-<h2>Then: location and damage</h2>
+<h2 id="then-location-and-damage">Then: location and damage</h2>
 <p>A hit rolls <strong>hit location</strong> and applies <strong>damage</strong> through armor — both on <a href="/damage/">Damage</a>.</p>
 <p><em>Designer&#39;s Note: ranged combat is where Score × EF is at its plainest — one roll, modifiers you can see and argue about — so this page mostly exists to name the four things other games quietly drop (you must know where it is, you must aim, firing wrecks your aim, the target resists) and to kill two reflexes: the automatic &quot;+2 because unaware&quot; (no — the bonus is the aim that being unobserved <em>lets</em> you take), and the belief that a wall is cover (it usually isn&#39;t).</em></p>
 
@@ -236,6 +223,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

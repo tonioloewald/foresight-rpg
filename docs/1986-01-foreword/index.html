@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>ForeWord — Introduction &amp; Definitions — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 9–12 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-01-foreword/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="ForeWord — Introduction &amp; Definitions — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="ForeWord — Introduction &amp; Definitions — ForeSight RPG" />
@@ -42,15 +29,15 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>ForeWord — Introduction &amp; Definitions</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-01-foreword.md">
+<h1 id="foreword--introduction--definitions">ForeWord — Introduction &amp; Definitions</h1>
 <!--{ "parent": "foresight-1986", "order": 1 }-->
 
 <p><em>ForeSight (1986), pp. 9–12 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=9">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=9">ForeSight 1986 · p.9 ↗</a></div>
 
-<h4>[1.0] ForeWord</h4>
+<h4 id="10-foreword">[1.0] ForeWord</h4>
 <p><strong>Designer&#39;s Notes:</strong> ForeSight (abbreviated FS) was originally intended as a science-fiction based role-playing game, but has been extended to a generic format. However, it is presented in these core rules as a science fiction game-system, rather than as a skeletal system.</p>
 <p>In general, the rules are formatted as follows:
 <strong>Designer&#39;s Notes:</strong> are comments by the designer of a general nature, regarding rationale, explanation, and so forth;</p>
@@ -64,7 +51,7 @@
 <p>The design approach was straightforward: I took a very nice resolution system (the ease-factor - quality rating system from James Bond 007) and made it capable of dealing with more diverse circumstances than it had been able to, and in some cases more realistic; I used this system for, more or less, everything (ie. combat or non-combat). In one step problems (a), (b), and (c) were minimized. In order to attack (d) I threw out and generalised as many rules as I could, and attempted to put every possible piece of information on the character sheet that I could, in as convenient a form as I could manage. Since then, the rules have been ironed out by fairly rigorous play-testing.</p>
 <p>Finally, I have attempted to make the rules as terse as possible: I seldom elaborate on special cases, although I am willing to reply to questions so long as no expense, or great trouble, on my part is involved; -Designer&#39;s Notes were kept to a minimum, and the descriptions of many game objects were minimized if analogues are familiar to most people, or information on them is available in other places (eg. a good encyclopaedia).
 Tonio Loewald (Canberra, 1987)</p>
-<h4>[1.1] Definitions</h4>
+<h4 id="11-definitions">[1.1] Definitions</h4>
 <p><strong>Definitions:</strong> The following are commonly used game terms and concepts, and are for convenience defined here in alphabetical order.</p>
 <p><strong>Ability:</strong> an ability in ForeSight is usually a skill or an attribute (if you think of knowledge as a sort of possession), and reflects some sort of capability (as one would expect).</p>
 <p><strong>Attributes:</strong> a character or creature in ForeSight (FS) has values for various things called attributes. These are quantifications of native, untrained abilities he/she/it possesses. References to a specific attribute possessed by a character are to his/her value for that attribute; to be specific, to his/her trained value in the attribute (which by default is set at the inherent value until improved or perhaps worsened). This value is a number, for humans it varies between five and sixteen.</p>
@@ -115,7 +102,7 @@ master of a starship which habitually plies a route
 between two systems may apply for a dual attachment,
 allowing transaction in both systems. Finally, note that
 I am referring to EFT systems, not star systems here.</p>
-<h4>[1.2] Conventions</h4>
+<h4 id="12-conventions">[1.2] Conventions</h4>
 <p><strong>Designer&#39;s Notes:</strong> There are a few important conventions in ForeSight which will be stated below, as ever, for your convenience.</p>
 <p><strong>Rounding:</strong> unless otherwise stated, any decimal or fractional value which has to be converted into an integer for some game purpose (eg. PCSs can be fractional as calculated) is rounded off, ie.: to the nearest integer. Rounding up means treating any number between n-1 and n (n an integer) as n. Rounding down means treating any number between n-1 and n (n an integer) as n-1.</p>
 <p><strong>Page Numbering:</strong> the nth page of rules section m is numbered m hundred and n (so, for example, this is the third page of section 1.0 and is thus page 103).</p>
@@ -152,7 +139,7 @@ I am referring to EFT systems, not star systems here.</p>
 </tbody></table>
 <p>Some procedures can result in a tie, and do not explain how such an eventuality is dealt with: each of the tied results has an equal chance of prevailing. Eg. if in a three sided combat all three leaders obtained equal QRs and furthermore had equal Initiative PCSs (ie. they were tied), each would have an equal chance of obtaining the best initiative, and each of the two remaining would have an equal chance of coming second. Such events are rare.</p>
 <p>In general if people have found some concept difficult, or some rule poorly phrased, I have endeavoured to explain it in depth, or rephrase it, respectively.</p>
-<h4>[1.3] Technological Levels</h4>
+<h4 id="13-technological-levels">[1.3] Technological Levels</h4>
 <p>Each technological level (TL) represents a level of technological (and, to a lesser extent, social) achieve-ment. (Later on, you will find a distinction between &quot;soft&quot; and &quot;hard&quot; technology. The human race is assumed to, in general, have progressed evenly in these areas, the former representing the biological and medical sciences, the latter representing the physical and metallurgical sciences.)</p>
 <p>TL0: Stone Age; hunter-gatherers, family/tribal groups, some speech</p>
 <p>TL 1: Agriculture; decent huts, organised religion, boats, government; Sumeria</p>
@@ -165,7 +152,7 @@ I am referring to EFT systems, not star systems here.</p>
 <p>TL8: Vast improvements in capacitor design, physicists [properly] explain the Mass Shunt/Anomaly Pump, genetic engineers reveal first successful scratch-built AI projects (to great public distaste), biomechanical modifications of humans become common, workable anti-matter power storage; 2400</p>
 <p>TL9: Vast improvements in reactor design, and further development of the Intersplit (improved Mass Shunt/Anomaly Pump), which does not need a prepared destination point, lead to possibility of space warfare. The Federation forms navy, android &#39;superhumans&#39; (Nexus 6, complete with errata) appear; 2600</p>
 <p>TL 10: This, and higher TLs, really do not have a place in ForeSight as it currently stands. Simply treat these TLs as labels representing TLs higher than 9. (If there is sufficient demand, information on these TLs shall be published also.)</p>
-<h4>[1.4] Design Credits</h4>
+<h4 id="14-design-credits">[1.4] Design Credits</h4>
 <p>The following people were involved in the production of this set of rules (whether they knew it, or not), in the roles stipulated, and probably others. I hope I have not left anyone out.</p>
 <p><strong>Research, Design, Layout, and Artwork:</strong> Tonio Loewald</p>
 <p><strong>Formulae</strong> (esp. Star Systems &amp; Spacecraft): Nick Doulgeris, Ralph Sutherland (and others)</p>
@@ -274,6 +261,6 @@ The people who designed the Macintosh</p>
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

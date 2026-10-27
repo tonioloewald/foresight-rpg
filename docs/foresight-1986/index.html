@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>ForeSight 1986 — the original edition (restoration in progress)</title>
   <meta name="description" content="A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." />
   <link rel="canonical" href="https://foresight-rpg.com/foresight-1986/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="ForeSight 1986 — the original edition (restoration in progress) (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="ForeSight 1986 — the original edition (restoration in progress)" />
@@ -42,9 +29,9 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>ForeSight 1986</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="foresight-1986.md">
+<h1 id="foresight-1986">ForeSight 1986</h1>
 <!--{ "pin": "top", "order": 99, "book": "foresight-1986", "headTitle": "ForeSight 1986 — the original edition (restoration in progress)", "description": "A community restoration of the original 1986 ForeSight rules — machine-extracted from the first edition with the 1987 errata folded in. Work in progress; corrections welcome." }-->
 
 <blockquote>
@@ -55,29 +42,29 @@ run-together line. They are published <em>because</em> they&#39;re rough: help u
 restoring them.</p>
 </blockquote>
 <p><em>This is the <strong>original ForeSight</strong> (Tonio Loewald, 1986, ISBN 0958789401) — the edition that actually shipped and was <strong>playtested hard for years</strong>. In all that time, no errors turned up beyond the single <a href="#the-1987-errata">1987 errata sheet</a>, which is folded in below. That track record is why the 1986 numbers are treated as <strong>calibration ground-truth</strong> for the modern edition: where the streamlined rules and the original disagree on a probability, the original has the table evidence.</em></p>
-<h2>Why it&#39;s here</h2>
+<h2 id="why-its-here">Why it&#39;s here</h2>
 <p>The out-of-print 1986 rules are hard to find, and a number of players want a faithful, readable copy very badly. So rather than sit on a private extraction, it&#39;s public — rough edges and all — as a base the community can correct toward a fully-restored original.</p>
-<h2>Download</h2>
+<h2 id="download">Download</h2>
 <ul>
 <li><a href="/foresight-rpg.epub">ForeSight RPG</a> <em>(ePub)</em></li>
 <li><a href="/foresight-rpg-foresight-1986.epub">ForeSight 1986 — Original Edition (community restoration)</a> <em>(ePub)</em></li>
 <li><strong><a href="/foresight-1986.pdf">ForeSight 1986 — original scan (PDF, 37 MB)</a></strong> — the source scan; print it, or read it alongside these pages as the ground truth.</li>
 </ul>
-<h2>Read alongside the original</h2>
+<h2 id="read-alongside-the-original">Read alongside the original</h2>
 <p>Every chapter is machine-extracted, so <strong>the source scan is the ground truth</strong> — compare against the PDF above. Each page here carries a small <strong><code>ForeSight 1986 · p.N ↗</code></strong> link that opens the PDF at that exact page, so a correction can point right at the original.</p>
-<h2>How the extraction works (so you can read around the noise)</h2>
+<h2 id="how-the-extraction-works-so-you-can-read-around-the-noise">How the extraction works (so you can read around the noise)</h2>
 <ul>
 <li><strong>Prose</strong> is reflowed into flowing paragraphs using the original&#39;s indentation, and lightly de-noised. This is a <strong>best-effort cleanup</strong>, not a faithful typesetting — expect residual OCR glitches (mangled title-graphics, the odd wrong letter, split words). Nothing is knowingly reworded and no rule is &quot;improved&quot;; when in doubt, trust the PDF.</li>
 <li><strong>Stat charts</strong> are being <strong>reconstructed into live, filterable data tables</strong> (the weapon chart, damage table, vehicle table, and more are done — browse and filter them). Charts not yet reconstructed are shown verbatim in monospaced blocks.</li>
 <li>This section is <strong>site-only</strong> on the web, and also ships as its <strong>own ePub volume</strong> — separate from the streamlined edition; it&#39;s a different book.</li>
 </ul>
-<h2>Help finish it</h2>
+<h2 id="help-finish-it">Help finish it</h2>
 <p>Corrections are hugely welcome — this is exactly the kind of thing a few dozen readers can fix faster than one person. Spot a mangled table cell, a dropped word, a chart that needs rebuilding?</p>
 <ul>
 <li><strong>File an issue or a pull request</strong> on the repo: <strong><a href="https://github.com/tonioloewald/foresight-rpg">github.com/tonioloewald/foresight-rpg</a></strong> — cite the page number from the source marker.</li>
 <li>The source lives in <code>src/rules/1986-*.md</code>; table blocks are the priority.</li>
 </ul>
-<h2>The 1987 errata</h2>
+<h2 id="the-1987-errata">The 1987 errata</h2>
 <p>The only known corrections to the 1986 rules, printed <strong>Fri, Oct 23 1987</strong>, keyed to the book&#39;s chapter-page codes (<code>2xx</code> Characters, <code>3xx</code> Resolution, <code>5xx</code> Travel, <code>7xx</code> Star System, <code>8xx</code> Starships):</p>
 <ul>
 <li><strong>Skills / Limit (205R)</strong> — <em>&quot;1 indicates a skill where talent is as important as experience; 1.5 indicates a skill where experience outweighs talent. A character may not possess a skill at a level higher than the highest of the attributes … in the skill&#39;s formula, multiplied by its limit, plus two (rounded off).&quot;</em> (The headline fix; already present in this printing.)</li>
@@ -200,6 +187,6 @@ restoring them.</p>
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

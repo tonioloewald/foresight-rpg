@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Scores — ForeSight RPG</title>
   <meta name="description" content="One-pager. Every ability you roll — attribute or skill — has a Score (how good you are) and a Base Ease Factor (how hard a standard use is)." />
   <link rel="canonical" href="https://foresight-rpg.com/scores/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Scores — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Scores — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Scores</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="scores.md">
+<h1 id="scores">Scores</h1>
 <!--{ "parent": "core", "order": 4 }-->
 
 <p><em>One-pager. Every ability you roll — attribute or skill — has a <strong>Score</strong> (how good you are) and a <strong>Base Ease Factor</strong> (how hard a standard use is). This page is where scores come from.</em></p>
-<h2>Score = formula + level</h2>
+<h2 id="score--formula--level">Score = formula + level</h2>
 <p>An <strong>attribute&#39;s</strong> score is simply its value (Strength 11 is a score of 11).</p>
 <p>A <strong>skill&#39;s</strong> score is built from two parts:</p>
 <blockquote>
@@ -59,23 +46,23 @@
 <li>The <strong>level</strong> is what training and experience add on top. A brand-new skill is level 0 — you perform at the bare talent your attributes give you — and every level bought raises the score by one.</li>
 </ul>
 <p>So a character with CO 12, PC 10 has a Firearms <em>formula</em> of 11; untrained (level 0) their Firearms score is 11, and ten levels of training make it 21. <strong>Skills can climb well past attributes</strong> — that&#39;s why a trained specialist outshoots a naturally well-coordinated amateur.</p>
-<h3>Talent-light skills (open question)</h3>
+<h3 id="talent-light-skills-open-question">Talent-light skills (open question)</h3>
 <p>Some skills reward training far more than raw talent. The classic ForeSight move is to halve the formula for these — <strong>Score = (average of attributes) ÷ 2 + level</strong> — so the untrained baseline is low and almost all of a master&#39;s score is earned. <em>Decision pending: keep this two-tier system (full-average vs. half-average formulas), or flatten to a single full-average rule for simplicity? The 2004 templates went further still, with quarter-average formulas for a few skills (Confidence, then <code>(AP+WP)÷4</code>, was one — <strong>AP</strong> has since gone, and Confidence is now a flat <code>IN</code>); those should probably collapse into whichever tiering we keep.</em></p>
-<h2>Limit (and maximum level)</h2>
+<h2 id="limit-and-maximum-level">Limit (and maximum level)</h2>
 <p>Every skill has a <strong>Limit</strong>, which follows directly from its formula type: <strong>1</strong> for an average-formula skill, <strong>1.5</strong> for a half-average (talent-light) one. The Limit is the <strong>max-level multiplier</strong>:</p>
 <blockquote>
 <p><strong>Maximum level = highest constituent attribute × Limit.</strong></p>
 </blockquote>
 <p>So a talent-balanced skill tops out around its best attribute, while a training-dominated one can be pushed half again as far. You can&#39;t become world-class on mediocre fundamentals — and the cap is the strongest argument for keeping the half-average tier: it&#39;s not just a lower floor, it&#39;s a higher ceiling <em>earned</em> by training.</p>
-<h2>Cost</h2>
+<h2 id="cost">Cost</h2>
 <p>Every skill also has a <strong>Cost</strong> — the points it takes to raise one level, for advancement and point-buy. <strong>Most skills cost 1 or 2</strong>, the broader and more useful ones costing 2. A <strong>pervasive powerset</strong> — a whole school of magic or a Chi discipline reached through a single skill — costs far more, on the order of <strong>6–8 per level</strong>, because that one skill unlocks an enormous, ever-expanding toolbox. Acquiring a skill from scratch (reaching its formula baseline) costs a small flat amount; thereafter each level costs the skill&#39;s Cost. <em>(Full advancement economy lives with the experience rules.)</em></p>
-<h2>Beyond 20</h2>
+<h2 id="beyond-20">Beyond 20</h2>
 <p>Scores are counted as at most <strong>20</strong> for the multiplication — but they keep paying off above that as an <strong>ease-factor bonus</strong>: every full <strong>3 points over 20</strong> is <strong>+1 EF</strong>.</p>
 <blockquote>
 <p>20–22 → 20 — 23–25 → 20+1 — 26–28 → 20+2 — and so on.</p>
 </blockquote>
 <p>This is what lets the truly exceptional attempt things lesser practitioners simply cannot. A score of 20+2 doesn&#39;t just succeed more often; the extra ease factor opens up tasks that were at EF 0 (impossible) for everyone else. (See The One Rule for how a +1 EF is worth your whole score in the sweet spot — which is why these bonuses matter so much at the top end.)</p>
-<h2>Base Ease Factor</h2>
+<h2 id="base-ease-factor">Base Ease Factor</h2>
 <p>Each ability also carries a <strong>BEF</strong> — the ease factor of a <em>standard</em> application, before any situational modifiers. BEFs hover around 5. A BEF can also <strong>fold in a standing familiarity</strong>, written as a sum: <code>3 + E</code>, where <strong>E</strong> is your familiarity with the environment, is the classic ForeSight treatment of Initiative — you react faster aboard your own ship than in a strange city. (The skill table ships Initiative at a flat <strong>BEF 5</strong>; the folded form is an alternative to it, not an addition.) The Score × BEF product is your baseline success chance; the situation moves it from there.</p>
 <p><em>Designer&#39;s Note: &quot;formula + level&quot; is why ForeSight needs no separate stat for natural talent versus trained skill — the attributes are the talent, the level is the training, and the same number captures both. Set your attributes once; everything you learn builds on them.</em></p>
 
@@ -176,6 +163,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>ForeSight — Playtest Pack — ForeSight RPG</title>
   <meta name="description" content="Table-ready material for a quick playtest. Build = archetype + 3–5 background factors + a quirk or two." />
   <link rel="canonical" href="https://foresight-rpg.com/playtest-pack/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="ForeSight — Playtest Pack — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="ForeSight — Playtest Pack — ForeSight RPG" />
@@ -42,14 +29,14 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>ForeSight — Playtest Pack</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="playtest-pack.md">
+<h1 id="foresight--playtest-pack">ForeSight — Playtest Pack</h1>
 <!--{ "parent": "reference", "order": 3 }-->
 
 <p>*Table-ready material for a quick playtest. Build = <strong>archetype + 3–5 background factors + a quirk or two</strong>. Skills are deliberately few and broad; you specialize with <strong>Long-Term Familiarities (LTFs)</strong>, each a stackable +1.*</p>
 <hr>
-<h2>The Folded Skill List</h2>
+<h2 id="the-folded-skill-list">The Folded Skill List</h2>
 <p>A <strong>score = formula + level</strong> (see Scores). Formulas use the five attributes <strong>ST, CO, IN, PC, WP</strong>. Each skill also has a <strong>Limit</strong> (max level = highest constituent attribute × Limit; <strong>1</strong> for average formulas, <strong>1.5</strong> for half-average ones) and a <strong>Cost</strong> (points per level — <strong>1–2</strong> for ordinary skills, the broader ones costing 2; a <strong>pervasive powerset</strong> like Incantation costs <strong>6–8</strong>, since one skill unlocks a whole toolbox). Half-average skills use <em>half</em> the listed average as their baseline. <em>(Cost only matters for advancement — playtest characters are built from background-factor grants. The 1-vs-2 split below is provisional.)</em></p>
 <p><strong>Not skills — roll the attribute</strong> (everyone has these by nature, no skill needed):</p>
 <ul>
@@ -184,7 +171,7 @@
 <p><em>Folding principle: when in doubt, it&#39;s one of these skills plus an LTF and/or a Field. Don&#39;t invent a new skill — narrow an existing one.</em></p>
 <p><strong>Magic is not on this list.</strong> It&#39;s a deliberately <strong>expensive, multi-skill subsystem</strong> — historically <strong>Mana</strong> (the power-pool/gather skill), <strong>Incantation</strong> (casting as an action), and the heavier <strong>Ritual</strong> and <strong>Casting</strong> — and even with all of those costed steeply it was <em>barely</em> game-balanced. That cost is the price of how powerful magic is. It requires the <strong>Magical Talent</strong> background factor and is deferred to the Magic chapter; leave it out of a quick playtest unless you&#39;ve prepped that chapter.</p>
 <hr>
-<h2>The Four Archetypes</h2>
+<h2 id="the-four-archetypes">The Four Archetypes</h2>
 <p>Each is a base of <strong>40 attribute points across the five attributes (each 6–10)</strong> — an average of 8. Reallocate freely; these are starting shapes, not straitjackets.</p>
 <table>
 <thead>
@@ -232,7 +219,7 @@
 </tbody></table>
 <p><em>The Socialite is now built on <strong>IN and PC</strong> — the social skills are <code>(IN+PC)/2</code> since Appearance stopped being an attribute. Looks come from an Appearance quirk, which can say <strong>who</strong> they work on.</em></p>
 <hr>
-<h2>Background Factors</h2>
+<h2 id="background-factors">Background Factors</h2>
 <p>Each is <strong>customizable and suggestive</strong>: rename it, pick its specialty, and let it imply familiarities and connections beyond the listed skills. <strong>Skills granted more than once simply add</strong> (Active Duty twice = Firearms +6). Levels are what each factor buys; attributes it grants ignore the 6–10 creation band up to the racial max.</p>
 <p><strong>Take 3–5.</strong> Three = rookie, four–five = competent professional.</p>
 <table>
@@ -320,7 +307,7 @@
 </tr>
 </tbody></table>
 <hr>
-<h2>Build a Character in 30 Seconds</h2>
+<h2 id="build-a-character-in-30-seconds">Build a Character in 30 Seconds</h2>
 <ol>
 <li><strong>Pick an archetype</strong> (tweak attributes if you like).</li>
 <li><strong>Pick 3–5 background factors.</strong> Name and specialize each. Add up the skill grants (duplicates stack).</li>
@@ -430,6 +417,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

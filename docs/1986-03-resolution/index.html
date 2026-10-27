@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Resolution System — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 29–42 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-03-resolution/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Resolution System — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Resolution System — ForeSight RPG" />
@@ -42,18 +29,18 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Resolution System</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-03-resolution.md">
+<h1 id="resolution-system">Resolution System</h1>
 <!--{ "parent": "foresight-1986", "order": 3 }-->
 
 <p><em>ForeSight (1986), pp. 29–42 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=29">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=29">ForeSight 1986 · p.29 ↗</a></div>
 
-<h4>[3.0] Resolution System</h4>
+<h4 id="30-resolution-system">[3.0] Resolution System</h4>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=30">ForeSight 1986 · p.30 ↗</a></div>
 
-<h4>Summary of Resolution System</h4>
+<h4 id="summary-of-resolution-system">Summary of Resolution System</h4>
 <ol>
 <li>Determine the <strong>Skill</strong>, <strong>Attribute</strong>, or <strong>Skill/Field</strong> combination, in use.</li>
 <li>Determine <strong>Base Ease Factor (BEF)</strong>; substituting relevant Familiarities (G, E, T) if necessary. For attribute rolls the BEF is generally seven (7); for skills a value of five (5) is typical.</li>
@@ -287,7 +274,7 @@
 <p><strong>How to Use This Table.</strong> If you have trouble multiplying (but not adding) then you may find this table handy. To determine the upper bound for die rolls to achieve a given QR at a given SC, divide the SC into hundreds, tens, and units, and add the entries for those values corresponding to the QR. For example, an SC of 125 = 100 + 20 + 5. The maximum roll for a QR3 = 50 + 10 + 2 = 62. So a roll under 62 would at worst be a QR3.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=31">ForeSight 1986 · p.31 ↗</a></div>
 
-<h4>[3.0] Resolution of Character Actions</h4>
+<h4 id="30-resolution-of-character-actions">[3.0] Resolution of Character Actions</h4>
 <p><strong>Designer&#39;s Notes:</strong> Various procedures and game situations will call for tasks to be resolved, rolls to be made, and so on. The Resolution system in ForeSight is central to the game system, and should be clearly understood by the GM, and preferably the players as well.</p>
 <p><strong>Definition:</strong> In ForeSight a given task will have two associated numbers. One of these is the relevant <strong>PCS</strong>, or Primary Chance of Success, which is the PCS of the skill, or the value of the attribute, the GM feels is most applicable to the task; the other is the net <strong>EF</strong> or Ease Factor, which is that of the skill chosen by the GM. The Ease Factor may be modified by circumstances, ie. the sum of any relevant, and any GM decreed, modifiers.</p>
 <p>If the task involves a skill, then the EF = the skill&#39;s BEF plus these modifiers. (Note: a character&#39;s BEF for some skill may be higher (or lower) than that listed owing to some talent or aptitude he/she possesses.)</p>
@@ -312,7 +299,7 @@
 <p>If a task requires a skill which exists, but which the character lacks, then the BEF used is that of said skill - 2, and the PCS is equal to the unmodified value of its formula (inserting the character&#39;s trained attributes appropriately; treat Cha as equal to zero for a character without the Charisma skill).</p>
 <p><strong>Using A Skill with a Field.</strong> Some skills are simply methods of handling knowledge (especially Implement, Recall, Diagnose, and Repair), and can only be used in conjunction with a relevant field. Implementation and recall are used with theoretical fields and humanities, while diagnosis and repair are used with technical fields. Other rules allow fields for Dancing, Unarmed Combat, Search, Scan, and so forth.</p>
 <p>Sometimes a skill will only be applicable to a task if the character possessing the skill also possesses a field, eg. a character with Scan or Search would also need Biology to determine the characteristics of some organism, and to patch up a wounded friend not only diagnose and repair skills, but the fields emergency and/or standard medical techniques, would be necessary. Such a task is designated a skill/field task. If the character has the requisite knowledge, then the task is resolved with one of the modifications to EF being the familiarity modifier the character has associated with the field he/she is using. Eg. a character who has just learnt emergency medical techniques might have associated with it a familiarity modifier of -2, and therefore both his/her diagnosis and repair tasks incur a -2 modifier.</p>
-<h4>[3.1] General Notes</h4>
+<h4 id="31-general-notes">[3.1] General Notes</h4>
 <p>The following modifiers to resolution attempts are general in nature, and are given as a guide to the GM.</p>
 <p><strong>Modifiers for Difficulty</strong></p>
 <table>
@@ -375,7 +362,7 @@
 <p>Note also that if equipment is involved in the task being resolved, then the PM of the equipment is also used as an EF modifier (assuming that it is being correctly used).</p>
 <p>The references to Player Input reflect occasions when a player should not only tell the GM what his/her character is doing, but how he/she will go about it. This doesn&#39;t mean that either the GM or the player should know all about the task at hand, but whether or not the course of action the player suggests is reasonable, or whatever. Least of all should these modifiers apply to Repair and Research tasks which a player or GM cannot be expected to know anything about.</p>
 <p><strong>Applications.</strong> While the most extensive set of rules incorporating the FS resolution system is the Combat system [4.0], there are several other important examples of the resolution system in action.</p>
-<h4>[3.2] Character Interaction</h4>
+<h4 id="32-character-interaction">[3.2] Character Interaction</h4>
 <p><strong>Player Character – Non-Player Character Interaction</strong></p>
 <p>QR of Charisma Roll by PC:</p>
 <table>
@@ -548,7 +535,7 @@ demeanor.</p>
 </tr>
 </tbody></table>
 <p>* Note: this modifier also applies to Charisma if used on a subject who is sexually compatible with the character.</p>
-<h4>[3.3] Seduction</h4>
+<h4 id="33-seduction">[3.3] Seduction</h4>
 <p>Seduction is performed in four stages. It may only be attempted against an NPC who is sexually compatible with the attempting PC, or it will almost automatically fail (-4, or worse, at all stages). If the PC is not actually compatible with his/her target then she/he must make a WP roll before each stage to go through with it. If an S result has already been achieved against the NPC during interaction by that PC (as spokesperson) then the attempt may begin at stage [iii], if the S was achieved by someone else in the group, then the attempt may begin at stage [ii].</p>
 <p>Note that there are considerable modifiers for seduction based upon the seducing character&#39;s AP.</p>
 <p>[i] The seduction attempt begins with an opening: a witty line, a glance, whatever, and is performed at +2 (using Seduction skill, of course).</p>
@@ -561,7 +548,7 @@ demeanor.</p>
 <p>Again the NPC receives an EF = QR (of Seduction roll) Empathy roll to figure out what is going on, and succeeds on a QR 3 or better.</p>
 <p>[iv] Finally the PC attempts his/her unspeakable act (referred to as the &quot;when and where&quot; step in James Bond); resolved by a Seduction roll at -2. If contraceptives are not used then, if applicable, there may be issue (likelihood of perhaps 5%) from the affair.</p>
 <p>Again the NPC receives an EF = QR (of Seduction roll) Empathy roll to figure out what is going on, and succeeds on a QR 3 or better, in which case the subject may escape the act.</p>
-<h4>[3.4] Repair</h4>
+<h4 id="34-repair">[3.4] Repair</h4>
 <p>There are two repair procedures in ForeSight, these are termed cursory and diagnostic, and refer to the methods used to determine the nature of the problem. Note that medical techniques (especially removing combat derived damage) are simply special cases of these.</p>
 <p><strong>Cursory Repair</strong></p>
 <p><strong>Procedure:</strong> the repairing character must have the
@@ -679,7 +666,7 @@ appropriate field of knowledge, and tools. The character makes a Search roll in 
 </tbody></table>
 <p><strong>Repair &amp; Recovery Rates.</strong> The procedures outlined tell you how long it takes to completely repair an object. If D levels of damage were suffered, then (if we let S = 1+2+..+D = D(D+1)/2) the first level is repaired after D/S x the total time, the second after (D-1)/S, etc. (the last being repaired in the final 1/S x total time).</p>
 <p>For humans, the proportions are reversed: the first level being recovered in 1/S x total time, the last in D/S x the total time. The character may elect to switch to natural recovery at any time, and the process is, of course halted by any further injury.</p>
-<h4>[3.5] Design &amp; Construction</h4>
+<h4 id="35-design--construction">[3.5] Design &amp; Construction</h4>
 <p><strong>Designer&#39;s Note:</strong> many people complain that in Fantasy
 Role-Playing Games it is often impossible to
 construct or modify the magic items listed in the
@@ -752,7 +739,7 @@ make the construction and modification of items on its equipment list possible. 
 <p><strong>Designer&#39;s Notes:</strong> Most scratch-built contraptions, and indeed early models of mass-produced designs, will have bugs and defects of a minor nature, which will have to be ironed out over a period of trial and testing. QR1 constructions can be assumed to have no bugs of consequence, while QR4 constructions may have several bizarre and unamusing defects (I recommend good-humoured malice).</p>
 <p><strong>Cost:</strong> while this is up to the GM, the parts necessary to build an object should perhaps cost twice that object&#39;s market value (remember, manufacturers use tried and trusted designs, robot assembly lines, and buy parts in bulk).</p>
 <p><strong>Example of Construction:</strong> a new settler arrives on the colony planet Paradise III and wants to set up a farm on the 1000 hectare plot allocated to him by the Colonial Office. His wife is a qualified soil scientist (knows agriculture, and geology, as well as the diagnose, implement, and recall skills) and decides to design an cultivation plan for the spread, and achieves a QR 2. Her set-up is certainly sound, and he decides to implement it by hopping on his tractor, and trying it out. Unfortunately while he has been reading up on these things, and does know how to drive, he has a rather poor repair skill (he was previously a computer repairman) and gets a QR 7. During the rainy season they get to watch their top-soil en-route to the Persimmon Sea. Oh well, maybe next year.</p>
-<h4>[3.6] Research</h4>
+<h4 id="36-research">[3.6] Research</h4>
 <p>In Foresight I divide Research into two types: that which attempts to adapt existing knowledge or theory to some use the researcher has in mind for it, and that which involves attempting to extend a field of knowledge so that it encompasses some new observation. These are termed Applied Research and Theoretical Research, respectively. An example of Applied Research would be our current attempts to design Fusion Power Plants using the models we have of the atom, and the strong and weak nuclear forces -we have the theory (we hope) we just haven&#39;t been able to implement it yet; an example of Theoretical Research would be the attempt to figure out how White Dwarfs can be fitted into the formulae which seem to explain other stars (which seems to have been done).</p>
 <p><strong>Applied Research</strong></p>
 <p><strong>Designer&#39;s Notes:</strong> this is where I start tossing around the term GM&#39;s discretion, I guess. The character wants to adapt some current theory to implementation with current &quot;technology&quot;: the GM must decide what the appropriate fields of knowledge are, and whether the task is possible, marginal (the theory may or may not be sound), or impossible. The character must first do some Research (using the Recall skill); success will inform the character whether the desired implementation is possible, marginal, or impossible, with current technology. If it is possible (or marginal, if the character wishes to continue), that the imple-mentation will work, then the character attempts to so Implement the theory, at -QR (of research). If this yields QR 3 or better, then the program has been successful, and the same, or another, character may proceed with a design, with an additional adjustment of -QR (of implementation) to the diagnose roll. How much time all this takes is up to the GM, but could be several years, for a complex or innovative device.</p>
@@ -760,7 +747,7 @@ make the construction and modification of items on its equipment list possible. 
 
 <p><strong>Theoretical Research</strong></p>
 <p><strong>Designer&#39;s Notes:</strong> there are two sorts of ways this is likely to crop up in play. The character may be a researcher of some sort attempting, for whatever reason, to further and expand his/her field, gain a Nobel Prize, or have a famous Paradigm named after him/her, or the character may be in the considerably more likely position of wanting to explain some observation in terms of the theory he/she knows (on the spot, with minimal references). To do this the character will require the relevant fields. If the observation has to be made (ie. data must be gathered), then the character makes a Search roll. Once the data is gathered, the character must Recall the relevant knowledge (from memory and convenient references, lack of these makes this task difficult), at -QR (of Search; if data gathered by third party, then add one to the Search QR they achieved). Finally the analysis of the observation is made by making an Implement roll at -QR (of Recall), the QR of which determines the quality of the analysis. A QR 1 result may, at the GM&#39;s option, be of some interest, and worthy of a write-up in Nature, or some such journal.</p>
-<h4>[3.7] Animal Training</h4>
+<h4 id="37-animal-training">[3.7] Animal Training</h4>
 <p>Animal training, using the skill of the same name, is performed in stages, each stage normally taking about two weeks. After each stage is attempted, the animal gains an EF = QR (of Animal Training) Initiative roll to ignore (resist) the training, succeeding on a QR 3 or better. Some animals (eg. dolphins) may cooper-ate with their trainers; they should make an EF=5-QR (of Animal Training) Initiative roll to assimilate (take in) the training. The stages are:</p>
 <p>[i]: Training the animal to be comfortable around the trainer: eat off his/her hand, perch on his/her wrist, or whatever; the roll is at +2.</p>
 <p>[ii]: Training the animal to be comfortable around mem-bers of the trainer&#39;s species in general; normal roll.</p>
@@ -772,7 +759,7 @@ make the construction and modification of items on its equipment list possible. 
 modify all rolls by an additional +1, but the animal will
 do nothing for its owner willingly, and flee or turn on
 him/her if it can.</p>
-<h4>[3.8] Penetrating Computer Systems</h4>
+<h4 id="38-penetrating-computer-systems">[3.8] Penetrating Computer Systems</h4>
 <p>A computer system in FS should be assigned a Security
 rating, and a TL. The Security Rating should vary from
 5 (minimal) to 35 (designed for security, eg. Defence,
@@ -802,7 +789,7 @@ one, it depends on the system); Implement/
 Programming roll at -2.</p>
 <p>Any stage, which was not detected, may be repeated so
 long as all previous stages have been completed.</p>
-<h4>[3.9] Penetrating Electronic Security Systems</h4>
+<h4 id="39-penetrating-electronic-security-systems">[3.9] Penetrating Electronic Security Systems</h4>
 <p>Like a computer, a security system will have a Security
 Rating (from 5 (very insecure) to 35 (extremely
 secure), though usually below 15), and a TL. After
@@ -827,7 +814,7 @@ information); Repair/Security Systems roll at +2.</p>
 <p>[iii]: Persuading the system to do one thing it shouldn&#39;t (within reason, eg. opening a security door for the benefit of the intruder); normal Repair/Security Systems roll.</p>
 <p>[iv]: Reconfiguring the system&#39;s directives to the personal taste of the intruder (eg. treat him/her and all his/her friends as top-level authorised personnel indefinitely); Repair/Security Systems roll at -2.</p>
 <p>Any stage, which was not detected, may be repeated so long as all previous stages have been completed.</p>
-<h4>[3.10] Resolving Wilderness Encounters</h4>
+<h4 id="310-resolving-wilderness-encounters">[3.10] Resolving Wilderness Encounters</h4>
 <p><strong>Procedure:</strong> Both the sides involved make a Scan roll (using the best SC - EFxPCS in the group) and a Stealth roll (using the worst) and add the QRs together (this sum is reduced by four if the party was attempting an ambush, by two if the characters were proceeding cautiously, ie. at half speed, and is unadjusted otherwise). If one side&#39;s sum is four or more lower than any other side&#39;s then the former is said to have surprised the latter (if an ambush was attempted, then the latter walked right into it); if one side&#39;s total was three lower than the other&#39;s, that side may surprise the other at observation range, or start with the initiative at contact range; if one side&#39;s total was two lower, it may start combat at either contact or observation range (its choice) and determine initiative normally, or it may have the initiative and leave the choice of range to the other side; otherwise, the initial range is determined randomly (25% chance of contact range, 75% chance of observation range). See Combat Set-Up [4.1].</p>
 <table>
 <thead>
@@ -874,7 +861,7 @@ information); Repair/Security Systems roll at +2.</p>
 </tr>
 </tbody></table>
 <p>Of course the various parties involved may not be hostile to one another, in which case proceed to the interaction system [3.2], and read &quot;startled&quot; instead of &quot;surprised&quot;, as in, &quot;Oh, you startled me!&quot;</p>
-<h4>[3.11] Teamwork</h4>
+<h4 id="311-teamwork">[3.11] Teamwork</h4>
 <p>Rather than provide hard and fast rules for teamwork in ForeSight, I&#39;d like to give some common-sense approaches to the topic, each reflecting the different ways in which teamwork can improve the likelihood of tasks being performed quickly, and/or successfully.</p>
 <p>So, at this point I will simply state that common sense is probably the best approach to such situations.</p>
 <p><strong>Division of Labour.</strong> Perhaps the easiest form of teamwork to use involves splitting up tasks into small parts, and then resolving each task separately. Eg. if a bunch of characters want to design a new sort of laser pistol (smaller, nastier, and all that), then one team might work on a superior lasing &quot;tube&quot;, another might work on phase-conjugate mirror design, another on a more efficient capacitor, and another on the targeting mechanism. Each team might consist of four people (and a bunch of computers, and stuff). Two are engineers who perform &quot;design&quot; tasks, and come up with alternative designs; two are technicians who assemble (&quot;construct&quot;) and test prototypes. Finally, a project coordinator performs &quot;diagnose&quot; actions on the prototypes, and makes final decisions on which will be accepted, rejected, and returned for further improvement.</p>
@@ -882,7 +869,7 @@ information); Repair/Security Systems roll at +2.</p>
 <p><strong>A Second Opinion.</strong> If two people diagnose a patient, or ailing device, then they should be more likely to make a sound diagnosis. A character should only have to make an (EF7) IN roll to realise that a superior diagnosis is, in fact, superior.</p>
 <p>Similarly, characters using Implement to form hypotheses should be given (unmodified) Implement rolls to realise that a superior, rival hypothesis is in fact superior. (they may, of course, refuse to admit it.)</p>
 <p>Characters who fail the above rolls will tend to believe in their own opinions if they are assertive, and rival opinions if they are receptive (intellectually). You might like to make EF5 Assertive rolls for the characters involved (success implying belief in one&#39;s own ideas), but I wouldn&#39;t advise it.</p>
-<h4>[3.12] Skill Guidelines</h4>
+<h4 id="312-skill-guidelines">[3.12] Skill Guidelines</h4>
 <p>The following comprise guidelines for using FS skills for a variety of tasks. These should not be seen as the way to use the skills covered, but as no more than what they are. Examples.</p>
 <p>There are three primary sorts of example given in the rules which follow. Simple resolution procedures merely require a single skill roll to be performed for a task to be completed. Opposed resolution procedures involve the execution of a task which is liable, later, to become subject to countermeasures.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=38">ForeSight 1986 · p.38 ↗</a></div>
@@ -1641,6 +1628,6 @@ information); Repair/Security Systems roll at +2.</p>
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

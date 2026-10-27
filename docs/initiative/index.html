@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Initiative — ForeSight RPG</title>
   <meta name="description" content="One-pager. Initiative answers when do you act — and who knows what, when? It cuts a tense situation into brief rounds and orders who moves within one." />
   <link rel="canonical" href="https://foresight-rpg.com/initiative/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Initiative — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Initiative — ForeSight RPG" />
@@ -42,27 +29,27 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Initiative</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="initiative.md">
+<h1 id="initiative">Initiative</h1>
 <!--{ "parent": "conflict", "order": 1 }-->
 
 <p><em>One-pager. Initiative answers <strong>when do you act — and who knows what, when?</strong> It cuts a tense situation into brief rounds and orders who moves within one. It runs combat, but equally a quick-draw, an ambushed negotiation, a courtroom, a car chase. Its companion is <a href="/intense-action/">Intense Action</a>: Initiative sets the <strong>when</strong>, Intense Action prices the <strong>how much</strong>.</em></p>
 <p>Tense situations run in <strong>rounds</strong> — brief bursts separated by waiting for someone to make a move. A round is as long as the contest&#39;s tempo demands: direct combat is roughly 3–5 seconds with random lulls (ducked behind cover, catching your breath); a pursuit or a negotiation runs longer. Don&#39;t track the clock — the GM sets the tempo to fit the scene.</p>
-<h2>Awareness: from narrative to &quot;shit going down&quot;</h2>
+<h2 id="awareness-from-narrative-to-shit-going-down">Awareness: from narrative to &quot;shit going down&quot;</h2>
 <p>The hard, real moment is the transition out of story-telling into a fight. Every character enters it somewhere on a spectrum:</p>
 <blockquote>
 <p><strong>Surprised</strong> (woken by the attack) → <strong>Startled</strong> → <strong>Alert</strong> → <strong>Ready</strong> → <strong>Lying in wait</strong> (the ambusher)</p>
 </blockquote>
 <p><strong>Awareness and position drive Initiative.</strong> Coarse, obvious effects modify it: a visored helmet or a blind corner is a disadvantage; a sniper studying the scene in safety, or the enemy behind you with the height, is a large advantage. Ballpark each from about <strong>+4</strong> (you see everything and they don&#39;t; you&#39;re behind them) to <strong>−4</strong> (the reverse). Need a number for awareness? It&#39;s about <strong>½ (Perception + Stealth)</strong>. Once the fight is live it tends to level out to one question — <em>can you see what&#39;s happening?</em></p>
-<h2>The round</h2>
+<h2 id="the-round">The round</h2>
 <ol>
 <li><strong>Roll Initiative</strong> (awareness/position-driven). Order everyone best to worst; ties broken by Score.</li>
 <li><strong>Declare, in order, act or wait.</strong> Acting resolves when declared. Waiting holds for a trigger.</li>
 <li><strong>Waiting persists.</strong> Anyone still waiting from last round stays waiting until their declaration comes round again. <em>The totally unaware get no declaration on round one at all — which is why ambushes are murder.</em></li>
 </ol>
 <p>A <strong>QR7</strong> Initiative roll is <strong>panic</strong>: act all-out offensive <em>or</em> all-out defensive (go berserk, or run and hide) — no holding back. A <strong>QR10</strong> is a <strong>freeze</strong> — you lose the three seconds. It&#39;s only three seconds; they may be your last.</p>
-<h2>Reaction &amp; pre-emption</h2>
+<h2 id="reaction--pre-emption">Reaction &amp; pre-emption</h2>
 <p>When a waiting character reacts to something (usually someone else acting), they may go <strong>immediately after</strong> it — or try to <strong>pre-empt</strong> and act <strong>just before</strong>:</p>
 <blockquote>
 <p><strong>Pre-emption = a Coordination roll, modified by your Initiative QR</strong> (ties: Initiative Score). Reflexes do the work; awareness only biases the odds — no good having lightning reflexes if you&#39;re confused. Succeed → just before; fail → just after. It&#39;s still a roll, so even a superb, well-placed shooter keeps real uncertainty.</p>
@@ -72,7 +59,7 @@
 <p><strong>You never know for certain you&#39;ll act first.</strong> Pretty sure, never certain. The gunslinger <em>probably</em> draws first; the sniper <em>probably</em> fires before the hostage-taker reacts; neither is guaranteed. It&#39;s exactly why a police sniper in a standoff is loath to just shoot a person holding a gun on a hostage — and why these scenes work here and collapse into &quot;highest number wins&quot; everywhere else.</p>
 </blockquote>
 <p><em>E.g. an archer waits — trigger: &quot;the mage does something.&quot; The mage starts a spell; the archer pre-empts (QR of Initiative). On success the arrow lands before the spell goes off — but a confident archer can still be a hair too slow.</em></p>
-<h2>Beyond combat</h2>
+<h2 id="beyond-combat">Beyond combat</h2>
 <p>This is <strong>initiative for any tense situation</strong> where timing and nerve decide the outcome, not only when weapons come out:</p>
 <ul>
 <li><strong>The quick-draw / Iai duel</strong> — both waiting, each triggered by the other&#39;s move; pre-emption <em>is</em> the duel.</li>
@@ -179,6 +166,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

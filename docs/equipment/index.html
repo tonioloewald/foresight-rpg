@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Equipment — ForeSight RPG</title>
   <meta name="description" content="One-pager — the keystone. Everything you can own, drive, wield, or wear is an object: a basic object (a noun) plus modifications (adjectives)." />
   <link rel="canonical" href="https://foresight-rpg.com/equipment/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Equipment — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Equipment — ForeSight RPG" />
@@ -42,16 +29,16 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Equipment</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="equipment.md">
+<h1 id="equipment">Equipment</h1>
 <!--{ "parent": "world", "order": 1 }-->
 
 <p><em>One-pager — the keystone. Everything you can own, drive, wield, or wear is an <strong>object</strong>: a basic object (a noun) plus modifications (adjectives). Weapons, armor, vehicles, and tools are just objects with extra stats. NPCs and monsters use the same pattern (see those pages).</em></p>
-<h2>Object = noun + adjectives</h2>
+<h2 id="object--noun--adjectives">Object = noun + adjectives</h2>
 <p>A <strong>basic object</strong> is the noun: <em>sword</em>, <em>pistol</em>, <em>sedan</em>, <em>backpack</em>. A <strong>modification</strong> is an adjective with a defined game effect: <em>fine</em>, <em>shoddy</em>, <em>sporty</em>, <em>cut-down</em>. You build the item you want by putting adjectives in front of the noun — and that&#39;s exactly how you say it at the table: a <em>cut-down pistol</em>, a <em>sporty sedan</em>.</p>
 <p>This is also how the catalog stays short. If a &quot;new&quot; item is really a variant of one you already have, it isn&#39;t a separate entry — it&#39;s an adjective on an existing noun: a <strong>carbine</strong> is a <em>light rifle</em>, a <strong>destrier</strong> is a <em>warhorse</em>. One good adjective often covers several real items: the weapon-specific <strong>cut-down</strong> gives you both a sawn-off shotgun <em>and</em> a snub-nose revolver — easier to conceal, worse at range. One noun, many items.</p>
-<h2>Stats every object can have</h2>
+<h2 id="stats-every-object-can-have">Stats every object can have</h2>
 <p>Most objects need only a couple of these; list a stat only when it isn&#39;t obvious.</p>
 <table>
 <thead>
@@ -85,7 +72,7 @@
 <td>for very large or tough objects (see <a href="/damage/">Damage</a>)</td>
 </tr>
 </tbody></table>
-<h2>Categories</h2>
+<h2 id="categories">Categories</h2>
 <p>Each category is its own short, <strong>alphabetized</strong> list with a few category-specific stats:</p>
 <table>
 <thead>
@@ -115,7 +102,7 @@
 <td>everything else, with the minimal stats it actually needs</td>
 </tr>
 </tbody></table>
-<h2>Modifications (the general set)</h2>
+<h2 id="modifications-the-general-set">Modifications (the general set)</h2>
 <p>These apply to almost anything; categories add their own.</p>
 <table>
 <thead>
@@ -152,7 +139,7 @@
 <blockquote>
 <p><strong>Grain note.</strong> ForeSight&#39;s modifiers are <strong>ease factors</strong> — steps on the EF ladder (0, ¼, ½, 1, 2 … 15), applied before SC = Score × EF. A single step is a powerful lever: <strong>+1 EF adds your whole Score to the success chance in the sweet spot</strong> (Score 15 at EF 5→6 goes 75% → 90%, i.e. +15), and about <strong>half your Score</strong> down at the ¼/½ rungs. (Contrast ForePlay, where +1 was a flat ~10%, tapering at the edges.) Two consequences: modifiers stay small — a modification is usually just <strong>±1 EF</strong> — and the same +1 helps a more skilled character <em>more</em> in absolute terms. When porting ForePlay numbers, <strong>its +2 or +3 maps to roughly +1 EF here</strong>, never one-to-one.</p>
 </blockquote>
-<h2>Descriptions: say what it is and why you&#39;d want one</h2>
+<h2 id="descriptions-say-what-it-is-and-why-youd-want-one">Descriptions: say what it is and why you&#39;d want one</h2>
 <p>List entries get <strong>minimal</strong> descriptions — but useful ones. The job of a description is to tell a reader what the thing <em>is</em> and <em>why a character would carry it</em>. D&amp;D famously listed a 10′ pole and never said it was for probing floors for traps from a safe distance; don&#39;t do that. One honest sentence beats a paragraph of stats restated in prose.</p>
 <p><em>Designer&#39;s Note: &quot;objects are nouns plus adjectives&quot; is the same idea that runs through NPCs, vehicles, and even background factors. Learn it once and the whole back half of the book is the same move applied to different lists. (And you already speak this language — nobody says &quot;pistol, cut-down&quot;; they say &quot;cut-down pistol.&quot;)</em></p>
 
@@ -253,6 +240,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

@@ -16,7 +16,8 @@
     "happy-dom": "^21.0.4",
     "marked": "^16.4.2",
     "sucrase": "^3.35.0",
-    "tosijs": "^1.7.9",
-    "tosijs-ui": "1.9.6"
+    "tosijs": "^1.10.9",
+    "tosijs-schema": "^1.8.0",
+    "tosijs-ui": "1.16.38"
   }
 }

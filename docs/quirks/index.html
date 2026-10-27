@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Quirks, Perks and Flaws — ForeSight RPG</title>
   <meta name="description" content="Attributes and skills say what a character can do. These say who they are — and they are what turns a stat block into a person." />
   <link rel="canonical" href="https://foresight-rpg.com/quirks/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Quirks, Perks and Flaws — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Quirks, Perks and Flaws — ForeSight RPG" />
@@ -42,13 +29,13 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Quirks, Perks and Flaws</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="quirks.md">
+<h1 id="quirks-perks-and-flaws">Quirks, Perks and Flaws</h1>
 <!--{ "parent": "core", "order": 8 }-->
 
 <p><em>Attributes and skills say what a character <strong>can</strong> do. These say who they <strong>are</strong> — and they are what turns a stat block into a person. A quirk is small and two-sided and free; a perk is a clean advantage you paid for; a flaw is an outright bummer nobody chose. All three work the same way, and the chapter is called Quirks because that is what you will look it up under.</em></p>
-<h2>The three</h2>
+<h2 id="the-three">The three</h2>
 <table>
 <thead>
 <tr>
@@ -75,20 +62,20 @@
 </tbody></table>
 <p>All three are <strong>permanent</strong>, all three are <strong>narrow</strong>, and all three emit the same thing: a modifier with a <strong>target</strong> (what rolls it touches), a <strong>scope</strong> (when), and a <strong>combine</strong> (how it interacts with its relatives). That is deliberately the same shape as a piece of equipment — a quirk is a modification to a person, the way <em>fine</em> is a modification to a sword.</p>
 <p><strong>Take up to three quirks.</strong> More and the character reads as a basket case rather than a person. Perks come from templates, background factors and intrinsic factors — not from the quirk allowance. Flaws aren&#39;t taken at all; they&#39;re decided, usually by the GM and the character&#39;s history together.</p>
-<h2>Two tests, and they point opposite ways</h2>
+<h2 id="two-tests-and-they-point-opposite-ways">Two tests, and they point opposite ways</h2>
 <p>A quirk is a trade, so <strong>the drawback has to actually bite</strong>: <em>Weakness for the Ladies</em> that never costs you anything is a perk you didn&#39;t pay for. If you cannot name a session in which the bad half would have hurt, it isn&#39;t a quirk.</p>
 <p>A flaw&#39;s compensation runs the other way: <strong>nobody may ever want the deal.</strong> However the years were redirected, a blind person would still, in almost every case, rather not be blind — and that has to stay true <em>after</em> the compensation. The moment it doesn&#39;t, the flaw has a price, and a priced flaw is one you go shopping for.</p>
 <blockquote>
 <p>So: <strong>would the drawback bite? yes.</strong> <strong>Would the compensation tempt? no.</strong> A quirk failing the first is a perk; a flaw failing the second is a purchase.</p>
 </blockquote>
-<h2>Flaws pay in capacity, never in currency</h2>
+<h2 id="flaws-pay-in-capacity-never-in-currency">Flaws pay in capacity, never in currency</h2>
 <p>A flaw grants <strong>no points</strong>. It is not a trade and there is no good half.</p>
 <p>But it does leave a mark on the build, and it should. It genuinely makes sense that someone blind from childhood concentrated on the things blindness doesn&#39;t cripple — <strong>and had more hours to spend on them.</strong> The question was never whether that&#39;s real; it&#39;s what it&#39;s denominated in.</p>
 <p><strong>Points are the wrong currency, because points don&#39;t remember where they came from.</strong> Grant them and blindness funds marksmanship by way of the character sheet. So the compensation is denominated in the thing a flaw actually costs: <strong>time.</strong> ForeSight already measures a life in years — background factors are years lived, fields are four points a year — so a flaw is an argument about how those years went, and may justify <strong>one field, or one familiarity, GM-approved, in an area the flaw doesn&#39;t touch.</strong></p>
 <p>Never in a skill, and never routing around the flaw&#39;s own domain. One field is nowhere near tempting enough to buy blindness with, which is exactly why it&#39;s safe.</p>
 <p><em>This is the same exchange as age, and should read the same way: <strong>capability for capacity.</strong> A fifty-five-year-old with four more background factors and a bad knee is a better character than a twenty-five-year-old, not a worse one.</em></p>
 <p><em>Designer&#39;s Note: ForePlay (2015) priced flaws at an attribute point or two skill points — and then apologised for it in the same breath: &quot;this isn&#39;t intended to be a store: design the character you want; sometimes a weakness is just a weakness.&quot; That caveat was already the right answer, so the price tag goes and the sentence stays. The consequence is a large simplification: because no flaw is purchasable, <strong>blindness and haemophilia never have to be costed against each other.</strong> There is no flaw point table to build, balance or argue about — a whole chapter other systems carry that this one simply doesn&#39;t.</em></p>
-<h2>Families, and the one question that settles stacking</h2>
+<h2 id="families-and-the-one-question-that-settles-stacking">Families, and the one question that settles stacking</h2>
 <p>Quirks come in named <strong>families</strong>, and a family carries its own combine rule. This is not filing convenience — it is what stops a GM adjudicating stacking case by case at the table.</p>
 <blockquote>
 <p><strong>Default: within a family, best applicable only.</strong> They do not add.</p>
@@ -100,7 +87,7 @@
 <p><strong>Do these two fire on this roll for the same reason?</strong> Same reason → take the best. Different reasons → both apply.</p>
 </blockquote>
 <p>That question is answerable in a second, which is the only standard that matters at a table.</p>
-<h2>The five families</h2>
+<h2 id="the-five-families">The five families</h2>
 <p><strong>Appearance</strong> — what people see first, and how differently they read it. Not one axis: observers agree at the extremes and diverge sharply on <em>type</em>.</p>
 <ul>
 <li><strong>Striking</strong> <em>(quirk)</em> — a face people look at twice. +2 where being noticed and remembered helps; −2 where you needed to be forgettable, and you don&#39;t get to be nobody in a crowd. <em>Name the audience: striking in a particular way, and here is who it works on.</em></li>
@@ -131,7 +118,7 @@
 <li><strong>Short-sighted</strong>, <strong>one-handed</strong>, <strong>blind</strong> <em>(flaw, by degree)</em> — a flaw names what it closes off, and the capacity goes somewhere the flaw cannot reach.</li>
 </ul>
 <p><strong>Age</strong> — the same capability-for-capacity exchange as a flaw, arriving with time rather than history. Age quirks are <strong>acquired, not purchased</strong>, and <strong>grant no points</strong>: ageing already pays in the other direction, in background factors, fields and skill. Two shapes — <em>standing</em> (it is simply true of you now) and <em>intermittent</em> (it fires on a trigger) — written out in <strong>Ageing</strong>, below.</p>
-<h2>Chronic conditions — four lines, and you&#39;re done</h2>
+<h2 id="chronic-conditions--four-lines-and-youre-done">Chronic conditions — four lines, and you&#39;re done</h2>
 <p>A condition is a quirk or a flaw depending on what the fourth line says. Write all four:</p>
 <blockquote>
 <p><strong>Attach</strong> — which rolls it touches.
@@ -153,7 +140,7 @@
 <p><strong>Intermittent conditions must hang off something already in play — never their own timer.</strong> Tie it to weather, exertion, an exhaustion level, or a roll someone is making anyway. Anything that asks the table to track <em>&quot;is it flaring today?&quot;</em> will be quietly dropped, and then the character sheet is lying.</p>
 </blockquote>
 <p><strong>A wound that heals badly becomes one of these.</strong> Convalescence that goes wrong is the commonest way a character acquires a chronic condition mid-campaign — same four lines, written at the table.</p>
-<h2>Ageing — the family you don&#39;t buy</h2>
+<h2 id="ageing--the-family-you-dont-buy">Ageing — the family you don&#39;t buy</h2>
 <p><strong>Nobody spends points to get older, and nobody is paid for it.</strong> Age quirks are <strong>conferred</strong>, by the same route a background factor can be conferred after creation: at downtime, the GM hands one over, and it is simply true from then on. One at a time, and never retroactively.</p>
 <p><strong>The compensation is real, and it is not written next to the drawback — it is the rest of the sheet.</strong> This is the one place where the usual quirk shape doesn&#39;t apply: a 55-year-old&#39;s fields, familiarities and skill levels <em>are</em> what he was paid for the stiffness, and he was paid in the only currency ageing deals in, which is time. So an age entry looks one-sided on the page, and isn&#39;t. (It is also why age entries grant no points: that would be charging the character twice for the same decade, once in years and once in build.)</p>
 <p><strong>Standing — it is true of you now.</strong></p>
@@ -173,7 +160,7 @@
 <p><strong>Severity means writing it twice here too.</strong> <em>Stiff</em> and <em>Arthritic</em> are two entries, not one with a dial; so are <em>Hard of hearing</em> and <em>Deaf</em>, and the second of each pair is a flaw — which means it closes something off and routes the capacity somewhere the age cannot reach.</p>
 <p><strong>Attributes do not decay.</strong> Ageing is entirely quirk-borne, deliberately, for three reasons. A single number cannot say <em>which</em> rolls got harder, and age is specific — the hands go before the eyes, or the other way about, and that difference is the character. A decaying attribute makes a character worse at everything it feeds, including the things that in life get <em>better</em> with age. And a sheet that rots is a sheet a player stops wanting to pick up, which is the practical objection and probably the decisive one. If a campaign genuinely runs for decades and the table wants an attribute lowered, lower it — but as something that happened in the fiction, not as a rule the rules make you apply.</p>
 <p><em>(The young end of the same idea needs no mechanics at all: a sixteen-year-old&#39;s disadvantage is a short field list and a thin background, which the point economy already produces.)</em></p>
-<h2>Writing your own</h2>
+<h2 id="writing-your-own">Writing your own</h2>
 <p>There is no list to pick from; the ones above are examples, and a good quirk is specific to the character. Build one by analogy: name the family, write the two halves, and check it against the two tests. If it has no bad half it&#39;s a perk and costs points. If nobody would ever want the deal, it&#39;s a flaw and grants nothing. If you can&#39;t say which rolls it touches, it isn&#39;t a quirk yet — it&#39;s a personality note, and those are free and need no mechanics at all.</p>
 <p><em>Designer&#39;s Note: these used to be attributes. Endurance and Appearance each had a column, and the argument for cutting them was not that they don&#39;t matter — it&#39;s that neither is <strong>one number</strong>. Appearance asserted a total order on faces, which is not what the world looks like; Endurance had a genuine central axis but drove no skill formula, so nothing on the build screen ever showed a player what it was for. A family fixes both: a quirk can say <em>striking in a particular way, and here is who that works on</em>, where an attribute could only say 13. The general principle is worth keeping: <strong>attributes are for independent capabilities; quirks are for deviations from a correlated default.</strong> It is why exceptional eyesight and left-hand coordination don&#39;t get columns either.</em></p>
 
@@ -274,6 +261,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

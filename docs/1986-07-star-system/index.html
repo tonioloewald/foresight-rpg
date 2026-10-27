@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Star System Generation — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 71–88 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-07-star-system/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Star System Generation — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Star System Generation — ForeSight RPG" />
@@ -42,9 +29,9 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Star System Generation</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-07-star-system.md">
+<h1 id="star-system-generation">Star System Generation</h1>
 <!--{ "parent": "foresight-1986", "order": 7 }-->
 
 <p><em>ForeSight (1986), pp. 71–88 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=71">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
@@ -59,10 +46,10 @@
 <p><em>[Illustration in the original — see the source-PDF page link above. Historical; a replacement is planned.]</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=73">ForeSight 1986 · p.73 ↗</a></div>
 
-<h4>[7.0] Star System Generation</h4>
+<h4 id="70-star-system-generation">[7.0] Star System Generation</h4>
 <p><strong>Designer&#39;s Notes:</strong> In a Science Fiction Role-Playing Game, some form of Star System Generator is desireable. This system should not put the GM to too much trouble; it should allow for a good degree of detail; and it should be &quot;dumb&quot; (ie. a GM should be able to plug it into his/her computer without having to add any algorithms), as well as fulfilling the pre-requisites outlined in the Introduction.</p>
 <p>I think that the following system qualifies in these respects, although there may be some controversy over how much trouble the system is to implement, I feel that a more simple generation system (like Traveller&#39;s) pays for its relative simplicity by being too lacking in detail (planets are neither interesting, nor different enough), and this detail must be added by the GM, without help from the rules. ForeSight planets are detailed enough to be interesting to players and GMs alike, and furthermore the whole thing, down to rough planetary maps, can be performed by a computer (the program will not take long to write: if there is sufficient interest, I may publish my own). Finally, the system is, at least to a degree, scientifically sound, which is important in a Science Fiction RPG.</p>
-<h5>Generating a Star System</h5>
+<h5 id="generating-a-star-system">Generating a Star System</h5>
 <p><strong>Procedure:</strong> A Star-System in ForeSight must first be located around a star. The star should be chosen from an appropriate document (eg. a decent Star Catalogue), and should be within thirty light-years, or so, of Sol. This system was designed with solitary type V (dwarf) stars (like the sun) in mind. Furthermore, I recommend that, barring special circumstances, you restrict yourself to type F, G, K, and M stars. Once the star has been chosen, and its name recorded appropriately on the System Display, proceed as follows:</p>
 <p><strong>[i]</strong> Determine the star&#39;s type: this comprises a letter (ie. A, F, G, K, M, or S) followed by a number (an integer from 0 to 9). Look at the following table under Range; this will give a range of numbers. There are sixteen orbitals listed on the System display: roll D10 for each of orbitals 1 to 10, and D6 for each of orbitals 11 to 16; if the roll for a given orbital falls in the star&#39;s range, then tick the Orbital Radius slot of that orbital.</p>
 <p><strong>Stellar Type Table</strong></p>
@@ -813,7 +800,7 @@
 <p>* Subtract |Appropriate Opacity Modifier from Atmosphere Density Table| (note absolute value signs) from, and add (Planet&#39;s Hydrographics)/20 (rounded off) to, the die roll.</p>
 <p><strong>[xii]</strong> Determine whether or not there is life on the planet by rolling against any SC given beside Atmosphere Composition. QR 4 indicates presence of primitive life-forms (certainly no more evolved than, say, bony fishes, amphibians, and ferns; perhaps no more advanced than polyps ... ); QR 3 indicates a moderate stage of evolution: anywhere from (the equivalent of) dinosaurs to mammals; QR 2 indicates highly advanced, but non-sapient organisms - perhaps semi-intelligent and/or very dangerous (eg. Alien ); QR 1 indicates the presence of local HILFs (Highly Intelligent Life-Forms, to borrow a term); who will be at a lesser state of advancement than humanity, or oriented in non-technological (perhaps psionic or magical) directions. Note any successful result by writing the QR number into the top right corner of the Habitability Index box. In theory, planets with intelligent life will not be knowingly colonised by idealistic regimes.</p>
 <p><strong>[xiii]</strong> Determine each planet&#39;s Incident Radiation Class by rolling D10, modifying the roll as indicated under the Incident Radiation table, and recording the result under the planet&#39;s Radiation slot.</p>
-<h4>Incident Radiation Table</h4>
+<h4 id="incident-radiation-table">Incident Radiation Table</h4>
 <p><em>The star&#39;s spectral class × the radiation Result → the D10 roll needed for that result. <strong>* Prolonged</strong> exposure is harmful to unprotected humans; <strong>** any</strong> exposure is harmful. This is the table the <a href="/foresight-1986/#the-1987-errata">1987 errata</a> corrected (a displaced bottom row) — this printing already shows it right.</em></p>
 <!-- matrix: 1986-incident-radiation -->
 <div class="matrix"><style>
@@ -1023,7 +1010,7 @@
 <p><em>The product T×R×G×A×H is often fractional (several of the multipliers are 0.01, 0.05, 0.25…). ForeSight&#39;s general <a href="/1986-01-foreword/">rounding convention</a> applies: unless otherwise stated, a fractional value that must become an integer is <strong>rounded off to the nearest integer</strong> — so a product rounding to 0 is Inimical, and anything else up to 5 is Uninhabitable.</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=76">ForeSight 1986 · p.76 ↗</a></div>
 
-<h4>[7.1] Detailing Planets</h4>
+<h4 id="71-detailing-planets">[7.1] Detailing Planets</h4>
 <p><strong>Designer&#39;s Notes:</strong> the GM should complete the following steps (with the possible exception of step [xvi] for planets in orbitals 1 to 10) only for planets he/she wishes to detail. A copy of the Planet Record should be set aside for the planet, and relevant information copied from the Star System Record onto it.</p>
 <p><strong>[1]</strong> Determine the planet&#39;s day length, and average daily temperature variation.</p>
 <p><strong>Day Length</strong> = 3.5(D10 + D10 + 12)/|(Planet Size - 1.5)| hours</p>
@@ -1095,7 +1082,7 @@
 </tbody></table>
 <p>* Subtract one from the die roll for each moon (or ring) the planet has already acquired.</p>
 <p>Note: a result of 10 gives a moon of size G1; 11 gives G2, and 12 gives G3.</p>
-<h5>[3] Mapping Planets</h5>
+<h5 id="3-mapping-planets">[3] Mapping Planets</h5>
 <p><strong>Designer&#39;s Notes:</strong> GMs will probably want reasonable maps of habitable planets; if for no other reason than that they are pretty. The following system allows GMs to map any of the planets generated using the previous system, except Gas Giants (G1, and G2 planets). I do not recommend that the you map planets with Habitability Indices greater than 3 unless you have a specific purpose in mind (ie. some part of a planned scenario has something to do with it), or you will just be making extra work for yourself (unless you&#39;re using a computer, in which case paper is your greatest constraint).</p>
 <p>You will require a copy of the Planet Record, and a normal deck of playing cards minus tens and picture-cards. The cards are ordered 1c ... 9c, 1d ... 9d, 1h ... 9h, 1s ... 9s (where &quot;1&quot;s are aces). eg. 5d is in the range 4d-4h.</p>
 <p>A planet is mapped in stages (everything in FS is done in stages ... sigh ...).</p>
@@ -1345,7 +1332,7 @@ VC   BR             S5 6                   ~7
 </tbody></table>
 <p>Notes: *Two of the three share an edge; **No two of the three share an edge</p>
 <p><strong>[v]</strong> Fill in Planet Description as appropriate (sub-zone size, indicated on the Planet Size table, is the length of one of the sides of a triangular sub-zone). The actual temperature of a sub-zone varies with latitude, as indicated on the Planet Record, and you may wish to fill in the boxes provided with the latitude mean temperature (equal to the Planet&#39;s Mean Temperature, modified as indicated).</p>
-<h4>[7.2] Detailing the Human Population of a Planet</h4>
+<h4 id="72-detailing-the-human-population-of-a-planet">[7.2] Detailing the Human Population of a Planet</h4>
 <p>A planet with a Habitability index of 1, 2, or 3, is pretty likely to be inhabited, if it has been discovered, by humans. In determining the details of a planet&#39;s population one needs to know the following things about it:</p>
 <p><strong>[1]</strong> Its Habitability Index</p>
 <p><strong>[2]</strong> Its distance from Sol</p>
@@ -2200,7 +2187,7 @@ VC   BR             S5 6                   ~7
 <p>The Government Type codes are explained later under Explanation of Government Types.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=82">ForeSight 1986 · p.82 ↗</a></div>
 
-<h5>Explanation of Government Types</h5>
+<h5 id="explanation-of-government-types">Explanation of Government Types</h5>
 <p><strong>0A</strong> No rules or conventions: Might is Right. (A truly free market economy.)</p>
 <p><strong>0B</strong> Balkanised into tribes, or communal autarchies</p>
 <p><strong>0C Theocracy*</strong>: the planet&#39;s government is determined along religious tenets and rules, and it is ruled by a religious hierarchy</p>
@@ -3214,7 +3201,7 @@ VC   BR             S5 6                   ~7
 </tr>
 </tbody></table>
 <p>Note: this table implies a &quot;normal&quot; legal system not greatly unlike that currently found in (some states of) the U.S.A., but without broadcasting of trials, judicial elections, or the ready availability of concealable weapons. Imprisonment is still widely used as a punitive retaliation against criminals. Recreational drugs, homosexuality, prostitution, are assumed to be legal, and cash gambling, racial and sexual discrimination illegal.</p>
-<h5>Space Ports</h5>
+<h5 id="space-ports">Space Ports</h5>
 <p>A word on space ports and interstellar trade. A planet is likely to see interplanetary cargo shipping (import and export) equal to:</p>
 <p>Total population × TL^2 / 5 000 000 tonnes per day</p>
 <p>This corresponds to about ten grams of cargo per person per day at TL 7.</p>
@@ -3293,11 +3280,11 @@ VC   BR             S5 6                   ~7
 </tr>
 </tbody></table>
 <p>So a tower space port handling 11000 tonnes of cargo per day would be referred to as a Space Port 4T.</p>
-<h5>A Final Note on Asteroid Belts</h5>
+<h5 id="a-final-note-on-asteroid-belts">A Final Note on Asteroid Belts</h5>
 <p>If Asteroid mining figures prominently in your campaign, or you are simply curious, determine the size of the belt (roll on the Standard Planet Size Table) and its density (again as per a planet, but adding two to the roll). The larger and denser an asteroid belt is, the more valuable it will be.</p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=88">ForeSight 1986 · p.88 ↗</a></div>
 
-<h4>Information for Maniacal Gamemasters</h4>
+<h4 id="information-for-maniacal-gamemasters">Information for Maniacal Gamemasters</h4>
 <p><strong>Relative Brightness of Stars of MK Spectral Types (Sol = 1.00)</strong></p>
 <table>
 <thead>
@@ -3722,6 +3709,6 @@ VC   BR             S5 6                   ~7
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>

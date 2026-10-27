@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- NB: the body is NOT hidden until hydration. It used to be (body opacity 0 +
-       a 4s safety-net timeout), because an undefined custom element is
-       display:inline, so the pre-rendered page stacked as bare text and hydration
-       reflowed the whole thing. The cost was a blank screen for as long as the
-       bundle took — ~4.5s on a cheap phone, for content already in the HTML. The
-       tosi-doc-system:not(:defined) rules in the stylesheet now lay the static page
-       out as though the chrome were there, so hydration only ADDS the chrome and
-       nothing moves. Paint immediately; don't hide readable content. -->
-  <!-- Theme, applied BEFORE first paint. Now that we paint the static page rather
-       than hiding it, a dark-mode reader would otherwise get a flash of the light
-       theme until the bundle lands and sets body.darkmode. CSS alone can't do this:
-       an explicit theme choice lives in localStorage. Mirrors applyThemePrefs()
-       (doc-system.ts) — keep the two in step. Fails safe: any error leaves the
-       light default, exactly as before. -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script>
     try {
       var p = JSON.parse(localStorage.getItem('tosi-doc-system-prefs') || '{}')
@@ -24,14 +12,13 @@
       if (p.highContrast) document.documentElement.classList.add('high-contrast')
     } catch (e) {}
   </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=fc8384894e4b" data-tosi-doc-system />
   <title>Travel &amp; Vehicles — ForeSight RPG</title>
   <meta name="description" content="ForeSight (1986), pp. 57–64 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the source PDF." />
   <link rel="canonical" href="https://foresight-rpg.com/1986-05-travel/" />
+  <link rel="alternate" type="text/markdown" href="index.md" title="Travel &amp; Vehicles — ForeSight RPG (markdown)" />
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="ForeSight RPG" />
   <meta property="og:title" content="Travel &amp; Vehicles — ForeSight RPG" />
@@ -42,9 +29,9 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;}">
-  <article class="doc-content">
-<h1>Travel &amp; Vehicles</h1>
+  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <article class="doc-content" data-doc="1986-05-travel.md">
+<h1 id="travel--vehicles">Travel &amp; Vehicles</h1>
 <!--{ "parent": "foresight-1986", "order": 5 }-->
 
 <p><em>ForeSight (1986), pp. 57–64 — a best-effort cleanup of the machine-extracted original; expect residual OCR noise. Compare with the <a href="/foresight-1986.pdf#page=57">source PDF</a>. <a href="/foresight-1986/">About this restoration</a>.</em></p>
@@ -53,7 +40,7 @@
 <p><em>[Chapter illustration in the original: a &#39;Soft Tech Level 9 Helijet&#39; — see the source-PDF page link above.]</em></p>
 <div style="text-align:right;font-size:.78em;opacity:.5;margin:.4em 0"><a href="/foresight-1986.pdf#page=58">ForeSight 1986 · p.58 ↗</a></div>
 
-<h4>Vehicle Table</h4>
+<h4 id="vehicle-table">Vehicle Table</h4>
 <p>*Every sample vehicle. <strong>PUR</strong>suit / <strong>MAN</strong>euver / <strong>RED</strong>line are ease-factor ratings; Cruise &amp; Max in km/h; <strong>CLG</strong> = ceiling (or dive depth for subs); <strong>DT</strong> = damage track; <strong>SIZ</strong> = size class; Cargo in kg, Pass = passengers. Multi-mode vehicles (Crawler, Amphibious ATV) note their alternate modes on the card. <strong>Reconstructed</strong> from the pixel-art chart — verify against the original.*</p>
 <!-- entity-view: 1986-vehicles.json -->
 <div class="entity-view">
@@ -82,7 +69,7 @@
 </div>
 <!-- /entity-view -->
 
-<h4>Terrain Value Chart</h4>
+<h4 id="terrain-value-chart">Terrain Value Chart</h4>
 <p><em>Terrain Contour × Terrain Feature → the terrain value; a vehicle&#39;s Cruise/Max is divided by (Modified Terrain Value)/2 (or 1 if that&#39;s lower), and its Pur/Man are reduced by it. Higher = harder going. <strong>Suburban / Urban</strong> extend the features: Suburban [SU] 0 / with cover [SF] 1; Urban [UR] 0 / built-up [SB] 2.</em></p>
 <!-- matrix: 1986-terrain -->
 <div class="matrix"><style>
@@ -582,6 +569,6 @@ eo
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate.js"></script>
+  <script type="module" src="../hydrate-zkhps2f9.js"></script>
 </body>
 </html>
