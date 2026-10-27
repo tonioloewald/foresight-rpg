@@ -234,14 +234,24 @@ came out right.
   Earth-size bin, and the measured distribution is *flat* from 0.8 to 4 Earth radii — a ratio of
   1.1 where the model gives 0.02. The total being right makes the shape being wrong much more
   damning than either number alone.
+  > **Superseded, and wrong in an instructive way.** The total was not right; it was an artefact
+  > of dividing a global budget by weights, which fed the inner disk mass the disk does not have
+  > there. See *Building the fix I had named* below. Left standing because the correction is the
+  > finding.
 - **Nearly every G or K star gets a habitable-zone planet.** The orbit ladder steps by 1.65 and a
   Sun's conservative habitable zone spans a factor of 1.76, so there is almost always *exactly one
   slot* inside it. This is the most consequential claim the model makes for a game: it decides
   whether a landfall is a find or a formality, and at 0.92 planets per star it is a formality.
+  > **The symptom is real; this explanation is not.** The 1.65 ladder is gone and spacing is now
+  > set by a dynamical criterion on real masses — and the figure barely moved. So it was never
+  > about the spacing, and the cause is currently unknown.
 - Both of the last two are **one** missing mechanism — a late instability that merges neighbours,
   giving fewer planets, each heavier, more widely spaced — and it is the same reason planet count
   is still set by the `maxPlanets` cap rather than by anything physical. **That is the next piece
   of modelling, and it is an architectural change rather than a recalibration, so it waits.**
+  > **Built, and it fixed exactly one of the three.** Planet count is physics now — `maxPlanets` is
+  > a loop guard and about 6.5 bodies per star fall out. The other two it did not touch, and the
+  > radius shape it made worse. The real shared mechanism is the **inward transport of solids**.
 
 ### Two mistakes of my own, recorded because they are the method
 
@@ -255,10 +265,84 @@ came out right.
   uncertainty, widened by a stated factor** — never a number chosen to be passable. Widening a
   band after seeing the model is the one move that would make the whole exercise worthless.
 
-Fifteen claims, stable across five seeds, and pinned against **Sol as well as the surveys** —
+Sixteen claims, stable across six seeds, and pinned against **Sol as well as the surveys** —
 because a model fitted only to the surveys has been fitted. `bun bin/occurrence.ts` prints the
 table; `--param formation.coreGrowthNormYears=1e6` is how you find out what a claim is sensitive
 to.
+
+### Building the fix I had named, and what it cost
+
+Every one of the three recorded defects carried the same `fix`: *a late instability that merges
+neighbours.* Building it is the most useful thing this project has done, and almost none of that
+usefulness is in the mechanism.
+
+**It could not be added.** Twice over. The orbit ladder was spaced at 1.65 — **the spacing of the
+surviving Solar System** — so the model had been handed its final architecture before any physics
+ran, and an instability acting on it had nothing to do. And the growth race read its surface
+density off *a slot's share of the budget*, so refining the ladder deleted every giant in the
+model. Both are now physics: oligarch mass and spacing come out of one equation
+(`M_iso = 2πa·bR_H·Σ`, solved for itself, so feeding zones tile the disk and masses sum to the
+budget by construction), and Σ is normalised off the disk, landing near 9 g/cm² at 1 AU against
+Hayashi's 7 — a check, because nothing was fitted to it. A disk holds about a hundred oligarchs,
+not a dozen planets.
+
+**The green table was partly bought with a bug.** Dividing a global budget by weights gave the
+inner disk mass that a `Σ ∝ r^−3/2` disk does not have there — which is to say it was quietly
+performing the inward transport the model declares it lacks. So the model's one apparently
+unambiguous success, *the right number of short-period planets with the wrong sizes*, was an
+artefact. With Σ from the disk it undershoots by three and a half times. **A number agreeing with
+a survey is not evidence until you know which mechanism produced it.**
+
+**One cause, six symptoms.** The replacement for all that guessing is a claim that measures the
+cause: inside 85 days an MMSN disk holds **0.47 Earth masses** of solids against the 5–20 the
+Kepler population needs — short by ten to thirty times. That one number explains the undershoot,
+the pile-up in the smallest radius bin, the complete absence of super-Earths and the empty
+M-dwarf census, and it explains why the instability could not help any of them: *rearranging half
+an Earth mass cannot make a super-Earth.* Pin the cause and six symptoms stop needing separate
+excuses.
+
+**Two of my own fix notes were wrong.** The instability was named as the fix for the radius-shape
+defect; it was built, and the shape got **worse**, because merging neighbours also merges their
+feeding zones. It was named as the fix for η-Earth; spacing widened fivefold and the figure barely
+moved. That note now reads *unknown* — honestly unknown, rather than naming a mechanism already
+tried. The `fix` field exists so a defect cannot hide behind a vague promise; it turns out it can
+still hide behind a **confident and wrong** one, and only building the thing finds out.
+
+**A calibration taken and then given back.** Physical oligarch masses left every core just under
+the critical mass for gas capture, so giant occurrence sat on a knife edge. Doubling the solid
+budget fixed it — and made the giant-occurrence claim a calibration target instead of a result.
+The real fault was the critical core mass, sitting at 10 Earths, the top of its range and the
+value that assumes interstellar grain opacity in an envelope that has long since grown and settled
+its grains. Computed opacities give about 5. At 5 the **minimum-mass** nebula makes giants: 15.4%
+of FGK stars inside 5 AU against a measured 15%, with nothing tuned to it. The lesson is narrow
+and worth having: *the first parameter that fixes a number is rarely the one that was wrong.*
+
+### The falsification, which the standing table existed for
+
+`giants-scale-with-stellar-mass` was declared **binding** before any measurement, as the model's
+one free prediction — giant occurrence rising with stellar mass, out of an ALMA-measured disk-mass
+exponent with nothing fitted to Johnson et al. 2010. It passed at 5.82 against a measured 4.
+
+It now reads **31–37**. The band has not been widened, and will not be.
+
+The cause is structural rather than a slip: `M_iso ∝ (a²Σ)^1.5/√M★` with `Σ ∝ M★^1.5` makes core
+mass scale as `M★^1.75`, and a threshold on top of that is savage. Counting per class rather than
+assuming, the fault is the **M dwarfs** — 0.8% against a measured ~3%, and at 3% the ratio would
+be 6.8, near enough 4 to argue about. The apparent inversion at the top is mostly a windowing
+effect: A stars make giants at 21.2% at any separation and 15.5% inside 5 AU, because a luminous
+star's snow line sits far out and nothing here migrates inwards.
+
+**The test suite is red, on purpose, and should stay red.** Sixty-five tests pass and one fails,
+and the one that fails is a prediction that was declared in advance and did not survive contact
+with better physics. Two things were available and both were refused: widen the band, or demote
+the claim from `binding` to something that cannot fail. Either would have produced a green suite
+and a worthless falsifier. **A model that cannot currently fail a claim it published is not a
+model, it is a decoration** — and the cost of keeping the claim is one red test, which is cheap.
+
+What it also means is that the model's three remaining faults are now **one** missing mechanism
+with three faces: no inward transport of solids. It starves the inner disk, it leaves A-star
+giants outside 5 AU where the surveys do not count them, and it is why the ice giants cannot be
+built where they sit. The next mechanism is therefore not a guess.
 
 **Stage 0 — original scope.** The repo, the `World` types in real units (no strings),
 and the calibration harness with the corpora above. Deliverable: a failing test suite that says
