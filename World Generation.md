@@ -122,7 +122,7 @@ instead of distance:
 | --- | --- | --- | --- |
 | **L0 — star** | spectral detail, luminosity, age, `bestHI` | µs | the galaxy, the HI filter |
 | **L1 — system** | planets: mass, radius, orbit, eccentricity, rotation, obliquity, moons, atmosphere, surface temperature, HI | ≤ 100 µs | the system map, search, the book's dice version |
-| **L2 — surface** | plates → hypsometry → erosion → a height field, a climate and a **province graph with crossing costs** | 10–100 ms, worker-friendly, cached | a world someone looks at |
+| **L2 — surface** | **180 provinces**: land or water, relief, terrain feature, climate, and the **graph with crossing costs** — no height field, which is the renderer's | ≤ 1 ms for the provinces; the render is the renderer's budget | a world someone looks at *and plays on* |
 | **L3 — story** | biosphere and society, on one shared engine: populations with trait vectors drifting in niches, then the iterated history over them | ms | a world someone plays on |
 
 **The invariant that keeps this honest: a lower layer may add detail but may never contradict the
@@ -354,9 +354,11 @@ pruning. Moons as first-class bodies. Rotation, obliquity, eccentricity, tidal l
 retention from escape velocity and stellar XUV rather than a table. *Falsifier: the Kepler
 occurrence comparison, and Sol.*
 
-**Stage 2 — surface.** Plates on a sphere, uplift and subduction, then erosion. Out comes a
-`PlanetSurface`, so it renders through the existing pipeline on the day it works. *Falsifier: the
-Earth's hypsometric curve, and L1/L2 agreement on hydrographics.*
+**Stage 2 — surface.** 180 provinces on an icosahedron: land or water against L1's hydrographics,
+then relief, then terrain feature, then the graph including corner isthmuses. **Not** plates,
+uplift and erosion — see *Design for effect* below for why that changed. *Falsifier: Earth's
+landmass spectrum (about five masses with ~57% of land in the largest), and L1/L2 agreement on
+hydrographics.*
 
 **Stage 3 — climate.** Energy balance with a real greenhouse term, Hadley circulation, rain shadow,
 seasons from obliquity. Reuses `province-climate`, `biome-chart` and `climate-noise` rather than
@@ -435,6 +437,85 @@ expensive.
    which is the argument for making it a **shared substrate that two stages use**, not a stage of
    its own. The precedent is `tosijs-3d`'s `biome-chart`: one pure model, two consumers that cannot
    drift apart because both import it.
+
+### Design for effect: 1986's 180 triangles *are* the province graph
+
+Tonio, on the old generator: *"it was very much design for effect. It divided a planet in 180
+triangles then it made them water or land based on hydrographics and then gave them terrain types
+based on whatever."* He is right, and §7.1 **Mapping Planets** turns out to contain more than
+either of us remembered. **Stage 2's plan changes accordingly, and this is the argument.**
+
+**It already had the graph.** §7.1 ends: *"two sub-zones are considered adjacent if they would be
+so were the map folded into an icosahedron."* That sentence is a connectivity graph. The section
+below was written after checking `tosijs-3d` and finding none — and it is still right that
+`tosijs-3d` has none, because its provinces are **terrain forcing functions**, `(x, z) => number`
+over a tile plane with an AABB outside which they are inert. But L2 never owed a *design* for the
+subdivision. It owed an implementation of one published in 1986.
+
+**It already had the corner case, and the corner case is the interesting one.** Three
+edge-neighbours is not the whole graph: land also meets at a *point*, and whether that is a land
+bridge or two coasts that merely touch decides whether a continent is one landmass or two. 1986
+shipped an **Isthmus Table** for it, conditioned on how many triangles about that vertex are land —
+*with separate rows for the twelve vertices where only five meet rather than six.* It knew about
+the pentagon defect. In 1986.
+
+That table is a closed form: **P = (k−1)/(n−2)** for `k` land about a vertex of degree `n`. Every
+published row satisfies it. So it is implemented as the formula, with the table as a test, and it
+now generalises to subdivisions the book never had.
+
+**Why this replaces plates and erosion rather than sitting under them.** The planned Stage 2 was
+simulation for fidelity, and its falsifier was *Earth's hypsometric curve* — a statistic of
+elevation that no one at the table ever consults. Against this repo's own standard, that is the
+wrong target: *the standard applies to the goal — best possible game you can run from memory —
+never to simulation fidelity, or you get GURPS.* What play needs from a surface is a map that
+reads as a world, a graph you can move along, and enough per-province attribute to hang a
+settlement on. 180 triangles deliver all three in under a millisecond; plate tectonics delivers a
+height field and a statistic.
+
+Three consequences that are better than the thing they replace:
+
+- **The count is fixed; the province *size* varies with the planet.** 1986 did this so the map
+  fitted one record sheet. It buys something sharper here: the drift engine's graph is the same
+  size for every world, so archipelago-versus-plain differences are differences of **topology**
+  and not of *N*. That is what makes [the falsifier](#the-falsifier-which-is-the-best-one-in-this-plan)
+  a falsifier instead of a confound.
+- **A better falsifier, about the thing the game uses.** Not the hypsometric curve but **Earth's
+  landmass spectrum**: at 71% water, roughly five landmasses with about 57% of the land in the
+  largest. That tests connectivity, which is what every downstream consumer reads. The first
+  implementation over-consolidates — 2–3 masses, 85% in the largest — so the claim is live rather
+  than already satisfied.
+- **Provinces are not equal-area**, by about 25%: projecting a trisected face outward leaves the
+  middle triangles larger. Real provinces differ in size too, so this is harmless *provided*
+  nothing assumes uniformity, which is why area is carried per province and asserted in a test.
+
+**Two things the first implementation found.**
+
+*Water placement must be multi-scale.* The first field was a sum of random linear gradients — and a
+sum of linear functions is one linear function, so every world came out as a single land cap and an
+85%-water world had exactly one "archipelago" in it. Islands need octaves.
+
+*The interesting isthmuses are the graph's **bridges**.* At 30% water the 1986 roll produces about
+eighty corner links per planet, nearly all joining provinces already in the same landmass. As
+*connectivity* that is correct; as *features* it is absurd. Panama matters because cutting it
+disconnects two continents — so the notable isthmuses are the bridge edges of the land graph, and
+the notable straits are the bridge edges of the sea graph. Both fall out of the graph for free, and
+both are exactly where a blockade, a canal or a toll becomes a decision. That is friction with a
+countermove that pays.
+
+**What this does not do: a height field.** Deliberately. `ProvinceFn` is planar, tile-space and
+locally bounded, which is the right shape for *rendering* a region and the wrong shape for deciding
+a planet. So the division of labour is: L2 says **what is true** of each province, and a
+renderer-side adapter compiles those facts into forcing functions for whatever patch is being
+drawn — with the sphere-to-tile projection on the renderer's side, because putting it in a pure
+function of `(address, stage, stream)` would give it a dependency on tile space. It is the same
+discipline as this repo's entity views: a coarse authoritative substrate that a richer presentation
+*enhances but may never contradict*.
+
+> **One prediction to check when something actually renders.** `mergeProvinces` **maxes** its
+> fields. Two adjacent provinces with linear edge falloff both read ~0.5 at their shared edge, and
+> `max` of two halves is a half — so a naive falloff leaves a visible crease along every province
+> boundary. Either the falloff should plateau so it only drops within a thin border, or the blend
+> wants to be a sum. Filed as a prediction, not a bug, because nobody has rendered it yet.
 
 ### The consequence: L2 owes a connectivity graph
 
