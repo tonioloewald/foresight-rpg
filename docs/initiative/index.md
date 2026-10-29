@@ -11,7 +11,51 @@ The hard, real moment is the transition out of story-telling into a fight. Every
 
 > **Surprised** (woken by the attack) → **Startled** → **Alert** → **Ready** → **Lying in wait** (the ambusher)
 
-**Awareness and position drive Initiative.** Coarse, obvious effects modify it: a visored helmet or a blind corner is a disadvantage; a sniper studying the scene in safety, or the enemy behind you with the height, is a large advantage. Ballpark each from about **+4** (you see everything and they don't; you're behind them) to **−4** (the reverse). Need a number for awareness? It's about **½ (Perception + Stealth)**. Once the fight is live it tends to level out to one question — *can you see what's happening?*
+**Awareness and position drive Initiative.** Coarse, obvious effects modify it: a visored helmet or a blind corner is a disadvantage; a sniper studying the scene in safety, or the enemy behind you with the height, is a large advantage. Ballpark each from about **+4** (you see everything and they don't; you're behind them) to **−4** (the reverse). Once the fight is live it tends to level out to one question — *can you see what's happening?*
+
+### Who gets the drop: one opposed roll per side
+
+Where each side *starts* on that spectrum is not a stat — it's a **contest**, and an asymmetric one: your watchfulness against their quietness, and theirs against yours. Each side makes two rolls:
+
+- **Search** on the **best** Score in the group — you are as watchful as your sharpest member.
+- **Stealth** on the **worst** — and as quiet as your clumsiest. *A side making no attempt at concealment doesn't roll: take **QR7**.*
+
+Add the two QRs for an **encounter total** (low is good, like every QR), then modify it:
+
+| Mod | The side is… |
+|:--:|:--|
+| **−4** | **lying in wait** — a prepared position, a planned ambush |
+| **−2** | **moving cautiously** — half speed, checking corners, one scout out |
+| **—** | just travelling |
+
+Compare the totals. For the side that is **ahead**, by:
+
+| Margin | What happens |
+|:--:|:--|
+| **4+** | They're **Surprised** — no declaration on round one (and if you were lying in wait, they walked right into it) |
+| **3** | They're **Startled**: your choice of spring it at **observation** range, *or* take the Initiative at **contact** range |
+| **2** | You're **Ready**, they're **Alert**: choose the range *or* take the Initiative and leave the range to them — not both |
+| **0–1** | Both **Alert**, nobody has the drop. Range is random: **25%** contact, **75%** observation |
+
+*Actively searching is easier than happening to notice — that's an **EF** difference on the Search roll, not a separate skill. A lookout who has been told what to look for gets the better ease factor.*
+
+### How far away: the terrain decides, not the dice
+
+Encounter range is a property of the **ground**, which is why it's a lookup and not a roll. Read the **Terrain Value** off the [terrain grid](/vehicles/) — contour (flat/uneven/broken) × feature (barren → heavy vegetation, marsh, ice) — the same number that divides vehicle speed:
+
+| Terrain Value | Contact | Observation |
+|:--:|:--:|:--:|
+| 0 — flat, barren | 50 m | 2 km |
+| 1 | 40 m | 1 km |
+| 2 | 30 m | 500 m |
+| 3 | 25 m | 250 m |
+| 4 | 20 m | 125 m |
+| 5 | 15 m | 80 m |
+| 6+ — broken, heavy vegetation | 10 m | 30 m |
+
+**Open ground buys you two kilometres of warning; jungle buys you thirty metres.** That's the whole reason terrain matters before anyone rolls anything, and it's why a competent ambush looks for closure rather than cover.
+
+*Designer's Note: the line this replaced read "awareness is about ½ (Perception + Stealth)" — which averaged an attribute with a skill, and averaged your **own** stealth into how well you notice **other people**. Both halves were wrong, and the second was wrong in an interesting way: it treated awareness as something you have rather than something you win. The procedure above is **ForeSight 1986 §3.10** (best-Search, worst-Stealth, sum the QRs, −4 for an ambush, −2 for caution) mapped onto this page's spectrum, with 1986's Scan/Search split collapsed into an ease factor. The range table is 1986's unchanged, except that it printed its last row as "8+" and left Terrain Value 6 — uneven heavy vegetation, i.e. ordinary forest on a slope — undefined; it reads as the bottom row.*
 
 ## The round
 

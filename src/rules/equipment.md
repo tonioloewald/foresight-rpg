@@ -1,11 +1,11 @@
 # Equipment
 <!--{ "parent": "world", "order": 1 }-->
 
-*One-pager — the keystone. Everything you can own, drive, wield, or wear is an **object**: a basic object (a noun) plus modifications (adjectives). Weapons, armor, vehicles, and tools are just objects with extra stats. NPCs and monsters use the same pattern (see those pages).*
+*One-pager — the keystone. Everything you can own, drive, wield, or wear is an **object**: modifiers (adjectives) in front of a basic object (a noun) — a *cut-down pistol*, a *light target pistol*. Weapons, armor, vehicles, and tools are just objects with extra stats. NPCs and monsters use the same pattern (see those pages).*
 
-## Object = noun + adjectives
+## Object = modifiers + noun
 
-A **basic object** is the noun: *sword*, *pistol*, *sedan*, *backpack*. A **modification** is an adjective with a defined game effect: *fine*, *shoddy*, *sporty*, *cut-down*. You build the item you want by putting adjectives in front of the noun — and that's exactly how you say it at the table: a *cut-down pistol*, a *sporty sedan*.
+A **basic object** is the noun: *sword*, *pistol*, *sedan*, *backpack*. A **modifier** is an adjective with a defined game effect: *fine*, *shoddy*, *sporty*, *cut-down*. You build the item you want by stacking modifiers in front of the noun — **in that order, because it's the order you say it in at the table**: a *cut-down pistol*, a *sporty sedan*, a *light target pistol*. Left to right it's a specification; right to left it's a catalog entry, and nobody talks in catalog entries.
 
 This is also how the catalog stays short. If a "new" item is really a variant of one you already have, it isn't a separate entry — it's an adjective on an existing noun: a **carbine** is a *light rifle*, a **destrier** is a *warhorse*. One good adjective often covers several real items: the weapon-specific **cut-down** gives you both a sawn-off shotgun *and* a snub-nose revolver — easier to conceal, worse at range. One noun, many items.
 
@@ -53,4 +53,4 @@ These apply to almost anything; categories add their own.
 
 List entries get **minimal** descriptions — but useful ones. The job of a description is to tell a reader what the thing *is* and *why a character would carry it*. D&D famously listed a 10′ pole and never said it was for probing floors for traps from a safe distance; don't do that. One honest sentence beats a paragraph of stats restated in prose.
 
-*Designer's Note: "objects are nouns plus adjectives" is the same idea that runs through NPCs, vehicles, and even background factors. Learn it once and the whole back half of the book is the same move applied to different lists. (And you already speak this language — nobody says "pistol, cut-down"; they say "cut-down pistol.")*
+*Designer's Note: "an object is its modifiers plus a noun" is the same idea that runs through NPCs, vehicles, and even background factors. Learn it once and the whole back half of the book is the same move applied to different lists. (And you already speak this language — nobody says "pistol, cut-down"; they say "cut-down pistol.")*

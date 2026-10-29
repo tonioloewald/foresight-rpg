@@ -1058,6 +1058,46 @@ These are wired into the interactive character sheet (ForeSight Character Sheet.
   - Worked: misjump software recovery `(5+D5)/(TL−5)` minutes — **verified**, not a guess: the chapter says only **TL7+** ships can carry interstellar drives, so the denominator is always ≥2 (no singularity), recovery falls monotonically with TL (TL7 3–5 min → TL9 1.5–2.5 min), and `D5` is a defined ForeSight die (D10 halved, round up).
 - Corollary: where a reconstruction *can't* be made consistent, that's a signal the reading is wrong — leave it verbatim and flag it rather than shipping a plausible-looking number.
 
+## Fixed: awareness was a stat, and it should have been a contest (2026-10, Tonio)
+
+**The bug.** The Initiative one-pager said *"Need a number for awareness? It's about ½ (Perception + Stealth)."* Tonio: *"that formula makes zero sense."* It doesn't, twice over: it averages an **attribute** with a **skill**, and it averages **your own** stealth into how well you notice **other people**. The second error is the instructive one — it treats awareness as a property you carry rather than an outcome you win.
+
+**Tonio also half-remembered the real rule** — *"a table or rule which for general encounters compared each side's perception and stealth QRs (assume QR7 if a given side just isn't being stealthy) and produced an awareness level … and also encounter ranges based on terrain closure … Or maybe I'm imagining this."* Not imagining it. It is **ForeSight 1986 §3.10 Resolving Wilderness Encounters**, p.37, and it is more precise than the recollection: the QR7-for-not-trying detail is the only part that wasn't printed, and it follows from the procedure.
+
+**The 1986 procedure, verbatim in structure.** Each side rolls Scan on the *best* SC in the group and Stealth on the *worst*, sums the two QRs (low is good), **−4** if attempting an ambush and **−2** if proceeding cautiously (half speed). Then compare sums: **4+ lower = surprise** (and an attempted ambush means the other side walked into it); **3 lower** = surprise at observation range *or* the initiative at contact range; **2 lower** = choose the range *or* take the initiative and leave the range to them; **otherwise** range is random (25% contact / 75% observation). Non-hostile parties read *"startled"* for *"surprised"*.
+
+**What 2026 keeps, and the two changes.**
+1. **Scan is gone as a skill** (2026 has Search `(IN+PC)/2` and Stealth `(CO+PC)/2`), and 1986 already told us how to collapse it: §2.2's Stealth note makes active searching *easier* than passive noticing. So the Scan/Search split becomes an **ease factor**, not a skill — which is decided-simplification #11 applied to a pair nobody had noticed was a pair.
+2. **The margin maps onto the page's existing five-step spectrum** (Surprised → Startled → Alert → Ready → Lying in wait) instead of introducing new states. Lying in wait is the −4 *input*; Surprised and Startled are the 4+ and 3 *outputs*; 2 is Ready-vs-Alert; 0–1 is both Alert. The spectrum was already right; it just had nothing feeding it.
+
+**Why an opposed roll rather than a derived number, in this repo's terms.** A stat for awareness fails the friction test on *answerable*: there is no countermove, because you cannot do anything about a number on your sheet. A contest has three — move cautiously, prepare a position, pick your ground — and the third is what makes the terrain grid below pay for itself.
+
+**The gap found while transcribing, left as a gap.** 1986's range table runs 0,1,2,3,4,5,8+. But the Terrain Value Chart's reachable values are 0,1,2,3,4,5,6,8 — so **TV 6 (uneven heavy vegetation: ordinary forest on a slope) was undefined in the printed table**, and TV 7 never occurs at all. Per "derive, don't guess" above: not invented, folded into the bottom row, and stated in the Designer's Note on the page.
+
+## Decided: the terrain grid survives; the familiarity-per-square tax does not (2026-10, Tonio)
+
+**Tonio:** *"ForeSight's terrain matrix was a very useful construct for handling things like overland speed in vehicles and encounter distance. Where it became cumbersome was requiring characters to have familiarities in every grid square. The latter should be gone but the grid remains useful."* And then: *"And of course it also was key to planet generation."*
+
+**The grid.** Contour (flat / uneven / broken) × feature (barren / light / medium / heavy vegetation / marsh / ice) → a **Terrain Value** 0–8, with settled ground extending the features rather than replacing them (suburban 0, 1 with real cover; urban 0, 2 built-up). Broken marsh is blocked. Two questions, one number.
+
+**It has three consumers, which is the whole argument for keeping it.** Overland speed and pursuit (Cruise/Max ÷ TV/2, Pur/Man − TV, Redline + TV/2 — the last per the Oct 1987 errata); encounter distance (§3.10's table above); and **planet generation** — §7.1[ii] rolls a contour for every land sub-zone (1–3 flat, 4–8 uneven, 9–10 broken) and §7.1[iii] rolls its feature off a *temperature band × contour* table. One table learned once, read at the planetary scale and at the tactical one.
+
+**This is the strongest argument yet for the design-for-effect province stage** (see `World Generation.md`). The worldgen terrain stage was going to need an output vocabulary invented for it; it doesn't. **Its output vocabulary is the terrain grid**, which means a generated world arrives already carrying the numbers travel, pursuit and encounters consume — no adapter, no second taxonomy. And §7.1[iii]'s modifiers are already **graph-aware**: −2 if no water province shares a side (continental interior, drier), +1 if *only* water provinces share a side (island, wetter), plus planetary hydrographics. The province adjacency graph was feeding the vegetation table in 1986.
+
+**What's dropped, and under which existing decision.** 1986 expected characters to hold a **familiarity per grid square**, so a useful 3×6 matrix became a bookkeeping tax on the character sheet. That goes under **decided simplification #5** — the same decision that deleted the gravity/environment/temperature familiarity tables. Terrain familiarity is now a flagship *example* of long-term familiarity ("knows this jungle"), never a subsystem. Note the shape of the fault, because it recurs: the matrix was never the problem; **requiring a character-sheet entry per cell** was. A construct that indexes the *world* is cheap; the same construct indexing the *characters* multiplies.
+
+**Open.** §7.1[iii]'s Terrain Features table is OCR-scrambled (roll ranges survive, column assignment doesn't) and carries a **VH** (very heavy vegetation) column the Terrain Value Chart lacks. Reconstruct it from the PDF before the worldgen terrain stage consumes it; "derive, don't guess" applies — and note that VH folding to TV 8+ is consistent with the range table's own bottom row.
+
+## Proposed: "modifiers + noun" wants to be its own one-pager (2026-10, Tonio)
+
+**Two parts.** First, a phrasing fix now applied: the Equipment page led with **"Object = noun + adjectives"**, which is backwards from how anyone speaks. Tonio: *"could be better phrased as Object = adjectives ('modifiers') + noun."* It now reads **Object = modifiers + noun**, in the order you say it — *left to right it's a specification; right to left it's a catalog entry, and nobody talks in catalog entries.*
+
+**Second, the larger claim: it isn't an equipment rule at all.** Tonio: *"From Hulking Thug to Light Target Pistol… one rule for quickly describing things that are directly represented in game rules."* The pattern already runs through equipment, vehicles, NPCs/monsters and background factors, and each page currently re-teaches it locally. That's the exact signature of a missing one-pager under "one-pager per concept" — and the concept here is not *objects*, it is **naming as specification**: a phrase at the table that is simultaneously English and a stat block.
+
+**Why it's worth a page rather than a cross-reference.** It is the book's main answer to catalog bloat (a carbine is a *light rifle*; a destrier is a *warhorse*; *cut-down* yields both the sawn-off shotgun and the snub-nose revolver), and it is the only mechanism that makes GM improvisation cost nothing — *"Hulking Thug"* is a complete NPC because both words are rules. Page owes: the grammar (modifier stacking, which modifiers conflict, when a modifier should have been a new noun instead), the shared modifier vocabulary across categories, and the one hard limit — a modifier must have a **defined game effect**, or it's colour and belongs in the description.
+
+**Filed, not written** — a new one-pager changes the book's spine, so it waits on Tonio's call on placement (Core, next to [Scores], vs. opening the back half ahead of Equipment).
+
 ## Decided: AP becomes a family of quirks (2026-08, Tonio)
 
 > **Applied 2026-08.** AP is gone from the attribute block; the replacement formulas landed (`Charm (IN+PC)/2`, `Confidence IN`, `Perform (IN+PC)/2`, all with BEF cut 5 → 3). The convergence this section worried about *did* happen and was accepted deliberately: Charm and Perform share a formula and are separated by what they move — Charm moves how people feel, Confidence moves what they will do. The Appearance quirk family that has to carry the specificity is **not yet written** (board #2904).

@@ -29,7 +29,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=5c7b3173ba40" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=30f865e5c215" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="initiative.md">
 <h1 id="initiative">Initiative</h1>
 <!--{ "parent": "conflict", "order": 1 }-->
@@ -41,7 +41,108 @@
 <blockquote>
 <p><strong>Surprised</strong> (woken by the attack) → <strong>Startled</strong> → <strong>Alert</strong> → <strong>Ready</strong> → <strong>Lying in wait</strong> (the ambusher)</p>
 </blockquote>
-<p><strong>Awareness and position drive Initiative.</strong> Coarse, obvious effects modify it: a visored helmet or a blind corner is a disadvantage; a sniper studying the scene in safety, or the enemy behind you with the height, is a large advantage. Ballpark each from about <strong>+4</strong> (you see everything and they don&#39;t; you&#39;re behind them) to <strong>−4</strong> (the reverse). Need a number for awareness? It&#39;s about <strong>½ (Perception + Stealth)</strong>. Once the fight is live it tends to level out to one question — <em>can you see what&#39;s happening?</em></p>
+<p><strong>Awareness and position drive Initiative.</strong> Coarse, obvious effects modify it: a visored helmet or a blind corner is a disadvantage; a sniper studying the scene in safety, or the enemy behind you with the height, is a large advantage. Ballpark each from about <strong>+4</strong> (you see everything and they don&#39;t; you&#39;re behind them) to <strong>−4</strong> (the reverse). Once the fight is live it tends to level out to one question — <em>can you see what&#39;s happening?</em></p>
+<h3 id="who-gets-the-drop-one-opposed-roll-per-side">Who gets the drop: one opposed roll per side</h3>
+<p>Where each side <em>starts</em> on that spectrum is not a stat — it&#39;s a <strong>contest</strong>, and an asymmetric one: your watchfulness against their quietness, and theirs against yours. Each side makes two rolls:</p>
+<ul>
+<li><strong>Search</strong> on the <strong>best</strong> Score in the group — you are as watchful as your sharpest member.</li>
+<li><strong>Stealth</strong> on the <strong>worst</strong> — and as quiet as your clumsiest. <em>A side making no attempt at concealment doesn&#39;t roll: take <strong>QR7</strong>.</em></li>
+</ul>
+<p>Add the two QRs for an <strong>encounter total</strong> (low is good, like every QR), then modify it:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Mod</th>
+<th align="left">The side is…</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>−4</strong></td>
+<td align="left"><strong>lying in wait</strong> — a prepared position, a planned ambush</td>
+</tr>
+<tr>
+<td align="center"><strong>−2</strong></td>
+<td align="left"><strong>moving cautiously</strong> — half speed, checking corners, one scout out</td>
+</tr>
+<tr>
+<td align="center"><strong>—</strong></td>
+<td align="left">just travelling</td>
+</tr>
+</tbody></table>
+<p>Compare the totals. For the side that is <strong>ahead</strong>, by:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Margin</th>
+<th align="left">What happens</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>4+</strong></td>
+<td align="left">They&#39;re <strong>Surprised</strong> — no declaration on round one (and if you were lying in wait, they walked right into it)</td>
+</tr>
+<tr>
+<td align="center"><strong>3</strong></td>
+<td align="left">They&#39;re <strong>Startled</strong>: your choice of spring it at <strong>observation</strong> range, <em>or</em> take the Initiative at <strong>contact</strong> range</td>
+</tr>
+<tr>
+<td align="center"><strong>2</strong></td>
+<td align="left">You&#39;re <strong>Ready</strong>, they&#39;re <strong>Alert</strong>: choose the range <em>or</em> take the Initiative and leave the range to them — not both</td>
+</tr>
+<tr>
+<td align="center"><strong>0–1</strong></td>
+<td align="left">Both <strong>Alert</strong>, nobody has the drop. Range is random: <strong>25%</strong> contact, <strong>75%</strong> observation</td>
+</tr>
+</tbody></table>
+<p><em>Actively searching is easier than happening to notice — that&#39;s an <strong>EF</strong> difference on the Search roll, not a separate skill. A lookout who has been told what to look for gets the better ease factor.</em></p>
+<h3 id="how-far-away-the-terrain-decides-not-the-dice">How far away: the terrain decides, not the dice</h3>
+<p>Encounter range is a property of the <strong>ground</strong>, which is why it&#39;s a lookup and not a roll. Read the <strong>Terrain Value</strong> off the <a href="/vehicles/">terrain grid</a> — contour (flat/uneven/broken) × feature (barren → heavy vegetation, marsh, ice) — the same number that divides vehicle speed:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Terrain Value</th>
+<th align="center">Contact</th>
+<th align="center">Observation</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">0 — flat, barren</td>
+<td align="center">50 m</td>
+<td align="center">2 km</td>
+</tr>
+<tr>
+<td align="center">1</td>
+<td align="center">40 m</td>
+<td align="center">1 km</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">30 m</td>
+<td align="center">500 m</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">25 m</td>
+<td align="center">250 m</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">20 m</td>
+<td align="center">125 m</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">15 m</td>
+<td align="center">80 m</td>
+</tr>
+<tr>
+<td align="center">6+ — broken, heavy vegetation</td>
+<td align="center">10 m</td>
+<td align="center">30 m</td>
+</tr>
+</tbody></table>
+<p><strong>Open ground buys you two kilometres of warning; jungle buys you thirty metres.</strong> That&#39;s the whole reason terrain matters before anyone rolls anything, and it&#39;s why a competent ambush looks for closure rather than cover.</p>
+<p><em>Designer&#39;s Note: the line this replaced read &quot;awareness is about ½ (Perception + Stealth)&quot; — which averaged an attribute with a skill, and averaged your <strong>own</strong> stealth into how well you notice <strong>other people</strong>. Both halves were wrong, and the second was wrong in an interesting way: it treated awareness as something you have rather than something you win. The procedure above is <strong>ForeSight 1986 §3.10</strong> (best-Search, worst-Stealth, sum the QRs, −4 for an ambush, −2 for caution) mapped onto this page&#39;s spectrum, with 1986&#39;s Scan/Search split collapsed into an ease factor. The range table is 1986&#39;s unchanged, except that it printed its last row as &quot;8+&quot; and left Terrain Value 6 — uneven heavy vegetation, i.e. ordinary forest on a slope — undefined; it reads as the bottom row.</em></p>
 <h2 id="the-round">The round</h2>
 <ol>
 <li><strong>Roll Initiative</strong> (awareness/position-driven). Order everyone best to worst; ties broken by Score.</li>
