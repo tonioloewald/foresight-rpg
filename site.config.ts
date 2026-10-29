@@ -39,6 +39,17 @@ export default defineSiteConfig({
     // volume (see epub.volumeTitles + the `book` field on src/docs/foresight-1986.md).
     exclude: ['character-builder.md'],
   },
+  // A Markdown table gets NO margin from tosijs-ui's doc-system.css, while
+  // `blockquote` deliberately zeroes its top margin (its 56px bottom carries the
+  // speech-bubble tail). So any table immediately followed by a blockquote renders
+  // flush, with no separation at all — visible on Equipment and 1986 Resolution.
+  // The same package's ePub stylesheet gets it right (`table { margin: 0.8em 0 }`),
+  // so this patches the web one to agree with it. `:not([class])` leaves our own
+  // generated `.ev-table` alone — it already carries its own bottom margin, which
+  // is how this went unnoticed in the entity views. Filed upstream as tosijs-ui #3553;
+  // delete this once it lands.
+  headExtra:
+    '<style>.doc-content table:not([class]){margin:var(--spacing,10px) 0 calc(var(--spacing,10px) * 2) 0}</style>',
   host: 'static',
   port: 1986,                 // dev server (https://localhost:1986/)
   watchPaths: ['./static'],   // also rebuild when data/*.json change
