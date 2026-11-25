@@ -26,7 +26,7 @@
 | Skill | Formula | Lvl | **Score** | BEF |
 |---|---|:--:|:--:|:--:|
 | Search | (IN+PC)/2 | __ | __ | 5 |
-| Initiative | (IN+PC)/2 | __ | __ | 3+E |
+| Initiative | (IN+PC)/2 | __ | __ | 5 |
 | __________ | __________ | __ | __ | __ |
 | __________ | __________ | __ | __ | __ |
 | __________ | __________ | __ | __ | __ |
@@ -48,11 +48,11 @@
 
 ## Status
 
-**Wounds** (−level to *everything*): 0 ▢ 1 ▢ 2 ▢ 3 ▢ 4 ▢ 5 ▢ 6 ▢ 7 ▢ 8💀  
+**Wounds** (−level to *everything*): 0 ▢ 1 ▢ 2 ▢ 3 ▢ 4 incap ▢ 5 dying ▢ 6 💀  
 *Worst level reached:* ____
 
 **Exhaustion** (full to own domain, ½ to others; clears 1 level/rest by depth):
-- Fatigue ▢▢▢▢  · Mana ▢▢▢▢ · _______ ▢▢▢▢
+- Fatigue ▢▢▢▢▢ · Mana ▢▢▢▢▢ · _______ ▢▢▢▢▢
 
 **Shaken** ▢  **Stunned** ▢
 

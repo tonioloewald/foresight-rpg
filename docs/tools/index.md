@@ -3,7 +3,7 @@
 
 *The rest of the [objects](/equipment/) — the kit that turns "you can't" into "roll for it," or a penalty into a bonus.*
 
-Most gear does one honest thing: it grants a **PM** (an ease-factor bonus) to a specific task, or removes the penalty for attempting that task without it. Lock picks make a lock a skill roll instead of an impossibility; a medical kit is a PM to First Aid; binoculars turn a smudge on the horizon into a Scan you can actually make. The job of each description is to say *what it is* and *why you'd carry one* — the 10-foot pole was never mysterious once someone explained it was for probing the floor from a safe distance.
+Most gear does one honest thing: it grants a **PM** (an ease-factor bonus) to a specific task, or removes the penalty for attempting that task without it. Lock picks make a lock a skill roll instead of an impossibility; a medical kit is a PM to First Aid; binoculars turn a smudge on the horizon into a Search you can actually make. The job of each description is to say *what it is* and *why you'd carry one* — the 10-foot pole was never mysterious once someone explained it was for probing the floor from a safe distance.
 
 <!-- entity-view: tools.json -->
 <div class="entity-view">

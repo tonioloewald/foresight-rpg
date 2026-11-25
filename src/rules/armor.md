@@ -3,7 +3,7 @@
 
 *Armor is an [object](/equipment/) that changes how [Damage](/damage/) lands on you. It doesn't make you harder to hit — it makes the hits smaller.*
 
-**Protection** is listed by damage type: `M3 I1` turns cutting attacks far better than crushing ones — which is exactly why mail wants padding under it. **Absorb (A)** is how much of a *piercing* attack it still soaks. **Penalty** is what wearing it costs (an ease-factor hit to Agility in a heavy suit, to Perception under a full helm). Heavier isn't strictly better: it's a trade of protection against penalty, weight, and price — and against the [Technology Level](/technology-levels/) that can make or repair it.
+**Protection** is listed by damage type: `M3 I1` turns cutting attacks far better than crushing ones — which is exactly why mail wants padding under it. **Absorb (A)** is how much of a *piercing* attack it still soaks. **Penalty** is what wearing it costs (an ease-factor hit to Coordination in a heavy suit, to Perception under a full helm). Heavier isn't strictly better: it's a trade of protection against penalty, weight, and price — and against the [Technology Level](/technology-levels/) that can make or repair it.
 
 <!-- entity-view: armor.json -->
 <div class="entity-view">

@@ -38,7 +38,7 @@
 > **Damage = Yield × (DC ÷ 2)** ⟶ wound levels.  (Large/tough target: **÷ Damage Scale**.)
 
 **DC anchors:** very strong person's fist **4** · 9mm pistol **8** · 7.62 rifle **11**.
-**Types:** M melee · I impact · B beam. **P**n weapon pierces n DC of armor; armor **A** absorbs 1 damage.
+**Types:** M mechanical/cutting · I impact/crushing · B burning/ballistic (see Weapons). **P**n weapon pierces n DC of armor; armor **A** absorbs 1 damage.
 **Hit location:** roll D10, or call the shot for an up-front EF penalty (covers cover, too).
 
 ## Combat (sequence)
@@ -53,9 +53,9 @@
 
 ## Wounds, Stun & Exhaustion
 
-**Wound level** 0→8(dead); **−(level) to everything**. New damage adds on. Pain Resistance (WP) on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO).
-**Convalescence:** roll WP at the level's interval (Light daily, Med 5d, Heavy 20d, Critical+ every 30 min/5 min/min) — success drops a level, QR10 raises; worst-level penalty until healed/treated.
+**Wound level** 0→6 (4 incapacitated · 5 dying · 6 dead); **−(level) to everything**. New damage adds on. Pain Resistance (WP) on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO).
+**Convalescence:** roll WP at the level's interval (Light daily, Med 5d, Heavy 20d, Incapacitated daily, Dying every few minutes — and *deteriorating*) — success drops a level, QR10 raises; worst-level penalty until healed/treated.
 
-**Exhaustion** (fatigue, mana, etc.): hard exertion → WP check, fail = **+1 level**. **Full** penalty to its own domain, **half** to all else, tracks **stack** (round half up). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.
+**Exhaustion** (fatigue, mana, etc.): hard exertion → WP check, fail = **+1 level**. **Full** penalty to its own domain, **half** to all else — *except fatigue, which is full against everything*; tracks **stack** (round half **away from zero**). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.
 
 **Power pools** (Mana/Piety/Spirit): gather roll → success = free · marginal/fail = +1 exhaustion · QR10 = fizzle + exhaustion. **Push it:** take a level for a one-off **+4**.

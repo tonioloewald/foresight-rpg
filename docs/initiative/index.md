@@ -17,7 +17,7 @@ The hard, real moment is the transition out of story-telling into a fight. Every
 
 Where each side *starts* on that spectrum is not a stat — it's a **contest**, and an asymmetric one: your watchfulness against their quietness, and theirs against yours. Each side makes two rolls:
 
-- **Search** on the **best** Score in the group — you are as watchful as your sharpest member.
+- **Perception** on the **best** Score in the group — you are as watchful as your sharpest member. If the side is *actively scanning* rather than merely travelling, roll **Search** instead: looking is a skill, noticing is not.
 - **Stealth** on the **worst** — and as quiet as your clumsiest. *A side making no attempt at concealment doesn't roll: take **QR7**.*
 
 Add the two QRs for an **encounter total** (low is good, like every QR), then modify it:
@@ -37,7 +37,7 @@ Compare the totals. For the side that is **ahead**, by:
 | **2** | You're **Ready**, they're **Alert**: choose the range *or* take the Initiative and leave the range to them — not both |
 | **0–1** | Both **Alert**, nobody has the drop. Range is random: **25%** contact, **75%** observation |
 
-*Actively searching is easier than happening to notice — that's an **EF** difference on the Search roll, not a separate skill. A lookout who has been told what to look for gets the better ease factor.*
+*This is the Perception-or-Search split the rest of the book already uses ([The One Rule](/the-one-rule/), [Opposed Resolution](/open-ended-resolution/)): passive noticing is the raw attribute, actively looking is the skill. A lookout told what to look for also earns the usual ease-factor bonus on top.*
 
 ### How far away: the terrain decides, not the dice
 
@@ -55,7 +55,7 @@ Encounter range is a property of the **ground**, which is why it's a lookup and 
 
 **Open ground buys you two kilometres of warning; jungle buys you thirty metres.** That's the whole reason terrain matters before anyone rolls anything, and it's why a competent ambush looks for closure rather than cover.
 
-*Designer's Note: the line this replaced read "awareness is about ½ (Perception + Stealth)" — which averaged an attribute with a skill, and averaged your **own** stealth into how well you notice **other people**. Both halves were wrong, and the second was wrong in an interesting way: it treated awareness as something you have rather than something you win. The procedure above is **ForeSight 1986 §3.10** (best-Search, worst-Stealth, sum the QRs, −4 for an ambush, −2 for caution) mapped onto this page's spectrum, with 1986's Scan/Search split collapsed into an ease factor. The range table is 1986's unchanged, except that it printed its last row as "8+" and left Terrain Value 6 — uneven heavy vegetation, i.e. ordinary forest on a slope — undefined; it reads as the bottom row.*
+*Designer's Note: the line this replaced read "awareness is about ½ (Perception + Stealth)" — which averaged an attribute with a skill, and averaged your **own** stealth into how well you notice **other people**. Both halves were wrong, and the second was wrong in an interesting way: it treated awareness as something you have rather than something you win. The procedure above is **ForeSight 1986 §3.10** (best-Search, worst-Stealth, sum the QRs, −4 for an ambush, −2 for caution) mapped onto this page's spectrum, with 1986's Scan/Search split mapped onto this edition's Perception-or-Search. The range table is 1986's unchanged, except that it printed its last row as "8+" and left Terrain Value 6 — uneven heavy vegetation, i.e. ordinary forest on a slope — undefined; it reads as the bottom row.*
 
 ## The round
 

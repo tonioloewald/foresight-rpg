@@ -18,7 +18,7 @@ Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a w
 
 **How a level penalizes you.** Each track hits activity that draws on *its own* pool at **full** value and everything else at **half**; tracks **stack** with each other and on top of any wound penalty. **Fatigue is the exception — it drags on *everything* at full**, because a body that's spent is spent whatever it's doing. Add the contributions, then round (half away from zero).
 
-> *A wizard is at −3 fatigue (a forced march) and −3 mana (a duel). Swinging a sword: −3 (fatigue, full) + half of −3 mana = **−5**. Casting: −3 mana + half of −3 fatigue = **−5**. Sweet-talking the innkeeper (neither): half of each = **−3**.*
+> *A wizard is at −3 fatigue (a forced march) and −3 mana (a duel). **Fatigue is always full**, so it is −3 on everything he does; the mana track is full only when he reaches for mana. Swinging a sword: −3 fatigue + half of −3 mana = **−5**. Casting: −3 fatigue + −3 mana, both full = **−6**. Sweet-talking the innkeeper: −3 fatigue + half of −3 mana = **−5** — being bone-tired follows you into the conversation.*
 
 ## Getting exhausted
 
