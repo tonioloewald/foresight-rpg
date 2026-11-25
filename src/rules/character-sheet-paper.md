@@ -15,6 +15,8 @@
 
 *Derived:* Unarmed DC ____ · Carry ____  (from ST)
 
+*Attribute rolls — Pain Resistance and Stamina (WP), poison and disease (ST), raw lifting or dodging — are **BEF 7**: SC = attribute × 7.*
+
 ---
 
 ## Skills

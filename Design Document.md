@@ -1098,6 +1098,16 @@ These are wired into the interactive character sheet (ForeSight Character Sheet.
 
 **Filed, not written** — a new one-pager changes the book's spine, so it waits on Tonio's call on placement (Core, next to [Scores], vs. opening the back half ahead of Equipment).
 
+## Decided: a bare attribute rolls at BEF 7 (2026-11, Tonio)
+
+**The call.** `SC = Score × EF`, and for a bare attribute roll the EF had never been printed — so Pain Resistance, exhaustion, convalescence, stun recovery, poison and disease all had no Success Chance at all. **Attributes are BEF 7.** Skills stay at 5, the aimed-attack skills at 4.
+
+**Why higher than a skill, rather than the same.** A skill's BEF prices *a standard application of a craft* — the lock a locksmith meets on a Tuesday. An attribute check is not that kind of thing: it is the body or the mind doing what it does all day, with no training in between, and the base case has to be that an ordinary person usually copes. So the two numbers are measuring different quantities and there was never a reason for them to match.
+
+**It calibrates well against the printed human range.** Attributes run 3–16, most people sit at 7 or 8, and a 10 is the person everyone agrees is remarkable (see Creating Characters). BEF 7 therefore puts an ordinary Pain Resistance or exhaustion check at **SC 49–56** — near a coin-flip, which is the right shape for "getting shot rattles most people" — and the remarkable WP 10 at **70**. BEF 5 would have given the ordinary person 35–40, which reads as a game where average humans crumple.
+
+**The consequence that matters more than the number.** At an attribute of **15** the product is already past 100, so for the gifted the pass/fail axis of an attribute check all but vanishes and only the **QR** still varies: SC 105 still splits into QR1 at ≤10, QR2 at ≤26, QR3 at ≤52, QR4 above. This makes the open question on the **QR result bands** (board #4264) load-bearing rather than cosmetic — with BEF 7, the bands *are* the stun mechanic, the exhaustion mechanic and the gather mechanic. They cannot stay undefined.
+
 ## Decided: the damage-type letters are physics, and penetration is a separate axis (2026-11, Tonio)
 
 **The call.** `M` is **melee** — slow, heavy, high-momentum: blades, clubs, fists, arrows, bolts. `I` is **impact** — fast-moving projectiles: bullets, fragments, micro-rockets. `B` is **beam**. `S` (stun) reads the target's `I` protection. *"A mace should be 6M. I is for fast moving projectiles like bullets. If you're arguing it should be more penetrating that's what the nP suffix is for."*

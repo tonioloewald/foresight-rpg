@@ -42,6 +42,18 @@ This is what lets the truly exceptional attempt things lesser practitioners simp
 
 ## Base Ease Factor
 
-Each ability also carries a **BEF** — the ease factor of a *standard* application, before any situational modifiers. BEFs hover around 5. A BEF can also **fold in a standing familiarity**, written as a sum: `3 + E`, where **E** is your familiarity with the environment, is the classic ForeSight treatment of Initiative — you react faster aboard your own ship than in a strange city. (The skill table ships Initiative at a flat **BEF 5**; the folded form is an alternative to it, not an addition.) The Score × BEF product is your baseline success chance; the situation moves it from there.
+Each ability also carries a **BEF** — the ease factor of a *standard* application, before any situational modifiers.
+
+| Ability | BEF |
+|---|:--:|
+| a bare **attribute** | **7** |
+| most **skills** | **5** |
+| the aimed-attack skills (Firearms, Archery, Heavy Weapons) | **4** (see [Fire Combat](/fire-combat/)) |
+
+**An attribute is more forgiving than a skill, and that is deliberate.** A skill's BEF prices a *standard application of a craft* — the lock a locksmith meets on a Tuesday. An attribute roll isn't that: it is your body or mind doing the thing it does all day — refusing to go down, keeping going, throwing off a poison — and the base case has to be that an ordinary person usually copes. Human attributes run **3–16** with most people at **7 or 8**, so BEF 7 puts an ordinary Pain Resistance or exhaustion check at **SC 49–56** — near a coin-flip — and the remarkable WP 10 at **70**.
+
+**Consequence worth knowing:** at an attribute of **15** the product is already past 100, so for the gifted the pass/fail axis of an attribute check all but disappears and only the **Quality Rating** still varies. Attribute checks are therefore read off their QR, not their success — which is why what the QR *bands* mean has to be nailed down (see [Quality Ratings](/quality-ratings/)).
+
+A BEF can also **fold in a standing familiarity**, written as a sum: `3 + E`, where **E** is your familiarity with the environment, is the classic ForeSight treatment of Initiative — you react faster aboard your own ship than in a strange city. (The skill table ships Initiative at a flat **BEF 5**; the folded form is an alternative to it, not an addition.) The Score × BEF product is your baseline success chance; the situation moves it from there.
 
 *Designer's Note: "formula + level" is why ForeSight needs no separate stat for natural talent versus trained skill — the attributes are the talent, the level is the training, and the same number captures both. Set your attributes once; everything you learn builds on them.*

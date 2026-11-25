@@ -8,7 +8,7 @@
 Every ability — an **attribute** (innate, like Strength or Perception) or a **skill** (trained, like Firearms or Stealth) — has a **Score** and a **Base Ease Factor (BEF)**.
 
 - **Score** is how good you are: 1 is hopeless, 10–15 is competent, 20+ is very good. Skills climb far higher than attributes.
-- **BEF** is how forgiving the ability is by nature — usually around 5.
+- **BEF** is how forgiving the ability is by nature — **7** for a bare attribute, around **5** for a skill (**4** for the aimed-attack ones).
 
 To resolve a task, judge how hard *this particular* attempt is as an **ease-factor modifier**, add it to the BEF to get the **Ease Factor (EF)**, and multiply:
 
@@ -42,6 +42,8 @@ What a Score buys you on an ordinary task (a typical BEF ≈ 5, no modifiers):
 | 15 | seasoned professional | 75% |
 | 20 | expert | 100% |
 | 20+2 (26–28) | master — a bad roll still lands | over 100% |
+
+*A **bare attribute** is read off the same table one column to the right, because its BEF is 7: the ordinary WP 8 is already SC 56, and a WP 15 is past 100. Above that the roll stops being about success at all and is read entirely off its **QR** — see [Quality Ratings](/quality-ratings/).*
 
 ### Challenge at a glance
 

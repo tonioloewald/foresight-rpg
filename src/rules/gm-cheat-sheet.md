@@ -7,6 +7,8 @@
 
 **EF ladder:** 0 — ¼ — ½ — 1 — 2 — 3 … 15. (0 = impossible, 15 = automatic.) Add all modifiers, *then* apply.
 
+**BEF:** bare **attribute 7** · most **skills 5** · aimed attack (Firearms/Archery/Heavy Weapons) **4**. *An attribute at 15+ is past SC 100 — read the QR, not the pass.*
+
 **A +1 EF is worth your whole Score** in the sweet spot (Score 15: EF 5→6 = 75%→90%), ~half at the ¼/½ rungs. Keep modifiers small.
 
 **Rule of thumb:** `+5` trivial · `+3` very easy · `+1` easy · `0` average · `−1` hard · `−3` very hard · `−5` extreme · `−7` near-impossible. *(Just remember +5 easy / −5 hard.)*
