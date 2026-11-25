@@ -27,7 +27,7 @@ Work it out once at character creation and write it on the sheet. From ST 12 up 
 
 *So an ordinary person (UCDC 2) with a sword (+4) swings at DC 6, and a very strong one (UCDC 4) at DC 8 — the same weapon, and the arm behind it is half the answer.*
 
-*Designer's Note: a weapon that is fundamentally a lump moved by muscle and leverage is very like any other lump, so the melee modifiers sit in a deliberately **narrow band** — +0 for a fist to +5 for a greatsword — and the interesting differences between a sword, a mace and an axe are **not** in that column. They are **nP** (a mace concentrates what it delivers; an axe bites), **parry** (a sword controls the line, a staff better still, an axe worst of all), **reach**, and **price**. A table that separated them by DC instead would be claiming that a mace hits a different amount rather than hitting differently, and would make Strength almost irrelevant to the one thing it is most obviously for.*
+*Designer's Note: a weapon that is fundamentally a lump moved by muscle and leverage is very like any other lump, so the melee modifiers sit in a deliberately **narrow band** — +0 for a fist to +5 for a greatsword — and the interesting differences between a sword, a mace and an axe are **not** in that column. They are **nP** (a spear is mostly a point; a military pick is nothing else), **parry** (a sword controls the line, a staff better still, an axe worst of all), **reach**, and **price**. A table that separated them by DC instead would be claiming that a mace hits a different amount rather than hitting differently, and would make Strength almost irrelevant to the one thing it is most obviously for.*
 
 ## How much damage a hit does
 

@@ -40,7 +40,7 @@
 > **Damage = Yield × (DC ÷ 2)** ⟶ wound levels.  (Large/tough target: **÷ Damage Scale**.)
 
 **DC anchors:** very strong person's fist **4** · 9mm pistol **8** · 7.62 rifle **11**.
-**Melee DC = UCDC + weapon `+n`** (UCDC from ST: 1–5 → 0 · 6–8 → 1 · 9–12 → 2 · 13–14 → 3 · 15–16 → 4); **ranged DCs are absolute**. Melee mods run +0 (fist) to +5 (greatsword) — weapons differ by **nP / Parry / reach / price**, not by DC. Parry: staff +2, sword & spear +1, mace & knife 0, axe −1, shield +1 more.
+**Melee DC = UCDC + weapon `+n`** (UCDC from ST: 1–5 → 0 · 6–8 → 1 · 9–12 → 2 · 13–14 → 3 · 15–16 → 4); **ranged DCs are absolute**. Melee mods run +0 (fist) to +5 (greatsword) — weapons differ by **nP / Parry / reach / price**, not by DC. Parry: staff **+2**, sword & greatsword **+1**, mace/knife/spear **0**, axe **−1**, shield **+1** more. *The sword is the benchmark — everything else wins one column and pays for it.*
 **Types:** M melee (slow & heavy: blades, clubs, fists, arrows) · I impact (fast: bullets, fragments) · B beam (lasers) · S stun (reads **I**). Weapon **n**P pierces n of the target's Protection; armor **A** absorbs 1 damage; **no rating in a type = no protection**.
 **Hit location:** roll D10, or call the shot for an up-front EF penalty (covers cover, too).
 

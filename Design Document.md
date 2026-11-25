@@ -1117,7 +1117,26 @@ These are wired into the interactive character sheet (ForeSight Character Sheet.
 | Mace / Club `+3 M 2P` | 2 | 0 | 25 |
 | Knife `+1 M 1P` | 1 | 0 | 5 |
 
-**Parry is a new field**, distinct from the attack **PM**, and it is what a sword's price buys: in the damage column a sword is barely ahead of a club. The axe's −1 was already asserted in its own description ("harder to recover for a parry than a sword") with no number behind it. Staff at +2 is the deliberate oddity — cheapest real weapon, worst damage, best defence — and it is why a monk with a stick is a real build rather than a flavour choice.
+**Parry is a new field**, distinct from the attack **PM**. The axe's −1 was already asserted in its own description ("harder to recover for a parry than a sword") with no number behind it. Staff at +2 is the deliberate oddity — cheapest real weapon, worst damage, best defence — and it is why a monk with a stick is a real build rather than a flavour choice.
+
+### Refinement the same day: the sword is the benchmark, and everything else wins exactly one column
+
+*"In general the sword represents the best melee weapon technology could provide for about 2000 years. So it should be as good or better than other melee weapons except for specific use cases (e.g. reach in the case of a pike or halberd etc, penetration in the case of a military pick or warhammer, cheaper in the case of a mace or club). Some weapons seem to have been more intended for shock value / chaos (e.g. flail). I recall one book on swords suggesting the reason they're so common is that people tried them and then put them on display."*
+
+This is a **dominance rule**, which is a much stronger constraint than "narrow band", and the first pass failed it: the Spear came out at `+4 M 2P` with a `+1` parry for a third of the price, which dominates the sword on three axes at once, and the Axe matched the sword's DC *and* carried 1P. Corrected so that no melee weapon beats the sword outright and each one wins a single named column:
+
+| | wins | pays |
+|:--|:--|:--|
+| Spear `+3 M 2P` parry 0, Reach, 20 | reach (and nP, since a point is most of what it is) | a point of DC, and the parry |
+| Axe `+4 M` parry −1, 30 | price at a sword's force | the only parry penalty in the list |
+| Mace / Club `+3 M 1P` parry 0, 15 | price, flatly | softness, and the parry |
+| Quarterstaff `+2 M` parry +2, 5 | the best parry in the game, for nothing | the worst damage of any real weapon |
+| Greatsword `+5 M` parry +1, Reach, 120 | a point of DC and reach | both hands (so no shield) and 2× price |
+| **Sword `+4 M` parry +1, 60** | **— the baseline** | **—** |
+
+Penetration moved off the Axe in the process: **nP is the military pick's and warhammer's niche**, so those are built as *a mace traded down a point of DC for 2–3P*. Likewise a **pike** is a *long* spear and a **halberd** a *bladed* one — adjectives on the existing nouns, per the "modifiers + noun" doctrine (#3550), not new rows. The **flail** is the interesting case because its real output isn't damage at all: it is priced as *an attack the defender parries at a penalty*, which is how "shock value / chaos" becomes a number without inventing a mechanic.
+
+The display anecdote is recorded on the Weapons page as a designer's note, with the answer that it doesn't undercut the rule: what people chose to hang on a wall for two millennia is a fair proxy for what they thought was best, and the list now makes every alternative earn its row by beating the sword **somewhere specific** rather than generally.
 
 **Open calibration conflict, flagged not resolved.** The 1986 UCDC table is built around a distribution where **9–12 is the middle** of the human range, but 2026's Creating Characters says *"most people sit around 7 or 8; a 10 is the person everyone agrees is remarkable."* Taken together, most 2026 people have UCDC 1, not 2, and every melee DC above drops by one for the ordinary wielder. This is exactly the case CLAUDE.md's source-hierarchy caveat describes — an untested 2026 intention meeting 1986's table — so it is a calibration item for the playtest, not something to quietly pick. The pages currently print the 1986 table as-is.
 

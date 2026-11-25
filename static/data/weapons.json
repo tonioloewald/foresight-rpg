@@ -54,7 +54,7 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "The arming sword — one-handed cut-and-thrust, and the best **parry** in the list bar a staff. *Fine*, *great*, and *short* are all adjectives on this one noun. What you pay for is control, not damage."
+    "desc": "The arming sword — one-handed cut-and-thrust, and **the benchmark**: for two thousand years it was the best general-purpose melee weapon anyone could build, and the table says so. Nothing here beats it outright; the others each win one column and pay for it. *Fine*, *great*, and *short* are all adjectives on this one noun."
   },
   {
     "name": "Greatsword",
@@ -78,8 +78,8 @@
     "name": "Spear",
     "kind": "melee",
     "pm": 0,
-    "damage": "+4 M 2P",
-    "parry": "+1",
+    "damage": "+3 M 2P",
+    "parry": "0",
     "range": "Reach",
     "rof": "—",
     "ammo": "—",
@@ -91,13 +91,13 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "Reach weapon that pierces. Set against a charge it counts double. A *thrown* spear is the same noun, one adjective."
+    "desc": "Its case is **reach**, and it pierces well (2P) because a point is most of what it is. Set against a charge it counts double. The shaft is clumsy to defend with — and a *thrown* spear is the same noun with one adjective, as are a *long* one (a pike) and a *bladed* one (a halberd), each trading more handling for more reach."
   },
   {
     "name": "Axe",
     "kind": "melee",
     "pm": 0,
-    "damage": "+4 M 1P",
+    "damage": "+4 M",
     "parry": "−1",
     "range": "Normal",
     "rof": "—",
@@ -110,26 +110,26 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "Heavy chopping edge — bites into armor (1P) but swings past the line, so it is the one melee weapon with a **parry penalty**."
+    "desc": "Heavy chopping edge — a sword's force for half the money, but it swings past the line, so it is the one melee weapon with a **parry penalty**. A tool first, which is why everyone already has one."
   },
   {
     "name": "Mace / Club",
     "kind": "melee",
     "pm": 0,
-    "damage": "+3 M 2P",
+    "damage": "+3 M 1P",
     "parry": "0",
     "range": "Normal",
     "rof": "—",
     "ammo": "—",
     "weight": 1.4,
     "tl": 0,
-    "price": "25",
+    "price": "15",
     "tags": [
       "standard",
       "ancient",
       "fantasy"
     ],
-    "desc": "Weight on a stick — cheap, nothing to sharpen, and it survives being used on armor. Hits a shade softer than a sword and **concentrates** it (2P), but it is a poor thing to parry with and the sword costs more for a reason."
+    "desc": "Weight on a stick. Its case is **price** — a quarter of a sword, nothing to sharpen, and it survives being used on armor. Softer than a sword, very slightly more concentrated, and no help at all in a parry: the weapon of people who were *handed* a weapon."
   },
   {
     "name": "Quarterstaff",
