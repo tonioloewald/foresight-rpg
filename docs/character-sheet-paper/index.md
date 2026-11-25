@@ -13,7 +13,7 @@
 |:--:|:--:|:--:|:--:|:--:|
 | __ | __ | __ | __ | __ |
 
-*Derived:* Unarmed DC ____ · Carry ____  (from ST)
+*Derived:* **UCDC** ____ · Carry ____  — *UCDC from ST:* 1–5 → 0 · 6–8 → 1 · 9–12 → 2 · 13–14 → 3 · 15–16 → 4. *A melee weapon's `+n` adds to this; ranged DCs are absolute.*
 
 *Attribute rolls — Pain Resistance and Stamina (WP), poison and disease (ST), raw lifting or dodging — are **BEF 7**: SC = attribute × 7.*
 

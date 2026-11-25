@@ -79,6 +79,7 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
     card: [
       { label: 'Kind', prop: 'kind' },
       { label: 'PM', prop: 'pm' },
+      { label: 'Parry', prop: 'parry' },
       { label: 'Damage', prop: 'damage' },
       { label: 'Range', prop: 'range' },
       { label: 'RoF', prop: 'rof' },

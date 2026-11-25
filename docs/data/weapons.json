@@ -3,7 +3,8 @@
     "name": "Fist / Kick",
     "kind": "melee",
     "pm": 0,
-    "damage": "2 M",
+    "damage": "+0 M",
+    "parry": "—",
     "range": "Close",
     "rof": "—",
     "ammo": "—",
@@ -21,7 +22,8 @@
     "name": "Knife / Dagger",
     "kind": "melee",
     "pm": 0,
-    "damage": "4 M 1P",
+    "damage": "+1 M 1P",
+    "parry": "0",
     "range": "Close",
     "rof": "—",
     "ammo": "—",
@@ -33,13 +35,14 @@
       "ancient",
       "modern"
     ],
-    "desc": "Short blade — concealable, pierces armor, doubles as a tool and a thrown weapon. The floor of every weapon list."
+    "desc": "Short blade — concealable, pierces a little, doubles as a tool and a thrown weapon. The floor of every weapon list: barely more damaging than a fist, and the whole point is that nobody saw it."
   },
   {
     "name": "Sword",
     "kind": "melee",
     "pm": 0,
-    "damage": "6 M",
+    "damage": "+4 M",
+    "parry": "+1",
     "range": "Normal",
     "rof": "—",
     "ammo": "—",
@@ -51,13 +54,14 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "The arming sword — one-handed cut-and-thrust. *Fine*, *great*, and *short* are all adjectives on this one noun."
+    "desc": "The arming sword — one-handed cut-and-thrust, and the best **parry** in the list bar a staff. *Fine*, *great*, and *short* are all adjectives on this one noun. What you pay for is control, not damage."
   },
   {
     "name": "Greatsword",
     "kind": "melee",
     "pm": 1,
-    "damage": "8 M",
+    "damage": "+5 M",
+    "parry": "+1",
     "range": "Reach",
     "rof": "—",
     "ammo": "—",
@@ -74,7 +78,8 @@
     "name": "Spear",
     "kind": "melee",
     "pm": 0,
-    "damage": "6 M 2P",
+    "damage": "+4 M 2P",
+    "parry": "+1",
     "range": "Reach",
     "rof": "—",
     "ammo": "—",
@@ -92,7 +97,8 @@
     "name": "Axe",
     "kind": "melee",
     "pm": 0,
-    "damage": "7 M",
+    "damage": "+4 M 1P",
+    "parry": "−1",
     "range": "Normal",
     "rof": "—",
     "ammo": "—",
@@ -104,13 +110,14 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "Heavy chopping edge — hits hard, harder to recover for a parry than a sword."
+    "desc": "Heavy chopping edge — bites into armor (1P) but swings past the line, so it is the one melee weapon with a **parry penalty**."
   },
   {
     "name": "Mace / Club",
     "kind": "melee",
     "pm": 0,
-    "damage": "6 M",
+    "damage": "+3 M 2P",
+    "parry": "0",
     "range": "Normal",
     "rof": "—",
     "ammo": "—",
@@ -122,13 +129,14 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "Weight on a stick — cheap, nothing to sharpen, and it survives being used on armor. Hits like a sword and does nothing else as well."
+    "desc": "Weight on a stick — cheap, nothing to sharpen, and it survives being used on armor. Hits a shade softer than a sword and **concentrates** it (2P), but it is a poor thing to parry with and the sword costs more for a reason."
   },
   {
     "name": "Quarterstaff",
     "kind": "melee",
     "pm": 1,
-    "damage": "4 M",
+    "damage": "+2 M",
+    "parry": "+2",
     "range": "Reach",
     "rof": "—",
     "ammo": "—",
@@ -140,7 +148,7 @@
       "ancient",
       "fantasy"
     ],
-    "desc": "Two-handed staff: reach, a good Parry PM, and it's just a stick when the guards ask."
+    "desc": "Two-handed staff: reach, the **best parry in the game** (+2), and it's just a stick when the guards ask. Does the least damage of any real weapon, and often that is fine."
   },
   {
     "name": "Bow",

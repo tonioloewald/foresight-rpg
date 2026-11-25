@@ -22,7 +22,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css?v=5a6833b97958" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=d93e523f0755" data-tosi-doc-system />
   <title>Damage — ForeSight RPG</title>
   <meta name="description" content="One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s Quality Rating, the weapon&#39;s Damage Class, and the target&#39;s armor decide how badly…" />
   <link rel="canonical" href="https://foresight-rpg.com/damage/" />
@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=38d638aa6c00" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=36e838480458" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="damage.md">
 <h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
@@ -65,6 +65,36 @@
 <td>a 7.62mm rifle (the commonest rifle class on Earth)</td>
 </tr>
 </tbody></table>
+<h3 id="a-guns-dc-is-its-own-a-melee-weapons-is-yours">A gun&#39;s DC is its own; a melee weapon&#39;s is yours</h3>
+<p>A 9mm does what a 9mm does whoever squeezes the trigger, so <strong>ranged weapons carry an absolute DC</strong>. A sword doesn&#39;t: what it delivers is your muscle and your leverage through a better shape. So <strong>a melee weapon lists a modifier</strong> to your <strong>Unarmed Combat Damage Class</strong>:</p>
+<blockquote>
+<p><strong>Melee DC = UCDC + the weapon&#39;s modifier.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">ST</th>
+<th align="center">1–5</th>
+<th align="center">6–8</th>
+<th align="center">9–12</th>
+<th align="center">13–14</th>
+<th align="center">15–16</th>
+<th align="center">17–18</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>UCDC</strong></td>
+<td align="center">0</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">3</td>
+<td align="center">4</td>
+<td align="center">5</td>
+</tr>
+</tbody></table>
+<p>Work it out once at character creation and write it on the sheet. From ST 12 up the table is simply <strong>ST ÷ 2 − 4</strong>, which is how it continues for anything stronger than human.</p>
+<p><em>So an ordinary person (UCDC 2) with a sword (+4) swings at DC 6, and a very strong one (UCDC 4) at DC 8 — the same weapon, and the arm behind it is half the answer.</em></p>
+<p><em>Designer&#39;s Note: a weapon that is fundamentally a lump moved by muscle and leverage is very like any other lump, so the melee modifiers sit in a deliberately <strong>narrow band</strong> — +0 for a fist to +5 for a greatsword — and the interesting differences between a sword, a mace and an axe are <strong>not</strong> in that column. They are <strong>nP</strong> (a mace concentrates what it delivers; an axe bites), <strong>parry</strong> (a sword controls the line, a staff better still, an axe worst of all), <strong>reach</strong>, and <strong>price</strong>. A table that separated them by DC instead would be claiming that a mace hits a different amount rather than hitting differently, and would make Strength almost irrelevant to the one thing it is most obviously for.</em></p>
 <h2 id="how-much-damage-a-hit-does">How much damage a hit does</h2>
 <blockquote>
 <p><strong>Damage (in wound levels) = Yield × DC × ½, rounded down.</strong>
@@ -374,6 +404,6 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate-32sg3wzg.js"></script>
+  <script type="module" src="../hydrate-pkg00mgy.js"></script>
 </body>
 </html>

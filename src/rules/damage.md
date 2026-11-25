@@ -13,6 +13,22 @@ Every attack has a **Damage Class (DC)** — how hard it hits before quality, ar
 | 8 | a 9mm pistol (the commonest pistol on Earth) |
 | 11 | a 7.62mm rifle (the commonest rifle class on Earth) |
 
+### A gun's DC is its own; a melee weapon's is yours
+
+A 9mm does what a 9mm does whoever squeezes the trigger, so **ranged weapons carry an absolute DC**. A sword doesn't: what it delivers is your muscle and your leverage through a better shape. So **a melee weapon lists a modifier** to your **Unarmed Combat Damage Class**:
+
+> **Melee DC = UCDC + the weapon's modifier.**
+
+| ST | 1–5 | 6–8 | 9–12 | 13–14 | 15–16 | 17–18 |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|
+| **UCDC** | 0 | 1 | 2 | 3 | 4 | 5 |
+
+Work it out once at character creation and write it on the sheet. From ST 12 up the table is simply **ST ÷ 2 − 4**, which is how it continues for anything stronger than human.
+
+*So an ordinary person (UCDC 2) with a sword (+4) swings at DC 6, and a very strong one (UCDC 4) at DC 8 — the same weapon, and the arm behind it is half the answer.*
+
+*Designer's Note: a weapon that is fundamentally a lump moved by muscle and leverage is very like any other lump, so the melee modifiers sit in a deliberately **narrow band** — +0 for a fist to +5 for a greatsword — and the interesting differences between a sword, a mace and an axe are **not** in that column. They are **nP** (a mace concentrates what it delivers; an axe bites), **parry** (a sword controls the line, a staff better still, an axe worst of all), **reach**, and **price**. A table that separated them by DC instead would be claiming that a mace hits a different amount rather than hitting differently, and would make Strength almost irrelevant to the one thing it is most obviously for.*
+
 ## How much damage a hit does
 
 > **Damage (in wound levels) = Yield × DC × ½, rounded down.**

@@ -1098,6 +1098,29 @@ These are wired into the interactive character sheet (ForeSight Character Sheet.
 
 **Filed, not written** — a new one-pager changes the book's spine, so it waits on Tonio's call on placement (Core, next to [Scores], vs. opening the back half ahead of Equipment).
 
+## Decided: a melee weapon's DC is a modifier to UCDC, and weapons differ by parry/nP/price rather than by damage (2026-11, Tonio)
+
+**The call.** *"Weapons like Mace should be UCDC + a modifier. But yes a Mace should be lower damage than a sword but more penetrating (so e.g. 5M 2P). Bear in mind that a weapon that is fundamentally a lump wielded with muscle and leverage is going to be pretty similar to any other. I'd suggest a sword is better for parrying than a mace and also typically more expensive."*
+
+**Structure.** A ranged weapon keeps an **absolute** DC — a 9mm does what a 9mm does whoever squeezes the trigger. A melee weapon lists a **modifier to the wielder's Unarmed Combat Damage Class**: `Melee DC = UCDC + n`. This restores 1986 §4 again (*"A modifier (of the form ±n) is added to the user's Unarmed Combat Damage Class to give its DC"*), and it brings the 1986 UCDC table back with it — ST 1–5 → 0, 6–8 → 1, 9–12 → 2, 13–14 → 3, 15–16 → 4, 17–18 → 5, and `ST ÷ 2 − 4` from 12 up. That also closes one of the missing-content holes (board #4267): the paper sheet printed an "Unarmed DC" blank with no formula anywhere to fill it from.
+
+**Calibration.** The anchors survive the change intact: the 1986 table puts a very strong person (ST 15–16) at UCDC 4, which *is* the published DC-4 anchor, and an ordinary person at 2, which is what the Fist entry already said they land. Melee modifiers were set so a UCDC-2 wielder reproduces the numbers Tonio gave — sword `+4 M` → DC 6, mace `+3 M 2P` → DC 5 with 2P.
+
+**The narrow band is the point.** Modifiers run **+0 (fist) to +5 (greatsword)**, which is a tighter spread than the old absolute DCs (4–8) and means Strength is now roughly half of what a melee blow delivers. A table that separated a mace from a sword by *damage* would be claiming a mace hits a different **amount** rather than hitting **differently**. So the differentiation moved onto the axes that were already there or nearly there:
+
+| | nP | Parry | Price |
+|:--|:--:|:--:|:--:|
+| Quarterstaff `+2 M` | — | **+2** | 5 |
+| Sword `+4 M` | — | **+1** | 60 |
+| Spear `+4 M 2P` | 2 | +1 | 20 |
+| Axe `+4 M 1P` | 1 | **−1** | 30 |
+| Mace / Club `+3 M 2P` | 2 | 0 | 25 |
+| Knife `+1 M 1P` | 1 | 0 | 5 |
+
+**Parry is a new field**, distinct from the attack **PM**, and it is what a sword's price buys: in the damage column a sword is barely ahead of a club. The axe's −1 was already asserted in its own description ("harder to recover for a parry than a sword") with no number behind it. Staff at +2 is the deliberate oddity — cheapest real weapon, worst damage, best defence — and it is why a monk with a stick is a real build rather than a flavour choice.
+
+**Open calibration conflict, flagged not resolved.** The 1986 UCDC table is built around a distribution where **9–12 is the middle** of the human range, but 2026's Creating Characters says *"most people sit around 7 or 8; a 10 is the person everyone agrees is remarkable."* Taken together, most 2026 people have UCDC 1, not 2, and every melee DC above drops by one for the ordinary wielder. This is exactly the case CLAUDE.md's source-hierarchy caveat describes — an untested 2026 intention meeting 1986's table — so it is a calibration item for the playtest, not something to quietly pick. The pages currently print the 1986 table as-is.
+
 ## Decided: a bare attribute rolls at BEF 7 (2026-11, Tonio)
 
 **The call.** `SC = Score × EF`, and for a bare attribute roll the EF had never been printed — so Pain Resistance, exhaustion, convalescence, stun recovery, poison and disease all had no Success Chance at all. **Attributes are BEF 7.** Skills stay at 5, the aimed-attack skills at 4.
@@ -1118,7 +1141,7 @@ These are wired into the interactive character sheet (ForeSight Character Sheet.
 
 **What it costs, and the countermove.** Cut-versus-crush stops being expressible as a *type*. Mail no longer turns a sword better than a mace. That distinction moves onto the two axes that already existed: **DC** (how much force arrives) and **nP** (whether the weapon defeats armour rather than overwhelming it) — so a war pick is a modest DC with a fat `nP`, and a maul is a fat DC with none. This is the right trade because a type letter is a *lookup* the GM pays for on every hit, while DC and nP are numbers already on the weapon's line.
 
-**Consequence to settle at the table.** With the mace at `6 M` it is now arithmetically identical to the Sword (`6 M`, PM 0, Normal reach) and differs only in price. Either the mace takes a higher DC — `7 M`, crude force for a third of the money, next to the Axe — or the sword earns its cost in recovery/parry rather than damage. Playtest it; don't guess.
+**Consequence, settled the same day.** With the mace at `6 M` it was arithmetically identical to the Sword, which prompted the next decision below: melee weapons became UCDC modifiers and the mace went to `+3 M 2P` against the sword's `+4 M`, with the sword taking the parry bonus and the higher price.
 
 **Also settled by the same stroke:** `nP` always carries a number (a bare `P` had no value to subtract), and a type an armour has **no number for is no protection at all**, which is what makes a gambeson useless against a rifle without a rule saying so.
 
