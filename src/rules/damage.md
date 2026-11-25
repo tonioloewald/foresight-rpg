@@ -70,18 +70,22 @@ The distribution is the body as a target: the chest is the biggest thing pointin
 
 What the damage *is* decides how armor and bodies answer it:
 
-| Type | What it is |
-|---|---|
-| **M — Melee** | slow, low-energy, high-momentum (blades, clubs, fists) |
-| **I — Impact** | fast, high-energy, low-momentum (bullets, shrapnel) |
-| **B — Beam** | energy, no momentum (lasers) — respectable, but never a pulp death-ray (we were physics majors) |
+| Type | What it is | Typical |
+|---|---|---|
+| **M — Melee** | slow, low-energy, **high-momentum** | blades, clubs, fists, arrows, bolts, a thrown rock |
+| **I — Impact** | fast, high-energy, **low-momentum** | bullets, fragments, micro-rockets |
+| **B — Beam** | energy, **no momentum** | lasers — respectable, but never a pulp death-ray (we were physics majors) |
 
-**Armor** carries a **Protection** rating (a DC of defence) against the types it's built for; subtract it from the incoming DC before the damage formula. A DC reduced **below zero is harmless**. Two annotations settle the arms race at the margin:
+The dividing line is **velocity, not shape**. A mace is **M** and so is an arrow: both arrive slowly carrying a lot of mass. A 9mm and a shell fragment are **I** whatever they are made of. A **stun (S)** weapon reads the target's **I** protection.
+
+**Armor** carries a **Protection** rating *per type* (a DC of defence); subtract it from the incoming DC before the damage formula. **A type the armor has no number for gets no protection at all** — a gambeson does nothing against a rifle. A DC reduced **to zero or below is harmless**. Two annotations settle the arms race at the margin:
 
 | Mark | Effect |
 |---|---|
-| **P — Piercing** (weapon) | ignores that many points of the target's Protection |
+| **nP — Piercing** (weapon) | ignores **n** points of the target's Protection |
 | **A — Absorbing** (armor) | stops one point of *damage* that still gets through |
+
+*Designer's Note: the three letters are **physics**, not era and not edge. A draft of the equipment tables read M as "cutting" and I as "crushing", which filed a mace in with bullets and a 9mm in with a flamethrower — and made mail carry two numbers to say one thing. The 1986 rules had it right (no suffix = melee, **I** = impact and stun, **B** = beam) and this is a restoration. Whether a weapon **defeats** armor rather than overwhelming it is the other axis, and always was: that is **nP**, not a letter.*
 
 *Designer's Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.*
 

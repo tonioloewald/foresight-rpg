@@ -38,7 +38,7 @@
 > **Damage = Yield × (DC ÷ 2)** ⟶ wound levels.  (Large/tough target: **÷ Damage Scale**.)
 
 **DC anchors:** very strong person's fist **4** · 9mm pistol **8** · 7.62 rifle **11**.
-**Types:** M mechanical/cutting · I impact/crushing · B burning/ballistic (see Weapons). **P**n weapon pierces n DC of armor; armor **A** absorbs 1 damage.
+**Types:** M melee (slow & heavy: blades, clubs, fists, arrows) · I impact (fast: bullets, fragments) · B beam (lasers) · S stun (reads **I**). Weapon **n**P pierces n of the target's Protection; armor **A** absorbs 1 damage; **no rating in a type = no protection**.
 **Hit location:** roll D10, or call the shot for an up-front EF penalty (covers cover, too).
 
 ## Combat (sequence)

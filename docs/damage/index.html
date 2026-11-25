@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=48e5d41d28a1" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=25db38018ea4" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="damage.md">
 <h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
@@ -196,22 +196,27 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 <tr>
 <th>Type</th>
 <th>What it is</th>
+<th>Typical</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>M — Melee</strong></td>
-<td>slow, low-energy, high-momentum (blades, clubs, fists)</td>
+<td>slow, low-energy, <strong>high-momentum</strong></td>
+<td>blades, clubs, fists, arrows, bolts, a thrown rock</td>
 </tr>
 <tr>
 <td><strong>I — Impact</strong></td>
-<td>fast, high-energy, low-momentum (bullets, shrapnel)</td>
+<td>fast, high-energy, <strong>low-momentum</strong></td>
+<td>bullets, fragments, micro-rockets</td>
 </tr>
 <tr>
 <td><strong>B — Beam</strong></td>
-<td>energy, no momentum (lasers) — respectable, but never a pulp death-ray (we were physics majors)</td>
+<td>energy, <strong>no momentum</strong></td>
+<td>lasers — respectable, but never a pulp death-ray (we were physics majors)</td>
 </tr>
 </tbody></table>
-<p><strong>Armor</strong> carries a <strong>Protection</strong> rating (a DC of defence) against the types it&#39;s built for; subtract it from the incoming DC before the damage formula. A DC reduced <strong>below zero is harmless</strong>. Two annotations settle the arms race at the margin:</p>
+<p>The dividing line is <strong>velocity, not shape</strong>. A mace is <strong>M</strong> and so is an arrow: both arrive slowly carrying a lot of mass. A 9mm and a shell fragment are <strong>I</strong> whatever they are made of. A <strong>stun (S)</strong> weapon reads the target&#39;s <strong>I</strong> protection.</p>
+<p><strong>Armor</strong> carries a <strong>Protection</strong> rating <em>per type</em> (a DC of defence); subtract it from the incoming DC before the damage formula. <strong>A type the armor has no number for gets no protection at all</strong> — a gambeson does nothing against a rifle. A DC reduced <strong>to zero or below is harmless</strong>. Two annotations settle the arms race at the margin:</p>
 <table>
 <thead>
 <tr>
@@ -220,14 +225,15 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>P — Piercing</strong> (weapon)</td>
-<td>ignores that many points of the target&#39;s Protection</td>
+<td><strong>nP — Piercing</strong> (weapon)</td>
+<td>ignores <strong>n</strong> points of the target&#39;s Protection</td>
 </tr>
 <tr>
 <td><strong>A — Absorbing</strong> (armor)</td>
 <td>stops one point of <em>damage</em> that still gets through</td>
 </tr>
 </tbody></table>
+<p><em>Designer&#39;s Note: the three letters are <strong>physics</strong>, not era and not edge. A draft of the equipment tables read M as &quot;cutting&quot; and I as &quot;crushing&quot;, which filed a mace in with bullets and a 9mm in with a flamethrower — and made mail carry two numbers to say one thing. The 1986 rules had it right (no suffix = melee, <strong>I</strong> = impact and stun, <strong>B</strong> = beam) and this is a restoration. Whether a weapon <strong>defeats</strong> armor rather than overwhelming it is the other axis, and always was: that is <strong>nP</strong>, not a letter.</em></p>
 <p><em>Designer&#39;s Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.</em></p>
 <h2 id="scale">Scale</h2>
 <p>A very large or tough target — a vehicle, a dragon, a stone wall — has a <strong>Damage Scale</strong>; divide the damage done by the scale before applying it. A person is Scale 1. That is the whole of how one DC is &quot;lethal&quot; to a man and &quot;a scratch&quot; to a tank, with no separate rules. (Vehicle damage in <a href="/pursuit/">Pursuit</a> routes here.)</p>

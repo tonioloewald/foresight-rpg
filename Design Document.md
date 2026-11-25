@@ -1098,6 +1098,20 @@ These are wired into the interactive character sheet (ForeSight Character Sheet.
 
 **Filed, not written** — a new one-pager changes the book's spine, so it waits on Tonio's call on placement (Core, next to [Scores], vs. opening the back half ahead of Equipment).
 
+## Decided: the damage-type letters are physics, and penetration is a separate axis (2026-11, Tonio)
+
+**The call.** `M` is **melee** — slow, heavy, high-momentum: blades, clubs, fists, arrows, bolts. `I` is **impact** — fast-moving projectiles: bullets, fragments, micro-rockets. `B` is **beam**. `S` (stun) reads the target's `I` protection. *"A mace should be 6M. I is for fast moving projectiles like bullets. If you're arguing it should be more penetrating that's what the nP suffix is for."*
+
+**What was wrong.** The 2026 equipment tables had drifted to reading `M` as *cutting* and `I` as *crushing*, with `B` picking up *burning/ballistic*. That produced three incompatible readings across three places a GM looks mid-fight: `damage.md` said M melee / I bullets / B lasers, `weapons.md` said mechanical-cutting / impact-crushing / burning-ballistic, and the data followed `weapons.md` — so every firearm was tagged `B`, a mace was `I`, and a Ballistic Vest's `B3` meant *beam* protection on one page and *bullet* protection on the next. Mail's `M3 I1` was two numbers spent on one idea (edges vs blows), which is also why riot gear came out backwards: `I4 M2`, i.e. rated chiefly against the bullets it is worst at.
+
+**Why this version is right, beyond being decidable.** It is the original. 1986 §4: *"If suffixed by a 'B' then the target is protected by the Beam ratings … if the suffix is an 'I', or an 'S' use the Impact ratings; and if there is no suffix, use the Melee ratings"* — three armour columns, Melee / Impact / Beam, and stun folded into Impact. The cutting/crushing reading was a 2026 regression, not a 2004 intention, so there is no edition conflict to adjudicate.
+
+**What it costs, and the countermove.** Cut-versus-crush stops being expressible as a *type*. Mail no longer turns a sword better than a mace. That distinction moves onto the two axes that already existed: **DC** (how much force arrives) and **nP** (whether the weapon defeats armour rather than overwhelming it) — so a war pick is a modest DC with a fat `nP`, and a maul is a fat DC with none. This is the right trade because a type letter is a *lookup* the GM pays for on every hit, while DC and nP are numbers already on the weapon's line.
+
+**Consequence to settle at the table.** With the mace at `6 M` it is now arithmetically identical to the Sword (`6 M`, PM 0, Normal reach) and differs only in price. Either the mace takes a higher DC — `7 M`, crude force for a third of the money, next to the Axe — or the sword earns its cost in recovery/parry rather than damage. Playtest it; don't guess.
+
+**Also settled by the same stroke:** `nP` always carries a number (a bare `P` had no value to subtract), and a type an armour has **no number for is no protection at all**, which is what makes a gambeson useless against a rifle without a rule saying so.
+
 ## Decided: AP becomes a family of quirks (2026-08, Tonio)
 
 > **Applied 2026-08.** AP is gone from the attribute block; the replacement formulas landed (`Charm (IN+PC)/2`, `Confidence IN`, `Perform (IN+PC)/2`, all with BEF cut 5 → 3). The convergence this section worried about *did* happen and was accepted deliberately: Charm and Perform share a formula and are separated by what they move — Charm moves how people feel, Confidence moves what they will do. The Appearance quirk family that has to carry the specificity is **not yet written** (board #2904).
