@@ -27,7 +27,7 @@
 *Caps: a 100 is never better than QR7; a 99 never better than QR4.*
 
 **Yield %:** QR1 **100** · QR2 **80** · QR3 **50** · QR4 **25** (failures yield as QR4).
-**Read one column only:** *Yield* (how much) · *Time* (QR4 ≈ 200% of estimate) · *PM* = **4 − QR** · *Band* (solid QR1–3 · marginal QR4 · poor QR7 · bad QR10). Never penalize the same choice twice (pay the EF up front, the success includes it).
+**Read one column only:** *Yield* (how much) · *Time* (QR4 ≈ 200% of estimate) · *Carry* — one chaining number, **5 − QR** (QR1 +4 … QR4 +1, QR7 −2, QR10 −5) · *Band* (solid QR1–3 · marginal QR4 · poor QR7 · bad QR10). Never penalize the same choice twice (pay the EF up front, the success includes it).
 
 ## Open-Ended Resolution
 

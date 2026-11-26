@@ -85,7 +85,7 @@ Two hard limits: a roll of **100 is never better than QR7** (even a near-certain
 
 - **Yield — how *much*?** QR1 **100%**, QR2 **80%**, QR3 **50%**, QR4 **25%** of the maximum. Damage, intel gathered, ground covered, gold panned, rope salvaged. *(Damage = Yield × Damage Class ÷ 2.)*
 - **Time — how *fast*?** QR4 takes roughly twice a competent estimate; QR1 is done in a flash. This is what answers *"did you pick it before the guard rounded the corner?"*
-- **Product (PM) — how *good*, for later?** When a task makes something used in a *later* task, carry it forward as **PM = 4 − QR**: QR1 → +3 … QR4 → +0, QR7 → −3. (That's why the scale is numbered 1-2-3-4-7-10.)
+- **Carry — how *good*, for later?** When a task makes something a *later* task will use, carry it forward as **5 − QR**: QR1 → +4 … QR4 → +1, QR7 → −2, QR10 → −5. (That's why the scale is numbered 1-2-3-4-7-10.) It is the **same number as Build**, below — the system has exactly one.
 
 **Never penalize the same choice twice.** If you took a penalty to do it a certain way, *success already includes that thing*. Pick the lock fast under a haste penalty and a plain success **means you were fast** — no separate Time roll on top. Call the head-shot at a penalty and a hit **lands where you aimed**. Pay once, up front.
 
@@ -105,7 +105,7 @@ Tasks rarely stand alone. Two moves cover every chain:
 ## Worked examples
 
 - **Picking a lock** — Lockpicking (or Sleight of Hand) vs a difficulty for the lock's quality, minus haste, plus good picks. Time is usually the real stake: take the haste penalty and success *is* beating the guard.
-- **Fixing an engine — a chain.** First **diagnose** it: a Knowledge task (the relevant field, with Perception or Intelligence to read the symptoms). The diagnosis is the *product* that feeds the fix (**PM = 4 − QR**) — a spot-on read (QR1) is **+3** to the repair; a botched one (QR7) sends you chasing the wrong fault at **−3**. The repair may still be hard for its own reasons (access, a seized bolt), and its **Yield** is how much you restore — capped at *as good as before*. So: **+3 to *do* the repair from a perfect diagnosis, never +3 to the thing repaired.** A repair only restores.
+- **Fixing an engine — a chain.** First **diagnose** it: a Knowledge task (the relevant field, with Perception or Intelligence to read the symptoms). The diagnosis is what feeds the fix (**5 − QR**) — a spot-on read (QR1) is **+4** to the repair; a botched one (QR7) sends you chasing the wrong fault at **−2**. The repair may still be hard for its own reasons (access, a seized bolt), and its **Yield** is how much you restore — capped at *as good as before*. So: **+4 to *do* the repair from a perfect diagnosis, never +4 to the thing repaired.** A repair only restores.
 - **Hot-rodding it** — the same **plan-then-execute** chain (plan the modification as a Knowledge task; the plan feeds the execution), but where a repair only restores, hot-rodding *improves* a chosen quality at a **tradeoff** — and it's the book's clearest picture of what a QR actually *means*:
   - **QR1–2** — the gain, with the tradeoff shrunk or gone; maybe a little extra on top.
   - **QR4** — the gain *and* the full tradeoff: quicker off the line, worse through the bends (the normal deal).

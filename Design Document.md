@@ -1140,6 +1140,22 @@ The display anecdote is recorded on the Weapons page as a designer's note, with 
 
 **Open calibration conflict, flagged not resolved.** The 1986 UCDC table is built around a distribution where **9–12 is the middle** of the human range, but 2026's Creating Characters says *"most people sit around 7 or 8; a 10 is the person everyone agrees is remarkable."* Taken together, most 2026 people have UCDC 1, not 2, and every melee DC above drops by one for the ordinary wielder. This is exactly the case CLAUDE.md's source-hierarchy caveat describes — an untested 2026 intention meeting 1986's table — so it is a calibration item for the playtest, not something to quietly pick. The pages currently print the 1986 table as-is.
 
+## Decided: one chaining number, `5 − QR`, and **PM** goes back to meaning only an object's Performance Modifier (2026-11, Tonio)
+
+**The call.** *"4265 should probably be resolved as 5-QR."* The system had two numbers for carrying a result forward — `PM = 4 − QR` (Quality Ratings, The One Rule) and `Build = +(5 − QR)` (The One Rule, Opposed Resolution, Fire Combat, Melee Combat) — and *a forged document you later present* was printed as the worked example under **both**, worth +3 on one page and +4 on the other. Quality Ratings even noticed, and punted to a "see note" that did not exist.
+
+**It deletes a term rather than changing a number.** `PM` was already taken: `equipment.md` defines **PM = Performance Modifier**, the ease-factor bonus for using an object as intended, *"Some objects carry several labeled PMs (a melee weapon has Attack, Parry, Damage)"* — which is also 1986's usage (§4: *"PM: Performance Modifier: used as a modifier whenever the weapon is used (properly) in a Fire action"*) and, as of today, exactly where the new **Parry** field lives. So the resolution isn't "PM is now 5 − QR", it is:
+
+- **There is one chaining number: `5 − QR`.** QR1 +4, QR2 +3, QR3 +2, QR4 +1, QR7 −2, QR10 −5. Named **Carry** where it is a thing handed on, **Build** where it is momentum, **the blocking table** where melee makes it a lookup — all the same arithmetic.
+- **A made object keeps its `5 − QR` as its PM**, which is the field objects already have. The chain produces a number; the object stores it.
+- **PM no longer means anything derived from a QR.** One name, one meaning.
+
+**Why +1 at QR4 rather than +0 is the better end of the argument.** The old PM gave a marginal success *nothing*, which says a job that came in late and rough leaves the next person no better off than no job at all — and that is false, both at a table and in life. Build's own text had this right all along: *"Even a marginal success (QR4) leaves the next person a little something to stand on."* It also keeps the stated reason the scale is numbered 1-2-3-4-7-10, which exists to make `5 − QR` come out right.
+
+**Third time this week the fix was to delete a mechanism rather than reconcile two.** A type letter standing in for penetration; a severity modifier standing in for the wound track; now a second chaining number standing in for the first. *A system with one resolution rule should be suspicious of any mechanic that re-implements something it already has.*
+
+**Precedent, and it points the same way.** Aim was briefly put on `4 − QR` to match PM, and that was reversed with the general lesson **"when a modifier is mis-framed, fix the baseline, not the modifier"** — the aimed-attack skills took BEF 4 instead. Today's call finishes that job from the other end.
+
 ## Decided: Pain Resistance gets no severity rule of its own (2026-11, Tonio)
 
 **The call.** *"The rule for PR is simply that it gets modified by your wound level (and exhaustion et al) like anything else."*

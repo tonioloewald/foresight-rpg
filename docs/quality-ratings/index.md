@@ -5,7 +5,7 @@
 
 ## The QR scale
 
-A success is graded **QR1** (superb) → **QR2** → **QR3** → **QR4** (it worked, barely). Failures continue the same scale as **QR7** and **QR10** (bad and disastrous). The odd numbering isn't arbitrary — see *PM*, below.
+A success is graded **QR1** (superb) → **QR2** → **QR3** → **QR4** (it worked, barely). Failures continue the same scale as **QR7** and **QR10** (bad and disastrous). The odd numbering isn't arbitrary — see *Carry*, below.
 
 You read the QR off your D100 roll against fractions of your success chance (SC):
 
@@ -20,13 +20,13 @@ You read the QR off your D100 roll against fractions of your success chance (SC)
 
 Two hard limits, whatever your SC: **a roll of 100 is never better than QR7** (so even a near-certainty can fail), and **a roll of 99 is never better than QR4** (you can always succeed, never *brilliantly*, on a 99).
 
-*(The character sheet's Resolution Table precomputes the four success thresholds so you never divide at the table — look up your score and EF, read the numbers. The table holds only those thresholds: Yield, Time, and PM are flat values keyed to the QR itself, below.)*
+*(The character sheet's Resolution Table precomputes the four success thresholds so you never divide at the table — look up your score and EF, read the numbers. The table holds only those thresholds: Yield, Time, Carry and the Bands are flat values keyed to the QR itself, below.)*
 
-## Read one column, not three
+## Read one column, not four
 
 > **A QR1 is fast *or* fabulous — never both.** Decide before the roll what was at stake, quantify *that*, and let the rest be narration.
 
-If speed mattered, read **Time**. If the quality of the product mattered, read **PM**. If the amount mattered, read **Yield**. A superb dance is in time with the music; a superb *quick* repair is done early — not both at once.
+If speed mattered, read **Time**. If what it leaves behind mattered, read **Carry**. If the amount mattered, read **Yield**. If a rule just wants to know how it went, read the **Band**. A superb dance is in time with the music; a superb *quick* repair is done early — not both at once.
 
 ## Never penalize the same choice twice
 
@@ -43,7 +43,9 @@ The up-front modifier is the price of the special outcome. Pay once.
 
 **Time — how long did it take?** A percentage of what a competent practitioner would estimate up front. QR4 takes roughly twice as long; QR1 is quick. *This is what answers "did you pick the lock before the guard rounded the corner?" — a time-critical task where QR is the whole story.*
 
-**PM — how good is the product, for later use?** When a task makes something used in a *later* task (a built weapon, a forged document, a set-up security system), the QR carries forward as a modifier: **PM = 4 − QR.** So QR1 → +3, QR2 → +2, QR3 → +1, QR4 → +0, QR7 → −3, QR10 → −6. (That's why the scale is numbered this way.)
+**Carry — how good is it for later use?** When a task makes something a *later* task will use (a built weapon, a forged document, a set-up security system), or simply leaves the next attempt better placed, the QR carries forward as an ease-factor modifier: **5 − QR.** So QR1 → +4, QR2 → +3, QR3 → +2, QR4 → +1, QR7 → −2, QR10 → −5. (That's why the scale is numbered 1-2-3-4-7-10.)
+
+**There is only one chaining number in ForeSight, and it is `5 − QR`.** It does not matter whether the thing carried forward is an object, a position, a diagnosis or a reputation — **Build**, below, is the same rule, and a made object simply keeps its `5 − QR` as the **PM** (Performance Modifier) that objects already carry on the [Objects](/equipment/) page. **Any success leaves the next attempt something to stand on**, which is why QR4 is +1 and not zero: the job came in late and rough, but the door is open.
 
 ## Bands — when a rule wants a coarse outcome
 
@@ -88,7 +90,7 @@ So the conga line never forms. The first failure is slow, the next is slower, an
 Any result can be opposed or built upon — this is what makes the system chain. *(Full treatment, including the blocking table, is on the Opposed Resolution page.)*
 
 - **Oppose** a prior result two ways: use its QR as the *base ease factor* for your counter-task, **or** simply roll your own opposing task and compare QRs.
-- **Build on** a prior result by adding **+(5 − QR)** as a modifier to your follow-up: QR1 → +4, QR2 → +3, QR3 → +2, QR4 → +1. Even a marginal success gives a successor something to stand on. *(Distinct from the PM column above, which rates a finished product's own quality at 4 − QR — see note.)*
+- **Build on** a prior result by adding **+(5 − QR)** as a modifier to your follow-up: QR1 → +4, QR2 → +3, QR3 → +2, QR4 → +1. Even a marginal success gives a successor something to stand on. *(The same number as **Carry**, above, because it is the same idea.)*
 
 ## Random QR
 
