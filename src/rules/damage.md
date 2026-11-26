@@ -58,6 +58,8 @@ Injury is a single number, and it is **−(level) to everything you do** — pai
 | 5 | Dying | down and bleeding out; **without intervention you deteriorate toward 6** |
 | 6 | Dead | — |
 
+*Designer's Note — the conversion, for anyone arriving from hit points. A mid-level D&D character has something like **30 hp**. Put a **wound level at about 6 of those points** and the whole 0–6 track comes to roughly 36 — the same person. Which prices the bands: a hit that registers but leaves no mark is **1–3 points**, and what that is, in life, is **a stab wound**. People regularly survive tens of them. So the sub-wound band isn't the rules being coy about a scratch; it is the most common serious injury there is, and ForeSight's claim is that **its real cost was never the hit points** — it was the next few seconds, which is exactly what a stun check takes off you. Run the conversion the other way and the anchors hold: a 9mm at QR3 does 2 levels ≈ 12 points, and a 7.62 centre-mass at QR1 does 5 ≈ 30 — the entire mid-level character, in one round, from one round. That is the difference between a game with an hp pool and a game without one: not bigger numbers, but **a 1-point hit that costs you the fight** and a 30-point hit that doesn't need a second one.*
+
 New damage **adds to your current level** (a medium 2 plus a heavy 3 is a dying 5). Toughness rolls throughout are made on **Willpower** — staying on your feet is mostly about refusing to stop (see [Exhaustion](/exhaustion/); what *kind* of enduring you are good at comes from **Endurance quirks**). Purely physiological resistance — poison, disease — is **Strength (ST)**, where willpower is no help at all. Pain resistance is **not a skill**; you roll the raw attribute.
 
 ## Stun & Shaken
