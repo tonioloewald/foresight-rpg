@@ -1170,6 +1170,21 @@ That also retro-justifies the ¼ number, which had been arbitrary, and it hands 
 
 **It calibrates well against the printed human range.** Attributes run 3–16, most people sit at 7 or 8, and a 10 is the person everyone agrees is remarkable (see Creating Characters). BEF 7 therefore puts an ordinary Pain Resistance or exhaustion check at **SC 49–56** — near a coin-flip, which is the right shape for "getting shot rattles most people" — and the remarkable WP 10 at **70**. BEF 5 would have given the ordinary person 35–40, which reads as a game where average humans crumple.
 
+**Rejected alternative, from an earlier edition: doubling the attribute instead.** *"One edition of ForeSight gave attributes 'scores' of double their value so that an Attribute of 13 became 26 -> 20+2 and BEFs of 5, which sharpened the one highly effective gunman beats five framing. But on the whole I didn't like the ubermensch vibe it created."* (Not 1986 — its PCS guidance, *"a PCS of 10 is not particularly good; PCS-15 is okay; PCS-20 is pretty good; and PCS-25 or better represents expertise"*, is today's Score scale unchanged.)
+
+The instinct was right, and the arithmetic says so more strongly than the vibe does. Doubling feeds attributes into the **surplus-over-20** rule, and that rule converts Score into **ease factor** — which is not more success, it is **immunity to penalties**:
+
+| attr | doubled: Score × EF = SC | …after a −3 EF | today: SC | …after a −3 EF |
+|---:|---:|---:|---:|---:|
+| 7 | 14 × 5 = 70 | 28 | 49 | 28 |
+| 10 | 20 × 5 = 100 | 40 | 70 | 40 |
+| 13 | 20+2 × 7 = 140 | 80 | 91 | 52 |
+| 16 | 20+4 × 9 = 180 | **120** | 112 | 64 |
+
+Below an attribute of 12 the two schemes are *identical* in penalty absorption, because no surplus has accrued yet. Above it they diverge violently: the doubled 16 absorbs a −3 for wounds and exhaustion and is **still automatic**, where today's is at 64 and in real trouble. That is the ubermensch arriving as arithmetic rather than as a decision — the gifted lose the ability to struggle, which fails the house rule that **every path needs its own friction**.
+
+**And the sharpening it was built for was an illusion.** Doubling lifts the *ordinary* person too — an attribute of 7 goes from SC 49 to 70, which cuts their chance of being stunned by a registering hit from **45% to 27%**. So it widened the expert/mook gap by *removing the expert from the game*, where single values at BEF 7 widen it by *leaving the mook fragile*: **45% stunned against 1%**. The one-gunman-beats-five effect is therefore **stronger** under the scheme that doesn't double, and it lives in the QR band distribution rather than in penalty immunity — which is the right place for it, because the expert still has something to lose.
+
 **The consequence that matters more than the number.** At an attribute of **15** the product is already past 100, so for the gifted the pass/fail axis of an attribute check all but vanishes and only the **QR** still varies: SC 105 still splits into QR1 at ≤10, QR2 at ≤26, QR3 at ≤52, QR4 above. This makes the open question on the **QR result bands** (board #4264) load-bearing rather than cosmetic — with BEF 7, the bands *are* the stun mechanic, the exhaustion mechanic and the gather mechanic. They cannot stay undefined.
 
 ## Decided: the damage-type letters are physics, and penetration is a separate axis (2026-11, Tonio)
