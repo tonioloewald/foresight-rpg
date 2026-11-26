@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=24781577da52" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=f26deec5a763" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="damage.md">
 <h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
@@ -150,7 +150,7 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tbody></table>
 <p>New damage <strong>adds to your current level</strong> (a medium 2 plus a heavy 3 is a dying 5). Toughness rolls throughout are made on <strong>Willpower</strong> — staying on your feet is mostly about refusing to stop (see <a href="/exhaustion/">Exhaustion</a>; what <em>kind</em> of enduring you are good at comes from <strong>Endurance quirks</strong>). Purely physiological resistance — poison, disease — is <strong>Strength (ST)</strong>, where willpower is no help at all. Pain resistance is <strong>not a skill</strong>; you roll the raw attribute.</p>
 <h2 id="stun--shaken">Stun &amp; Shaken</h2>
-<p>Damage doesn&#39;t only wound — it rattles. Any hit that clears the <strong>¼-level stun floor</strong> (or any <strong>stun-class &quot;S&quot; weapon</strong>, which skips straight to it) forces a <strong>pain-resistance roll — WP at BEF 7</strong> (SC = WP × 7, before modifiers), and you read the <strong>QR</strong>:</p>
+<p>Damage doesn&#39;t only wound — it rattles. Any hit that clears the <strong>¼-level stun floor</strong> (or any <strong>stun-class &quot;S&quot; weapon</strong>, which skips straight to it) forces a <strong>pain-resistance roll — WP at BEF 7</strong>, and you read the <strong>QR</strong>:</p>
 <table>
 <thead>
 <tr>
@@ -172,6 +172,11 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </tbody></table>
 <p>Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.</p>
+<p><strong>There is no special severity modifier, because there doesn&#39;t need to be one.</strong> Pain Resistance is modified exactly like every other roll in the game: <strong>−(your wound level)</strong>, plus whatever <a href="/exhaustion/">exhaustion</a> you are carrying, plus the situation. <strong>Apply the new damage first, then roll</strong> — so the hit that just landed is already in your wound level, and a worse hit is a worse roll by the rule that was there all along.</p>
+<blockquote>
+<p><em>WP 10, unhurt and fresh. A graze that rounds to no wound: EF 7, SC 70. A 9mm doing 2 levels puts you at Medium first, so EF 5, SC 50. A 7.62 doing 5 puts you at Dying: EF 2, SC 20 — and that is before the −1 EF an abdomen wound adds, or half of a −3 mana track. The same hit on the same character already at Light 1 is one rung worse again.</em></p>
+</blockquote>
+<p><em>Designer&#39;s Note: the first draft of this page gave Pain Resistance its own modifier — −1 EF per wound level the hit inflicted — and it was redundant the moment you notice that damage is applied before the roll. The universal −(level) penalty already produces the whole escalation curve, and it does something the bespoke rule couldn&#39;t: it remembers the <strong>three</strong> earlier hits as well as this one. A system with one resolution rule should be suspicious of any mechanic that re-implements a penalty it already has.</em></p>
 <h2 id="hit-location">Hit location</h2>
 <p>By default roll <strong>D10</strong> for where a hit lands:</p>
 <table>

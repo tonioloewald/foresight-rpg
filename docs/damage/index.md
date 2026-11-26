@@ -56,7 +56,7 @@ New damage **adds to your current level** (a medium 2 plus a heavy 3 is a dying 
 
 ## Stun & Shaken
 
-Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stun floor** (or any **stun-class "S" weapon**, which skips straight to it) forces a **pain-resistance roll — WP at BEF 7** (SC = WP × 7, before modifiers), and you read the **QR**:
+Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stun floor** (or any **stun-class "S" weapon**, which skips straight to it) forces a **pain-resistance roll — WP at BEF 7**, and you read the **QR**:
 
 | The roll | Effect |
 |---|---|
@@ -65,6 +65,12 @@ Damage doesn't only wound — it rattles. Any hit that clears the **¼-level stu
 | **Stunned** (poor, or any S-weapon) | no action but to **recover** (a WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious |
 
 Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.
+
+**There is no special severity modifier, because there doesn't need to be one.** Pain Resistance is modified exactly like every other roll in the game: **−(your wound level)**, plus whatever [exhaustion](/exhaustion/) you are carrying, plus the situation. **Apply the new damage first, then roll** — so the hit that just landed is already in your wound level, and a worse hit is a worse roll by the rule that was there all along.
+
+> *WP 10, unhurt and fresh. A graze that rounds to no wound: EF 7, SC 70. A 9mm doing 2 levels puts you at Medium first, so EF 5, SC 50. A 7.62 doing 5 puts you at Dying: EF 2, SC 20 — and that is before the −1 EF an abdomen wound adds, or half of a −3 mana track. The same hit on the same character already at Light 1 is one rung worse again.*
+
+*Designer's Note: the first draft of this page gave Pain Resistance its own modifier — −1 EF per wound level the hit inflicted — and it was redundant the moment you notice that damage is applied before the roll. The universal −(level) penalty already produces the whole escalation curve, and it does something the bespoke rule couldn't: it remembers the **three** earlier hits as well as this one. A system with one resolution rule should be suspicious of any mechanic that re-implements a penalty it already has.*
 
 ## Hit location
 

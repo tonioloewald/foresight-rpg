@@ -56,7 +56,7 @@
 
 ## Wounds, Stun & Exhaustion
 
-**Wound level** 0→6 (4 incapacitated · 5 dying · 6 dead); **−(level) to everything**. New damage adds on. Pain Resistance (WP) on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO).
+**Wound level** 0→6 (4 incapacitated · 5 dying · 6 dead); **−(level) to everything**. New damage adds on. Pain Resistance = **WP, BEF 7** on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO). **Add the damage first, then roll** — it's modified by your (new) wound level and exhaustion like anything else; no special severity rule.
 **Convalescence:** roll WP at the level's interval (Light daily, Med 5d, Heavy 20d, Incapacitated daily, Dying every few minutes — and *deteriorating*) — success drops a level, QR10 raises; worst-level penalty until healed/treated.
 
 **Exhaustion** (fatigue, mana, etc.): hard exertion → WP check, fail = **+1 level**. **Full** penalty to its own domain, **half** to all else — *except fatigue, which is full against everything*; tracks **stack** (round half **away from zero**). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.

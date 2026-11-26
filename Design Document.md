@@ -1140,6 +1140,18 @@ The display anecdote is recorded on the Weapons page as a designer's note, with 
 
 **Open calibration conflict, flagged not resolved.** The 1986 UCDC table is built around a distribution where **9–12 is the middle** of the human range, but 2026's Creating Characters says *"most people sit around 7 or 8; a 10 is the person everyone agrees is remarkable."* Taken together, most 2026 people have UCDC 1, not 2, and every melee DC above drops by one for the ordinary wielder. This is exactly the case CLAUDE.md's source-hierarchy caveat describes — an untested 2026 intention meeting 1986's table — so it is a calibration item for the playtest, not something to quietly pick. The pages currently print the 1986 table as-is.
 
+## Decided: Pain Resistance gets no severity rule of its own (2026-11, Tonio)
+
+**The call.** *"The rule for PR is simply that it gets modified by your wound level (and exhaustion et al) like anything else."*
+
+**What this replaces.** The analysis of the undefined result bands (#4264) had exposed a real hole — at BEF 7 a competent character almost never *fails* an attribute check, and the QR mix within a success is nearly Score-invariant, so there was nowhere for toughness to live — and the proposed fix was a bespoke modifier: Pain Resistance at −1 EF per wound level **the hit inflicted**. That was redundant, and the reason is the order of operations: **damage is applied before the roll**, so the hit that just landed is already in your wound level, and the universal −(level) penalty produces the entire escalation curve by itself.
+
+**And the universal rule is strictly better than the bespoke one**, because it remembers the *other* hits too. The bespoke version read only the current blow; the real rule reads cumulative injury and the exhaustion tracks at the same time. A WP 10 character takes a 2-level hit (EF 5, SC 50), then another (now Incapacitated 4, EF 3, SC 30), and if he is also three deep in fatigue he is rolling SC 5 — which is what being shot twice while exhausted ought to feel like, and nothing had to be written to make it happen.
+
+**General principle worth stating once:** *a system with one resolution rule should be suspicious of any mechanic that re-implements a penalty it already has.* Both of this week's near-misses were that shape — a type letter standing in for penetration, and a severity modifier standing in for the wound track.
+
+**What remains open in #4264** is only the band mapping itself, which this does not settle: which QRs count as shrug / Shaken / Stunned. The recommendation is QR1–3 shrug · QR4 Shaken · QR7 Stunned · QR10 unconscious, which makes **Stunned the most likely outcome of any real hit on an ordinary person (WP 7–8)** and a far rarer one for a PC with WP 10+. That asymmetry looks like a feature rather than a bug: it is why one competent gunman beats five thugs, and it is the arithmetic behind the cheat sheet's existing advice to spread attacks, since a hurt or stunned foe is much less dangerous than a dead-or-healthy one.
+
 ## Decided: a bare attribute rolls at BEF 7 (2026-11, Tonio)
 
 **The call.** `SC = Score × EF`, and for a bare attribute roll the EF had never been printed — so Pain Resistance, exhaustion, convalescence, stun recovery, poison and disease all had no Success Chance at all. **Attributes are BEF 7.** Skills stay at 5, the aimed-attack skills at 4.
