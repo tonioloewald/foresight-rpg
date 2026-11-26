@@ -24,11 +24,13 @@ Exhaustion runs 0 (fresh) to 5, and a level is a penalty to activity the way a w
 
 Do something genuinely taxing — a sustained sprint, a long mêlée, a forced march, harsh exposure — and make a **WP check** (as with wounds — an attribute, so **BEF 7**), the *magnitude* of the effort a modifier rather than a pile of extra rolls:
 
-| The check | Result |
-|---|---|
-| **Solid success** | you're fine |
-| **Marginal / ordinary failure** | one level of exhaustion |
-| **Bad failure** | worse, or the effort simply fails |
+| Band | QR | Result |
+|---|:--:|---|
+| **Solid** | QR1–3 | you're fine |
+| **Marginal** or **poor** | QR4 or QR7 | one level of exhaustion |
+| **Bad** | QR10 | worse, or the effort simply fails |
+
+*(Bands are defined once in [Quality Ratings](/quality-ratings/).)*
 
 Some efforts cost a level **automatically**, no roll — a thing you cannot do without burning yourself.
 
@@ -49,7 +51,7 @@ So a **Spent (3)** character sleeps it off to **Tired (2)**, rests down to **Win
 
 By default **magic is just fatigue**: gathering power is taxing, and casting in a **mana-poor** place is simply more exhausting, a **mana-rich** one less — a modifier, not a second resource to track. A setting that wants magic to feel *separate* can give it its **own track** (Mana), and likewise **Spirit** for mystic disciplines; each track wears down independently (your Mana can be wrung dry while your Spirit is fresh) and stacks per the rule above.
 
-However it's tracked, the shape is **gather then weave**: a **gather roll** whose ease factor reflects how much you're asking for (a candle-flame is trivial; a firestorm brutal). Read its QR — a solid success and the power comes free and clear; a marginal one and it comes but costs a level; a **QR10 fizzles *and* costs a level**. And a caster may **volunteer a level for a one-off +4** — reaching past your limit on purpose, reliable but the bill compounds.
+However it's tracked, the shape is **gather then weave**: a **gather roll** whose ease factor reflects how much you're asking for (a candle-flame is trivial; a firestorm brutal). Read its **band** — **solid** (QR1–3) and the power comes free and clear; **marginal** (QR4) and it comes but costs a level; **poor** (QR7) and it doesn't come at all; **bad** (QR10) **fizzles *and* costs a level**. And a caster may **volunteer a level for a one-off +4** — reaching past your limit on purpose, reliable but the bill compounds.
 
 ## Divine favour is different — it's earned, not rested
 

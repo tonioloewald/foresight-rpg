@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=f26deec5a763" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=54593920658f" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="quality-ratings.md">
 <h1 id="quality-ratings--yield">Quality Ratings &amp; Yield</h1>
 <!--{ "parent": "core", "order": 5 }-->
@@ -96,6 +96,66 @@
 <p><strong>Yield — how much did you get?</strong> A percentage of the maximum: <strong>QR1 100%, QR2 80%, QR3 50%, QR4 25%</strong> (failures yield as a QR4). Used for damage (<strong>damage = Yield × DC ÷ 2</strong>), and equally for intelligence gathered, gold panned, ground covered, rope salvaged.</p>
 <p><strong>Time — how long did it take?</strong> A percentage of what a competent practitioner would estimate up front. QR4 takes roughly twice as long; QR1 is quick. <em>This is what answers &quot;did you pick the lock before the guard rounded the corner?&quot; — a time-critical task where QR is the whole story.</em></p>
 <p><strong>PM — how good is the product, for later use?</strong> When a task makes something used in a <em>later</em> task (a built weapon, a forged document, a set-up security system), the QR carries forward as a modifier: <strong>PM = 4 − QR.</strong> So QR1 → +3, QR2 → +2, QR3 → +1, QR4 → +0, QR7 → −3, QR10 → −6. (That&#39;s why the scale is numbered this way.)</p>
+<h2 id="bands--when-a-rule-wants-a-coarse-outcome">Bands — when a rule wants a coarse outcome</h2>
+<p>Some rules don&#39;t want a percentage or a modifier, only <em>how it went</em>. They read the QR as four <strong>bands</strong>, and these are the names the rest of the book uses:</p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>QR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Solid</strong></td>
+<td>QR1–3</td>
+</tr>
+<tr>
+<td><strong>Marginal</strong></td>
+<td>QR4</td>
+</tr>
+<tr>
+<td><strong>Poor</strong></td>
+<td>QR7</td>
+</tr>
+<tr>
+<td><strong>Bad</strong></td>
+<td>QR10</td>
+</tr>
+</tbody></table>
+<p>Still one column. And since <strong>half of all successes are QR4</strong>, <em>marginal</em> is the ordinary result of succeeding — <em>solid</em> means you had something to spare.</p>
+<p>Three rules read the bands, and all three say the same shape — you got it, you got it at a price, you didn&#39;t, you made it worse:</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">solid</th>
+<th align="left">marginal</th>
+<th align="left">poor</th>
+<th align="left">bad</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Pain Resistance</strong> (<a href="/damage/">Damage</a>)</td>
+<td align="left">shrug it off</td>
+<td align="left"><strong>Shaken</strong></td>
+<td align="left"><strong>Stunned</strong></td>
+<td align="left">unconscious</td>
+</tr>
+<tr>
+<td align="left"><strong>Getting exhausted</strong> (<a href="/exhaustion/">Exhaustion</a>)</td>
+<td align="left">you&#39;re fine</td>
+<td align="left">+1 level</td>
+<td align="left">+1 level</td>
+<td align="left">worse, or the effort fails</td>
+</tr>
+<tr>
+<td align="left"><strong>The gather roll</strong> (<a href="/exhaustion/">Exhaustion</a>)</td>
+<td align="left">the power comes free</td>
+<td align="left">it comes, and costs a level</td>
+<td align="left">it doesn&#39;t come</td>
+<td align="left">fizzle <em>and</em> a level</td>
+</tr>
+</tbody></table>
 <h2 id="failures-yield-like-a-qr4">Failures yield like a QR4</h2>
 <p>When players can&#39;t tell success from failure (hidden results — was the alarm well installed? did the panning find anything?), a <em>failure</em> yields and takes time exactly as a <strong>QR4</strong> would. The dice stay quiet; the GM knows.</p>
 <h2 id="why-qr4-is-so-common--and-so-mediocre">Why QR4 is so common — and so mediocre</h2>

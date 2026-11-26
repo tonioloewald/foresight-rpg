@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=f26deec5a763" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=54593920658f" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="damage.md">
 <h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
@@ -98,10 +98,13 @@
 <h2 id="how-much-damage-a-hit-does">How much damage a hit does</h2>
 <blockquote>
 <p><strong>Damage (in wound levels) = Yield × DC × ½, rounded down.</strong>
-And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (below), even when it rounds to no wound.</p>
+And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (below), even when it rounds to no wound — while <strong>anything under ¼ has no effect at all</strong>.</p>
 </blockquote>
-<p>Read the hit&#39;s <strong>Yield</strong> off its QR (QR1 100%, QR2 80%, QR3 50%, QR4 25% — see The One Rule), multiply by half the DC, and round down for the <strong>wound levels</strong> dealt. The quarter-level stun floor is why even a graze rattles you: real weapons are dangerous and ForeSight doesn&#39;t pretend otherwise.</p>
-<p>*A 9mm (DC 8): a solid QR3 hit does 0.5 × 8 × ½ = <strong>2</strong> (medium); a brilliant QR1 does <strong>4</strong> (incapacitated); a scraping QR4 does 0.25 × 8 × ½ = 1.0 → <strong>1</strong> (light) plus a stun check. A 7.62 rifle (DC 11) center-mass at QR1 does 5.5 → <strong>5 (dying)</strong>. A bare fist (DC 4) at QR4 does 0.5 raw → no wound, but a stun check.*</p>
+<p>Read the hit&#39;s <strong>Yield</strong> off its QR (QR1 100%, QR2 80%, QR3 50%, QR4 25% — see The One Rule), multiply by half the DC, and round down for the <strong>wound levels</strong> dealt.</p>
+<p><strong>A hit that rounds to no wound is not a scratch.</strong> It is the gut punch, the rifle butt, the elbow square on the funny bone — a blow that landed properly and happened to break nothing, and anyone who has taken one knows exactly how much of the next few seconds it owns. That is what the quarter-level floor is for: real weapons are dangerous and ForeSight doesn&#39;t pretend otherwise, so <strong>no lasting injury and no consequence are different things</strong>.</p>
+<p><strong>And below the floor there is nothing at all</strong> — no wound, no roll, nothing owed even in narration. The quarter-level line is not a rounding artefact, it is <strong>the threshold of a blow that registers</strong>, and it sits where it does because <em>that is the blow that would stun an ordinary person</em>. Under it, whatever the dice said, nothing happened that the next few seconds will remember. The scale has two thresholds and no third: <strong>registers</strong>, and <strong>leaves a mark</strong>.</p>
+<p>In practice the no-effect band is something <strong>armor produces</strong>. Any weapon of DC 2 or more clears the floor on its own even at a scraping QR4 (a QR4 does <code>0.25 × DC × ½</code>, which reaches ¼ at DC 2), so a blow that fails to register is almost always one whose DC the target&#39;s Protection has already eaten. A padded gambeson taking <code>M1</code> off an ordinary person&#39;s <code>+0 M</code> fist is precisely this: the punch lands, and nothing about it registers. That is the arms race paying off where it should — not in surviving the blow, but in the blow never arriving.</p>
+<p>*A 9mm (DC 8): a solid QR3 hit does 0.5 × 8 × ½ = <strong>2</strong> (medium); a brilliant QR1 does <strong>4</strong> (incapacitated); a scraping QR4 does 0.25 × 8 × ½ = 1.0 → <strong>1</strong> (light) plus a stun check. A 7.62 rifle (DC 11) center-mass at QR1 does 5.5 → <strong>5 (dying)</strong>. A bare fist (DC 4) at QR4 does 0.5 raw → no wound, but a stun check — the gut punch.*</p>
 <h2 id="wounds--the-06-track">Wounds — the 0–6 track</h2>
 <p>Injury is a single number, and it is <strong>−(level) to everything you do</strong> — pain and blood loss don&#39;t care what you&#39;re attempting:</p>
 <table>
@@ -154,27 +157,37 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 <table>
 <thead>
 <tr>
-<th>The roll</th>
+<th>Band</th>
+<th align="center">QR</th>
 <th>Effect</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>Shrug it off</strong> (good)</td>
-<td>carry on</td>
+<td><strong>Solid</strong></td>
+<td align="center">QR1–3</td>
+<td>shrug it off and carry on</td>
 </tr>
 <tr>
-<td><strong>Shaken</strong> (ordinary)</td>
-<td>−2 to everything and one action only; roll WP at end of turn to clear it</td>
+<td><strong>Marginal</strong></td>
+<td align="center">QR4</td>
+<td><strong>Shaken</strong> — −2 to everything and one action only; roll WP at the end of your turn to clear it</td>
 </tr>
 <tr>
-<td><strong>Stunned</strong> (poor, or any S-weapon)</td>
-<td>no action but to <strong>recover</strong> (a WP roll each turn); a QR1 clears it at once, a QR10 drops you unconscious</td>
+<td><strong>Poor</strong></td>
+<td align="center">QR7 <em>(or any S-weapon)</em></td>
+<td><strong>Stunned</strong> — no action but to <strong>recover</strong> (a WP roll each turn); a QR1 clears it at once</td>
+</tr>
+<tr>
+<td><strong>Bad</strong></td>
+<td align="center">QR10</td>
+<td><strong>unconscious</strong></td>
 </tr>
 </tbody></table>
+<p><em>(The four bands are defined once in <a href="/quality-ratings/">Quality Ratings</a> and used by three rules; this is one of them.)</em></p>
 <p>Shaken is off-balance and hurting; Stunned is out of the fight until you pull yourself together. Both are temporary and leave no lasting level.</p>
 <p><strong>There is no special severity modifier, because there doesn&#39;t need to be one.</strong> Pain Resistance is modified exactly like every other roll in the game: <strong>−(your wound level)</strong>, plus whatever <a href="/exhaustion/">exhaustion</a> you are carrying, plus the situation. <strong>Apply the new damage first, then roll</strong> — so the hit that just landed is already in your wound level, and a worse hit is a worse roll by the rule that was there all along.</p>
 <blockquote>
-<p><em>WP 10, unhurt and fresh. A graze that rounds to no wound: EF 7, SC 70. A 9mm doing 2 levels puts you at Medium first, so EF 5, SC 50. A 7.62 doing 5 puts you at Dying: EF 2, SC 20 — and that is before the −1 EF an abdomen wound adds, or half of a −3 mana track. The same hit on the same character already at Light 1 is one rung worse again.</em></p>
+<p><em>WP 10, unhurt and fresh. A blow that lands but breaks nothing: EF 7, SC 70. A 9mm doing 2 levels puts you at Medium first, so EF 5, SC 50. A 7.62 doing 5 puts you at Dying: EF 2, SC 20 — and that is before the −1 EF an abdomen wound adds, or half of a −3 mana track. The same hit on the same character already at Light 1 is one rung worse again.</em></p>
 </blockquote>
 <p><em>Designer&#39;s Note: the first draft of this page gave Pain Resistance its own modifier — −1 EF per wound level the hit inflicted — and it was redundant the moment you notice that damage is applied before the roll. The universal −(level) penalty already produces the whole escalation curve, and it does something the bespoke rule couldn&#39;t: it remembers the <strong>three</strong> earlier hits as well as this one. A system with one resolution rule should be suspicious of any mechanic that re-implements a penalty it already has.</em></p>
 <h2 id="hit-location">Hit location</h2>

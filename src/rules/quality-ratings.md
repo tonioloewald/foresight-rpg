@@ -45,6 +45,27 @@ The up-front modifier is the price of the special outcome. Pay once.
 
 **PM — how good is the product, for later use?** When a task makes something used in a *later* task (a built weapon, a forged document, a set-up security system), the QR carries forward as a modifier: **PM = 4 − QR.** So QR1 → +3, QR2 → +2, QR3 → +1, QR4 → +0, QR7 → −3, QR10 → −6. (That's why the scale is numbered this way.)
 
+## Bands — when a rule wants a coarse outcome
+
+Some rules don't want a percentage or a modifier, only *how it went*. They read the QR as four **bands**, and these are the names the rest of the book uses:
+
+| Band | QR |
+|---|---|
+| **Solid** | QR1–3 |
+| **Marginal** | QR4 |
+| **Poor** | QR7 |
+| **Bad** | QR10 |
+
+Still one column. And since **half of all successes are QR4**, *marginal* is the ordinary result of succeeding — *solid* means you had something to spare.
+
+Three rules read the bands, and all three say the same shape — you got it, you got it at a price, you didn't, you made it worse:
+
+| | solid | marginal | poor | bad |
+|:--|:--|:--|:--|:--|
+| **Pain Resistance** ([Damage](/damage/)) | shrug it off | **Shaken** | **Stunned** | unconscious |
+| **Getting exhausted** ([Exhaustion](/exhaustion/)) | you're fine | +1 level | +1 level | worse, or the effort fails |
+| **The gather roll** ([Exhaustion](/exhaustion/)) | the power comes free | it comes, and costs a level | it doesn't come | fizzle *and* a level |
+
 ## Failures yield like a QR4
 
 When players can't tell success from failure (hidden results — was the alarm well installed? did the panning find anything?), a *failure* yields and takes time exactly as a **QR4** would. The dice stay quiet; the GM knows.

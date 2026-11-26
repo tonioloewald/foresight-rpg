@@ -1150,7 +1150,15 @@ The display anecdote is recorded on the Weapons page as a designer's note, with 
 
 **General principle worth stating once:** *a system with one resolution rule should be suspicious of any mechanic that re-implements a penalty it already has.* Both of this week's near-misses were that shape — a type letter standing in for penetration, and a severity modifier standing in for the wound track.
 
-**What remains open in #4264** is only the band mapping itself, which this does not settle: which QRs count as shrug / Shaken / Stunned. The recommendation is QR1–3 shrug · QR4 Shaken · QR7 Stunned · QR10 unconscious, which makes **Stunned the most likely outcome of any real hit on an ordinary person (WP 7–8)** and a far rarer one for a PC with WP 10+. That asymmetry looks like a feature rather than a bug: it is why one competent gunman beats five thugs, and it is the arithmetic behind the cheat sheet's existing advice to spread attacks, since a hurt or stunned foe is much less dangerous than a dead-or-healthy one.
+### And the bands, settled the same evening
+
+Named once in Quality Ratings so three rules can cite them instead of each re-describing good/ordinary/poor: **solid QR1–3 · marginal QR4 · poor QR7 · bad QR10**. Pain Resistance reads them as shrug / **Shaken** / **Stunned** / unconscious; getting exhausted as fine / +1 / +1 / worse; the gather roll as free / costs a level / doesn't come / fizzle-and-a-level. All three have the same shape — you got it, you got it at a price, you didn't, you made it worse.
+
+The arithmetic makes **Stunned the most likely outcome of any real hit on an ordinary person (WP 7–8)** and a far rarer one for a PC at WP 10+ (1% on a no-wound hit at WP 15). I had flagged that as possibly too brutal. Tonio's correction: *"Consider that a stun hit is quite something. It's not enough to cause cumulative damage but consider the impact of say being 'hit in the funny bone' or taking a gut punch."* — so the severity is the point, not an overshoot. A gut punch does fold an average person, and the asymmetry between the mook and the PC is why one competent gunman beats five thugs.
+
+**Then the floor itself got a definition, which is the better half of the idea.** *"If a blow wouldn't stun an ordinary person, it's no effect at all in this framing."* So the ¼-level line is not a rounding artefact — it is **the threshold of a blow that registers**, calibrated at exactly the hit that would stun an ordinary person, and **below it there is no wound, no roll and nothing owed in narration**. The damage scale has two thresholds and no third: *registers*, and *leaves a mark*.
+
+That also retro-justifies the ¼ number, which had been arbitrary, and it hands armour a job the rules had never quite stated. A QR4 does `0.25 × DC × ½`, which reaches ¼ at **DC 2**, so any real weapon clears the floor unaided — meaning the no-effect band is produced almost entirely by **Protection eating DC**. A gambeson's `M1` against an ordinary person's `+0 M` fist is the canonical case: the punch lands and nothing about it registers. Armour's payoff is not surviving the blow; it is the blow never arriving.
 
 ## Decided: a bare attribute rolls at BEF 7 (2026-11, Tonio)
 

@@ -27,7 +27,7 @@
 *Caps: a 100 is never better than QR7; a 99 never better than QR4.*
 
 **Yield %:** QR1 **100** · QR2 **80** · QR3 **50** · QR4 **25** (failures yield as QR4).
-**Read one column only:** *Yield* (how much) · *Time* (QR4 ≈ 200% of estimate) · *PM* = **4 − QR**. Never penalize the same choice twice (pay the EF up front, the success includes it).
+**Read one column only:** *Yield* (how much) · *Time* (QR4 ≈ 200% of estimate) · *PM* = **4 − QR** · *Band* (solid QR1–3 · marginal QR4 · poor QR7 · bad QR10). Never penalize the same choice twice (pay the EF up front, the success includes it).
 
 ## Open-Ended Resolution
 
@@ -56,9 +56,9 @@
 
 ## Wounds, Stun & Exhaustion
 
-**Wound level** 0→6 (4 incapacitated · 5 dying · 6 dead); **−(level) to everything**. New damage adds on. Pain Resistance = **WP, BEF 7** on a hit → shrug / **Shaken** (−2, one action) / **Stunned** (only recover-from-stun; QR1 clears, QR10 KO). **Add the damage first, then roll** — it's modified by your (new) wound level and exhaustion like anything else; no special severity rule.
+**Wound level** 0→6 (4 incapacitated · 5 dying · 6 dead); **−(level) to everything**. New damage adds on. Pain Resistance = **WP, BEF 7** on a hit → **QR1–3** shrug / **QR4 Shaken** (−2, one action) / **QR7 Stunned** (only recover-from-stun; QR1 clears) / **QR10 out cold**. *Raw damage ≥ ¼ level → roll, even with no wound: that's the gut punch. Under ¼ → **nothing happened** — the floor is set at the blow that would stun an ordinary person, and armor is what pushes hits below it.* **Add the damage first, then roll** — it's modified by your (new) wound level and exhaustion like anything else; no special severity rule.
 **Convalescence:** roll WP at the level's interval (Light daily, Med 5d, Heavy 20d, Incapacitated daily, Dying every few minutes — and *deteriorating*) — success drops a level, QR10 raises; worst-level penalty until healed/treated.
 
-**Exhaustion** (fatigue, mana, etc.): hard exertion → WP check, fail = **+1 level**. **Full** penalty to its own domain, **half** to all else — *except fatigue, which is full against everything*; tracks **stack** (round half **away from zero**). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.
+**Exhaustion** (fatigue, mana, etc.): hard exertion → WP check (BEF 7): **QR1–3** fine, **QR4–7** +1 level, **QR10** worse or the effort fails. **Full** penalty to its own domain, **half** to all else — *except fatigue, which is full against everything*; tracks **stack** (round half **away from zero**). Clears by **rest, one level at a time** — depth 1 = breather, 2 = long break, 3 = sleep, 4 = near-coma, 5+ = intervention. 4+ converts to wounds.
 
-**Power pools** (Mana/Piety/Spirit): gather roll → success = free · marginal/fail = +1 exhaustion · QR10 = fizzle + exhaustion. **Push it:** take a level for a one-off **+4**.
+**Power pools** (Mana/Piety/Spirit): gather roll → **QR1–3** free · **QR4** comes but +1 exhaustion · **QR7** doesn't come · **QR10** fizzle + exhaustion. **Push it:** take a level for a one-off **+4**.
