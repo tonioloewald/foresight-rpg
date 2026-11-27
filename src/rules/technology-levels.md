@@ -43,6 +43,7 @@ Quarter-levels can apply to a single thread — "TL6, but Physics 6.25" — with
 
 - **Pricing & availability.** An item from a higher TL than the local culture is exotic — expensive, hard to repair, or simply unobtainable. The 2004 campaign convention is a good default: assume the local TL is freely available, and rule higher-TL items in case by case.
 - **Skills & fields.** Operating or repairing higher-TL gear may require a field of knowledge at that TL; lacking it is an unfamiliarity penalty.
+- **Threads can go *backwards*, and armor is the worked example.** Personal armor was excellent at TL3, effectively **absent** from about 1780 to 1900 (no TL4 row exists on the [Armor](/armor/) table, deliberately), and is back and improving at TL5–6. Firearms beat anything wearable, then shell fragments made a steel hat worth it again, then materials did the rest. So don't read a thread as a ladder you only climb: ask what the local weapons, materials and money make *worth carrying*.
 - **Setting feel.** Announce the campaign TL (and any decoupled threads) during character creation, the way you announce the genre. "TL6, but medicine is TL4 because we're cut off from the core worlds" tells players everything.
 
 *Designer's Note: the original anchors stand — TL5 was about 1980, TL4 about 1900, TL3 about 1500 — but the present needed finer grain, and the future needs humility. TL6 has been recalibrated to match the information tech we actually got. I'm not presupposing FTL, fusion is a maybe, and I was badly wrong about computers once already. Threads, not ladders.*
