@@ -1251,6 +1251,27 @@ And it is not invulnerability, because those companies *did* lose men: to exhaus
 
 **What to actually watch at the table (board #4299).** Not `A`. Whether those countermoves are *reachable* — if a GM running a swarm against a plated PC can't readily find exhaustion, the gap shot and the clinch on the page, the fight stalls where it ought to turn, and the lever is those rules' visibility, not the absorb column.
 
+## Decided: armour is bought in four currencies, and a helmet has a hole in it (2026-11, Tonio)
+
+**The call.** *"Note that armor pieces have downsides like weight, negative modifiers for perception and coordination-related tasks. Helmets typically have a probability of not protecting (the open face, the eye slot, uncovered neck)."* And: *"Plate armor is heavy and cumbersome and expensive — by the 18th century a lot of plate armor only protected the chest front, or even just the neck and upper chest. Everything is a tradeoff."*
+
+This is the counterweight the previous two decisions needed. Absorb makes good armour genuinely able to make blows not have happened; this prices that, and the price is paid in **four separate currencies**, not one:
+
+| Currency | What it costs |
+|---|---|
+| **Coverage** | the hit-location roll finds whatever the armour isn't over |
+| **Weight** | the suit is part of the magnitude of every exhaustion check made in it |
+| **Penalty** | −CO is finesse; **−PC is awareness**, which is somebody else's ambush |
+| **Price** | and a Technology Level that can make *and repair* it |
+
+**The helmet's Gap.** A helmet you can see and breathe in has a hole in it, so a helmet carries **Gn**: on a head hit, roll D10, and on **n or less the helmet was not there** — only the skull's natural 1. Open-faced `G5`, visored `G2`, sealed `G0`. This is cheap at the table (one D10, on the 10% of hits that land on the head, only against a helmeted target) and it uses an idiom the hit-location table already had.
+
+**And it is the random twin of the called shot**, which is why it adds a probability without adding a subsystem: paying the up-front ease-factor penalty to aim for the eye slot **buys** the gap instead of hoping for it, and then you don't roll — the success already is the called hit, per *never penalize the same choice twice*. One rule, two prices: hope, or pay.
+
+**Coverage got data, because history is the argument.** Nobody in the eighteenth century decided to be worse protected. They decided that twenty kilos to cover the places you are unlikely to be shot was a bad deal, and bought the three hits in ten that matter most for a third of the money and none of the penalty. So the table gained **Breastplate / Cuirass** (`M4 I1 A2`, chest only, 7 kg, no penalty, 400) with *three-quarter* and *gorget* as its adjectives, and a **Helmet** row (`M3 A1 G5`, 2 kg, −1 PC, 100) — which is also the best value in the book, because the head is the worst place to be hit and nobody is born with a skull worth `M4`. Full plate's own description now owns its cost and points at the cuirass as where it ends up.
+
+**Why this matters beyond realism.** It turns "wear the best armour you can afford" into an actual decision — the thing the melee page already complains D&D lost, where position is abstracted away and the rational play is to encase yourself and stand still. Protection you can only buy by trading away awareness, stamina, dexterity and coverage is a choice; protection you buy with money alone is a shopping list. And it hands the GM four levers against an armoured opponent that aren't damage, which is exactly where the previous decision said the fight has to be won.
+
 ## Decided: AP becomes a family of quirks (2026-08, Tonio)
 
 > **Applied 2026-08.** AP is gone from the attribute block; the replacement formulas landed (`Charm (IN+PC)/2`, `Confidence IN`, `Perform (IN+PC)/2`, all with BEF cut 5 → 3). The convergence this section worried about *did* happen and was accepted deliberately: Charm and Perform share a formula and are separated by what they move — Charm moves how people feel, Confidence moves what they will do. The Appearance quirk family that has to carry the specificity is **not yet written** (board #2904).

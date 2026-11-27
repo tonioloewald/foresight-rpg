@@ -95,7 +95,7 @@ By default roll **D10** for where a hit lands:
 | 5–7 | Chest | 1-in-10 chance of an extra point |
 | 8 | Left arm | fail the Pain Resistance roll and you **drop whatever that hand held** |
 | 9 | Right arm | fail the Pain Resistance roll and you **drop whatever that hand held** |
-| 10 | Head | **1 natural armor** (the skull), but **piercing damage is +1** |
+| 10 | Head | **1 natural armor** (the skull), but **piercing damage is +1** — and if they're wearing a helmet, roll its **Gap** (below) |
 
 The distribution is the body as a target: the chest is the biggest thing pointing at you, the head the smallest and the worst place to be hit. Or **call your shot** — the head, a weapon hand, the sliver of someone showing past cover — for an **up-front EF penalty** for the smaller target. The same penalty covers shooting through cover: you pay in ease factor for precision, and a success *is* the called hit (don't charge it twice).
 
@@ -117,6 +117,7 @@ The dividing line is **velocity, not shape**. A mace is **M** and so is an arrow
 |---|---|---|
 | **nP — Piercing** (weapon) | the armor's **Protection** | take **n** off the Protection rating before it comes off the DC |
 | **A — Absorbing** (armor) | the **damage**, after the formula | step the result down **A** notches |
+| **Gn — Gap** (helmets) | nothing at all, **n** times in 10 | on a **head** hit roll D10: **n or less and the helmet simply wasn't there** |
 
 ### Order of operations — and the outcome ladder
 
@@ -131,6 +132,14 @@ So **A1** turns two wound levels into one, one level into a bare stun check, and
 **`nP` is no help against `A`.** Piercing beats the Protection column and nothing else, so the two defences want two different answers: **Protection is beaten by penetration, Absorb only by the size of the blow.** A sword on mail is a stun check; a military pick on the same mail draws blood, because mail's strength is Protection. Against a hard shell there is no trick — a sniper round gets through Combat Armor where a 7.62 doesn't, by being bigger.
 
 Absorb is therefore the signature of a **rigid** shell, and the soft armors have none at all: padding and leather *turn* a blow, mail and plate and rifle plates *refuse part of it*.
+
+### Armor only protects what it covers — and a helmet has a hole in it
+
+Every piece lists its **coverage**, and the hit-location roll decides whether the armor was even in the way: a ballistic vest is nothing to a leg hit, and a gambeson's sleeves end at the wrist. That is most of why a called shot is worth its ease-factor penalty.
+
+Helmets are the special case, because **a helmet you can see and breathe in has a hole in it** — the open face, the eye slot, the gap above the gorget. So a helmet carries a **Gap**: on a head hit, roll D10, and on **n or less the helmet isn't there at all** (the skull's own 1 point still is). An open-faced helm is `G5`, a visored one `G2`, a sealed suit `G0`.
+
+**The gap roll is the random twin of the called shot.** Pay the up-front ease-factor penalty to aim for the eye slot and you *buy* the gap instead of hoping for it — and then you don't roll for it, because the success already is the called hit. One rule, two prices: hope, or pay.
 
 *Designer's Note: the three letters are **physics**, not era and not edge. A draft of the equipment tables read M as "cutting" and I as "crushing", which filed a mace in with bullets and a 9mm in with a flamethrower — and made mail carry two numbers to say one thing. The 1986 rules had it right (no suffix = melee, **I** = impact and stun, **B** = beam) and this is a restoration. Whether a weapon **defeats** armor rather than overwhelming it is the other axis, and always was: that is **nP**, not a letter.*
 
