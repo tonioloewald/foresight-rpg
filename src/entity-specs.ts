@@ -98,6 +98,7 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
     columns: [
       { prop: 'name', name: 'Armor', width: 170 },
       { prop: 'protection', name: 'Protection', width: 130, align: 'center' },
+      { prop: 'absorb', name: 'A', width: 48, align: 'center' },
       { prop: 'penalty', name: 'Penalty', width: 100, align: 'center' },
       { prop: 'tl', name: 'TL', width: 48, align: 'center' },
       { prop: 'price', name: 'Price', width: 72, align: 'center' },

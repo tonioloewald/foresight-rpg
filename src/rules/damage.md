@@ -40,7 +40,7 @@ Read the hit's **Yield** off its QR (QR1 100%, QR2 80%, QR3 50%, QR4 25% — see
 
 **And below the floor there is nothing at all** — no wound, no roll, nothing owed even in narration. The quarter-level line is not a rounding artefact, it is **the threshold of a blow that registers**, and it sits where it does because *that is the blow that would stun an ordinary person*. Under it, whatever the dice said, nothing happened that the next few seconds will remember. The scale has two thresholds and no third: **registers**, and **leaves a mark**.
 
-In practice the no-effect band is something **armor produces**. Any weapon of DC 2 or more clears the floor on its own even at a scraping QR4 (a QR4 does `0.25 × DC × ½`, which reaches ¼ at DC 2), so a blow that fails to register is almost always one whose DC the target's Protection has already eaten. A padded gambeson taking `M1` off an ordinary person's `+0 M` fist is precisely this: the punch lands, and nothing about it registers. That is the arms race paying off where it should — not in surviving the blow, but in the blow never arriving.
+In practice the no-effect band is something **armor produces**. Any weapon of DC 2 or more clears the floor on its own even at a scraping QR4 (a QR4 does `0.25 × DC × ½`, which reaches ¼ at DC 2), so a blow that fails to register is almost always one the target's armor has already dealt with — either by eating its DC with **Protection**, or by stepping the result off the bottom of the ladder with **Absorb** (below). A padded gambeson taking `M1` off an ordinary person's `+0 M` fist is precisely this: the punch lands, and nothing about it registers. That is the arms race paying off where it should — not in surviving the blow, but in the blow never arriving.
 
 *A 9mm (DC 8): a solid QR3 hit does 0.5 × 8 × ½ = **2** (medium); a brilliant QR1 does **4** (incapacitated); a scraping QR4 does 0.25 × 8 × ½ = 1.0 → **1** (light) plus a stun check. A 7.62 rifle (DC 11) center-mass at QR1 does 5.5 → **5 (dying)**. A bare fist (DC 4) at QR4 does 0.5 raw → no wound, but a stun check — the gut punch.*
 
@@ -111,12 +111,26 @@ What the damage *is* decides how armor and bodies answer it:
 
 The dividing line is **velocity, not shape**. A mace is **M** and so is an arrow: both arrive slowly carrying a lot of mass. A 9mm and a shell fragment are **I** whatever they are made of. A **stun (S)** weapon reads the target's **I** protection.
 
-**Armor** carries a **Protection** rating *per type* (a DC of defence); subtract it from the incoming DC before the damage formula. **A type the armor has no number for gets no protection at all** — a gambeson does nothing against a rifle. A DC reduced **to zero or below is harmless**. Two annotations settle the arms race at the margin:
+**Armor** carries a **Protection** rating *per type* (a DC of defence); subtract it from the incoming DC before the damage formula. **A type the armor has no number for gets no protection at all** — a gambeson does nothing against a rifle. A DC reduced **to zero or below is harmless**. Two annotations settle the arms race, and they act at **opposite ends of the calculation**:
 
-| Mark | Effect |
-|---|---|
-| **nP — Piercing** (weapon) | ignores **n** points of the target's Protection |
-| **A — Absorbing** (armor) | stops one point of *damage* that still gets through |
+| Mark | Acts on | Effect |
+|---|---|---|
+| **nP — Piercing** (weapon) | the armor's **Protection** | take **n** off the Protection rating before it comes off the DC |
+| **A — Absorbing** (armor) | the **damage**, after the formula | step the result down **A** notches |
+
+### Order of operations — and the outcome ladder
+
+> **Protection (less any `nP`) off the DC → `Yield × DC × ½` → down **A** notches.**
+
+Protection and Absorb are not two sizes of one thing. Protection is a *DC of defence*, and because the formula multiplies what's left by the Yield, **a good roll dilutes it** — a brilliant hit against heavy Protection still does something. **Absorb comes off the result**, so the roll can't touch it, and that makes it by far the stronger of the two. The ladder it steps down has one rung below a wound, the one the quarter-level floor put there:
+
+> … **3 levels** → **2 levels** → **1 level** → **a stun check only** → **nothing at all**
+
+So **A1** turns two wound levels into one, one level into a bare stun check, and a stun check into nothing. And since **a QR4 does a quarter of the damage, and half of all successes are QR4**, any Absorb at all means *half the hits that land stop counting*. That is the real job of armor: not to shrink your wounds, but to decide which blows happened.
+
+**`nP` is no help against `A`.** Piercing beats the Protection column and nothing else, so the two defences want two different answers: **Protection is beaten by penetration, Absorb only by the size of the blow.** A sword on mail is a stun check; a military pick on the same mail draws blood, because mail's strength is Protection. Against a hard shell there is no trick — a sniper round gets through Combat Armor where a 7.62 doesn't, by being bigger.
+
+Absorb is therefore the signature of a **rigid** shell, and the soft armors have none at all: padding and leather *turn* a blow, mail and plate and rifle plates *refuse part of it*.
 
 *Designer's Note: the three letters are **physics**, not era and not edge. A draft of the equipment tables read M as "cutting" and I as "crushing", which filed a mace in with bullets and a 9mm in with a flamethrower — and made mail carry two numbers to say one thing. The 1986 rules had it right (no suffix = melee, **I** = impact and stun, **B** = beam) and this is a restoration. Whether a weapon **defeats** armor rather than overwhelming it is the other axis, and always was: that is **nP**, not a letter.*
 

@@ -22,7 +22,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css?v=d93e523f0755" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=ad6cfd693896" data-tosi-doc-system />
   <title>Damage — ForeSight RPG</title>
   <meta name="description" content="One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s Quality Rating, the weapon&#39;s Damage Class, and the target&#39;s armor decide how badly…" />
   <link rel="canonical" href="https://foresight-rpg.com/damage/" />
@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=c42b58893e5e" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=6a1e5dd51c88" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="damage.md">
 <h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
@@ -103,7 +103,7 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 <p>Read the hit&#39;s <strong>Yield</strong> off its QR (QR1 100%, QR2 80%, QR3 50%, QR4 25% — see The One Rule), multiply by half the DC, and round down for the <strong>wound levels</strong> dealt.</p>
 <p><strong>A hit that rounds to no wound is not a scratch.</strong> It is the gut punch, the rifle butt, the elbow square on the funny bone — a blow that landed properly and happened to break nothing, and anyone who has taken one knows exactly how much of the next few seconds it owns. That is what the quarter-level floor is for: real weapons are dangerous and ForeSight doesn&#39;t pretend otherwise, so <strong>no lasting injury and no consequence are different things</strong>.</p>
 <p><strong>And below the floor there is nothing at all</strong> — no wound, no roll, nothing owed even in narration. The quarter-level line is not a rounding artefact, it is <strong>the threshold of a blow that registers</strong>, and it sits where it does because <em>that is the blow that would stun an ordinary person</em>. Under it, whatever the dice said, nothing happened that the next few seconds will remember. The scale has two thresholds and no third: <strong>registers</strong>, and <strong>leaves a mark</strong>.</p>
-<p>In practice the no-effect band is something <strong>armor produces</strong>. Any weapon of DC 2 or more clears the floor on its own even at a scraping QR4 (a QR4 does <code>0.25 × DC × ½</code>, which reaches ¼ at DC 2), so a blow that fails to register is almost always one whose DC the target&#39;s Protection has already eaten. A padded gambeson taking <code>M1</code> off an ordinary person&#39;s <code>+0 M</code> fist is precisely this: the punch lands, and nothing about it registers. That is the arms race paying off where it should — not in surviving the blow, but in the blow never arriving.</p>
+<p>In practice the no-effect band is something <strong>armor produces</strong>. Any weapon of DC 2 or more clears the floor on its own even at a scraping QR4 (a QR4 does <code>0.25 × DC × ½</code>, which reaches ¼ at DC 2), so a blow that fails to register is almost always one the target&#39;s armor has already dealt with — either by eating its DC with <strong>Protection</strong>, or by stepping the result off the bottom of the ladder with <strong>Absorb</strong> (below). A padded gambeson taking <code>M1</code> off an ordinary person&#39;s <code>+0 M</code> fist is precisely this: the punch lands, and nothing about it registers. That is the arms race paying off where it should — not in surviving the blow, but in the blow never arriving.</p>
 <p>*A 9mm (DC 8): a solid QR3 hit does 0.5 × 8 × ½ = <strong>2</strong> (medium); a brilliant QR1 does <strong>4</strong> (incapacitated); a scraping QR4 does 0.25 × 8 × ½ = 1.0 → <strong>1</strong> (light) plus a stun check. A 7.62 rifle (DC 11) center-mass at QR1 does 5.5 → <strong>5 (dying)</strong>. A bare fist (DC 4) at QR4 does 0.5 raw → no wound, but a stun check — the gut punch.*</p>
 <h2 id="wounds--the-06-track">Wounds — the 0–6 track</h2>
 <p>Injury is a single number, and it is <strong>−(level) to everything you do</strong> — pain and blood loss don&#39;t care what you&#39;re attempting:</p>
@@ -265,23 +265,37 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 </tr>
 </tbody></table>
 <p>The dividing line is <strong>velocity, not shape</strong>. A mace is <strong>M</strong> and so is an arrow: both arrive slowly carrying a lot of mass. A 9mm and a shell fragment are <strong>I</strong> whatever they are made of. A <strong>stun (S)</strong> weapon reads the target&#39;s <strong>I</strong> protection.</p>
-<p><strong>Armor</strong> carries a <strong>Protection</strong> rating <em>per type</em> (a DC of defence); subtract it from the incoming DC before the damage formula. <strong>A type the armor has no number for gets no protection at all</strong> — a gambeson does nothing against a rifle. A DC reduced <strong>to zero or below is harmless</strong>. Two annotations settle the arms race at the margin:</p>
+<p><strong>Armor</strong> carries a <strong>Protection</strong> rating <em>per type</em> (a DC of defence); subtract it from the incoming DC before the damage formula. <strong>A type the armor has no number for gets no protection at all</strong> — a gambeson does nothing against a rifle. A DC reduced <strong>to zero or below is harmless</strong>. Two annotations settle the arms race, and they act at <strong>opposite ends of the calculation</strong>:</p>
 <table>
 <thead>
 <tr>
 <th>Mark</th>
+<th>Acts on</th>
 <th>Effect</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><strong>nP — Piercing</strong> (weapon)</td>
-<td>ignores <strong>n</strong> points of the target&#39;s Protection</td>
+<td>the armor&#39;s <strong>Protection</strong></td>
+<td>take <strong>n</strong> off the Protection rating before it comes off the DC</td>
 </tr>
 <tr>
 <td><strong>A — Absorbing</strong> (armor)</td>
-<td>stops one point of <em>damage</em> that still gets through</td>
+<td>the <strong>damage</strong>, after the formula</td>
+<td>step the result down <strong>A</strong> notches</td>
 </tr>
 </tbody></table>
+<h3 id="order-of-operations--and-the-outcome-ladder">Order of operations — and the outcome ladder</h3>
+<blockquote>
+<p><strong>Protection (less any <code>nP</code>) off the DC → <code>Yield × DC × ½</code> → down <strong>A</strong> notches.</strong></p>
+</blockquote>
+<p>Protection and Absorb are not two sizes of one thing. Protection is a <em>DC of defence</em>, and because the formula multiplies what&#39;s left by the Yield, <strong>a good roll dilutes it</strong> — a brilliant hit against heavy Protection still does something. <strong>Absorb comes off the result</strong>, so the roll can&#39;t touch it, and that makes it by far the stronger of the two. The ladder it steps down has one rung below a wound, the one the quarter-level floor put there:</p>
+<blockquote>
+<p>… <strong>3 levels</strong> → <strong>2 levels</strong> → <strong>1 level</strong> → <strong>a stun check only</strong> → <strong>nothing at all</strong></p>
+</blockquote>
+<p>So <strong>A1</strong> turns two wound levels into one, one level into a bare stun check, and a stun check into nothing. And since <strong>a QR4 does a quarter of the damage, and half of all successes are QR4</strong>, any Absorb at all means <em>half the hits that land stop counting</em>. That is the real job of armor: not to shrink your wounds, but to decide which blows happened.</p>
+<p><strong><code>nP</code> is no help against <code>A</code>.</strong> Piercing beats the Protection column and nothing else, so the two defences want two different answers: <strong>Protection is beaten by penetration, Absorb only by the size of the blow.</strong> A sword on mail is a stun check; a military pick on the same mail draws blood, because mail&#39;s strength is Protection. Against a hard shell there is no trick — a sniper round gets through Combat Armor where a 7.62 doesn&#39;t, by being bigger.</p>
+<p>Absorb is therefore the signature of a <strong>rigid</strong> shell, and the soft armors have none at all: padding and leather <em>turn</em> a blow, mail and plate and rifle plates <em>refuse part of it</em>.</p>
 <p><em>Designer&#39;s Note: the three letters are <strong>physics</strong>, not era and not edge. A draft of the equipment tables read M as &quot;cutting&quot; and I as &quot;crushing&quot;, which filed a mace in with bullets and a 9mm in with a flamethrower — and made mail carry two numbers to say one thing. The 1986 rules had it right (no suffix = melee, <strong>I</strong> = impact and stun, <strong>B</strong> = beam) and this is a restoration. Whether a weapon <strong>defeats</strong> armor rather than overwhelming it is the other axis, and always was: that is <strong>nP</strong>, not a letter.</em></p>
 <p><em>Designer&#39;s Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.</em></p>
 <h2 id="scale">Scale</h2>
@@ -423,6 +437,6 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate-pkg00mgy.js"></script>
+  <script type="module" src="../hydrate-mf09kt3x.js"></script>
 </body>
 </html>

@@ -1217,6 +1217,36 @@ Below an attribute of 12 the two schemes are *identical* in penalty absorption, 
 
 **Also settled by the same stroke:** `nP` always carries a number (a bare `P` had no value to subtract), and a type an armour has **no number for is no protection at all**, which is what makes a gambeson useless against a rifle without a rule saying so.
 
+## Decided: Protection comes off the DC, Absorb comes off the damage (2026-11, Tonio)
+
+**The call.** *"nP reduces the number value of armor protection, A absorbs actual damage (A is VERY strong protection)."* And, precisely: *"A turns 2 wound levels into 1, 1 into a PR check, and a PR check to nothing."*
+
+So the order of operations is settled end to end:
+
+> **Protection for the type, less the weapon's `nP`, comes off the DC → `Yield × DC × ½` → the result steps down `A` notches.**
+
+And the ladder it steps down is the one the quarter-level floor had already built, with its extra rung below a wound: *… 3 levels → 2 levels → 1 level → **a stun check only** → **nothing at all***.
+
+**What was wrong.** Absorb had three live definitions and no two agreed. `damage.md` made it a **flag** worth a flat *one point of damage*; `armor.md` made it a **variable** that soaked *piercing attacks specifically*; `armor.json` carried **1–5** with no unit and no trigger. The Ballistic Vest's own description — *"Absorbs (A); doesn't stop penetrators (P)"* — contradicted `armor.md` outright, which had A as precisely the answer to P. And the unit was load-bearing rather than cosmetic: since `damage = Yield × DC × ½`, a point of DC is worth at most half a wound level and a point of *damage* is a whole one, so the same `absorb: 5` meant two things a factor of two or more apart.
+
+**Why this version is right.** It gives Absorb a job no other number does. Protection is a *DC of defence*, and the formula multiplies what survives it by the Yield — so **Protection is diluted by a good roll**, which is why a brilliant hit against heavy Protection still does something. Absorb is subtracted from the *result*, so the roll cannot touch it, and neither can `nP`. The two defences therefore have two different counters, which is what makes the arms race a real one: **Protection is beaten by penetration; Absorb is beaten only by the size of the blow.** A sword on mail is a stun check, a military pick on the same mail draws blood — and nothing tricks a hard shell, a sniper round simply gets through Combat Armour where a 7.62 does not.
+
+**What it does to the game, stated plainly.** Since a QR4 does a quarter of the damage and **half of all successes are QR4**, any Absorb at all voids a marginal hit. That is the headline, and it is a better description of armour than the old one: *armour's job is not to shrink your wounds, it is to decide which blows happened.* Which is also why Absorb is the mark of a **rigid** shell — padding and leather *turn* a blow, plate and rifle plates *refuse part of it*.
+
+**Consequence: the `absorb` column had to be recalibrated, and was.** The old 1–5 values were set when A meant a flag worth one point, so reading them as notches made plate invulnerable to every melee weapon in the book at every QR — a bug produced by reinterpreting old numbers, not by the new rule. The column is now **soft armour 0, rigid armour 1+**: Padded 0, Leather 0, Mail 1, Plate 2, Ballistic Vest 1, Tactical 2, Riot Gear 2, Combat 3, Powered 4. What that buys, at QR1 / QR3 / QR4 (`—` = nothing, `PR` = a stun check and no wound):
+
+| | Mail `M3 A1` | Plate `M4 I1 A2` | Vest `M2 I3 A1` | Tactical `M3 I4 A2` | Combat `M4 I4 B5 A3` |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| Sword, ST 15 | 1 / PR / — | PR / — / — | 2 / PR / — | PR / — / — | — / — / — |
+| War pick, ST 15 `+3 M 3P` | 2 / PR / — | 1 / — / — | 2 / PR / — | 1 / — / — | PR / — / — |
+| 9mm `8 I` | 3 / 1 / PR | 1 / — / — | 1 / PR / — | PR / — / — | — / — / — |
+| 7.62 `11 I` | 4 / 1 / PR | 3 / PR / — | 3 / 1 / PR | 1 / — / — | PR / — / — |
+| Sniper `12 I 3P` | 5 / 2 / PR | 4 / 1 / — | 5 / 2 / PR | 3 / PR / — | 2 / — / — |
+
+Each row reads the way the thing is supposed to: plate is not killed with a sword but is killed with a crossbow or a pick, the vest is the difference between a wound and a funeral against a pistol and nothing much against a rifle, tactical plates do for a 7.62 what the vest does for a 9mm, and the pick — which beats Protection and not Absorb — is worth carrying exactly where armour is thick rather than rigid.
+
+**Watch it at the table (board #4299).** The two numbers to distrust are **Plate's A2** (it is what makes a knight nearly sword-proof, which is historically right and may still play badly in a fantasy game) and **Riot Gear's A2** (very nearly immune to the whole melee end, by design). Both are a one-point change if the table says so; the rule above is not.
+
 ## Decided: AP becomes a family of quirks (2026-08, Tonio)
 
 > **Applied 2026-08.** AP is gone from the attribute block; the replacement formulas landed (`Charm (IN+PC)/2`, `Confidence IN`, `Perform (IN+PC)/2`, all with BEF cut 5 → 3). The convergence this section worried about *did* happen and was accepted deliberately: Charm and Perform share a formula and are separated by what they move — Charm moves how people feel, Confidence moves what they will do. The Appearance quirk family that has to carry the specificity is **not yet written** (board #2904).
