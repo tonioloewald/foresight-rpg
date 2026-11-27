@@ -117,7 +117,7 @@ The dividing line is **velocity, not shape**. A mace is **M** and so is an arrow
 |---|---|---|
 | **nP — Piercing** (weapon) | the armor's **Protection** | take **n** off the Protection rating before it comes off the DC |
 | **A — Absorbing** (armor) | the **damage**, after the formula | step the result down **A** notches |
-| **Gn — Gap** (helmets) | nothing at all, **n** times in 10 | on a **head** hit roll D10: **n or less and the helmet simply wasn't there** |
+| **Gn — Gap** (partial pieces) | nothing at all, **n** times in 10 | on a hit to a location it covers, roll D10: **n or less and the piece wasn't in the way** |
 
 ### Order of operations — and the outcome ladder
 
@@ -133,11 +133,11 @@ So **A1** turns two wound levels into one, one level into a bare stun check, and
 
 Absorb is therefore the signature of a **rigid** shell, and the soft armors have none at all: padding and leather *turn* a blow, mail and plate and rifle plates *refuse part of it*.
 
-### Armor only protects what it covers — and a helmet has a hole in it
+### Armor only protects what it covers — and some of it has a hole in it
 
 Every piece lists its **coverage**, and the hit-location roll decides whether the armor was even in the way: a ballistic vest is nothing to a leg hit, and a gambeson's sleeves end at the wrist. That is most of why a called shot is worth its ease-factor penalty.
 
-Helmets are the special case, because **a helmet you can see and breathe in has a hole in it** — the open face, the eye slot, the gap above the gorget. So a helmet carries a **Gap**: on a head hit, roll D10, and on **n or less the helmet isn't there at all** (the skull's own 1 point still is). An open-faced helm is `G5`, a visored one `G2`, a sealed suit `G0`.
+But coverage isn't all-or-nothing within a location either, and that is what **Gap** is for. **A helmet you can see and breathe in has a hole in it** — the open face, the eye slot, the gap above the gorget — and greaves are not thighs, bracers are not shoulders, and a shield is only where you are pointing it. So a partial piece carries **Gn**: on a hit to a location it covers, roll D10, and on **n or less the piece wasn't in the way** (natural armor, like the skull's 1 point, still is). An open-faced helm is `G5`, greaves and bracers `G4`, a large shield `G4`, a visored helm `G2`, a sealed suit `G0`.
 
 **The gap roll is the random twin of the called shot.** Pay the up-front ease-factor penalty to aim for the eye slot and you *buy* the gap instead of hoping for it — and then you don't roll for it, because the success already is the called hit. One rule, two prices: hope, or pay.
 

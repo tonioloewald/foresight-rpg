@@ -47,7 +47,7 @@ A defence doesn't just win or lose; it can **eat part** of a blow. A defence **e
 
 ## Parry, and the counter
 
-A **parry** meets steel with steel (or shield, or forearm), and **the weapon's own Parry bonus applies** — a staff is **+2**, a sword or greatsword **+1**, a mace, knife or spear nothing, an axe **−1** because it swings past the line. A shield is another **+1** on top. This is the column a sword's price buys: in the damage column it is barely ahead of a club. A *critical* parry (a QR well over the attack's) lets you **counter** on the same beat; an *overwhelming* one leaves the attacker off-balance — a chance to **disarm** or **trade places**. A parry can also shade the hit rather than stop it: a strong-but-not-clean one may **shift the location roll** a step or **shave a point of DC** instead of eating a whole QR.
+A **parry** meets steel with steel (or shield, or forearm), and **the weapon's own Parry bonus applies** — a staff is **+2**, a sword or greatsword **+1**, a mace, knife or spear nothing, an axe **−1** because it swings past the line. A shield is another **+1** on top — and it is also passive cover over the trunk, but only *as positioned*, so flanking a shielded opponent takes away half his defence at once (see [Armor](/armor/)). This is the column a sword's price buys: in the damage column it is barely ahead of a club. A *critical* parry (a QR well over the attack's) lets you **counter** on the same beat; an *overwhelming* one leaves the attacker off-balance — a chance to **disarm** or **trade places**. A parry can also shade the hit rather than stop it: a strong-but-not-clean one may **shift the location roll** a step or **shave a point of DC** instead of eating a whole QR.
 
 ## Dodge — movie reality, or actual reality
 

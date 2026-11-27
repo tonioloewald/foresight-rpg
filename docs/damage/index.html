@@ -22,7 +22,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css?v=7ae0fdb1f974" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=3d2bc6347508" data-tosi-doc-system />
   <title>Damage — ForeSight RPG</title>
   <meta name="description" content="One-pager. A hit is resolved by the One Rule like anything else; the hit&#39;s Quality Rating, the weapon&#39;s Damage Class, and the target&#39;s armor decide how badly…" />
   <link rel="canonical" href="https://foresight-rpg.com/damage/" />
@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=1ba9d8bf2eac" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=ab3277256f99" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="damage.md">
 <h1 id="damage">Damage</h1>
 <!--{ "parent": "conflict", "order": 6 }-->
@@ -285,9 +285,9 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 <td>step the result down <strong>A</strong> notches</td>
 </tr>
 <tr>
-<td><strong>Gn — Gap</strong> (helmets)</td>
+<td><strong>Gn — Gap</strong> (partial pieces)</td>
 <td>nothing at all, <strong>n</strong> times in 10</td>
-<td>on a <strong>head</strong> hit roll D10: <strong>n or less and the helmet simply wasn&#39;t there</strong></td>
+<td>on a hit to a location it covers, roll D10: <strong>n or less and the piece wasn&#39;t in the way</strong></td>
 </tr>
 </tbody></table>
 <h3 id="order-of-operations--and-the-outcome-ladder">Order of operations — and the outcome ladder</h3>
@@ -301,9 +301,9 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
 <p>So <strong>A1</strong> turns two wound levels into one, one level into a bare stun check, and a stun check into nothing. And since <strong>a QR4 does a quarter of the damage, and half of all successes are QR4</strong>, any Absorb at all means <em>half the hits that land stop counting</em>. That is the real job of armor: not to shrink your wounds, but to decide which blows happened.</p>
 <p><strong><code>nP</code> is no help against <code>A</code>.</strong> Piercing beats the Protection column and nothing else, so the two defences want two different answers: <strong>Protection is beaten by penetration, Absorb only by the size of the blow.</strong> A sword on mail is a stun check; a military pick on the same mail draws blood, because mail&#39;s strength is Protection. Against a hard shell there is no trick — a sniper round gets through Combat Armor where a 7.62 doesn&#39;t, by being bigger.</p>
 <p>Absorb is therefore the signature of a <strong>rigid</strong> shell, and the soft armors have none at all: padding and leather <em>turn</em> a blow, mail and plate and rifle plates <em>refuse part of it</em>.</p>
-<h3 id="armor-only-protects-what-it-covers--and-a-helmet-has-a-hole-in-it">Armor only protects what it covers — and a helmet has a hole in it</h3>
+<h3 id="armor-only-protects-what-it-covers--and-some-of-it-has-a-hole-in-it">Armor only protects what it covers — and some of it has a hole in it</h3>
 <p>Every piece lists its <strong>coverage</strong>, and the hit-location roll decides whether the armor was even in the way: a ballistic vest is nothing to a leg hit, and a gambeson&#39;s sleeves end at the wrist. That is most of why a called shot is worth its ease-factor penalty.</p>
-<p>Helmets are the special case, because <strong>a helmet you can see and breathe in has a hole in it</strong> — the open face, the eye slot, the gap above the gorget. So a helmet carries a <strong>Gap</strong>: on a head hit, roll D10, and on <strong>n or less the helmet isn&#39;t there at all</strong> (the skull&#39;s own 1 point still is). An open-faced helm is <code>G5</code>, a visored one <code>G2</code>, a sealed suit <code>G0</code>.</p>
+<p>But coverage isn&#39;t all-or-nothing within a location either, and that is what <strong>Gap</strong> is for. <strong>A helmet you can see and breathe in has a hole in it</strong> — the open face, the eye slot, the gap above the gorget — and greaves are not thighs, bracers are not shoulders, and a shield is only where you are pointing it. So a partial piece carries <strong>Gn</strong>: on a hit to a location it covers, roll D10, and on <strong>n or less the piece wasn&#39;t in the way</strong> (natural armor, like the skull&#39;s 1 point, still is). An open-faced helm is <code>G5</code>, greaves and bracers <code>G4</code>, a large shield <code>G4</code>, a visored helm <code>G2</code>, a sealed suit <code>G0</code>.</p>
 <p><strong>The gap roll is the random twin of the called shot.</strong> Pay the up-front ease-factor penalty to aim for the eye slot and you <em>buy</em> the gap instead of hoping for it — and then you don&#39;t roll for it, because the success already is the called hit. One rule, two prices: hope, or pay.</p>
 <p><em>Designer&#39;s Note: the three letters are <strong>physics</strong>, not era and not edge. A draft of the equipment tables read M as &quot;cutting&quot; and I as &quot;crushing&quot;, which filed a mace in with bullets and a 9mm in with a flamethrower — and made mail carry two numbers to say one thing. The 1986 rules had it right (no suffix = melee, <strong>I</strong> = impact and stun, <strong>B</strong> = beam) and this is a restoration. Whether a weapon <strong>defeats</strong> armor rather than overwhelming it is the other axis, and always was: that is <strong>nP</strong>, not a letter.</em></p>
 <p><em>Designer&#39;s Note: in a straight fight, armor has the edge. ForeSight carries a small, deliberate bias against killing player characters too easily — enough that armor is plainly worth wearing and one unlucky roll rarely ends a character outright, without making anyone bulletproof.</em></p>
@@ -446,6 +446,6 @@ And <strong>any hit whose raw damage is ≥ ¼ forces a stun check</strong> (bel
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate-wtmp72b5.js"></script>
+  <script type="module" src="../hydrate-6bf7xbjb.js"></script>
 </body>
 </html>

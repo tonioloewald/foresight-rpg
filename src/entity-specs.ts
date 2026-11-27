@@ -110,6 +110,7 @@ export const ENTITY_SPECS: Record<string, EntitySpec> = {
       { label: 'Protection', prop: 'protection' },
       { label: 'Absorb', prop: 'absorb' },
       { label: 'Gap', prop: 'gap' },
+      { label: 'Parry', prop: 'parry' },
       { label: 'Penalty', prop: 'penalty' },
       { label: 'Weight', prop: 'weight' },
       { label: 'TL', prop: 'tl' },
