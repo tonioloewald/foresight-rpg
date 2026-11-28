@@ -71,11 +71,78 @@ const CSS = `
 
   /* ── keep blocks whole ─────────────────────────────────────────────── */
   h1, h2, h3, h4 { break-after: avoid-page; page-break-after: avoid; }
-  table, figure, .fs-panel, .ev-card { break-inside: avoid; page-break-inside: avoid; }
+  /* NOT table or .fs-panel: the skills table is taller than a page, and a
+     block that cannot fit gets clipped rather than kept whole. Rows are the
+     right granularity, and a repeating header makes the break readable. */
+  figure, .ev-card { break-inside: avoid; page-break-inside: avoid; }
   tr, li { break-inside: avoid; page-break-inside: avoid; }
   thead { display: table-header-group; }
 
   /* ── the character sheet: the character, not the editor ────────────── */
+
+  /* Concept is prose and wants the page, not a 254px column. tosi-field renders
+     as an inline-flex <label>, so widening the textarea alone does nothing —
+     the label and its inner wrappers have to give too. */
+  foresight-character-sheet label:has(textarea) {
+    display: flex !important;
+    width: 100% !important;
+    align-items: baseline;
+  }
+  foresight-character-sheet label:has(textarea) > span,
+  foresight-character-sheet label:has(textarea) tosi-slot {
+    display: block !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
+  }
+  foresight-character-sheet textarea {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* The slot counter ("4 / 4 slots used") is budget feedback while building. */
+  foresight-character-sheet [part="slots"],
+  foresight-character-sheet [part="pools"] { display: none !important; }
+
+  /* ATTRIBUTES: only the name and the Final value matter on paper — Base,
+     Conferred, Bought and Cost are the arithmetic that got you there. The
+     markup puts Final last, so hiding the middle leaves name → value. */
+  foresight-character-sheet [part="attrs"] th:nth-child(2),
+  foresight-character-sheet [part="attrs"] td:nth-child(2),
+  foresight-character-sheet [part="attrs"] th:nth-child(3),
+  foresight-character-sheet [part="attrs"] td:nth-child(3),
+  foresight-character-sheet [part="attrs"] th:nth-child(4),
+  foresight-character-sheet [part="attrs"] td:nth-child(4),
+  foresight-character-sheet [part="attrs"] th:nth-child(5),
+  foresight-character-sheet [part="attrs"] td:nth-child(5),
+  foresight-character-sheet [part="attrs"] th:nth-child(6),
+  foresight-character-sheet [part="attrs"] td:nth-child(6) { display: none !important; }
+  foresight-character-sheet [part="attrs"] td:last-child,
+  foresight-character-sheet [part="attrs"] th:last-child { text-align: right !important; font-weight: 700; }
+
+  /* BACKGROUND FACTORS: the names ARE the character on paper. Category says
+     how the factor was filed and Grants is the build arithmetic — both are
+     generation info, not play info. Collapse to a plain list of names. */
+  foresight-character-sheet [part="bfList"] th,
+  foresight-character-sheet [part="bfList"] thead,
+  foresight-character-sheet [part="bfList"] td:nth-child(1),
+  foresight-character-sheet [part="bfList"] td:nth-child(3),
+  foresight-character-sheet [part="bfList"] td:nth-child(4),
+  foresight-character-sheet [part="bfList"] td:last-child { display: none !important; }
+  foresight-character-sheet [part="bfList"] table,
+  foresight-character-sheet [part="bfList"] tbody,
+  foresight-character-sheet [part="bfList"] tr { display: block !important; }
+  foresight-character-sheet [part="bfList"] td {
+    display: list-item !important;
+    list-style: disc inside !important;
+    border: 0 !important;
+    padding: 0 0 0 0.4em !important;
+  }
+
+  /* SKILLS: a long table — let it breathe and let it break. */
+  foresight-character-sheet [part="skills"] table { font-size: 0.82em !important; }
+  foresight-character-sheet [part="skills"] thead { display: table-header-group; }
+
   foresight-character-sheet .fs-step,
   foresight-character-sheet button,
   foresight-character-sheet select,

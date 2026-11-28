@@ -21,6 +21,11 @@ import { SITE_ROOT } from './site-root'
 import * as R from './character-rules'
 import { LocalCharacterStore, type CharacterStore } from './character-store'
 
+/** Spelled out on the sheet — "ST" means nothing to someone reading a printout. */
+const ATTR_NAME: Record<string, string> = {
+  ST: 'Strength', CO: 'Coordination', IN: 'Intelligence', PC: 'Perception', WP: 'Willpower',
+}
+
 const { div, span, label, input, button, table, thead, tbody, tr, th, td, h3, h4, p, details, summary, textarea, a, section } =
   elements
 
@@ -599,9 +604,11 @@ export class ForesightCharacterSheet extends Component {
       this.changed()
     }
     host.replaceChildren(sel)
+    // The <select> is hidden when printing, so the tier NAME has to live in the
+    // text beside it or a printed sheet shows only the description.
     const note = document.createElement('small')
     note.className = 'fs-muted'
-    note.textContent = ' ' + R.WEALTH[cur].note
+    note.textContent = ` ${R.WEALTH[cur].name} — ${R.WEALTH[cur].note}`
     host.appendChild(note)
   }
 
@@ -699,17 +706,16 @@ export class ForesightCharacterSheet extends Component {
     // attributes
     this.parts.attrs?.replaceChildren(
       table(
-        thead(tr(th('Attr'), th('Base'), th('Conferred'), th('Bought'), th('Final'), th('Cost'), th())),
+        thead(tr(th('Attr'), th('Base'), th('Conferred'), th('Bought'), th('Cost'), th(), th('Final'))),
         tbody(
           ...R.ATTRS.map((a) => {
             const conf = R.conferAttr(c, a)
             const bought = c.buyBonus[a] || 0
             return tr(
-              td(a),
+              td(a, ' ', span({ class: 'fs-muted fs-attrname' }, ATTR_NAME[a] || '')),
               td({ class: 'fs-num' }, String(c.base[a] || 0)),
               td({ class: 'fs-num' }, conf ? `+${conf}` : '—'),
               td({ class: 'fs-num' }, bought ? `+${bought}` : '—'),
-              td({ class: 'fs-num fs-score' }, String(R.finalAttr(c, a))),
               td({ class: 'fs-num fs-muted' }, String(R.attrBuySpend(c, a))),
               td(
                 button(
@@ -725,7 +731,8 @@ export class ForesightCharacterSheet extends Component {
                 ),
                 ' ',
                 button({ class: 'fs-step', onClick: () => this.bumpAttr(a, 1) }, '+')
-              )
+              ),
+              td({ class: 'fs-num fs-score' }, String(R.finalAttr(c, a)))
             )
           })
         )
@@ -772,7 +779,7 @@ export class ForesightCharacterSheet extends Component {
     const names = this.SKILLNAMES.filter((n) => R.tagMatch(c, this.SKILLS[n].tags))
     this.parts.skills?.replaceChildren(
       table(
-        thead(tr(th('Skill'), th('Formula'), th('Conf.'), th('Level'), th(), th('Score'), th('BEF'), th('Max'))),
+        thead(tr(th('Skill'), th('Formula'), th('Conf.'), th('Level'), th(), th('Max'), th('Score'), th('BEF'))),
         tbody(
           ...names.map((n) => {
             const conf = R.conferSkill(c, n)
@@ -794,9 +801,15 @@ export class ForesightCharacterSheet extends Component {
                 ' ',
                 button({ class: 'fs-step', onClick: () => this.bumpLevel(n, 1), disabled: atCap }, '+')
               ),
+              td({ class: 'fs-num fs-muted' }, String(mx)),
               td({ class: 'fs-num fs-score' }, String(R.score(c, this.SKILLS, n))),
-              td({ class: has ? 'fs-num fs-muted' : 'fs-num fs-warn' }, has ? String(bef) : `${bef} (−2)`),
-              td({ class: 'fs-num fs-muted' }, String(mx))
+              // Absent: show the EFFECTIVE ease factor, with what it would be
+              // if you had the skill in parentheses. "3 (−2)" read as though
+              // the penalty had still to be applied; 3 already is the answer.
+              td(
+                { class: has ? 'fs-num fs-muted' : 'fs-num fs-warn' },
+                has ? String(bef) : `${bef} (${Number(this.SKILLS[n].bef) || 5})`
+              )
             )
           })
         )
