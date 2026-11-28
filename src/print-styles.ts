@@ -98,6 +98,11 @@ const CSS = `
     display: block !important;
     width: 100% !important;
     height: auto !important;
+    text-align: left !important;
+  }
+  foresight-character-sheet label:has(textarea) > [part="caption"] {
+    flex: 0 0 auto !important;
+    margin-right: 0.5em !important;
   }
 
   /* THE PRINTED SHEET IS FOR PLAY; THE APP IS FOR BUILDING. So nothing that
@@ -118,16 +123,12 @@ const CSS = `
   /* ATTRIBUTES: only the name and the Final value matter on paper — Base,
      Conferred, Bought and Cost are the arithmetic that got you there. The
      markup puts Final last, so hiding the middle leaves name → value. */
-  foresight-character-sheet [part="attrs"] th:nth-child(2),
-  foresight-character-sheet [part="attrs"] td:nth-child(2),
-  foresight-character-sheet [part="attrs"] th:nth-child(3),
-  foresight-character-sheet [part="attrs"] td:nth-child(3),
-  foresight-character-sheet [part="attrs"] th:nth-child(4),
-  foresight-character-sheet [part="attrs"] td:nth-child(4),
-  foresight-character-sheet [part="attrs"] th:nth-child(5),
-  foresight-character-sheet [part="attrs"] td:nth-child(5),
-  foresight-character-sheet [part="attrs"] th:nth-child(6),
-  foresight-character-sheet [part="attrs"] td:nth-child(6) { display: none !important; }
+  /* Body cells are: abbr | name | base | conferred | bought | cost | steppers |
+     final — keep 1, 2 and the last. The HEADER has one fewer cell, because
+     "Attr" spans the two name columns, so its indices differ by one. */
+  foresight-character-sheet [part="attrs"] td:nth-child(n+3):nth-child(-n+7),
+  foresight-character-sheet [part="attrs"] th:nth-child(n+2):nth-child(-n+6) { display: none !important; }
+  foresight-character-sheet [part="attrs"] td:first-child { font-weight: 700; width: 3em; }
   foresight-character-sheet [part="attrs"] td:last-child,
   foresight-character-sheet [part="attrs"] th:last-child { text-align: right !important; font-weight: 700; }
 
@@ -150,29 +151,39 @@ const CSS = `
     padding: 0 0 0 0.4em !important;
   }
 
-  /* ATTRIBUTES and BACKGROUND FACTORS side by side: one is five lines, the
-     other is four, and stacked they waste half a page each. Inline-block
-     rather than flex because they are plain siblings with no wrapper. */
-  foresight-character-sheet section:has([part="attrs"]),
-  foresight-character-sheet section:has([part="bfList"]) {
-    display: inline-block !important;
-    width: 48% !important;
-    vertical-align: top !important;
-    margin-right: 1.5% !important;
+  /* ── the page is a two-column grid ──────────────────────────────────
+     The panels are plain siblings with no wrapper, but the component root is
+     their parent, so IT becomes the grid. Explicit placement beats floats:
+     Skills runs down the left spanning two rows, with Fields and Quirks
+     stacked beside it on the right. align-items:start stops short panels
+     stretching to their row. */
+  foresight-character-sheet {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4mm;
+    align-items: start;
   }
+  foresight-character-sheet > section:has([part="nameField"]) { grid-column: 1 / -1; }
+  foresight-character-sheet > section:has([part="attrs"])     { grid-column: 1; }
+  foresight-character-sheet > section:has([part="bfList"])    { grid-column: 2; }
+  foresight-character-sheet > section:has([part="skills"])    { grid-column: 1; grid-row: span 2; }
+  foresight-character-sheet > section:has([part="fieldList"]) { grid-column: 2; }
+  foresight-character-sheet > section:has([part="ltfList"])   { grid-column: 2; }
 
-  /* Pair up the other short panels too — Fields beside Familiarities, Condition
-     beside Gear. Each is a few lines, and stacked they cost a third of a page
-     in whitespace. This is what gets the sheet onto one side of paper. */
-  foresight-character-sheet section:has([part="fieldList"]),
-  foresight-character-sheet section:has([part="ltfList"]),
-  foresight-character-sheet section:has([part="condNote"]),
-  foresight-character-sheet section:has(textarea[placeholder]) {
-    display: inline-block !important;
-    width: 48% !important;
-    vertical-align: top !important;
-    margin-right: 1.5% !important;
+  /* Condition and Gear are EPHEMERAL — wounds, exhaustion and what you are
+     carrying all change during play. They get their own page, so page 1 is the
+     character and page 2 is the sheet you actually write on. */
+  foresight-character-sheet > section:has([part="condNote"]) {
+    grid-column: 1;
+    break-before: page !important;
+    page-break-before: always !important;
   }
+  foresight-character-sheet > section:has(textarea[placeholder]) { grid-column: 2; }
+
+  /* The element's no-JS fallback paragraph is a light-DOM child, so making the
+     root a grid turned it into a grid ITEM and dropped it in among the panels.
+     It is a message for a browser that never ran this code; it is not content. */
+  foresight-character-sheet > p { display: none !important; }
 
   /* SKILLS: Skill, Formula, Score, BEF. Conf., Level and Max are how the score
      was arrived at and what it could become — build info. Formula stays

@@ -706,13 +706,26 @@ export class ForesightCharacterSheet extends Component {
     // attributes
     this.parts.attrs?.replaceChildren(
       table(
-        thead(tr(th('Attr'), th('Base'), th('Conferred'), th('Bought'), th('Cost'), th(), th('Final'))),
+        thead(
+          tr(
+            // one heading ABOVE the two name columns (abbr | full name)
+            th({ apply: (el: HTMLElement) => el.setAttribute('colspan', '2') }, 'Attribute'),
+            th('Base'),
+            th('Conferred'),
+            th('Bought'),
+            th('Cost'),
+            th(),
+            th('Final')
+          )
+        ),
         tbody(
           ...R.ATTRS.map((a) => {
             const conf = R.conferAttr(c, a)
             const bought = c.buyBonus[a] || 0
             return tr(
-              td(a, ' ', span({ class: 'fs-muted fs-attrname' }, ATTR_NAME[a] || '')),
+              // abbreviation and name in their OWN columns, so they line up
+              td({ class: 'fs-attrabbr' }, a),
+              td({ class: 'fs-muted fs-attrname' }, ATTR_NAME[a] || ''),
               td({ class: 'fs-num' }, String(c.base[a] || 0)),
               td({ class: 'fs-num' }, conf ? `+${conf}` : '—'),
               td({ class: 'fs-num' }, bought ? `+${bought}` : '—'),
