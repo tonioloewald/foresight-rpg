@@ -20,26 +20,23 @@
       "WP": 0
     },
     "skills": {
+      "Archery": {
+        "level": 12
+      },
       "Search": {
-        "level": 5
+        "level": 3
       },
       "Stealth": {
-        "level": 4
-      },
-      "Archery": {
-        "level": 4
+        "level": 3
       },
       "Athletics": {
-        "level": 4
+        "level": 3
       },
       "Riding": {
-        "level": 4
+        "level": 3
       },
       "Melee": {
-        "level": 4
-      },
-      "Firearms": {
-        "level": 4
+        "level": 3
       }
     },
     "field": [
@@ -204,7 +201,7 @@
     },
     "shaken": false,
     "stunned": false,
-    "gear": "Crossbow and a good knife; a coat for the weather on both sides; boots that have been resoled twice."
+    "gear": "A compound bow carried through from Earth — arrows he can have made locally, limbs and cams he cannot — and a good knife; a coat for the weather on both sides; boots that have been resoled twice."
   },
   {
     "name": "William the White",

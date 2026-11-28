@@ -182,10 +182,11 @@
     ]
   },
   {
-    "name": "Nimble-fingered",
+    "name": "Nimble Fingered",
     "family": "Coordination",
     "kind": "perk",
     "effect": "+1 EF in one named kind of movement.",
+    "note": "Covers what quirks.md lists as a separate \"Sleight of Hand\" perk — that name collides with the SKILL of the same name, and this is the same +1 either way.",
     "exampleOnly": true,
     "tags": [
       "standard"
@@ -206,17 +207,6 @@
     "family": "Coordination",
     "kind": "perk",
     "effect": "+1 EF in one named kind of movement.",
-    "exampleOnly": true,
-    "tags": [
-      "standard"
-    ]
-  },
-  {
-    "name": "Deft Hands",
-    "family": "Coordination",
-    "kind": "perk",
-    "effect": "+1 EF in one named kind of movement.",
-    "note": "Listed in quirks.md as \"Sleight of Hand\", which collides with the SKILL of that name — renamed here so a picker can show both without ambiguity.",
     "exampleOnly": true,
     "tags": [
       "standard"

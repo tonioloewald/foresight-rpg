@@ -75,11 +75,18 @@ const SPECS: Spec[] = [
     attrs: [8, 9, 7, 10, 6],
     bfs: ['Human', 'Field Experience', 'Intense Training', 'Natural Athlete', 'Tertiary Education'],
     fields: [['Survival', 3], ['Beast Lore', 2], ['Tactics', 1]],
-    spend: ['Search', 'Stealth', 'Archery', 'Athletics', 'Riding', 'Melee', ['Survival', 4], 'Firearms'],
+    // Archery first and Firearms off the list entirely — he keeps the single
+    // level Field Experience confers and buys no more. A bow is also the
+    // weapon that still works in Fvaldanon when the cartridges run out.
+    // Archery three times over: it is what he IS, not just something he can do.
+    // Repetition is how this generator expresses weight — every entry gets one
+    // unit per pass, so ORDER only decides who is served when the money runs
+    // out. Listing a thing twice buys it twice as fast.
+    spend: ['Archery', 'Archery', 'Archery', 'Search', 'Stealth', 'Athletics', 'Riding', 'Melee', ['Survival', 4]],
     reserve: 15,
     ltf: ['The uplands of Hyalis', 'Tracking', 'The crossing itself'],
     quirk: ['Speaks last', 'Carries a compass he does not trust'],
-    gear: 'Crossbow and a good knife; a coat for the weather on both sides; boots that have been resoled twice.',
+    gear: 'A compound bow carried through from Earth — arrows he can have made locally, limbs and cams he cannot — and a good knife; a coat for the weather on both sides; boots that have been resoled twice.',
   },
   {
     name: 'William the White',

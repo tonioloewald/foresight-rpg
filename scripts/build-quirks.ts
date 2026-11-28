@@ -88,15 +88,13 @@ const QUIRKS: Q[] = [
     note: 'Sprinter and Marathoner fire for the same reason, so they never stack.' },
 
   // ── Coordination — sub-capabilities that must not become attributes ──
-  { name: 'Nimble-fingered', family: 'Coordination', kind: 'perk',
-    effect: '+1 EF in one named kind of movement.' },
+  { name: 'Nimble Fingered', family: 'Coordination', kind: 'perk',
+    effect: '+1 EF in one named kind of movement.',
+    note: 'Covers what quirks.md lists as a separate "Sleight of Hand" perk — that name collides with the SKILL of the same name, and this is the same +1 either way.' },
   { name: 'Graceful', family: 'Coordination', kind: 'perk',
     effect: '+1 EF in one named kind of movement.' },
   { name: 'Remarkable Agility', family: 'Coordination', kind: 'perk',
     effect: '+1 EF in one named kind of movement.' },
-  { name: 'Deft Hands', family: 'Coordination', kind: 'perk',
-    effect: '+1 EF in one named kind of movement.',
-    note: 'Listed in quirks.md as "Sleight of Hand", which collides with the SKILL of that name — renamed here so a picker can show both without ambiguity.' },
   { name: 'Corrected Vision', family: 'Coordination', kind: 'quirk',
     effect: 'Fine with your glasses; lose them and it is −2 on anything at distance.' },
   { name: 'Short-sighted', family: 'Coordination', kind: 'flaw',
