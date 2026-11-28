@@ -1081,6 +1081,49 @@ an effect can be perfectly safe in a fight and still be the most dangerous thing
 in the setting, because what matters is what becomes true if it is **reliable and
 repeatable**, not what it does in a round of combat.
 
+### The system reproduces a whole genre college by composition
+
+Ardasodom's repertoire is *"roughly the **Entities** colleges in DragonQuest"* —
+undead, demons, magicians who shed their bodies and become spectres. **ForeSight
+has no necromancy fundamental**, and does not need one: the whole college falls
+out of composition, with **Summon** and **Compulsion** doing the heavy lifting
+and Essence supplying only the motive.
+
+| | Capability | Built from |
+|---|---|---|
+| 1 | raise the dead | **Summon §20A4 Animate Dead** — a corpse animated *by summoning a trivial demon into it* |
+| 2 | hold a captive population | **Compulsion** |
+| 3 | demons and servitors | **Summon** + **Sandestin** |
+| 4 | shed the body | **Sandestin §17A6 Mind Transfer** |
+| 5 | stay alive | **Essence §22A12** |
+
+Two things worth keeping from that. **§20A4 makes undead and demons one supply
+chain** — the undead are possessed meat, not raised souls — which is a tidier
+cosmology than most games manage and came free from composing two primitives.
+And it is a direct test of the generative claim: *a named genre college from
+another game was reconstructed out of our physics-like fundamentals without a
+bespoke rule.* That is what "generative" is supposed to buy, demonstrated rather
+than asserted.
+
+*(Housekeeping: `§20A4` is one of the duplicate magic codes already flagged for
+repair in CLAUDE.md.)*
+
+### A self-limiting antagonist
+
+*"They're not stupid enough to try and conquer the world, because they know that
+if they suddenly loomed large as a threat they'd be annihilated."*
+
+The economics enforce the strategy: their resource is a **managed human
+population**, so a war would destroy the thing they live on. Conquest is not
+merely risky for them, it is self-defeating — and that is why the world has not
+dealt with them, since they never present a casus belli worth a coalition.
+
+Worth noting as a design pattern in its own right, for the NPCs chapter: **a
+villain limited by rational self-interest beats a villain on a countdown clock.**
+The threat is permanent, it never resolves itself, and a campaign against it has
+to start with the players deciding it matters before anybody else does — which is
+a far better hook than a timer.
+
 **Three things this is evidence for, beyond the anecdote:**
 
 1. **Generative magic earns its keep.** A composable, honestly-costed effect
