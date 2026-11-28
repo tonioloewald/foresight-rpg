@@ -6,6 +6,7 @@ import 'tosijs-ui'
 import 'tosijs-ui/doc-browser'
 import { tosiTable } from 'tosijs-ui'
 import './src/character-sheet' // registers <foresight-character-sheet>
+import { installPrintStyles } from './src/print-styles'
 import { ENTITY_SPECS, fmt, slug, ALL_TAGS, type EntitySpec } from './src/entity-specs'
 import { SITE_ROOT } from './src/site-root'
 
@@ -258,3 +259,6 @@ if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
   s.onerror = () => {} // no Haltija server running: silently skip
   document.head.appendChild(s)
 }
+
+// Printing a page should give you the document, not the application.
+installPrintStyles()

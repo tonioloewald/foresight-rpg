@@ -1,32 +1,306 @@
 [
-  { "name": "First Aid",          "parent": null,          "years": 1, "thread": "Biology",      "tags": ["standard"],                     "note": "basic emergency care; root of the medical tree" },
-  { "name": "Nursing",            "parent": "First Aid",   "years": 2, "thread": "Biology",      "tags": ["standard"],                     "note": "sustained patient care" },
-  { "name": "Medicine",           "parent": "First Aid",   "years": 3, "thread": "Biology",      "tags": ["standard"],                     "note": "diagnosis & treatment; surgery is Repair + a medical field" },
-  { "name": "Surgery",            "parent": "Medicine",    "years": 4, "thread": "Biology",      "tags": ["standard"],                     "note": "operative intervention" },
-  { "name": "Emergency Medicine", "parent": "Medicine",    "years": 4, "thread": "Biology",      "tags": ["modern"],                       "note": "trauma & critical care" },
-
-  { "name": "Science",            "parent": null,          "years": 1, "thread": "Physics",      "tags": ["standard"],                     "note": "general scientific grounding; root of the science tree" },
-  { "name": "Physics",            "parent": "Science",     "years": 3, "thread": "Physics",      "tags": ["standard"],                     "note": "mechanics, energy, materials" },
-  { "name": "Chemistry",          "parent": "Science",     "years": 3, "thread": "Physics",      "tags": ["modern"],                       "note": "reactions, materials, explosives, pharmacology" },
-  { "name": "Biology",            "parent": "Science",     "years": 3, "thread": "Biology",      "tags": ["modern"],                       "note": "life sciences, genetics, ecology" },
-  { "name": "Geology",            "parent": "Science",     "years": 2, "thread": "Physics",      "tags": ["standard"],                     "note": "earth, minerals, terrain" },
-  { "name": "Electronics",        "parent": "Physics",     "years": 3, "thread": "Physics",      "tags": ["modern","sf"],                  "note": "circuits, sensors, comms; pairs with Repair" },
-  { "name": "Engineering",        "parent": "Physics",     "years": 4, "thread": "Physics",      "tags": ["standard"],                     "note": "design & construction; pairs with Repair to build" },
-
-  { "name": "Mathematics",        "parent": null,          "years": 2, "thread": "Math",         "tags": ["standard"],                     "note": "calculation, statistics, proof; root of the formal tree" },
-  { "name": "Computers",          "parent": "Mathematics", "years": 3, "thread": "Math",         "tags": ["modern","sf"],                  "note": "programming, networks, hacking" },
-
-  { "name": "Lore",               "parent": null,          "years": 1, "thread": "Social/Legal", "tags": ["standard"],                     "note": "general humanistic grounding; root of the humanities tree" },
-  { "name": "History",            "parent": "Lore",        "years": 2, "thread": "Social/Legal", "tags": ["standard"],                     "note": "the past, precedent, context" },
-  { "name": "Politics",           "parent": "Lore",        "years": 2, "thread": "Social/Legal", "tags": ["standard"],                     "note": "power, factions, governance" },
-  { "name": "Law",                "parent": "Lore",        "years": 3, "thread": "Social/Legal", "tags": ["standard"],                     "note": "statute, procedure, rights" },
-  { "name": "Economics",          "parent": "Lore",        "years": 3, "thread": "Social/Legal", "tags": ["modern"],                       "note": "markets, finance, trade" },
-  { "name": "Accounting",         "parent": "Economics",   "years": 3, "thread": "Social/Legal", "tags": ["modern"],                       "note": "books, audits, following the money" },
-  { "name": "Business",           "parent": "Economics",   "years": 3, "thread": "Social/Legal", "tags": ["modern"],                       "note": "organisations, management, deals" },
-  { "name": "Psychology",         "parent": "Lore",        "years": 3, "thread": "Biology",      "tags": ["modern"],                       "note": "behaviour & the mind; aids social skills & interrogation" },
-  { "name": "Theology",           "parent": "Lore",        "years": 2, "thread": "Social/Legal", "tags": ["ancient","fantasy","standard"], "note": "doctrine & the divine; relevant to Religion" },
-  { "name": "Etiquette",          "parent": "Lore",        "years": 1, "thread": "Social/Legal", "tags": ["standard"],                     "note": "manners & protocol; aids social skills in formal settings" },
-
-  { "name": "Survival",           "parent": null,          "years": 2, "thread": "Biology",      "tags": ["standard"],                     "note": "living off the land; foraging, shelter, wilderness navigation" },
-  { "name": "Tactics",            "parent": null,          "years": 2, "thread": "Social/Legal", "tags": ["standard"],                     "note": "small-unit & battlefield decision-making" }
+  {
+    "name": "First Aid",
+    "parent": null,
+    "years": 1,
+    "thread": "Biology",
+    "tags": [
+      "standard"
+    ],
+    "note": "basic emergency care; root of the medical tree"
+  },
+  {
+    "name": "Nursing",
+    "parent": "First Aid",
+    "years": 2,
+    "thread": "Biology",
+    "tags": [
+      "standard"
+    ],
+    "note": "sustained patient care"
+  },
+  {
+    "name": "Medicine",
+    "parent": "First Aid",
+    "years": 3,
+    "thread": "Biology",
+    "tags": [
+      "standard"
+    ],
+    "note": "diagnosis & treatment; surgery is Repair + a medical field"
+  },
+  {
+    "name": "Surgery",
+    "parent": "Medicine",
+    "years": 4,
+    "thread": "Biology",
+    "tags": [
+      "standard"
+    ],
+    "note": "operative intervention"
+  },
+  {
+    "name": "Emergency Medicine",
+    "parent": "Medicine",
+    "years": 4,
+    "thread": "Biology",
+    "tags": [
+      "modern"
+    ],
+    "note": "trauma & critical care"
+  },
+  {
+    "name": "Science",
+    "parent": null,
+    "years": 1,
+    "thread": "Physics",
+    "tags": [
+      "standard"
+    ],
+    "note": "general scientific grounding; root of the science tree"
+  },
+  {
+    "name": "Physics",
+    "parent": "Science",
+    "years": 3,
+    "thread": "Physics",
+    "tags": [
+      "standard"
+    ],
+    "note": "mechanics, energy, materials"
+  },
+  {
+    "name": "Chemistry",
+    "parent": "Science",
+    "years": 3,
+    "thread": "Physics",
+    "tags": [
+      "modern"
+    ],
+    "note": "reactions, materials, explosives, pharmacology"
+  },
+  {
+    "name": "Biology",
+    "parent": "Science",
+    "years": 3,
+    "thread": "Biology",
+    "tags": [
+      "modern"
+    ],
+    "note": "life sciences, genetics, ecology"
+  },
+  {
+    "name": "Geology",
+    "parent": "Science",
+    "years": 2,
+    "thread": "Physics",
+    "tags": [
+      "standard"
+    ],
+    "note": "earth, minerals, terrain"
+  },
+  {
+    "name": "Electronics",
+    "parent": "Physics",
+    "years": 3,
+    "thread": "Physics",
+    "tags": [
+      "modern",
+      "sf"
+    ],
+    "note": "circuits, sensors, comms; pairs with Repair"
+  },
+  {
+    "name": "Engineering",
+    "parent": "Physics",
+    "years": 4,
+    "thread": "Physics",
+    "tags": [
+      "standard"
+    ],
+    "note": "design & construction; pairs with Repair to build"
+  },
+  {
+    "name": "Mathematics",
+    "parent": null,
+    "years": 2,
+    "thread": "Math",
+    "tags": [
+      "standard"
+    ],
+    "note": "calculation, statistics, proof; root of the formal tree"
+  },
+  {
+    "name": "Computers",
+    "parent": "Mathematics",
+    "years": 3,
+    "thread": "Math",
+    "tags": [
+      "modern",
+      "sf"
+    ],
+    "note": "programming, networks, hacking"
+  },
+  {
+    "name": "Lore",
+    "parent": null,
+    "years": 1,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "general humanistic grounding; root of the humanities tree"
+  },
+  {
+    "name": "History",
+    "parent": "Lore",
+    "years": 2,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "the past, precedent, context"
+  },
+  {
+    "name": "Politics",
+    "parent": "Lore",
+    "years": 2,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "power, factions, governance"
+  },
+  {
+    "name": "Law",
+    "parent": "Lore",
+    "years": 3,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "statute, procedure, rights"
+  },
+  {
+    "name": "Economics",
+    "parent": "Lore",
+    "years": 3,
+    "thread": "Social/Legal",
+    "tags": [
+      "modern"
+    ],
+    "note": "markets, finance, trade"
+  },
+  {
+    "name": "Accounting",
+    "parent": "Economics",
+    "years": 3,
+    "thread": "Social/Legal",
+    "tags": [
+      "modern"
+    ],
+    "note": "books, audits, following the money"
+  },
+  {
+    "name": "Business",
+    "parent": "Economics",
+    "years": 3,
+    "thread": "Social/Legal",
+    "tags": [
+      "modern"
+    ],
+    "note": "organisations, management, deals"
+  },
+  {
+    "name": "Psychology",
+    "parent": "Lore",
+    "years": 3,
+    "thread": "Biology",
+    "tags": [
+      "modern"
+    ],
+    "note": "behaviour & the mind; aids social skills & interrogation"
+  },
+  {
+    "name": "Theology",
+    "parent": "Lore",
+    "years": 2,
+    "thread": "Social/Legal",
+    "tags": [
+      "ancient",
+      "fantasy",
+      "standard"
+    ],
+    "note": "doctrine & the divine; relevant to Religion"
+  },
+  {
+    "name": "Etiquette",
+    "parent": "Lore",
+    "years": 1,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "manners & protocol; aids social skills in formal settings"
+  },
+  {
+    "name": "Survival",
+    "parent": null,
+    "years": 2,
+    "thread": "Biology",
+    "tags": [
+      "standard"
+    ],
+    "note": "living off the land; foraging, shelter, wilderness navigation"
+  },
+  {
+    "name": "Tactics",
+    "parent": null,
+    "years": 2,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "small-unit & battlefield decision-making"
+  },
+  {
+    "name": "Trades",
+    "parent": null,
+    "years": 1,
+    "thread": "Trades",
+    "tags": [
+      "standard"
+    ],
+    "note": "the shared grounding of the building trades — materials, tools, reading a plan; root of the trades tree"
+  },
+  {
+    "name": "Carpentry",
+    "parent": "Trades",
+    "years": 2,
+    "thread": "Trades",
+    "tags": [
+      "standard"
+    ],
+    "note": "timber, joinery, framing, formwork"
+  },
+  {
+    "name": "Plumbing",
+    "parent": "Trades",
+    "years": 2,
+    "thread": "Trades",
+    "tags": [
+      "standard"
+    ],
+    "note": "water, drainage, gas fitting"
+  },
+  {
+    "name": "Electrical",
+    "parent": "Trades",
+    "years": 2,
+    "thread": "Trades",
+    "tags": [
+      "modern"
+    ],
+    "note": "wiring, supply and fixed installations — the trade. For circuits and sensors see Electronics"
+  }
 ]

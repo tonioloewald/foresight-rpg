@@ -104,6 +104,7 @@ export class ForesightCharacterSheet extends Component {
   private SKILLNAMES: string[] = []
   private BF_CATALOG: Record<string, any[]> = {}
   private FIELDS: any[] = []
+  private TEMPLATES: R.Character[] = []
   private loaded = false
   private uidc = 1
 
@@ -249,6 +250,21 @@ export class ForesightCharacterSheet extends Component {
     this.changed()
   }
 
+  /** Step 1 of the Five-Minute Character: pick a template. Loads a ready-made
+   *  character as a STARTING POINT — it is an ordinary character afterwards,
+   *  fully editable, and is not saved until you save it. */
+  private useTemplate = async (name: string) => {
+    if (!name) return
+    const t = this.TEMPLATES.find((x) => x.name === name)
+    if (!t) return
+    if (this.char.name && !(await TosiDialog.confirm(`Replace the current character with the ${name} template?`)))
+      return
+    fsSheet.char.tosi.value = { ...R.blankCharacter(), ...JSON.parse(JSON.stringify(t)) }
+    R.clampSkills(this.char, this.SKILLS)
+    this.changed()
+    postNotification({ message: `Started from the ${name} template — rename it and make it yours.`, duration: 4 })
+  }
+
   private newChar = async () => {
     if (!(await TosiDialog.confirm('Start a new character? Unsaved changes are lost.'))) return
     fsSheet.char.tosi.value = R.blankCharacter()
@@ -281,6 +297,19 @@ export class ForesightCharacterSheet extends Component {
     reader.onload = () => {
       try {
         const parsed = JSON.parse(String(reader.result))
+        // A file may hold one character or a whole party — importing fourteen
+        // templates one at a time would be a silly way to spend an evening.
+        if (Array.isArray(parsed)) {
+          const named = parsed.filter((p) => p && typeof p.name === 'string' && p.name)
+          void (async () => {
+            for (const p of named) await this.store.save({ ...R.blankCharacter(), ...p })
+            await this.refreshSlots()
+            if (named[0]) fsSheet.char.tosi.value = { ...R.blankCharacter(), ...named[0] }
+            this.changed()
+            postNotification({ message: `Imported and saved ${named.length} characters.`, duration: 4 })
+          })()
+          return
+        }
         fsSheet.char.tosi.value = { ...R.blankCharacter(), ...parsed }
         this.changed()
       } catch {
@@ -407,10 +436,11 @@ export class ForesightCharacterSheet extends Component {
       })
     ),
     section(
-      { class: 'fs-panel' },
+      { class: 'fs-panel fs-savepanel' },
       h3('Save / Load'),
       div(
         { class: 'fs-row' },
+        tosiSelect({ part: 'tmplPick', placeholder: 'start from a template…', onChange: (ev: any) => this.useTemplate(ev.target.value) }),
         tosiSelect({ part: 'slotPick', placeholder: 'saved characters…', onChange: (ev: any) => this.loadChar(ev.target.value) }),
         button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: this.saveChar }, 'Save'),
         button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: this.newChar }, 'New'),
@@ -429,11 +459,12 @@ export class ForesightCharacterSheet extends Component {
 
   private async loadData() {
     try {
-      const [skills, bfs, fields] = await Promise.all(
-        ['skills.json', 'background-factors.json', 'fields.json'].map((f) =>
+      const [skills, bfs, fields, templates] = await Promise.all(
+        ['skills.json', 'background-factors.json', 'fields.json', 'templates.json'].map((f) =>
           fetch(new URL('data/' + f, SITE_ROOT).href).then((r) => (r.ok ? r.json() : null))
         )
       )
+      this.TEMPLATES = Array.isArray(templates) ? templates : []
       for (const s of skills || []) {
         const attrs = String(s.attributes || '')
           .split(/[^A-Z]+/)
@@ -465,6 +496,11 @@ export class ForesightCharacterSheet extends Component {
     if (sel) sel.options = names.length ? names.join(',') : ''
   }
 
+  private refreshTemplates() {
+    const sel = this.parts.tmplPick as any
+    if (sel) sel.options = this.TEMPLATES.length ? this.TEMPLATES.map((t) => t.name).join(',') : ''
+  }
+
   connectedCallback() {
     super.connectedCallback()
     const arch = this.parts.archPick as any
@@ -483,6 +519,7 @@ export class ForesightCharacterSheet extends Component {
       })
     }
     void this.loadData().then(async () => {
+      this.refreshTemplates()
       // `whenHydrated` matters: a render queued before hydration completes is
       // dropped by the `hydrated` guard below, and nothing re-queues it.
       try {

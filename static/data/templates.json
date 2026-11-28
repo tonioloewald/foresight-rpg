@@ -1,0 +1,1933 @@
+[
+  {
+    "name": "Detective",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Ex-police, now private. Reads people and rooms; the gun is a last resort.",
+    "base": {
+      "ST": 7,
+      "CO": 7,
+      "IN": 9,
+      "PC": 10,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Search": {
+        "level": 3
+      },
+      "Charm": {
+        "level": 1
+      }
+    },
+    "field": [
+      {
+        "name": "Law",
+        "years": 2
+      }
+    ],
+    "ltf": [
+      "Interviews",
+      "This city"
+    ],
+    "quirk": [
+      "Doesn’t let go"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Active Duty",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern",
+          "sf"
+        ],
+        "attrs": {},
+        "skills": {
+          "Firearms": 3,
+          "Melee": 1,
+          "Heavy Weapons": 1,
+          "Athletics": 1
+        },
+        "fields": [],
+        "confers": "Conditioned (Endurance); Firearms 3, Melee 1, Heavy Weapons 1, Athletics 1",
+        "note": "military/police; repeatable",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Gifted",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1,
+          "PC": 1,
+          "WP": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "IN +1, PC +1, WP +1",
+        "note": "quick, sharp, hard to rattle",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Revolver, notebook, a coat with deep pockets, a car that starts most mornings."
+  },
+  {
+    "name": "Journalist",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Gets people to say the thing they meant not to say, then checks it.",
+    "base": {
+      "ST": 6,
+      "CO": 7,
+      "IN": 9,
+      "PC": 10,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Search": {
+        "level": 2
+      },
+      "Charm": {
+        "level": 2
+      }
+    },
+    "field": [
+      {
+        "name": "Politics",
+        "years": 2
+      }
+    ],
+    "ltf": [
+      "Sourcing",
+      "Public records"
+    ],
+    "quirk": [
+      "Incurably nosy"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "College / Educated",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Psychology",
+            "years": 1
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Business",
+            "years": 1
+          }
+        ],
+        "confers": "Theory 2; Psychology, Accounting, Business 1yr",
+        "note": "a degree — skills + fields, swappable",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Mooch",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Charm": 2,
+          "Confidence": 1
+        },
+        "fields": [],
+        "confers": "Charm 2, Confidence 1",
+        "note": "lived off others' goodwill",
+        "cat": "General",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Phone, recorder, press card, a list of numbers nobody else has."
+  },
+  {
+    "name": "Soldier",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Trained, drilled and shot at. Works as part of a unit by reflex.",
+    "base": {
+      "ST": 9,
+      "CO": 9,
+      "IN": 7,
+      "PC": 7,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {},
+    "field": [],
+    "ltf": [
+      "Section tactics",
+      "Your service rifle"
+    ],
+    "quirk": [
+      "Sleeps anywhere"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Trained from Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 3
+        },
+        "fields": [],
+        "confers": "a focus skill +3 (swap as needed)",
+        "note": "single-minded focus",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Active Duty",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern",
+          "sf"
+        ],
+        "attrs": {},
+        "skills": {
+          "Firearms": 3,
+          "Melee": 1,
+          "Heavy Weapons": 1,
+          "Athletics": 1
+        },
+        "fields": [],
+        "confers": "Conditioned (Endurance); Firearms 3, Melee 1, Heavy Weapons 1, Athletics 1",
+        "note": "military/police; repeatable",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Natural Athlete",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "ST": 1,
+          "CO": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "ST +1, CO +1; Deep Reserves (Endurance)",
+        "note": "effortless physicality",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Assault rifle, tactical armor, helmet, webbing, two days of rations."
+  },
+  {
+    "name": "Athlete",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "A body trained to one standard and kept there. Fast, strong, hard to stop.",
+    "base": {
+      "ST": 9,
+      "CO": 10,
+      "IN": 6,
+      "PC": 7,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Athletics": {
+        "level": 4
+      }
+    },
+    "field": [],
+    "ltf": [
+      "Your event",
+      "Reading a crowd"
+    ],
+    "quirk": [
+      "Deep reserves"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Natural Athlete",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "ST": 1,
+          "CO": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "ST +1, CO +1; Deep Reserves (Endurance)",
+        "note": "effortless physicality",
+        "cat": "Intrinsic",
+        "uid": "b3"
+      },
+      {
+        "name": "School of Hard Knocks",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 2,
+          "Stealth": 1
+        },
+        "fields": [],
+        "confers": "Hardened (Endurance); Melee 2, Stealth 1",
+        "note": "prison, the streets, the ring",
+        "cat": "General",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Kit bag, strapping tape, the shoes that fit."
+  },
+  {
+    "name": "Explorer",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Goes where maps stop and comes back with the map.",
+    "base": {
+      "ST": 8,
+      "CO": 8,
+      "IN": 8,
+      "PC": 8,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {},
+    "field": [
+      {
+        "name": "Survival",
+        "years": 2
+      },
+      {
+        "name": "Lore",
+        "years": 1
+      }
+    ],
+    "ltf": [
+      "Cold country",
+      "Small boats"
+    ],
+    "quirk": [
+      "Never panics"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Abandoned & Self-Sufficient",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "WP": 1
+        },
+        "skills": {
+          "Stealth": 2
+        },
+        "fields": [],
+        "confers": "WP +1; Stealth 2",
+        "note": "fending for yourself young",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Dropout",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 12,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "12 build points",
+        "note": "started a path, left it — loose ends",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Natural Athlete",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "ST": 1,
+          "CO": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "ST +1, CO +1; Deep Reserves (Endurance)",
+        "note": "effortless physicality",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Pack, rope, knife, compass, a coat that has been repaired more than once."
+  },
+  {
+    "name": "Spy",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Two jobs, one of them real. Competent at both and never conspicuous.",
+    "base": {
+      "ST": 7,
+      "CO": 9,
+      "IN": 8,
+      "PC": 9,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Stealth": {
+        "level": 2
+      },
+      "Charm": {
+        "level": 2
+      }
+    },
+    "field": [],
+    "ltf": [
+      "Cover identities",
+      "Surveillance"
+    ],
+    "quirk": [
+      "Forgettable face"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Active Duty",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern",
+          "sf"
+        ],
+        "attrs": {},
+        "skills": {
+          "Firearms": 3,
+          "Melee": 1,
+          "Heavy Weapons": 1,
+          "Athletics": 1
+        },
+        "fields": [],
+        "confers": "Conditioned (Endurance); Firearms 3, Melee 1, Heavy Weapons 1, Athletics 1",
+        "note": "military/police; repeatable",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "College / Educated",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Psychology",
+            "years": 1
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Business",
+            "years": 1
+          }
+        ],
+        "confers": "Theory 2; Psychology, Accounting, Business 1yr",
+        "note": "a degree — skills + fields, swappable",
+        "cat": "General",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Pistol, a passport in the wrong name, a phone that is two phones."
+  },
+  {
+    "name": "Scholar",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Knows a great deal about something, and how to find out the rest.",
+    "base": {
+      "ST": 6,
+      "CO": 6,
+      "IN": 10,
+      "PC": 9,
+      "WP": 9
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Theory": {
+        "level": 3
+      }
+    },
+    "field": [
+      {
+        "name": "History",
+        "years": 3
+      }
+    ],
+    "ltf": [
+      "Your period",
+      "Archives"
+    ],
+    "quirk": [
+      "Pedant"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "College / Educated",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Psychology",
+            "years": 1
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Business",
+            "years": 1
+          }
+        ],
+        "confers": "Theory 2; Psychology, Accounting, Business 1yr",
+        "note": "a degree — skills + fields, swappable",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Gifted",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1,
+          "PC": 1,
+          "WP": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "IN +1, PC +1, WP +1",
+        "note": "quick, sharp, hard to rattle",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Laptop, reading glasses, a bag that is mostly books."
+  },
+  {
+    "name": "Thief",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "In, out, and nobody is certain anything happened.",
+    "base": {
+      "ST": 6,
+      "CO": 10,
+      "IN": 8,
+      "PC": 9,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Sleight of Hand": {
+        "level": 3
+      },
+      "Stealth": {
+        "level": 2
+      }
+    },
+    "field": [],
+    "ltf": [
+      "Locks",
+      "Rooftops"
+    ],
+    "quirk": [
+      "Light sleeper"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Abandoned & Self-Sufficient",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "WP": 1
+        },
+        "skills": {
+          "Stealth": 2
+        },
+        "fields": [],
+        "confers": "WP +1; Stealth 2",
+        "note": "fending for yourself young",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "School of Hard Knocks",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 2,
+          "Stealth": 1
+        },
+        "fields": [],
+        "confers": "Hardened (Endurance); Melee 2, Stealth 1",
+        "note": "prison, the streets, the ring",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Dropout",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 12,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "12 build points",
+        "note": "started a path, left it — loose ends",
+        "cat": "General",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Picks, gloves, a bag that folds flat, soft shoes."
+  },
+  {
+    "name": "Assassin",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Patient, prepared and unhurried. The violence is the short part.",
+    "base": {
+      "ST": 7,
+      "CO": 10,
+      "IN": 8,
+      "PC": 8,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Stealth": {
+        "level": 3
+      },
+      "Firearms": {
+        "level": 1
+      }
+    },
+    "field": [],
+    "ltf": [
+      "Approach work",
+      "Blades"
+    ],
+    "quirk": [
+      "Very still"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Trained from Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 3
+        },
+        "fields": [],
+        "confers": "a focus skill +3 (swap as needed)",
+        "note": "single-minded focus",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "School of Hard Knocks",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 2,
+          "Stealth": 1
+        },
+        "fields": [],
+        "confers": "Hardened (Endurance); Melee 2, Stealth 1",
+        "note": "prison, the streets, the ring",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Trauma Survivor",
+        "category": "Unusual",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 10,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "WP": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "WP +1; 10 build points",
+        "note": "something shattering; take a matching quirk",
+        "cat": "Unusual",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Knife, a suppressed pistol kept elsewhere, ordinary clothes."
+  },
+  {
+    "name": "Driver",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Gets the car, the people and the plan out the other side.",
+    "base": {
+      "ST": 7,
+      "CO": 10,
+      "IN": 7,
+      "PC": 9,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Cars": {
+        "level": 4
+      },
+      "Bikes": {
+        "level": 2
+      }
+    },
+    "field": [],
+    "ltf": [
+      "This city’s streets",
+      "Pursuit driving"
+    ],
+    "quirk": [
+      "Calm at speed"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Apprentice",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Repair": 3
+        },
+        "fields": [
+          {
+            "name": "Electrical",
+            "years": 1
+          },
+          {
+            "name": "Plumbing",
+            "years": 1
+          },
+          {
+            "name": "Carpentry",
+            "years": 1
+          }
+        ],
+        "confers": "Repair 3; Electrical, Plumbing, Carpentry 1yr",
+        "note": "a trade — swap the fields",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "School of Hard Knocks",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 2,
+          "Stealth": 1
+        },
+        "fields": [],
+        "confers": "Hardened (Endurance); Melee 2, Stealth 1",
+        "note": "prison, the streets, the ring",
+        "cat": "General",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Something unremarkable with a rebuilt engine; a second set of plates."
+  },
+  {
+    "name": "Tech",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Makes the thing work, or makes it stop working, usually from a van.",
+    "base": {
+      "ST": 6,
+      "CO": 8,
+      "IN": 10,
+      "PC": 8,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Repair": {
+        "level": 2
+      },
+      "Theory": {
+        "level": 1
+      }
+    },
+    "field": [
+      {
+        "name": "Computers",
+        "years": 2
+      }
+    ],
+    "ltf": [
+      "Soldering",
+      "Access control"
+    ],
+    "quirk": [
+      "Reads manuals for pleasure"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Apprentice",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Repair": 3
+        },
+        "fields": [
+          {
+            "name": "Electrical",
+            "years": 1
+          },
+          {
+            "name": "Plumbing",
+            "years": 1
+          },
+          {
+            "name": "Carpentry",
+            "years": 1
+          }
+        ],
+        "confers": "Repair 3; Electrical, Plumbing, Carpentry 1yr",
+        "note": "a trade — swap the fields",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "College / Educated",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Psychology",
+            "years": 1
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Business",
+            "years": 1
+          }
+        ],
+        "confers": "Theory 2; Psychology, Accounting, Business 1yr",
+        "note": "a degree — skills + fields, swappable",
+        "cat": "General",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Toolkit, laptop, a box of adapters, cable ties."
+  },
+  {
+    "name": "Doctor",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Keeps people alive under conditions nobody trained for.",
+    "base": {
+      "ST": 6,
+      "CO": 8,
+      "IN": 10,
+      "PC": 9,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {},
+    "field": [
+      {
+        "name": "Medicine",
+        "years": 3
+      },
+      {
+        "name": "First Aid",
+        "years": 1
+      }
+    ],
+    "ltf": [
+      "Trauma",
+      "Triage"
+    ],
+    "quirk": [
+      "Unshockable"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "College / Educated",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Psychology",
+            "years": 1
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Business",
+            "years": 1
+          }
+        ],
+        "confers": "Theory 2; Psychology, Accounting, Business 1yr",
+        "note": "a degree — skills + fields, swappable",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Gifted",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1,
+          "PC": 1,
+          "WP": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "IN +1, PC +1, WP +1",
+        "note": "quick, sharp, hard to rattle",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Trauma kit, gloves, a torch held in the teeth."
+  },
+  {
+    "name": "Con-Artist",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "Sells the mark the story the mark already wanted to believe.",
+    "base": {
+      "ST": 6,
+      "CO": 7,
+      "IN": 9,
+      "PC": 10,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Charm": {
+        "level": 2
+      },
+      "Confidence": {
+        "level": 2
+      },
+      "Perform": {
+        "level": 1
+      }
+    },
+    "field": [],
+    "ltf": [
+      "Long cons",
+      "Reading a mark"
+    ],
+    "quirk": [
+      "Never breaks character"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Comfortable Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": false,
+        "slot": "1",
+        "grant": 20,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "20 build points",
+        "note": "stable, middle-class upbringing",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Mooch",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Charm": 2,
+          "Confidence": 1
+        },
+        "fields": [],
+        "confers": "Charm 2, Confidence 1",
+        "note": "lived off others' goodwill",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Artistic",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "CO": 1,
+          "PC": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "CO +1, PC +1; Striking (Appearance)",
+        "note": "the maker's eye, hand, and presence",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "A good suit, business cards for three businesses, a cheap phone."
+  },
+  {
+    "name": "Martial Artist",
+    "arch": "",
+    "age": "",
+    "wealth": "",
+    "concept": "A lifetime in one discipline. Unarmed is not a fallback.",
+    "base": {
+      "ST": 8,
+      "CO": 10,
+      "IN": 7,
+      "PC": 8,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Athletics": {
+        "level": 2
+      }
+    },
+    "field": [],
+    "ltf": [
+      "Your style",
+      "Breaking a grapple"
+    ],
+    "quirk": [
+      "Never starts it"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": "species",
+        "once": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "—",
+        "note": "adaptable baseline; costs no slot",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Trained from Childhood",
+        "category": "Origin",
+        "exclusive": "origin",
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {},
+        "skills": {
+          "Melee": 3
+        },
+        "fields": [],
+        "confers": "a focus skill +3 (swap as needed)",
+        "note": "single-minded focus",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Dropout",
+        "category": "General",
+        "exclusive": null,
+        "once": false,
+        "slot": "1",
+        "grant": 12,
+        "tags": [
+          "modern"
+        ],
+        "attrs": {},
+        "skills": {},
+        "fields": [],
+        "confers": "12 build points",
+        "note": "started a path, left it — loose ends",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Natural Athlete",
+        "category": "Intrinsic",
+        "exclusive": null,
+        "once": true,
+        "slot": "1",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "ST": 1,
+          "CO": 1
+        },
+        "skills": {},
+        "fields": [],
+        "confers": "ST +1, CO +1; Deep Reserves (Endurance)",
+        "note": "effortless physicality",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Training gear, hand wraps, nothing you could be charged for."
+  }
+]

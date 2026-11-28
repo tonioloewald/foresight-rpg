@@ -42,6 +42,14 @@ eq('skillTotal Climbing 2+3', R.skillTotal(c, 'Climbing'), 5)
 eq('skillBuySpend Climbing conferred (1x3)', R.skillBuySpend(c, defs, 'Climbing'), 3)
 eq('score Climbing formula(6,7)+5', R.score(c, defs, 'Climbing'), R.formulaVal(c, defs, 'Climbing') + 5)
 eq('usedSlots (1 non-free)', R.usedSlots(c), 1)
+// a neutral species is free, and the DATA spells that `slot: "free"` — not
+// `free: true`. Getting this wrong silently charged every character a slot for
+// being Human.
+c.bfs.push({ name: 'Human', slot: 'free' })
+eq('usedSlots ignores slot:"free"', R.usedSlots(c), 1)
+eq('bfIsFree slot:"free"', R.bfIsFree({ slot: 'free' }), true)
+eq('bfIsFree slot:1', R.bfIsFree({ slot: 1 }), false)
+c.bfs.pop()
 // fields: 4/yr
 c.field.push({ name: 'Medicine', years: 3 })
 eq('fieldBuySpend 3yr', R.fieldBuySpend(c), 12)

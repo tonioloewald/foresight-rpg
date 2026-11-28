@@ -216,9 +216,16 @@ export function fieldBuySpend(c: Character): number {
   return c.field.reduce((s, f) => s + FIELD_COST_PER_YEAR * (f.years || 1), 0)
 }
 
+/** A factor is free if the data says so. background-factors.json spells this
+ *  `"slot": "free"` (neutral species); `free: true` is accepted too because the
+ *  pre-data sheet used it, and a stored character may still carry it. */
+export function bfIsFree(b: any): boolean {
+  return b?.free === true || b?.slot === 'free' || Number(b?.slot) === 0
+}
+
 /** Only non-free factors consume a slot (neutral species are free). */
 export function usedSlots(c: Character): number {
-  return c.bfs.reduce((s, b) => s + (b.free ? 0 : 1), 0)
+  return c.bfs.reduce((s, b) => s + (bfIsFree(b) ? 0 : Number(b.slot) || 1), 0)
 }
 
 /** Granted vs spent, and the remainder. Single currency — no separate XP. */
