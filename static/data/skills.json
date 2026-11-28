@@ -120,7 +120,7 @@
     ],
     "half": true,
     "limit": 1.5,
-    "cost": 1,
+    "cost": 2,
     "bef": 4,
     "tags": [
       "ancient",
