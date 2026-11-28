@@ -35,6 +35,14 @@ const CSS = `
     grid-template-columns: none !important;
   }
 
+  /* On a page that IS an application — the character builder — the prose around
+     it is interface, not content: the H1 and the "here is what this tool does"
+     paragraph belong on screen and not on a printed character sheet. Scoped
+     with :has() so every other page still prints its heading and body. */
+  article.doc-content:has(foresight-character-sheet) > *:not(foresight-character-sheet) {
+    display: none !important;
+  }
+
   /* the article is the page */
   html, body, tosi-doc-system, tosi-sidenav, .doc-content, article {
     display: block !important;

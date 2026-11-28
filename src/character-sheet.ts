@@ -259,9 +259,25 @@ export class ForesightCharacterSheet extends Component {
     this.changed()
   }
 
+  /**
+   * The key this character is known to the store by — set only by an explicit
+   * Save or a Load. `null` means "not saved yet".
+   *
+   * THE BUG THIS FIXES: autosave used to write on every change, keyed by the
+   * current name. The name field fires on every keystroke, so typing "Ezekiel"
+   * saved E, Ez, Eze, Ezek, Ezeki, Ezekie, Ezekiel — a character list full of
+   * the same name being gradually spelled out.
+   */
+  private savedAs: string | null = null
+  private autosaveTimer: ReturnType<typeof setTimeout> | undefined
+
   private autosave = () => {
-    if (!this.char.name) return
-    void this.store.save(this.char)
+    // Only ever UPDATE a character that has been deliberately saved, and only
+    // under the name it was saved as. A rename needs an explicit Save, which is
+    // also what makes "save as a copy" predictable.
+    if (!this.savedAs || this.savedAs !== this.char.name) return
+    clearTimeout(this.autosaveTimer)
+    this.autosaveTimer = setTimeout(() => void this.store.save(this.char), 400)
   }
 
   private saveChar = async () => {
@@ -270,6 +286,7 @@ export class ForesightCharacterSheet extends Component {
       return
     }
     await this.store.save(this.char)
+    this.savedAs = this.char.name
     await this.refreshSlots()
     postNotification({ message: `Saved “${this.char.name}”`, duration: 2 })
   }
@@ -279,6 +296,7 @@ export class ForesightCharacterSheet extends Component {
     const c = await this.store.load(name)
     if (!c) return
     fsSheet.char.tosi.value = { ...R.blankCharacter(), ...c }
+    this.savedAs = name
     this.changed()
   }
 
@@ -291,6 +309,7 @@ export class ForesightCharacterSheet extends Component {
     if (!t) return
     if (this.char.name && !(await TosiDialog.confirm(`Replace the current character with the ${name} template?`)))
       return
+    this.savedAs = null
     fsSheet.char.tosi.value = { ...R.blankCharacter(), ...JSON.parse(JSON.stringify(t)) }
     R.clampSkills(this.char, this.SKILLS)
     this.changed()
@@ -299,6 +318,7 @@ export class ForesightCharacterSheet extends Component {
 
   private newChar = async () => {
     if (!(await TosiDialog.confirm('Start a new character? Unsaved changes are lost.'))) return
+    this.savedAs = null
     fsSheet.char.tosi.value = R.blankCharacter()
     this.changed()
   }
@@ -308,6 +328,7 @@ export class ForesightCharacterSheet extends Component {
     if (!name) return
     if (!(await TosiDialog.confirm(`Delete “${name}”?`))) return
     await this.store.remove(name)
+    this.savedAs = null
     fsSheet.char.tosi.value = R.blankCharacter()
     await this.refreshSlots()
     this.changed()
@@ -336,12 +357,16 @@ export class ForesightCharacterSheet extends Component {
           void (async () => {
             for (const p of named) await this.store.save({ ...R.blankCharacter(), ...p })
             await this.refreshSlots()
-            if (named[0]) fsSheet.char.tosi.value = { ...R.blankCharacter(), ...named[0] }
+            if (named[0]) {
+              fsSheet.char.tosi.value = { ...R.blankCharacter(), ...named[0] }
+              this.savedAs = named[0].name // the bulk import saved them all
+            }
             this.changed()
             postNotification({ message: `Imported and saved ${named.length} characters.`, duration: 4 })
           })()
           return
         }
+        this.savedAs = null // an imported character isn't saved until you save it
         fsSheet.char.tosi.value = { ...R.blankCharacter(), ...parsed }
         this.changed()
       } catch {
