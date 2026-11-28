@@ -465,17 +465,77 @@ ${t.autoPrint?'<script>addEventListener("load",function(){setTimeout(function(){
     padding: 0 0 0 0.4em !important;
   }
 
-  /* Page 1 is who they are: identity, attributes, background. Page 2 is what
-     they can do: skills and fields. Breaking there deliberately beats letting
-     the skills table start four rows before the bottom of page 1. */
-  foresight-character-sheet section:has([part="skills"]) {
-    break-before: page;
-    page-break-before: always;
+  /* ATTRIBUTES and BACKGROUND FACTORS side by side: one is five lines, the
+     other is four, and stacked they waste half a page each. Inline-block
+     rather than flex because they are plain siblings with no wrapper. */
+  foresight-character-sheet section:has([part="attrs"]),
+  foresight-character-sheet section:has([part="bfList"]) {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+    margin-right: 1.5% !important;
   }
 
-  /* SKILLS: a long table — let it breathe and let it break. */
+  /* Pair up the other short panels too — Fields beside Familiarities, Condition
+     beside Gear. Each is a few lines, and stacked they cost a third of a page
+     in whitespace. This is what gets the sheet onto one side of paper. */
+  foresight-character-sheet section:has([part="fieldList"]),
+  foresight-character-sheet section:has([part="ltfList"]),
+  foresight-character-sheet section:has([part="condNote"]),
+  foresight-character-sheet section:has(textarea[placeholder]) {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+    margin-right: 1.5% !important;
+  }
+
+  /* SKILLS: Skill, Formula, Score, BEF. Conf., Level and Max are how the score
+     was arrived at and what it could become — build info. Formula stays
+     because it is genuinely useful mid-game when an attribute changes. */
+  foresight-character-sheet [part="skills"] th:nth-child(3),
+  foresight-character-sheet [part="skills"] td:nth-child(3),
+  foresight-character-sheet [part="skills"] th:nth-child(4),
+  foresight-character-sheet [part="skills"] td:nth-child(4),
+  foresight-character-sheet [part="skills"] th:nth-child(5),
+  foresight-character-sheet [part="skills"] td:nth-child(5),
+  foresight-character-sheet [part="skills"] th:nth-child(6),
+  foresight-character-sheet [part="skills"] td:nth-child(6) { display: none !important; }
   foresight-character-sheet [part="skills"] table { font-size: 0.82em !important; }
   foresight-character-sheet [part="skills"] thead { display: table-header-group; }
+  foresight-character-sheet [part="skills"] th:last-child,
+  foresight-character-sheet [part="skills"] td:last-child,
+  foresight-character-sheet [part="skills"] th:nth-last-child(2),
+  foresight-character-sheet [part="skills"] td:nth-last-child(2) { text-align: right !important; }
+
+  /* IDENTITY: the character's name is the title of the page, not a labelled
+     field, and Archetype is a chargen shortcut nobody reads at the table. */
+  foresight-character-sheet [part="nameField"] [part="caption"] { display: none !important; }
+  foresight-character-sheet [part="nameField"] input {
+    font-size: 20pt !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+  }
+  foresight-character-sheet [part="nameField"] { display: block !important; width: 100% !important; }
+  foresight-character-sheet tosi-field:has([part="archPick"]) { display: none !important; }
+
+  /* TIGHTEN: the target is one sheet of paper, and screen line-heights are
+     generous by design. The skills table is the bulk of the page, so it gets
+     the hardest squeeze. */
+  foresight-character-sheet { font-size: 9.5pt !important; line-height: 1.2 !important; }
+  foresight-character-sheet .fs-panel { padding: 3pt 5pt !important; margin-bottom: 4pt !important; }
+  foresight-character-sheet h3 { margin: 1pt 0 2pt !important; font-size: 1.05em !important; }
+  foresight-character-sheet th, foresight-character-sheet td {
+    padding: 0.5pt 3pt !important;
+    line-height: 1.15 !important;
+  }
+  foresight-character-sheet [part="skills"] table { font-size: 8pt !important; }
+  foresight-character-sheet [part="skills"] td,
+  foresight-character-sheet [part="skills"] th { line-height: 1.1 !important; }
+  /* the condition inputs are full-size form controls; they only need to hold
+     one digit on paper */
+  foresight-character-sheet input.fs-num,
+  foresight-character-sheet input[type="number"] { width: 3em !important; line-height: 1.2 !important; }
+  foresight-character-sheet textarea { line-height: 1.2 !important; }
 
   foresight-character-sheet .fs-step,
   foresight-character-sheet button,
@@ -519,5 +579,5 @@ ${t.autoPrint?'<script>addEventListener("load",function(){setTimeout(function(){
 }
 `,document.head.append(e);let t=[];addEventListener("beforeprint",()=>{t=[...document.querySelectorAll("details:not([open])")];for(let i of t)i.open=!0}),addEventListener("afterprint",()=>{for(let i of t)i.open=!1;t=[]})}class iE extends HTMLElement{_init=!1;_rows=[];_view="summary";_query="";_tags=new Set;_body=null;_spec;async connectedCallback(){if(this._init)return;if(this._init=!0,this.hasAttribute("filter"))return this.enhanceFilter();let e=this.getAttribute("src");if(!e)return;this._spec=zP[e];let t=this.innerHTML;try{let i=await(await fetch(new URL("data/"+e,Bc).href)).json();if(this._rows=Array.isArray(i)?i:i.rows||[],!this._rows.length)return;this._body=document.createElement("div"),this.replaceChildren(this.buildToolbar(),this._body),this.render()}catch(i){this.innerHTML=t}}enhanceFilter(){let e=this.querySelector("table");if(!e)return;let t=Array.from(e.querySelectorAll("tbody tr")),i=t.length,s=document.createElement("div");s.className="ev-bar";let n=document.createElement("input");n.type="search",n.className="ev-search",n.placeholder=this.getAttribute("placeholder")||"Search…";let r=document.createElement("span");r.className="ev-count";let o=(a)=>r.textContent=a===i?`${i} applications`:`${a} of ${i}`;o(i),n.oninput=()=>{let a=n.value.trim().toLowerCase(),l=0;for(let c of t){let h=c.getAttribute("data-search")||c.textContent||"",d=!a||h.indexOf(a)>=0;if(c.style.display=d?"":"none",d)l++}o(l)},s.append(n,r),this.insertBefore(s,this.firstChild)}presentTags(){let e=new Set;for(let t of this._rows)for(let i of t.tags||[])e.add(i);return Dc.filter((t)=>e.has(t))}buildToolbar(){let e=document.createElement("div");e.className="ev-bar";let t=document.createElement("div");t.className="ev-views";for(let n of["summary","cards"]){let r=document.createElement("button");r.type="button",r.className="ev-toggle",r.textContent=n==="summary"?"Summary":"Cards",r.setAttribute("aria-pressed",String(this._view===n)),r.onclick=()=>{this._view=n;for(let o of Array.from(t.children))o.setAttribute("aria-pressed","false");r.setAttribute("aria-pressed","true"),this.render()},t.append(r)}e.append(t);let i=document.createElement("input");i.type="search",i.className="ev-search",i.placeholder="Filter…",i.oninput=()=>{this._query=i.value.trim().toLowerCase(),this.render()},e.append(i);let s=this.presentTags();if(s.length>1){let n=document.createElement("div");n.className="ev-tags";for(let r of s){let o=document.createElement("button");o.type="button",o.className="ev-chip",o.textContent=r,o.setAttribute("aria-pressed","false"),o.onclick=()=>{if(this._tags.has(r))this._tags.delete(r);else this._tags.add(r);o.setAttribute("aria-pressed",String(this._tags.has(r))),this.render()},n.append(o)}e.append(n)}return e}filtered(){return this._rows.filter((e)=>{if(this._tags.size&&!(e.tags||[]).some((i)=>this._tags.has(i)))return!1;if(!this._query)return!0;let t=this._spec?.body?e[this._spec.body]:"";return[e.name,t,...e.tags||[]].join(" ").toLowerCase().includes(this._query)})}render(){if(!this._body)return;let e=this.filtered();if(this._body.replaceChildren(),!e.length){let r=document.createElement("p");r.className="ev-empty",r.textContent="Nothing matches that filter.",this._body.append(r);return}if(this._view==="cards"&&this._spec){let r=document.createElement("div");r.className="ev-cards";for(let o of e)r.append(this.card(o,this._spec));this._body.append(r);return}let t=this.getAttribute("columns"),i=zh({array:e,columns:t?JSON.parse(t):void 0,rowHeight:34}),s=34,n=e.length*s+44;i.style.height=this.getAttribute("height")||`min(60vh, ${n}px)`,i.style.display="block",this._body.append(i)}card(e,t){let i=document.createElement("section");if(i.className="ev-card",i.id=`${t.idPrefix}-${ZP(e.name)}`,e.image){let r=document.createElement("img");r.className="ev-img",r.src=new URL(e.image,Bc).href,r.alt=e.name,r.loading="lazy",i.append(r)}let s=document.createElement("h3");s.textContent=e.name,i.append(s);let n=document.createElement("dl");n.className="ev-fields";for(let r of t.card){let o=document.createElement("dt");o.textContent=r.label;let a=document.createElement("dd");a.textContent=NP(e[r.prop]),n.append(o,a)}if(i.append(n),t.body&&e[t.body]){let r=document.createElement("p");r.className="ev-body",r.textContent=e[t.body],i.append(r)}return i}}if(!customElements.get("foresight-table"))customElements.define("foresight-table",iE);if(/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)){let e=location.protocol==="https:",t=e?"https://localhost:8701":"http://localhost:8700",i=e?"wss://localhost:8701":"ws://localhost:8700",s=document.createElement("script");s.src=`${t}/component.js?autoInject=true&serverUrl=${i}/ws/browser`,s.async=!0,s.onerror=()=>{},document.head.appendChild(s)}tE();})();
 
-//# debugId=1FEA75CE279FEC4464756E2164756E21
+//# debugId=FBF3FA628F88EC5A64756E2164756E21
 //# sourceMappingURL=iife.js.map

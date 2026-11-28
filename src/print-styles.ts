@@ -150,17 +150,77 @@ const CSS = `
     padding: 0 0 0 0.4em !important;
   }
 
-  /* Page 1 is who they are: identity, attributes, background. Page 2 is what
-     they can do: skills and fields. Breaking there deliberately beats letting
-     the skills table start four rows before the bottom of page 1. */
-  foresight-character-sheet section:has([part="skills"]) {
-    break-before: page;
-    page-break-before: always;
+  /* ATTRIBUTES and BACKGROUND FACTORS side by side: one is five lines, the
+     other is four, and stacked they waste half a page each. Inline-block
+     rather than flex because they are plain siblings with no wrapper. */
+  foresight-character-sheet section:has([part="attrs"]),
+  foresight-character-sheet section:has([part="bfList"]) {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+    margin-right: 1.5% !important;
   }
 
-  /* SKILLS: a long table — let it breathe and let it break. */
+  /* Pair up the other short panels too — Fields beside Familiarities, Condition
+     beside Gear. Each is a few lines, and stacked they cost a third of a page
+     in whitespace. This is what gets the sheet onto one side of paper. */
+  foresight-character-sheet section:has([part="fieldList"]),
+  foresight-character-sheet section:has([part="ltfList"]),
+  foresight-character-sheet section:has([part="condNote"]),
+  foresight-character-sheet section:has(textarea[placeholder]) {
+    display: inline-block !important;
+    width: 48% !important;
+    vertical-align: top !important;
+    margin-right: 1.5% !important;
+  }
+
+  /* SKILLS: Skill, Formula, Score, BEF. Conf., Level and Max are how the score
+     was arrived at and what it could become — build info. Formula stays
+     because it is genuinely useful mid-game when an attribute changes. */
+  foresight-character-sheet [part="skills"] th:nth-child(3),
+  foresight-character-sheet [part="skills"] td:nth-child(3),
+  foresight-character-sheet [part="skills"] th:nth-child(4),
+  foresight-character-sheet [part="skills"] td:nth-child(4),
+  foresight-character-sheet [part="skills"] th:nth-child(5),
+  foresight-character-sheet [part="skills"] td:nth-child(5),
+  foresight-character-sheet [part="skills"] th:nth-child(6),
+  foresight-character-sheet [part="skills"] td:nth-child(6) { display: none !important; }
   foresight-character-sheet [part="skills"] table { font-size: 0.82em !important; }
   foresight-character-sheet [part="skills"] thead { display: table-header-group; }
+  foresight-character-sheet [part="skills"] th:last-child,
+  foresight-character-sheet [part="skills"] td:last-child,
+  foresight-character-sheet [part="skills"] th:nth-last-child(2),
+  foresight-character-sheet [part="skills"] td:nth-last-child(2) { text-align: right !important; }
+
+  /* IDENTITY: the character's name is the title of the page, not a labelled
+     field, and Archetype is a chargen shortcut nobody reads at the table. */
+  foresight-character-sheet [part="nameField"] [part="caption"] { display: none !important; }
+  foresight-character-sheet [part="nameField"] input {
+    font-size: 20pt !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+  }
+  foresight-character-sheet [part="nameField"] { display: block !important; width: 100% !important; }
+  foresight-character-sheet tosi-field:has([part="archPick"]) { display: none !important; }
+
+  /* TIGHTEN: the target is one sheet of paper, and screen line-heights are
+     generous by design. The skills table is the bulk of the page, so it gets
+     the hardest squeeze. */
+  foresight-character-sheet { font-size: 9.5pt !important; line-height: 1.2 !important; }
+  foresight-character-sheet .fs-panel { padding: 3pt 5pt !important; margin-bottom: 4pt !important; }
+  foresight-character-sheet h3 { margin: 1pt 0 2pt !important; font-size: 1.05em !important; }
+  foresight-character-sheet th, foresight-character-sheet td {
+    padding: 0.5pt 3pt !important;
+    line-height: 1.15 !important;
+  }
+  foresight-character-sheet [part="skills"] table { font-size: 8pt !important; }
+  foresight-character-sheet [part="skills"] td,
+  foresight-character-sheet [part="skills"] th { line-height: 1.1 !important; }
+  /* the condition inputs are full-size form controls; they only need to hold
+     one digit on paper */
+  foresight-character-sheet input.fs-num,
+  foresight-character-sheet input[type="number"] { width: 3em !important; line-height: 1.2 !important; }
+  foresight-character-sheet textarea { line-height: 1.2 !important; }
 
   foresight-character-sheet .fs-step,
   foresight-character-sheet button,
