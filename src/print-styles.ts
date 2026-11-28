@@ -100,9 +100,20 @@ const CSS = `
     height: auto !important;
   }
 
-  /* The slot counter ("4 / 4 slots used") is budget feedback while building. */
+  /* THE PRINTED SHEET IS FOR PLAY; THE APP IS FOR BUILDING. So nothing that
+     only exists to help you generate or update a character goes on paper.
+
+     Every "add a thing" row is a control: it carries an empty text box, a
+     number spinner and a button, all of which print as stray furniture. They
+     are the rows with buttons in them. */
+  foresight-character-sheet .fs-row:has(button),
+  foresight-character-sheet .fs-row:has(input[list]),
   foresight-character-sheet [part="slots"],
-  foresight-character-sheet [part="pools"] { display: none !important; }
+  foresight-character-sheet [part="pools"],
+  foresight-character-sheet datalist,
+  /* Points Awards is a ledger of where the build points came from — the purest
+     generation info on the sheet. */
+  foresight-character-sheet section:has([part="awardList"]) { display: none !important; }
 
   /* ATTRIBUTES: only the name and the Final value matter on paper — Base,
      Conferred, Bought and Cost are the arithmetic that got you there. The
@@ -137,6 +148,14 @@ const CSS = `
     list-style: disc inside !important;
     border: 0 !important;
     padding: 0 0 0 0.4em !important;
+  }
+
+  /* Page 1 is who they are: identity, attributes, background. Page 2 is what
+     they can do: skills and fields. Breaking there deliberately beats letting
+     the skills table start four rows before the bottom of page 1. */
+  foresight-character-sheet section:has([part="skills"]) {
+    break-before: page;
+    page-break-before: always;
   }
 
   /* SKILLS: a long table — let it breathe and let it break. */
