@@ -386,7 +386,7 @@ export class ForesightCharacterSheet extends Component {
         tosiField({ caption: 'Name', part: 'nameField' }, input({ bindValue: fsSheet.char.name, onInput: this.changed })),
         tosiField({ caption: 'Archetype' }, tosiSelect({ part: 'archPick', placeholder: 'none' })),
         tosiField({ caption: 'Age' }, input({ bindValue: fsSheet.char.age, onInput: this.changed })),
-        tosiField({ caption: 'Wealth' }, input({ bindValue: fsSheet.char.wealth, onInput: this.changed }))
+        tosiField({ caption: 'Wealth' }, div({ part: 'wealthHost' }))
       ),
       tosiField(
         { caption: 'Concept' },
@@ -578,6 +578,33 @@ export class ForesightCharacterSheet extends Component {
     if (sel) sel.options = names.length ? names.join(',') : ''
   }
 
+  /** Wealth is a seven-rung ladder, not free text: 10 a rung up, 5 back down. */
+  private renderWealth() {
+    const host = this.parts.wealthHost
+    if (!host) return
+    const cur = R.wealthTier(this.char)
+    const sel = document.createElement('select')
+    R.WEALTH.forEach((w, i) => {
+      const d = i - R.WEALTH_DEFAULT
+      const cost = d === 0 ? 'free' : d > 0 ? `${d * R.WEALTH_UP_COST} pts` : `+${-d * R.WEALTH_DOWN_REFUND} pts back`
+      const o = document.createElement('option')
+      o.value = w.name
+      o.textContent = `${w.name} — ${cost}`
+      o.title = w.note
+      sel.appendChild(o)
+    })
+    sel.value = R.WEALTH[cur].name
+    sel.onchange = () => {
+      this.char.wealth = sel.value
+      this.changed()
+    }
+    host.replaceChildren(sel)
+    const note = document.createElement('small')
+    note.className = 'fs-muted'
+    note.textContent = ' ' + R.WEALTH[cur].note
+    host.appendChild(note)
+  }
+
   private refreshTemplates() {
     const sel = this.parts.tmplPick as any
     if (sel) sel.options = this.TEMPLATES.length ? this.TEMPLATES.map((t) => t.name).join(',') : ''
@@ -666,6 +693,8 @@ export class ForesightCharacterSheet extends Component {
       this.parts.slots.replaceChildren(
         span({ class: used > c.slots ? 'fs-warn' : 'fs-muted' }, `${used} / ${c.slots} slots used`)
       )
+
+    this.renderWealth()
 
     // attributes
     this.parts.attrs?.replaceChildren(

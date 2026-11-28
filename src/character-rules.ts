@@ -58,6 +58,39 @@ export const ATTR_COST_LOW = 10
 export const ATTR_COST_HIGH = 20
 /** Fields of Knowledge cost 4 points per year of study. */
 export const FIELD_COST_PER_YEAR = 4
+
+/**
+ * WEALTH — a seven-rung ladder, default "Getting By". Buying up a rung costs
+ * 10; selling one down refunds 5. The asymmetry is deliberate: poverty is a
+ * real drawback but it is not a *bargain*, so you cannot fund a character by
+ * being destitute (the same reasoning as attributes, which are symmetric
+ * precisely because a low attribute bites broadly and constantly).
+ */
+export const WEALTH = [
+  { name: 'Desperate', note: 'homeless; struggling to find food' },
+  { name: 'Struggling', note: 'struggling to make rent' },
+  { name: 'Getting By', note: 'paycheck to paycheck — no real savings or resources' },
+  { name: 'Comfortable', note: 'all needs met, and money to spare' },
+  { name: 'Rich', note: 'money to indulge' },
+  { name: 'Generational Wealth', note: 'if you went broke you would still somehow be fine (think the Kennedys)' },
+  { name: 'Dynastic Wealth', note: 'going broke would involve some kind of political upheaval (think the Rothschilds)' },
+] as const
+
+export const WEALTH_DEFAULT = 2 // "Getting By"
+export const WEALTH_UP_COST = 10
+export const WEALTH_DOWN_REFUND = 5
+
+/** Index of a character's wealth tier. Unrecognised or empty = the default. */
+export function wealthTier(c: Character): number {
+  const i = WEALTH.findIndex((w) => w.name === (c.wealth || '').trim())
+  return i < 0 ? WEALTH_DEFAULT : i
+}
+
+/** Points spent on wealth: 10 a rung up, 5 back a rung down. */
+export function wealthSpend(c: Character): number {
+  const d = wealthTier(c) - WEALTH_DEFAULT
+  return d >= 0 ? d * WEALTH_UP_COST : d * WEALTH_DOWN_REFUND
+}
 /** Default background-factor slot budget. */
 export const DEFAULT_SLOTS = 4
 
@@ -312,6 +345,7 @@ export function pools(
   for (const a of ATTRS) spent += attrBuySpend(c, a)
   for (const n of skillNames) if (c.skills[n]) spent += skillBuySpend(c, defs, n)
   spent += fieldBuySpend(c)
+  spent += wealthSpend(c)
 
   return { pts: granted - spent, granted, spent }
 }

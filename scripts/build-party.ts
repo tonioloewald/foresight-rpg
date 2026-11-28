@@ -86,7 +86,7 @@ const SPECS: Spec[] = [
     player: 'Ville',
     concept:
       'Full-time magician, and the first of them to stop going home — he read anthropology before he went, which has turned out to be the best fieldwork posting anyone in the discipline never published. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.',
-    wealth: 'Comfortable — a magician who can be hired',
+    wealth: 'Comfortable', // a magician who can be hired
     attrs: [6, 7, 10, 9, 8],
     bfs: ['Human', 'Magical Talent', 'Magical Apprenticeship', 'Tertiary Education', 'Mysterious Mentor'],
     // the four fundamentals he actually works in, at Basic
@@ -115,7 +115,7 @@ const SPECS: Spec[] = [
     player: 'Elena',
     concept:
       'Gone native, and prospering: a successful sheep farmer — wool and meat — who read agricultural science on Earth and has quietly applied four centuries of it to a renaissance countryside. The most materially successful of the five, and the one with the most to lose.',
-    wealth: 'Prosperous — land, flock and a good name locally',
+    wealth: 'Comfortable', // land and a flock are assets, not spending money
     attrs: [9, 8, 9, 8, 6],
     bfs: ['Human', 'Tertiary Education', 'Office Experience', 'Field Experience', 'Apprentice'],
     fields: [['Biology', 3], ['Beast Lore', 2], ['Herbalism', 1]],
@@ -129,7 +129,7 @@ const SPECS: Spec[] = [
     player: 'Anu',
     concept:
       'Daughter of a British baron, and the only one of them whose background translates directly: Fvaldanon runs on 19th-century social structures, so an aristocrat who knows how to be received is useful on both sides of the cellar door. Has not gone native; her Earth profession is still to be decided (15 points and 5 years of education held in reserve).',
-    wealth: 'Family money on Earth; standing, not cash, in Fvaldanon',
+    wealth: 'Generational Wealth', // a baron's daughter: going broke would not actually ruin her
     attrs: [6, 8, 9, 10, 7],
     bfs: ['Human', 'Privileged Childhood', 'Tertiary Education', 'Office Experience', 'Artistic'],
     fields: [['Etiquette', 3], ['Politics', 2], ['History', 1]],
@@ -161,7 +161,7 @@ function build(spec: Spec): R.Character {
   c.name = spec.name
   c.concept = spec.concept
   c.age = '35'
-  c.wealth = spec.wealth ?? ''
+  c.wealth = spec.wealth ?? R.WEALTH[R.WEALTH_DEFAULT].name
   // They move between a modern Earth and a renaissance-fantasy world, so both
   // content sets are live on the sheet.
   c.activeTags = ['standard', 'modern', 'fantasy']
@@ -235,7 +235,7 @@ for (const spec of SPECS) {
     .sort((a, b) => b[1] - a[1]).slice(0, 5).map(([n, v]) => `${n} ${v}`).join(', ')
   console.log(
     `${c.name.padEnd(22)} ${R.ATTRS.map((a) => `${a}${String(R.finalAttr(c, a)).padStart(2)}`).join(' ')}` +
-      ` | slots ${slots}/${c.slots} | ${String(p.pts).padStart(2)} left of ${String(p.granted).padStart(3)}` +
+      ` | ${c.wealth.padEnd(19)} | ${String(p.pts).padStart(2)} left of ${String(p.granted).padStart(3)}` +
       `${spec.reserve ? ` (${spec.reserve} reserved)` : ''}\n` +
       `${''.padEnd(22)} ${top}\n${''.padEnd(22)} fields: ${c.field.map((f) => `${f.name} ${f.years}y`).join(', ')}`
   )

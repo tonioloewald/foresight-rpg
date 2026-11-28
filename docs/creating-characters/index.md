@@ -136,7 +136,21 @@ Quirks, perks and flaws are all deviations from an attribute's default — which
 
 Decide your character's name, sex, age (within reason, given the backgrounds — each adult factor is one to five years), personality, and life story. ForeSight includes a set of **character sketches** — potted personalities from adventure stories — to draw on, alter, or ignore. There are no rules here aside from common sense and your understanding of human nature.
 
-Note your **wealth** (the GM sets the campaign base; backgrounds may have moved yours up or down) and buy starting equipment.
+### Wealth
+
+**Wealth is a seven-rung ladder**, and where you sit on it is bought like anything else: **10 points to climb a rung, 5 back if you sell one.** The default is **Getting By** and costs nothing. *(The asymmetry is deliberate — poverty is a real drawback, but it must not be a bargain, or every character funds themselves by being destitute.)*
+
+| | Tier | What it means | Cost |
+|---|---|---|---:|
+| | **Desperate** | homeless; struggling to find food | **+10 back** |
+| | **Struggling** | struggling to make rent | **+5 back** |
+| ◀ | **Getting By** | paycheck to paycheck — no real savings or resources | **free** |
+| | **Comfortable** | all needs met, and money to spare | **10** |
+| | **Rich** | money to indulge | **20** |
+| | **Generational Wealth** | if you went broke you'd still somehow be fine — think the Kennedys | **30** |
+| | **Dynastic Wealth** | going broke would involve some kind of political upheaval — think the Rothschilds | **40** |
+
+The GM sets the campaign's base rung; a background factor may move yours up or down from there. Then buy starting equipment.
 
 **Personality is the point.** What a character wants to do and is willing to do matter far more than what they can do. Players who consult each other at this stage get better campaigns: two rival archaeologists who were once best friends are worth more than any background factor.
 

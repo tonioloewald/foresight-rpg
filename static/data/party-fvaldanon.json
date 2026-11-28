@@ -3,7 +3,7 @@
     "name": "Ezekiel Blackthorne",
     "arch": "",
     "age": "35",
-    "wealth": "",
+    "wealth": "Getting By",
     "concept": "Hunter, ranger and scout. The one who finds the way through and the way back. Has not gone native — he still has a life on Earth, and a profession there still to be decided (15 points and 5 years of education are held in reserve for it).",
     "base": {
       "ST": 8,
@@ -210,7 +210,7 @@
     "name": "William the White",
     "arch": "",
     "age": "35",
-    "wealth": "Comfortable — a magician who can be hired",
+    "wealth": "Comfortable",
     "concept": "Full-time magician, and the first of them to stop going home — he read anthropology before he went, which has turned out to be the best fieldwork posting anyone in the discipline never published. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.",
     "base": {
       "ST": 6,
@@ -228,10 +228,10 @@
     },
     "skills": {
       "Incantation": {
-        "level": 4
+        "level": 3
       },
       "Theory": {
-        "level": 5
+        "level": 3
       }
     },
     "field": [
@@ -420,7 +420,7 @@
     "name": "Roland Farharvest",
     "arch": "",
     "age": "35",
-    "wealth": "Prosperous — land, flock and a good name locally",
+    "wealth": "Comfortable",
     "concept": "Gone native, and prospering: a successful sheep farmer — wool and meat — who read agricultural science on Earth and has quietly applied four centuries of it to a renaissance countryside. The most materially successful of the five, and the one with the most to lose.",
     "base": {
       "ST": 9,
@@ -438,19 +438,19 @@
     },
     "skills": {
       "Theory": {
-        "level": 5
+        "level": 4
       },
       "Riding": {
-        "level": 6
+        "level": 4
       },
       "Charm": {
-        "level": 5
+        "level": 4
       },
       "Repair": {
-        "level": 5
+        "level": 4
       },
       "Melee": {
-        "level": 5
+        "level": 4
       }
     },
     "field": [
@@ -643,7 +643,7 @@
     "name": "Serafina von Aldpricht",
     "arch": "",
     "age": "35",
-    "wealth": "Family money on Earth; standing, not cash, in Fvaldanon",
+    "wealth": "Generational Wealth",
     "concept": "Daughter of a British baron, and the only one of them whose background translates directly: Fvaldanon runs on 19th-century social structures, so an aristocrat who knows how to be received is useful on both sides of the cellar door. Has not gone native; her Earth profession is still to be decided (15 points and 5 years of education held in reserve).",
     "base": {
       "ST": 6,
@@ -661,19 +661,19 @@
     },
     "skills": {
       "Charm": {
-        "level": 7
+        "level": 2
       },
       "Confidence": {
-        "level": 6
+        "level": 2
       },
       "Riding": {
-        "level": 6
+        "level": 2
       },
       "Perform": {
-        "level": 6
+        "level": 2
       },
       "Search": {
-        "level": 6
+        "level": 2
       }
     },
     "field": [
@@ -859,7 +859,7 @@
     "name": "Wilhemina Ashcroft",
     "arch": "",
     "age": "35",
-    "wealth": "",
+    "wealth": "Getting By",
     "concept": "A doctor on Earth and a healer in Fvaldanon, where she practises as a herbalist and uses the minor magics — she has the apprenticeship but not the Talent, so the great fundamentals are closed to her and the small ones are enough. Modern medicine in a renaissance town is the most dangerous secret any of them carry.",
     "base": {
       "ST": 6,

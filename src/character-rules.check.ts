@@ -69,6 +69,21 @@ eq('fieldBuySpend 3yr', R.fieldBuySpend(c), 12)
 // pools: granted 20 + award 5; spent = skills 3 + fields 12
 c.awards.push({ amt: 5 })
 eq('pools', R.pools(c, defs, Object.keys(defs)), { pts: 25 - 15, granted: 25, spent: 15 })
+// wealth: 10 a rung up, 5 back a rung down, default free
+c.wealth = ''
+eq('wealth default is free', R.wealthSpend(c), 0)
+c.wealth = 'Comfortable'
+eq('wealth +1 rung costs 10', R.wealthSpend(c), 10)
+c.wealth = 'Dynastic Wealth'
+eq('wealth +4 rungs costs 40', R.wealthSpend(c), 40)
+c.wealth = 'Struggling'
+eq('wealth -1 rung refunds 5', R.wealthSpend(c), -5)
+c.wealth = 'Desperate'
+eq('wealth -2 rungs refunds 10', R.wealthSpend(c), -10)
+c.wealth = 'a good name locally'
+eq('unrecognised wealth text is free', R.wealthSpend(c), 0)
+c.wealth = ''
+
 // clamp: drop CO so Archery's max falls, ensure bought level is clamped
 c.skills.Archery = { level: 9 }
 c.base.CO = 2
