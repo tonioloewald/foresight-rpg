@@ -815,12 +815,16 @@ export class ForesightCharacterSheet extends Component {
                 button({ class: 'fs-step', onClick: () => this.bumpLevel(n, 1), disabled: atCap }, '+')
               ),
               td({ class: 'fs-num fs-muted' }, String(mx)),
-              td({ class: 'fs-num fs-score' }, String(R.score(c, this.SKILLS, n))),
+              // A skill you HAVE should read louder than one you don't. Absent
+              // rows are faded, not flagged: there is nothing wrong with not
+              // having a skill, and in red the absent values were shouting over
+              // the real ones.
+              td({ class: has ? 'fs-num fs-score' : 'fs-num fs-muted' }, String(R.score(c, this.SKILLS, n))),
               // Absent: show the EFFECTIVE ease factor, with what it would be
               // if you had the skill in parentheses. "3 (−2)" read as though
               // the penalty had still to be applied; 3 already is the answer.
               td(
-                { class: has ? 'fs-num fs-muted' : 'fs-num fs-warn' },
+                { class: 'fs-num fs-muted' },
                 has ? String(bef) : `${bef} (${Number(this.SKILLS[n].bef) || 5})`
               )
             )
