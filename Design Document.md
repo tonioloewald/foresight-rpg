@@ -1027,6 +1027,32 @@ decades of first-hand evidence that the magic delivers, and only meets the curve
 once he is far enough up it to be complicit. The rule generates the villain *and*
 the lie the villain needs to staff itself.
 
+### The sharper version: the *moral trajectory* fell out of the rules too
+
+The school began as **healers**. Tonio: *"at first they seemed like healers, but
+eventually the temptation got too much — and that's why that school of magic was
+exterminated in the end, and why the Domain left the Empire, and ultimately the
+Empire fell (mostly a Good Thing)."*
+
+That slide is in our spell list today. Essence merges **Instil (giving)** and
+**Tap (taking)**, and the two sides are the *same effects mirrored at the same
+intensity* — §14B1 Lend Vigor ↔ §22B1 Drain Vigor (0 → 0); §14B5 Take Wound ↔
+§22B2 Inflict Wound (1 → 1); §14B6 Take Disease ↔ §22B3 Inflict Disease (1 → 1)
+— with §22A12 Steal Years further up the same tree. The only separation is the
+fundamental's own rule that taking is one complexity level harder than giving: a
+speed bump, not a wall.
+
+**So you cannot train a healer in Essence without training someone one step from
+a predator**, and the step gets easier the better they get. The arc is not a
+story bolted onto a spell list; it is what that spell list does to the people who
+learn it, given time and mortality.
+
+It also makes the Dominion of the Hand's **total** ban on magic rational rather
+than hysterical. They did not outlaw magic after being hurt by war-magic. They
+outlawed it after watching **the healers** become the thing that farmed them — an
+inductive argument from the worst available evidence, and the reason the
+setting's most technologically advanced state is the one with no magic at all.
+
 **Three things this is evidence for, beyond the anecdote:**
 
 1. **Generative magic earns its keep.** A composable, honestly-costed effect
@@ -1036,6 +1062,9 @@ the lie the villain needs to staff itself.
 2. **Diminishing returns are a worldbuilding instrument, not just a balance
    patch.** A linear drain gives you a vampire; a *diminishing* drain gives you a
    pyramid scheme, which is a far more interesting thing to put on a map.
+   Likewise **pairing giving and taking inside one fundamental** is not just tidy
+   taxonomy — it is what makes a school of healers a tragedy waiting to happen,
+   and it cost nothing to arrange.
 3. **It is 40-year-old table evidence** for a principle this edition currently
    asserts on reasoning alone — and it came from a campaign run on someone else's
    rules, which makes it independent of ForeSight's own intentions.
