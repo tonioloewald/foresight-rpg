@@ -102,7 +102,7 @@
   {
     "name": "Electronics",
     "parent": "Physics",
-    "years": 3,
+    "years": 4,
     "thread": "Physics",
     "tags": [
       "modern",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Accounting",
-    "parent": "Economics",
+    "parent": null,
     "years": 3,
     "thread": "Social/Legal",
     "tags": [
@@ -203,7 +203,7 @@
   },
   {
     "name": "Business",
-    "parent": "Economics",
+    "parent": null,
     "years": 3,
     "thread": "Social/Legal",
     "tags": [
@@ -213,7 +213,7 @@
   },
   {
     "name": "Psychology",
-    "parent": "Lore",
+    "parent": null,
     "years": 3,
     "thread": "Biology",
     "tags": [
@@ -235,7 +235,7 @@
   },
   {
     "name": "Etiquette",
-    "parent": "Lore",
+    "parent": null,
     "years": 1,
     "thread": "Social/Legal",
     "tags": [

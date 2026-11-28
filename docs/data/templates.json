@@ -146,7 +146,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -310,7 +311,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -467,7 +469,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -601,7 +604,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -764,7 +768,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -934,7 +939,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -1093,7 +1099,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -1247,7 +1254,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -1403,7 +1411,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -1563,7 +1572,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -1733,7 +1743,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -1895,7 +1906,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -2050,7 +2062,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -2210,7 +2223,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,

@@ -249,6 +249,39 @@ export function skillBuySpend(c: Character, defs: Record<string, SkillDef>, name
   return conferredAtAll(c, name) ? cost * lv : cost * (SKILL_ACQUIRE_MULT + lv)
 }
 
+/**
+ * **Fields are RELATED, not nested** (Tonio, 2026-11-28). A `parent` in
+ * fields.json does not mean prerequisite and does not mean containment: *"you
+ * might know business and economics, or medicine and biology, but you don't
+ * need to know one before the other — though doing so is an advantage in many
+ * cases."* So you buy each field you want, at its own cost, in any order.
+ *
+ * What the link IS for is that advantage: holding a neighbour should help. This
+ * returns the fields adjacent to `name` — its parent and its children — for
+ * whatever that bonus turns out to be. **The size of the bonus is not yet
+ * decided, so nothing applies it yet.**
+ */
+export function relatedFields(
+  defs: Record<string, { parent?: string | null }>,
+  name: string
+): string[] {
+  const out = new Set<string>()
+  const parent = defs[name]?.parent
+  if (parent) out.add(parent)
+  for (const [n, d] of Object.entries(defs)) if (d?.parent === name) out.add(n)
+  return [...out]
+}
+
+/** Which of a character's own fields are adjacent to `name` in the tree. */
+export function relatedFieldsHeld(
+  c: Character,
+  defs: Record<string, { parent?: string | null }>,
+  name: string
+): string[] {
+  const held = new Set(c.field.map((f) => f.name).concat(conferFields(c).map((f) => f.name)))
+  return relatedFields(defs, name).filter((n) => held.has(n))
+}
+
 export function fieldBuySpend(c: Character): number {
   return c.field.reduce((s, f) => s + FIELD_COST_PER_YEAR * (f.years || 1), 0)
 }

@@ -232,6 +232,10 @@ export class ForesightCharacterSheet extends Component {
       )
       return
     }
+    if (this.char.field.some((f) => f.name === name)) {
+      void TosiDialog.alert(`You already have ${name}.`)
+      return
+    }
     this.char.field.push({ name, years })
     ;(this.parts.fieldName as any).value = ''
     this.changed()
