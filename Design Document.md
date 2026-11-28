@@ -8,6 +8,20 @@ A streamlined, updated edition of ForeSight built on the unpublished 2004 2nd ed
 
 **Source hierarchy, sharpened (2026-07-17).** The rules *derive* from 2004 — text, structure, terminology — as amended by the decided simplifications below. 1986 is a **content quarry**: mine it for what 2004 dropped and for tone, but assume anything drawn from it needs revision and updating. The asymmetry to keep in mind is that the two drafts fail in opposite directions: **2004 is edited, modernized and proofread but was never playtested; 1986 shipped and got played.** So 2004 winning the *prose* is uncontroversial, while 2004 winning a *number* is an untested intention overriding table evidence. Where they disagree on a number or a probability, that is a calibration question for REVIEW.md, not a default.
 
+## Provenance: the setting came first (2026-11-28, Tonio)
+
+*"It's not surprising ForeScene has a trail — it predates ForeSight. I originally wrote it as the missing setting for SPI's Universe and then wrote ForeSight when I found out SPI was defunct."*
+
+**The system was written to carry a world that already existed.** The sequence is: a ~300-page sourcebook for SPI's *Universe* (the summer of 1983–4), then **ForeScene** as the setting that game was missing, then the discovery that SPI had folded — and only then a system of its own, because the setting needed one. ForeSight is not a ruleset that later acquired settings; it is the ruleset a setting needed.
+
+Three things follow, and all three are already house principles arriving from their source:
+
+- **"Transparency — the setting seen through the rules is just the setting."** That reads as an aesthetic preference until you know the rules were written *second*, to be the window. A rule that shapes the world without being asked to isn't a design flaw here, it is a betrayal of the original brief.
+- **"Players go where the system has teeth."** The unwritten chapters (Interpersonal, Travel, Religion, NPCs) are not optional colour that a combat engine can do without. The combat engine is the thing that got written *for* a setting, and chapters without consequence are places the setting cannot be played.
+- **The benchmark has always been a world, not a competitor.** Which is the same instinct as *the standard is absolute, not relative* — the question was never "better than Universe", it was "what does this world need in order to be playable".
+
+*Archival note: ForeScene survives as a published adventure (The Flawed Utopia), one page of its own on the ~1996 site, and the 1986 spacesuit illustration — see `legacy/README.md`. The campaign setting itself was deliberately retired: "The campaign setting originally described in ForeScene will not be reprinted in its original form."*
+
 ## First principle (the thesis)
 
 **Keep mechanics simple, but push the probabilities in the right general direction with the right general magnitude — and let the results speak for themselves.** ForeSight does not chase precise simulation. It chases *believable* outcomes from *memorable* rules: a handful of common-sense ease-factor modifiers, one resolution rule, and outcomes whose likelihoods lean the way reality leans. Everything below serves this. When a choice is between mechanical fidelity and a rule you can run from memory that still points the right way, choose the latter. The emergent behaviors this produces — combat that rewards suppression over focus-fire, snipers who can't be certain they'll fire first, armor that's worth wearing — are evidence the approach works, not features that were each separately engineered.
@@ -956,6 +970,22 @@ Background factors work **like skills**: you add them **sequentially as an order
 3. **Specific skills/fields, directly conferred and swappable** — the factor hands you a themed starter set the player may reassign to thematically-appropriate alternatives. *College → Theory, Psychology, Accounting, Business. Apprentice → Repair, Electrical, Plumbing, Carpentry.* Take them as given or swap within the spirit of the factor.
 
 So a factor = (category, exclusivity) + (cost) + (unrestricted pts) + (restricted pts, with domain) + (default specific skills/fields, swappable). This subsumes the playtest pack's flat "skill +N" grants as the special case where everything is pre-spent into specific skills.
+
+## The 1995 edition, and what a found source is worth (2026-11-28)
+
+A complete 77-page edition turned up during an archive search: **ForeSight Enhanced**, © 1986–95, FrameMaker on a Macintosh 840av, *"created especially for the internet"* — sitting between 1986 and 2004, and absent from the source hierarchy until now. It states its own editorial rule in §1.1, and it is the rule this project has been using: *"rules which were seldom used have been eliminated or replaced, while rules which found more-or-less frequent, problem-free use have been left as they were."*
+
+**So it is the only source with both editing and play behind it** — exactly the combination the evidence standard below says 2004 lacks. The temptation is to promote it. That would be a mistake, and the reason is worth keeping:
+
+**A found source is not a verdict, it is a vote.** 2004 *reverted* several of 1995's ideas — a separate QR die (D10 + SC/20), extra QR5/QR6 rungs, a UCDC table running to ST 15 → 8. Those are not lost wisdom; they are a designer trying something and a later designer, the same one, deciding against it. So what the find actually buys is **an agreement pattern**, which is more useful than another authority:
+
+- **1995 with 1986 against 2004** — strong. The clearest case is the QR2 threshold at **SC/5**, which both shipped editions use and which 2026 has at SC/4. Two editions against one on a live calibration item. (Note the coupling: 1986's yields were 100/90/75/50 against 2026's 100/80/50/25, so the threshold and the yield cannot be adopted separately.)
+- **1995 alone** — a tried-and-dropped idea. Informative about what was *attempted*, not about what works.
+- **1995 agreeing with 2004** — settles an argument 1986 was losing anyway.
+
+**And one thing it straightforwardly vindicates.** §9.6.1 already states *read one column, not four*, in 1995's own words: *"A QR1 is not necessarily both very fast and much more successful than expected… If time-taken is irrelevant then a good QR should give a good result."* That rule has table history, not just 2026 reasoning — which is the best possible provenance for a rule this edition leans on as hard as it does.
+
+**Also worth mining:** 1995's **Damage Factor** — an additive ±n for things of human-ish robustness, a multiplier for things much larger or smaller (a horse is 0.5). That is a richer ancestor of 2026's Damage Scale, and the additive half is a ready-made model for what an **Endurance quirk** could confer, now that EN is a quirk family rather than an attribute. Full diff on board **#4409**.
 
 ## Evidence standard: use is not testing (2026-08)
 
