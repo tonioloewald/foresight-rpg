@@ -987,6 +987,63 @@ A complete 77-page edition turned up during an archive search: **ForeSight Enhan
 
 **Also worth mining:** 1995's **Damage Factor** — an additive ±n for things of human-ish robustness, a multiplier for things much larger or smaller (a horse is 0.5). That is a richer ancestor of 2026's Damage Scale, and the additive half is a ready-made model for what an **Endurance quirk** could confer, now that EN is a quirk family rather than an attribute. Full diff on board **#4409**.
 
+## Worked case: a villain that fell out of the magic rules (2026-11-28)
+
+The magic chapter's balance lenses say magic must be **generative** and designed
+with care, and the house principles say **transparency — the setting seen through
+the rules is just the setting**. Both have been stated as intentions. The archive
+has now produced a case where they were *tested*, in 1982–83, and held.
+
+**Ardasodom**, the Big Bad of the Fvaldamor campaign, was not written and then
+given stats. Tonio: *"unlike traditional big bads they fell out of the DragonQuest
+rules, and the ForeSight Magic system took those rules and adapted them."* Both
+systems let a magician drain life force, and both impose **diminishing returns**.
+That one property, followed honestly, produces the whole antagonist:
+
+- Staying young costs **more victims every year**, without limit.
+- So the only survivable arrangement is a **farm** that keeps growing.
+- So the thing at the centre is not a dark lord in a tower but an **institution**
+  — and its victims are a managed population, not a body count.
+
+**The mechanic is still in the catalogue**, and still does it. Essence
+**§22A12 Steal Years**: the invoker's physical age drops 2%, while targets age by
+**(n+2)%** of the invoker's *true* age, where `n` is the percentage of their age
+already removed. Holding a physical age of 40, and assuming a victim absorbs
+about 50 years before reaching their maximum lifespan:
+
+| invoker's true age | victim-years / yr | bodies / yr |
+|--:|--:|--:|
+| 50 | 14 | 0.3 |
+| 100 | 78 | 1.6 |
+| 200 | 205 | 4.1 |
+| 400 | 460 | 9.2 |
+| 800 | 970 | **19.4** |
+
+**Demand never plateaus**, so there is no steady state to settle into. And the
+sharpest part is at the *bottom* of the curve: at true age 50 the scheme costs
+about one body every three years — cheap, and it genuinely works. **So the
+recruitment pitch is not a lie.** A junior necromancer told he will rise has
+decades of first-hand evidence that the magic delivers, and only meets the curve
+once he is far enough up it to be complicit. The rule generates the villain *and*
+the lie the villain needs to staff itself.
+
+**Three things this is evidence for, beyond the anecdote:**
+
+1. **Generative magic earns its keep.** A composable, honestly-costed effect
+   produced a setting's antagonist, its economy, its social structure and its
+   recruitment problem — none of which anyone had to invent. That is the strongest
+   possible argument for pricing effects carefully rather than flavouring them.
+2. **Diminishing returns are a worldbuilding instrument, not just a balance
+   patch.** A linear drain gives you a vampire; a *diminishing* drain gives you a
+   pyramid scheme, which is a far more interesting thing to put on a map.
+3. **It is 40-year-old table evidence** for a principle this edition currently
+   asserts on reasoning alone — and it came from a campaign run on someone else's
+   rules, which makes it independent of ForeSight's own intentions.
+
+*Source: `legacy/fvaldanon/setting-notes.md`, from the 1982–83 Fvaldamor maps.
+The published §22A12 text already contains a 26:1 worked example; nobody had
+connected it to a setting.*
+
 ## Evidence standard: use is not testing (2026-08)
 
 **The 1986 core was blind-tested and iterated over decades — sent out to testers who didn't know the intent, across dozens of full distributions.** That is measurement. It is a different kind of evidence from "published and then played by a lot of people", which generates volume but very little signal: there's no control, nothing is recorded, and players **silently house-rule around anything broken**, so the failure is patched at ten thousand tables and reported by none of them. A rule whose text and behaviour diverge can survive many editions on those terms, because editions are additive and nobody re-derives arithmetic that looks fine. (Tonio's example: GURPS's impaling damage rule doing the opposite of what it describes, across six-plus editions.)
