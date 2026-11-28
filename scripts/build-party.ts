@@ -85,7 +85,7 @@ const SPECS: Spec[] = [
     name: 'William the White',
     player: 'Ville',
     concept:
-      'Full-time magician, and the first of them to stop going home. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.',
+      'Full-time magician, and the first of them to stop going home — he read anthropology before he went, which has turned out to be the best fieldwork posting anyone in the discipline never published. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.',
     wealth: 'Comfortable — a magician who can be hired',
     attrs: [6, 7, 10, 9, 8],
     bfs: ['Human', 'Magical Talent', 'Magical Apprenticeship', 'Tertiary Education', 'Mysterious Mentor'],
@@ -97,7 +97,11 @@ const SPECS: Spec[] = [
       ['Time (Advanced)', 3],
       ['Apportation (Advanced)', 3],
       ['Form (Advanced)', 3],
-      ['Sense (Advanced)', 3],
+      // Read anthropology before he emigrated, and has had the best fieldwork
+      // posting in the history of the discipline ever since. Bought ahead of the
+      // fourth advanced fundamental, which he gives up for it.
+      ['Anthropology', 3],
+      // Sense stays at Basic — this is the advanced fundamental he gave up.
       ['Lore', 2],
       'Theory',
       ['Natural Philosophy', 2],

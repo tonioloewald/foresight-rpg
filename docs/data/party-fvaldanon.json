@@ -211,7 +211,7 @@
     "arch": "",
     "age": "35",
     "wealth": "Comfortable — a magician who can be hired",
-    "concept": "Full-time magician, and the first of them to stop going home. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.",
+    "concept": "Full-time magician, and the first of them to stop going home — he read anthropology before he went, which has turned out to be the best fieldwork posting anyone in the discipline never published. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.",
     "base": {
       "ST": 6,
       "CO": 7,
@@ -264,7 +264,7 @@
         "years": 3
       },
       {
-        "name": "Sense (Advanced)",
+        "name": "Anthropology",
         "years": 3
       },
       {

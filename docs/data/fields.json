@@ -425,5 +425,15 @@
       "fantasy"
     ],
     "note": "the habits, tracks, weaknesses and worth of animals — and of things that are not quite animals"
+  },
+  {
+    "name": "Anthropology",
+    "parent": null,
+    "years": 3,
+    "thread": "Social/Legal",
+    "tags": [
+      "standard"
+    ],
+    "note": "peoples, kinship, custom and material culture — how a society actually works from the inside"
   }
 ]
