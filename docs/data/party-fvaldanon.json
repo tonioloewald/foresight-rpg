@@ -1,0 +1,1030 @@
+[
+  {
+    "name": "Ezekiel Blackthorne",
+    "arch": "",
+    "age": "35",
+    "wealth": "",
+    "concept": "Hunter, ranger and scout. The one who finds the way through and the way back. Has not gone native — he still has a life on Earth, and a profession there still to be decided (15 points and 5 years of education are held in reserve for it).",
+    "base": {
+      "ST": 8,
+      "CO": 9,
+      "IN": 7,
+      "PC": 10,
+      "WP": 6
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Search": {
+        "level": 5
+      },
+      "Stealth": {
+        "level": 4
+      },
+      "Archery": {
+        "level": 4
+      },
+      "Athletics": {
+        "level": 4
+      },
+      "Riding": {
+        "level": 4
+      },
+      "Melee": {
+        "level": 4
+      },
+      "Firearms": {
+        "level": 4
+      }
+    },
+    "field": [
+      {
+        "name": "Survival",
+        "years": 4
+      },
+      {
+        "name": "Beast Lore",
+        "years": 2
+      },
+      {
+        "name": "Tactics",
+        "years": 1
+      }
+    ],
+    "ltf": [
+      "The uplands of Hyalis",
+      "Tracking",
+      "The crossing itself"
+    ],
+    "quirk": [
+      "Speaks last",
+      "Carries a compass he does not trust"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "note": "The baseline. No bonus, no penalty, no slot — being ordinary is free.",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Field Experience",
+        "category": "General",
+        "slot": 1,
+        "grant": 22,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "PC": 1
+        },
+        "skills": {
+          "Search": 2,
+          "Stealth": 1,
+          "Firearms": 1,
+          "Cars": 1
+        },
+        "fields": [
+          {
+            "name": "Survival",
+            "years": 1
+          },
+          {
+            "name": "Tactics",
+            "years": 2
+          }
+        ],
+        "note": "Time spent out where the plan meets the weather. Balanced, and biased toward noticing things.",
+        "cat": "General",
+        "uid": "b2"
+      },
+      {
+        "name": "Intense Training",
+        "category": "General",
+        "slot": 1,
+        "grant": 17,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "ST": 1,
+          "CO": 1
+        },
+        "skills": {
+          "Athletics": 2,
+          "Melee": 2,
+          "Stealth": 1
+        },
+        "fields": [
+          {
+            "name": "Unarmed Combat",
+            "years": 1
+          }
+        ],
+        "note": "Years of it, under someone who did not care whether you enjoyed it. Skill-centric.",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Natural Athlete",
+        "category": "Intrinsic",
+        "once": true,
+        "slot": 1,
+        "grant": 31,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "ST": 2,
+          "CO": 1
+        },
+        "confers": [
+          "Deep Reserves (Endurance quirk)"
+        ],
+        "note": "Effortless physicality and rude health — the body other people train for and do not get.",
+        "cat": "Intrinsic",
+        "uid": "b4"
+      },
+      {
+        "name": "Tertiary Education",
+        "category": "General",
+        "slot": 1,
+        "grant": 27,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1
+        },
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Science",
+            "years": 1
+          },
+          {
+            "name": "Mathematics",
+            "years": 2
+          },
+          {
+            "name": "History",
+            "years": 2
+          }
+        ],
+        "note": "A degree and the habits that come with one: how to read a source, frame a question, and find out what is already known. Knowledge-centric — swap the fields for your discipline.",
+        "cat": "General",
+        "uid": "b5"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern",
+      "fantasy"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Crossbow and a good knife; a coat for the weather on both sides; boots that have been resoled twice."
+  },
+  {
+    "name": "William the White",
+    "arch": "",
+    "age": "35",
+    "wealth": "Comfortable — a magician who can be hired",
+    "concept": "Full-time magician, and the first of them to stop going home. Has the Talent, which is what opens the advanced fundamentals to him. Works in **Perception, Time, Shaping and Apportation** — in a world where magical apparatus runs the factories and carries the post, that is a profession with standing.",
+    "base": {
+      "ST": 6,
+      "CO": 7,
+      "IN": 10,
+      "PC": 9,
+      "WP": 8
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Theory": {
+        "level": 12
+      },
+      "Search": {
+        "level": 11
+      },
+      "Confidence": {
+        "level": 11
+      }
+    },
+    "field": [
+      {
+        "name": "Natural Philosophy",
+        "years": 2
+      },
+      {
+        "name": "Alchemy",
+        "years": 2
+      },
+      {
+        "name": "Lore",
+        "years": 4
+      },
+      {
+        "name": "Mathematics",
+        "years": 3
+      }
+    ],
+    "ltf": [
+      "Fvaldan apparatus",
+      "The four fundamentals he actually knows",
+      "Reading a room before speaking"
+    ],
+    "quirk": [
+      "Has not been back to Earth in a year",
+      "Writes everything down"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "note": "The baseline. No bonus, no penalty, no slot — being ordinary is free.",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Magical Talent",
+        "category": "Intrinsic",
+        "once": true,
+        "slot": 1,
+        "grant": 55,
+        "tags": [
+          "fantasy"
+        ],
+        "confers": [
+          "the talent itself"
+        ],
+        "note": "The rare thing that cannot be taught. Without it, only the minor magics are open to you.",
+        "cat": "Intrinsic",
+        "uid": "b2"
+      },
+      {
+        "name": "Magical Apprenticeship",
+        "category": "Unusual",
+        "slot": 1,
+        "grant": 41,
+        "tags": [
+          "fantasy"
+        ],
+        "skills": {
+          "Theory": 1
+        },
+        "fields": [
+          {
+            "name": "Lore",
+            "years": 2
+          }
+        ],
+        "confers": [
+          "taught the rudiments"
+        ],
+        "note": "You were shown the shape of it. Whether you can do anything with that is the Magical Talent question.",
+        "cat": "Unusual",
+        "uid": "b3"
+      },
+      {
+        "name": "Tertiary Education",
+        "category": "General",
+        "slot": 1,
+        "grant": 27,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1
+        },
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Science",
+            "years": 1
+          },
+          {
+            "name": "Mathematics",
+            "years": 2
+          },
+          {
+            "name": "History",
+            "years": 2
+          }
+        ],
+        "note": "A degree and the habits that come with one: how to read a source, frame a question, and find out what is already known. Knowledge-centric — swap the fields for your discipline.",
+        "cat": "General",
+        "uid": "b4"
+      },
+      {
+        "name": "Mysterious Mentor",
+        "category": "Unusual",
+        "slot": 1,
+        "grant": 25,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "WP": 1
+        },
+        "skills": {
+          "Theory": 1,
+          "Melee": 1
+        },
+        "fields": [
+          {
+            "name": "Lore",
+            "years": 2
+          }
+        ],
+        "confers": [
+          "someone who will answer, eventually"
+        ],
+        "note": "Somebody took an interest. You never entirely learned why, and they are not finished with you.",
+        "cat": "Unusual",
+        "uid": "b5"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern",
+      "fantasy"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "A working magician’s kit, notebooks, and the local licence that says he may use it."
+  },
+  {
+    "name": "Roland Farharvest",
+    "arch": "",
+    "age": "35",
+    "wealth": "Prosperous — land, flock and a good name locally",
+    "concept": "Gone native, and prospering: a successful sheep farmer — wool and meat — who read agricultural science on Earth and has quietly applied four centuries of it to a renaissance countryside. The most materially successful of the five, and the one with the most to lose.",
+    "base": {
+      "ST": 9,
+      "CO": 8,
+      "IN": 9,
+      "PC": 8,
+      "WP": 6
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Theory": {
+        "level": 5
+      },
+      "Riding": {
+        "level": 6
+      },
+      "Charm": {
+        "level": 5
+      },
+      "Repair": {
+        "level": 5
+      },
+      "Melee": {
+        "level": 5
+      }
+    },
+    "field": [
+      {
+        "name": "Biology",
+        "years": 4
+      },
+      {
+        "name": "Beast Lore",
+        "years": 2
+      },
+      {
+        "name": "Herbalism",
+        "years": 1
+      },
+      {
+        "name": "Business",
+        "years": 3
+      },
+      {
+        "name": "Trades",
+        "years": 2
+      }
+    ],
+    "ltf": [
+      "Sheep",
+      "The Hyalis uplands",
+      "Market day"
+    ],
+    "quirk": [
+      "Talks to the dogs",
+      "Never explains where an idea came from"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "note": "The baseline. No bonus, no penalty, no slot — being ordinary is free.",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Tertiary Education",
+        "category": "General",
+        "slot": 1,
+        "grant": 27,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1
+        },
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Science",
+            "years": 1
+          },
+          {
+            "name": "Mathematics",
+            "years": 2
+          },
+          {
+            "name": "History",
+            "years": 2
+          }
+        ],
+        "note": "A degree and the habits that come with one: how to read a source, frame a question, and find out what is already known. Knowledge-centric — swap the fields for your discipline.",
+        "cat": "General",
+        "uid": "b2"
+      },
+      {
+        "name": "Office Experience",
+        "category": "General",
+        "slot": 1,
+        "grant": 24,
+        "tags": [
+          "standard"
+        ],
+        "skills": {
+          "Theory": 1,
+          "Charm": 1,
+          "Confidence": 1
+        },
+        "fields": [
+          {
+            "name": "Business",
+            "years": 2
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Law",
+            "years": 1
+          }
+        ],
+        "note": "You know how institutions actually work, who signs what, and how to be taken seriously in a meeting. Balanced.",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Field Experience",
+        "category": "General",
+        "slot": 1,
+        "grant": 22,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "PC": 1
+        },
+        "skills": {
+          "Search": 2,
+          "Stealth": 1,
+          "Firearms": 1,
+          "Cars": 1
+        },
+        "fields": [
+          {
+            "name": "Survival",
+            "years": 1
+          },
+          {
+            "name": "Tactics",
+            "years": 2
+          }
+        ],
+        "note": "Time spent out where the plan meets the weather. Balanced, and biased toward noticing things.",
+        "cat": "General",
+        "uid": "b4"
+      },
+      {
+        "name": "Apprentice",
+        "category": "General",
+        "slot": 1,
+        "grant": 30,
+        "tags": [
+          "standard"
+        ],
+        "skills": {
+          "Repair": 3,
+          "Theory": 0
+        },
+        "fields": [
+          {
+            "name": "Trades",
+            "years": 1
+          },
+          {
+            "name": "Carpentry",
+            "years": 2
+          },
+          {
+            "name": "Electrical",
+            "years": 1
+          }
+        ],
+        "note": "Indentured to a trade and taught it properly. Swap the trades for yours.",
+        "cat": "General",
+        "uid": "b5"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern",
+      "fantasy"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "A farm, a flock, two dogs, a fowling piece, and an account at the market town."
+  },
+  {
+    "name": "Serafina von Aldpricht",
+    "arch": "",
+    "age": "35",
+    "wealth": "Family money on Earth; standing, not cash, in Fvaldanon",
+    "concept": "Daughter of a British baron, and the only one of them whose background translates directly: Fvaldanon runs on 19th-century social structures, so an aristocrat who knows how to be received is useful on both sides of the cellar door. Has not gone native; her Earth profession is still to be decided (15 points and 5 years of education held in reserve).",
+    "base": {
+      "ST": 6,
+      "CO": 8,
+      "IN": 9,
+      "PC": 10,
+      "WP": 7
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Charm": {
+        "level": 7
+      },
+      "Confidence": {
+        "level": 6
+      },
+      "Riding": {
+        "level": 6
+      },
+      "Perform": {
+        "level": 6
+      },
+      "Search": {
+        "level": 6
+      }
+    },
+    "field": [
+      {
+        "name": "Etiquette",
+        "years": 3
+      },
+      {
+        "name": "Politics",
+        "years": 4
+      },
+      {
+        "name": "History",
+        "years": 1
+      },
+      {
+        "name": "Law",
+        "years": 2
+      }
+    ],
+    "ltf": [
+      "Being received",
+      "Fvaldan precedence and title",
+      "Horses"
+    ],
+    "quirk": [
+      "Never hurries",
+      "Assumes the door will be opened"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "note": "The baseline. No bonus, no penalty, no slot — being ordinary is free.",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Privileged Childhood",
+        "category": "Origin",
+        "exclusive": true,
+        "slot": 1,
+        "grant": 16,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "PC": 1
+        },
+        "skills": {
+          "Charm": 1,
+          "Riding": 1
+        },
+        "fields": [
+          {
+            "name": "Etiquette",
+            "years": 2
+          },
+          {
+            "name": "Lore",
+            "years": 1
+          }
+        ],
+        "confers": [
+          "family money",
+          "useful relatives",
+          "doors that open"
+        ],
+        "note": "Tutors, horses, and an assumption of welcome. Money and connections are themselves a resource.",
+        "cat": "Origin",
+        "uid": "b2"
+      },
+      {
+        "name": "Tertiary Education",
+        "category": "General",
+        "slot": 1,
+        "grant": 27,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1
+        },
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Science",
+            "years": 1
+          },
+          {
+            "name": "Mathematics",
+            "years": 2
+          },
+          {
+            "name": "History",
+            "years": 2
+          }
+        ],
+        "note": "A degree and the habits that come with one: how to read a source, frame a question, and find out what is already known. Knowledge-centric — swap the fields for your discipline.",
+        "cat": "General",
+        "uid": "b3"
+      },
+      {
+        "name": "Office Experience",
+        "category": "General",
+        "slot": 1,
+        "grant": 24,
+        "tags": [
+          "standard"
+        ],
+        "skills": {
+          "Theory": 1,
+          "Charm": 1,
+          "Confidence": 1
+        },
+        "fields": [
+          {
+            "name": "Business",
+            "years": 2
+          },
+          {
+            "name": "Accounting",
+            "years": 1
+          },
+          {
+            "name": "Law",
+            "years": 1
+          }
+        ],
+        "note": "You know how institutions actually work, who signs what, and how to be taken seriously in a meeting. Balanced.",
+        "cat": "General",
+        "uid": "b4"
+      },
+      {
+        "name": "Artistic",
+        "category": "Intrinsic",
+        "once": true,
+        "slot": 1,
+        "grant": 35,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "CO": 1,
+          "PC": 1
+        },
+        "skills": {
+          "Perform": 1
+        },
+        "confers": [
+          "Striking (Appearance quirk)"
+        ],
+        "note": "The hands to make it, the eye to see it, and the presence to hold a room while you do.",
+        "cat": "Intrinsic",
+        "uid": "b5"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern",
+      "fantasy"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "Correct clothes for two centuries, letters of introduction, a riding horse kept stabled in town."
+  },
+  {
+    "name": "Wilhemina Ashcroft",
+    "arch": "",
+    "age": "35",
+    "wealth": "",
+    "concept": "A doctor on Earth and a healer in Fvaldanon, where she practises as a herbalist and uses the minor magics — she has the apprenticeship but not the Talent, so the great fundamentals are closed to her and the small ones are enough. Modern medicine in a renaissance town is the most dangerous secret any of them carry.",
+    "base": {
+      "ST": 6,
+      "CO": 9,
+      "IN": 10,
+      "PC": 9,
+      "WP": 6
+    },
+    "buyBonus": {
+      "ST": 0,
+      "CO": 0,
+      "IN": 0,
+      "PC": 0,
+      "WP": 0
+    },
+    "skills": {
+      "Theory": {
+        "level": 15
+      },
+      "Search": {
+        "level": 10
+      },
+      "Charm": {
+        "level": 12
+      }
+    },
+    "field": [
+      {
+        "name": "First Aid",
+        "years": 1
+      },
+      {
+        "name": "Medicine",
+        "years": 3
+      },
+      {
+        "name": "Herbalism",
+        "years": 3
+      },
+      {
+        "name": "Healing",
+        "years": 3
+      },
+      {
+        "name": "Emergency Medicine",
+        "years": 2
+      }
+    ],
+    "ltf": [
+      "Trauma",
+      "What grows in Hyalis",
+      "Explaining without explaining"
+    ],
+    "quirk": [
+      "Washes her hands, always",
+      "Will not let anyone die quietly"
+    ],
+    "bfs": [
+      {
+        "name": "Human",
+        "category": "Species",
+        "exclusive": true,
+        "slot": "free",
+        "grant": 0,
+        "tags": [
+          "standard"
+        ],
+        "note": "The baseline. No bonus, no penalty, no slot — being ordinary is free.",
+        "cat": "Species",
+        "uid": "b1"
+      },
+      {
+        "name": "Tertiary Education",
+        "category": "General",
+        "slot": 1,
+        "grant": 27,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1
+        },
+        "skills": {
+          "Theory": 2
+        },
+        "fields": [
+          {
+            "name": "Science",
+            "years": 1
+          },
+          {
+            "name": "Mathematics",
+            "years": 2
+          },
+          {
+            "name": "History",
+            "years": 2
+          }
+        ],
+        "note": "A degree and the habits that come with one: how to read a source, frame a question, and find out what is already known. Knowledge-centric — swap the fields for your discipline.",
+        "cat": "General",
+        "uid": "b2"
+      },
+      {
+        "name": "Magical Apprenticeship",
+        "category": "Unusual",
+        "slot": 1,
+        "grant": 41,
+        "tags": [
+          "fantasy"
+        ],
+        "skills": {
+          "Theory": 1
+        },
+        "fields": [
+          {
+            "name": "Lore",
+            "years": 2
+          }
+        ],
+        "confers": [
+          "taught the rudiments"
+        ],
+        "note": "You were shown the shape of it. Whether you can do anything with that is the Magical Talent question.",
+        "cat": "Unusual",
+        "uid": "b3"
+      },
+      {
+        "name": "Field Experience",
+        "category": "General",
+        "slot": 1,
+        "grant": 22,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "PC": 1
+        },
+        "skills": {
+          "Search": 2,
+          "Stealth": 1,
+          "Firearms": 1,
+          "Cars": 1
+        },
+        "fields": [
+          {
+            "name": "Survival",
+            "years": 1
+          },
+          {
+            "name": "Tactics",
+            "years": 2
+          }
+        ],
+        "note": "Time spent out where the plan meets the weather. Balanced, and biased toward noticing things.",
+        "cat": "General",
+        "uid": "b4"
+      },
+      {
+        "name": "Gifted",
+        "category": "Intrinsic",
+        "once": true,
+        "slot": 1,
+        "grant": 36,
+        "tags": [
+          "standard"
+        ],
+        "attrs": {
+          "IN": 1,
+          "PC": 1,
+          "WP": 1
+        },
+        "note": "Quick, sharp and hard to rattle; always a step ahead of the room.",
+        "cat": "Intrinsic",
+        "uid": "b5"
+      }
+    ],
+    "awards": [],
+    "slots": 4,
+    "activeTags": [
+      "standard",
+      "modern",
+      "fantasy"
+    ],
+    "wound": 0,
+    "exh": {
+      "Fatigue": 0
+    },
+    "shaken": false,
+    "stunned": false,
+    "gear": "A doctor’s bag reprovisioned on both sides, a herbal she wrote herself, and no antibiotics worth the name."
+  }
+]
