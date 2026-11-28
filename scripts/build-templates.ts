@@ -47,6 +47,11 @@ interface Spec {
   bfs: string[]
   skills?: Record<string, number>
   fields?: [string, number][]
+  /** Priority order for spending whatever the factors left over. Walked round
+   *  and round, buying ONE unit at a time — a skill level, a field year, an
+   *  attribute point — until nothing on the list is affordable. Keeps every
+   *  template fully spent without hand-balancing fourteen of them. */
+  spend?: (string | [string, number])[]
   ltf?: string[]
   quirk?: string[]
   gear?: string
@@ -60,8 +65,9 @@ const SPECS: Spec[] = [
     name: 'Detective',
     concept: 'Ex-police, now private. Reads people and rooms; the gun is a last resort.',
     attrs: [7, 7, 9, 10, 7],
-    bfs: ['Human', 'Comfortable Childhood', 'Active Duty', 'Gifted'],
+    bfs: ['Human', 'Active Duty', 'Field Experience', 'Gifted'],
     skills: { Search: 3, Charm: 1 },
+    spend: ['Search', 'PC', ['Law', 3], 'Charm', 'Stealth', ['Psychology', 2], 'IN'],
     fields: [['Law', 2]],
     ltf: ['Interviews', 'This city'],
     quirk: ['Doesn’t let go'],
@@ -71,8 +77,9 @@ const SPECS: Spec[] = [
     name: 'Journalist',
     concept: 'Gets people to say the thing they meant not to say, then checks it.',
     attrs: [6, 7, 9, 10, 8],
-    bfs: ['Human', 'Comfortable Childhood', 'College / Educated', 'Mooch'],
+    bfs: ['Human', 'Tertiary Education', 'Office Experience', 'Mooch'],
     skills: { Search: 2, Charm: 2 },
+    spend: ['Charm', 'Search', ['Politics', 3], 'Confidence', ['Law', 2], 'PC', 'Perform'],
     fields: [['Politics', 2]],
     ltf: ['Sourcing', 'Public records'],
     quirk: ['Incurably nosy'],
@@ -84,6 +91,7 @@ const SPECS: Spec[] = [
     attrs: [9, 9, 7, 7, 8],
     bfs: ['Human', 'Trained from Childhood', 'Active Duty', 'Natural Athlete'],
     skills: {},
+    spend: ['Firearms', 'Athletics', 'Melee', ['Tactics', 3], 'ST', 'Heavy Weapons', 'Stealth'],
     fields: [],
     ltf: ['Section tactics', 'Your service rifle'],
     quirk: ['Sleeps anywhere'],
@@ -93,8 +101,9 @@ const SPECS: Spec[] = [
     name: 'Athlete',
     concept: 'A body trained to one standard and kept there. Fast, strong, hard to stop.',
     attrs: [9, 10, 6, 7, 8],
-    bfs: ['Human', 'Comfortable Childhood', 'Natural Athlete', 'School of Hard Knocks'],
+    bfs: ['Human', 'Intense Training', 'Natural Athlete', 'Superior Specimen'],
     skills: { Athletics: 4 },
+    spend: ['Athletics', 'CO', 'ST', 'Melee', ['Unarmed Combat', 1], 'Initiative'],
     fields: [],
     ltf: ['Your event', 'Reading a crowd'],
     quirk: ['Deep reserves'],
@@ -104,8 +113,9 @@ const SPECS: Spec[] = [
     name: 'Explorer',
     concept: 'Goes where maps stop and comes back with the map.',
     attrs: [8, 8, 8, 8, 8],
-    bfs: ['Human', 'Abandoned & Self-Sufficient', 'Dropout', 'Natural Athlete'],
+    bfs: ['Human', 'Abandoned & Self-Sufficient', 'Field Experience', 'Natural Athlete'],
     skills: {},
+    spend: ['Athletics', ['Survival', 4], 'Search', 'Boats', ['Geology', 2], 'ST', 'Riding'],
     fields: [['Survival', 2], ['Lore', 1]],
     ltf: ['Cold country', 'Small boats'],
     quirk: ['Never panics'],
@@ -115,8 +125,9 @@ const SPECS: Spec[] = [
     name: 'Spy',
     concept: 'Two jobs, one of them real. Competent at both and never conspicuous.',
     attrs: [7, 9, 8, 9, 7],
-    bfs: ['Human', 'Comfortable Childhood', 'Active Duty', 'College / Educated'],
+    bfs: ['Human', 'Active Duty', 'Field Experience', 'Tertiary Education'],
     skills: { Stealth: 2, Charm: 2 },
+    spend: ['Stealth', 'Charm', 'Firearms', ['Etiquette', 2], 'Sleight of Hand', 'CO', ['Politics', 2]],
     fields: [],
     ltf: ['Cover identities', 'Surveillance'],
     quirk: ['Forgettable face'],
@@ -126,8 +137,9 @@ const SPECS: Spec[] = [
     name: 'Scholar',
     concept: 'Knows a great deal about something, and how to find out the rest.',
     attrs: [6, 6, 10, 9, 9],
-    bfs: ['Human', 'Comfortable Childhood', 'College / Educated', 'Gifted'],
+    bfs: ['Human', 'Tertiary Education', 'Office Experience', 'Gifted'],
     skills: { Theory: 3 },
+    spend: [['History', 4], 'Theory', ['Lore', 3], 'IN', ['Mathematics', 3], 'Search'],
     fields: [['History', 3]],
     ltf: ['Your period', 'Archives'],
     quirk: ['Pedant'],
@@ -137,8 +149,9 @@ const SPECS: Spec[] = [
     name: 'Thief',
     concept: 'In, out, and nobody is certain anything happened.',
     attrs: [6, 10, 8, 9, 7],
-    bfs: ['Human', 'Abandoned & Self-Sufficient', 'School of Hard Knocks', 'Dropout'],
+    bfs: ['Human', 'Abandoned & Self-Sufficient', 'School of Hard Knocks', 'Intense Training'],
     skills: { 'Sleight of Hand': 3, Stealth: 2 },
+    spend: ['Stealth', 'Sleight of Hand', 'CO', 'Search', 'Athletics', ['Trades', 1], 'Cars'],
     fields: [],
     ltf: ['Locks', 'Rooftops'],
     quirk: ['Light sleeper'],
@@ -148,8 +161,9 @@ const SPECS: Spec[] = [
     name: 'Assassin',
     concept: 'Patient, prepared and unhurried. The violence is the short part.',
     attrs: [7, 10, 8, 8, 7],
-    bfs: ['Human', 'Trained from Childhood', 'School of Hard Knocks', 'Trauma Survivor'],
+    bfs: ['Human', 'Trained from Childhood', 'Field Experience', 'Trauma Survivor'],
     skills: { Stealth: 3, Firearms: 1 },
+    spend: ['Stealth', 'Melee', 'Firearms', 'CO', ['Lethal', 2], 'Search'],
     fields: [],
     ltf: ['Approach work', 'Blades'],
     quirk: ['Very still'],
@@ -159,8 +173,9 @@ const SPECS: Spec[] = [
     name: 'Driver',
     concept: 'Gets the car, the people and the plan out the other side.',
     attrs: [7, 10, 7, 9, 7],
-    bfs: ['Human', 'Comfortable Childhood', 'Apprentice', 'School of Hard Knocks'],
+    bfs: ['Human', 'Apprentice', 'Field Experience', 'School of Hard Knocks'],
     skills: { Cars: 4, Bikes: 2 },
+    spend: ['Cars', 'CO', 'Bikes', 'Repair', ['Trades', 2], 'Boats', 'Aircraft'],
     fields: [],
     ltf: ['This city’s streets', 'Pursuit driving'],
     quirk: ['Calm at speed'],
@@ -170,8 +185,9 @@ const SPECS: Spec[] = [
     name: 'Tech',
     concept: 'Makes the thing work, or makes it stop working, usually from a van.',
     attrs: [6, 8, 10, 8, 8],
-    bfs: ['Human', 'Comfortable Childhood', 'Apprentice', 'College / Educated'],
+    bfs: ['Human', 'Apprentice', 'Tertiary Education', 'Office Experience'],
     skills: { Repair: 2, Theory: 1 },
+    spend: ['Repair', ['Computers', 3], 'Theory', ['Electronics', 3], 'IN', 'Search'],
     fields: [['Computers', 2]],
     ltf: ['Soldering', 'Access control'],
     quirk: ['Reads manuals for pleasure'],
@@ -181,8 +197,9 @@ const SPECS: Spec[] = [
     name: 'Doctor',
     concept: 'Keeps people alive under conditions nobody trained for.',
     attrs: [6, 8, 10, 9, 7],
-    bfs: ['Human', 'Comfortable Childhood', 'College / Educated', 'Gifted'],
+    bfs: ['Human', 'Tertiary Education', 'Office Experience', 'Gifted'],
     skills: {},
+    spend: [['Medicine', 3], ['First Aid', 1], 'Theory', ['Emergency Medicine', 2], 'IN', 'Search', 'Charm'],
     fields: [['Medicine', 3], ['First Aid', 1]],
     ltf: ['Trauma', 'Triage'],
     quirk: ['Unshockable'],
@@ -192,8 +209,9 @@ const SPECS: Spec[] = [
     name: 'Con-Artist',
     concept: 'Sells the mark the story the mark already wanted to believe.',
     attrs: [6, 7, 9, 10, 8],
-    bfs: ['Human', 'Comfortable Childhood', 'Mooch', 'Artistic'],
+    bfs: ['Human', 'Privileged Childhood', 'Mooch', 'Artistic'],
     skills: { Charm: 2, Confidence: 2, Perform: 1 },
+    spend: ['Charm', 'Confidence', 'Perform', 'PC', 'Sleight of Hand', ['Psychology', 2]],
     fields: [],
     ltf: ['Long cons', 'Reading a mark'],
     quirk: ['Never breaks character'],
@@ -203,8 +221,9 @@ const SPECS: Spec[] = [
     name: 'Martial Artist',
     concept: 'A lifetime in one discipline. Unarmed is not a fallback.',
     attrs: [8, 10, 7, 8, 7],
-    bfs: ['Human', 'Trained from Childhood', 'Dropout', 'Natural Athlete'],
+    bfs: ['Human', 'Trained from Childhood', 'Intense Training', 'Natural Athlete'],
     skills: { Athletics: 2 },
+    spend: ['Melee', 'Athletics', ['Unarmed Combat', 1], ['Throws', 2], ['Wrestling', 2], 'CO', ['Defense', 2]],
     fields: [],
     ltf: ['Your style', 'Breaking a grapple'],
     quirk: ['Never starts it'],
@@ -241,11 +260,61 @@ function build(spec: Spec): R.Character {
   return c
 }
 
+/** Spend the leftover points down the template's priority list. */
+function autoSpend(c: R.Character, spec: Spec) {
+  const list = spec.spend ?? []
+  if (!list.length) return
+  let progress = true
+  while (progress) {
+    progress = false
+    for (const item of list) {
+      const before = R.pools(c, SKILLS, SKILLNAMES).pts
+      if (before <= 0) return
+      if (Array.isArray(item)) {
+        // a field, up to the stated number of years
+        const [name, maxYears] = item
+        const cur = c.field.find((f) => f.name === name)
+        if ((cur?.years ?? 0) >= maxYears) continue
+        if (cur) cur.years++
+        else c.field.push({ name, years: 1 })
+      } else if ((R.ATTRS as readonly string[]).includes(item)) {
+        // stop at the price break. Past 12 an attribute costs 20 a point, and a
+        // greedy spender will happily sink a whole template's budget into one
+        // number — which is both poor value and a strange-looking character.
+        if (R.finalAttr(c, item) >= R.ATTR_COST_BREAK) continue
+        c.buyBonus[item] = (c.buyBonus[item] || 0) + 1
+      } else {
+        // a skill level, respecting its cap
+        if (!SKILLS[item]) throw new Error(`${spec.name}: no such skill "${item}"`)
+        if (R.skillTotal(c, item) >= R.maxLevel(c, SKILLS, item)) continue
+        c.skills[item] = { level: ((c.skills[item]?.level as number) || 0) + 1 }
+      }
+      if (R.pools(c, SKILLS, SKILLNAMES).pts < 0) {
+        // too expensive — put it back and try the next priority
+        if (Array.isArray(item)) {
+          const cur = c.field.find((f) => f.name === item[0])!
+          if (cur.years > 1) cur.years--
+          else c.field.splice(c.field.indexOf(cur), 1)
+        } else if ((R.ATTRS as readonly string[]).includes(item)) {
+          c.buyBonus[item]--
+        } else {
+          const lv = (c.skills[item]!.level || 0) - 1
+          if (lv < 0) delete c.skills[item]
+          else c.skills[item]!.level = lv
+        }
+        continue
+      }
+      progress = true
+    }
+  }
+}
+
 const problems: string[] = []
 const out: R.Character[] = []
 
 for (const spec of SPECS) {
   const c = build(spec)
+  autoSpend(c, spec)
   const sum = spec.attrs.reduce((a, b) => a + b, 0)
   if (sum !== 40) problems.push(`${c.name}: attributes total ${sum}, want 40`)
   for (const [i, v] of spec.attrs.entries())

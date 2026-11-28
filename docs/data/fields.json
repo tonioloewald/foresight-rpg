@@ -302,5 +302,128 @@
       "modern"
     ],
     "note": "wiring, supply and fixed installations — the trade. For circuits and sensors see Electronics"
+  },
+  {
+    "name": "Unarmed Combat",
+    "parent": null,
+    "years": 1,
+    "thread": "Martial",
+    "tags": [
+      "standard"
+    ],
+    "note": "the grounding of any unarmed school — stance, distance, falling. Root of the unarmed tree; the specialisms below each buy one option in a fight"
+  },
+  {
+    "name": "Lethal",
+    "parent": "Unarmed Combat",
+    "years": 2,
+    "thread": "Martial",
+    "tags": [
+      "standard"
+    ],
+    "note": "strikes meant to end it: **+2 DC at −1 EF**"
+  },
+  {
+    "name": "Defense",
+    "parent": "Unarmed Combat",
+    "years": 2,
+    "thread": "Martial",
+    "tags": [
+      "standard"
+    ],
+    "note": "lets you **parry unarmed** — without it, bare hands do not control the line"
+  },
+  {
+    "name": "Throws",
+    "parent": "Unarmed Combat",
+    "years": 2,
+    "thread": "Martial",
+    "tags": [
+      "standard"
+    ],
+    "note": "lets you **throw** an opponent rather than merely strike them"
+  },
+  {
+    "name": "Wrestling",
+    "parent": "Unarmed Combat",
+    "years": 2,
+    "thread": "Martial",
+    "tags": [
+      "standard"
+    ],
+    "note": "grappling and pinning — markedly better at both than an untrained clinch"
+  },
+  {
+    "name": "Exotic",
+    "parent": "Unarmed Combat",
+    "years": 3,
+    "thread": "Martial",
+    "tags": [
+      "standard"
+    ],
+    "note": "a school your opponent has never met: they take an **unfamiliarity penalty** against you. There are arbitrarily many exotic schools, so this field may be taken more than once, each for a different one"
+  },
+  {
+    "name": "Martial Science",
+    "parent": "Unarmed Combat",
+    "years": 4,
+    "thread": "Martial",
+    "tags": [
+      "fantasy"
+    ],
+    "note": "the systematised study of fighting as a discipline, body and mind together"
+  },
+  {
+    "name": "Natural Philosophy",
+    "parent": null,
+    "years": 2,
+    "thread": "Physics",
+    "tags": [
+      "ancient",
+      "fantasy"
+    ],
+    "note": "the pre-modern grounding in how the world works — the ancestor of Science, and its counterpart in a setting that never got one"
+  },
+  {
+    "name": "Alchemy",
+    "parent": "Natural Philosophy",
+    "years": 3,
+    "thread": "Physics",
+    "tags": [
+      "fantasy"
+    ],
+    "note": "transformation of substances; the fantasy counterpart of Chemistry"
+  },
+  {
+    "name": "Herbalism",
+    "parent": null,
+    "years": 2,
+    "thread": "Biology",
+    "tags": [
+      "ancient",
+      "fantasy"
+    ],
+    "note": "plants and their properties — remedies, poisons, preparations"
+  },
+  {
+    "name": "Healing",
+    "parent": "Herbalism",
+    "years": 3,
+    "thread": "Biology",
+    "tags": [
+      "fantasy"
+    ],
+    "note": "the practice of a world without Medicine: setting bones, drawing fevers, what works and what is merely done"
+  },
+  {
+    "name": "Beast Lore",
+    "parent": null,
+    "years": 2,
+    "thread": "Biology",
+    "tags": [
+      "ancient",
+      "fantasy"
+    ],
+    "note": "the habits, tracks, weaknesses and worth of animals — and of things that are not quite animals"
   }
 ]

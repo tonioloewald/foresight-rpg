@@ -30,9 +30,17 @@ c.buyBonus.ST = -2
 eq('attrBuySpend ST 5→3 sold down (refund)', R.attrBuySpend(c, 'ST'), -20)
 eq('finalAttr ST at floor', R.finalAttr(c, 'ST'), R.ATTR_FLOOR)
 c.buyBonus.ST = 0
-// skill bought from scratch: cost x (level+2)
+// ── the skill ladder has a rung below level 0: ABSENT ──────────────────────
+eq('absent skill: hasSkill false', R.hasSkill(c, 'Climbing'), false)
+eq('absent skill rolls at BEF-2', R.skillBef(c, defs, 'Climbing'), (Number(defs.Climbing.bef) || 5) - 2)
+// acquiring it AT ALL (level 0) costs 3 x cost, and fixes the BEF
+c.skills.Climbing = { level: 0 }
+eq('acquired at level 0: hasSkill', R.hasSkill(c, 'Climbing'), true)
+eq('acquired at level 0: BEF restored', R.skillBef(c, defs, 'Climbing'), Number(defs.Climbing.bef) || 5)
+eq('skillBuySpend Climbing level 0 (1x3)', R.skillBuySpend(c, defs, 'Climbing'), 3)
+// then 1 x cost per level on top
 c.skills.Climbing = { level: 3 }
-eq('skillBuySpend Climbing L3 from scratch (1x(3+2))', R.skillBuySpend(c, defs, 'Climbing'), 5)
+eq('skillBuySpend Climbing L3 from scratch (1x(3+3))', R.skillBuySpend(c, defs, 'Climbing'), 6)
 // a BF conferring the skill removes the +2 entry price, grants points, costs a slot
 c.bfs.push({ name: 'Mountain Born', skills: { Climbing: 2 }, attrs: { CO: 1 }, grant: 20 })
 eq('conferSkill Climbing', R.conferSkill(c, 'Climbing'), 2)
@@ -40,6 +48,11 @@ eq('conferAttr CO', R.conferAttr(c, 'CO'), 1)
 eq('finalAttr CO 5+1', R.finalAttr(c, 'CO'), 6)
 eq('skillTotal Climbing 2+3', R.skillTotal(c, 'Climbing'), 5)
 eq('skillBuySpend Climbing conferred (1x3)', R.skillBuySpend(c, defs, 'Climbing'), 3)
+// a factor that TEACHES a skill at no levels still pays the entry price
+c.bfs.push({ name: 'Shown Once', skills: { Swimming: 0 } })
+eq('conferred at level 0 counts as having it', R.hasSkill(c, 'Swimming'), true)
+eq('conferred at level 0 removes the BEF penalty', R.skillBef(c, defs, 'Swimming'), Number(defs.Swimming?.bef) || 5)
+c.bfs.pop()
 eq('score Climbing formula(6,7)+5', R.score(c, defs, 'Climbing'), R.formulaVal(c, defs, 'Climbing') + 5)
 eq('usedSlots (1 non-free)', R.usedSlots(c), 1)
 // a neutral species is free, and the DATA spells that `slot: "free"` — not

@@ -201,15 +201,49 @@ export function attrBuySpend(c: Character, a: string): number {
   return pts
 }
 
+/** The penalty for attempting a skill you were never taught at all. */
+export const ABSENT_BEF_PENALTY = 2
+
+/** Skill entry price: getting a skill AT ALL (to level 0) costs 3 × its cost. */
+export const SKILL_ACQUIRE_MULT = 3
+
 /**
- * Skill levels bought: cost × (level + 2) from scratch, or cost × level if a
- * background factor already conferred the skill (you've paid the entry price).
+ * Do you have this skill at all? Presence in `skills` means acquired — level 0
+ * is a real rung (you were taught it; you have no levels yet), distinct from
+ * never having been taught, which is `absent`.
+ */
+export function hasSkill(c: Character, name: string): boolean {
+  return !!c.skills[name] || conferredAtAll(c, name)
+}
+
+/** Did a factor TEACH this skill, even at no levels? `skills: { Melee: 0 }` on
+ *  a factor means "you were taught it" — which is the entry price paid, not
+ *  nothing. Summing levels would read that as absent. */
+export function conferredAtAll(c: Character, name: string): boolean {
+  return c.bfs.some((b: any) => b.skills && Object.prototype.hasOwnProperty.call(b.skills, name))
+}
+
+/**
+ * The ease factor a skill is rolled at. An **absent** skill is not "level 0" —
+ * it is a thing you have never been shown, and it rolls at **BEF − 2**. That is
+ * what makes acquiring a skill at all worth paying for, separately from levels.
+ */
+export function skillBef(c: Character, defs: Record<string, SkillDef>, name: string): number {
+  const bef = Number(defs[name]?.bef) || 5
+  return hasSkill(c, name) ? bef : bef - ABSENT_BEF_PENALTY
+}
+
+/**
+ * Points spent on a skill: **3 × cost to acquire it** (reaching level 0), then
+ * **1 × cost per level** on top. A background factor that confers the skill has
+ * already paid the entry price, so you only pay for levels.
  */
 export function skillBuySpend(c: Character, defs: Record<string, SkillDef>, name: string): number {
-  const buy = (c.skills[name] && c.skills[name].level) || 0
-  if (buy <= 0) return 0
+  const entry = c.skills[name]
+  if (!entry) return 0
+  const lv = Math.max(0, entry.level || 0)
   const cost = (defs[name] && defs[name].cost) || 1
-  return conferSkill(c, name) > 0 ? cost * buy : cost * (buy + 2)
+  return conferredAtAll(c, name) ? cost * lv : cost * (SKILL_ACQUIRE_MULT + lv)
 }
 
 export function fieldBuySpend(c: Character): number {

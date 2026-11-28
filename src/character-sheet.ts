@@ -136,13 +136,29 @@ export class ForesightCharacterSheet extends Component {
     this.changed()
   }
 
+  /**
+   * Step a skill. The ladder has a rung below level 0: **absent**. Stepping down
+   * from 0 gives the skill up entirely (back to BEF − 2); stepping up from
+   * absent acquires it at level 0, which is what the 3 × cost entry price buys.
+   * A conferred skill can't be given up — a factor taught it to you.
+   */
   private bumpLevel = (name: string, d: number) => {
     const c = this.char
-    if (!c.skills[name]) c.skills[name] = { level: 0 }
-    const mx = R.maxLevel(c, this.SKILLS, name)
     const conf = R.conferSkill(c, name)
+    if (!c.skills[name]) {
+      if (d < 0) return // already absent
+      c.skills[name] = { level: 0 } // acquire at level 0
+      this.changed()
+      return
+    }
+    const mx = R.maxLevel(c, this.SKILLS, name)
     let lv = (c.skills[name].level || 0) + d
-    if (lv < 0) lv = 0
+    if (lv < 0) {
+      if (conf > 0) return // conferred: you cannot unlearn what a factor gave you
+      delete c.skills[name] // give it up — back to absent
+      this.changed()
+      return
+    }
     if (conf + lv > mx) lv = Math.max(0, mx - conf)
     c.skills[name].level = lv
     this.changed()
@@ -585,7 +601,17 @@ export class ForesightCharacterSheet extends Component {
               td({ class: 'fs-num fs-score' }, String(R.finalAttr(c, a))),
               td({ class: 'fs-num fs-muted' }, String(R.attrBuySpend(c, a))),
               td(
-                button({ class: 'fs-step', onClick: () => this.bumpAttr(a, -1), disabled: bought <= 0 }, '−'),
+                button(
+                  {
+                    class: 'fs-step',
+                    onClick: () => this.bumpAttr(a, -1),
+                    // An archetype is a STARTING SHAPE, not a straitjacket: you
+                    // may sell any attribute down to the human floor and spend
+                    // the refund elsewhere. (Only the floor stops you.)
+                    disabled: R.finalAttr(c, a) <= R.ATTR_FLOOR,
+                  },
+                  '−'
+                ),
                 ' ',
                 button({ class: 'fs-step', onClick: () => this.bumpAttr(a, 1) }, '+')
               )
@@ -635,24 +661,30 @@ export class ForesightCharacterSheet extends Component {
     const names = this.SKILLNAMES.filter((n) => R.tagMatch(c, this.SKILLS[n].tags))
     this.parts.skills?.replaceChildren(
       table(
-        thead(tr(th('Skill'), th('Formula'), th('Conf.'), th('Level'), th(), th('Score'), th('Max'))),
+        thead(tr(th('Skill'), th('Formula'), th('Conf.'), th('Level'), th(), th('Score'), th('BEF'), th('Max'))),
         tbody(
           ...names.map((n) => {
             const conf = R.conferSkill(c, n)
+            const has = R.hasSkill(c, n)
             const lv = (c.skills[n] && c.skills[n].level) || 0
             const mx = R.maxLevel(c, this.SKILLS, n)
             const atCap = conf + lv >= mx
+            const bef = R.skillBef(c, this.SKILLS, n)
             return tr(
               td(n),
               td({ class: 'fs-muted' }, this.SKILLS[n].formula || ''),
               td({ class: 'fs-num' }, conf ? `+${conf}` : '—'),
-              td({ class: 'fs-num' }, String(lv)),
+              td({ class: has ? 'fs-num' : 'fs-num fs-muted' }, has ? String(lv) : 'absent'),
               td(
-                button({ class: 'fs-step', onClick: () => this.bumpLevel(n, -1), disabled: lv <= 0 }, '−'),
+                button(
+                  { class: 'fs-step', onClick: () => this.bumpLevel(n, -1), disabled: !c.skills[n] || (lv <= 0 && conf > 0) },
+                  '−'
+                ),
                 ' ',
                 button({ class: 'fs-step', onClick: () => this.bumpLevel(n, 1), disabled: atCap }, '+')
               ),
-              td({ class: 'fs-num fs-score' }, conf + lv > 0 ? String(R.score(c, this.SKILLS, n)) : '—'),
+              td({ class: 'fs-num fs-score' }, String(R.score(c, this.SKILLS, n))),
+              td({ class: has ? 'fs-num fs-muted' : 'fs-num fs-warn' }, has ? String(bef) : `${bef} (−2)`),
               td({ class: 'fs-num fs-muted' }, String(mx))
             )
           })
@@ -677,7 +709,7 @@ export class ForesightCharacterSheet extends Component {
     if (this.parts.fieldDatalist && this.FIELDS.length) {
       const dl = document.createElement('datalist')
       dl.id = 'fs-field-list'
-      for (const f of this.FIELDS) {
+      for (const f of this.FIELDS.filter((f: any) => R.tagMatch(c, f.tags))) {
         const o = document.createElement('option')
         o.value = f.name
         dl.appendChild(o)

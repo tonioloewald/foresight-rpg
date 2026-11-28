@@ -2,24 +2,18 @@
   {
     "name": "Human",
     "category": "Species",
-    "exclusive": "species",
-    "once": true,
+    "exclusive": true,
     "slot": "free",
     "grant": 0,
     "tags": [
       "standard"
     ],
-    "attrs": {},
-    "skills": {},
-    "fields": [],
-    "confers": "—",
-    "note": "adaptable baseline; costs no slot"
+    "note": "The baseline. No bonus, no penalty, no slot — being ordinary is free."
   },
   {
     "name": "Dwarf",
     "category": "Species",
-    "exclusive": "species",
-    "once": true,
+    "exclusive": true,
     "slot": "free",
     "grant": 0,
     "tags": [
@@ -29,16 +23,12 @@
       "ST": 1,
       "CO": -1
     },
-    "skills": {},
-    "fields": [],
-    "confers": "ST +1, CO −1; Hardy (Endurance), Plain (Appearance)",
-    "note": "tough, dour; traits balance — free"
+    "note": "Dense, durable, deliberate. Nets to nothing, so it costs no slot."
   },
   {
     "name": "Halfling",
     "category": "Species",
-    "exclusive": "species",
-    "once": true,
+    "exclusive": true,
     "slot": "free",
     "grant": 0,
     "tags": [
@@ -51,16 +41,13 @@
     "skills": {
       "Stealth": 1
     },
-    "fields": [],
-    "confers": "CO +1, ST −1; Stealth 1",
-    "note": "small, deft; balanced — free"
+    "note": "Small, quick and easily overlooked."
   },
   {
     "name": "High Elf",
     "category": "Species",
-    "exclusive": "species",
-    "once": true,
-    "slot": "1",
+    "exclusive": true,
+    "slot": 1,
     "grant": 0,
     "tags": [
       "fantasy"
@@ -70,55 +57,76 @@
       "IN": 1,
       "PC": 1
     },
-    "skills": {},
-    "fields": [],
-    "confers": "CO +1, IN +1, PC +1",
-    "note": "graceful & keen — uses a slot"
+    "note": "Long-lived and finely made — the one species that is simply better, so it costs a slot."
   },
   {
-    "name": "Comfortable Childhood",
+    "name": "Trained from Childhood",
     "category": "Origin",
-    "exclusive": "origin",
-    "once": false,
-    "slot": "1",
-    "grant": 20,
+    "exclusive": true,
+    "slot": 1,
+    "grant": 15,
     "tags": [
       "standard"
     ],
-    "attrs": {},
-    "skills": {},
-    "fields": [],
-    "confers": "20 build points",
-    "note": "stable, middle-class upbringing"
+    "attrs": {
+      "ST": 1,
+      "WP": 1
+    },
+    "skills": {
+      "Melee": 3,
+      "Athletics": 1
+    },
+    "fields": [
+      {
+        "name": "Unarmed Combat",
+        "years": 1
+      },
+      {
+        "name": "Defense",
+        "years": 2
+      }
+    ],
+    "note": "Handed to a master young. You have never not been able to do this, and it cost you the childhood other people had."
   },
   {
     "name": "Privileged Childhood",
     "category": "Origin",
-    "exclusive": "origin",
-    "once": false,
-    "slot": "1",
-    "grant": 0,
+    "exclusive": true,
+    "slot": 1,
+    "grant": 16,
     "tags": [
       "standard"
     ],
-    "attrs": {},
-    "skills": {},
+    "attrs": {
+      "PC": 1
+    },
+    "skills": {
+      "Charm": 1,
+      "Riding": 1
+    },
     "fields": [
       {
         "name": "Etiquette",
+        "years": 2
+      },
+      {
+        "name": "Lore",
         "years": 1
       }
     ],
-    "confers": "Well-turned-out (Appearance); Etiquette 1yr",
-    "note": "wealth & polish"
+    "confers": [
+      "family money",
+      "useful relatives",
+      "doors that open"
+    ],
+    "note": "Tutors, horses, and an assumption of welcome. Money and connections are themselves a resource."
   },
   {
     "name": "Abandoned & Self-Sufficient",
     "category": "Origin",
-    "exclusive": "origin",
-    "once": false,
-    "slot": "1",
-    "grant": 0,
+    "exclusive": true,
+    "slot": 1,
+    "grant": 25,
     "tags": [
       "standard"
     ],
@@ -126,243 +134,54 @@
       "WP": 1
     },
     "skills": {
-      "Stealth": 2
+      "Stealth": 2,
+      "Search": 1,
+      "Melee": 0,
+      "Athletics": 0
     },
-    "fields": [],
-    "confers": "WP +1; Stealth 2",
-    "note": "fending for yourself young"
+    "fields": [
+      {
+        "name": "Survival",
+        "years": 2
+      }
+    ],
+    "note": "Nobody was coming. You are competent at a wide range of things because the alternative was worse."
   },
   {
-    "name": "Trained from Childhood",
-    "category": "Origin",
-    "exclusive": "origin",
-    "once": true,
-    "slot": "1",
-    "grant": 0,
+    "name": "Tertiary Education",
+    "category": "General",
+    "slot": 1,
+    "grant": 27,
     "tags": [
       "standard"
     ],
-    "attrs": {},
-    "skills": {
-      "Melee": 3
+    "attrs": {
+      "IN": 1
     },
-    "fields": [],
-    "confers": "a focus skill +3 (swap as needed)",
-    "note": "single-minded focus"
-  },
-  {
-    "name": "College / Educated",
-    "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "modern"
-    ],
-    "attrs": {},
     "skills": {
       "Theory": 2
     },
     "fields": [
       {
-        "name": "Psychology",
+        "name": "Science",
         "years": 1
       },
       {
-        "name": "Accounting",
-        "years": 1
+        "name": "Mathematics",
+        "years": 2
       },
       {
-        "name": "Business",
-        "years": 1
+        "name": "History",
+        "years": 2
       }
     ],
-    "confers": "Theory 2; Psychology, Accounting, Business 1yr",
-    "note": "a degree — skills + fields, swappable"
+    "note": "A degree and the habits that come with one: how to read a source, frame a question, and find out what is already known. Knowledge-centric — swap the fields for your discipline."
   },
   {
-    "name": "Apprentice",
+    "name": "Intense Training",
     "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "standard"
-    ],
-    "attrs": {},
-    "skills": {
-      "Repair": 3
-    },
-    "fields": [
-      {
-        "name": "Electrical",
-        "years": 1
-      },
-      {
-        "name": "Plumbing",
-        "years": 1
-      },
-      {
-        "name": "Carpentry",
-        "years": 1
-      }
-    ],
-    "confers": "Repair 3; Electrical, Plumbing, Carpentry 1yr",
-    "note": "a trade — swap the fields"
-  },
-  {
-    "name": "Active Duty",
-    "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "modern",
-      "sf"
-    ],
-    "attrs": {},
-    "skills": {
-      "Firearms": 3,
-      "Melee": 1,
-      "Heavy Weapons": 1,
-      "Athletics": 1
-    },
-    "fields": [],
-    "confers": "Conditioned (Endurance); Firearms 3, Melee 1, Heavy Weapons 1, Athletics 1",
-    "note": "military/police; repeatable"
-  },
-  {
-    "name": "School of Hard Knocks",
-    "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "standard"
-    ],
-    "attrs": {},
-    "skills": {
-      "Melee": 2,
-      "Stealth": 1
-    },
-    "fields": [],
-    "confers": "Hardened (Endurance); Melee 2, Stealth 1",
-    "note": "prison, the streets, the ring"
-  },
-  {
-    "name": "Mooch",
-    "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "standard"
-    ],
-    "attrs": {},
-    "skills": {
-      "Charm": 2,
-      "Confidence": 1
-    },
-    "fields": [],
-    "confers": "Charm 2, Confidence 1",
-    "note": "lived off others' goodwill"
-  },
-  {
-    "name": "Dropout",
-    "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 12,
-    "tags": [
-      "modern"
-    ],
-    "attrs": {},
-    "skills": {},
-    "fields": [],
-    "confers": "12 build points",
-    "note": "started a path, left it — loose ends"
-  },
-  {
-    "name": "Homeless",
-    "category": "General",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "standard"
-    ],
-    "attrs": {},
-    "skills": {
-      "Stealth": 1
-    },
-    "fields": [],
-    "confers": "Weathered (Endurance); Stealth 1",
-    "note": "survived on the margins"
-  },
-  {
-    "name": "Mysterious Mentor",
-    "category": "Unusual",
-    "exclusive": null,
-    "once": true,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "standard"
-    ],
-    "attrs": {},
-    "skills": {},
-    "fields": [],
-    "confers": "a unique insight or rare access",
-    "note": "taken under a wise stranger's wing"
-  },
-  {
-    "name": "Trauma Survivor",
-    "category": "Unusual",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 10,
-    "tags": [
-      "standard"
-    ],
-    "attrs": {
-      "WP": 1
-    },
-    "skills": {},
-    "fields": [],
-    "confers": "WP +1; 10 build points",
-    "note": "something shattering; take a matching quirk"
-  },
-  {
-    "name": "Magical Apprenticeship",
-    "category": "Unusual",
-    "exclusive": null,
-    "once": false,
-    "slot": "1",
-    "grant": 0,
-    "tags": [
-      "fantasy"
-    ],
-    "attrs": {},
-    "skills": {},
-    "fields": [],
-    "confers": "entry to magic (restrictions apply)",
-    "note": "see Magic chapter"
-  },
-  {
-    "name": "Natural Athlete",
-    "category": "Intrinsic",
-    "exclusive": null,
-    "once": true,
-    "slot": "1",
-    "grant": 0,
+    "slot": 1,
+    "grant": 17,
     "tags": [
       "standard"
     ],
@@ -370,18 +189,290 @@
       "ST": 1,
       "CO": 1
     },
-    "skills": {},
-    "fields": [],
-    "confers": "ST +1, CO +1; Deep Reserves (Endurance)",
-    "note": "effortless physicality"
+    "skills": {
+      "Athletics": 2,
+      "Melee": 2,
+      "Stealth": 1
+    },
+    "fields": [
+      {
+        "name": "Unarmed Combat",
+        "years": 1
+      }
+    ],
+    "note": "Years of it, under someone who did not care whether you enjoyed it. Skill-centric."
+  },
+  {
+    "name": "Office Experience",
+    "category": "General",
+    "slot": 1,
+    "grant": 24,
+    "tags": [
+      "standard"
+    ],
+    "skills": {
+      "Theory": 1,
+      "Charm": 1,
+      "Confidence": 1
+    },
+    "fields": [
+      {
+        "name": "Business",
+        "years": 2
+      },
+      {
+        "name": "Accounting",
+        "years": 1
+      },
+      {
+        "name": "Law",
+        "years": 1
+      }
+    ],
+    "note": "You know how institutions actually work, who signs what, and how to be taken seriously in a meeting. Balanced."
+  },
+  {
+    "name": "Field Experience",
+    "category": "General",
+    "slot": 1,
+    "grant": 22,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "PC": 1
+    },
+    "skills": {
+      "Search": 2,
+      "Stealth": 1,
+      "Firearms": 1,
+      "Cars": 1
+    },
+    "fields": [
+      {
+        "name": "Survival",
+        "years": 1
+      },
+      {
+        "name": "Tactics",
+        "years": 2
+      }
+    ],
+    "note": "Time spent out where the plan meets the weather. Balanced, and biased toward noticing things."
+  },
+  {
+    "name": "Active Duty",
+    "category": "General",
+    "slot": 1,
+    "grant": 14,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 1
+    },
+    "skills": {
+      "Firearms": 3,
+      "Melee": 1,
+      "Heavy Weapons": 1,
+      "Athletics": 1
+    },
+    "fields": [
+      {
+        "name": "Tactics",
+        "years": 2
+      }
+    ],
+    "note": "You have been shot at by people who meant it, and you did your job anyway."
+  },
+  {
+    "name": "Apprentice",
+    "category": "General",
+    "slot": 1,
+    "grant": 30,
+    "tags": [
+      "standard"
+    ],
+    "skills": {
+      "Repair": 3,
+      "Theory": 0
+    },
+    "fields": [
+      {
+        "name": "Trades",
+        "years": 1
+      },
+      {
+        "name": "Carpentry",
+        "years": 2
+      },
+      {
+        "name": "Electrical",
+        "years": 1
+      }
+    ],
+    "note": "Indentured to a trade and taught it properly. Swap the trades for yours."
+  },
+  {
+    "name": "School of Hard Knocks",
+    "category": "General",
+    "slot": 1,
+    "grant": 30,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 1
+    },
+    "skills": {
+      "Melee": 2,
+      "Stealth": 1,
+      "Confidence": 1
+    },
+    "note": "Nothing formal. You learned what you learned by it going badly first."
+  },
+  {
+    "name": "Mooch",
+    "category": "General",
+    "slot": 1,
+    "grant": 29,
+    "tags": [
+      "standard"
+    ],
+    "skills": {
+      "Charm": 2,
+      "Confidence": 1,
+      "Perform": 0
+    },
+    "confers": [
+      "a couch anywhere",
+      "people who owe you"
+    ],
+    "note": "You have never quite had a job and have never quite gone hungry."
+  },
+  {
+    "name": "Homeless",
+    "category": "General",
+    "slot": 1,
+    "grant": 41,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 1
+    },
+    "skills": {
+      "Stealth": 1,
+      "Search": 1
+    },
+    "fields": [
+      {
+        "name": "Survival",
+        "years": 1
+      }
+    ],
+    "note": "Invisible in plain sight, and you know the city at ground level. Mostly it taught you endurance and left you time."
+  },
+  {
+    "name": "Mysterious Mentor",
+    "category": "Unusual",
+    "slot": 1,
+    "grant": 25,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 1
+    },
+    "skills": {
+      "Theory": 1,
+      "Melee": 1
+    },
+    "fields": [
+      {
+        "name": "Lore",
+        "years": 2
+      }
+    ],
+    "confers": [
+      "someone who will answer, eventually"
+    ],
+    "note": "Somebody took an interest. You never entirely learned why, and they are not finished with you."
+  },
+  {
+    "name": "Trauma Survivor",
+    "category": "Unusual",
+    "slot": 1,
+    "grant": 40,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "WP": 2
+    },
+    "skills": {
+      "Search": 1
+    },
+    "note": "You came through something. It left you hard to frighten and alert to the wrong kind of quiet."
+  },
+  {
+    "name": "Magical Apprenticeship",
+    "category": "Unusual",
+    "slot": 1,
+    "grant": 41,
+    "tags": [
+      "fantasy"
+    ],
+    "skills": {
+      "Theory": 1
+    },
+    "fields": [
+      {
+        "name": "Lore",
+        "years": 2
+      }
+    ],
+    "confers": [
+      "taught the rudiments"
+    ],
+    "note": "You were shown the shape of it. Whether you can do anything with that is the Magical Talent question."
+  },
+  {
+    "name": "Superior Specimen",
+    "category": "Intrinsic",
+    "once": true,
+    "slot": 1,
+    "grant": 20,
+    "tags": [
+      "standard"
+    ],
+    "freeAttr": 4,
+    "note": "Simply built better than other people, in whichever way you choose. Four attribute points anywhere, and the remainder in points."
+  },
+  {
+    "name": "Natural Athlete",
+    "category": "Intrinsic",
+    "once": true,
+    "slot": 1,
+    "grant": 31,
+    "tags": [
+      "standard"
+    ],
+    "attrs": {
+      "ST": 2,
+      "CO": 1
+    },
+    "confers": [
+      "Deep Reserves (Endurance quirk)"
+    ],
+    "note": "Effortless physicality and rude health — the body other people train for and do not get."
   },
   {
     "name": "Gifted",
     "category": "Intrinsic",
-    "exclusive": null,
     "once": true,
-    "slot": "1",
-    "grant": 0,
+    "slot": 1,
+    "grant": 36,
     "tags": [
       "standard"
     ],
@@ -390,18 +481,14 @@
       "PC": 1,
       "WP": 1
     },
-    "skills": {},
-    "fields": [],
-    "confers": "IN +1, PC +1, WP +1",
-    "note": "quick, sharp, hard to rattle"
+    "note": "Quick, sharp and hard to rattle; always a step ahead of the room."
   },
   {
     "name": "Artistic",
     "category": "Intrinsic",
-    "exclusive": null,
     "once": true,
-    "slot": "1",
-    "grant": 0,
+    "slot": 1,
+    "grant": 35,
     "tags": [
       "standard"
     ],
@@ -409,25 +496,26 @@
       "CO": 1,
       "PC": 1
     },
-    "skills": {},
-    "fields": [],
-    "confers": "CO +1, PC +1; Striking (Appearance)",
-    "note": "the maker's eye, hand, and presence"
+    "skills": {
+      "Perform": 1
+    },
+    "confers": [
+      "Striking (Appearance quirk)"
+    ],
+    "note": "The hands to make it, the eye to see it, and the presence to hold a room while you do."
   },
   {
     "name": "Magical Talent",
     "category": "Intrinsic",
-    "exclusive": null,
     "once": true,
-    "slot": "1",
-    "grant": 0,
+    "slot": 1,
+    "grant": 55,
     "tags": [
       "fantasy"
     ],
-    "attrs": {},
-    "skills": {},
-    "fields": [],
-    "confers": "unlocks Casting & the Mana pool",
-    "note": "see Magic chapter"
+    "confers": [
+      "the talent itself"
+    ],
+    "note": "The rare thing that cannot be taught. Without it, only the minor magics are open to you."
   }
 ]
