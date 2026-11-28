@@ -1,0 +1,460 @@
+[
+  {
+    "name": "Striking",
+    "family": "Appearance",
+    "kind": "quirk",
+    "effect": "+2 where being noticed and remembered helps; −2 where you needed to be forgettable — and you do not get to be nobody in a crowd.",
+    "note": "Name the audience: striking in a particular way, and here is who it works on.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Well-turned-out",
+    "family": "Appearance",
+    "kind": "quirk",
+    "effect": "+2 where someone is deciding whether you belong; −1 anywhere that reads as money, where it marks you.",
+    "note": "Good clothes, good teeth, the accent.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Plain",
+    "family": "Appearance",
+    "kind": "quirk",
+    "effect": "+1 blending in and being underestimated; −1 making a memorable first impression.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Nondescript",
+    "family": "Appearance",
+    "kind": "quirk",
+    "effect": "+2 blending into crowds, +1 reading people; −1 making memorable impressions.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Scarred",
+    "family": "Appearance",
+    "kind": "quirk",
+    "pairedWith": "Disfigured",
+    "effect": "−2 on first impressions with the appropriate audience, paid back one way, chosen once: you learned to suck it up (+1 on WP-flavoured tasks), turned it into a joke (+1 Charm), or gained insight (+1 reading people).",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Disfigured",
+    "family": "Appearance",
+    "kind": "flaw",
+    "pairedWith": "Scarred",
+    "effect": "−2 on first impressions with the appropriate audience, and it is not paid back.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Reads People",
+    "family": "Empathy",
+    "kind": "quirk",
+    "effect": "+2 PC reading people and detecting lies; −1 PC noticing physical detail while you are doing it.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Oblivious",
+    "family": "Empathy",
+    "kind": "quirk",
+    "effect": "−2 PC reading people; +1 sustained concentration, and most social pressure simply does not land.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Face-blind",
+    "family": "Empathy",
+    "kind": "flaw",
+    "effect": "The thing PC does for everyone else, it does not do for you.",
+    "note": "Routes capacity hard: there is a reason this character knows the timetable, the ledger or the machine better than anyone.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "No theory of mind",
+    "family": "Empathy",
+    "kind": "flaw",
+    "effect": "The thing PC does for everyone else, it does not do for you.",
+    "note": "As Face-blind: the capacity goes somewhere the flaw cannot reach.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Deep Reserves",
+    "family": "Endurance",
+    "kind": "perk",
+    "effect": "+1 EF on exhaustion checks.",
+    "note": "Built for distance.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Hardy",
+    "family": "Endurance",
+    "kind": "quirk",
+    "effect": "+1 EF resisting cold, hunger, poison and disease; −1 on anything requiring a turn of speed.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Conditioned",
+    "family": "Endurance",
+    "kind": "quirk",
+    "effect": "+1 EF on exhaustion checks while fit.",
+    "note": "The catch is that it is maintained, and lapses when the training does.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Hardened",
+    "family": "Endurance",
+    "kind": "quirk",
+    "effect": "+1 EF on Pain Resistance and shrugging off a stun; −1 where someone needed you to show you cared.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Weathered",
+    "family": "Endurance",
+    "kind": "quirk",
+    "effect": "+1 EF on exposure and going without; −1 on convalescence, because the body is already running a deficit.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Sprinter",
+    "family": "Endurance",
+    "kind": "quirk",
+    "pairedWith": "Marathoner",
+    "effect": "+1 EF at your distance, −1 at the other.",
+    "note": "Sprinter and Marathoner fire for the same reason, so they never stack.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Marathoner",
+    "family": "Endurance",
+    "kind": "quirk",
+    "pairedWith": "Sprinter",
+    "effect": "+1 EF at your distance, −1 at the other.",
+    "note": "Sprinter and Marathoner fire for the same reason, so they never stack.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Nimble-fingered",
+    "family": "Coordination",
+    "kind": "perk",
+    "effect": "+1 EF in one named kind of movement.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Graceful",
+    "family": "Coordination",
+    "kind": "perk",
+    "effect": "+1 EF in one named kind of movement.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Remarkable Agility",
+    "family": "Coordination",
+    "kind": "perk",
+    "effect": "+1 EF in one named kind of movement.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Deft Hands",
+    "family": "Coordination",
+    "kind": "perk",
+    "effect": "+1 EF in one named kind of movement.",
+    "note": "Listed in quirks.md as \"Sleight of Hand\", which collides with the SKILL of that name — renamed here so a picker can show both without ambiguity.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Corrected Vision",
+    "family": "Coordination",
+    "kind": "quirk",
+    "effect": "Fine with your glasses; lose them and it is −2 on anything at distance.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Short-sighted",
+    "family": "Coordination",
+    "kind": "flaw",
+    "effect": "A flaw names what it closes off, and the capacity goes somewhere the flaw cannot reach.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "One-handed",
+    "family": "Coordination",
+    "kind": "flaw",
+    "effect": "A flaw names what it closes off, and the capacity goes somewhere the flaw cannot reach.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Blind",
+    "family": "Coordination",
+    "kind": "flaw",
+    "effect": "A flaw names what it closes off, and the capacity goes somewhere the flaw cannot reach.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Stiff",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "standing",
+    "acquired": true,
+    "effect": "−1 EF on agility tasks and on running speed.",
+    "note": "The commonest first one, and the one players feel.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Long-sighted",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "standing",
+    "acquired": true,
+    "effect": "−1 EF on fine close work; nothing at all with reading glasses.",
+    "note": "The Corrected Vision shape — and the day you lose them is a scene.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Hard of hearing",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "standing",
+    "acquired": true,
+    "pairedWith": "Deaf",
+    "effect": "−1 EF on PC where hearing carries it, and −2 in a noisy room.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Deaf",
+    "family": "Age",
+    "kind": "flaw",
+    "mode": "standing",
+    "acquired": true,
+    "pairedWith": "Hard of hearing",
+    "effect": "Closes off what hearing carried, and routes the capacity somewhere age cannot reach.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Slow to mend",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "standing",
+    "acquired": true,
+    "effect": "−1 EF on convalescence.",
+    "note": "The wound that cost a young character a week costs you a month — a campaign-level fact rather than a combat one.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Winded",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "standing",
+    "acquired": true,
+    "effect": "The first exhaustion level comes one push earlier than it used to.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Arthritic",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "intermittent",
+    "acquired": true,
+    "effect": "−1 EF on anything needing hands or fast movement, for as long as the weather lasts.",
+    "trigger": "Cold or damp — and the GM already narrates the weather.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "An old break",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "intermittent",
+    "acquired": true,
+    "effect": "−1 EF on that limb's tasks for the scene.",
+    "trigger": "The first hard exertion of the day, or the first hit you take.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "A knee that goes",
+    "family": "Age",
+    "kind": "quirk",
+    "mode": "intermittent",
+    "acquired": true,
+    "effect": "Running and agility tasks are −2 until you have rested it off.",
+    "trigger": "Exhaustion level 2 or worse — it attaches to a track someone is already moving.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Asthma",
+    "family": "Condition",
+    "kind": "quirk",
+    "attach": "Exhaustion checks.",
+    "trigger": "Cold air, dust, smoke, hard exertion.",
+    "effect": "−1 EF on the check, and a failure costs an extra exhaustion level.",
+    "management": "An inhaler, used in time.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Haemophilia",
+    "family": "Condition",
+    "kind": "flaw",
+    "attach": "Wounds and convalescence.",
+    "trigger": "Any wound.",
+    "effect": "−2 EF on convalescence, and a wound that would normally close keeps bleeding — treat an untreated wound as one level worse after a scene.",
+    "management": "Clotting factor, where the setting has it. Without it this is a flaw, and in most settings a severe one.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Insulin-dependent diabetes",
+    "family": "Condition",
+    "kind": "quirk",
+    "attach": "The exhaustion track.",
+    "trigger": "A missed meal, or no insulin.",
+    "effect": "Start the scene one exhaustion level down; no insulin and it worsens each scene.",
+    "management": "Insulin and food on a schedule — a logistics problem for the whole party.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Chronic pain",
+    "family": "Condition",
+    "kind": "quirk",
+    "attach": "Pain Resistance and agility tasks.",
+    "trigger": "Cold, damp, the first hour of the day.",
+    "effect": "−1 EF while it is up.",
+    "management": "Warmth, movement, and something for it.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Epilepsy",
+    "family": "Condition",
+    "kind": "quirk",
+    "attach": "Whatever you were doing.",
+    "trigger": "Sleep lost, a missed dose, a strobing light — and a GM should let the trigger be visible before it fires.",
+    "effect": "A seizure ends the scene for you, and you come out of it an exhaustion level or two down.",
+    "management": "Medication, kept up. In a setting without it, a flaw.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  },
+  {
+    "name": "Severe allergy",
+    "family": "Condition",
+    "kind": "quirk",
+    "attach": "Nothing at all, until exposure.",
+    "trigger": "The allergen, which the player names.",
+    "effect": "Exhaustion levels fast; true anaphylaxis runs on the wound track instead, and is minutes rather than hours.",
+    "management": "Avoidance, which the party has to help with, plus whatever the setting's adrenaline is.",
+    "note": "The cheapest quirk to carry and the worst to carry badly.",
+    "exampleOnly": true,
+    "tags": [
+      "standard"
+    ]
+  }
+]
