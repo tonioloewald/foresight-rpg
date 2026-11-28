@@ -154,9 +154,17 @@ export class ForesightCharacterSheet extends Component {
    * absent acquires it at level 0, which is what the 3 × cost entry price buys.
    * A conferred skill can't be given up — a factor taught it to you.
    */
-  private bumpLevel = (name: string, d: number) => {
+  private bumpLevel = async (name: string, d: number) => {
     const c = this.char
     const conf = R.conferSkill(c, name)
+    // Un-drop: stepping up on a skill you gave up takes it back.
+    if (c.skills[name]?.dropped) {
+      if (d < 0) return
+      delete c.skills[name]
+      if (!R.conferSkill(c, name)) c.skills[name] = { level: 0 }
+      this.changed()
+      return
+    }
     if (!c.skills[name]) {
       if (d < 0) return // already absent
       c.skills[name] = { level: 0 } // acquire at level 0
@@ -166,7 +174,17 @@ export class ForesightCharacterSheet extends Component {
     const mx = R.maxLevel(c, this.SKILLS, name)
     let lv = (c.skills[name].level || 0) + d
     if (lv < 0) {
-      if (conf > 0) return // conferred: you cannot unlearn what a factor gave you
+      if (conf > 0) {
+        // A factor taught you this, so giving it up is a real decision rather
+        // than a mis-click — but it is YOUR sheet, so you may.
+        const ok = await TosiDialog.confirm(
+          `${name} was taught to you by a background factor. Give it up entirely? You will roll it at BEF −2, and the conferred levels were free, so there is nothing to refund.`
+        )
+        if (!ok) return
+        c.skills[name] = { level: 0, dropped: true }
+        this.changed()
+        return
+      }
       delete c.skills[name] // give it up — back to absent
       this.changed()
       return
@@ -186,17 +204,21 @@ export class ForesightCharacterSheet extends Component {
     this.changed()
   }
 
-  private addBF = () => {
+  private addBF = async () => {
     const pick = (this.parts.bfPickHost?.querySelector('select') as HTMLSelectElement | null)?.value
     if (!pick) return
     const def = Object.values(this.BF_CATALOG).flat().find((b: any) => b.name === pick) as any
     if (!def) return
     const cat = def.category || 'General'
     const c = this.char
-    // one species / one origin — exclusivity is a rule, so enforce it here
+    // One species, one origin is the RULE — but the builder's job is to tell
+    // you when you are leaving the rules, not to stop you. See "the tool warns,
+    // it does not forbid" in the Design Document.
     if ((cat === 'Species' || cat === 'Origin') && c.bfs.some((b: any) => b.cat === cat)) {
-      void TosiDialog.alert(`A character has only one ${cat}. Remove the existing one first.`)
-      return
+      const ok = await TosiDialog.confirm(
+        `A character normally has only one ${cat}, and you already have one. Add ${def.name} anyway?`
+      )
+      if (!ok) return
     }
     c.bfs.push({ ...def, cat, uid: this.uid() })
     R.clampSkills(c, this.SKILLS)
@@ -229,7 +251,7 @@ export class ForesightCharacterSheet extends Component {
     this.changed()
   }
 
-  private addField = () => {
+  private addField = async () => {
     const name = ((this.parts.fieldName as any)?.value || '').trim()
     const years = Number((this.parts.fieldYears as any)?.value) || 1
     if (!name) return
@@ -238,14 +260,16 @@ export class ForesightCharacterSheet extends Component {
     // limit on the Incantation skill.
     const def = this.FIELDS.find((f: any) => f.name === name)
     if (def?.magic === 'advanced' && !this.char.bfs.some((b: any) => b.name === 'Magical Talent')) {
-      void TosiDialog.alert(
-        `${name} is an advanced fundamental. Only a character with the Magical Talent background factor can study one — without it you are limited to the Basic half of each fundamental.`
+      const ok = await TosiDialog.confirm(
+        `${name} is an advanced fundamental, and normally only a character with the Magical Talent background factor can study one. Take it anyway?`
       )
-      return
+      if (!ok) return
     }
     if (this.char.field.some((f) => f.name === name)) {
-      void TosiDialog.alert(`You already have ${name}.`)
-      return
+      // Not always a mistake: quirks.md notes Exotic may be taken more than
+      // once, each for a different school.
+      const ok = await TosiDialog.confirm(`You already have ${name}. Add it a second time?`)
+      if (!ok) return
     }
     this.char.field.push({ name, years })
     ;(this.parts.fieldName as any).value = ''
@@ -413,7 +437,7 @@ export class ForesightCharacterSheet extends Component {
       div(
         { class: 'fs-row' },
         div({ part: 'bfPickHost' }),
-        button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: this.addBF }, 'Add'),
+        button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: () => void this.addBF() }, 'Add'),
         span({ class: 'fs-muted', part: 'slots' })
       ),
       div({ part: 'bfList' })
@@ -436,7 +460,7 @@ export class ForesightCharacterSheet extends Component {
         }),
         input({ part: 'fieldYears', type: 'number', min: '1', value: '1', class: 'fs-num' }),
         span({ class: 'fs-muted' }, 'years'),
-        button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: this.addField }, 'Add')
+        button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: () => void this.addField() }, 'Add')
       ),
       div({ part: 'fieldList' }),
       div({ part: 'fieldDatalist' })
@@ -811,14 +835,16 @@ export class ForesightCharacterSheet extends Component {
               td(n),
               td({ class: 'fs-muted' }, this.SKILLS[n].formula || ''),
               td({ class: 'fs-num' }, conf ? `+${conf}` : '—'),
-              td({ class: has ? 'fs-num' : 'fs-num fs-muted' }, has ? String(lv) : 'absent'),
+              // the TOTAL, not just what was bought: "0" next to a +2 read as
+              // nearly-absent when the character is actually trained
+              td({ class: has ? 'fs-num' : 'fs-num fs-muted' }, has ? String(conf + lv) : 'absent'),
               td(
                 button(
-                  { class: 'fs-step', onClick: () => this.bumpLevel(n, -1), disabled: !c.skills[n] || (lv <= 0 && conf > 0) },
+                  { class: 'fs-step', onClick: () => void this.bumpLevel(n, -1), disabled: !R.hasSkill(c, n) },
                   '−'
                 ),
                 ' ',
-                button({ class: 'fs-step', onClick: () => this.bumpLevel(n, 1), disabled: atCap }, '+')
+                button({ class: 'fs-step', onClick: () => void this.bumpLevel(n, 1), disabled: atCap && R.hasSkill(c, n) }, '+')
               ),
               td({ class: 'fs-num fs-muted' }, String(mx)),
               // A skill you HAVE should read louder than one you don't. Absent

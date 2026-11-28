@@ -1177,6 +1177,36 @@ bookkeeping* applied to character creation rather than to play.
 the free-versus-expensive upbringing split went with it. Both were bookkeeping
 around a non-choice.)*
 
+## Decided: the tool warns, it does not forbid (2026-11-28, Tonio)
+
+*"In general we want to allow players / GMs to ignore rules to do what they want."*
+
+**The character builder enforces the rules by telling you when you are outside
+them, never by refusing.** Every constraint is a confirmation, not a wall: one
+species and one origin, an advanced fundamental without the Talent, a field
+taken twice — each now asks, says what the rule is, and does it anyway if you
+say yes.
+
+**Why this is not laxity.** A refusal is a claim that the rules anticipated
+every table, and they did not. The GM who wants a half-elf, the player building
+an NPC that is deliberately illegal, the group house-ruling the thing this
+edition got wrong — a tool that blocks them is a tool they stop using, and then
+the character sheet is kept somewhere else and the rules lose the argument by
+default. A tool that *says* "this is outside the rules, proceed?" keeps the
+rule visible at exactly the moment it matters and still loses gracefully.
+
+**The practical test for any new constraint:** does violating it corrupt the
+data, or merely break a rule? Corrupt the data — a field that does not exist, a
+skill whose cost cannot be computed — and refuse, because the sheet would stop
+meaning anything. Break a rule and you warn, because that is the GM's call and
+not the software's.
+
+*(Where overspending points already worked this way — the total simply turns
+red and keeps counting — this makes the rest of the builder consistent with it.
+Still outstanding: the skill level cap is enforced by a disabled button and by
+`clampSkills()` actively reducing levels, which is the one place the tool still
+overrules the user.)*
+
 ## Evidence standard: use is not testing (2026-08)
 
 **The 1986 core was blind-tested and iterated over decades — sent out to testers who didn't know the intent, across dozens of full distributions.** That is measurement. It is a different kind of evidence from "published and then played by a lot of people", which generates volume but very little signal: there's no control, nothing is recorded, and players **silently house-rule around anything broken**, so the failure is patched at ten thousand tables and reported by none of them. A rule whose text and behaviour diverge can survive many editions on those terms, because editions are additive and nobody re-derives arithmetic that looks fine. (Tonio's example: GURPS's impaling damage rule doing the opposite of what it describes, across six-plus editions.)

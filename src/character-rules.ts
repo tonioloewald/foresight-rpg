@@ -129,7 +129,10 @@ export interface Character {
   concept: string
   base: Record<string, number>
   buyBonus: Record<string, number>
-  skills: Record<string, { level: number }>
+  /** `dropped` means "given up deliberately" — the only way to be ABSENT in a
+   *  skill a background factor taught you. Without it the factor simply keeps
+   *  conferring the levels back. */
+  skills: Record<string, { level: number; dropped?: boolean }>
   field: { name: string; years: number }[]
   ltf: string[]
   quirk: string[]
@@ -167,11 +170,17 @@ export function blankCharacter(): Character {
 // Background factors confer attribute bumps, skill levels and fields. Conferred
 // skill levels are FREE — you only pay for levels bought on top.
 
+/** Has this skill been deliberately given up? */
+export function skillDropped(c: Character, name: string): boolean {
+  return !!c.skills[name]?.dropped
+}
+
 export function conferAttr(c: Character, a: string): number {
   return c.bfs.reduce((s, b) => s + ((b.attrs && b.attrs[a]) || 0), 0)
 }
 
 export function conferSkill(c: Character, name: string): number {
+  if (skillDropped(c, name)) return 0
   return c.bfs.reduce((s, b) => s + ((b.skills && b.skills[name]) || 0), 0)
 }
 
@@ -249,6 +258,7 @@ export const SKILL_ACQUIRE_MULT = 3
  * never having been taught, which is `absent`.
  */
 export function hasSkill(c: Character, name: string): boolean {
+  if (skillDropped(c, name)) return false
   return !!c.skills[name] || conferredAtAll(c, name)
 }
 
@@ -256,6 +266,7 @@ export function hasSkill(c: Character, name: string): boolean {
  *  a factor means "you were taught it" — which is the entry price paid, not
  *  nothing. Summing levels would read that as absent. */
 export function conferredAtAll(c: Character, name: string): boolean {
+  if (skillDropped(c, name)) return false
   return c.bfs.some((b: any) => b.skills && Object.prototype.hasOwnProperty.call(b.skills, name))
 }
 
@@ -276,7 +287,7 @@ export function skillBef(c: Character, defs: Record<string, SkillDef>, name: str
  */
 export function skillBuySpend(c: Character, defs: Record<string, SkillDef>, name: string): number {
   const entry = c.skills[name]
-  if (!entry) return 0
+  if (!entry || entry.dropped) return 0 // nothing bought, and conferred levels were free
   const lv = Math.max(0, entry.level || 0)
   const cost = (defs[name] && defs[name].cost) || 1
   return conferredAtAll(c, name) ? cost * lv : cost * (SKILL_ACQUIRE_MULT + lv)
