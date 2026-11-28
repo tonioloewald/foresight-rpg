@@ -28,8 +28,15 @@ const CSS = `
     display: none !important;
   }
 
+  /* The sidenav is a GRID with a fixed nav column (200px 1fr). Hiding the nav
+     leaves the column, and the page prints with a blank gutter down the left. */
+  tosi-sidenav, tosi-doc-system > div {
+    display: block !important;
+    grid-template-columns: none !important;
+  }
+
   /* the article is the page */
-  html, body, tosi-doc-system, .doc-content, article {
+  html, body, tosi-doc-system, tosi-sidenav, .doc-content, article {
     display: block !important;
     width: auto !important;
     max-width: none !important;
@@ -66,7 +73,11 @@ const CSS = `
   foresight-character-sheet select,
   foresight-character-sheet tosi-select,
   foresight-character-sheet input[type="file"],
-  foresight-character-sheet .fs-savepanel {
+  foresight-character-sheet .fs-savepanel,
+  /* the setting-tag chips are a filter for editing, not part of the character */
+  foresight-character-sheet tosi-segmented,
+  /* ...and the row it sits in, or a bare "Genre:" prints with nothing after it */
+  foresight-character-sheet .fs-row:has(tosi-segmented) {
     display: none !important;
   }
 

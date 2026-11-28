@@ -498,6 +498,13 @@ export class ForesightCharacterSheet extends Component {
 
   private async loadData() {
     try {
+      // connectedCallback can fire more than once (the doc-system moves the
+      // element), and these catalogues are PUSHED into — so reset them, or
+      // every background factor and field appears twice over.
+      this.SKILLS = {}
+      this.BF_CATALOG = {}
+      this.FIELDS = []
+      this.TEMPLATES = []
       const [skills, bfs, fields, templates, fundamentals] = await Promise.all(
         ['skills.json', 'background-factors.json', 'fields.json', 'templates.json', 'magic-fundamentals.json'].map((f) =>
           fetch(new URL('data/' + f, SITE_ROOT).href).then((r) => (r.ok ? r.json() : null))
@@ -628,7 +635,7 @@ export class ForesightCharacterSheet extends Component {
     const used = R.usedSlots(c)
     this.parts.pools?.replaceChildren(
       span('Points left ', span({ class: pool.pts < 0 ? 'fs-warn fs-score' : 'fs-score' }, String(pool.pts))),
-      span({ class: 'fs-muted' }, `granted ${pool.granted} · spent ${pool.spent}`)
+      span({ class: 'fs-muted' }, ` — granted ${pool.granted} · spent ${pool.spent}`)
     )
     if (this.parts.slots)
       this.parts.slots.replaceChildren(
