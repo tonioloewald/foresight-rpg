@@ -90,7 +90,7 @@ const SPECS: Spec[] = [
     attrs: [6, 7, 10, 9, 8],
     bfs: ['Human', 'Magical Talent', 'Magical Apprenticeship', 'Tertiary Education', 'Mysterious Mentor'],
     // the four fundamentals he actually works in, at Basic
-    fields: [['Sense', 1], ['Time', 1], ['Form', 1], ['Apportation', 1]],
+    fields: [['Sense', 2], ['Time', 2], ['Form', 2], ['Apportation', 2]],
     // magic first: the channel, then the advanced tiers, then everything else
     spend: [
       'Incantation',
@@ -142,8 +142,8 @@ const SPECS: Spec[] = [
       'A doctor on Earth and a healer in Fvaldanon, where she practises as a herbalist and uses the minor magics — she has the apprenticeship but not the Talent, so the great fundamentals are closed to her and the small ones are enough. Modern medicine in a renaissance town is the most dangerous secret any of them carry.',
     attrs: [6, 9, 10, 9, 6],
     bfs: ['Human', 'Tertiary Education', 'Magical Apprenticeship', 'Field Experience', 'Gifted'],
-    fields: [['First Aid', 1], ['Medicine', 3], ['Herbalism', 2], ['Essence', 1]],
-    spend: [['Medicine', 3], ['Healing', 3], 'Incantation', ['Essence', 1], ['Emergency Medicine', 2], 'Theory', ['Herbalism', 3], 'Search'],
+    fields: [['First Aid', 1], ['Medicine', 3], ['Herbalism', 2], ['Essence', 2]],
+    spend: [['Medicine', 3], ['Healing', 3], 'Incantation', ['Essence', 2], ['Emergency Medicine', 2], 'Theory', ['Herbalism', 3], 'Search'],
     ltf: ['Trauma', 'What grows in Hyalis', 'Explaining without explaining'],
     quirk: ['Washes her hands, always', 'Will not let anyone die quietly'],
     gear: 'A doctor’s bag reprovisioned on both sides, a herbal she wrote herself, and no antibiotics worth the name.',

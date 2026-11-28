@@ -228,28 +228,28 @@
     },
     "skills": {
       "Incantation": {
-        "level": 6
+        "level": 4
       },
       "Theory": {
-        "level": 7
+        "level": 5
       }
     },
     "field": [
       {
         "name": "Sense",
-        "years": 1
+        "years": 2
       },
       {
         "name": "Time",
-        "years": 1
+        "years": 2
       },
       {
         "name": "Form",
-        "years": 1
+        "years": 2
       },
       {
         "name": "Apportation",
-        "years": 1
+        "years": 2
       },
       {
         "name": "Time (Advanced)",
@@ -880,7 +880,7 @@
         "level": 6
       },
       "Theory": {
-        "level": 7
+        "level": 5
       },
       "Search": {
         "level": 6
@@ -901,7 +901,7 @@
       },
       {
         "name": "Essence",
-        "years": 1
+        "years": 2
       },
       {
         "name": "Healing",

@@ -1,25 +1,232 @@
 [
-  { "name": "Abeyance",     "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "hold a magical effect in reserve, released on a trigger or condition" },
-  { "name": "Air",          "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "command and conjure air, wind, and gases" },
-  { "name": "Apportation",  "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "move objects at a distance; magical transport" },
-  { "name": "Cancellation", "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "negate, dispel, or suppress magic" },
-  { "name": "Communication","formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "mind-to-mind contact and magical messaging" },
-  { "name": "Compulsion",   "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "command and bend the will of others" },
-  { "name": "Dimension",    "formerly": "Expansion + Extension","basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "size, reach, range, and the scaling of effects (merged Expansion & Extension)" },
-  { "name": "Divination",   "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "knowledge of the hidden, distant, or yet to come" },
-  { "name": "Earth",        "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "command earth, stone, and metal" },
-  { "name": "Emotion",      "formerly": "Emotions",            "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "sense and sway feelings" },
-  { "name": "Essence",      "formerly": "Instil + Tap",        "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "imbue qualities/effects into a target (give) and draw power or qualities out (take); merged Instil & Tap. Taking effects are one complexity level harder than the matching giving effect — giving is easier than taking" },
-  { "name": "Fire",         "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "command and conjure fire and heat" },
-  { "name": "Form",         "formerly": "Shaping",             "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "shape and reshape matter" },
-  { "name": "Image",        "formerly": "Images",              "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "visual illusion" },
-  { "name": "Sandestin",    "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "summon and bind magical servitor entities to carry complex effects" },
-  { "name": "Scent",        "formerly": "Odours & Tastes",     "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "created and illusory smells and tastes" },
-  { "name": "Sense",        "formerly": "Perception",          "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "grant, sharpen, or manipulate the senses" },
-  { "name": "Sound",        "formerly": "Sounds",              "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "created and illusory sound" },
-  { "name": "Summon",       "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "call creatures, spirits, or objects to you" },
-  { "name": "Time",         "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "hasten, delay, or perceive the flow of time" },
-  { "name": "Touch",        "formerly": "Tactile Sensations",  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "created and illusory touch and tactile sensation" },
-  { "name": "Water",        "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "command water, liquids, and ice" },
-  { "name": "Wood",         "formerly": null,                  "basicYears": 1, "advancedYears": 3, "tags": ["fantasy"], "note": "command plants, wood, and living growth" }
+  {
+    "name": "Abeyance",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "hold a magical effect in reserve, released on a trigger or condition"
+  },
+  {
+    "name": "Air",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "command and conjure air, wind, and gases"
+  },
+  {
+    "name": "Apportation",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "move objects at a distance; magical transport"
+  },
+  {
+    "name": "Cancellation",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "negate, dispel, or suppress magic"
+  },
+  {
+    "name": "Communication",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "mind-to-mind contact and magical messaging"
+  },
+  {
+    "name": "Compulsion",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "command and bend the will of others"
+  },
+  {
+    "name": "Dimension",
+    "formerly": "Expansion + Extension",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "size, reach, range, and the scaling of effects (merged Expansion & Extension)"
+  },
+  {
+    "name": "Divination",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "knowledge of the hidden, distant, or yet to come"
+  },
+  {
+    "name": "Earth",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "command earth, stone, and metal"
+  },
+  {
+    "name": "Emotion",
+    "formerly": "Emotions",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "sense and sway feelings"
+  },
+  {
+    "name": "Essence",
+    "formerly": "Instil + Tap",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "imbue qualities/effects into a target (give) and draw power or qualities out (take); merged Instil & Tap. Taking effects are one complexity level harder than the matching giving effect — giving is easier than taking"
+  },
+  {
+    "name": "Fire",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "command and conjure fire and heat"
+  },
+  {
+    "name": "Form",
+    "formerly": "Shaping",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "shape and reshape matter"
+  },
+  {
+    "name": "Image",
+    "formerly": "Images",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "visual illusion"
+  },
+  {
+    "name": "Sandestin",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "summon and bind magical servitor entities to carry complex effects"
+  },
+  {
+    "name": "Scent",
+    "formerly": "Odours & Tastes",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "created and illusory smells and tastes"
+  },
+  {
+    "name": "Sense",
+    "formerly": "Perception",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "grant, sharpen, or manipulate the senses"
+  },
+  {
+    "name": "Sound",
+    "formerly": "Sounds",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "created and illusory sound"
+  },
+  {
+    "name": "Summon",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "call creatures, spirits, or objects to you"
+  },
+  {
+    "name": "Time",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "hasten, delay, or perceive the flow of time"
+  },
+  {
+    "name": "Touch",
+    "formerly": "Tactile Sensations",
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "created and illusory touch and tactile sensation"
+  },
+  {
+    "name": "Water",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "command water, liquids, and ice"
+  },
+  {
+    "name": "Wood",
+    "formerly": null,
+    "basicYears": 2,
+    "advancedYears": 3,
+    "tags": [
+      "fantasy"
+    ],
+    "note": "command plants, wood, and living growth"
+  }
 ]
