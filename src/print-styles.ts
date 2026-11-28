@@ -161,7 +161,10 @@ const CSS = `
     display: grid !important;
     grid-template-columns: 1fr 1fr;
     column-gap: 4mm;
-    align-items: start;
+    /* NOT align-items:start — panels should STRETCH to their row, so the
+       right-hand column fills the height of Skills beside it and players get
+       usable space to write in rather than a box clamped to its contents. */
+    align-items: stretch;
   }
   foresight-character-sheet > section:has([part="nameField"]) { grid-column: 1 / -1; }
   foresight-character-sheet > section:has([part="attrs"])     { grid-column: 1; }
@@ -179,6 +182,17 @@ const CSS = `
     page-break-before: always !important;
   }
   foresight-character-sheet > section:has(textarea[placeholder]) { grid-column: 2; }
+
+  /* A sheet is written on. The panels that collect handwriting get a floor so
+     they are usable even when the character has little in them yet, and the
+     free-text boxes grow to fill whatever the grid gives them. */
+  foresight-character-sheet > section:has([part="fieldList"]),
+  foresight-character-sheet > section:has([part="ltfList"]) { min-height: 26mm; }
+  foresight-character-sheet > section:has([part="condNote"]),
+  foresight-character-sheet > section:has(textarea[placeholder]) { min-height: 70mm; }
+  foresight-character-sheet textarea { min-height: 18mm !important; }
+  /* content sits at the top of a stretched panel; the space below is the point */
+  foresight-character-sheet > section { align-content: start; }
 
   /* The element's no-JS fallback paragraph is a light-DOM child, so making the
      root a grid turned it into a grid ITEM and dropped it in among the panels.
