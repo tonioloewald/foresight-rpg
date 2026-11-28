@@ -123,7 +123,10 @@ export function blankCharacter(): Character {
     name: '', arch: '', age: '', wealth: '', concept: '',
     base, buyBonus, skills: {}, field: [], ltf: [], quirk: [], bfs: [], awards: [],
     slots: DEFAULT_SLOTS, activeTags: ['standard', 'modern'],
-    wound: 0, exh: { Fatigue: 0 }, shaken: false, stunned: false, gear: '',
+    // Mana is a power pool — a second exhaustion track, not a skill and no
+    // longer a spend-down point pool. Present on every sheet; ignored unless
+    // the character casts.
+    wound: 0, exh: { Fatigue: 0, Mana: 0 }, shaken: false, stunned: false, gear: '',
   }
 }
 

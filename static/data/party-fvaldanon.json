@@ -199,7 +199,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -210,7 +211,7 @@
     "arch": "",
     "age": "35",
     "wealth": "Comfortable — a magician who can be hired",
-    "concept": "Full-time magician, and the first of them to stop going home. Has the Talent, which is what opens the advanced fundamentals to him. Works in **Perception, Time, Shaping and Apportation** — in a world where magical apparatus runs the factories and carries the post, that is a profession with standing.",
+    "concept": "Full-time magician, and the first of them to stop going home. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.",
     "base": {
       "ST": 6,
       "CO": 7,
@@ -226,32 +227,53 @@
       "WP": 0
     },
     "skills": {
+      "Incantation": {
+        "level": 6
+      },
       "Theory": {
-        "level": 12
-      },
-      "Search": {
-        "level": 11
-      },
-      "Confidence": {
-        "level": 11
+        "level": 7
       }
     },
     "field": [
       {
-        "name": "Natural Philosophy",
-        "years": 2
+        "name": "Sense",
+        "years": 1
       },
       {
-        "name": "Alchemy",
-        "years": 2
+        "name": "Time",
+        "years": 1
+      },
+      {
+        "name": "Form",
+        "years": 1
+      },
+      {
+        "name": "Apportation",
+        "years": 1
+      },
+      {
+        "name": "Time (Advanced)",
+        "years": 3
+      },
+      {
+        "name": "Apportation (Advanced)",
+        "years": 3
+      },
+      {
+        "name": "Form (Advanced)",
+        "years": 3
+      },
+      {
+        "name": "Sense (Advanced)",
+        "years": 3
       },
       {
         "name": "Lore",
-        "years": 4
+        "years": 2
       },
       {
-        "name": "Mathematics",
-        "years": 3
+        "name": "Natural Philosophy",
+        "years": 2
       }
     ],
     "ltf": [
@@ -387,7 +409,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -609,7 +632,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -824,7 +848,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,
@@ -851,14 +876,14 @@
       "WP": 0
     },
     "skills": {
+      "Incantation": {
+        "level": 6
+      },
       "Theory": {
-        "level": 15
+        "level": 7
       },
       "Search": {
-        "level": 10
-      },
-      "Charm": {
-        "level": 12
+        "level": 6
       }
     },
     "field": [
@@ -873,6 +898,10 @@
       {
         "name": "Herbalism",
         "years": 3
+      },
+      {
+        "name": "Essence",
+        "years": 1
       },
       {
         "name": "Healing",
@@ -1021,7 +1050,8 @@
     ],
     "wound": 0,
     "exh": {
-      "Fatigue": 0
+      "Fatigue": 0,
+      "Mana": 0
     },
     "shaken": false,
     "stunned": false,

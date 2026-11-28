@@ -105,6 +105,7 @@ export class ForesightCharacterSheet extends Component {
   private BF_CATALOG: Record<string, any[]> = {}
   private FIELDS: any[] = []
   private TEMPLATES: R.Character[] = []
+  private FUNDAMENTALS: string[] = []
   private loaded = false
   private uidc = 1
 
@@ -221,6 +222,16 @@ export class ForesightCharacterSheet extends Component {
     const name = ((this.parts.fieldName as any)?.value || '').trim()
     const years = Number((this.parts.fieldYears as any)?.value) || 1
     if (!name) return
+    // The Talent is what opens the advanced half of a fundamental. Without it
+    // only the minor magics are available — which is a field-level limit, not a
+    // limit on the Incantation skill.
+    const def = this.FIELDS.find((f: any) => f.name === name)
+    if (def?.magic === 'advanced' && !this.char.bfs.some((b: any) => b.name === 'Magical Talent')) {
+      void TosiDialog.alert(
+        `${name} is an advanced fundamental. Only a character with the Magical Talent background factor can study one — without it you are limited to the Basic half of each fundamental.`
+      )
+      return
+    }
     this.char.field.push({ name, years })
     ;(this.parts.fieldName as any).value = ''
     this.changed()
@@ -425,6 +436,14 @@ export class ForesightCharacterSheet extends Component {
             bindValue: fsSheet.char.exh.Fatigue,
             onInput: this.changed,
           })
+        ),
+        // Mana is a POWER POOL, not a skill: a second exhaustion track, gathered
+        // by a WP roll and cleared by rest like any other. It used to be a
+        // spend-down point pool; pools are gone.
+        label(
+          { class: 'fs-row', part: 'manaRow' },
+          'Mana ',
+          input({ type: 'number', min: '0', max: '5', class: 'fs-num', bindValue: fsSheet.char.exh.Mana, onInput: this.changed })
         )
       ),
       p({ class: 'fs-muted', part: 'condNote' })
@@ -475,8 +494,8 @@ export class ForesightCharacterSheet extends Component {
 
   private async loadData() {
     try {
-      const [skills, bfs, fields, templates] = await Promise.all(
-        ['skills.json', 'background-factors.json', 'fields.json', 'templates.json'].map((f) =>
+      const [skills, bfs, fields, templates, fundamentals] = await Promise.all(
+        ['skills.json', 'background-factors.json', 'fields.json', 'templates.json', 'magic-fundamentals.json'].map((f) =>
           fetch(new URL('data/' + f, SITE_ROOT).href).then((r) => (r.ok ? r.json() : null))
         )
       )
@@ -498,7 +517,18 @@ export class ForesightCharacterSheet extends Component {
         const cat = b.category || b.cat || 'General'
         ;(this.BF_CATALOG[cat] ||= []).push(b)
       }
-      this.FIELDS = fields || []
+      // Magic is FIELDS channelled through a skill: the fundamentals are fields
+      // of knowledge (what you can cast), Incantation is the channel (how well),
+      // and Mana is a power pool, not a skill. Each fundamental is two fields —
+      // Basic, and an Advanced tier that only the Talent opens.
+      this.FUNDAMENTALS = (fundamentals || []).map((f: any) => f.name)
+      this.FIELDS = [
+        ...(fields || []),
+        ...(fundamentals || []).flatMap((f: any) => [
+          { name: f.name, parent: null, years: f.basicYears ?? 1, thread: 'Magic', tags: ['fantasy'], note: `${f.note || ''} (Basic)`, magic: 'basic' },
+          { name: `${f.name} (Advanced)`, parent: f.name, years: f.advancedYears ?? 3, thread: 'Magic', tags: ['fantasy'], note: `${f.note || ''} (Advanced — requires Magical Talent)`, magic: 'advanced' },
+        ]),
+      ]
       this.loaded = true
       return true
     } catch {

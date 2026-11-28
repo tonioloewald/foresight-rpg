@@ -22,7 +22,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="../doc-system.css?v=822de5bc24a8" data-tosi-doc-system />
+  <link rel="stylesheet" href="../doc-system.css?v=ed7603227d80" data-tosi-doc-system />
   <title>Exhaustion — ForeSight RPG</title>
   <meta name="description" content="One-pager. Fatigue, magic, and divine favour are all the same thing: not a point pool you spend down, but a track of exhaustion levels — wound-shaped, but…" />
   <link rel="canonical" href="https://foresight-rpg.com/exhaustion/" />
@@ -37,7 +37,7 @@
   <link rel="icon" href="../favicon.svg" />
 </head>
 <body>
-  <tosi-doc-system docs="../docs.json?v=b8a7ab6463a0" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
+  <tosi-doc-system docs="../docs.json?v=031776a2cb99" config="{&quot;projectName&quot;:&quot;ForeSight RPG&quot;,&quot;bookVolumes&quot;:&quot;/epub-volumes.json&quot;,&quot;ebooks&quot;:[{&quot;title&quot;:&quot;ForeSight RPG&quot;,&quot;url&quot;:&quot;/foresight-rpg.epub&quot;},{&quot;title&quot;:&quot;ForeSight 1986 — Original Edition (community restoration)&quot;,&quot;url&quot;:&quot;/foresight-rpg-foresight-1986.epub&quot;}]}">
   <article class="doc-content" data-doc="exhaustion.md">
 <h1 id="exhaustion">Exhaustion</h1>
 <!--{ "parent": "conflict", "order": 7 }-->
@@ -145,6 +145,62 @@
 <p>So a <strong>Spent (3)</strong> character sleeps it off to <strong>Tired (2)</strong>, rests down to <strong>Winded (1)</strong>, and a breather clears the last — deep exhaustion is a slow climb out, not a nap. And past level 3, keep checking WP or exhaustion starts <strong>converting into real wounds</strong> — you can drop from over-exertion, or die of exposure.</p>
 <h2 id="magic-and-the-other-powers">Magic, and the other powers</h2>
 <p>By default <strong>magic is just fatigue</strong>: gathering power is taxing, and casting in a <strong>mana-poor</strong> place is simply more exhausting, a <strong>mana-rich</strong> one less — a modifier, not a second resource to track. A setting that wants magic to feel <em>separate</em> can give it its <strong>own track</strong> (Mana), and likewise <strong>Spirit</strong> for mystic disciplines; each track wears down independently (your Mana can be wrung dry while your Spirit is fresh) and stacks per the rule above.</p>
+<h3 id="the-mana-roll-exactly">The mana roll, exactly</h3>
+<p><strong>An incantation&#39;s Mana Cost is an ease-factor penalty on a roll to avoid paying for it.</strong> Cast, then roll <strong>WP</strong> (an attribute, so <strong>BEF 7</strong>) at <strong>EF 7 − the Mana Cost</strong>. Fail and you take <strong>one level of mana exhaustion</strong>, which is <strong>−1 to further magic</strong> until you rest it off; succeed and the spell was free.</p>
+<blockquote>
+<p><em>A Mana Cost 5 incantation is WP at <strong>EF 2</strong>. A magician with WP 9 avoids the cost 18% of the time — which is to say, a big spell is paid for.</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="right">WP</th>
+<th align="right">cost 0</th>
+<th align="right">cost 1</th>
+<th align="right">cost 2</th>
+<th align="right">cost 3</th>
+<th align="right">cost 4</th>
+<th align="right">cost 5</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="right">7</td>
+<td align="right">49%</td>
+<td align="right">42%</td>
+<td align="right">35%</td>
+<td align="right">28%</td>
+<td align="right">21%</td>
+<td align="right">14%</td>
+</tr>
+<tr>
+<td align="right">9</td>
+<td align="right">63%</td>
+<td align="right">54%</td>
+<td align="right">45%</td>
+<td align="right">36%</td>
+<td align="right">27%</td>
+<td align="right">18%</td>
+</tr>
+<tr>
+<td align="right">11</td>
+<td align="right">77%</td>
+<td align="right">66%</td>
+<td align="right">55%</td>
+<td align="right">44%</td>
+<td align="right">33%</td>
+<td align="right">22%</td>
+</tr>
+<tr>
+<td align="right">13</td>
+<td align="right">91%</td>
+<td align="right">78%</td>
+<td align="right">65%</td>
+<td align="right">52%</td>
+<td align="right">39%</td>
+<td align="right">26%</td>
+</tr>
+</tbody></table>
+<p><em>(Chance of <strong>avoiding</strong> the level. Five levels and you are Collapsed.)</em></p>
+<p><strong>Note what this does to the shape of a magician&#39;s day.</strong> Even a trivial working is close to a coin-flip for ordinary willpower, so a caster is not metering out a pool — they are <strong>accumulating a debt at a rate they can feel</strong>, and the penalty compounds against the next attempt. That is the point-pool&#39;s job done by a check nobody can quietly forget to subtract from. <em>(If small magics ought to be genuinely free, the lever is this roll&#39;s BEF, not the costs.)</em></p>
 <p>However it&#39;s tracked, the shape is <strong>gather then weave</strong>: a <strong>gather roll</strong> whose ease factor reflects how much you&#39;re asking for (a candle-flame is trivial; a firestorm brutal). Read its <strong>band</strong> — <strong>solid</strong> (QR1–3) and the power comes free and clear; <strong>marginal</strong> (QR4) and it comes but costs a level; <strong>poor</strong> (QR7) and it doesn&#39;t come at all; <strong>bad</strong> (QR10) <strong>fizzles <em>and</em> costs a level</strong>. And a caster may <strong>volunteer a level for a one-off +4</strong> — reaching past your limit on purpose, reliable but the bill compounds.</p>
 <h2 id="divine-favour-is-different--its-earned-not-rested">Divine favour is different — it&#39;s earned, not rested</h2>
 <p><strong>Divine favour</strong> is spent like the others (temporarily, in the moment), but it isn&#39;t refilled by sleep. It&#39;s gated by <strong>Piety</strong> — which behaves like a <em>skill</em>, except it is driven by <strong>deeds, not experience</strong>: acts of devotion, sacrifice, and living by the god&#39;s tenets raise it; betraying them lowers it. A priest doesn&#39;t rest to recover standing with their god; they <em>earn it back</em>. (Full treatment under Religion.)</p>
@@ -241,6 +297,6 @@
     <li><a href="https://github.com/tonioloewald/foresight-rpg" data-icon="github">GitHub</a></li>
   </ul>
   </tosi-doc-system>
-  <script type="module" src="../hydrate-11vcdy4d.js"></script>
+  <script type="module" src="../hydrate-ya8h9ptj.js"></script>
 </body>
 </html>

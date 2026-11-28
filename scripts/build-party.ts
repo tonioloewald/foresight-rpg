@@ -30,6 +30,13 @@ const read = async (f: string) => JSON.parse(await Bun.file(`static/data/${f}.js
 const skillsRaw: any[] = await read('skills')
 const bfsRaw: any[] = await read('background-factors')
 const fieldsRaw: any[] = await read('fields')
+// Magic is fields channelled through a skill: each fundamental is a Basic field
+// and an Advanced one, the latter gated behind the Magical Talent factor.
+const fundRaw: any[] = await read('magic-fundamentals')
+for (const f of fundRaw) {
+  fieldsRaw.push({ name: f.name, parent: null, years: f.basicYears ?? 1, thread: 'Magic', tags: ['fantasy'], magic: 'basic' })
+  fieldsRaw.push({ name: `${f.name} (Advanced)`, parent: f.name, years: f.advancedYears ?? 3, thread: 'Magic', tags: ['fantasy'], magic: 'advanced' })
+}
 
 const SKILLS: Record<string, R.SkillDef> = {}
 for (const s of skillsRaw) {
@@ -78,12 +85,23 @@ const SPECS: Spec[] = [
     name: 'William the White',
     player: 'Ville',
     concept:
-      'Full-time magician, and the first of them to stop going home. Has the Talent, which is what opens the advanced fundamentals to him. Works in **Perception, Time, Shaping and Apportation** — in a world where magical apparatus runs the factories and carries the post, that is a profession with standing.',
+      'Full-time magician, and the first of them to stop going home. Has the **Talent**, which is what opens the advanced fundamentals to him. Works in **Sense** (perception), **Time**, **Form** (shaping) and **Apportation** — and in a world where magical apparatus runs the factories and carries the post, that is a profession with standing rather than a secret.',
     wealth: 'Comfortable — a magician who can be hired',
     attrs: [6, 7, 10, 9, 8],
     bfs: ['Human', 'Magical Talent', 'Magical Apprenticeship', 'Tertiary Education', 'Mysterious Mentor'],
-    fields: [['Natural Philosophy', 2], ['Alchemy', 2], ['Lore', 2]],
-    spend: ['Theory', ['Lore', 4], ['Natural Philosophy', 2], 'Search', 'Confidence', ['Mathematics', 3]],
+    // the four fundamentals he actually works in, at Basic
+    fields: [['Sense', 1], ['Time', 1], ['Form', 1], ['Apportation', 1]],
+    // magic first: the channel, then the advanced tiers, then everything else
+    spend: [
+      'Incantation',
+      ['Time (Advanced)', 3],
+      ['Apportation (Advanced)', 3],
+      ['Form (Advanced)', 3],
+      ['Sense (Advanced)', 3],
+      ['Lore', 2],
+      'Theory',
+      ['Natural Philosophy', 2],
+    ],
     ltf: ['Fvaldan apparatus', 'The four fundamentals he actually knows', 'Reading a room before speaking'],
     quirk: ['Has not been back to Earth in a year', 'Writes everything down'],
     gear: 'A working magician’s kit, notebooks, and the local licence that says he may use it.',
@@ -124,8 +142,8 @@ const SPECS: Spec[] = [
       'A doctor on Earth and a healer in Fvaldanon, where she practises as a herbalist and uses the minor magics — she has the apprenticeship but not the Talent, so the great fundamentals are closed to her and the small ones are enough. Modern medicine in a renaissance town is the most dangerous secret any of them carry.',
     attrs: [6, 9, 10, 9, 6],
     bfs: ['Human', 'Tertiary Education', 'Magical Apprenticeship', 'Field Experience', 'Gifted'],
-    fields: [['First Aid', 1], ['Medicine', 3], ['Herbalism', 2]],
-    spend: [['Medicine', 3], ['Healing', 3], ['Emergency Medicine', 2], 'Theory', 'Search', ['Herbalism', 3], 'Charm'],
+    fields: [['First Aid', 1], ['Medicine', 3], ['Herbalism', 2], ['Essence', 1]],
+    spend: [['Medicine', 3], ['Healing', 3], 'Incantation', ['Essence', 1], ['Emergency Medicine', 2], 'Theory', ['Herbalism', 3], 'Search'],
     ltf: ['Trauma', 'What grows in Hyalis', 'Explaining without explaining'],
     quirk: ['Washes her hands, always', 'Will not let anyone die quietly'],
     gear: 'A doctor’s bag reprovisioned on both sides, a herbal she wrote herself, and no antibiotics worth the name.',

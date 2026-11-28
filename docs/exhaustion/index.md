@@ -51,6 +51,23 @@ So a **Spent (3)** character sleeps it off to **Tired (2)**, rests down to **Win
 
 By default **magic is just fatigue**: gathering power is taxing, and casting in a **mana-poor** place is simply more exhausting, a **mana-rich** one less — a modifier, not a second resource to track. A setting that wants magic to feel *separate* can give it its **own track** (Mana), and likewise **Spirit** for mystic disciplines; each track wears down independently (your Mana can be wrung dry while your Spirit is fresh) and stacks per the rule above.
 
+### The mana roll, exactly
+
+**An incantation's Mana Cost is an ease-factor penalty on a roll to avoid paying for it.** Cast, then roll **WP** (an attribute, so **BEF 7**) at **EF 7 − the Mana Cost**. Fail and you take **one level of mana exhaustion**, which is **−1 to further magic** until you rest it off; succeed and the spell was free.
+
+> *A Mana Cost 5 incantation is WP at **EF 2**. A magician with WP 9 avoids the cost 18% of the time — which is to say, a big spell is paid for.*
+
+| WP | cost 0 | cost 1 | cost 2 | cost 3 | cost 4 | cost 5 |
+|--:|--:|--:|--:|--:|--:|--:|
+| 7 | 49% | 42% | 35% | 28% | 21% | 14% |
+| 9 | 63% | 54% | 45% | 36% | 27% | 18% |
+| 11 | 77% | 66% | 55% | 44% | 33% | 22% |
+| 13 | 91% | 78% | 65% | 52% | 39% | 26% |
+
+*(Chance of **avoiding** the level. Five levels and you are Collapsed.)*
+
+**Note what this does to the shape of a magician's day.** Even a trivial working is close to a coin-flip for ordinary willpower, so a caster is not metering out a pool — they are **accumulating a debt at a rate they can feel**, and the penalty compounds against the next attempt. That is the point-pool's job done by a check nobody can quietly forget to subtract from. *(If small magics ought to be genuinely free, the lever is this roll's BEF, not the costs.)*
+
 However it's tracked, the shape is **gather then weave**: a **gather roll** whose ease factor reflects how much you're asking for (a candle-flame is trivial; a firestorm brutal). Read its **band** — **solid** (QR1–3) and the power comes free and clear; **marginal** (QR4) and it comes but costs a level; **poor** (QR7) and it doesn't come at all; **bad** (QR10) **fizzles *and* costs a level**. And a caster may **volunteer a level for a one-off +4** — reaching past your limit on purpose, reliable but the bill compounds.
 
 ## Divine favour is different — it's earned, not rested

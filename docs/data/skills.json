@@ -320,5 +320,20 @@
       "fantasy"
     ],
     "covers": "animal mounts"
+  },
+  {
+    "name": "Incantation",
+    "formula": "IN/2",
+    "attributes": [
+      "IN"
+    ],
+    "half": true,
+    "limit": 1.5,
+    "cost": 6,
+    "bef": 5,
+    "tags": [
+      "fantasy"
+    ],
+    "covers": "casting — the channel itself. WHAT you can cast is Fields of Knowledge: the magic fundamentals, each taken Basic or Advanced. Power comes from the Mana track, not from this skill."
   }
 ]
