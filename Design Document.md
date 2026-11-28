@@ -1147,6 +1147,36 @@ a far better hook than a timer.
 The published §22A12 text already contains a 26:1 worked example; nobody had
 connected it to a setting.*
 
+## Decided: the inherent / trained dichotomy is not a distinction worth making (2026-11-28, Tonio)
+
+*"A lot of the old rules were about the inherent / trained dichotomy, which just
+made character creation more painful. It was a non-solution to a non-problem."*
+
+Older ForeSight spent real machinery on separating what you were **born with**
+from what you were **taught** — and the 2026 data still carried a trace of it in
+the background-factor categories, where *Intrinsic* sat beside *General* as
+though the difference changed anything downstream. It doesn't: **both produce a
+number, and the number behaves identically at the table.** Nothing in the One
+Rule asks where a Score came from.
+
+**So it is not a rule, and it is not a step.** The categories survive only as
+**grouping** — `<optgroup>` labels in a single hierarchical picker — rather than
+as a choice the player has to make before they can see what is on offer. Having
+to pick *Intrinsic* before Gifted becomes visible was a decision that cost time
+and bought nothing.
+
+**The general form, which is the part worth keeping.** A distinction earns its
+place in chargen only if something *later* reads it. A taxonomy that the
+resolution rules never consult is a filing system imposed on the player, and
+"formula + level" already does the real work the dichotomy was reaching for: the
+attributes are the talent, the level is the training, and the same number
+captures both (see Scores). This is *friction must cost decisions, not
+bookkeeping* applied to character creation rather than to play.
+
+*(Related, same pass: a boring childhood stopped being a background factor, and
+the free-versus-expensive upbringing split went with it. Both were bookkeeping
+around a non-choice.)*
+
 ## Evidence standard: use is not testing (2026-08)
 
 **The 1986 core was blind-tested and iterated over decades — sent out to testers who didn't know the intent, across dozens of full distributions.** That is measurement. It is a different kind of evidence from "published and then played by a lot of people", which generates volume but very little signal: there's no control, nothing is recorded, and players **silently house-rule around anything broken**, so the failure is patched at ten thousand tables and reported by none of them. A rule whose text and behaviour diverge can survive many editions on those terms, because editions are additive and nobody re-derives arithmetic that looks fine. (Tonio's example: GURPS's impaling damage rule doing the opposite of what it describes, across six-plus editions.)

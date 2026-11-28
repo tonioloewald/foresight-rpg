@@ -175,10 +175,11 @@ export class ForesightCharacterSheet extends Component {
   }
 
   private addBF = () => {
-    const cat = (this.parts.bfCat as any)?.value
-    const pick = (this.parts.bfPick as any)?.value
-    const def = (this.BF_CATALOG[cat] || []).find((b: any) => b.name === pick)
+    const pick = (this.parts.bfPickHost?.querySelector('select') as HTMLSelectElement | null)?.value
+    if (!pick) return
+    const def = Object.values(this.BF_CATALOG).flat().find((b: any) => b.name === pick) as any
     if (!def) return
+    const cat = def.category || 'General'
     const c = this.char
     // one species / one origin — exclusivity is a rule, so enforce it here
     if ((cat === 'Species' || cat === 'Origin') && c.bfs.some((b: any) => b.cat === cat)) {
@@ -360,8 +361,7 @@ export class ForesightCharacterSheet extends Component {
       h3('Background Factors'),
       div(
         { class: 'fs-row' },
-        tosiSelect({ part: 'bfCat', onChange: () => this.renderBFPicker() }),
-        tosiSelect({ part: 'bfPick' }),
+        div({ part: 'bfPickHost' }),
         button({ class: 'fs-step', style: { width: 'auto', padding: '0 0.7em' }, onClick: this.addBF }, 'Add'),
         span({ class: 'fs-muted', part: 'slots' })
       ),
@@ -531,6 +531,7 @@ export class ForesightCharacterSheet extends Component {
       tags.addEventListener('change', (ev: any) => {
         const picked = String(ev.target.value || '').split(',').filter(Boolean)
         this.char.activeTags = picked
+        this.renderBFPicker() // the tags are what filter this list
         this.changed()
       })
     }
@@ -543,27 +544,42 @@ export class ForesightCharacterSheet extends Component {
       } catch {
         /* older builds resolve immediately */
       }
-      const cat = this.parts.bfCat as any
-      if (cat) {
-        const cats = R.BF_CAT.filter((c) => this.BF_CATALOG[c]?.length)
-        cat.options = cats.join(',')
-        // select the first category, or Add has nothing to add
-        if (!cat.value && cats.length) cat.value = cats[0]
-        this.renderBFPicker()
-      }
+      this.renderBFPicker()
       await this.refreshSlots()
       this.render()
     })
   }
 
+  /**
+   * ONE hierarchical picker, not a category select feeding a factor select.
+   * The categories are a way of grouping the list, not a decision the player
+   * has to make first — picking "Intrinsic" before you can see Gifted is a step
+   * that only ever cost time. They survive here as <optgroup> labels.
+   */
   private renderBFPicker() {
-    const cat = (this.parts.bfCat as any)?.value
-    const pick = this.parts.bfPick as any
-    if (!pick) return
-    const list = (this.BF_CATALOG[cat] || []).filter((b: any) => R.tagMatch(this.char, b.tags))
-    pick.options = list.map((b: any) => b.name).join(',')
-    // keep a valid selection so Add always has a target
-    if (list.length && !list.some((b: any) => b.name === pick.value)) pick.value = list[0].name
+    const host = this.parts.bfPickHost
+    if (!host) return
+    const previous = (host.querySelector('select') as HTMLSelectElement | null)?.value
+    const sel = document.createElement('select')
+    sel.setAttribute('part', 'bfPick')
+    let first = ''
+    for (const cat of R.BF_CAT) {
+      const list = (this.BF_CATALOG[cat] || []).filter((b: any) => R.tagMatch(this.char, b.tags))
+      if (!list.length) continue
+      const group = document.createElement('optgroup')
+      group.label = cat
+      for (const b of list) {
+        const o = document.createElement('option')
+        o.value = b.name
+        // the points are the whole point of a factor — show them in the list
+        o.textContent = b.grant ? `${b.name} — ${b.grant} pts` : b.name
+        group.appendChild(o)
+        first ||= b.name
+      }
+      sel.appendChild(group)
+    }
+    sel.value = previous && sel.querySelector(`option[value="${CSS.escape(previous)}"]`) ? previous : first
+    host.replaceChildren(sel)
   }
 
   // ── derived rendering ────────────────────────────────────────────────────
