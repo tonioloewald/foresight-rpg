@@ -219,7 +219,18 @@ const CSS = `
      the hardest squeeze. */
   foresight-character-sheet { font-size: 9.5pt !important; line-height: 1.2 !important; }
   foresight-character-sheet .fs-panel { padding: 3pt 5pt !important; margin-bottom: 4pt !important; }
-  foresight-character-sheet h3 { margin: 1pt 0 2pt !important; font-size: 1.05em !important; }
+  foresight-character-sheet h3 { margin: 0 0 2pt !important; font-size: 1.05em !important; }
+
+  /* Boxes were top- and bottom-heavy for two reasons that compound: the first
+     child's margin-top and the last child's margin-bottom sit INSIDE the
+     panel padding, and a table's final row still draws its bottom border just
+     above the panel's own. Collapse all three. */
+  foresight-character-sheet .fs-panel > *:first-child { margin-top: 0 !important; }
+  foresight-character-sheet .fs-panel > *:last-child { margin-bottom: 0 !important; }
+  foresight-character-sheet .fs-panel table { margin: 0 !important; }
+  foresight-character-sheet .fs-panel tbody tr:last-child td { border-bottom: 0 !important; }
+  /* chip lists carry their own leading */
+  foresight-character-sheet .fs-chip { margin: 0 2pt 1pt 0 !important; }
   foresight-character-sheet th, foresight-character-sheet td {
     padding: 0.5pt 3pt !important;
     line-height: 1.15 !important;

@@ -57,6 +57,12 @@ export class ForesightCharacterSheet extends Component {
       padding: vars.tosiSpacing,
       marginBottom: vars.tosiSpacing,
     },
+    // The element's no-JS fallback (<p> in character-builder.md) is light-DOM
+    // content, and tosijs slots stray children into the first input slot they
+    // find — which dropped "needs a browser with JavaScript" inside the
+    // Condition panel's Fatigue field. It has done its job by the time this
+    // code runs, so it should never be seen.
+    ':host tosi-slot[part="input"] > p': { display: 'none' },
     ':host table': { width: '100%', borderCollapse: 'collapse', fontSize: '0.92em' },
     ':host th, :host td': {
       borderBottom: `1px solid ${vars.tosiBgInset}`,
